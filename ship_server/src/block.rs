@@ -53,6 +53,8 @@ pub async fn init_block(
         .lock_blocking()
         .set_block_data(block_data.clone());
 
+    tokio::spawn(crate::user::debug::command_listener(block_data.clone()));
+
     let mut conn_id = 0usize;
     let (send, mut recv) = mpsc::channel(10);
 

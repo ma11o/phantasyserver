@@ -178,6 +178,7 @@ pub async fn map_loaded(mut user_guard: MutexGuard<'_, User>, _: MapLoadedPacket
     let packet = protocol::unk19::LobbyMonitorPacket { video_id: 121 };
     user.send_packet(&Packet::LobbyMonitor(packet)).await?;
     user.firstload = false;
+    crate::user::debug::on_map_loaded(user).await;
 
     let map = user.map.clone().unwrap();
     let player_id = user.get_user_id();

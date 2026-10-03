@@ -1,3 +1,4 @@
+pub(crate) mod debug;
 pub(crate) mod handlers;
 use crate::{
     Action, BlockData, Error,
@@ -49,6 +50,9 @@ pub struct User {
     pub user_data: sql::User,
 
     session_start: Instant,
+    // [pso2_vita_offline] debug entry state (user/debug.rs)
+    debug_started: bool,
+    debug_pending: Option<String>,
 }
 
 impl User {
@@ -101,6 +105,8 @@ impl User {
                     ..Default::default()
                 },
                 session_start: Instant::now(),
+                debug_started: false,
+                debug_pending: None,
             },
             read,
         ))

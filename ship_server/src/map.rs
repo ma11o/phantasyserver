@@ -187,6 +187,19 @@ impl Map {
     pub const fn set_quest_obj(&mut self, obj: ObjectHeader) {
         self.quest_obj = obj;
     }
+    // [pso2_vita_offline] zone lookups for the debug entry (user/debug.rs)
+    pub fn has_zone(&self, name: &str) -> bool {
+        self.zones.iter().any(|z| z.data.name == name)
+    }
+    pub fn zone_name(&self, zone_pos: usize) -> Option<&str> {
+        self.zones.get(zone_pos).map(|z| z.data.name.as_str())
+    }
+    pub fn init_zone_name(&self) -> Option<&str> {
+        self.zones
+            .iter()
+            .find(|z| z.srv_zone_id == self.data.init_map)
+            .map(|z| z.data.name.as_str())
+    }
     fn find_max_id(&mut self) {
         let obj_max = self
             .data
