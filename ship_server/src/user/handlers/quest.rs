@@ -74,9 +74,41 @@ pub async fn avaliable_quests(
         .character
         .as_ref()
         .expect("Character should be loaded at this moment");
-    let packet =
-        Packet::AvailableQuests(user.blockdata.quests.get_availiable(&char.unlocked_quests));
-    user.send_packet(&packet).await?;
+    // [pso2-quest] T16: Vita 6.1001 の並びで 0x0B-0x16 を組み立てる
+    let a = user.blockdata.quests.get_availiable(&char.unlocked_quests);
+    let mut c: Vec<u16> = Vec::with_capacity(72);
+    c.push(a.unk1); c.push(a.extreme_count); c.push(a.unk2); c.push(a.arks_count);
+    c.push(a.limited_time_count); c.push(a.extreme_debug_count); c.push(a.blank1_count); c.push(a.unk3);
+    c.push(a.net_cafe_count); c.push(a.warming_debug_count); c.push(a.blank2_count); c.push(a.advance_count);
+    c.push(a.expedition_count); c.push(a.expedition_debug_count); c.push(a.arks_debug_count); c.push(a.unk4_count);
+    c.push(a.challenge_count); c.push(a.urgent_count); c.push(a.urgent_debug_count); c.push(a.time_attack_count);
+    c.push(a.time_attack_debug_count); c.extend_from_slice(&a.arks_debug2_count); c.push(a.blank3_count); c.push(a.unk5);
+    c.push(a.recommended_count); c.push(a.unk6); c.push(a.ultimate_debug_count); c.push(a.agp_count);
+    c.push(a.bonus_count); c.push(a.unk7); c.extend_from_slice(&a.training_count); c.push(a.trigger_count);
+    c.push(a.ridroid_count); c.push(a.net_cafe_agp_count); c.push(a.battle_broken_count); c.push(a.buster_debug_count);
+    c.push(a.poka12_count); c.push(a.unk8); c.push(a.unk9); c.push(a.buster_count);
+    c.push(a.hero_training_count); c.push(a.amplified_count); c.push(a.unk10); c.push(a.unk11);
+    c.push(a.dark_blast_training_count); c.push(a.endless_count); c.push(a.unk12); c.push(a.unk13);
+    c.push(a.phantom_training_count); c.push(a.ais_training_count); c.push(a.unk14); c.push(a.damage_calc_count);
+    c.push(a.etoile_training_count); c.push(a.divide_count);
+
+    debug_assert_eq!(c.len(), 71);
+    c.push(0);
+    let mut body: Vec<u8> = c.iter().flat_map(|v| v.to_le_bytes()).collect();
+    body.extend_from_slice(&a.available_types.bits().to_le_bytes());
+    body.extend_from_slice(&a.unk19.bits().to_le_bytes());
+    body.extend_from_slice(&a.round_boost.to_le_bytes());
+    body.extend_from_slice(&a.unk21.to_le_bytes());
+    log::debug!("[pso2-quest] AvailableQuests (Vita) types={:#x} len={}", a.available_types.bits(), body.len());
+    user.send_packet(&Packet::Unknown((
+        pso2packetlib::protocol::PacketHeader {
+            id: 0x0B,
+            subid: 0x16,
+            ..Default::default()
+        },
+        body,
+    )))
+    .await?;
     Ok(Action::Nothing)
 }
 
