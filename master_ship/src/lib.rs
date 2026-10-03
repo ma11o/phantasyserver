@@ -256,7 +256,7 @@ pub async fn load_key() -> SigningKey {
 }
 
 async fn ship_receiver(ms_data: Arc<MSData>) -> Result<(), Error> {
-    let listener = TcpListener::bind(("0.0.0.0", 15000)).await?;
+    let listener = TcpListener::bind(("127.0.0.1", 15000)).await?;
     log::info!("Loading signing key...");
     let signing_key = load_key().await;
     // this is 65 bytes
@@ -572,7 +572,7 @@ async fn run_action(ship: &mut Ship, action: MasterShipComm) -> Result<MasterShi
 }
 
 async fn make_keys(servers: Arc<MSData>) -> io::Result<()> {
-    let listener = TcpListener::bind(("0.0.0.0", 11000)).await?;
+    let listener = TcpListener::bind(("127.0.0.1", 11000)).await?;
     loop {
         match listener.accept().await {
             Ok((s, _)) => {
@@ -590,9 +590,9 @@ async fn make_query(servers: Arc<MSData>) -> io::Result<()> {
     let mut info_listeners: Vec<TcpListener> = vec![];
     for i in 0..10 {
         // pc ships
-        info_listeners.push(TcpListener::bind(("0.0.0.0", 12199 + (i * 100))).await?);
+        info_listeners.push(TcpListener::bind(("127.0.0.1", 12199 + (i * 100))).await?);
         // vita ships
-        info_listeners.push(TcpListener::bind(("0.0.0.0", 12194 + (i * 100))).await?);
+        info_listeners.push(TcpListener::bind(("127.0.0.1", 12194 + (i * 100))).await?);
     }
     for listener in info_listeners {
         let servers = servers.clone();
@@ -646,9 +646,9 @@ async fn make_block_balance(server_statuses: Arc<MSData>) -> Result<(), Error> {
     let mut listeners = vec![];
     for i in 0..10 {
         //pc balance
-        listeners.push(TcpListener::bind(("0.0.0.0", 12100 + (i * 100))).await?);
+        listeners.push(TcpListener::bind(("127.0.0.1", 12100 + (i * 100))).await?);
         //vita balance
-        listeners.push(TcpListener::bind(("0.0.0.0", 12193 + (i * 100))).await?);
+        listeners.push(TcpListener::bind(("127.0.0.1", 12193 + (i * 100))).await?);
     }
     for listener in listeners {
         let server_statuses = server_statuses.clone();

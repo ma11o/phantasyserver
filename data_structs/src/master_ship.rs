@@ -399,7 +399,7 @@ impl ShipConnection {
 }
 
 pub async fn start_discovery_loop(port: u16) -> Result<(), Error> {
-    let socket = UdpSocket::bind("0.0.0.0:12750").await?;
+    let socket = UdpSocket::bind("127.0.0.1:12750").await?;
     tokio::spawn(async move {
         loop {
             let mut buf = [0; 2];

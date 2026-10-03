@@ -247,7 +247,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
             )
             .service(return_file)
     })
-    .bind(("0.0.0.0", data.settings.port.unwrap_or(4040)))?
+    .bind(("127.0.0.1", data.settings.port.unwrap_or(4040)))?
     .run()
     .await?;
     Ok(())

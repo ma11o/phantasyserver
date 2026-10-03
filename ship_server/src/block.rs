@@ -20,7 +20,7 @@ pub async fn init_block(
     sql: Arc<sql::Sql>,
     key: PrivateKey,
 ) -> Result<(), Error> {
-    let listener = TcpListener::bind(("0.0.0.0", this_block.port)).await?;
+    let listener = TcpListener::bind(("127.0.0.1", this_block.port)).await?;
 
     let latest_mapid = AtomicU32::new(1);
 
