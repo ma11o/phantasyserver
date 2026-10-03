@@ -585,6 +585,19 @@ pub async fn packet_handler(
 
         (US::InGame, P::AbandonQuestRequest) => H::party::abandon_quest(user_guard).await,
 
+        // [pso2-quest] T16: 0x23-0x19 -> 空の 0x23-0x1A
+        (US::InGame, P::Unknown((h, _))) if h.id == 0x23 && h.subid == 0x19 => {
+            user.send_packet(&Packet::Unknown((
+                pso2packetlib::protocol::PacketHeader {
+                    id: 0x23,
+                    subid: 0x1A,
+                    flag: pso2packetlib::protocol::Flags::PACKED,
+                },
+                vec![0x3B, 0xF1, 0x00, 0x00],
+            )))
+            .await?;
+            Ok(Action::Nothing)
+        }
         (state, data) => {
             log::debug!(
                 "Client {} in state ({state}) sent unhandled packet: {data:?}",
