@@ -218,6 +218,10 @@ pub async fn minimap_reveal(
     mut user: MutexGuard<'_, User>,
     data: MinimapRevealRequestPacket,
 ) -> HResult {
+    log::debug!(
+        "[pso2-quest] MinimapRevealRequest chunk={} row={} col={} pos={:?}",
+        data.chunk_id, data.map_row, data.map_column, user.position
+    );
     user.send_packet(&Packet::SystemMessage(
         pso2packetlib::protocol::unk19::SystemMessagePacket {
             message: format!(
