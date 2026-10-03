@@ -605,7 +605,9 @@ impl Zone {
                 ..Default::default()
             }))
             .await?;
-        let pos = self.data.default_location;
+        let mut pos = self.data.default_location;
+        // [pso2_vita_offline] T25: one-shot spawn position from the debug port (`goto <zone> x y z`)
+        crate::user::debug::apply_spawn_override(&self.data.name, &mut pos);
         np_lock.position = pos;
         let np_gm = np_lock.user_data.isgm as u32;
         np_lock

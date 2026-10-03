@@ -3,15 +3,18 @@
 //! - `PSO2_DEBUG_START="quest=1100 diff=0 zone=campship_down [wait_ms=1000]"`: after the first lobby load,
 //!   accept the quest, transfer into its map (campship) and then move to `zone`. No client input needed.
 //! - `PSO2_DEBUG_PORT=<port>`: loopback TCP (one port for all blocks), one command per line, one reply line per command.
-//!   Commands: `goto <zone>`, `quest <id> <diff>`, `lobby`, `spawn <enemy> [x y z]`,
-//!   `send <id> <subid> <flag> <hex>`, `pos`, `help`. Anything else is run as a `!` chat command.
+//!   Commands: `goto <zone> [x y z]`, `quest <id> <diff>`, `lobby`, `spawn <enemy> [x y z]`,
+//!   `send <id> <subid> <flag> <hex>`, `pos`, `tp <x> <y> <z>`, `help`. Anything else is run as a `!` chat command.
+//! - T25: `goto <zone> x y z` and `PSO2_DEBUG_START="... pos=x,y,z"` replace the zone's `default_location`
+//!   (position only) for the next spawn into that zone. `tp` sends `TeleportTransfer` (0x04, 0x02) to the player
+//!   (the Vita client ignores it in a free field: the position snaps back, T25).
 //!
 //! Both are disabled unless the environment variable is set. Single player assumed (the last in-game client).
 use super::{User, UserState};
 use crate::{BlockData, Error, mutex::Mutex};
 use pso2packetlib::protocol::{
-    Flags, ObjectHeader, ObjectType, Packet, PacketHeader, chat::ChatMessage,
-    questlist::AcceptQuestPacket,
+    Flags, ObjectHeader, ObjectType, Packet, PacketHeader, chat::ChatMessage, models::Position,
+    objects::TeleportTransferPacket, questlist::AcceptQuestPacket,
 };
 use std::{sync::Arc, time::Duration};
 use tokio::{
@@ -25,6 +28,32 @@ pub struct DebugStart {
     pub diff: u16,
     pub zone: String,
     pub wait_ms: u64,
+    pub pos: Option<(f32, f32, f32)>,
+}
+
+/// T25: (zone name, position) used once by the next spawn into that zone (`map.rs`, `Zone::add_player`).
+static SPAWN_OVERRIDE: std::sync::Mutex<Option<(String, (f32, f32, f32))>> = std::sync::Mutex::new(None);
+
+pub fn set_spawn_override(zone: &str, p: (f32, f32, f32)) {
+    *SPAWN_OVERRIDE.lock().unwrap() = Some((zone.to_string(), p));
+}
+
+pub fn apply_spawn_override(zone: &str, pos: &mut Position) {
+    let mut o = SPAWN_OVERRIDE.lock().unwrap();
+    if o.as_ref().is_some_and(|(z, _)| z == zone) {
+        let (_, (x, y, z)) = o.take().unwrap();
+        pos.pos_x = half::f16::from_f32(x);
+        pos.pos_y = half::f16::from_f32(y);
+        pos.pos_z = half::f16::from_f32(z);
+        log::info!("[pso2-debug] spawn override {zone} ({x}, {y}, {z})");
+    }
+}
+
+fn parse_xyz(a: &[&str]) -> Option<(f32, f32, f32)> {
+    match a {
+        [x, y, z] => Some((x.parse().ok()?, y.parse().ok()?, z.parse().ok()?)),
+        _ => None,
+    }
 }
 
 pub fn debug_start() -> Option<DebugStart> {
@@ -34,6 +63,7 @@ pub fn debug_start() -> Option<DebugStart> {
         diff: 0,
         zone: "campship_down".into(),
         wait_ms: 1000,
+        pos: None,
     };
     for kv in s.split_whitespace() {
         let Some((k, v)) = kv.split_once('=') else {
@@ -44,6 +74,7 @@ pub fn debug_start() -> Option<DebugStart> {
             "diff" => ds.diff = v.parse().ok()?,
             "zone" => ds.zone = v.into(),
             "wait_ms" => ds.wait_ms = v.parse().ok()?,
+            "pos" => ds.pos = Some(parse_xyz(&v.split(',').collect::<Vec<_>>())?),
             _ => log::warn!("[pso2-debug] unknown PSO2_DEBUG_START key {k}"),
         }
     }
@@ -103,6 +134,9 @@ pub async fn on_map_loaded(user: &mut User) {
         };
         let res = if let Some(ds) = ds {
             log::info!("[pso2-debug] start {ds:?}");
+            if let Some(p) = ds.pos {
+                set_spawn_override(&ds.zone, p);
+            }
             match start_quest(&user, ds.quest, ds.diff).await {
                 Ok(()) => goto(&user, &ds.zone).await,
                 Err(e) => Err(e),
@@ -232,7 +266,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | tp <x> <y> <z> | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -248,6 +282,32 @@ async fn run_command(line: &str) -> Result<String, Error> {
     let a: Vec<&str> = args.collect();
     match (cmd, a.as_slice()) {
         ("goto", [zone]) => goto(&user, zone).await,
+        ("goto", [zone, xyz @ ..]) => {
+            let p = parse_xyz(xyz).ok_or(Error::InvalidInput("goto <zone> [x y z]"))?;
+            set_spawn_override(zone, p);
+            goto(&user, zone).await
+        }
+        ("tp", xyz) => {
+            let (x, y, z) = parse_xyz(xyz).ok_or(Error::InvalidInput("tp <x> <y> <z>"))?;
+            let mut lock = user.lock().await;
+            let mut pos = lock.position;
+            pos.pos_x = half::f16::from_f32(x);
+            pos.pos_y = half::f16::from_f32(y);
+            pos.pos_z = half::f16::from_f32(z);
+            let id = lock.get_user_id();
+            lock.send_packet(&Packet::TeleportTransfer(TeleportTransferPacket {
+                source_tele: ObjectHeader {
+                    id,
+                    entity_type: ObjectType::Player,
+                    ..Default::default()
+                },
+                location: pos,
+                ..Default::default()
+            }))
+            .await?;
+            lock.position = pos;
+            Ok(format!("tp ({x}, {y}, {z})"))
+        }
         ("lobby", []) => goto(&user, "lobby").await,
         ("quest", [id, diff]) => {
             let (Some(id), Some(diff)) = (parse_num(id), parse_num(diff)) else {
