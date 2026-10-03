@@ -592,7 +592,7 @@ async fn make_query(servers: Arc<MSData>) -> io::Result<()> {
         // pc ships
         info_listeners.push(TcpListener::bind(("127.0.0.1", 12199 + (i * 100))).await?);
         // vita ships
-        info_listeners.push(TcpListener::bind(("127.0.0.1", 12194 + (i * 100))).await?);
+        info_listeners.push(TcpListener::bind(("127.0.0.1", 12094 + (i * 100))).await?);
     }
     for listener in info_listeners {
         let servers = servers.clone();
@@ -648,7 +648,7 @@ async fn make_block_balance(server_statuses: Arc<MSData>) -> Result<(), Error> {
         //pc balance
         listeners.push(TcpListener::bind(("127.0.0.1", 12100 + (i * 100))).await?);
         //vita balance
-        listeners.push(TcpListener::bind(("127.0.0.1", 12193 + (i * 100))).await?);
+        listeners.push(TcpListener::bind(("127.0.0.1", 12093 + (i * 100))).await?);
     }
     for listener in listeners {
         let server_statuses = server_statuses.clone();
@@ -680,6 +680,7 @@ async fn send_block_balance(stream: TcpStream, servers: Arc<MSData>) -> Result<(
     } else {
         (port - 12000) / 100
     } as u32;
+    let id = if id == 0 { 10 } else { id };
     let remote_ip = match stream.peer_addr()?.ip() {
         IpAddr::V4(ipv4_addr) => ipv4_addr,
         IpAddr::V6(_) => return Err(Error::InvalidData),
