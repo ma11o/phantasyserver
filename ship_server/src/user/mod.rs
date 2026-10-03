@@ -126,10 +126,12 @@ impl User {
         Ok(self.connection.get_ip()?)
     }
     pub async fn send_packet(&mut self, packet: &Packet) -> Result<(), Error> {
+        log_pkt("TX", self.user_data.id, self.state, packet);
         self.connection.write_packet_async(packet).await?;
         Ok(())
     }
     pub fn try_send_packet(&mut self, packet: &Packet) -> Result<(), Error> {
+        log_pkt("TX", self.user_data.id, self.state, packet);
         match self.connection.write_packet(packet) {
             Ok(_) => {}
             Err(ConnectionError::Io(ref e)) if e.kind() == std::io::ErrorKind::WouldBlock => {}
@@ -138,6 +140,7 @@ impl User {
         Ok(())
     }
     pub fn send_packet_block(&mut self, packet: &Packet) -> Result<(), Error> {
+        log_pkt("TX", self.user_data.id, self.state, packet);
         match self.connection.write_packet(packet) {
             Ok(_) => return Ok(()),
             Err(ConnectionError::Io(ref e)) if e.kind() == std::io::ErrorKind::WouldBlock => {}
@@ -364,12 +367,31 @@ impl User {
     }
 }
 
+/// [pso2-observe] 送受信 1 件の種別を 1 行出す (バイト列は出さない)
+fn log_pkt(dir: &str, id: impl std::fmt::Display, state: UserState, packet: &Packet) {
+    if !log::log_enabled!(log::Level::Debug) {
+        return;
+    }
+    let name = match packet {
+        Packet::Unknown((h, d)) => {
+            format!("Unknown id=0x{:02X} sub=0x{:04X} len={}", h.id, h.subid, d.len())
+        }
+        p => format!("{p:?}")
+            .split(|c| c == '(' || c == ' ' || c == '{')
+            .next()
+            .unwrap_or("")
+            .to_string(),
+    };
+    log::debug!("PKT {dir} user={id} state={state} {name}");
+}
+
 pub async fn packet_handler(
     mut user_guard: MutexGuard<'_, User>,
     packet: Packet,
 ) -> Result<Action, Error> {
     let user: &mut User = &mut user_guard;
     let state = user.state;
+    log_pkt("RX", user.user_data.id, state, &packet);
     // sidestep borrow checker
     let match_unit = (state, packet);
     use {Packet as P, UserState as US, handlers as H};
