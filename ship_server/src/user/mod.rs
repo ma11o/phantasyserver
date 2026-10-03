@@ -446,7 +446,22 @@ pub async fn packet_handler(
             H::quest::quest_difficulty(user, data).await
         }
         (US::InGame, P::AcceptQuest(data)) => H::quest::set_quest(user_guard, data).await,
-        (US::InGame, P::QuestCounterRequest) => H::quest::counter_request(user).await,
+        // [pso2-quest] T16: カウンターに話しかけたら、テストクエスト (quest_obj 1100、難易度 0) を受注した扱いにする
+        // (チャットの !force_quest 1100 0 と同じ。トップメニューのメインクエストが灰色で選べないための回り道)
+        (US::InGame, P::QuestCounterRequest) => {
+            H::quest::counter_request(user).await?;
+            let packet = pso2packetlib::protocol::questlist::AcceptQuestPacket {
+                quest_obj: pso2packetlib::protocol::ObjectHeader {
+                    id: 1100,
+                    entity_type: pso2packetlib::protocol::ObjectType::Quest,
+                    ..Default::default()
+                },
+                diff: 0,
+                ..Default::default()
+            };
+            log::debug!("[pso2-quest] force test quest 1100 diff 0");
+            H::quest::set_quest(user_guard, packet).await
+        }
         (US::InGame, P::AcceptStoryQuest(data)) => {
             H::quest::set_story_quest(user_guard, data).await
         }
