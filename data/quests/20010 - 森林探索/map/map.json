@@ -1154,9 +1154,9 @@
         "rot_y": 15360,
         "rot_z": 0,
         "rot_w": 0,
-        "pos_x": 11534,
-        "pos_y": 48414,
-        "pos_z": 23306
+        "pos_x": 0,
+        "pos_y": 48415,
+        "pos_z": 23304
       },
       "enemies": [
         {
@@ -1266,7 +1266,7 @@
         "map_id": 311,
         "zone_type": 2,
         "seed": 2012513828,
-        "args": 4294967295,
+        "args": 95,
         "size_x": 0,
         "size_y": 0,
         "unk2": 0,
@@ -1276,12 +1276,12 @@
       },
       "default_location": {
         "rot_x": 0,
-        "rot_y": 15360,
+        "rot_y": 14760,
         "rot_z": 0,
-        "rot_w": 0,
-        "pos_x": 0,
-        "pos_y": 21376,
-        "pos_z": 0
+        "rot_w": 14760,
+        "pos_x": 54476,
+        "pos_y": 44646,
+        "pos_z": 18263
       },
       "chunks": [
         {
@@ -1298,15 +1298,15 @@
               "rot_y": 15360,
               "rot_z": 0,
               "rot_w": 0,
-              "pos_x": 21104,
-              "pos_y": 13517,
-              "pos_z": 52883
+              "pos_x": 54477,
+              "pos_y": 44646,
+              "pos_z": 18253
             }
           ],
           "reveals": [
             {
-              "row": 1,
-              "column": 2
+              "row": 2,
+              "column": 1
             }
           ],
           "zone_id": 3
