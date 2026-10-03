@@ -29,7 +29,7 @@ impl Quests {
         for quest in self
             .quests
             .iter()
-            .filter(|q| unlocked.contains(&q.definition.name_id))
+            .filter(|q| unlocked.contains(&q.definition.name_id) || q.definition.name_id == 200030)
         {
             match quest.definition.quest_type {
                 QuestType::Unk0 => {
@@ -310,7 +310,7 @@ impl Quests {
             quests: self
                 .quests
                 .iter()
-                .filter(|q| unlocked.contains(&q.definition.name_id))
+                .filter(|q| unlocked.contains(&q.definition.name_id) || q.definition.name_id == 200030)
                 .filter(|q| q.definition.quest_type == category)
                 .map(|q| q.definition.clone())
                 .collect(),
