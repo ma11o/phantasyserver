@@ -329,9 +329,25 @@ impl EnemyStats {
             unk6: 0x405,
             unk7: 255,
             unk8: 65535,
-            // last nonzero value - model id
+            // [9] RandomScale (f32), [10] RaidHpRatio (f32), [12] enemy status key: the client looks up its
+            // enemy_status.ens record (model and display name) by this key, see `actor_key`
             unk9: [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 1062804813, 3212836864, 0, 1570802465, 0, 0, 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1062804813,
+                3212836864,
+                0,
+                actor_key(&self.name),
+                0,
+                0,
+                0,
             ],
             unk11: 1,
             unk12: 255,
@@ -423,5 +439,27 @@ impl EnemyStats {
         } else {
             BattleResult::Damaged { dmg_packet }
         })
+    }
+}
+
+/// Enemy status key of an actor name (`SoldierAnt` -> 0x5DA08B21): abs(i32(hash)), where the hash is
+/// boost's hash_combine over the signed bytes of the name. Unknown names fall back to the client's default.
+pub fn actor_key(name: &str) -> u32 {
+    let h = name.bytes().fold(0u32, |h, c| {
+        h ^ (c as i8 as i32 as u32)
+            .wrapping_add(h << 6)
+            .wrapping_add(h >> 2)
+            .wrapping_add(0x9e37_79b9)
+    });
+    (h as i32).unsigned_abs()
+}
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn actor_key() {
+        assert_eq!(super::actor_key("SoldierAnt"), 0x5DA0_8B21);
+        assert_eq!(super::actor_key("SoldierAntElite"), 0x3464_D276);
+        assert_eq!(super::actor_key("AntReaper"), 0x782D_2586);
     }
 }
