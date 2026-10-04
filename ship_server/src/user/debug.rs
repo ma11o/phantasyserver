@@ -6,6 +6,10 @@
 //!   Commands: `goto <zone> [x y z]`, `quest <id> <diff>`, `lobby`, `spawn <enemy> [x y z]`,
 //!   `send <id> <subid> <flag> <hex>`, `pos`, `tp <x> <y> <z>`, `finish [hide] [ff] [now]`, `result [hide] [ff]`, `help`.
 //!   Anything else is run as a `!` chat command.
+//! - `pipe <clear|start> [x y z]`: spawn the Story EP1 `oa_telepipe_clear` / `oa_telepipe_start` object (data copied
+//!   from 700000) at the player (or x y z), for this player only.
+//! - `tag <object id> <attribute>`: send `SetTag` (04-15) for an object of the current zone (e.g. `On` lights a
+//!   clear telepipe, T19).
 //! - `finish`: same as a final return (03-19): move to `campship` and send `QuestResult` on the next `MapLoaded`
 //!   (`now`: right after `MapTransfer` instead). `result`: send `QuestResult` now.
 //! - T25: `goto <zone> x y z` and `PSO2_DEBUG_START="... pos=x,y,z"` replace the zone's `default_location`
@@ -17,13 +21,28 @@ use super::{User, UserState};
 use crate::{BlockData, Error, mutex::Mutex};
 use pso2packetlib::protocol::{
     Flags, ObjectHeader, ObjectType, Packet, PacketHeader, chat::ChatMessage, models::Position,
-    objects::TeleportTransferPacket, questlist::AcceptQuestPacket,
+    objects::{SetTagPacket, TeleportTransferPacket}, questlist::AcceptQuestPacket, spawn::ObjectSpawnPacket,
 };
 use std::{sync::Arc, time::Duration};
 use tokio::{
     io::{AsyncBufReadExt, AsyncWriteExt, BufReader},
     net::TcpListener,
 };
+
+/// PC object data -> Vita: property ids 51..79 (even positions) are one lower on the Vita
+/// (same rule as `data/maps/lobby/luas/oa_transfer_machine.lua`'s `to_vita`; T19: PC 66 = the client's `get(0x41)`).
+pub fn pc_to_vita_object_data(data: &[u32]) -> Vec<u32> {
+    let mut d = data.to_vec();
+    for v in d.iter_mut().step_by(2) {
+        if *v > 50 && *v < 80 {
+            *v -= 1;
+        }
+    }
+    d
+}
+
+/// Object ids for `pipe` (well above the map data's ids).
+static PIPE_ID: std::sync::atomic::AtomicU32 = std::sync::atomic::AtomicU32::new(0xF000);
 
 #[derive(Debug, Clone)]
 pub struct DebugStart {
@@ -269,7 +288,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | finish [hide] [ff] [now] | result [hide] [ff] | tp <x> <y> <z> | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] | tp <x> <y> <z> | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -312,6 +331,84 @@ async fn run_command(line: &str) -> Result<String, Error> {
             Ok(format!("tp ({x}, {y}, {z})"))
         }
         ("lobby", []) => goto(&user, "lobby").await,
+        ("pipe", [kind, xyz @ ..]) => {
+            // Story EP1 700000 map.json (objects 81 / 82)
+            let (name, data): (&str, &[u32]) = match *kind {
+                "clear" => ("oa_telepipe_clear", &[
+                    1304, 1, 2, 0, 0, 0, 1677721856, 0, 58, u32::MAX, 55, 1, 57, 0, 66, 2, 67, 0, 2, 0, 0, 0,
+                ]),
+                "start" => ("oa_telepipe_start", &[
+                    1304, 1, 2, 0, 0, 0, 1811939584, 1869181801, 58, u32::MAX, 55, 1, 57, 0, 66, 1, 67, 0, 2,
+                    0, 0, 0,
+                ]),
+                _ => return Err(Error::InvalidInput("pipe <clear|start> [x y z]")),
+            };
+            let lock = user.lock().await;
+            let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
+            let zone = lock.zone_pos;
+            let mut pos = lock.position;
+            if !xyz.is_empty() {
+                let (x, y, z) = parse_xyz(xyz).ok_or(Error::InvalidInput("pipe <kind> [x y z]"))?;
+                pos.pos_x = half::f16::from_f32(x);
+                pos.pos_y = half::f16::from_f32(y);
+                pos.pos_z = half::f16::from_f32(z);
+            }
+            drop(lock);
+            let world_id = map.lock().await.zone_world_id(zone).unwrap_or(0);
+            let id = PIPE_ID.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
+            let packet = ObjectSpawnPacket {
+                object: ObjectHeader {
+                    id,
+                    entity_type: ObjectType::Object,
+                    map_id: world_id as u16,
+                    ..Default::default()
+                },
+                position: pos,
+                name: name.to_string().into(),
+                unk2: [16, 0, 0, 0, 0],
+                flags: 4,
+                data: pc_to_vita_object_data(data).into(),
+                ..Default::default()
+            };
+            user.lock().await.send_packet(&Packet::ObjectSpawn(packet)).await?;
+            Ok(format!(
+                "pipe {name} id={id} map_id={world_id} at ({:.2}, {:.2}, {:.2})",
+                pos.pos_x.to_f32(),
+                pos.pos_y.to_f32(),
+                pos.pos_z.to_f32()
+            ))
+        }
+        ("tag", [id, attr]) => {
+            let id: u32 = parse_num(id).ok_or(Error::InvalidInput("tag <obj id> <attr>"))?;
+            let (map, zone, pid) = {
+                let lock = user.lock().await;
+                (
+                    lock.get_current_map().ok_or(Error::InvalidInput("no map"))?,
+                    lock.zone_pos,
+                    lock.get_user_id(),
+                )
+            };
+            let world_id = map.lock().await.zone_world_id(zone).unwrap_or(0);
+            let obj = ObjectHeader {
+                id,
+                entity_type: ObjectType::Object,
+                map_id: world_id as u16,
+                ..Default::default()
+            };
+            let packet = Packet::SetTag(SetTagPacket {
+                receiver: ObjectHeader {
+                    id: pid,
+                    entity_type: ObjectType::Player,
+                    ..Default::default()
+                },
+                target: obj,
+                object3: obj,
+                attribute: attr.to_string().into(),
+                ..Default::default()
+            });
+            user.lock().await.send_packet(&packet).await?;
+            Ok(format!("tag {id} {attr}"))
+        }
         ("finish" | "result", opts) => {
             use super::handlers::server::{RESULT_FF, RESULT_HIDE, move_to_campship, quest_result};
             let mut bits = 0;

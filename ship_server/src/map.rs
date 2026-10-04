@@ -191,6 +191,10 @@ impl Map {
     pub fn has_zone(&self, name: &str) -> bool {
         self.zones.iter().any(|z| z.data.name == name)
     }
+    /// [pso2_vita_offline] `ZoneSettings.world_id` of a zone (the `map_id` of its objects' headers).
+    pub fn zone_world_id(&self, zone_pos: usize) -> Option<u32> {
+        self.zones.get(zone_pos).map(|z| z.data.settings.world_id)
+    }
     pub fn zone_name(&self, zone_pos: usize) -> Option<&str> {
         self.zones.get(zone_pos).map(|z| z.data.name.as_str())
     }

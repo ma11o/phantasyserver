@@ -28,6 +28,7 @@ pub async fn movement(mut user: MutexGuard<'_, User>, packet: objects::MovementP
 }
 
 pub async fn action(user: MutexGuard<'_, User>, packet: objects::InteractPacket) -> HResult {
+    log::debug!("[pso2-obj] Interact {packet:?}");
     let id = user.get_user_id();
     let map = user.get_current_map();
     let zone = user.zone_pos;

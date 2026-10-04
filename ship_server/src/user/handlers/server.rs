@@ -298,22 +298,26 @@ pub async fn move_to_campship(user: MutexGuard<'_, User>, result: Option<u8>) ->
     Ok(Action::Nothing)
 }
 
-pub async fn return_to_campship(user: MutexGuard<'_, User>, _: ReturnToCampshipPacket) -> HResult {
+pub async fn return_to_campship(user: MutexGuard<'_, User>, p: ReturnToCampshipPacket) -> HResult {
+    log::info!("[pso2-quest] ReturnToCampship {:?}", p.world);
     move_to_campship(user, None).await
 }
 
 pub async fn return_to_campship_final(
     user: MutexGuard<'_, User>,
-    _: ReturnToCampshipFinalPacket,
+    p: ReturnToCampshipFinalPacket,
 ) -> HResult {
+    log::info!("[pso2-quest] ReturnToCampshipFinal {:?}", p.world);
     move_to_campship(user, Some(0)).await
 }
 
-pub async fn death_to_campship(user: MutexGuard<'_, User>, _: DeathToCampshipPacket) -> HResult {
+pub async fn death_to_campship(user: MutexGuard<'_, User>, p: DeathToCampshipPacket) -> HResult {
+    log::info!("[pso2-quest] DeathToCampship {:?}", p.world);
     move_to_campship(user, None).await
 }
 
-pub async fn campship_to_lobby(user: MutexGuard<'_, User>, _: CampshipToLobbyPacket) -> HResult {
+pub async fn campship_to_lobby(user: MutexGuard<'_, User>, p: CampshipToLobbyPacket) -> HResult {
+    log::info!("[pso2-quest] CampshipToLobby {:?}", p.world);
     let map = user.get_current_map();
     let id = user.get_user_id();
     drop(user);
