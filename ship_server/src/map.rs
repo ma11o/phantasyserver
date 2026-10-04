@@ -54,7 +54,22 @@ struct Zone {
     objects: Objects,
     // [pso2_vita_offline] quest clear: the clear telepipe (id, position), set once
     clear_pipe: Option<(u32, Position)>,
+    // [pso2_vita_offline] items lying on the ground (NewItemDrop sent, not picked up yet)
+    drops: Vec<FieldDrop>,
 }
+
+/// [pso2_vita_offline] An item on the ground. The client keys its drop registry by `drop_id` and finds the entry
+/// for a touched object by comparing the object header with `obj` (NewItemDrop.item_obj).
+#[derive(Debug, Clone)]
+pub struct FieldDrop {
+    pub drop_id: u32,
+    pub obj: ObjectHeader,
+    pub item: protocol::items::Item,
+}
+
+/// [pso2_vita_offline] Default drop model: `ob_9900_0001` has `Behavior.Custom[..].IsSimpleObject = 2` in
+/// sy_script.fpk, which the client's object factory turns into an "Object:DropItem".
+pub const DROP_MODEL: &str = "ob_9900_0001";
 
 struct Objects {
     objects: Vec<ObjectData>,
@@ -150,6 +165,7 @@ impl Map {
                 chunk_spawns: vec![],
                 minimap_status: Default::default(),
                 clear_pipe: None,
+                drops: vec![],
                 data: zone,
                 objects: Objects {
                     objects,
@@ -447,10 +463,14 @@ impl Map {
             return Err(Error::InvalidInput("deal_damage"));
         };
         let killed = self.zones[zone_pos].deal_damage(block_data, dmg).await?;
+        // [pso2_vita_offline] every killed enemy drops one fixed item (Monomate) where it was spawned
+        if let Some((_, enemy_pos)) = killed {
+            self.spawn_drop(zone_pos, monomate(), enemy_pos, DROP_MODEL).await;
+        }
         // [pso2_vita_offline] quest clear when every enemy spawned so far by the zone's chunks is dead
         // (chunks not entered yet are not counted). The telepipe goes where the last hit came from: the client
         // closes its dialog when the player is more than ~3 m away from it.
-        if let (MapType::QuestMap, Some(pos)) = (&self.map_type, killed) {
+        if let (MapType::QuestMap, Some((pos, _))) = (&self.map_type, killed) {
             let zone = &self.zones[zone_pos];
             if zone.enemies.is_empty() && !zone.chunk_spawns.is_empty() {
                 self.quest_clear(zone_pos, pos).await?;
@@ -470,6 +490,27 @@ impl Map {
         let id = self.max_id;
         self.zones[zone_pos].spawn_clear_pipe(id, pos).await;
         Ok(true)
+    }
+
+    /// [pso2_vita_offline] Puts `item` on the ground at `pos` for everyone in the zone: NewItemDrop (0F-04)
+    /// registers it, ObjectSpawn (08-0B) of `model` with the same header makes it visible (no ObjectSpawn when
+    /// `model` is empty). Returns the drop id.
+    pub async fn spawn_drop(
+        &mut self,
+        zone_pos: usize,
+        item: protocol::items::Item,
+        pos: Position,
+        model: &str,
+    ) -> u32 {
+        self.max_id += 1;
+        let id = self.max_id;
+        self.zones[zone_pos].spawn_drop(id, item, pos, model).await;
+        id
+    }
+
+    /// [pso2_vita_offline] Removes a drop (picked up) and despawns it for everyone in the zone.
+    pub async fn take_drop(&mut self, zone_pos: usize, drop_id: u32) -> Option<FieldDrop> {
+        self.zones[zone_pos].take_drop(drop_id).await
     }
 
     pub async fn minimap_reveal(
@@ -934,6 +975,78 @@ impl Zone {
         (packet, packet2)
     }
 
+    async fn spawn_drop(&mut self, id: u32, item: protocol::items::Item, pos: Position, model: &str) {
+        use pso2packetlib::protocol::items::NewItemDropPacket;
+        let obj = ObjectHeader {
+            id,
+            entity_type: ObjectType::Object,
+            map_id: self.data.settings.world_id as u16,
+            ..Default::default()
+        };
+        let drop = Packet::NewItemDrop(NewItemDropPacket {
+            item_obj: obj,
+            item_id: item.id,
+            pos,
+            drop_id: id,
+            ..Default::default()
+        });
+        // data of the item drops in quest 50570's captured objects (PC property ids; 66, 2 = Vita 0x41 == 2,
+        // which the client's drop state checks)
+        const DATA: [u32; 19] = [
+            16778264, 0, 2, 0, 0, 0, 0, 0, 58, u32::MAX, 55, 1, 57, 4, 66, 2, 4, 0, 0,
+        ];
+        let spawn = (!model.is_empty()).then(|| {
+            Packet::ObjectSpawn(ObjectSpawnPacket {
+                object: obj,
+                position: pos,
+                name: model.to_string().into(),
+                unk2: [9, 0, 0, 0, 0],
+                flags: 4,
+                data: crate::user::debug::pc_to_vita_object_data(&DATA).into(),
+                ..Default::default()
+            })
+        });
+        log::info!(
+            "[pso2-drop] drop {id} {:?} model {model:?} at ({:.2}, {:.2}, {:.2})",
+            item.id,
+            pos.pos_x.to_f32(),
+            pos.pos_y.to_f32(),
+            pos.pos_z.to_f32()
+        );
+        self.drops.push(FieldDrop {
+            drop_id: id,
+            obj,
+            item,
+        });
+        // 0F-07 first: the client's drop registry ignores NewItemDrop until this sets its session value (only once,
+        // while it is 0); no drops listed
+        let list = drop_list(obj, DROP_SESSION);
+        exec_users(&self.players, |_, mut player| {
+            let _ = player.try_send_packet(&list);
+            let _ = player.try_send_packet(&drop);
+            if let Some(spawn) = &spawn {
+                let _ = player.try_send_packet(spawn);
+            }
+        })
+        .await;
+    }
+
+    async fn take_drop(&mut self, drop_id: u32) -> Option<FieldDrop> {
+        let pos = self.drops.iter().position(|d| d.drop_id == drop_id)?;
+        let drop = self.drops.remove(pos);
+        exec_users(&self.players, |_, mut player| {
+            let me = player.create_object_header();
+            let _ = player.try_send_packet(&Packet::DespawnObject(
+                protocol::objects::DespawnObjectPacket {
+                    player: me,
+                    item: drop.obj,
+                },
+            ));
+        })
+        .await;
+        Some(drop)
+    }
+
     /// [pso2_vita_offline] `Map::quest_clear`. The object data is Story EP1 700000's `oa_telepipe_clear` with the PC
     /// property ids turned into the Vita ones (66, 2 = Vita `get(0x41) == 2`, the final return 03-19).
     async fn spawn_clear_pipe(&mut self, id: u32, pos: Position) {
@@ -1057,7 +1170,8 @@ impl Zone {
         &mut self,
         block_data: Arc<BlockData>,
         dmg: DealDamagePacket,
-    ) -> Result<Option<Position>, Error> {
+    ) -> Result<Option<(Position, Position)>, Error> {
+        // [pso2_vita_offline] (last hitter's position, enemy's position) when an enemy died
         let mut killed = None;
         let (inflicter, target) = (dmg.inflicter, dmg.target);
         log::debug!(
@@ -1091,6 +1205,7 @@ impl Zone {
                 .get_stats_mut()
                 .damage_enemy(target, &block_data.server_data, dmg)?;
             let inflicter_pos = lock.position;
+            let enemy_xyz = target.position();
             drop(lock);
             match result {
                 BattleResult::Damaged { dmg_packet } => {
@@ -1146,7 +1261,7 @@ impl Zone {
                     })
                     .await;
                     self.enemies.remove(enemy_pos);
-                    killed = Some(inflicter_pos);
+                    killed = Some((inflicter_pos, enemy_xyz));
                 }
             }
         } else if inflicter.entity_type == ObjectType::Object
@@ -1704,4 +1819,41 @@ where
     // SAFETY: this should be safe because we immediately await the function
     let func: Box<dyn FnOnce() -> R + Send + 'static> = unsafe { std::mem::transmute(val) };
     Ok(tokio::task::spawn_blocking(func).await?)
+}
+
+/// [pso2_vita_offline] one Monomate (Hunter starting item 3:1:0)
+pub fn monomate() -> protocol::items::Item {
+    use protocol::items::{ConsumableItem, Item, ItemId, ItemType};
+    Item {
+        uuid: 0,
+        id: ItemId {
+            item_type: 3,
+            id: 1,
+            subid: 0,
+            ..Default::default()
+        },
+        data: ItemType::Consumable(ConsumableItem {
+            amount: 1,
+            ..Default::default()
+        }),
+    }
+}
+
+/// [pso2_vita_offline] Session value for 0F-07 (any non-zero; the client echoes it in ItemPickupRequest.unk).
+const DROP_SESSION: u32 = 1;
+
+/// [pso2_vita_offline] 0F-07 (not in pso2packetlib; reader `0x811ff272`, callback `0x82d3e710` -> `0x830130c2`):
+/// object header 12 B, session u32 (copied into the client's drop registry if it is still 0; the registry ignores
+/// NewItemDrop while it is 0), count `(n + 0x3E) ^ 0x32C1`, n x 0x38 B (NewItemDrop's body + drop_id). Sent with
+/// n = 0 only to set the session.
+pub fn drop_list(obj: ObjectHeader, session: u32) -> Packet {
+    use pso2packetlib::protocol::{Flags, PacketHeader};
+    let mut data = Vec::with_capacity(0x14);
+    data.extend_from_slice(&obj.id.to_le_bytes());
+    data.extend_from_slice(&obj.unk.to_le_bytes());
+    data.extend_from_slice(&(obj.entity_type as u16).to_le_bytes());
+    data.extend_from_slice(&obj.map_id.to_le_bytes());
+    data.extend_from_slice(&session.to_le_bytes());
+    data.extend_from_slice(&(0x3Eu32 ^ 0x32C1).to_le_bytes());
+    Packet::Unknown((PacketHeader::new(0x0F, 0x07, Flags::PACKED), data))
 }

@@ -439,6 +439,7 @@ pub async fn packet_handler(
         (US::InGame, P::Movement(data)) => H::object::movement(user_guard, data).await,
         (US::InGame, P::MovementAction(..)) => User::send_position(user_guard, match_unit.1).await,
         (US::InGame, P::Interact(data)) => H::object::action(user_guard, data).await,
+        (US::InGame, P::ItemPickupRequest(data)) => H::item::pickup(user_guard, data).await,
         (US::InGame, P::ChangeClassRequest(data)) => {
             H::object::change_class(user_guard, data).await
         }

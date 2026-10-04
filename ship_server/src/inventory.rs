@@ -532,6 +532,32 @@ impl Inventory {
         self.inventory.items.push(item);
         packet
     }
+    /// [pso2_vita_offline] An item picked up from the ground. A consumable goes onto a stack of the same id while it
+    /// stays at 10 or less (UpdateInventory 0F-06, as discarding / using does); anything else is a new entry
+    /// (AddedItem 0F-05) with a fresh uuid.
+    pub fn add_picked_item(&mut self, mut item: Item, uuid: &mut u64) -> Packet {
+        if let ItemType::Consumable(new) = &item.data {
+            let add = new.amount;
+            if let Some((stack_uuid, stack)) = self.inventory.items.iter_mut().find_map(|i| match &mut i.data {
+                ItemType::Consumable(c) if i.id == item.id && c.amount + add <= 10 => Some((i.uuid, c)),
+                _ => None,
+            }) {
+                stack.amount += add;
+                return Packet::UpdateInventory(UpdateInventoryPacket {
+                    updated: vec![pso2packetlib::protocol::items::UpdatedInventoryItem {
+                        uuid: stack_uuid,
+                        new_amount: stack.amount,
+                        moved: add,
+                    }],
+                    unk2: 1,
+                    ..Default::default()
+                });
+            }
+        }
+        item.uuid = *uuid;
+        *uuid += 1;
+        self.add_item(item)
+    }
     pub fn add_default_item(&mut self, uuid: &mut u64, item_id: ItemId) -> Packet {
         let item = Item {
             uuid: *uuid,

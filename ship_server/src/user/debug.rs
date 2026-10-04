@@ -288,7 +288,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | hp [n] | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -401,6 +401,57 @@ async fn run_command(line: &str) -> Result<String, Error> {
             user.lock().await.send_packet(&Packet::ObjectSpawn(packet)).await?;
             Ok(format!(
                 "pipe {name} id={id} map_id={world_id} at ({:.2}, {:.2}, {:.2})",
+                pos.pos_x.to_f32(),
+                pos.pos_y.to_f32(),
+                pos.pos_z.to_f32()
+            ))
+        }
+        ("drop", opts) => {
+            // drop [model|-] [type:id:subid] [x y z]: NewItemDrop (+ ObjectSpawn of model unless "-") at the
+            // player (or x y z); default model ob_9900_0001, item Monomate
+            let usage = "drop [model|-] [type:id:subid] [x y z]";
+            let mut model = crate::map::DROP_MODEL.to_string();
+            let mut item = crate::map::monomate();
+            let mut rest = opts;
+            while let Some(first) = rest.first() {
+                if *first == "-" {
+                    model.clear();
+                } else if first.starts_with("o") {
+                    model = first.to_string();
+                } else if first.contains(':') {
+                    let n: Vec<u16> = first
+                        .split(':')
+                        .map(parse_num)
+                        .collect::<Option<_>>()
+                        .ok_or(Error::InvalidInput(usage))?;
+                    let [t, id, sub] = n[..] else {
+                        return Err(Error::InvalidInput(usage));
+                    };
+                    item.id.item_type = t;
+                    item.id.id = id;
+                    item.id.subid = sub;
+                    if t != 3 {
+                        item.data = Default::default();
+                    }
+                } else {
+                    break;
+                }
+                rest = &rest[1..];
+            }
+            let lock = user.lock().await;
+            let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
+            let zone = lock.zone_pos;
+            let mut pos = lock.position;
+            drop(lock);
+            if !rest.is_empty() {
+                let (x, y, z) = parse_xyz(rest).ok_or(Error::InvalidInput(usage))?;
+                pos.pos_x = half::f16::from_f32(x);
+                pos.pos_y = half::f16::from_f32(y);
+                pos.pos_z = half::f16::from_f32(z);
+            }
+            let id = map.lock().await.spawn_drop(zone, item, pos, &model).await;
+            Ok(format!(
+                "drop {id} model={model:?} at ({:.2}, {:.2}, {:.2})",
                 pos.pos_x.to_f32(),
                 pos.pos_y.to_f32(),
                 pos.pos_z.to_f32()

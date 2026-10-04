@@ -297,6 +297,10 @@ impl EnemyStats {
 
         Ok(resulting_stats)
     }
+    /// [pso2_vita_offline] where the enemy was spawned (the server does not track enemy movement)
+    pub const fn position(&self) -> Position {
+        self.pos
+    }
     pub fn create_spawn_packet(&self, id: u32) -> EnemySpawnPacket {
         EnemySpawnPacket {
             object: pso2packetlib::protocol::ObjectHeader {

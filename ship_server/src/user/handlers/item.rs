@@ -146,3 +146,49 @@ pub async fn unequip_item(
 
     Ok(Action::Nothing)
 }
+
+/// [pso2_vita_offline] ItemPickupRequest (0F-01): the client sends it when the player presses the action button
+/// at a drop. Answer: DespawnObject (to the zone), UpdateInventory (0F-06, onto a consumable stack) or AddedItem
+/// (0F-05), ItemPickupResponse (0F-02, was_pickedup 1).
+pub async fn pickup(
+    mut user: MutexGuard<'_, User>,
+    packet: protocol::items::ItemPickupRequestPacket,
+) -> HResult {
+    log::info!("[pso2-drop] pickup request drop {} unk {}", packet.drop_id, packet.unk);
+    let Some(map) = user.get_current_map() else {
+        return Ok(Action::Nothing);
+    };
+    let zone = user.zone_pos;
+    // lock order: never hold the user while locking a map
+    let drop = MutexGuard::unlocked_async(&mut user, || async move {
+        map.lock().await.take_drop(zone, packet.drop_id).await
+    })
+    .await;
+    let me = user.create_object_header();
+    let Some(drop) = drop else {
+        log::warn!("[pso2-drop] pickup: no drop {}", packet.drop_id);
+        user.send_packet(&Packet::ItemPickupResponse(protocol::items::ItemPickupResponsePacket {
+            target: me,
+            drop_id: packet.drop_id,
+            was_pickedup: 0,
+            unk: 0,
+        }))
+        .await?;
+        return Ok(Action::Nothing);
+    };
+    let user_ref: &mut User = &mut user;
+    let character = user_ref.character.as_mut().unwrap();
+    let added = character
+        .inventory
+        .add_picked_item(drop.item, &mut user_ref.user_data.last_uuid);
+    user.send_packet(&added).await?;
+    user.send_packet(&Packet::ItemPickupResponse(protocol::items::ItemPickupResponsePacket {
+        target: me,
+        drop_id: packet.drop_id,
+        was_pickedup: 1,
+        unk: 0,
+    }))
+    .await?;
+    log::info!("[pso2-drop] picked up drop {}", packet.drop_id);
+    Ok(Action::Nothing)
+}
