@@ -1,0 +1,79 @@
+[
+  {
+    "attack_name": "Sword:GA1",
+    "damage_name": "Sword:GA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.64
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:GA2",
+    "damage_name": "Sword:GA2a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 5
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:GA3",
+    "damage_name": "Sword:GA3a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 4.92
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:AA1",
+    "damage_name": "Sword:AA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.64
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:AA2",
+    "damage_name": "Sword:AA2a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 5
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:AA3",
+    "damage_name": "Sword:AA3a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 4.92
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:SA1",
+    "damage_name": "Sword:SA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1
+      }
+    }
+  }
+]
