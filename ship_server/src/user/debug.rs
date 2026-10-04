@@ -21,7 +21,7 @@ use super::{User, UserState};
 use crate::{BlockData, Error, mutex::Mutex};
 use pso2packetlib::protocol::{
     Flags, ObjectHeader, ObjectType, Packet, PacketHeader, chat::ChatMessage, models::Position,
-    objects::{SetTagPacket, TeleportTransferPacket}, questlist::AcceptQuestPacket, spawn::ObjectSpawnPacket,
+    objects::{SetTagPacket, TeleportTransferPacket}, questlist::{AcceptQuestPacket, SetQuestPointsPacket}, spawn::ObjectSpawnPacket,
 };
 use std::{sync::Arc, time::Duration};
 use tokio::{
@@ -288,7 +288,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] | tp <x> <y> <z> | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -329,6 +329,34 @@ async fn run_command(line: &str) -> Result<String, Error> {
             .await?;
             lock.position = pos;
             Ok(format!("tp ({x}, {y}, {z})"))
+        }
+        ("place", [id, xyz @ ..]) => {
+            // Object Teleport Location (04-02) for an object, e.g. the answer to a telepipe "InitPosition"
+            let id: u32 = parse_num(id).ok_or(Error::InvalidInput("place <obj id> <x> <y> <z>"))?;
+            let (x, y, z) = parse_xyz(xyz).ok_or(Error::InvalidInput("place <obj id> <x> <y> <z>"))?;
+            let lock = user.lock().await;
+            let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
+            let zone = lock.zone_pos;
+            let mut pos = lock.position;
+            drop(lock);
+            let world_id = map.lock().await.zone_world_id(zone).unwrap_or(0);
+            pos.pos_x = half::f16::from_f32(x);
+            pos.pos_y = half::f16::from_f32(y);
+            pos.pos_z = half::f16::from_f32(z);
+            user.lock()
+                .await
+                .send_packet(&Packet::TeleportTransfer(TeleportTransferPacket {
+                    source_tele: ObjectHeader {
+                        id,
+                        entity_type: ObjectType::Object,
+                        map_id: world_id as u16,
+                        ..Default::default()
+                    },
+                    location: pos,
+                    ..Default::default()
+                }))
+                .await?;
+            Ok(format!("place {id} ({x}, {y}, {z})"))
         }
         ("lobby", []) => goto(&user, "lobby").await,
         ("pipe", [kind, xyz @ ..]) => {
@@ -378,6 +406,22 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 pos.pos_z.to_f32()
             ))
         }
+        ("clear", xyz) => {
+            // same as the last enemy dying: clear telepipe at the player (or x y z), On, cleared state on InitPosition
+            let lock = user.lock().await;
+            let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
+            let zone = lock.zone_pos;
+            let mut pos = lock.position;
+            drop(lock);
+            if !xyz.is_empty() {
+                let (x, y, z) = parse_xyz(xyz).ok_or(Error::InvalidInput("clear [x y z]"))?;
+                pos.pos_x = half::f16::from_f32(x);
+                pos.pos_y = half::f16::from_f32(y);
+                pos.pos_z = half::f16::from_f32(z);
+            }
+            let done = map.lock().await.quest_clear(zone, pos).await?;
+            Ok(format!("clear {}", if done { "ok" } else { "already cleared" }))
+        }
         ("tag", [id, attr]) => {
             let id: u32 = parse_num(id).ok_or(Error::InvalidInput("tag <obj id> <attr>"))?;
             let (map, zone, pid) = {
@@ -395,14 +439,16 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 map_id: world_id as u16,
                 ..Default::default()
             };
+            // object3 is the actor (the client looks it up for "Access" / "SetPartyId")
+            let player = ObjectHeader {
+                id: pid,
+                entity_type: ObjectType::Player,
+                ..Default::default()
+            };
             let packet = Packet::SetTag(SetTagPacket {
-                receiver: ObjectHeader {
-                    id: pid,
-                    entity_type: ObjectType::Player,
-                    ..Default::default()
-                },
+                receiver: player,
                 target: obj,
-                object3: obj,
+                object3: player,
                 attribute: attr.to_string().into(),
                 ..Default::default()
             });
@@ -428,6 +474,35 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 user.lock().await.send_packet(&quest_result(bits)).await?;
             }
             Ok(format!("{cmd} opts={bits} now={now}"))
+        }
+        ("points", [total, rest @ ..]) if rest.len() <= 1 => {
+            // SetQuestPoints (0B-1F): the client compares unk1 with the zone's world header and party with its own
+            // party, stores the total and opens the area lock ("ArealockOpened") when the total reaches the quest's
+            // required points (0 for the test quest: never)
+            let (Some(total), Some(gained)) =
+                (parse_num::<u32>(total), rest.first().map_or(Some(0), |g| parse_num::<u32>(g)))
+            else {
+                return Err(Error::InvalidInput("points <total> [gained]"));
+            };
+            let lock = user.lock().await;
+            let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
+            let party = lock.get_current_party().ok_or(Error::InvalidInput("no party"))?;
+            drop(lock);
+            let zone = user.lock().await.zone_pos;
+            let world = ObjectHeader {
+                id: map.lock().await.zone_world_id(zone).unwrap_or(0),
+                entity_type: ObjectType::World,
+                ..Default::default()
+            };
+            let party = party.read().await.get_obj();
+            let packet = Packet::SetQuestPoints(SetQuestPointsPacket {
+                unk1: world,
+                party,
+                total,
+                gained,
+            });
+            user.lock().await.send_packet(&packet).await?;
+            Ok(format!("points {total} gained {gained} world={} party={}", world.id, party.id))
         }
         ("quest", [id, diff]) => {
             let (Some(id), Some(diff)) = (parse_num(id), parse_num(diff)) else {

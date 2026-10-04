@@ -52,6 +52,8 @@ struct Zone {
     minimap_status: RevealedRegions,
     data: ZoneData,
     objects: Objects,
+    // [pso2_vita_offline] quest clear: the clear telepipe (id, position), set once
+    clear_pipe: Option<(u32, Position)>,
 }
 
 struct Objects {
@@ -147,6 +149,7 @@ impl Map {
                 enemies: vec![],
                 chunk_spawns: vec![],
                 minimap_status: Default::default(),
+                clear_pipe: None,
                 data: zone,
                 objects: Objects {
                     objects,
@@ -443,7 +446,30 @@ impl Map {
         let Some(block_data) = self.block_data.to_owned() else {
             return Err(Error::InvalidInput("deal_damage"));
         };
-        self.zones[zone_pos].deal_damage(block_data, dmg).await
+        let killed = self.zones[zone_pos].deal_damage(block_data, dmg).await?;
+        // [pso2_vita_offline] quest clear when every enemy spawned so far by the zone's chunks is dead
+        // (chunks not entered yet are not counted). The telepipe goes where the last hit came from: the client
+        // closes its dialog when the player is more than ~3 m away from it.
+        if let (MapType::QuestMap, Some(pos)) = (&self.map_type, killed) {
+            let zone = &self.zones[zone_pos];
+            if zone.enemies.is_empty() && !zone.chunk_spawns.is_empty() {
+                self.quest_clear(zone_pos, pos).await?;
+            }
+        }
+        Ok(())
+    }
+
+    /// [pso2_vita_offline] Quest clear: spawns the clear telepipe (`oa_telepipe_clear`) at `pos` for everyone in the
+    /// zone and turns it On. The client then asks for its position ("InitPosition", see `interaction`); without the
+    /// answer it stays where the client cannot reach it. Returns false if the zone is already cleared.
+    pub async fn quest_clear(&mut self, zone_pos: usize, pos: Position) -> Result<bool, Error> {
+        if self.zones[zone_pos].clear_pipe.is_some() {
+            return Ok(false);
+        }
+        self.max_id += 1;
+        let id = self.max_id;
+        self.zones[zone_pos].spawn_clear_pipe(id, pos).await;
+        Ok(true)
     }
 
     pub async fn minimap_reveal(
@@ -476,6 +502,13 @@ impl Map {
         packet: protocol::objects::InteractPacket,
         sender_id: PlayerId,
     ) -> Result<(), Error> {
+        if packet.action == "InitPosition"
+            && self.zones[zone_pos]
+                .answer_init_position(sender_id, packet.object1)
+                .await?
+        {
+            return Ok(());
+        }
         let zone_id = self.zones[zone_pos].srv_zone_id;
         let Some(lua_data) = self
             .data
@@ -901,6 +934,98 @@ impl Zone {
         (packet, packet2)
     }
 
+    /// [pso2_vita_offline] `Map::quest_clear`. The object data is Story EP1 700000's `oa_telepipe_clear` with the PC
+    /// property ids turned into the Vita ones (66, 2 = Vita `get(0x41) == 2`, the final return 03-19).
+    async fn spawn_clear_pipe(&mut self, id: u32, pos: Position) {
+        use pso2packetlib::protocol::objects::SetTagPacket;
+        const DATA: [u32; 22] = [
+            1304, 1, 2, 0, 0, 0, 1677721856, 0, 58, u32::MAX, 55, 1, 57, 0, 66, 2, 67, 0, 2, 0, 0, 0,
+        ];
+        self.clear_pipe = Some((id, pos));
+        let obj = ObjectHeader {
+            id,
+            entity_type: ObjectType::Object,
+            map_id: self.data.settings.world_id as u16,
+            ..Default::default()
+        };
+        let spawn = Packet::ObjectSpawn(ObjectSpawnPacket {
+            object: obj,
+            position: pos,
+            name: "oa_telepipe_clear".to_string().into(),
+            unk2: [16, 0, 0, 0, 0],
+            flags: 4,
+            data: crate::user::debug::pc_to_vita_object_data(&DATA).into(),
+            ..Default::default()
+        });
+        log::info!(
+            "[pso2-quest] clear: telepipe {id} at ({:.2}, {:.2}, {:.2})",
+            pos.pos_x.to_f32(),
+            pos.pos_y.to_f32(),
+            pos.pos_z.to_f32()
+        );
+        exec_users(&self.players, |_, mut player| {
+            let me = player.create_object_header();
+            let _ = player.try_send_packet(&spawn);
+            // "On": the client sends Interact "InitPosition" for it (answered in `answer_init_position`)
+            let _ = player.try_send_packet(&Packet::SetTag(SetTagPacket {
+                receiver: me,
+                target: obj,
+                object3: me,
+                attribute: "On".into(),
+                ..Default::default()
+            }));
+        })
+        .await;
+    }
+
+    /// [pso2_vita_offline] Answer to Interact "InitPosition" for the clear telepipe: its position (Object Teleport
+    /// Location 04-02; until then the client keeps it out of reach and closes the "return to the campship?" dialog
+    /// at once) and the quest state "cleared" (0B-23; only then the client shows it and turns its collision on).
+    async fn answer_init_position(&self, sender_id: PlayerId, object: ObjectHeader) -> Result<bool, Error> {
+        use pso2packetlib::protocol::objects::TeleportTransferPacket;
+        let Some((id, pos)) = self.clear_pipe else {
+            return Ok(false);
+        };
+        if object.id != id {
+            return Ok(false);
+        }
+        let Some(user) = self
+            .players
+            .iter()
+            .find(|p| p.player_id == sender_id)
+            .and_then(|p| p.user.upgrade())
+        else {
+            return Ok(true);
+        };
+        let party = user.lock().await.get_current_party();
+        let party = match party {
+            Some(p) => p.read().await.get_obj(),
+            None => ObjectHeader {
+                entity_type: ObjectType::Party,
+                ..Default::default()
+            },
+        };
+        let world = ObjectHeader {
+            id: self.data.settings.world_id,
+            entity_type: ObjectType::World,
+            ..Default::default()
+        };
+        let mut lock = user.lock().await;
+        lock.send_packet(&Packet::TeleportTransfer(TeleportTransferPacket {
+            source_tele: object,
+            location: pos,
+            ..Default::default()
+        }))
+        .await?;
+        lock.send_packet(&crate::user::handlers::server::quest_state(
+            world,
+            party,
+            crate::user::handlers::server::QUEST_STATE_CLEARED,
+        ))
+        .await?;
+        Ok(true)
+    }
+
     async fn spawn_enemy(
         &mut self,
         block_data: &BlockData,
@@ -932,7 +1057,8 @@ impl Zone {
         &mut self,
         block_data: Arc<BlockData>,
         dmg: DealDamagePacket,
-    ) -> Result<(), Error> {
+    ) -> Result<Option<Position>, Error> {
+        let mut killed = None;
         let (inflicter, target) = (dmg.inflicter, dmg.target);
         if inflicter.entity_type == ObjectType::Player && target.entity_type == ObjectType::Object {
             let Some((enemy_pos, (_, target))) = self
@@ -941,7 +1067,7 @@ impl Zone {
                 .enumerate()
                 .find(|(_, (id, _))| *id == target.id)
             else {
-                return Ok(());
+                return Ok(None);
             };
             let Some(inflicter) = self
                 .players
@@ -955,6 +1081,7 @@ impl Zone {
             let result = lock
                 .get_stats_mut()
                 .damage_enemy(target, &block_data.server_data, dmg)?;
+            let inflicter_pos = lock.position;
             drop(lock);
             match result {
                 BattleResult::Damaged { dmg_packet } => {
@@ -1010,6 +1137,7 @@ impl Zone {
                     })
                     .await;
                     self.enemies.remove(enemy_pos);
+                    killed = Some(inflicter_pos);
                 }
             }
         } else if inflicter.entity_type == ObjectType::Object
@@ -1025,7 +1153,7 @@ impl Zone {
             };
             let Some((_, inflicter)) = self.enemies.iter_mut().find(|(id, _)| *id == inflicter.id)
             else {
-                return Ok(());
+                return Ok(None);
             };
             let mut lock = target.lock().await;
             let result =
@@ -1057,7 +1185,7 @@ impl Zone {
             }
         }
 
-        Ok(())
+        Ok(killed)
     }
     async fn minimap_reveal(
         &mut self,

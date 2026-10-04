@@ -1,7 +1,7 @@
 use super::HResult;
 use crate::{Action, Error, User, UserState, mutex::MutexGuard, party};
 use pso2packetlib::protocol::{
-    self, Packet,
+    self, ObjectHeader, Packet,
     flag::{FlagType, SetFlagPacket},
     server::{
         BridgeToLobbyPacket, BridgeTransportPacket, CafeToLobbyPacket, CafeTransportPacket,
@@ -283,6 +283,35 @@ pub fn quest_result(opts: u8) -> Packet {
         packet.unk2 = unk();
     }
     Packet::QuestResult(packet)
+}
+
+/// `quest_state` flags: bit 0 = the clear event (`0x82ec8c58`), bit 1 = cleared (clear telepipe shown, the campship
+/// exit becomes "quest end" / 03-1C instead of "abandon"), bit 3 = later states are ignored.
+pub const QUEST_STATE_CLEARED: u32 = 0b11;
+
+/// Quest state (0x0B-0x23, not in pso2packetlib). The Vita client compares `world` with the world header of the zone
+/// it is in (`quest manager+0x104`) and copies `flags` / `points` into the quest progress (`quest manager+0x24c`).
+/// Layout: world header, party header (not checked), two variable-length strings (empty here), 8 + 8 bytes, u8 x 4,
+/// flags u32, points u32 x 5. 0x54 bytes with empty strings.
+pub fn quest_state(world: ObjectHeader, party: ObjectHeader, flags: u32) -> Packet {
+    use pso2packetlib::protocol::{Flags, PacketHeader};
+    fn header(out: &mut Vec<u8>, h: &ObjectHeader) {
+        out.extend_from_slice(&h.id.to_le_bytes());
+        out.extend_from_slice(&h.unk.to_le_bytes());
+        out.extend_from_slice(&(h.entity_type as u16).to_le_bytes());
+        out.extend_from_slice(&h.map_id.to_le_bytes());
+    }
+    // empty variable-length string: (len + 0xFF) ^ 0xDCD7
+    let empty = (0xFFu32 ^ 0xDCD7).to_le_bytes();
+    let mut data = Vec::with_capacity(0x4C);
+    header(&mut data, &world);
+    header(&mut data, &party);
+    data.extend_from_slice(&empty);
+    data.extend_from_slice(&empty);
+    data.extend_from_slice(&[0; 16 + 4]);
+    data.extend_from_slice(&flags.to_le_bytes());
+    data.extend_from_slice(&[0; 0x14]);
+    Packet::Unknown((PacketHeader::new(0x0B, 0x23, Flags::PACKED), data))
 }
 
 /// Moves the player to the quest map's campship zone; `result` = send `QuestResult` on the next `MapLoaded`.
