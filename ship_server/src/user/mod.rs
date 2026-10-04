@@ -55,7 +55,12 @@ pub struct User {
     debug_pending: Option<String>,
     /// QuestResult to send on the next `MapLoaded` (bits: `handlers::server::RESULT_*`).
     pub(crate) pending_result: Option<u8>,
+    /// [pso2_vita_offline] last autosave (`tick`)
+    last_save: Instant,
 }
+
+/// [pso2_vita_offline] seconds between autosaves of a user with a character
+const AUTOSAVE_SECS: u64 = 30;
 
 impl User {
     pub(crate) fn new(
@@ -107,6 +112,7 @@ impl User {
                     ..Default::default()
                 },
                 session_start: Instant::now(),
+                last_save: Instant::now(),
                 debug_started: false,
                 debug_pending: None,
                 pending_result: None,
@@ -123,12 +129,37 @@ impl User {
         if s.failed_pings >= 5 {
             return Ok(Action::Disconnect);
         }
+        // [pso2_vita_offline] the user is saved only when dropped (disconnect), and a disconnect is noticed
+        // up to one ping (10 s) late, so stopping the server right after the client dies lost the session
+        if s.character.is_some() && s.last_save.elapsed().as_secs() >= AUTOSAVE_SECS {
+            s.last_save = Instant::now();
+            if let Err(e) = s.save().await {
+                log::warn!("[pso2-save] autosave of user {} failed: {e}", s.user_data.id);
+            }
+        }
         if s.last_ping.elapsed().as_secs() >= 10 {
             s.last_ping = Instant::now();
             s.failed_pings += 1;
             let _ = s.send_packet(&Packet::ServerPing).await;
         }
         Ok(Action::Nothing)
+    }
+    /// [pso2_vita_offline] Writes what `Drop` writes (character, account storage, account flags and uuid)
+    /// without dropping the user. Used by the autosave and on shutdown.
+    pub async fn save(&self) -> Result<(), Error> {
+        let Some(char) = self.character.as_ref() else {
+            return Ok(());
+        };
+        let mut char = char.clone();
+        char.play_time += self.session_start.elapsed();
+        let sql = &self.blockdata.sql;
+        let id = self.user_data.id;
+        sql.update_character(&char).await?;
+        sql.update_account_storage(id, &char.inventory).await?;
+        sql.put_account_flags(id, self.user_data.accountflags.clone()).await?;
+        sql.put_uuid(id, self.user_data.last_uuid).await?;
+        log::debug!("[pso2-save] saved user {id}");
+        Ok(())
     }
     // Helper functions
     pub fn get_ip(&self) -> Result<Ipv4Addr, Error> {

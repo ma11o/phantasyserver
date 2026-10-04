@@ -289,6 +289,8 @@ pub async fn run() -> Result<(), Error> {
     drop(blockstatus_lock);
 
     log::info!("Server started.");
+    // [pso2_vita_offline] SIGTERM (tools/server.sh stop) also stops the server, after saving connected users
+    let mut sigterm = tokio::signal::unix::signal(tokio::signal::unix::SignalKind::terminate())?;
     loop {
         tokio::select! {
             biased;
@@ -305,8 +307,13 @@ pub async fn run() -> Result<(), Error> {
             _ = tokio::signal::ctrl_c() => {
                 break;
             }
+            _ = sigterm.recv() => {
+                break;
+            }
         };
     }
+    log::info!("Stopping server...");
+    user::debug::save_all().await;
     /*
        tokio::select! {
            // we opt out of random selection because the listener is rarely accepting

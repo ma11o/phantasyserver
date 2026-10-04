@@ -106,6 +106,26 @@ pub fn debug_start() -> Option<DebugStart> {
 /// All blocks of this ship (the command port searches every block for the player).
 static BLOCKS: std::sync::Mutex<Vec<Arc<BlockData>>> = std::sync::Mutex::new(Vec::new());
 
+/// Saves every user of every block (shutdown: the process exits without dropping them).
+pub async fn save_all() {
+    let blocks = BLOCKS.lock().unwrap().clone();
+    let mut n = 0;
+    for b in blocks {
+        let clients: Vec<_> = b.clients.lock().await.iter().map(|(_, c)| c.clone()).collect();
+        for c in clients {
+            let user = c.lock().await;
+            if user.character.is_none() {
+                continue;
+            }
+            match user.save().await {
+                Ok(()) => n += 1,
+                Err(e) => log::warn!("[pso2-save] user {}: {e}", user.user_data.id),
+            }
+        }
+    }
+    log::info!("[pso2-save] saved {n} user(s) on shutdown");
+}
+
 async fn find_in_game() -> Option<Arc<Mutex<User>>> {
     let blocks = BLOCKS.lock().unwrap().clone();
     for b in blocks {
