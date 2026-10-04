@@ -5,8 +5,9 @@ use pso2packetlib::protocol::{
     flag::{FlagType, SetFlagPacket},
     server::{
         BridgeToLobbyPacket, BridgeTransportPacket, CafeToLobbyPacket, CafeTransportPacket,
-        CampshipDownPacket, CasinoToLobbyPacket, CasinoTransportPacket, MapLoadedPacket,
-        StoryToLobbyPacket, ToCampshipPacket,
+        CampshipDownPacket, CampshipToLobbyPacket, CasinoToLobbyPacket, CasinoTransportPacket,
+        DeathToCampshipPacket, MapLoadedPacket, ReturnToCampshipFinalPacket,
+        ReturnToCampshipPacket, StoryToLobbyPacket, ToCampshipPacket,
     },
 };
 use std::sync::atomic::Ordering;
@@ -178,6 +179,9 @@ pub async fn map_loaded(mut user_guard: MutexGuard<'_, User>, _: MapLoadedPacket
     let packet = protocol::unk19::LobbyMonitorPacket { video_id: 121 };
     user.send_packet(&Packet::LobbyMonitor(packet)).await?;
     user.firstload = false;
+    if let Some(opts) = user.pending_result.take() {
+        user.send_packet(&quest_result(opts)).await?;
+    }
     crate::user::debug::on_map_loaded(user).await;
 
     let map = user.map.clone().unwrap();
@@ -246,5 +250,75 @@ pub async fn move_from_story(user: MutexGuard<'_, User>, _: StoryToLobbyPacket) 
     player.lock().await.set_map(lobby.clone());
     lobby.lock().await.init_add_player(player).await?;
 
+    Ok(Action::Nothing)
+}
+
+/// `QuestResult` options: do not show the result screen.
+pub const RESULT_HIDE: u8 = 1 << 0;
+/// `QuestResult` options: first u32 of `unk1` / `unk2` entries = 0xFFFFFFFF (the Vita ctor's default).
+pub const RESULT_FF: u8 = 1 << 1;
+
+/// Empty quest result (all scores 0, rank C).
+pub fn quest_result(opts: u8) -> Packet {
+    use pso2packetlib::protocol::questlist::{QuestResultPacket, QuestResultRank, QuestResultUnk1};
+    let mut packet = QuestResultPacket {
+        rank: QuestResultRank::C,
+        total_score_achieved: 0,
+        total_score: 0,
+        hide_results: (opts & RESULT_HIDE != 0) as u8,
+        ..Default::default()
+    };
+    if opts & RESULT_FF != 0 {
+        let unk = || {
+            vec![
+                QuestResultUnk1 {
+                    unk1: u32::MAX,
+                    ..Default::default()
+                };
+                3
+            ]
+            .into()
+        };
+        packet.unk1 = unk();
+        packet.unk2 = unk();
+    }
+    Packet::QuestResult(packet)
+}
+
+/// Moves the player to the quest map's campship zone; `result` = send `QuestResult` on the next `MapLoaded`.
+pub async fn move_to_campship(user: MutexGuard<'_, User>, result: Option<u8>) -> HResult {
+    let mut user = user;
+    let map = user.get_current_map();
+    let id = user.get_user_id();
+    user.pending_result = result;
+    drop(user);
+    if let Some(map) = map {
+        map.lock().await.move_player_named(id, "campship").await?;
+    }
+    Ok(Action::Nothing)
+}
+
+pub async fn return_to_campship(user: MutexGuard<'_, User>, _: ReturnToCampshipPacket) -> HResult {
+    move_to_campship(user, None).await
+}
+
+pub async fn return_to_campship_final(
+    user: MutexGuard<'_, User>,
+    _: ReturnToCampshipFinalPacket,
+) -> HResult {
+    move_to_campship(user, Some(0)).await
+}
+
+pub async fn death_to_campship(user: MutexGuard<'_, User>, _: DeathToCampshipPacket) -> HResult {
+    move_to_campship(user, None).await
+}
+
+pub async fn campship_to_lobby(user: MutexGuard<'_, User>, _: CampshipToLobbyPacket) -> HResult {
+    let map = user.get_current_map();
+    let id = user.get_user_id();
+    drop(user);
+    if let Some(map) = map {
+        map.lock().await.move_to_lobby(id).await?;
+    }
     Ok(Action::Nothing)
 }

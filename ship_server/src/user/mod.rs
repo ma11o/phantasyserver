@@ -53,6 +53,8 @@ pub struct User {
     // [pso2_vita_offline] debug entry state (user/debug.rs)
     debug_started: bool,
     debug_pending: Option<String>,
+    /// QuestResult to send on the next `MapLoaded` (bits: `handlers::server::RESULT_*`).
+    pub(crate) pending_result: Option<u8>,
 }
 
 impl User {
@@ -107,6 +109,7 @@ impl User {
                 session_start: Instant::now(),
                 debug_started: false,
                 debug_pending: None,
+                pending_result: None,
             },
             read,
         ))
@@ -412,6 +415,18 @@ pub async fn packet_handler(
         (US::InGame, P::MapLoaded(data)) => H::server::map_loaded(user_guard, data).await,
         (US::InGame, P::ToCampship(data)) => H::server::to_campship(user_guard, data).await,
         (US::InGame, P::CampshipDown(data)) => H::server::campship_down(user_guard, data).await,
+        (US::InGame, P::ReturnToCampship(data)) => {
+            H::server::return_to_campship(user_guard, data).await
+        }
+        (US::InGame, P::ReturnToCampshipFinal(data)) => {
+            H::server::return_to_campship_final(user_guard, data).await
+        }
+        (US::InGame, P::DeathToCampship(data)) => {
+            H::server::death_to_campship(user_guard, data).await
+        }
+        (US::InGame, P::CampshipToLobby(data)) => {
+            H::server::campship_to_lobby(user_guard, data).await
+        }
         (US::InGame, P::CasinoToLobby(data)) => H::server::move_from_casino(user_guard, data).await,
         (US::InGame, P::CasinoTransport(data)) => H::server::move_to_casino(user_guard, data).await,
         (US::InGame, P::BridgeToLobby(data)) => H::server::move_from_bridge(user_guard, data).await,

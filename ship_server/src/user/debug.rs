@@ -4,7 +4,10 @@
 //!   accept the quest, transfer into its map (campship) and then move to `zone`. No client input needed.
 //! - `PSO2_DEBUG_PORT=<port>`: loopback TCP (one port for all blocks), one command per line, one reply line per command.
 //!   Commands: `goto <zone> [x y z]`, `quest <id> <diff>`, `lobby`, `spawn <enemy> [x y z]`,
-//!   `send <id> <subid> <flag> <hex>`, `pos`, `tp <x> <y> <z>`, `help`. Anything else is run as a `!` chat command.
+//!   `send <id> <subid> <flag> <hex>`, `pos`, `tp <x> <y> <z>`, `finish [hide] [ff] [now]`, `result [hide] [ff]`, `help`.
+//!   Anything else is run as a `!` chat command.
+//! - `finish`: same as a final return (03-19): move to `campship` and send `QuestResult` on the next `MapLoaded`
+//!   (`now`: right after `MapTransfer` instead). `result`: send `QuestResult` now.
 //! - T25: `goto <zone> x y z` and `PSO2_DEBUG_START="... pos=x,y,z"` replace the zone's `default_location`
 //!   (position only) for the next spawn into that zone. `tp` sends `TeleportTransfer` (0x04, 0x02) to the player
 //!   (the Vita client ignores it in a free field: the position snaps back, T25).
@@ -266,7 +269,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | tp <x> <y> <z> | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | finish [hide] [ff] [now] | result [hide] [ff] | tp <x> <y> <z> | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -309,6 +312,26 @@ async fn run_command(line: &str) -> Result<String, Error> {
             Ok(format!("tp ({x}, {y}, {z})"))
         }
         ("lobby", []) => goto(&user, "lobby").await,
+        ("finish" | "result", opts) => {
+            use super::handlers::server::{RESULT_FF, RESULT_HIDE, move_to_campship, quest_result};
+            let mut bits = 0;
+            let mut now = cmd == "result";
+            for o in opts {
+                match *o {
+                    "hide" => bits |= RESULT_HIDE,
+                    "ff" => bits |= RESULT_FF,
+                    "now" => now = true,
+                    _ => return Err(Error::InvalidInput("finish|result [hide] [ff] [now]")),
+                }
+            }
+            if cmd == "finish" {
+                move_to_campship(user.lock().await, (!now).then_some(bits)).await?;
+            }
+            if now {
+                user.lock().await.send_packet(&quest_result(bits)).await?;
+            }
+            Ok(format!("{cmd} opts={bits} now={now}"))
+        }
         ("quest", [id, diff]) => {
             let (Some(id), Some(diff)) = (parse_num(id), parse_num(diff)) else {
                 return Err(Error::InvalidInput("quest <id> <diff>"));
