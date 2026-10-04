@@ -148,8 +148,8 @@ pub async fn unequip_item(
 }
 
 /// [pso2_vita_offline] ItemPickupRequest (0F-01): the client sends it when the player presses the action button
-/// at a drop. Answer: DespawnObject (to the zone), UpdateInventory (0F-06, onto a consumable stack) or AddedItem
-/// (0F-05), ItemPickupResponse (0F-02, was_pickedup 1).
+/// at a drop. Answer: DespawnObject (to the zone), UpdateInventory (0F-06, onto a consumable stack), AddedItem
+/// (0F-05) or InventoryMeseta (0F-14, meseta), ItemPickupResponse (0F-02, was_pickedup 1).
 pub async fn pickup(
     mut user: MutexGuard<'_, User>,
     packet: protocol::items::ItemPickupRequestPacket,
@@ -178,9 +178,13 @@ pub async fn pickup(
     };
     let user_ref: &mut User = &mut user;
     let character = user_ref.character.as_mut().unwrap();
-    let added = character
-        .inventory
-        .add_picked_item(drop.item, &mut user_ref.user_data.last_uuid);
+    let added = if let Some(amount) = crate::map::meseta_amount(&drop.item) {
+        character.inventory.add_meseta(amount as u64)
+    } else {
+        character
+            .inventory
+            .add_picked_item(drop.item, &mut user_ref.user_data.last_uuid)
+    };
     user.send_packet(&added).await?;
     user.send_packet(&Packet::ItemPickupResponse(protocol::items::ItemPickupResponsePacket {
         target: me,

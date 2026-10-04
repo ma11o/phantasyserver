@@ -1021,6 +1021,7 @@ impl Zone {
         let drop = Packet::NewItemDrop(NewItemDropPacket {
             item_obj: obj,
             item_id: item.id,
+            unk1: meseta_amount(&item).unwrap_or(0),
             pos,
             drop_id: id,
             ..Default::default()
@@ -1882,6 +1883,31 @@ pub fn monomate() -> protocol::items::Item {
             amount: 1,
             ..Default::default()
         }),
+    }
+}
+
+/// [pso2_vita_offline] A meseta drop: item type 0xFE (the client's item helpers treat 0xFE as an amount type, valid when
+/// the u32 at item +0x10 is > 0), amount kept in the first 4 bytes of the item data and sent in NewItemDrop.unk1
+/// (item +0x10 once the client copies the drop into an item).
+pub const MESETA_TYPE: u16 = 0xFE;
+pub fn meseta(amount: u32) -> protocol::items::Item {
+    use protocol::items::{Item, ItemId, ItemType};
+    Item {
+        uuid: 0,
+        id: ItemId {
+            item_type: MESETA_TYPE,
+            ..Default::default()
+        },
+        data: ItemType::Unknown(amount.to_le_bytes().to_vec().into()),
+    }
+}
+/// [pso2_vita_offline] The amount of a meseta item from `meseta`, None for anything else.
+pub fn meseta_amount(item: &protocol::items::Item) -> Option<u32> {
+    match &item.data {
+        protocol::items::ItemType::Unknown(b) if item.id.item_type == MESETA_TYPE && b.len() >= 4 => {
+            Some(u32::from_le_bytes([b[0], b[1], b[2], b[3]]))
+        }
+        _ => None,
     }
 }
 

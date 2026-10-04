@@ -429,9 +429,9 @@ async fn run_command(line: &str) -> Result<String, Error> {
             Ok(format!("ehp {hp} ({n} enemies)"))
         }
         ("drop", opts) => {
-            // drop [model|-] [type:id:subid] [x y z]: NewItemDrop (+ ObjectSpawn of model unless "-") at the
+            // drop [model|-] [type:id:subid|meseta:<n>] [x y z]: NewItemDrop (+ ObjectSpawn of model unless "-") at the
             // player (or x y z); default model ob_9900_0001, item Monomate
-            let usage = "drop [model|-] [type:id:subid] [x y z]";
+            let usage = "drop [model|-] [type:id:subid|meseta:<n>] [x y z]";
             let mut model = crate::map::DROP_MODEL.to_string();
             let mut item = crate::map::monomate();
             let mut rest = opts;
@@ -440,6 +440,8 @@ async fn run_command(line: &str) -> Result<String, Error> {
                     model.clear();
                 } else if first.starts_with("o") {
                     model = first.to_string();
+                } else if let Some(n) = first.strip_prefix("meseta:") {
+                    item = crate::map::meseta(parse_num(n).ok_or(Error::InvalidInput(usage))?);
                 } else if first.contains(':') {
                     let n: Vec<u16> = first
                         .split(':')
