@@ -554,6 +554,12 @@ impl Inventory {
                 });
             }
         }
+        // the client keys its inventory by uuid; last_uuid can be behind the inventory's uuids (1 vs 4 seen), so never
+        // go below them. NOTE: on Vita an AddedItem of a consumable id not in the inventory (Dimate) is still dropped
+        // by the client (`0x83026c14` returns 0), with or without LoadItem
+        let next = self.inventory.items.iter().map(|i| i.uuid).max().unwrap_or(0) + 1;
+        log::info!("[pso2-drop] new inventory entry: last_uuid {} inventory max+1 {next}", *uuid);
+        *uuid = (*uuid).max(next);
         item.uuid = *uuid;
         *uuid += 1;
         self.add_item(item)

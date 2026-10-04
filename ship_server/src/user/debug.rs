@@ -288,7 +288,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | ehp <n> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -405,6 +405,16 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 pos.pos_y.to_f32(),
                 pos.pos_z.to_f32()
             ))
+        }
+        ("ehp", [hp]) => {
+            // HP of every enemy in the player's zone (the next hit goes through the normal damage path)
+            let hp: u32 = parse_num(hp).ok_or(Error::InvalidInput("ehp <n>"))?;
+            let lock = user.lock().await;
+            let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
+            let zone = lock.zone_pos;
+            drop(lock);
+            let n = map.lock().await.set_enemy_hp(zone, hp);
+            Ok(format!("ehp {hp} ({n} enemies)"))
         }
         ("drop", opts) => {
             // drop [model|-] [type:id:subid] [x y z]: NewItemDrop (+ ObjectSpawn of model unless "-") at the

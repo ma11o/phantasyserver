@@ -297,6 +297,10 @@ impl EnemyStats {
 
         Ok(resulting_stats)
     }
+    /// [pso2_vita_offline] debug `ehp`
+    pub fn set_hp(&mut self, hp: u32) {
+        self.hp = hp.min(self.max_hp);
+    }
     /// [pso2_vita_offline] where the enemy was spawned (the server does not track enemy movement)
     pub const fn position(&self) -> Position {
         self.pos

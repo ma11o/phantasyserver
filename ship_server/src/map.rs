@@ -508,6 +508,13 @@ impl Map {
         id
     }
 
+    /// [pso2_vita_offline] debug `ehp`: sets the HP of every enemy in the zone; returns how many.
+    pub fn set_enemy_hp(&mut self, zone_pos: usize, hp: u32) -> usize {
+        let enemies = &mut self.zones[zone_pos].enemies;
+        enemies.iter_mut().for_each(|(_, e)| e.set_hp(hp));
+        enemies.len()
+    }
+
     /// [pso2_vita_offline] Removes a drop (picked up) and despawns it for everyone in the zone.
     pub async fn take_drop(&mut self, zone_pos: usize, drop_id: u32) -> Option<FieldDrop> {
         self.zones[zone_pos].take_drop(drop_id).await
