@@ -114,7 +114,13 @@ pub async fn abandon_quest(user: MutexGuard<'_, User>) -> HResult {
     let party = user.get_current_party();
     drop(user);
     if let Some(party) = party {
-        party.write().await.abandon().await
+        let to_move = party.write().await.abandon().await;
+        for (id, user) in to_move {
+            let map = user.lock().await.get_current_map();
+            if let Some(map) = map {
+                let _ = map.lock().await.move_to_lobby(id).await;
+            }
+        }
     }
     Ok(Action::Nothing)
 }

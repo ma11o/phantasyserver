@@ -640,9 +640,12 @@ impl Party {
         .await;
     }
 
-    pub async fn abandon(&mut self) {
+    /// Returns the players to move to the lobby. [pso2_vita_offline] the caller moves them after releasing the party
+    /// lock: `init_add_player` reads the party, so moving here (under `party.write()`) deadlocked the connection.
+    pub async fn abandon(&mut self) -> Vec<(u32, Arc<Mutex<User>>)> {
         self.quest = None;
         self.questname.clear();
+        let mut to_move = vec![];
         for (id, user) in self
             .players
             .iter()
@@ -661,12 +664,10 @@ impl Party {
                     vec![0, 0, 0, 0],
                 )))
                 .await;
-            let current_map = lock
-                .get_current_map()
-                .expect("Player should have a map assigned");
             drop(lock);
-            let _ = current_map.lock().await.move_to_lobby(id).await;
+            to_move.push((id, user));
         }
+        to_move
     }
     pub const fn get_obj(&self) -> ObjectHeader {
         self.id
