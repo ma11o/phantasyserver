@@ -288,7 +288,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -457,21 +457,51 @@ async fn run_command(line: &str) -> Result<String, Error> {
         }
         ("finish" | "result", opts) => {
             use super::handlers::server::{RESULT_FF, RESULT_HIDE, move_to_campship, quest_result};
+            use pso2packetlib::protocol::questlist::QuestResultRank;
+            const USAGE: &str = "finish|result [hide] [ff] [now] [rank=C|B|A|S] [meseta=N] [exp=N] [kills=N] [score=N/M]";
             let mut bits = 0;
             let mut now = cmd == "result";
+            // values for `result` (sent at once): rank, meseta, exp, enemy kills, total score achieved / total
+            let mut values: Vec<(&str, &str)> = vec![];
             for o in opts {
                 match *o {
                     "hide" => bits |= RESULT_HIDE,
                     "ff" => bits |= RESULT_FF,
                     "now" => now = true,
-                    _ => return Err(Error::InvalidInput("finish|result [hide] [ff] [now]")),
+                    kv if kv.contains('=') => values.extend(kv.split_once('=')),
+                    _ => return Err(Error::InvalidInput(USAGE)),
                 }
             }
             if cmd == "finish" {
                 move_to_campship(user.lock().await, (!now).then_some(bits)).await?;
             }
             if now {
-                user.lock().await.send_packet(&quest_result(bits)).await?;
+                let mut packet = quest_result(bits);
+                if let Packet::QuestResult(p) = &mut packet {
+                    for (k, v) in &values {
+                        let n = || parse_num::<u32>(v).ok_or(Error::InvalidInput(USAGE));
+                        match *k {
+                            "rank" => {
+                                p.rank = match *v {
+                                    "S" => QuestResultRank::S,
+                                    "A" => QuestResultRank::A,
+                                    "B" => QuestResultRank::B,
+                                    _ => QuestResultRank::C,
+                                }
+                            }
+                            "meseta" => p.meseta_earned = n()?,
+                            "exp" => p.exp_earned = n()?,
+                            "kills" => p.enemy_kills.value = n()?,
+                            "score" => {
+                                let (a, b) = v.split_once('/').ok_or(Error::InvalidInput(USAGE))?;
+                                p.total_score_achieved = parse_num(a).ok_or(Error::InvalidInput(USAGE))?;
+                                p.total_score = parse_num(b).ok_or(Error::InvalidInput(USAGE))?;
+                            }
+                            _ => return Err(Error::InvalidInput(USAGE)),
+                        }
+                    }
+                }
+                user.lock().await.send_packet(&packet).await?;
             }
             Ok(format!("{cmd} opts={bits} now={now}"))
         }
