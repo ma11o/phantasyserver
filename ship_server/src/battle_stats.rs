@@ -100,6 +100,16 @@ impl PlayerStats {
                 .find(|a| a.id == ids.id && a.subid == ids.subid)
                 .cloned()
                 .ok_or(Error::NoItemInAttrs(ids.id, ids.subid))?;
+            log::debug!(
+                "[pso2-battle] weapon {}:{}:{} mel {} rng {} tec {} (base mel {})",
+                ids.item_type,
+                ids.id,
+                ids.subid,
+                weapon_stats.melee_dmg,
+                weapon_stats.range_dmg,
+                weapon_stats.gender_force_dmg.force_dmg,
+                resulting_stats.base_mel_pwr
+            );
             resulting_stats.weapon_mel_pwr = weapon_stats.melee_dmg as _;
             resulting_stats.weapon_rng_pwr = weapon_stats.range_dmg as _;
             resulting_stats.weapon_tec_pwr = weapon_stats.gender_force_dmg.force_dmg as _;

@@ -457,12 +457,28 @@ fn create_attr_files(path: &Path, srv_data: &mut ServerData) -> Result<(), Box<d
     if let Some(path) = vita_bin {
         let raw = fs::read(&path)?;
         match item_attrs::ItemAttributesVita::read_attrs(&mut Cursor::new(&raw)) {
-            Ok(a) => println!(
-                "Vita item_parameter.bin from {path:?}: {} bytes, {} weapons, {} consumables",
-                raw.len(),
-                a.weapons.len(),
-                a.consumables.len()
-            ),
+            Ok(a) => {
+                println!(
+                    "Vita item_parameter.bin from {path:?}: {} bytes, {} weapons, {} consumables",
+                    raw.len(),
+                    a.weapons.len(),
+                    a.consumables.len()
+                );
+                // the server's own lookups (weapon power in PlayerStats::build, costumes) use the same full
+                // table; the sample has 4 weapons, so an equipped weapon outside it failed NoItemInAttrs
+                srv_data.item_params.attrs = a.into();
+                // range_dmg (+16 u16), unk4 (+18), melee_dmg (+19 u16), unk5 (+21) are one 48-bit field in
+                // the Vita file: range = bits 0..13, melee = bits 26..39 (the Sword 1:1:0 reads 94, as the
+                // client shows; the library's u16 reading gives 33144)
+                for w in srv_data.item_params.attrs.weapons.iter_mut() {
+                    let v = w.range_dmg as u64
+                        | (w.unk4 as u64) << 16
+                        | (w.melee_dmg as u64) << 24
+                        | (w.unk5 as u64) << 40;
+                    w.range_dmg = (v & 0x1FFF) as u16;
+                    w.melee_dmg = ((v >> 26) & 0x1FFF) as u16;
+                }
+            }
             Err(e) => println!("Vita item_parameter.bin from {path:?}: {} bytes, not parsed ({e})", raw.len()),
         }
         attrs_data_vita = Cursor::new(raw);
