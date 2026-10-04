@@ -288,7 +288,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | ehp <n> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | tp pipe | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] [boss] | send <id> <subid> <flag> <hex> | ehp <n> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -310,7 +310,19 @@ async fn run_command(line: &str) -> Result<String, Error> {
             goto(&user, zone).await
         }
         ("tp", xyz) => {
-            let (x, y, z) = parse_xyz(xyz).ok_or(Error::InvalidInput("tp <x> <y> <z>"))?;
+            // `tp pipe`: 1.6 m short of the clear telepipe (the client checks the distance, ~3 m)
+            let xyz: Vec<String> = if let ["pipe"] = xyz {
+                let lock = user.lock().await;
+                let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
+                let zone = lock.zone_pos;
+                drop(lock);
+                let p = map.lock().await.clear_pipe_pos(zone).ok_or(Error::InvalidInput("no clear telepipe"))?;
+                vec![p.pos_x.to_f32().to_string(), p.pos_y.to_f32().to_string(), (p.pos_z.to_f32() - 1.6).to_string()]
+            } else {
+                xyz.iter().map(|s| s.to_string()).collect()
+            };
+            let xyz: Vec<&str> = xyz.iter().map(|s| s.as_str()).collect();
+            let (x, y, z) = parse_xyz(&xyz).ok_or(Error::InvalidInput("tp <x> <y> <z> | tp pipe"))?;
             let mut lock = user.lock().await;
             let mut pos = lock.position;
             pos.pos_x = half::f16::from_f32(x);
@@ -636,7 +648,15 @@ async fn run_command(line: &str) -> Result<String, Error> {
             let (hp, max) = lock.get_stats().get_hp();
             Ok(format!("hp {hp}/{max}"))
         }
-        ("spawn", [name, rest @ ..]) if rest.is_empty() || rest.len() == 3 => {
+        ("spawn", [name, rest @ ..]) if (0..=4).contains(&rest.len()) => {
+            // [pso2_vita_offline] a trailing `boss` makes it the zone's boss (the quest clears when it dies)
+            let (rest, boss) = match rest {
+                [rest @ .., b] if *b == "boss" => (rest, true),
+                _ => (rest, false),
+            };
+            if !(rest.is_empty() || rest.len() == 3) {
+                return Err(Error::InvalidInput("spawn <enemy> [x y z] [boss]"));
+            }
             let lock = user.lock().await;
             let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
             let zone = lock.zone_pos;
@@ -651,8 +671,8 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 pos.pos_y = half::f16::from_f32(y);
                 pos.pos_z = half::f16::from_f32(z);
             }
-            map.lock().await.spawn_enemy(zone, name, pos).await?;
-            Ok(format!("spawned {name}"))
+            map.lock().await.spawn_enemy_as(zone, name, pos, boss).await?;
+            Ok(format!("spawned {name}{}", if boss { " (boss)" } else { "" }))
         }
         ("send", [id, subid, flag, hex @ ..]) => {
             let (Some(id), Some(subid), Some(flag)) =

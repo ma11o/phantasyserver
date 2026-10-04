@@ -56,6 +56,8 @@ struct Zone {
     clear_pipe: Option<(u32, Position)>,
     // [pso2_vita_offline] items lying on the ground (NewItemDrop sent, not picked up yet)
     drops: Vec<FieldDrop>,
+    // [pso2_vita_offline] object id of the zone's boss once spawned (`ZoneData::boss` or debug `spawn ... boss`)
+    boss_id: Option<u32>,
 }
 
 /// [pso2_vita_offline] An item on the ground. The client keys its drop registry by `drop_id` and finds the entry
@@ -166,6 +168,7 @@ impl Map {
                 minimap_status: Default::default(),
                 clear_pipe: None,
                 drops: vec![],
+                boss_id: None,
                 data: zone,
                 objects: Objects {
                     objects,
@@ -446,12 +449,25 @@ impl Map {
         name: &str,
         pos: Position,
     ) -> Result<(), Error> {
+        self.spawn_enemy_as(zone_pos, name, pos, false).await
+    }
+    /// [pso2_vita_offline] `spawn_enemy`; `boss` makes it the zone's boss (the quest clears when it dies)
+    pub async fn spawn_enemy_as(
+        &mut self,
+        zone_pos: usize,
+        name: &str,
+        pos: Position,
+        boss: bool,
+    ) -> Result<(), Error> {
         let Some(block_data) = self.block_data.to_owned() else {
             return Err(Error::NoEnemyData(name.to_string()));
         };
-        self.zones[zone_pos]
+        let id = self.zones[zone_pos]
             .spawn_enemy(&block_data, &mut self.max_id, self.enemy_level, name, pos)
             .await?;
+        if boss {
+            self.zones[zone_pos].boss_id = Some(id);
+        }
         Ok(())
     }
     pub async fn deal_damage(
@@ -464,19 +480,31 @@ impl Map {
         };
         let killed = self.zones[zone_pos].deal_damage(block_data, dmg).await?;
         // [pso2_vita_offline] every killed enemy drops one fixed item (Monomate) where it was spawned
-        if let Some((_, enemy_pos)) = killed {
+        if let Some((_, enemy_pos, _)) = killed {
             self.spawn_drop(zone_pos, monomate(), enemy_pos, DROP_MODEL).await;
         }
-        // [pso2_vita_offline] quest clear when every enemy spawned so far by the zone's chunks is dead
-        // (chunks not entered yet are not counted). The telepipe goes where the last hit came from: the client
-        // closes its dialog when the player is more than ~3 m away from it.
-        if let (MapType::QuestMap, Some((pos, _))) = (&self.map_type, killed) {
+        // [pso2_vita_offline] quest clear when the zone's boss dies, or, in a zone without a boss, when every
+        // enemy spawned so far by the zone's chunks is dead (chunks not entered yet are not counted). The telepipe
+        // goes where the last hit came from: the client closes its dialog when the player is more than ~3 m away
+        // from it.
+        if let (MapType::QuestMap, Some((pos, _, id))) = (&self.map_type, killed) {
             let zone = &self.zones[zone_pos];
-            if zone.enemies.is_empty() && !zone.chunk_spawns.is_empty() {
+            let clear = if zone.boss_id.is_some() || zone.data.boss.is_some() {
+                zone.boss_id == Some(id)
+            } else {
+                zone.enemies.is_empty() && !zone.chunk_spawns.is_empty()
+            };
+            if clear {
+                log::info!("[pso2-quest] clear: zone {} (boss {:?})", zone.data.name, zone.boss_id);
                 self.quest_clear(zone_pos, pos).await?;
             }
         }
         Ok(())
+    }
+
+    /// [pso2_vita_offline] debug `tp pipe`: where the zone's clear telepipe is
+    pub fn clear_pipe_pos(&self, zone_pos: usize) -> Option<Position> {
+        self.zones.get(zone_pos)?.clear_pipe.map(|(_, p)| p)
     }
 
     /// [pso2_vita_offline] Quest clear: spawns the clear telepipe (`oa_telepipe_clear`) at `pos` for everyone in the
@@ -1153,7 +1181,7 @@ impl Zone {
         enemy_lvl: u32,
         name: &str,
         pos: Position,
-    ) -> Result<(), Error> {
+    ) -> Result<u32, Error> {
         let id = *max_id + 1;
         *max_id += 1;
         let data = EnemyStats::build(name, enemy_lvl, pos, &block_data.server_data)?;
@@ -1170,15 +1198,15 @@ impl Zone {
         })
         .await;
 
-        Ok(())
+        Ok(id)
     }
 
     async fn deal_damage(
         &mut self,
         block_data: Arc<BlockData>,
         dmg: DealDamagePacket,
-    ) -> Result<Option<(Position, Position)>, Error> {
-        // [pso2_vita_offline] (last hitter's position, enemy's position) when an enemy died
+    ) -> Result<Option<(Position, Position, u32)>, Error> {
+        // [pso2_vita_offline] (last hitter's position, enemy's position, enemy id) when an enemy died
         let mut killed = None;
         let (inflicter, target) = (dmg.inflicter, dmg.target);
         log::debug!(
@@ -1267,8 +1295,8 @@ impl Zone {
                         }
                     })
                     .await;
-                    self.enemies.remove(enemy_pos);
-                    killed = Some((inflicter_pos, enemy_xyz));
+                    let (enemy_id, _) = self.enemies.remove(enemy_pos);
+                    killed = Some((inflicter_pos, enemy_xyz, enemy_id));
                 }
             }
         } else if inflicter.entity_type == ObjectType::Object
@@ -1351,6 +1379,17 @@ impl Zone {
         else {
             return Err(Error::InvalidInput("minimap_reveal"));
         };
+
+        // [pso2_vita_offline] the zone's boss, once
+        if let Some(boss) = self.data.boss.clone() {
+            if boss.chunk_id == packet.chunk_id && self.boss_id.is_none() {
+                let id = self
+                    .spawn_enemy(block_data, max_id, enemy_lvl, &boss.enemy_name, boss.position)
+                    .await?;
+                self.boss_id = Some(id);
+                log::info!("[pso2-quest] boss {} spawned as {id} (chunk {})", boss.enemy_name, boss.chunk_id);
+            }
+        }
 
         if let Some(chunk) = self
             .data

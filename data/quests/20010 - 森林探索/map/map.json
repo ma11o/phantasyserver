@@ -2924,7 +2924,17 @@
           ],
           "zone_id": 3
         }
-      ]
+      ],
+      "boss": {
+        "enemy_name": "BigBeastA",
+        "chunk_id": 16,
+        "position": {
+          "pos_x": 22772,
+          "pos_y": 13517,
+          "pos_z": 22480,
+          "rot_y": 15360
+        }
+      }
     }
   ],
   "init_map": 1

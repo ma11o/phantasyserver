@@ -162,10 +162,20 @@ impl PlayerStats {
         attack: DealDamagePacket,
     ) -> Result<BattleResult, Error> {
         let damage = find_attack(srv_data, attack.attack_id, "player -> enemy", &enemy.name);
+        // [pso2_vita_offline] unknown parts fall back to the first hitbox with a warning (the part ids of most
+        // enemies are not known yet)
         let Some(hitbox) = enemy
             .hitboxes
             .iter()
             .find(|h| h.hitbox_id == attack.hitbox_id)
+            .or_else(|| {
+                log::warn!(
+                    "[pso2-battle] unknown hitbox {} of {}, using the first one",
+                    attack.hitbox_id,
+                    enemy.name
+                );
+                enemy.hitboxes.first()
+            })
             .cloned()
         else {
             return Err(Error::NoHitboxInfo(

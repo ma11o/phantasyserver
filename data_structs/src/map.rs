@@ -74,6 +74,18 @@ pub struct ZoneData {
     pub default_location: Position,
     pub enemies: Vec<EnemySpawn>,
     pub chunks: Vec<ZoneChunk>,
+    /// [pso2_vita_offline] see `ZoneBoss`
+    pub boss: Option<ZoneBoss>,
+}
+
+/// [pso2_vita_offline] The zone's boss: spawned once at `position` when the chunk `chunk_id` is revealed. In a zone
+/// with a boss the quest clears when the boss dies (not when every spawned enemy is dead).
+#[derive(Serialize, Deserialize, Clone, Debug, Default)]
+#[serde(default)]
+pub struct ZoneBoss {
+    pub enemy_name: String,
+    pub chunk_id: u32,
+    pub position: Position,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]
