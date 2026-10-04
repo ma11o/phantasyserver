@@ -1060,6 +1060,15 @@ impl Zone {
     ) -> Result<Option<Position>, Error> {
         let mut killed = None;
         let (inflicter, target) = (dmg.inflicter, dmg.target);
+        log::debug!(
+            "[pso2-battle] DealDamage {:?} {} -> {:?} {} attack {} hitbox {}",
+            inflicter.entity_type,
+            inflicter.id,
+            target.entity_type,
+            target.id,
+            dmg.attack_id,
+            dmg.hitbox_id
+        );
         if inflicter.entity_type == ObjectType::Player && target.entity_type == ObjectType::Object {
             let Some((enemy_pos, (_, target))) = self
                 .enemies
@@ -1143,6 +1152,7 @@ impl Zone {
         } else if inflicter.entity_type == ObjectType::Object
             && target.entity_type == ObjectType::Player
         {
+            let (target_id, inflicter_id) = (target.id, inflicter.id);
             let Some(target) = self
                 .players
                 .iter_mut()
@@ -1156,6 +1166,10 @@ impl Zone {
                 return Ok(None);
             };
             let mut lock = target.lock().await;
+            if lock.get_stats().get_hp().0 == 0 {
+                // already incapacitated: the enemies keep hitting, don't kill again
+                return Ok(None);
+            }
             let result =
                 inflicter.damage_player(lock.get_stats_mut(), &block_data.server_data, dmg)?;
             drop(lock);
@@ -1171,16 +1185,28 @@ impl Zone {
                     })
                     .await;
                 }
-                BattleResult::Killed { dmg_packet, .. } => {
+                BattleResult::Killed {
+                    dmg_packet,
+                    kill_packet,
+                    ..
+                } => {
                     let mut dmg_packet = Packet::DamageReceive(dmg_packet);
+                    let mut kill_packet = Packet::EnemyKilled(kill_packet);
                     exec_users(&self.players, |_, mut player| {
                         if let Packet::DamageReceive(data) = &mut dmg_packet {
                             data.receiver = player.create_object_header();
                             let _ = player.try_send_packet(&dmg_packet);
                         }
+                        if let Packet::EnemyKilled(data) = &mut kill_packet {
+                            data.receiver = player.create_object_header();
+                            let _ = player.try_send_packet(&kill_packet);
+                        }
                     })
                     .await;
-                    todo!();
+                    // new_hp = 0 alone leaves the player standing; EnemyKilled (0x04-0x0F) with the player as the
+                    // target makes the client fall and open its incapacitated menu. "Return to campship" there
+                    // sends 03-1A (DeathToCampship), which heals on the campship.
+                    log::info!("[pso2-battle] player {} incapacitated by {}", target_id, inflicter_id);
                 }
             }
         }

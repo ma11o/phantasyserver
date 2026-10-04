@@ -64,5 +64,27 @@
         "mul": 4.92
       }
     }
+  },
+  {
+    "attack_name": "Unarmed:PA1Damage",
+    "damage_name": "Unarmed:PA1Damage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1
+      }
+    }
+  },
+  {
+    "attack_name": "Unarmed:SA1Damage",
+    "damage_name": "Unarmed:SA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1
+      }
+    }
   }
 ]

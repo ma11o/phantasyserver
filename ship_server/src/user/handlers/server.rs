@@ -320,6 +320,7 @@ pub async fn move_to_campship(user: MutexGuard<'_, User>, result: Option<u8>) ->
     let map = user.get_current_map();
     let id = user.get_user_id();
     user.pending_result = result;
+    user.get_stats_mut().restore_hp();
     drop(user);
     if let Some(map) = map {
         map.lock().await.move_player_named(id, "campship").await?;

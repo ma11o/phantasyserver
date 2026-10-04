@@ -1,5 +1,5 @@
 use crate::{Error, User};
-use data_structs::{ServerData, stats::EnemyHitbox};
+use data_structs::{ServerData, stats::{AttackStats, EnemyHitbox}};
 use pso2packetlib::protocol::{
     models::{Position, character::Class},
     objects::{DamageReceivePacket, EnemyKilledPacket},
@@ -148,20 +148,20 @@ impl PlayerStats {
     pub const fn get_hp(&self) -> (u32, u32) {
         (self.hp, self.max_hp)
     }
+    /// Full HP (the campship heals; the client restores its own HP there).
+    pub fn restore_hp(&mut self) {
+        self.hp = self.max_hp;
+    }
+    pub fn set_hp(&mut self, hp: u32) {
+        self.hp = hp.min(self.max_hp);
+    }
     pub fn damage_enemy(
         &mut self,
         enemy: &mut EnemyStats,
         srv_data: &ServerData,
         attack: DealDamagePacket,
     ) -> Result<BattleResult, Error> {
-        let Some(damage) = srv_data
-            .attack_stats
-            .iter()
-            .find(|a| a.attack_id == attack.attack_id)
-            .cloned()
-        else {
-            return Err(Error::NoDamageInfo(attack.attack_id));
-        };
+        let damage = find_attack(srv_data, attack.attack_id, "player -> enemy", &enemy.name);
         let Some(hitbox) = enemy
             .hitboxes
             .iter()
@@ -213,6 +213,7 @@ impl PlayerStats {
         }
         .round() as u32;
         enemy.hp = enemy.hp.saturating_sub(dmg);
+        log::debug!("[pso2-battle] {} took {dmg}, hp {}", enemy.name, enemy.hp);
         let dmg_packet = DamageReceivePacket {
             dmg_target: attack.target,
             dmg_inflicter: attack.inflicter,
@@ -360,14 +361,7 @@ impl EnemyStats {
         srv_data: &ServerData,
         attack: DealDamagePacket,
     ) -> Result<BattleResult, Error> {
-        let Some(damage) = srv_data
-            .attack_stats
-            .iter()
-            .find(|a| a.attack_id == attack.attack_id)
-            .cloned()
-        else {
-            return Err(Error::NoDamageInfo(attack.attack_id));
-        };
+        let damage = find_attack(srv_data, attack.attack_id, "enemy -> player", &self.name);
         let (min_pwr, max_pwr) = match damage.attack_type {
             data_structs::stats::AttackType::Mel => (self.min_mel_pwr, self.max_mel_pwr),
             data_structs::stats::AttackType::Rng => (self.min_rng_pwr, self.max_rng_pwr),
@@ -439,6 +433,22 @@ impl EnemyStats {
         } else {
             BattleResult::Damaged { dmg_packet }
         })
+    }
+}
+
+/// Looks up an attack by the id the client sends. Unknown ids are logged and fall back to a generic melee attack
+/// (multiplier 1.0, damage id = attack id) instead of failing, because the error message blocks the client's input.
+fn find_attack(srv_data: &ServerData, attack_id: u32, dir: &str, enemy: &str) -> AttackStats {
+    if let Some(a) = srv_data.attack_stats.iter().find(|a| a.attack_id == attack_id) {
+        return a.clone();
+    }
+    log::warn!("[pso2-battle] unknown attack id {attack_id} (0x{attack_id:08x}) {dir} ({enemy}), using a generic attack");
+    AttackStats {
+        attack_id,
+        damage_id: attack_id,
+        attack_type: data_structs::stats::AttackType::Mel,
+        defense_type: data_structs::stats::AttackType::Mel,
+        damage: data_structs::stats::DamageType::Generic(1.0),
     }
 }
 
