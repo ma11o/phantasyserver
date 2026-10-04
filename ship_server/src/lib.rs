@@ -5,6 +5,7 @@
 #![allow(dead_code)]
 
 mod battle_stats;
+mod drops;
 mod block;
 mod inventory;
 mod invites;

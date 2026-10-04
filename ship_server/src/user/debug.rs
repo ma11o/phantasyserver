@@ -418,6 +418,31 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 pos.pos_z.to_f32()
             ))
         }
+        ("roll", [enemy, rest @ ..]) => {
+            // roll <enemy> [n] [area]: rolls the drop tables n times (default 1000, area default area2) and counts the results
+            let n: u32 = rest.first().and_then(|s| parse_num(s)).unwrap_or(1000);
+            let area = rest.get(1).copied().unwrap_or("area2");
+            let mut counts = std::collections::BTreeMap::<String, (u32, u64)>::new();
+            for _ in 0..n {
+                for item in crate::drops::roll(enemy, area) {
+                    let (key, amount) = match crate::map::meseta_amount(&item) {
+                        Some(a) => ("meseta".to_string(), a as u64),
+                        None => {
+                            let a = match &item.data {
+                                pso2packetlib::protocol::items::ItemType::Consumable(c) => c.amount as u64,
+                                _ => 1,
+                            };
+                            (format!("{}:{}:{}", item.id.item_type, item.id.id, item.id.subid), a)
+                        }
+                    };
+                    let e = counts.entry(key).or_default();
+                    e.0 += 1;
+                    e.1 += amount;
+                }
+            }
+            let list: Vec<String> = counts.iter().map(|(k, (c, a))| format!("{k}={c}(sum {a})")).collect();
+            Ok(format!("roll {enemy} x{n} in {area}: {}", if list.is_empty() { "nothing".into() } else { list.join(" ") }))
+        }
         ("ehp", [hp]) => {
             // HP of every enemy in the player's zone (the next hit goes through the normal damage path)
             let hp: u32 = parse_num(hp).ok_or(Error::InvalidInput("ehp <n>"))?;

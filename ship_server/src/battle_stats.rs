@@ -268,6 +268,9 @@ impl PlayerStats {
 }
 
 impl EnemyStats {
+    pub fn name(&self) -> &str {
+        &self.name
+    }
     pub fn build(name: &str, level: u32, pos: Position, data: &ServerData) -> Result<Self, Error> {
         let mut resulting_stats = Self {
             name: name.to_string(),

@@ -479,15 +479,32 @@ impl Map {
             return Err(Error::InvalidInput("deal_damage"));
         };
         let killed = self.zones[zone_pos].deal_damage(block_data, dmg).await?;
-        // [pso2_vita_offline] every killed enemy drops one fixed item (Monomate) where it was spawned
-        if let Some((_, enemy_pos, _)) = killed {
-            self.spawn_drop(zone_pos, monomate(), enemy_pos, DROP_MODEL).await;
+        // [pso2_vita_offline] drop tables (drops.rs): enemy -> common -> area -> meseta, spread on a small ring around
+        // where the enemy was spawned
+        if let Some((_, enemy_pos, _, name)) = &killed {
+            let area = self.zones[zone_pos].data.name.clone();
+            let items = crate::drops::roll(name, &area);
+            log::info!(
+                "[pso2-drop] {name} in {area}: {}",
+                items.iter().map(crate::drops::describe).collect::<Vec<_>>().join(" ")
+            );
+            let n = items.len();
+            for (i, item) in items.into_iter().enumerate() {
+                let mut pos = *enemy_pos;
+                if n > 1 {
+                    let a = i as f32 * std::f32::consts::TAU / n as f32;
+                    pos.pos_x = half::f16::from_f32(pos.pos_x.to_f32() + 0.8 * a.cos());
+                    pos.pos_z = half::f16::from_f32(pos.pos_z.to_f32() + 0.8 * a.sin());
+                }
+                let model = crate::drops::model(&item);
+                self.spawn_drop(zone_pos, item, pos, model).await;
+            }
         }
         // [pso2_vita_offline] quest clear when the zone's boss dies, or, in a zone without a boss, when every
         // enemy spawned so far by the zone's chunks is dead (chunks not entered yet are not counted). The telepipe
         // goes where the last hit came from: the client closes its dialog when the player is more than ~3 m away
         // from it.
-        if let (MapType::QuestMap, Some((pos, _, id))) = (&self.map_type, killed) {
+        if let (MapType::QuestMap, Some((pos, _, id, _))) = (&self.map_type, killed) {
             let zone = &self.zones[zone_pos];
             let clear = if zone.boss_id.is_some() || zone.data.boss.is_some() {
                 zone.boss_id == Some(id)
@@ -1206,7 +1223,7 @@ impl Zone {
         &mut self,
         block_data: Arc<BlockData>,
         dmg: DealDamagePacket,
-    ) -> Result<Option<(Position, Position, u32)>, Error> {
+    ) -> Result<Option<(Position, Position, u32, String)>, Error> {
         // [pso2_vita_offline] (last hitter's position, enemy's position, enemy id) when an enemy died
         let mut killed = None;
         let (inflicter, target) = (dmg.inflicter, dmg.target);
@@ -1296,8 +1313,8 @@ impl Zone {
                         }
                     })
                     .await;
-                    let (enemy_id, _) = self.enemies.remove(enemy_pos);
-                    killed = Some((inflicter_pos, enemy_xyz, enemy_id));
+                    let (enemy_id, stats) = self.enemies.remove(enemy_pos);
+                    killed = Some((inflicter_pos, enemy_xyz, enemy_id, stats.name().to_string()));
                 }
             }
         } else if inflicter.entity_type == ObjectType::Object

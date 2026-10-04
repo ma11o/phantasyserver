@@ -1,0 +1,29 @@
+{
+  "rate": 0.6,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "仮",
+  "entries": [
+    {
+      "item": "3:1:0",
+      "weight": 60,
+      "min": 1,
+      "max": 2
+    },
+    {
+      "item": "3:1:7",
+      "weight": 30,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "item": "1:7:229",
+      "weight": 10,
+      "min": 1,
+      "max": 1
+    }
+  ]
+}
