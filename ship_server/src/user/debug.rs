@@ -21,7 +21,7 @@ use super::{User, UserState};
 use crate::{BlockData, Error, mutex::Mutex};
 use pso2packetlib::protocol::{
     Flags, ObjectHeader, ObjectType, Packet, PacketHeader, chat::ChatMessage, models::Position,
-    objects::{SetTagPacket, TeleportTransferPacket}, questlist::{AcceptQuestPacket, SetQuestPointsPacket}, spawn::ObjectSpawnPacket,
+    objects::{SetTagPacket, TeleportTransferPacket}, playerstatus::GainedEXPPacket, questlist::{AcceptQuestPacket, SetQuestPointsPacket}, spawn::ObjectSpawnPacket,
 };
 use std::{sync::Arc, time::Duration};
 use tokio::{
@@ -308,7 +308,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | tp pipe | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] [boss] | send <id> <subid> <flag> <hex> | ehp <n> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | tp pipe | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] [boss] | send <id> <subid> <flag> <hex> | ehp <n> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | exp <n> | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -694,6 +694,26 @@ async fn run_command(line: &str) -> Result<String, Error> {
             }
             let (hp, max) = lock.get_stats().get_hp();
             Ok(format!("hp {hp}/{max}"))
+        }
+        ("exp", [n]) => {
+            // same path as a kill: add_exp, then GainedEXP to this player only
+            let n = parse_num::<u32>(n).ok_or(Error::InvalidInput("exp <n>"))?;
+            let mut lock = user.lock().await;
+            let receiver = lock.add_exp(n)?;
+            let msg = format!(
+                "exp +{n}: total {} level {} ({}), hp {:?}",
+                receiver.total,
+                receiver.level,
+                receiver.level2,
+                lock.get_stats().get_hp()
+            );
+            let packet = Packet::GainedEXP(GainedEXPPacket {
+                sender: lock.create_object_header(),
+                receivers: vec![receiver],
+            });
+            lock.send_packet(&packet).await?;
+            log::info!("[pso2-debug] {msg}");
+            Ok(msg)
         }
         ("spawn", [name, rest @ ..]) if (0..=4).contains(&rest.len()) => {
             // [pso2_vita_offline] a trailing `boss` makes it the zone's boss (the quest clears when it dies)
