@@ -447,6 +447,26 @@ fn create_attr_files(path: &Path, srv_data: &mut ServerData) -> Result<(), Box<d
     let attrs: item_attrs::ItemAttributesVita = attrs.into();
     let mut attrs_data_vita = Cursor::new(vec![]);
     attrs.write_attrs(&mut attrs_data_vita)?;
+    // [pso2_vita_offline] item_parameter.bin out of the Vita client's item/it_static_param.ice (PSO2_VITA_ITEM_PARAMETER,
+    // else <data>/vita/item_parameter.bin; not part of the repository): send the client's own full table instead of
+    // the converted sample. The client builds its item table from this packet only; an item without an entry has a
+    // max stack of 0 and no name, and AddedItem of it is dropped.
+    let vita_bin = env::var_os("PSO2_VITA_ITEM_PARAMETER")
+        .map(PathBuf::from)
+        .or_else(|| Some(path.parent()?.join("vita").join("item_parameter.bin")).filter(|p| p.is_file()));
+    if let Some(path) = vita_bin {
+        let raw = fs::read(&path)?;
+        match item_attrs::ItemAttributesVita::read_attrs(&mut Cursor::new(&raw)) {
+            Ok(a) => println!(
+                "Vita item_parameter.bin from {path:?}: {} bytes, {} weapons, {} consumables",
+                raw.len(),
+                a.weapons.len(),
+                a.consumables.len()
+            ),
+            Err(e) => println!("Vita item_parameter.bin from {path:?}: {} bytes, not parsed ({e})", raw.len()),
+        }
+        attrs_data_vita = Cursor::new(raw);
+    }
     attrs_data_vita.set_position(0);
     let mut ice_writer = IceWriter::new(outdata_vita)?;
     ice_writer.load_group(ice::Group::Group2);

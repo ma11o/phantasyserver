@@ -555,14 +555,22 @@ impl Inventory {
             }
         }
         // the client keys its inventory by uuid; last_uuid can be behind the inventory's uuids (1 vs 4 seen), so never
-        // go below them. NOTE: on Vita an AddedItem of a consumable id not in the inventory (Dimate) is still dropped
-        // by the client (`0x83026c14` returns 0), with or without LoadItem
+        // go below them. The client drops an AddedItem of an id missing from the item attributes it was sent
+        // (max stack 0), see data_compiler's Vita item_parameter.bin
         let next = self.inventory.items.iter().map(|i| i.uuid).max().unwrap_or(0) + 1;
         log::info!("[pso2-drop] new inventory entry: last_uuid {} inventory max+1 {next}", *uuid);
         *uuid = (*uuid).max(next);
         item.uuid = *uuid;
         *uuid += 1;
         self.add_item(item)
+    }
+    /// [pso2_vita_offline] Picked-up meseta: the held amount goes up, InventoryMeseta (0F-14) with the new total.
+    pub fn add_meseta(&mut self, amount: u64) -> Packet {
+        self.inventory.meseta += amount;
+        log::info!("[pso2-drop] meseta +{amount} -> {}", self.inventory.meseta);
+        Packet::InventoryMeseta(InventoryMesetaPacket {
+            meseta: self.inventory.meseta,
+        })
     }
     pub fn add_default_item(&mut self, uuid: &mut u64, item_id: ItemId) -> Packet {
         let item = Item {
