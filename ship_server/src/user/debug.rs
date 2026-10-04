@@ -288,7 +288,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] | send <id> <subid> <flag> <hex> | pos | hp [n] | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -564,6 +564,16 @@ async fn run_command(line: &str) -> Result<String, Error> {
             );
             log::info!("[pso2-debug] {msg}");
             Ok(msg)
+        }
+        ("hp", rest) if rest.len() <= 1 => {
+            // server-side HP only (the client follows new_hp of the next DamageReceive)
+            let mut lock = user.lock().await;
+            if let [n] = rest {
+                let n = parse_num::<u32>(n).ok_or(Error::InvalidInput("hp [n]"))?;
+                lock.get_stats_mut().set_hp(n);
+            }
+            let (hp, max) = lock.get_stats().get_hp();
+            Ok(format!("hp {hp}/{max}"))
         }
         ("spawn", [name, rest @ ..]) if rest.is_empty() || rest.len() == 3 => {
             let lock = user.lock().await;
