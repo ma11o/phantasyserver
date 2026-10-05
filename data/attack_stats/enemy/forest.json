@@ -1,0 +1,145 @@
+[
+  {
+    "attack_name": "KickBeast",
+    "damage_name": "KickBeast",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "KickPterosaurA",
+    "damage_name": "KickPterosaurA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "PressBigBeastA",
+    "damage_name": "PressBigBeastA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Punch21BigBeastA",
+    "damage_name": "Punch21BigBeastA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "Punch22BigBeastA",
+    "damage_name": "Punch22BigBeastA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "Punch23BigBeastA",
+    "damage_name": "Punch23BigBeastA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "PunchBigBeastA",
+    "damage_name": "PunchBigBeastA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "RappyAttack0",
+    "damage_name": "RappyAttack0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "RappyAttack1",
+    "damage_name": "RappyAttack1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "RollArmadilloA",
+    "damage_name": "RollArmadilloA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Squash",
+    "damage_name": "Squash",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "StrikeLurch",
+    "damage_name": "StrikeLurch",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TurnPunchBigBeastA",
+    "damage_name": "TurnPunchBigBeastA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  }
+]
