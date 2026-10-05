@@ -1,5 +1,16 @@
 [
   {
+    "attack_name": "CatchBigBeastAA",
+    "damage_name": "CatchBigBeastAA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.0
+      }
+    }
+  },
+  {
     "attack_name": "KickBeast",
     "damage_name": "KickBeast",
     "attack_type": "Mel",
