@@ -17,7 +17,7 @@
     "defense_type": "Mel",
     "damage": {
       "Generic": {
-        "mul": 5
+        "mul": 5.0
       }
     }
   },
@@ -50,7 +50,7 @@
     "defense_type": "Mel",
     "damage": {
       "Generic": {
-        "mul": 5
+        "mul": 5.0
       }
     }
   },
@@ -72,7 +72,7 @@
     "defense_type": "Mel",
     "damage": {
       "Generic": {
-        "mul": 1
+        "mul": 1.0
       }
     }
   },
@@ -83,7 +83,7 @@
     "defense_type": "Mel",
     "damage": {
       "Generic": {
-        "mul": 1
+        "mul": 2.6
       }
     }
   }
