@@ -62,6 +62,26 @@ pub enum BattleResult {
     },
 }
 
+/// [pso2_vita_offline] Weapon attack at grind +N as a percent of the base (old-type weapons; the result is floored).
+/// Source: swiki アイテム強化 (pso2_research `data/swiki/enhancement/stat-multipliers.jsonl.gz`, PC, captured
+/// 2026-10-05), not checked against the Vita client. Above +10 the +10 value is kept.
+fn grind_percent(rarity: u8, grind: u8) -> u32 {
+    const TABLE: [(u8, [u32; 10]); 7] = [
+        (3, [104, 108, 112, 117, 122, 127, 132, 138, 144, 150]),
+        (6, [104, 108, 112, 117, 122, 129, 136, 144, 152, 160]),
+        (9, [104, 109, 115, 122, 129, 137, 145, 154, 164, 175]),
+        (10, [104, 109, 115, 122, 130, 140, 150, 162, 175, 190]),
+        (11, [105, 111, 118, 126, 135, 145, 156, 168, 181, 195]),
+        (12, [106, 113, 121, 130, 140, 150, 161, 173, 186, 200]),
+        (u8::MAX, [104, 108, 112, 116, 120, 124, 128, 132, 136, 140]),
+    ];
+    if grind == 0 {
+        return 100;
+    }
+    let row = &TABLE.iter().find(|(max, _)| rarity <= *max).unwrap_or(&TABLE[6]).1;
+    row[grind.min(10) as usize - 1]
+}
+
 impl PlayerStats {
     pub fn build(user: &User) -> Result<Self, Error> {
         let Some(char) = &user.character else {
@@ -110,9 +130,16 @@ impl PlayerStats {
                 weapon_stats.gender_force_dmg.force_dmg,
                 resulting_stats.base_mel_pwr
             );
-            resulting_stats.weapon_mel_pwr = weapon_stats.melee_dmg as _;
-            resulting_stats.weapon_rng_pwr = weapon_stats.range_dmg as _;
-            resulting_stats.weapon_tec_pwr = weapon_stats.gender_force_dmg.force_dmg as _;
+            let grind = match &equiped_item.data {
+                pso2packetlib::protocol::items::ItemType::Weapon(w) => w.grind,
+                _ => 0,
+            };
+            let pct = grind_percent(weapon_stats.rarity, grind);
+            let ground = |v: u32| v * pct / 100;
+            log::debug!("[pso2-battle] weapon grind +{grind} (rarity {}) -> {pct}%", weapon_stats.rarity);
+            resulting_stats.weapon_mel_pwr = ground(weapon_stats.melee_dmg as _);
+            resulting_stats.weapon_rng_pwr = ground(weapon_stats.range_dmg as _);
+            resulting_stats.weapon_tec_pwr = ground(weapon_stats.gender_force_dmg.force_dmg as _);
         }
         Ok(resulting_stats)
     }
@@ -154,6 +181,10 @@ impl PlayerStats {
         *player.get_stats_mut() = new_stats;
 
         Ok(())
+    }
+    /// Weapon attack (melee, ranged, technique) after the grind.
+    pub const fn weapon_pwr(&self) -> (u32, u32, u32) {
+        (self.weapon_mel_pwr, self.weapon_rng_pwr, self.weapon_tec_pwr)
     }
     pub const fn get_hp(&self) -> (u32, u32) {
         (self.hp, self.max_hp)

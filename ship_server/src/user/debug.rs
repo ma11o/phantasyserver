@@ -477,7 +477,7 @@ async fn run_command(line: &str) -> Result<String, Error> {
         ("drop", opts) => {
             // drop [model|-] [type:id:subid|meseta:<n>] [x y z]: NewItemDrop (+ ObjectSpawn of model unless "-") at the
             // player (or x y z); default model ob_9900_0001, item Monomate
-            let usage = "drop [model|-] [type:id:subid|meseta:<n>] [x y z]";
+            let usage = "drop [model|-] [type:id:subid|meseta:<n>] [grind=|gp=|element=|force=|potential=|affix=a,b ..] [x y z]";
             let mut model = crate::map::DROP_MODEL.to_string();
             let mut item = crate::map::monomate();
             let mut rest = opts;
@@ -503,6 +503,27 @@ async fn run_command(line: &str) -> Result<String, Error> {
                     if t != 3 {
                         item.data = Default::default();
                     }
+                    if t == 1 {
+                        item.data = pso2packetlib::protocol::items::ItemType::Weapon(Default::default());
+                    }
+                } else if let Some((k, v)) = first.split_once('=') {
+                    // weapon fields: grind= gp= element= force= potential= affix=a,b,..
+                    let pso2packetlib::protocol::items::ItemType::Weapon(w) = &mut item.data else {
+                        return Err(Error::InvalidInput("drop: key=value only after a weapon type:id:subid"));
+                    };
+                    match k {
+                        "grind" => w.grind = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                        "gp" => w.grind_percent = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                        "element" => w.element = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                        "force" => w.force = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                        "potential" => w.potential = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                        "affix" => {
+                            for (slot, a) in w.affixes.iter_mut().zip(v.split(',')) {
+                                *slot = parse_num(a).ok_or(Error::InvalidInput(usage))?;
+                            }
+                        }
+                        _ => return Err(Error::InvalidInput(usage)),
+                    }
                 } else {
                     break;
                 }
@@ -526,6 +547,42 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 pos.pos_y.to_f32(),
                 pos.pos_z.to_f32()
             ))
+        }
+        ("grind", opts) => {
+            // grind <n> [element=E force=F]: set the equipped weapon's grind (and element), recompute the stats and
+            // resend it as AddedItem 0F-05 with the same uuid
+            let usage = "grind <n> [element=E force=F]";
+            let [n, rest @ ..] = opts else {
+                return Err(Error::InvalidInput(usage));
+            };
+            let grind: u8 = parse_num(n).ok_or(Error::InvalidInput(usage))?;
+            let mut lock = user.lock().await;
+            let char = lock.character.as_mut().ok_or(Error::InvalidInput("no character"))?;
+            let uuid = char.palette.get_current_item(&char.inventory)?.ok_or(Error::InvalidInput("no weapon"))?.uuid;
+            let item = char.inventory.get_inv_item_mut(uuid).ok_or(Error::InvalidInput("no weapon"))?;
+            if !matches!(item.data, pso2packetlib::protocol::items::ItemType::Weapon(_)) {
+                item.data = pso2packetlib::protocol::items::ItemType::Weapon(Default::default());
+            }
+            let pso2packetlib::protocol::items::ItemType::Weapon(w) = &mut item.data else {
+                unreachable!()
+            };
+            w.grind = grind;
+            for kv in rest {
+                match kv.split_once('=') {
+                    Some(("element", v)) => w.element = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                    Some(("force", v)) => w.force = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                    _ => return Err(Error::InvalidInput(usage)),
+                }
+            }
+            let item = item.clone();
+            crate::battle_stats::PlayerStats::update(&mut lock)?;
+            let pwr = lock.get_stats().weapon_pwr();
+            lock.send_packet(&Packet::AddedItem(pso2packetlib::protocol::items::AddedItemPacket {
+                item: item.clone(),
+                ..Default::default()
+            }))
+            .await?;
+            Ok(format!("grind {:?} -> weapon pwr {pwr:?}", item.data))
         }
         ("clear", xyz) => {
             // same as the last enemy dying: clear telepipe at the player (or x y z), On, cleared state on InitPosition

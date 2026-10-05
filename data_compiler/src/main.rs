@@ -509,6 +509,9 @@ fn create_attr_files(path: &Path, srv_data: &mut ServerData) -> Result<(), Box<d
                         | (w.unk5 as u64) << 40;
                     w.range_dmg = (v & 0x1FFF) as u16;
                     w.melee_dmg = ((v >> 26) & 0x1FFF) as u16;
+                    // rarity (+8) carries flags in the upper bits (0x40 on most weapons, 0x80 on some): the
+                    // Sword reads 0x41 and the client shows 1 star
+                    w.rarity &= 0x0F;
                 }
             }
             Err(e) => println!("Vita item_parameter.bin from {path:?}: {} bytes, not parsed ({e})", raw.len()),

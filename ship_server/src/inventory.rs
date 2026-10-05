@@ -201,6 +201,10 @@ impl Inventory {
         }
         Ok(())
     }
+    /// [pso2_vita_offline] Mutable access to an inventory item (debug edits).
+    pub fn get_inv_item_mut(&mut self, uuid: u64) -> Option<&mut Item> {
+        self.inventory.items.iter_mut().find(|x| x.uuid == uuid)
+    }
     pub fn get_inv_item(&self, uuid: u64) -> Result<Item, Error> {
         self.inventory
             .items
