@@ -270,6 +270,36 @@ fn parse_player_stats(path: &Path) -> Result<PlayerStats, Box<dyn Error>> {
 
     Ok(data)
 }
+fn interpolate_stats(stats: Vec<EnemyLevelBaseStats>) -> Vec<EnemyLevelBaseStats> {
+    let mut out: Vec<EnemyLevelBaseStats> = vec![];
+    for pair in stats.windows(2) {
+        let (a, b) = (&pair[0], &pair[1]);
+        for level in a.level..b.level {
+            let t = (level - a.level) as f32 / (b.level - a.level) as f32;
+            let l = |x: f32, y: f32| x + (y - x) * t;
+            out.push(EnemyLevelBaseStats {
+                level,
+                exp: l(a.exp, b.exp),
+                hp: l(a.hp, b.hp),
+                max_mel_dmg: l(a.max_mel_dmg, b.max_mel_dmg),
+                min_mel_dmg: l(a.min_mel_dmg, b.min_mel_dmg),
+                max_rng_dmg: l(a.max_rng_dmg, b.max_rng_dmg),
+                min_rng_dmg: l(a.min_rng_dmg, b.min_rng_dmg),
+                max_tec_dmg: l(a.max_tec_dmg, b.max_tec_dmg),
+                min_tec_dmg: l(a.min_tec_dmg, b.min_tec_dmg),
+                mel_def: l(a.mel_def, b.mel_def),
+                rng_def: l(a.rng_def, b.rng_def),
+                tec_def: l(a.tec_def, b.tec_def),
+                dex: l(a.dex, b.dex),
+            });
+        }
+    }
+    if let Some(last) = stats.last() {
+        out.push(last.clone());
+    }
+    duplicate_stats(out)
+}
+
 fn duplicate_stats(mut stats: Vec<EnemyLevelBaseStats>) -> Vec<EnemyLevelBaseStats> {
     let mut last_stats = stats.remove(0);
     let mut new_stats = vec![last_stats.clone()];
@@ -310,7 +340,9 @@ fn parse_enemy_stats(
         let mut base = EnemyBaseStats::load_file(base_stats_path)?;
         let mut stats = std::mem::take(&mut base.levels);
         stats.sort_by(|a, b| a.level.cmp(&b.level));
-        base.levels = duplicate_stats(stats);
+        // the client interpolates the base table linearly between its rows (T50, checked against 14 HP points of the
+        // research); the per-enemy multipliers (.lve) hold the previous row, see duplicate_stats
+        base.levels = interpolate_stats(stats);
 
         data.base = base;
     }
