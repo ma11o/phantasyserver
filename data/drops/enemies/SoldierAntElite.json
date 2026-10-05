@@ -5,25 +5,57 @@
     "max": 2
   },
   "rare_rate": 0.0,
-  "source": "仮",
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights and rates are provisional)",
   "entries": [
     {
-      "item": "3:1:0",
-      "weight": 50,
+      "item": "1:7:24",
+      "weight": 1,
       "min": 1,
-      "max": 3
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "ブラオレット",
+      "source": "swiki swiki-enemy-2d8deffe883bc5e6de1e"
     },
     {
-      "item": "3:1:7",
-      "weight": 30,
+      "item": "1:17:33",
+      "weight": 1,
       "min": 1,
-      "max": 1
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "サーブライト",
+      "source": "swiki swiki-enemy-2d8deffe883bc5e6de1e"
     },
     {
-      "item": "1:8:252",
-      "weight": 20,
+      "item": "1:8:18",
+      "weight": 1,
       "min": 1,
-      "max": 1
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ティグリドル",
+      "source": "swiki swiki-enemy-69027ed8dacf758f83ef"
+    },
+    {
+      "item": "1:7:51",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ダガンスラッシュ",
+      "source": "swiki swiki-enemy-6a4e737f105af9ae3e38"
+    },
+    {
+      "item": "1:6:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオリドルモール",
+      "source": "swiki swiki-enemy-98e449d394f7623260d9"
     }
   ]
 }

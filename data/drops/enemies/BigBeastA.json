@@ -116,6 +116,16 @@
       "level_max": null,
       "name": "フラウレイン",
       "source": "https://pso2.pspedia.net/ロックベア"
+    },
+    {
+      "item": "1:7:89",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "クイーンヴィエラ",
+      "source": "swiki swiki-enemy-4371502b1036fd694c0f"
     }
   ],
   "boss_drops": 4

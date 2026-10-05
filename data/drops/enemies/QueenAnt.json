@@ -5,25 +5,67 @@
     "max": 3
   },
   "rare_rate": 0.0,
-  "source": "仮",
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights and rates are provisional)",
   "entries": [
     {
-      "item": "3:1:7",
-      "weight": 40,
+      "item": "1:14:27",
+      "weight": 1,
       "min": 1,
-      "max": 2
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "シガルガ",
+      "source": "swiki swiki-enemy-b678f048df6f2ea0ed48"
     },
     {
-      "item": "1:7:229",
-      "weight": 30,
+      "item": "1:16:30",
+      "weight": 1,
       "min": 1,
-      "max": 1
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "サーハブリズ",
+      "source": "swiki swiki-enemy-b678f048df6f2ea0ed48"
     },
     {
-      "item": "1:8:252",
-      "weight": 30,
+      "item": "1:9:38",
+      "weight": 1,
       "min": 1,
-      "max": 1
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "フォトンランチャー",
+      "source": "swiki swiki-enemy-b535df58622f730ca87a"
+    },
+    {
+      "item": "1:7:34",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ブラオレットゼロ",
+      "source": "swiki swiki-enemy-3f6a41cbe02c8b3dc7c8"
+    },
+    {
+      "item": "1:10:102",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "アタッシュオブス",
+      "source": "swiki swiki-enemy-10cfdf357c3e461995f3"
+    },
+    {
+      "item": "1:13:71",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "トレイターケイジ",
+      "source": "swiki swiki-enemy-24e9b66efd2edd6047ed"
     }
   ]
 }

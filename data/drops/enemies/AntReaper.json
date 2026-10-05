@@ -5,25 +5,77 @@
     "max": 2
   },
   "rare_rate": 0.0,
-  "source": "仮",
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights and rates are provisional)",
   "entries": [
     {
-      "item": "3:1:0",
-      "weight": 40,
-      "min": 2,
-      "max": 3
+      "item": "1:5:20",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "スピルティア",
+      "source": "swiki swiki-enemy-87a6b020eaaa6d9d5b4f"
     },
     {
-      "item": "3:1:7",
-      "weight": 30,
+      "item": "1:17:33",
+      "weight": 1,
       "min": 1,
-      "max": 1
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "サーブライト",
+      "source": "swiki swiki-enemy-87a6b020eaaa6d9d5b4f"
     },
     {
-      "item": "1:9:257",
-      "weight": 30,
+      "item": "1:3:30",
+      "weight": 1,
       "min": 1,
-      "max": 1
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "ソウルイーター",
+      "source": "swiki swiki-enemy-193fb784db7eca4faa70"
+    },
+    {
+      "item": "1:5:21",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 36,
+      "level_max": 40,
+      "name": "ヘルフレット",
+      "source": "swiki swiki-enemy-2127e9cf8a768d065db4"
+    },
+    {
+      "item": "1:13:27",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "エビルカースト",
+      "source": "swiki swiki-enemy-db1315e4f4d8d147c15d"
+    },
+    {
+      "item": "1:1:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ブレイザックス",
+      "source": "swiki swiki-enemy-198bfe3f862807888474"
+    },
+    {
+      "item": "1:10:155",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "フランパニーダ",
+      "source": "swiki swiki-enemy-cca19b30878ce1ff7459"
     }
   ]
 }
