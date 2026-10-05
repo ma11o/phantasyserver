@@ -70,5 +70,29 @@
     "jp_name": "テレパイプ",
     "en_desc": "",
     "jp_desc": "簡易携帯型の転送装置。\n設置することでキャンプシップまでの\n簡易的な転移ポートが生成される。"
+  },
+  {
+    "id": {
+      "item_type": 1,
+      "id": 1,
+      "unk3": 0,
+      "subid": 0
+    },
+    "en_name": "Sword",
+    "jp_name": "ソード",
+    "en_desc": "",
+    "jp_desc": ""
+  },
+  {
+    "id": {
+      "item_type": 1,
+      "id": 14,
+      "unk3": 0,
+      "subid": 75
+    },
+    "en_name": "Zamranazan",
+    "jp_name": "ザムラナザン",
+    "en_desc": "",
+    "jp_desc": ""
   }
 ]
