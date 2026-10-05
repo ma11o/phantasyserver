@@ -341,6 +341,33 @@ impl Map {
         self.move_player(id, zone.srv_zone_id).await
     }
 
+    /// [pso2_vita_offline] 03-05 `MoveZone`: looks the (client zone id, door) pair up in the warps the same way the
+    /// client does (`0x81419826`: forward on (zone_id, door_id), backward on (dest_zone, backdoor_id) when unk1 & 2)
+    /// and moves the player to the zone whose settings carry the destination's client zone id.
+    pub async fn move_zone(&mut self, id: PlayerId, zone_id: u32, door_id: u32) -> Result<(), Error> {
+        let dest = self.data.map_data.warps.iter().find_map(|w| {
+            if w.zone_id == zone_id && w.door_id == door_id {
+                Some(w.dest_zone)
+            } else if w.dest_zone == zone_id && w.backdoor_id == door_id && w.unk1 & 2 != 0 {
+                Some(w.zone_id)
+            } else {
+                None
+            }
+        });
+        log::info!("[pso2-quest] MoveZone zone {zone_id} door {door_id} -> {dest:?}");
+        let Some(dest) = dest else {
+            return Ok(());
+        };
+        let Some(zone) = self
+            .zones
+            .iter()
+            .find(|z| !z.data.is_special_zone && z.data.settings.zone_id == dest)
+        else {
+            return Err(Error::InvalidInput("move_zone"));
+        };
+        self.move_player(id, zone.srv_zone_id).await
+    }
+
     async fn move_player(&mut self, id: PlayerId, srv_zone_id: ZoneId) -> Result<(), Error> {
         let Some(player) = self.remove_player(id).await else {
             return Err(Error::NoUserInMap(id, self.data.map_data.unk7.to_string()));

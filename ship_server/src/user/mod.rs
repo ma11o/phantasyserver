@@ -446,6 +446,7 @@ pub async fn packet_handler(
         (US::InGame, P::MapLoaded(data)) => H::server::map_loaded(user_guard, data).await,
         (US::InGame, P::ToCampship(data)) => H::server::to_campship(user_guard, data).await,
         (US::InGame, P::CampshipDown(data)) => H::server::campship_down(user_guard, data).await,
+        (US::InGame, P::MoveZone(data)) => H::server::move_zone(user_guard, data).await,
         (US::InGame, P::ReturnToCampship(data)) => {
             H::server::return_to_campship(user_guard, data).await
         }

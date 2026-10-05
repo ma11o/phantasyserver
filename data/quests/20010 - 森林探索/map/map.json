@@ -53,9 +53,16 @@
       {
         "unk1": 0,
         "zone_id": 0,
-        "door_id": 0,
+        "door_id": 2,
         "dest_zone": 1,
-        "backdoor_id": 0
+        "backdoor_id": 1
+      },
+      {
+        "unk1": 0,
+        "zone_id": 1,
+        "door_id": 1,
+        "dest_zone": 0,
+        "backdoor_id": 2
       }
     ],
     "unk10": [
@@ -1624,7 +1631,7 @@
       "settings": {
         "world_id": 301,
         "unk1": 0,
-        "zone_id": 0,
+        "zone_id": 1,
         "map_id": 311,
         "zone_type": 2,
         "seed": 2012513828,

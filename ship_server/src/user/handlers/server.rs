@@ -6,7 +6,7 @@ use pso2packetlib::protocol::{
     server::{
         BridgeToLobbyPacket, BridgeTransportPacket, CafeToLobbyPacket, CafeTransportPacket,
         CampshipDownPacket, CampshipToLobbyPacket, CasinoToLobbyPacket, CasinoTransportPacket,
-        DeathToCampshipPacket, MapLoadedPacket, ReturnToCampshipFinalPacket,
+        DeathToCampshipPacket, MapLoadedPacket, MoveZonePacket, ReturnToCampshipFinalPacket,
         ReturnToCampshipPacket, StoryToLobbyPacket, ToCampshipPacket,
     },
 };
@@ -121,6 +121,20 @@ pub async fn campship_down(user: MutexGuard<'_, User>, _: CampshipDownPacket) ->
     if let Some(map) = map {
         let mut lock = map.lock().await;
         lock.move_player_named(id, "campship_down").await?;
+    }
+
+    Ok(Action::Nothing)
+}
+
+/// [pso2_vita_offline] 03-05: sent by an area exit (`Object:GoalTransporter`) when stepped on.
+/// `door_id` is the object's property 0x1b; the destination comes from the map's warps.
+pub async fn move_zone(user: MutexGuard<'_, User>, data: MoveZonePacket) -> HResult {
+    let map = user.get_current_map();
+    let id = user.get_user_id();
+    drop(user);
+    if let Some(map) = map {
+        let mut lock = map.lock().await;
+        lock.move_zone(id, data.current_zone_id, data.door_id).await?;
     }
 
     Ok(Action::Nothing)
