@@ -1,0 +1,61 @@
+{
+  "rate": 0.5,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights and rates are provisional)",
+  "entries": [
+    {
+      "item": "1:8:15",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": 30,
+      "name": "フルシリンダー",
+      "source": "https://pso2.pspedia.net/ザウーダン討伐"
+    },
+    {
+      "item": "1:7:15",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 40,
+      "name": "トゥウィスラー",
+      "source": "https://pso2.pspedia.net/ザウーダン討伐"
+    },
+    {
+      "item": "1:13:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": null,
+      "name": "マジカルウォンド",
+      "source": "https://pso2.pspedia.net/ザウーダン討伐"
+    },
+    {
+      "item": "1:9:19",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": null,
+      "name": "ディオアドラステア",
+      "source": "https://pso2.pspedia.net/ザウーダン討伐"
+    },
+    {
+      "item": "1:6:103",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": null,
+      "name": "ザムリオン",
+      "source": "https://pso2.pspedia.net/ザウーダン討伐"
+    }
+  ]
+}

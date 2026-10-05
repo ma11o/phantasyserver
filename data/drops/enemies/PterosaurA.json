@@ -1,0 +1,71 @@
+{
+  "rate": 0.5,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights and rates are provisional)",
+  "entries": [
+    {
+      "item": "1:12:18",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": 30,
+      "name": "ローザクレイン",
+      "source": "https://pso2.pspedia.net/アギニス"
+    },
+    {
+      "item": "1:10:36",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 45,
+      "name": "イシュライ",
+      "source": "https://pso2.pspedia.net/アギニス"
+    },
+    {
+      "item": "1:11:15",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": null,
+      "name": "ラムダガーランド",
+      "source": "https://pso2.pspedia.net/アギニス"
+    },
+    {
+      "item": "1:15:24",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": null,
+      "name": "ディオビッグロウ",
+      "source": "https://pso2.pspedia.net/アギニス"
+    },
+    {
+      "item": "1:4:26",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": null,
+      "name": "ディオレリギオー",
+      "source": "https://pso2.pspedia.net/アギニス"
+    },
+    {
+      "item": "3:5:223",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": null,
+      "name": "ウォールペイント",
+      "source": "https://pso2.pspedia.net/アギニス"
+    }
+  ]
+}

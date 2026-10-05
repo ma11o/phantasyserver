@@ -5,25 +5,47 @@
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "仮",
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights and rates are provisional)",
   "entries": [
     {
-      "item": "3:1:0",
-      "weight": 60,
+      "item": "1:10:24",
+      "weight": 1,
       "min": 1,
-      "max": 2
+      "max": 1,
+      "level_min": 1,
+      "level_max": 25,
+      "name": "アレスヴィス",
+      "source": "https://pso2.pspedia.net/ガロンゴ"
     },
     {
-      "item": "3:1:7",
-      "weight": 30,
+      "item": "1:2:35",
+      "weight": 1,
       "min": 1,
-      "max": 1
+      "max": 1,
+      "level_min": 21,
+      "level_max": 50,
+      "name": "グッダスケラ",
+      "source": "https://pso2.pspedia.net/ガロンゴ"
     },
     {
-      "item": "1:7:229",
-      "weight": 10,
+      "item": "1:4:25",
+      "weight": 1,
       "min": 1,
-      "max": 1
+      "max": 1,
+      "level_min": 41,
+      "level_max": null,
+      "name": "ラムダレリギオー",
+      "source": "https://pso2.pspedia.net/ガロンゴ"
+    },
+    {
+      "item": "1:14:76",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": null,
+      "name": "フィルフスイレン",
+      "source": "https://pso2.pspedia.net/ガロンゴ"
     }
   ]
 }
