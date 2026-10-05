@@ -318,6 +318,17 @@ impl EnemyStats {
         resulting_stats.rng_def = (base_level_stats.rng_def * level_stats.rng_def).floor() as _;
         resulting_stats.tec_def = (base_level_stats.tec_def * level_stats.tec_def).floor() as _;
 
+        log::info!(
+            "[pso2-battle] enemy {name} Lv{level} hp {} exp {} def {}/{}/{} atk max {}/{}/{}",
+            resulting_stats.max_hp,
+            resulting_stats.exp,
+            resulting_stats.mel_def,
+            resulting_stats.rng_def,
+            resulting_stats.tec_def,
+            resulting_stats.max_mel_pwr,
+            resulting_stats.max_rng_pwr,
+            resulting_stats.max_tec_pwr
+        );
         Ok(resulting_stats)
     }
     /// [pso2_vita_offline] debug `ehp`
