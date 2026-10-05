@@ -22,6 +22,11 @@ pub struct Entry {
     pub weight: f32,
     pub min: u32,
     pub max: u32,
+    /// enemy level band this entry can drop in (absent = always a candidate)
+    #[serde(default)]
+    pub level_min: Option<u32>,
+    #[serde(default)]
+    pub level_max: Option<u32>,
 }
 
 #[derive(Debug, Deserialize, Clone, Copy, Default)]
@@ -148,15 +153,21 @@ fn range<R: Rng>(rng: &mut R, r: Range) -> u32 {
     }
 }
 
-fn roll_table<R: Rng>(rng: &mut R, t: &Table, out: &mut Vec<Item>) {
+fn in_band(e: &Entry, level: u32) -> bool {
+    e.level_min.map_or(true, |m| level >= m) && e.level_max.map_or(true, |m| level <= m)
+}
+
+fn roll_table<R: Rng>(rng: &mut R, t: &Table, level: u32, out: &mut Vec<Item>) {
     if rng.gen_range(0.0f32..1.0) >= t.rate {
         return;
     }
-    let total: f32 = t.entries.iter().map(|e| e.weight.max(0.0)).sum();
+    // entries outside the enemy's level band are not candidates; an empty result drops nothing from this stage
+    let entries: Vec<&Entry> = t.entries.iter().filter(|e| in_band(e, level)).collect();
+    let total: f32 = entries.iter().map(|e| e.weight.max(0.0)).sum();
     if total > 0.0 {
         for _ in 0..range(rng, t.drop_count).max(t.boss_drops) {
             let mut x = rng.gen_range(0.0f32..1.0) * total;
-            let Some(e) = t.entries.iter().find(|e| {
+            let Some(e) = entries.iter().find(|e| {
                 x -= e.weight.max(0.0);
                 x < 0.0
             }) else {
@@ -180,17 +191,17 @@ fn roll_table<R: Rng>(rng: &mut R, t: &Table, out: &mut Vec<Item>) {
 
 /// Stages: enemy table -> common -> area (its `meseta` is the meseta stage). An enemy without a table only gets
 /// the common and area stages.
-pub fn roll_with<R: Rng>(rng: &mut R, data: &DropData, enemy: &str, area: &str) -> Vec<Item> {
+pub fn roll_with<R: Rng>(rng: &mut R, data: &DropData, enemy: &str, area: &str, level: u32) -> Vec<Item> {
     let mut out = vec![];
     let stages = [data.enemies.get(enemy), data.common.as_ref(), data.areas.get(area)];
     for t in stages.into_iter().flatten() {
-        roll_table(rng, t, &mut out);
+        roll_table(rng, t, level, &mut out);
     }
     out
 }
 
-pub fn roll(enemy: &str, area: &str) -> Vec<Item> {
-    roll_with(&mut rand::thread_rng(), data(), enemy, area)
+pub fn roll(enemy: &str, area: &str, level: u32) -> Vec<Item> {
+    roll_with(&mut rand::thread_rng(), data(), enemy, area, level)
 }
 
 /// Item description for logs and the debug command
@@ -221,8 +232,8 @@ mod tests {
     fn weights_match_expectation() {
         let t = Table {
             entries: vec![
-                Entry { item: "3:1:0".into(), weight: 70.0, min: 1, max: 1 },
-                Entry { item: "3:7:0".into(), weight: 30.0, min: 1, max: 1 },
+                Entry { item: "3:1:0".into(), weight: 70.0, min: 1, max: 1, level_min: None, level_max: None },
+                Entry { item: "3:7:0".into(), weight: 30.0, min: 1, max: 1, level_min: None, level_max: None },
             ],
             ..Default::default()
         };
@@ -230,7 +241,7 @@ mod tests {
         let mut rng = StdRng::seed_from_u64(1);
         let mut c = [0u32; 2];
         for _ in 0..10_000 {
-            for i in roll_with(&mut rng, &data, "X", "none") {
+            for i in roll_with(&mut rng, &data, "X", "none", 5) {
                 c[(i.id.id == 7) as usize] += 1;
             }
         }
@@ -241,12 +252,32 @@ mod tests {
     #[test]
     fn stages_and_meseta() {
         let data = DropData {
-            common: Some(Table { entries: vec![Entry { item: "3:1:0".into(), weight: 1.0, min: 1, max: 1 }], ..Default::default() }),
+            common: Some(Table { entries: vec![Entry { item: "3:1:0".into(), weight: 1.0, min: 1, max: 1, level_min: None, level_max: None }], ..Default::default() }),
             areas: HashMap::from([("a".into(), Table { meseta: Some(Meseta { min: 5, max: 5, rate: 1.0 }), ..Default::default() })]),
             ..Default::default()
         };
-        let r = roll_with(&mut StdRng::seed_from_u64(2), &data, "NoTable", "a");
+        let r = roll_with(&mut StdRng::seed_from_u64(2), &data, "NoTable", "a", 5);
         assert_eq!(r.len(), 2);
         assert_eq!(crate::map::meseta_amount(&r[1]), Some(5));
+    }
+
+    #[test]
+    fn level_band_filters_entries() {
+        let t = Table {
+            entries: vec![
+                Entry { item: "1:3:33".into(), weight: 1.0, min: 1, max: 1, level_min: Some(20), level_max: None },
+                Entry { item: "3:5:322".into(), weight: 1.0, min: 1, max: 1, level_min: None, level_max: None },
+            ],
+            ..Default::default()
+        };
+        let data = DropData { enemies: HashMap::from([("X".into(), t)]), ..Default::default() };
+        let mut rng = StdRng::seed_from_u64(3);
+        for _ in 0..200 {
+            let r = roll_with(&mut rng, &data, "X", "none", 5);
+            assert!(r.iter().all(|i| i.id.item_type != 1), "high band dropped at Lv5");
+            assert_eq!(r.len(), 1);
+        }
+        let hit = (0..200).any(|_| roll_with(&mut rng, &data, "X", "none", 25).iter().any(|i| i.id.item_type == 1));
+        assert!(hit);
     }
 }

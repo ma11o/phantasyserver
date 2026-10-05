@@ -483,7 +483,7 @@ impl Map {
         // where the enemy was spawned
         if let Some((_, enemy_pos, _, name)) = &killed {
             let area = self.zones[zone_pos].data.name.clone();
-            let items = crate::drops::roll(name, &area);
+            let items = crate::drops::roll(name, &area, self.enemy_level);
             log::info!(
                 "[pso2-drop] {name} in {area}: {}",
                 items.iter().map(crate::drops::describe).collect::<Vec<_>>().join(" ")
