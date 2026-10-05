@@ -500,22 +500,7 @@ pub async fn packet_handler(
             H::quest::quest_difficulty(user, data).await
         }
         (US::InGame, P::AcceptQuest(data)) => H::quest::set_quest(user_guard, data).await,
-        // [pso2-quest] T16: カウンターに話しかけたら、テストクエスト (quest_obj 1100、難易度 0) を受注した扱いにする
-        // (チャットの !force_quest 1100 0 と同じ。トップメニューのメインクエストが灰色で選べないための回り道)
-        (US::InGame, P::QuestCounterRequest) => {
-            H::quest::counter_request(user).await?;
-            let packet = pso2packetlib::protocol::questlist::AcceptQuestPacket {
-                quest_obj: pso2packetlib::protocol::ObjectHeader {
-                    id: 1100,
-                    entity_type: pso2packetlib::protocol::ObjectType::Quest,
-                    ..Default::default()
-                },
-                diff: 0,
-                ..Default::default()
-            };
-            log::debug!("[pso2-quest] force test quest 1100 diff 0");
-            H::quest::set_quest(user_guard, packet).await
-        }
+        (US::InGame, P::QuestCounterRequest) => H::quest::counter_request(user).await,
         (US::InGame, P::AcceptStoryQuest(data)) => {
             H::quest::set_story_quest(user_guard, data).await
         }
@@ -663,6 +648,20 @@ pub async fn packet_handler(
                     flag: pso2packetlib::protocol::Flags::PACKED,
                 },
                 vec![0x3B, 0xF1, 0x00, 0x00],
+            )))
+            .await?;
+            Ok(Action::Nothing)
+        }
+        // [pso2-quest] 0x24-0x03 (shortcut word screen, sent once) -> empty 0x24-0x05:
+        // status 0, two empty lists (counts encoded as (n + 0x13) ^ 0xB63F). Client reader 0x81224c62.
+        (US::InGame, P::Unknown((h, _))) if h.id == 0x24 && h.subid == 0x03 => {
+            user.send_packet(&Packet::Unknown((
+                pso2packetlib::protocol::PacketHeader {
+                    id: 0x24,
+                    subid: 0x05,
+                    flag: pso2packetlib::protocol::Flags::PACKED,
+                },
+                vec![0, 0, 0, 0, 0x2C, 0xB6, 0, 0, 0x2C, 0xB6, 0, 0],
             )))
             .await?;
             Ok(Action::Nothing)

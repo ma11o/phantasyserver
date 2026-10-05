@@ -320,7 +320,12 @@ impl Quests {
         self.quests
             .iter()
             .find(|q| q.definition.quest_obj.id == id)
-            .map(|q| q.difficulties.clone())
+            // [pso2-quest] the client files the reply under its quest_obj and re-requests until the
+            // requested one arrives (the test quest's data has 1101 here, its definition 1100)
+            .map(|q| QuestDifficulty {
+                quest_obj: q.definition.quest_obj,
+                ..q.difficulties.clone()
+            })
     }
     pub fn get_quest(
         &self,

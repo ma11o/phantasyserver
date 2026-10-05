@@ -11,6 +11,11 @@ use pso2packetlib::protocol::{
 };
 use std::time::{SystemTime, UNIX_EPOCH};
 
+/// [pso2-quest] Account flags always set on a Vita login (ids from the client's `SkitAccountFlag.Flag` table).
+/// 5580 = `AccountFlag_EP1SB_EV_0010`: while it is 0 the quest counter greys out every top-menu
+/// item except Story Quest (client 0x828e305c, account flag bits from 23-06).
+const VITA_DEFAULT_ACCOUNT_FLAGS: &[usize] = &[5580];
+
 pub async fn encryption_request(user: &mut User, _: login::EncryptionRequestPacket) -> HResult {
     let key = user.connection.get_key();
     user.send_packet(&Packet::EncryptionResponse(
@@ -62,6 +67,9 @@ pub async fn login_request(user: &mut User, packet: Packet) -> HResult {
                 .get_psn_user(&packet.username, ip)
                 .await?;
             user_psn.packet_type = user.user_data.packet_type;
+            for &flag in VITA_DEFAULT_ACCOUNT_FLAGS {
+                user_psn.accountflags.set(flag, 1);
+            }
             user.user_data = user_psn;
         }
         _ => unreachable!(),
