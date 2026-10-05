@@ -653,7 +653,8 @@ pub async fn packet_handler(
             Ok(Action::Nothing)
         }
         // [pso2-quest] 0x24-0x03 (shortcut word screen, sent once) -> empty 0x24-0x05:
-        // status 0, two empty lists (counts encoded as (n + 0x13) ^ 0xB63F). Client reader 0x81224c62.
+        // status u32 0, count1 + count1 x 0x108 B, u32, count2 + count2 x 0x28 B; counts encoded as
+        // (n + 0x13) ^ 0xB63F. Client reader 0x81224c62.
         (US::InGame, P::Unknown((h, _))) if h.id == 0x24 && h.subid == 0x03 => {
             user.send_packet(&Packet::Unknown((
                 pso2packetlib::protocol::PacketHeader {
@@ -661,7 +662,7 @@ pub async fn packet_handler(
                     subid: 0x05,
                     flag: pso2packetlib::protocol::Flags::PACKED,
                 },
-                vec![0, 0, 0, 0, 0x2C, 0xB6, 0, 0, 0x2C, 0xB6, 0, 0],
+                vec![0, 0, 0, 0, 0x2C, 0xB6, 0, 0, 0, 0, 0, 0, 0x2C, 0xB6, 0, 0],
             )))
             .await?;
             Ok(Action::Nothing)
