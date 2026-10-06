@@ -87,6 +87,9 @@ fn main() {
     class_data_dir.push("class_data");
     server_data.default_classes = parse_default_classes(&class_data_dir).unwrap();
 
+    // directory order is the filesystem's; keep the quest list in name_id order
+    server_data.quests.sort_by_key(|q| q.definition.name_id);
+
     println!("Saving data...");
     let mut out_filename = filename.to_path_buf();
     out_filename.push("com_data.mp");
