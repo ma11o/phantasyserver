@@ -7,7 +7,7 @@ use data_structs::map::{EventData, MapData, NPCData, ObjectData, TransporterData
 use mlua::{Lua, LuaSerdeExt, StdLib};
 use pso2packetlib::protocol::{
     self, ObjectHeader, ObjectType, Packet, PacketType,
-    flag::{CutsceneEndPacket, SkitItemAddRequestPacket},
+    flag::{CutsceneEndPacket, SkitItemAddRequestPacket, SkitItemAddResponsePacket},
     models::Position,
     objects::{DamageReceivePacket, EnemyActionPacket},
     playerstatus::{DealDamagePacket, GainedEXPPacket, SetPlayerIDPacket},
@@ -659,6 +659,16 @@ impl Map {
         packet: SkitItemAddRequestPacket,
     ) -> Result<(), Error> {
         let Some(lua) = self.lua.lock().procs.get("on_questwork").cloned() else {
+            // [pso2_vita_offline] A skit waits for the answer (black screen otherwise). Maps without their own
+            // `on_questwork` Lua echo the request back, as Story EP1 700020's Lua does. Story quests are solo.
+            self.send_to_all(
+                zone_pos,
+                &Packet::SkitItemAddResponse(SkitItemAddResponsePacket {
+                    skit_name: packet.skit_name,
+                    unk: packet.unk,
+                }),
+            )
+            .await;
             return Ok(());
         };
         self.run_lua(player, zone_pos, &packet, "on_questwork", &lua)

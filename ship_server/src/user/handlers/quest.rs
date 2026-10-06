@@ -150,6 +150,7 @@ pub async fn set_quest(user: MutexGuard<'_, User>, packet: AcceptQuestPacket) ->
 }
 
 pub async fn questwork(user: MutexGuard<'_, User>, packet: SkitItemAddRequestPacket) -> HResult {
+    log::debug!("[pso2-quest] SkitItemAddRequest {:?}", packet);
     if let Some(map) = user.get_current_map() {
         let playerid = user.get_user_id();
         let zone = user.zone_pos;
@@ -164,6 +165,7 @@ pub async fn questwork(user: MutexGuard<'_, User>, packet: SkitItemAddRequestPac
 }
 
 pub async fn cutscene_end(user: MutexGuard<'_, User>, packet: CutsceneEndPacket) -> HResult {
+    log::debug!("[pso2-quest] CutsceneEnd zone={} {:?}", user.zone_pos, packet);
     if let Some(map) = user.get_current_map() {
         let playerid = user.get_user_id();
         let zone = user.zone_pos;
@@ -181,6 +183,7 @@ pub async fn set_story_quest(
     user: MutexGuard<'_, User>,
     packet: AcceptStoryQuestPacket,
 ) -> HResult {
+    log::debug!("[pso2-quest] AcceptStoryQuest name_id={} unk={}", packet.name_id, packet.unk);
     let quest = user
         .blockdata
         .quests
