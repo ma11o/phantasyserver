@@ -78,7 +78,8 @@ pub struct ZoneData {
     pub boss: Option<ZoneBoss>,
 }
 
-/// [pso2_vita_offline] The zone's boss: spawned once at `position` when the chunk `chunk_id` is revealed. In a zone
+/// [pso2_vita_offline] The zone's boss: spawned once at `position` when the chunk `chunk_id` is revealed (`u32::MAX`:
+/// the first chunk the client reports in the zone). In a zone
 /// with a boss the quest clears when the boss dies (not when every spawned enemy is dead).
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]
 #[serde(default)]

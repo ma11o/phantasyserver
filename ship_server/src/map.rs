@@ -561,6 +561,17 @@ impl Map {
         self.max_id += 1;
         let id = self.max_id;
         self.zones[zone_pos].spawn_clear_pipe(id, pos).await;
+        // [pso2_vita_offline] the map's `on_quest_clear` Lua, once per player in the zone (story battles mark
+        // themselves cleared and unlock the next quest here)
+        let lua = self.lua.lock().procs.get("on_quest_clear").cloned();
+        if let Some(lua) = lua {
+            let players: Vec<_> = self.zones[zone_pos].players.iter().map(|p| p.player_id).collect();
+            for player in players {
+                self.run_lua(player, zone_pos, &Packet::None, "on_quest_clear", &lua)
+                    .await?;
+            }
+            self.check_move_lua().await?;
+        }
         Ok(true)
     }
 
@@ -1491,9 +1502,9 @@ impl Zone {
             return Err(Error::InvalidInput("minimap_reveal"));
         };
 
-        // [pso2_vita_offline] the zone's boss, once
+        // [pso2_vita_offline] the zone's boss, once (chunk_id u32::MAX: on the first chunk the client reports)
         if let Some(boss) = self.data.boss.clone() {
-            if boss.chunk_id == packet.chunk_id && self.boss_id.is_none() {
+            if (boss.chunk_id == packet.chunk_id || boss.chunk_id == u32::MAX) && self.boss_id.is_none() {
                 let id = self
                     .spawn_enemy(block_data, max_id, enemy_lvl, &boss.enemy_name, boss.position)
                     .await?;

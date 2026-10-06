@@ -308,7 +308,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | tp pipe | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] [boss] | send <id> <subid> <flag> <hex> | ehp <n> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | exp <n> | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | tp pipe | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] [boss] | send <id> <subid> <flag> <hex> | ehp <n> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | exp <n> | unlock <name_id>... | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -804,6 +804,22 @@ async fn run_command(line: &str) -> Result<String, Error> {
             lock.send_packet(&packet).await?;
             log::info!("[pso2-debug] {msg}");
             Ok(msg)
+        }
+        ("unlock", ids) if !ids.is_empty() => {
+            // unlocks quests for this character (the story list shows them on the next counter visit)
+            let ids = ids
+                .iter()
+                .map(|i| parse_num::<u32>(i))
+                .collect::<Option<Vec<_>>>()
+                .ok_or(Error::InvalidInput("unlock <name_id>..."))?;
+            let mut lock = user.lock().await;
+            let char = lock.character.as_mut().ok_or(Error::InvalidInput("no character"))?;
+            for id in &ids {
+                if !char.unlocked_quests.contains(id) {
+                    char.unlocked_quests.push(*id);
+                }
+            }
+            Ok(format!("unlocked {ids:?}"))
         }
         ("spawn", [name, rest @ ..]) if (0..=4).contains(&rest.len()) => {
             // [pso2_vita_offline] a trailing `boss` makes it the zone's boss (the quest clears when it dies)

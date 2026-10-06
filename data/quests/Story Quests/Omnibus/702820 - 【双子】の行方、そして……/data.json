@@ -2,7 +2,7 @@
   "definition": {
     "date": "2017/2/20",
     "quest_obj": {
-      "id": 3280,
+      "id": 3301,
       "unk": 0,
       "entity_type": "Quest",
       "map_id": 0
@@ -840,7 +840,7 @@
   "difficulties": {
     "date": "2017/2/20",
     "quest_obj": {
-      "id": 3280,
+      "id": 3301,
       "unk": 0,
       "entity_type": "Quest",
       "map_id": 0
