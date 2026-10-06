@@ -1152,7 +1152,7 @@
       },
       "enemies": [
         {
-          "enemy_name": "SoldierAnt",
+          "enemy_name": "MarineTetra",
           "spawn_category": 1
         }
       ],
@@ -2284,12 +2284,12 @@
         }
       ],
       "boss": {
-        "enemy_name": "QueenAnt",
+        "enemy_name": "MarineOrca",
         "chunk_id": 4294967295,
         "position": {
           "pos_x": 55568,
           "pos_y": 47288,
-          "pos_z": 23807,
+          "pos_z": 23855,
           "rot_y": 0,
           "rot_w": 48128
         }

@@ -1152,7 +1152,7 @@
       },
       "enemies": [
         {
-          "enemy_name": "SoldierAnt",
+          "enemy_name": "BirdDoubleHead",
           "spawn_category": 1
         }
       ],
@@ -1468,7 +1468,7 @@
         "enemy_name": "BirdStacked",
         "chunk_id": 4294967295,
         "position": {
-          "pos_x": 21696,
+          "pos_x": 21888,
           "pos_y": 15053,
           "pos_z": 0,
           "rot_y": 14760,

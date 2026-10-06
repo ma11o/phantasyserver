@@ -1152,7 +1152,11 @@
       },
       "enemies": [
         {
-          "enemy_name": "SoldierAnt",
+          "enemy_name": "MonoeyeA",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "MonoeyeB",
           "spawn_category": 1
         }
       ],
@@ -2134,7 +2138,7 @@
         "enemy_name": "DpHuman",
         "chunk_id": 4294967295,
         "position": {
-          "pos_x": 19992,
+          "pos_x": 20620,
           "pos_y": 16901,
           "pos_z": 55855,
           "rot_y": 47528,

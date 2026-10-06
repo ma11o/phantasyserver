@@ -1154,6 +1154,18 @@
         {
           "enemy_name": "SoldierAnt",
           "spawn_category": 1
+        },
+        {
+          "enemy_name": "SoldierAntElite",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "AntReaper",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "Char16_LC",
+          "spawn_category": 1
         }
       ],
       "chunks": [
@@ -1465,10 +1477,10 @@
         }
       ],
       "boss": {
-        "enemy_name": "QueenAnt",
+        "enemy_name": "Char15_AOld",
         "chunk_id": 4294967295,
         "position": {
-          "pos_x": 21696,
+          "pos_x": 21888,
           "pos_y": 15053,
           "pos_z": 0,
           "rot_y": 14760,

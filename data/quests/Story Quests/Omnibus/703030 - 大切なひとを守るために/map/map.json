@@ -3619,12 +3619,12 @@
         }
       ],
       "boss": {
-        "enemy_name": "QueenAnt",
+        "enemy_name": "ToyDpHumanM",
         "chunk_id": 4294967295,
         "position": {
           "pos_x": 22105,
           "pos_y": 0,
-          "pos_z": 56391,
+          "pos_z": 56439,
           "rot_y": 15360,
           "rot_w": 0
         }

@@ -1152,7 +1152,19 @@
       },
       "enemies": [
         {
-          "enemy_name": "SoldierAnt",
+          "enemy_name": "BirdBirdcrowA",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "HummingBird",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "BirdSoldierB",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "BirdSoldierC",
           "spawn_category": 1
         }
       ],
@@ -1501,12 +1513,12 @@
         }
       ],
       "boss": {
-        "enemy_name": "QueenAnt",
+        "enemy_name": "BirdStacked",
         "chunk_id": 4294967295,
         "position": {
           "pos_x": 54539,
           "pos_y": 12902,
-          "pos_z": 22256,
+          "pos_z": 22448,
           "rot_y": 0,
           "rot_w": 48128
         }

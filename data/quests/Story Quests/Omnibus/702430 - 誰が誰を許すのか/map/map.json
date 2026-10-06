@@ -2689,12 +2689,12 @@
         }
       ],
       "boss": {
-        "enemy_name": "QueenAnt",
+        "enemy_name": "Wop3Wany",
         "chunk_id": 4294967295,
         "position": {
           "pos_x": 55872,
           "pos_y": 17203,
-          "pos_z": 22383,
+          "pos_z": 22552,
           "rot_y": 0,
           "rot_w": 48128
         }

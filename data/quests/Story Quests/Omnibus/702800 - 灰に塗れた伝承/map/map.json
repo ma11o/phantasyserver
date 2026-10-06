@@ -1152,7 +1152,19 @@
       },
       "enemies": [
         {
-          "enemy_name": "SoldierAnt",
+          "enemy_name": "Mono1EyefootA",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "Mono1PlateA",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "Mono1OniClub",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "Mono1OniGun",
           "spawn_category": 1
         }
       ],
@@ -2059,10 +2071,10 @@
         }
       ],
       "boss": {
-        "enemy_name": "QueenAnt",
+        "enemy_name": "Mono1Roller",
         "chunk_id": 4294967295,
         "position": {
-          "pos_x": 55334,
+          "pos_x": 55430,
           "pos_y": 0,
           "pos_z": 22785,
           "rot_y": 14760,

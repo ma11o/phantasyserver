@@ -1154,6 +1154,18 @@
         {
           "enemy_name": "SoldierAnt",
           "spawn_category": 1
+        },
+        {
+          "enemy_name": "AntReaper",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "QueenAnt",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "MimicA",
+          "spawn_category": 1
         }
       ],
       "chunks": [
@@ -2131,12 +2143,12 @@
         }
       ],
       "boss": {
-        "enemy_name": "QueenAnt",
+        "enemy_name": "Doodlebug",
         "chunk_id": 4294967295,
         "position": {
           "pos_x": 54536,
           "pos_y": 0,
-          "pos_z": 22302,
+          "pos_z": 22494,
           "rot_y": 0,
           "rot_w": 48128
         }

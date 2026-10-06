@@ -1154,6 +1154,18 @@
         {
           "enemy_name": "SoldierAnt",
           "spawn_category": 1
+        },
+        {
+          "enemy_name": "FishShield",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "FishShieldReverse",
+          "spawn_category": 1
+        },
+        {
+          "enemy_name": "Snail",
+          "spawn_category": 1
         }
       ],
       "chunks": [
@@ -2131,10 +2143,10 @@
         }
       ],
       "boss": {
-        "enemy_name": "QueenAnt",
+        "enemy_name": "FishBigBeastA",
         "chunk_id": 4294967295,
         "position": {
-          "pos_x": 19992,
+          "pos_x": 20620,
           "pos_y": 16901,
           "pos_z": 55855,
           "rot_y": 47528,

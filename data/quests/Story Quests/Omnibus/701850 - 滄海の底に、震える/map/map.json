@@ -1152,7 +1152,7 @@
       },
       "enemies": [
         {
-          "enemy_name": "SoldierAnt",
+          "enemy_name": "AbyssTetra",
           "spawn_category": 1
         }
       ],
@@ -1542,7 +1542,7 @@
         "position": {
           "pos_x": 0,
           "pos_y": 16896,
-          "pos_z": 22624,
+          "pos_z": 22720,
           "rot_y": 0,
           "rot_w": 48128
         }
