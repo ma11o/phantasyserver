@@ -639,6 +639,12 @@ pub async fn packet_handler(
 
         (US::InGame, P::AbandonQuestRequest) => H::party::abandon_quest(user_guard).await,
 
+        // [pso2-lab] item lab: the menu's requests that enable "アイテム強化", and the grind itself (handlers/lab.rs)
+        (US::InGame, P::Unknown((h, _))) if h.id == 0x0F && h.subid == 0x3B => H::lab::open_3b(user).await,
+        (US::InGame, P::Unknown((h, _))) if h.id == 0x0F && h.subid == 0xC9 => H::lab::open_c9(user).await,
+        (US::InGame, P::Unknown((h, _))) if h.id == 0x0F && h.subid == 0x64 => H::lab::open_64(user).await,
+        (US::InGame, P::Unknown((h, d))) if h.id == 0x0F && h.subid == 0x23 => H::lab::grind(user_guard, d).await,
+        (US::InGame, P::Unknown((h, d))) if h.id == 0x0F && h.subid == 0x3D => H::lab::preview_3d(user, d).await,
         // [pso2-quest] T16: 0x23-0x19 -> 空の 0x23-0x1A
         (US::InGame, P::Unknown((h, _))) if h.id == 0x23 && h.subid == 0x19 => {
             user.send_packet(&Packet::Unknown((

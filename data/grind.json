@@ -1,0 +1,704 @@
+{
+ "source": "research enhancement.legacy_attempts (PC swiki, old-type weapons); Vita unverified. meseta: 仮",
+ "grinder": [
+  3,
+  7,
+  1
+ ],
+ "max_grind": 10,
+ "groups": [
+  {
+   "rarity_min": 1,
+   "rarity_max": 3,
+   "meseta": 300,
+   "steps": [
+    {
+     "from": 0,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 1,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 2,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 3,
+     "success": 85,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 4,
+     "success": 80,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 5,
+     "success": 75,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 6,
+     "success": 70,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 7,
+     "success": 65,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 8,
+     "success": 60,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 9,
+     "success": 55,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 1
+    }
+   ]
+  },
+  {
+   "rarity_min": 4,
+   "rarity_max": 6,
+   "meseta": 800,
+   "steps": [
+    {
+     "from": 0,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 1,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 2,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 3,
+     "success": 80,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 4,
+     "success": 75,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 5,
+     "success": 70,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 6,
+     "success": 65,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 7,
+     "success": 60,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 8,
+     "success": 55,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 9,
+     "success": 50,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 1
+    }
+   ]
+  },
+  {
+   "rarity_min": 7,
+   "rarity_max": 7,
+   "meseta": 2000,
+   "steps": [
+    {
+     "from": 0,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 1,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 2,
+     "success": 90,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 3,
+     "success": 85,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 4,
+     "success": 70,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 5,
+     "success": 65,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 6,
+     "success": 55,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    },
+    {
+     "from": 7,
+     "success": 55,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    },
+    {
+     "from": 8,
+     "success": 45,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    },
+    {
+     "from": 9,
+     "success": 45,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    }
+   ]
+  },
+  {
+   "rarity_min": 8,
+   "rarity_max": 8,
+   "meseta": 2500,
+   "steps": [
+    {
+     "from": 0,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 1,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 2,
+     "success": 80,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 3,
+     "success": 80,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 4,
+     "success": 60,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 5,
+     "success": 60,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 6,
+     "success": 50,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    },
+    {
+     "from": 7,
+     "success": 50,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    },
+    {
+     "from": 8,
+     "success": 40,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    },
+    {
+     "from": 9,
+     "success": 40,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    }
+   ]
+  },
+  {
+   "rarity_min": 9,
+   "rarity_max": 9,
+   "meseta": 3000,
+   "steps": [
+    {
+     "from": 0,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 1,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 1
+    },
+    {
+     "from": 2,
+     "success": 75,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 3,
+     "success": 70,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 4,
+     "success": 60,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 5,
+     "success": 55,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 1
+    },
+    {
+     "from": 6,
+     "success": 50,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    },
+    {
+     "from": 7,
+     "success": 45,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    },
+    {
+     "from": 8,
+     "success": 35,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    },
+    {
+     "from": 9,
+     "success": 35,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 1
+    }
+   ]
+  },
+  {
+   "rarity_min": 10,
+   "rarity_max": 10,
+   "meseta": 5000,
+   "steps": [
+    {
+     "from": 0,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 2
+    },
+    {
+     "from": 1,
+     "success": 90,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 2
+    },
+    {
+     "from": 2,
+     "success": 70,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 2
+    },
+    {
+     "from": 3,
+     "success": 65,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 2
+    },
+    {
+     "from": 4,
+     "success": 55,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 2
+    },
+    {
+     "from": 5,
+     "success": 50,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 2
+    },
+    {
+     "from": 6,
+     "success": 45,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 2
+    },
+    {
+     "from": 7,
+     "success": 40,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 2
+    },
+    {
+     "from": 8,
+     "success": 35,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 2
+    },
+    {
+     "from": 9,
+     "success": 30,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 2
+    }
+   ]
+  },
+  {
+   "rarity_min": 11,
+   "rarity_max": 11,
+   "meseta": 6000,
+   "steps": [
+    {
+     "from": 0,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 4
+    },
+    {
+     "from": 1,
+     "success": 80,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 4
+    },
+    {
+     "from": 2,
+     "success": 65,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 4
+    },
+    {
+     "from": 3,
+     "success": 60,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 4
+    },
+    {
+     "from": 4,
+     "success": 50,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 4
+    },
+    {
+     "from": 5,
+     "success": 45,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 4
+    },
+    {
+     "from": 6,
+     "success": 40,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 4
+    },
+    {
+     "from": 7,
+     "success": 35,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 4
+    },
+    {
+     "from": 8,
+     "success": 30,
+     "drop_min": 1,
+     "drop_max": 3,
+     "grinders": 4
+    },
+    {
+     "from": 9,
+     "success": 30,
+     "drop_min": 1,
+     "drop_max": 3,
+     "grinders": 4
+    }
+   ]
+  },
+  {
+   "rarity_min": 12,
+   "rarity_max": 12,
+   "meseta": 7000,
+   "steps": [
+    {
+     "from": 0,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 5
+    },
+    {
+     "from": 1,
+     "success": 80,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 5
+    },
+    {
+     "from": 2,
+     "success": 65,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 5
+    },
+    {
+     "from": 3,
+     "success": 60,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 5
+    },
+    {
+     "from": 4,
+     "success": 50,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 5
+    },
+    {
+     "from": 5,
+     "success": 45,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 5
+    },
+    {
+     "from": 6,
+     "success": 40,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 5
+    },
+    {
+     "from": 7,
+     "success": 35,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 5
+    },
+    {
+     "from": 8,
+     "success": 30,
+     "drop_min": 1,
+     "drop_max": 3,
+     "grinders": 5
+    },
+    {
+     "from": 9,
+     "success": 30,
+     "drop_min": 1,
+     "drop_max": 3,
+     "grinders": 5
+    }
+   ]
+  },
+  {
+   "rarity_min": 13,
+   "rarity_max": 13,
+   "meseta": 10000,
+   "steps": [
+    {
+     "from": 0,
+     "success": 100,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 3
+    },
+    {
+     "from": 1,
+     "success": 90,
+     "drop_min": 0,
+     "drop_max": 0,
+     "grinders": 3
+    },
+    {
+     "from": 2,
+     "success": 65,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 3
+    },
+    {
+     "from": 3,
+     "success": 60,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 3
+    },
+    {
+     "from": 4,
+     "success": 50,
+     "drop_min": 0,
+     "drop_max": 1,
+     "grinders": 3
+    },
+    {
+     "from": 5,
+     "success": 50,
+     "drop_min": 0,
+     "drop_max": 2,
+     "grinders": 3
+    },
+    {
+     "from": 6,
+     "success": 50,
+     "drop_min": 1,
+     "drop_max": 2,
+     "grinders": 3
+    },
+    {
+     "from": 7,
+     "success": 50,
+     "drop_min": 1,
+     "drop_max": 3,
+     "grinders": 3
+    },
+    {
+     "from": 8,
+     "success": 50,
+     "drop_min": 1,
+     "drop_max": 3,
+     "grinders": 3
+    },
+    {
+     "from": 9,
+     "success": 50,
+     "drop_min": 1,
+     "drop_max": 3,
+     "grinders": 3
+    }
+   ]
+  }
+ ]
+}

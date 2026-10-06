@@ -591,6 +591,52 @@ impl Inventory {
             ..Default::default()
         }))
     }
+    /// [pso2_vita_offline] Item lab (lab.rs): held meseta
+    pub fn meseta(&self) -> u64 {
+        self.inventory.meseta
+    }
+    /// [pso2_vita_offline] Item lab: pay `amount` meseta if there is enough
+    pub fn take_meseta(&mut self, amount: u64) -> bool {
+        if self.inventory.meseta < amount {
+            return false;
+        }
+        self.inventory.meseta -= amount;
+        true
+    }
+    /// [pso2_vita_offline] Item lab: how many of a consumable (all stacks) are in the bag
+    pub fn count_items(&self, id: ItemId) -> u32 {
+        self.inventory
+            .items
+            .iter()
+            .filter(|i| i.id == id)
+            .map(|i| match &i.data {
+                ItemType::Consumable(c) => c.amount as u32,
+                _ => 1,
+            })
+            .sum()
+    }
+    /// [pso2_vita_offline] Item lab: take `amount` of a consumable from the bag's stacks. Returns (uuid, amount left)
+    /// per touched stack (0 = the stack is gone). Call `count_items` first.
+    pub fn take_items(&mut self, id: ItemId, mut amount: u16) -> Vec<(u64, u16)> {
+        let mut out = vec![];
+        while amount > 0 {
+            let Some(uuid) = self.inventory.items.iter().find(|i| i.id == id).map(|i| i.uuid) else {
+                break;
+            };
+            match decrease_item(&mut self.inventory.items, uuid, amount) {
+                Ok(ChangeItemResult::Changed { new_amount, moved, .. }) => {
+                    amount -= moved;
+                    out.push((uuid, new_amount));
+                }
+                Ok(ChangeItemResult::Removed { amount: taken, .. }) => {
+                    amount = amount.saturating_sub(taken);
+                    out.push((uuid, 0));
+                }
+                _ => break,
+            }
+        }
+        out
+    }
     /// [pso2_vita_offline] Picked-up meseta: the held amount goes up, InventoryMeseta (0F-14) with the new total.
     pub fn add_meseta(&mut self, amount: u64) -> Packet {
         self.inventory.meseta += amount;

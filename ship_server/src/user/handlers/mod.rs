@@ -4,6 +4,7 @@ pub mod arksmission;
 pub mod chat;
 pub mod friends;
 pub mod item;
+pub mod lab;
 pub mod login;
 pub mod missionpass;
 pub mod object;

@@ -573,6 +573,19 @@ async fn run_command(line: &str) -> Result<String, Error> {
             lock.send_packet(&packet).await?;
             Ok(format!("give {t}:{i}:{sub} x{amount}"))
         }
+        ("meseta", [n]) => {
+            // meseta <n>: add n meseta to the bag (InventoryMeseta 0F-14 with the new total)
+            let n: u64 = parse_num(n).ok_or(Error::InvalidInput("meseta <n>"))?;
+            let mut lock = user.lock().await;
+            let packet = lock
+                .character
+                .as_mut()
+                .ok_or(Error::InvalidInput("no character"))?
+                .inventory
+                .add_meseta(n);
+            lock.send_packet(&packet).await?;
+            Ok(format!("meseta +{n}"))
+        }
         ("grind", opts) => {
             // grind <n> [element=E force=F affix=a,b,..]: set the equipped weapon's grind (and element, affixes),
             // recompute the stats and resend it as AddedItem 0F-05 with the same uuid

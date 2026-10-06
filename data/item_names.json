@@ -94,5 +94,17 @@
     "jp_name": "ザムラナザン",
     "en_desc": "",
     "jp_desc": ""
+  },
+  {
+    "id": {
+      "item_type": 3,
+      "id": 7,
+      "unk3": 0,
+      "subid": 1
+    },
+    "en_name": "Grinder",
+    "jp_name": "グラインダー",
+    "en_desc": "",
+    "jp_desc": ""
   }
 ]
