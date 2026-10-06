@@ -305,14 +305,26 @@ impl Quests {
         available
     }
     //FIXME: this will not work for limited time quests
-    pub fn get_category(&self, category: QuestType, unlocked: &[u32]) -> QuestCategoryPacket {
+    pub fn get_category(
+        &self,
+        category: QuestType,
+        unlocked: &[u32],
+        cleared: &[u32],
+    ) -> QuestCategoryPacket {
         QuestCategoryPacket {
             quests: self
                 .quests
                 .iter()
                 .filter(|q| unlocked.contains(&q.definition.name_id) || q.definition.name_id == 200030)
                 .filter(|q| q.definition.quest_type == category)
-                .map(|q| q.definition.clone())
+                .map(|q| {
+                    let mut def = q.definition.clone();
+                    // [pso2-quest] Vita: unk8[2] (+0xF4) bit 0 = "new" icon (not cleared), bit 1 = story in progress
+                    if cleared.contains(&def.name_id) {
+                        def.unk8[2] &= !3;
+                    }
+                    def
+                })
                 .collect(),
         }
     }

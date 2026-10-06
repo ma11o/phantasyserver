@@ -5,8 +5,7 @@ use pso2packetlib::protocol::{
     flag::{CutsceneEndPacket, SkitItemAddRequestPacket},
     questlist::{
         self, AcceptQuestPacket, AcceptStoryQuestPacket, MinimapRevealRequestPacket,
-        NewUnlockedQuestsPacket, QuestCategoryRequestPacket, QuestDifficultyPacket,
-        QuestDifficultyRequestPacket, UnlockedQuest,
+        QuestCategoryRequestPacket, QuestDifficultyPacket, QuestDifficultyRequestPacket,
     },
 };
 
@@ -47,22 +46,36 @@ pub async fn counter_request(user: &mut User) -> HResult {
         .character
         .as_mut()
         .expect("Character should be loaded at this moment");
-    // 51 is the size of the array inside NewUnlockedQuestsPacket
-    let max_unlocks = char.unlocked_quests_notif.len().min(51);
-    let unlocks: Vec<_> = char
+    // [pso2-quest] Vita 0x0B-0x22: +8 count u32, +0xC flags u32 (bit 0 = "and others", bit 1 = popup grouped by
+    // category; without bit 1 nothing was shown on the counter), then 50 x
+    // {name_id u32, category u32 (= QuestType, the 0x0B-0x16 index)}; unused name_id = -1 (client 0x82f410de)
+    const MAX_UNLOCKS: usize = 50;
+    let total = char.unlocked_quests_notif.len();
+    let unlocks: Vec<(u32, u32)> = char
         .unlocked_quests_notif
-        .drain(..max_unlocks)
+        .drain(..)
         .filter_map(|id| quests.get_quest_by_nameid(id))
-        .map(|q| UnlockedQuest {
-            name_id: q.definition.name_id,
-            quest_type: q.definition.quest_type,
-            ..Default::default()
-        })
+        .map(|q| (q.definition.name_id, q.definition.quest_type as u32))
+        .take(MAX_UNLOCKS)
         .collect();
-    let packet = Packet::NewUnlockedQuests(NewUnlockedQuestsPacket {
-        unlocks: unlocks.into(),
-    });
-    user.send_packet(&packet).await?;
+    let mut body = Vec::with_capacity(8 + MAX_UNLOCKS * 8);
+    body.extend_from_slice(&(unlocks.len() as u32).to_le_bytes());
+    body.extend_from_slice(&(2 | (total > MAX_UNLOCKS) as u32).to_le_bytes());
+    for i in 0..MAX_UNLOCKS {
+        let (id, cat) = unlocks.get(i).copied().unwrap_or((u32::MAX, 0));
+        body.extend_from_slice(&id.to_le_bytes());
+        body.extend_from_slice(&cat.to_le_bytes());
+    }
+    log::debug!("[pso2-quest] NewUnlockedQuests (Vita) {:?} of {}", unlocks, total);
+    user.send_packet(&Packet::Unknown((
+        PacketHeader {
+            id: 0x0B,
+            subid: 0x22,
+            ..Default::default()
+        },
+        body,
+    )))
+    .await?;
     Ok(Action::Nothing)
 }
 
@@ -120,7 +133,7 @@ pub async fn quest_category(user: &mut User, packet: QuestCategoryRequestPacket)
     let packet = user
         .blockdata
         .quests
-        .get_category(packet.category, &char.unlocked_quests);
+        .get_category(packet.category, &char.unlocked_quests, &char.cleared_quests);
     user.send_packet(&Packet::QuestCategory(packet)).await?;
     user.send_packet(&Packet::QuestCategoryStopper).await?;
 

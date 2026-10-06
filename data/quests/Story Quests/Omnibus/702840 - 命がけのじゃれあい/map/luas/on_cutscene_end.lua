@@ -1,5 +1,6 @@
 if call_type == "on_cutscene_end" then
     if zone == "cutscene" then
+        clear_quest(sender, 702840)
         unlock_quest(sender, 702845)
         move_lobby(sender)
     end

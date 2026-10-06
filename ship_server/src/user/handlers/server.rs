@@ -208,6 +208,7 @@ pub async fn map_loaded(mut user_guard: MutexGuard<'_, User>, _: MapLoadedPacket
 }
 
 pub async fn set_flag(user: &mut User, data: SetFlagPacket) -> HResult {
+    log::debug!("[pso2-quest] SetFlag {:?} id={} value={}", data.flag_type, data.id, data.value);
     match data.flag_type {
         FlagType::Account => user
             .user_data

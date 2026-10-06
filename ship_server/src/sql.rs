@@ -50,6 +50,8 @@ pub struct CharData {
     pub unlocked_quests: Vec<u32>,
     pub unlocked_quests_notif: Vec<u32>,
     pub play_time: Duration,
+    /// [pso2-quest] name_ids of quests the character has cleared (story list clear mark)
+    pub cleared_quests: Vec<u32>,
 }
 
 #[derive(Default, serde::Serialize, serde::Deserialize)]
