@@ -139,6 +139,8 @@ fn make_item(spec: &str, amount: u32) -> Option<Item> {
                 amount: amount.max(1) as u16,
                 ..Default::default()
             })
+        } else if t == 1 {
+            ItemType::Weapon(Default::default())
         } else {
             Default::default()
         },
@@ -174,7 +176,11 @@ fn roll_table<R: Rng>(rng: &mut R, t: &Table, level: u32, out: &mut Vec<Item>) {
                 continue;
             };
             let amount = range(rng, Range { min: e.min, max: e.max });
-            if let Some(item) = make_item(&e.item, amount) {
+            if let Some(mut item) = make_item(&e.item, amount) {
+                if let ItemType::Weapon(w) = &mut item.data {
+                    w.affixes = crate::affixes::data().roll(rng, level);
+                    log::info!("[pso2-affix] dropped {} with [{}]", e.item, crate::affixes::describe(&w.affixes));
+                }
                 out.push(item);
             }
         }

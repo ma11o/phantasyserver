@@ -4,6 +4,7 @@
 #![allow(clippy::await_holding_lock)]
 #![allow(dead_code)]
 
+mod affixes;
 mod battle_stats;
 mod drops;
 mod block;

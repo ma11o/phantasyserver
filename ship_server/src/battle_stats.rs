@@ -130,9 +130,9 @@ impl PlayerStats {
                 weapon_stats.gender_force_dmg.force_dmg,
                 resulting_stats.base_mel_pwr
             );
-            let grind = match &equiped_item.data {
-                pso2packetlib::protocol::items::ItemType::Weapon(w) => w.grind,
-                _ => 0,
+            let (grind, affixes) = match &equiped_item.data {
+                pso2packetlib::protocol::items::ItemType::Weapon(w) => (w.grind, w.affixes),
+                _ => (0, [0; 8]),
             };
             let pct = grind_percent(weapon_stats.rarity, grind);
             let ground = |v: u32| v * pct / 100;
@@ -140,6 +140,23 @@ impl PlayerStats {
             resulting_stats.weapon_mel_pwr = ground(weapon_stats.melee_dmg as _);
             resulting_stats.weapon_rng_pwr = ground(weapon_stats.range_dmg as _);
             resulting_stats.weapon_tec_pwr = ground(weapon_stats.gender_force_dmg.force_dmg as _);
+            // affixes: the client shows a sword's 94 with パワーⅠ as 104, so their attack goes with the weapon's
+            // (after the grind, not scaled by it: not checked). Defence, HP and skill go to the player's own. PP is
+            // not kept here (the client's).
+            let b = crate::affixes::data().bonus(&affixes);
+            if b != Default::default() {
+                log::debug!("[pso2-battle] affixes {} -> {b:?}", crate::affixes::describe(&affixes));
+            }
+            let add = |v: &mut u32, d: i32| *v = v.saturating_add_signed(d);
+            add(&mut resulting_stats.weapon_mel_pwr, b.s_atk);
+            add(&mut resulting_stats.weapon_rng_pwr, b.r_atk);
+            add(&mut resulting_stats.weapon_tec_pwr, b.t_atk);
+            add(&mut resulting_stats.base_mel_def, b.s_def);
+            add(&mut resulting_stats.base_rng_def, b.r_def);
+            add(&mut resulting_stats.base_tec_def, b.t_def);
+            add(&mut resulting_stats.max_hp, b.hp);
+            add(&mut resulting_stats.hp, b.hp);
+            add(&mut resulting_stats.dex, b.dex);
         }
         Ok(resulting_stats)
     }

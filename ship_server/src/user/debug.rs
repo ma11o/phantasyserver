@@ -549,9 +549,9 @@ async fn run_command(line: &str) -> Result<String, Error> {
             ))
         }
         ("grind", opts) => {
-            // grind <n> [element=E force=F]: set the equipped weapon's grind (and element), recompute the stats and
-            // resend it as AddedItem 0F-05 with the same uuid
-            let usage = "grind <n> [element=E force=F]";
+            // grind <n> [element=E force=F affix=a,b,..]: set the equipped weapon's grind (and element, affixes),
+            // recompute the stats and resend it as AddedItem 0F-05 with the same uuid
+            let usage = "grind <n> [element=E force=F affix=a,b,..]";
             let [n, rest @ ..] = opts else {
                 return Err(Error::InvalidInput(usage));
             };
@@ -571,18 +571,25 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 match kv.split_once('=') {
                     Some(("element", v)) => w.element = parse_num(v).ok_or(Error::InvalidInput(usage))?,
                     Some(("force", v)) => w.force = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                    Some(("affix", v)) => {
+                        w.affixes = [0; 8];
+                        for (slot, a) in w.affixes.iter_mut().zip(v.split(',')) {
+                            *slot = parse_num(a).ok_or(Error::InvalidInput(usage))?;
+                        }
+                    }
                     _ => return Err(Error::InvalidInput(usage)),
                 }
             }
             let item = item.clone();
             crate::battle_stats::PlayerStats::update(&mut lock)?;
             let pwr = lock.get_stats().weapon_pwr();
+            let hp = lock.get_stats().get_hp();
             lock.send_packet(&Packet::AddedItem(pso2packetlib::protocol::items::AddedItemPacket {
                 item: item.clone(),
                 ..Default::default()
             }))
             .await?;
-            Ok(format!("grind {:?} -> weapon pwr {pwr:?}", item.data))
+            Ok(format!("grind {:?} -> weapon pwr {pwr:?} hp {hp:?}", item.data))
         }
         ("clear", xyz) => {
             // same as the last enemy dying: clear telepipe at the player (or x y z), On, cleared state on InitPosition

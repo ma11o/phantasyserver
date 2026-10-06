@@ -1,0 +1,5950 @@
+{
+"source": "クライアントの item_param_element.itel / it_text_element_name (tools/server_affixes.py、T55 / T57)",
+"affixes": [
+{
+"id": 512,
+"section": "BOOSTER",
+"name": "パワーⅠ",
+"s_atk": 10
+},
+{
+"id": 513,
+"section": "BOOSTER",
+"name": "パワーⅡ",
+"s_atk": 20
+},
+{
+"id": 514,
+"section": "BOOSTER",
+"name": "パワーⅢ",
+"s_atk": 30
+},
+{
+"id": 515,
+"section": "BOOSTER",
+"name": "パワーⅣ",
+"s_atk": 35
+},
+{
+"id": 516,
+"section": "BOOSTER",
+"name": "パワーⅤ",
+"s_atk": 40
+},
+{
+"id": 517,
+"section": "BOOSTER",
+"name": "シュートⅠ",
+"r_atk": 10
+},
+{
+"id": 518,
+"section": "BOOSTER",
+"name": "シュートⅡ",
+"r_atk": 20
+},
+{
+"id": 519,
+"section": "BOOSTER",
+"name": "シュートⅢ",
+"r_atk": 30
+},
+{
+"id": 520,
+"section": "BOOSTER",
+"name": "シュートⅣ",
+"r_atk": 35
+},
+{
+"id": 521,
+"section": "BOOSTER",
+"name": "シュートⅤ",
+"r_atk": 40
+},
+{
+"id": 522,
+"section": "BOOSTER",
+"name": "テクニックⅠ",
+"t_atk": 10
+},
+{
+"id": 523,
+"section": "BOOSTER",
+"name": "テクニックⅡ",
+"t_atk": 20
+},
+{
+"id": 524,
+"section": "BOOSTER",
+"name": "テクニックⅢ",
+"t_atk": 30
+},
+{
+"id": 525,
+"section": "BOOSTER",
+"name": "テクニックⅣ",
+"t_atk": 35
+},
+{
+"id": 526,
+"section": "BOOSTER",
+"name": "テクニックⅤ",
+"t_atk": 40
+},
+{
+"id": 527,
+"section": "BOOSTER",
+"name": "アームⅠ",
+"dex": 10
+},
+{
+"id": 528,
+"section": "BOOSTER",
+"name": "アームⅡ",
+"dex": 20
+},
+{
+"id": 529,
+"section": "BOOSTER",
+"name": "アームⅢ",
+"dex": 30
+},
+{
+"id": 530,
+"section": "BOOSTER",
+"name": "アームⅣ",
+"dex": 35
+},
+{
+"id": 531,
+"section": "BOOSTER",
+"name": "アームⅤ",
+"dex": 40
+},
+{
+"id": 532,
+"section": "BOOSTER",
+"name": "ボディⅠ",
+"s_def": 10
+},
+{
+"id": 533,
+"section": "BOOSTER",
+"name": "ボディⅡ",
+"s_def": 20
+},
+{
+"id": 534,
+"section": "BOOSTER",
+"name": "ボディⅢ",
+"s_def": 30
+},
+{
+"id": 535,
+"section": "BOOSTER",
+"name": "ボディⅣ",
+"s_def": 35
+},
+{
+"id": 536,
+"section": "BOOSTER",
+"name": "ボディⅤ",
+"s_def": 40
+},
+{
+"id": 537,
+"section": "BOOSTER",
+"name": "リアクトⅠ",
+"r_def": 10
+},
+{
+"id": 538,
+"section": "BOOSTER",
+"name": "リアクトⅡ",
+"r_def": 20
+},
+{
+"id": 539,
+"section": "BOOSTER",
+"name": "リアクトⅢ",
+"r_def": 30
+},
+{
+"id": 540,
+"section": "BOOSTER",
+"name": "リアクトⅣ",
+"r_def": 35
+},
+{
+"id": 541,
+"section": "BOOSTER",
+"name": "リアクトⅤ",
+"r_def": 40
+},
+{
+"id": 542,
+"section": "BOOSTER",
+"name": "マインドⅠ",
+"t_def": 10
+},
+{
+"id": 543,
+"section": "BOOSTER",
+"name": "マインドⅡ",
+"t_def": 20
+},
+{
+"id": 544,
+"section": "BOOSTER",
+"name": "マインドⅢ",
+"t_def": 30
+},
+{
+"id": 545,
+"section": "BOOSTER",
+"name": "マインドⅣ",
+"t_def": 35
+},
+{
+"id": 546,
+"section": "BOOSTER",
+"name": "マインドⅤ",
+"t_def": 40
+},
+{
+"id": 547,
+"section": "BOOSTER",
+"name": "アビリティⅠ",
+"s_atk": 5,
+"r_atk": 5,
+"t_atk": 5,
+"s_def": 5,
+"r_def": 5,
+"t_def": 5,
+"dex": 5
+},
+{
+"id": 548,
+"section": "BOOSTER",
+"name": "アビリティⅡ",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 549,
+"section": "BOOSTER",
+"name": "アビリティⅢ",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"s_def": 15,
+"r_def": 15,
+"t_def": 15,
+"dex": 15
+},
+{
+"id": 550,
+"section": "BOOSTER",
+"name": "アビリティⅣ",
+"s_atk": 20,
+"r_atk": 20,
+"t_atk": 20,
+"s_def": 20,
+"r_def": 20,
+"t_def": 20,
+"dex": 20
+},
+{
+"id": 551,
+"section": "BOOSTER",
+"name": "アビリティⅤ",
+"s_atk": 30,
+"r_atk": 30,
+"t_atk": 30,
+"s_def": 30,
+"r_def": 30,
+"t_def": 30,
+"dex": 30
+},
+{
+"id": 552,
+"section": "BOOSTER",
+"name": "スタミナⅠ",
+"hp": 20
+},
+{
+"id": 553,
+"section": "BOOSTER",
+"name": "スタミナⅡ",
+"hp": 40
+},
+{
+"id": 554,
+"section": "BOOSTER",
+"name": "スタミナⅢ",
+"hp": 50
+},
+{
+"id": 555,
+"section": "BOOSTER",
+"name": "スタミナⅣ",
+"hp": 60
+},
+{
+"id": 556,
+"section": "BOOSTER",
+"name": "スタミナⅤ",
+"hp": 70
+},
+{
+"id": 557,
+"section": "BOOSTER",
+"name": "スピリタⅠ",
+"pp": 2
+},
+{
+"id": 558,
+"section": "BOOSTER",
+"name": "スピリタⅡ",
+"pp": 3
+},
+{
+"id": 559,
+"section": "BOOSTER",
+"name": "スピリタⅢ",
+"pp": 4
+},
+{
+"id": 560,
+"section": "BOOSTER",
+"name": "スピリタⅣ",
+"pp": 5
+},
+{
+"id": 561,
+"section": "BOOSTER",
+"name": "スピリタⅤ",
+"pp": 6
+},
+{
+"id": 562,
+"section": "BOOSTER",
+"name": "パワー・ブースト",
+"s_atk": 25
+},
+{
+"id": 563,
+"section": "BOOSTER",
+"name": "シュート・ブースト",
+"r_atk": 25
+},
+{
+"id": 564,
+"section": "BOOSTER",
+"name": "テクニック・ブースト",
+"t_atk": 25
+},
+{
+"id": 565,
+"section": "BOOSTER",
+"name": "スタミナ・ブースト",
+"hp": 45
+},
+{
+"id": 566,
+"section": "BOOSTER",
+"name": "スピリタ・ブースト",
+"pp": 5
+},
+{
+"id": 567,
+"section": "BOOSTER",
+"name": "グワナ・ソール",
+"s_atk": 30,
+"hp": 10,
+"pp": 2
+},
+{
+"id": 568,
+"section": "BOOSTER",
+"name": "ラグネ・ソール",
+"t_atk": 30,
+"hp": 20
+},
+{
+"id": 569,
+"section": "BOOSTER",
+"name": "ウォルガ・ソール",
+"t_atk": 30,
+"hp": 10,
+"pp": 2
+},
+{
+"id": 570,
+"section": "BOOSTER",
+"name": "エルダー・ソール",
+"t_atk": 30,
+"pp": 3
+},
+{
+"id": 571,
+"section": "BOOSTER",
+"name": "シグノ・ソール",
+"hp": 20,
+"pp": 1,
+"dex": 30
+},
+{
+"id": 572,
+"section": "BOOSTER",
+"name": "マイザー・ソール",
+"r_atk": 30,
+"pp": 3
+},
+{
+"id": 573,
+"section": "BOOSTER",
+"name": "ヴァーダー・ソール",
+"r_def": 30,
+"pp": 4
+},
+{
+"id": 574,
+"section": "BOOSTER",
+"name": "キャタ・ソール",
+"t_def": 30,
+"hp": 20,
+"pp": 1
+},
+{
+"id": 575,
+"section": "BOOSTER",
+"name": "ヴォル・ソール",
+"s_atk": 30,
+"hp": 20
+},
+{
+"id": 576,
+"section": "BOOSTER",
+"name": "クォーツ・ソール",
+"s_atk": 30,
+"pp": 3
+},
+{
+"id": 577,
+"section": "BOOSTER",
+"name": "ロックベア・ソール",
+"s_def": 30,
+"hp": 10,
+"pp": 3
+},
+{
+"id": 578,
+"section": "BOOSTER",
+"name": "マルモ・ソール",
+"r_def": 30,
+"hp": 20,
+"pp": 1
+},
+{
+"id": 579,
+"section": "BOOSTER",
+"name": "ファング・ソール",
+"r_atk": 30,
+"hp": 10,
+"pp": 2
+},
+{
+"id": 580,
+"section": "BOOSTER",
+"name": "スノウ・ソール",
+"s_def": 30,
+"hp": 20,
+"pp": 1
+},
+{
+"id": 581,
+"section": "BOOSTER",
+"name": "ラッピー・ソール",
+"pp": 4,
+"dex": 30
+},
+{
+"id": 582,
+"section": "BOOSTER",
+"name": "モデュレイター",
+"s_atk": 30,
+"r_atk": 30,
+"t_atk": 30
+},
+{
+"id": 583,
+"section": "BOOSTER",
+"name": "ミューテーションⅠ",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"hp": 10
+},
+{
+"id": 584,
+"section": "BOOSTER",
+"name": "ウィンクルム",
+"s_atk": 20,
+"r_atk": 20,
+"t_atk": 20
+},
+{
+"id": 585,
+"section": "BOOSTER",
+"name": "ランサ・ソール",
+"r_atk": 30,
+"hp": 20
+},
+{
+"id": 586,
+"section": "BOOSTER",
+"name": "スティグマ",
+"pp": 5,
+"dex": 20
+},
+{
+"id": 587,
+"section": "BOOSTER",
+"name": "フォトンコレクト"
+},
+{
+"id": 588,
+"section": "BOOSTER",
+"name": "シュレイダ・ソール",
+"t_def": 30,
+"hp": 10,
+"pp": 3
+},
+{
+"id": 589,
+"section": "BOOSTER",
+"name": "クローム・ソール",
+"hp": 10,
+"pp": 3,
+"dex": 30
+},
+{
+"id": 590,
+"section": "BOOSTER",
+"name": "ゴロン・ソール",
+"t_def": 30,
+"pp": 4
+},
+{
+"id": 591,
+"section": "BOOSTER",
+"name": "エクス・ソール",
+"s_def": 30,
+"pp": 4
+},
+{
+"id": 592,
+"section": "BOOSTER",
+"name": "アルター・アルマ",
+"s_atk": 20,
+"hp": 30
+},
+{
+"id": 593,
+"section": "BOOSTER",
+"name": "アルター・ティロ",
+"r_atk": 20,
+"hp": 30
+},
+{
+"id": 594,
+"section": "BOOSTER",
+"name": "アルター・マギア",
+"t_atk": 20,
+"hp": 30
+},
+{
+"id": 595,
+"section": "BOOSTER",
+"name": "フリクト・アルマ",
+"s_atk": 20,
+"pp": 3
+},
+{
+"id": 596,
+"section": "BOOSTER",
+"name": "フリクト・ティロ",
+"r_atk": 20,
+"pp": 3
+},
+{
+"id": 597,
+"section": "BOOSTER",
+"name": "フリクト・マギア",
+"t_atk": 20,
+"pp": 3
+},
+{
+"id": 598,
+"section": "BOOSTER",
+"name": "ペルソナ・ソール",
+"r_def": 30,
+"hp": 10,
+"pp": 3
+},
+{
+"id": 599,
+"section": "BOOSTER",
+"name": "クーガー・ソール",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"hp": 10,
+"pp": 2,
+"dex": 15
+},
+{
+"id": 600,
+"section": "BOOSTER",
+"name": "オルグ・ソール",
+"s_atk": 20,
+"r_atk": 20,
+"hp": 10
+},
+{
+"id": 601,
+"section": "BOOSTER",
+"name": "バル・ソール",
+"r_atk": 20,
+"t_atk": 20,
+"hp": 10
+},
+{
+"id": 602,
+"section": "BOOSTER",
+"name": "リンガ・ソール",
+"s_atk": 20,
+"t_atk": 20,
+"hp": 10
+},
+{
+"id": 603,
+"section": "BOOSTER",
+"name": "ソーマ・ソール",
+"s_atk": 20,
+"r_atk": 20,
+"pp": 2
+},
+{
+"id": 604,
+"section": "BOOSTER",
+"name": "タガミカヅチ・ソール",
+"r_atk": 20,
+"t_atk": 20,
+"pp": 2
+},
+{
+"id": 605,
+"section": "BOOSTER",
+"name": "マリューダ・ソール",
+"s_atk": 20,
+"t_atk": 20,
+"pp": 2
+},
+{
+"id": 606,
+"section": "BOOSTER",
+"name": "メデューナ・ソール",
+"s_atk": 20,
+"r_atk": 20,
+"hp": 5,
+"pp": 1
+},
+{
+"id": 607,
+"section": "BOOSTER",
+"name": "ビブラス・ソール",
+"r_atk": 20,
+"t_atk": 20,
+"hp": 5,
+"pp": 1
+},
+{
+"id": 608,
+"section": "BOOSTER",
+"name": "ルーサー・ソール",
+"s_atk": 20,
+"t_atk": 20,
+"hp": 5,
+"pp": 1
+},
+{
+"id": 609,
+"section": "BOOSTER",
+"name": "リーリー・ソール",
+"s_atk": 20,
+"s_def": 20,
+"hp": 20
+},
+{
+"id": 610,
+"section": "BOOSTER",
+"name": "ラタン・フィーバー",
+"t_atk": 10,
+"pp": 2,
+"dex": 5
+},
+{
+"id": 611,
+"section": "BOOSTER",
+"name": "セント・フィーバー",
+"r_atk": 10,
+"pp": 2,
+"dex": 5
+},
+{
+"id": 612,
+"section": "BOOSTER",
+"name": "ラブ・フィーバー",
+"s_atk": 10,
+"pp": 2,
+"dex": 5
+},
+{
+"id": 613,
+"section": "BOOSTER",
+"name": "ラヴィ・フィーバー",
+"s_atk": 10,
+"hp": 10,
+"dex": 5
+},
+{
+"id": 614,
+"section": "BOOSTER",
+"name": "エグ・フィーバー",
+"r_atk": 10,
+"hp": 10,
+"dex": 5
+},
+{
+"id": 615,
+"section": "BOOSTER",
+"name": "フログ・フィーバー",
+"t_atk": 10,
+"hp": 10,
+"dex": 5
+},
+{
+"id": 616,
+"section": "BOOSTER",
+"name": "サマー・フィーバー",
+"t_atk": 10,
+"hp": 5,
+"pp": 1,
+"dex": 5
+},
+{
+"id": 617,
+"section": "BOOSTER",
+"name": "リターナーⅠ",
+"s_atk": 3,
+"r_atk": 3,
+"t_atk": 3,
+"s_def": 3,
+"r_def": 3,
+"t_def": 3,
+"hp": 3,
+"pp": 1,
+"dex": 3
+},
+{
+"id": 618,
+"section": "BOOSTER",
+"name": "リターナーⅡ",
+"s_atk": 5,
+"r_atk": 5,
+"t_atk": 5,
+"s_def": 5,
+"r_def": 5,
+"t_def": 5,
+"hp": 5,
+"pp": 2,
+"dex": 5
+},
+{
+"id": 619,
+"section": "BOOSTER",
+"name": "リターナーⅢ",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"hp": 10,
+"pp": 3,
+"dex": 10
+},
+{
+"id": 620,
+"section": "BOOSTER",
+"name": "リターナーⅣ",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"s_def": 15,
+"r_def": 15,
+"t_def": 15,
+"hp": 15,
+"pp": 4,
+"dex": 15
+},
+{
+"id": 621,
+"section": "BOOSTER",
+"name": "リターナーⅤ",
+"s_atk": 30,
+"r_atk": 30,
+"t_atk": 30,
+"s_def": 30,
+"r_def": 30,
+"t_def": 30,
+"hp": 30,
+"pp": 5,
+"dex": 30
+},
+{
+"id": 622,
+"section": "BOOSTER",
+"name": "ドラゴン・フィーバー",
+"r_atk": 10,
+"pp": 2,
+"dex": 5
+},
+{
+"id": 623,
+"section": "BOOSTER",
+"name": "エレファント・フィーバー",
+"s_atk": 10,
+"hp": 10,
+"dex": 5
+},
+{
+"id": 624,
+"section": "BOOSTER",
+"name": "ソールレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 625,
+"section": "BOOSTER",
+"name": "マーク・ジョイオ",
+"s_atk": 40,
+"r_atk": 40,
+"t_atk": 40,
+"hp": 50
+},
+{
+"id": 626,
+"section": "BOOSTER",
+"name": "マーク・カレジナ",
+"s_atk": 40,
+"r_atk": 40,
+"t_atk": 40,
+"pp": 5
+},
+{
+"id": 627,
+"section": "BOOSTER",
+"name": "マーク・アンガル",
+"s_atk": 50,
+"r_atk": 50,
+"t_atk": 50,
+"dex": 40
+},
+{
+"id": 628,
+"section": "BOOSTER",
+"name": "マーク・グリフ",
+"s_def": 50,
+"r_def": 50,
+"t_def": 50,
+"hp": 80
+},
+{
+"id": 629,
+"section": "BOOSTER",
+"name": "ナイトギア・ソール",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"pp": 4,
+"dex": 15
+},
+{
+"id": 630,
+"section": "BOOSTER",
+"name": "グンネ・ソール",
+"s_atk": 15,
+"hp": 45
+},
+{
+"id": 631,
+"section": "BOOSTER",
+"name": "イーデッタ・ソール",
+"r_atk": 15,
+"hp": 45
+},
+{
+"id": 632,
+"section": "BOOSTER",
+"name": "ジャドゥ・ソール",
+"t_atk": 15,
+"hp": 45
+},
+{
+"id": 633,
+"section": "BOOSTER",
+"name": "ENT_02ソール",
+"hp": 45,
+"dex": 15
+},
+{
+"id": 634,
+"section": "BOOSTER",
+"name": "ジグモル・ソール",
+"s_atk": 15,
+"pp": 4
+},
+{
+"id": 635,
+"section": "BOOSTER",
+"name": "マドゥ・ソール",
+"r_atk": 15,
+"pp": 4
+},
+{
+"id": 636,
+"section": "BOOSTER",
+"name": "ネプト・ソール",
+"t_atk": 15,
+"pp": 4
+},
+{
+"id": 637,
+"section": "BOOSTER",
+"name": "ニャウ・ソール",
+"pp": 4,
+"dex": 15
+},
+{
+"id": 638,
+"section": "BOOSTER",
+"name": "ギフトレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 639,
+"section": "BOOSTER",
+"name": "セレモ・フィーバー",
+"s_atk": 10,
+"hp": 5,
+"pp": 1,
+"dex": 5
+},
+{
+"id": 640,
+"section": "BOOSTER",
+"name": "ノイヤ・フィーバー",
+"r_atk": 10,
+"hp": 5,
+"pp": 1,
+"dex": 5
+},
+{
+"id": 641,
+"section": "BOOSTER",
+"name": "ルーナ・フィーバー",
+"t_atk": 10,
+"hp": 10,
+"pp": 1
+},
+{
+"id": 642,
+"section": "BOOSTER",
+"name": "トロクロ・フィーバー",
+"hp": 5,
+"pp": 1,
+"dex": 15
+},
+{
+"id": 643,
+"section": "BOOSTER",
+"name": "サクラ・フィーバー",
+"s_def": 10,
+"hp": 5,
+"pp": 1,
+"dex": 5
+},
+{
+"id": 644,
+"section": "BOOSTER",
+"name": "ソニック・フィーバー",
+"s_atk": 10,
+"r_def": 10,
+"hp": 5,
+"pp": 1
+},
+{
+"id": 645,
+"section": "BOOSTER",
+"name": "サンサン・フィーバー",
+"s_atk": 5,
+"r_atk": 5,
+"t_atk": 5,
+"hp": 5,
+"pp": 1
+},
+{
+"id": 646,
+"section": "BOOSTER",
+"name": "アクス・フィーバー",
+"s_atk": 5,
+"r_atk": 5,
+"t_atk": 5,
+"pp": 5,
+"dex": 5
+},
+{
+"id": 647,
+"section": "BOOSTER",
+"name": "ENT_フィーバー08",
+"t_def": 10,
+"hp": 5,
+"pp": 1
+},
+{
+"id": 648,
+"section": "BOOSTER",
+"name": "アンガ・ソール",
+"s_atk": 20,
+"r_atk": 20,
+"t_atk": 20,
+"pp": 4
+},
+{
+"id": 649,
+"section": "BOOSTER",
+"name": "デッドリオン・ソール",
+"s_atk": 35,
+"hp": 30,
+"dex": 5
+},
+{
+"id": 650,
+"section": "BOOSTER",
+"name": "レオパード・ソール",
+"r_atk": 35,
+"hp": 30,
+"dex": 5
+},
+{
+"id": 651,
+"section": "BOOSTER",
+"name": "ディアボ・ソール",
+"t_atk": 35,
+"hp": 30,
+"dex": 5
+},
+{
+"id": 652,
+"section": "BOOSTER",
+"name": "レオーネ・ソール",
+"s_atk": 35,
+"hp": 20,
+"pp": 1,
+"dex": 5
+},
+{
+"id": 653,
+"section": "BOOSTER",
+"name": "ジオーグ・ソール",
+"r_atk": 35,
+"hp": 20,
+"pp": 1,
+"dex": 5
+},
+{
+"id": 654,
+"section": "BOOSTER",
+"name": "ドゥバルス・ソール",
+"t_atk": 35,
+"hp": 20,
+"pp": 1,
+"dex": 5
+},
+{
+"id": 655,
+"section": "BOOSTER",
+"name": "ベーアリ・ソール",
+"s_atk": 35,
+"pp": 3,
+"dex": 5
+},
+{
+"id": 656,
+"section": "BOOSTER",
+"name": "グリュゾラス・ソール",
+"r_atk": 35,
+"pp": 3,
+"dex": 5
+},
+{
+"id": 657,
+"section": "BOOSTER",
+"name": "グランゾ・ソール",
+"t_atk": 35,
+"pp": 3,
+"dex": 5
+},
+{
+"id": 658,
+"section": "BOOSTER",
+"name": "マガツ・ソール",
+"s_def": 15,
+"r_def": 15,
+"t_def": 15,
+"hp": 30,
+"pp": 3
+},
+{
+"id": 659,
+"section": "BOOSTER",
+"name": "ノーブル・パワー",
+"s_atk": 30,
+"pp": 3
+},
+{
+"id": 660,
+"section": "BOOSTER",
+"name": "ノーブル・シュート",
+"r_atk": 30,
+"pp": 3
+},
+{
+"id": 661,
+"section": "BOOSTER",
+"name": "ノーブル・テクニック",
+"t_atk": 30,
+"pp": 3
+},
+{
+"id": 662,
+"section": "BOOSTER",
+"name": "ノーブル・スタミナ",
+"hp": 50,
+"pp": 3
+},
+{
+"id": 678,
+"section": "BOOSTER",
+"name": "アプレンティス・ソール",
+"s_atk": 40,
+"r_atk": 40,
+"t_atk": 40
+},
+{
+"id": 679,
+"section": "BOOSTER",
+"name": "グリフォン・ソール",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"hp": 5,
+"pp": 3,
+"dex": 15
+},
+{
+"id": 680,
+"section": "BOOSTER",
+"name": "シノワ・ソール",
+"s_atk": 5,
+"hp": 25,
+"pp": 2,
+"dex": 30
+},
+{
+"id": 681,
+"section": "BOOSTER",
+"name": "スピリタ・アルファ",
+"pp": 3,
+"dex": 30
+},
+{
+"id": 687,
+"section": "BOOSTER",
+"name": "ダブル・ソール",
+"hp": 40,
+"pp": 3
+},
+{
+"id": 688,
+"section": "BOOSTER",
+"name": "ダークネス・ソール",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"s_def": 15,
+"r_def": 15,
+"t_def": 15,
+"hp": 15,
+"pp": 2,
+"dex": 15
+},
+{
+"id": 689,
+"section": "BOOSTER",
+"name": "アストラル・ソール",
+"s_atk": 35,
+"r_atk": 35,
+"t_atk": 35,
+"s_def": 35,
+"r_def": 35,
+"t_def": 35,
+"hp": 35,
+"pp": 5,
+"dex": 35
+},
+{
+"id": 690,
+"section": "BOOSTER",
+"name": "ソール・カタリスト",
+"hp": 10,
+"pp": 1
+},
+{
+"id": 691,
+"section": "BOOSTER",
+"name": "打撃アップ",
+"s_atk": 35
+},
+{
+"id": 692,
+"section": "BOOSTER",
+"name": "射撃アップ",
+"r_atk": 35
+},
+{
+"id": 693,
+"section": "BOOSTER",
+"name": "法撃アップ",
+"t_atk": 35
+},
+{
+"id": 694,
+"section": "BOOSTER",
+"name": "技量アップ",
+"dex": 40
+},
+{
+"id": 695,
+"section": "BOOSTER",
+"name": "ＨＰアップ",
+"hp": 150
+},
+{
+"id": 696,
+"section": "BOOSTER",
+"name": "ＰＰアップ",
+"pp": 5
+},
+{
+"id": 697,
+"section": "BOOSTER",
+"name": "打撃ＨＰアップ",
+"s_atk": 30,
+"hp": 120
+},
+{
+"id": 698,
+"section": "BOOSTER",
+"name": "射撃ＨＰアップ",
+"r_atk": 30,
+"hp": 120
+},
+{
+"id": 699,
+"section": "BOOSTER",
+"name": "法撃ＨＰアップ",
+"t_atk": 30,
+"hp": 120
+},
+{
+"id": 700,
+"section": "BOOSTER",
+"name": "技量ＨＰアップ",
+"hp": 20,
+"dex": 30
+},
+{
+"id": 701,
+"section": "BOOSTER",
+"name": "打撃ＰＰアップ",
+"s_atk": 30,
+"pp": 6
+},
+{
+"id": 702,
+"section": "BOOSTER",
+"name": "射撃ＰＰアップ",
+"r_atk": 30,
+"pp": 6
+},
+{
+"id": 703,
+"section": "BOOSTER",
+"name": "法撃ＰＰアップ",
+"t_atk": 30,
+"pp": 6
+},
+{
+"id": 704,
+"section": "BOOSTER",
+"name": "技量ＰＰアップ",
+"pp": 3,
+"dex": 30
+},
+{
+"id": 705,
+"section": "BOOSTER",
+"name": "ＨＰＰＰアップ",
+"hp": 60,
+"pp": 3
+},
+{
+"id": 706,
+"section": "BOOSTER",
+"name": "ＰＰＨＰアップ",
+"hp": 40,
+"pp": 7
+},
+{
+"id": 707,
+"section": "BOOSTER",
+"name": "打撃射撃アップ",
+"s_atk": 25,
+"r_atk": 25
+},
+{
+"id": 708,
+"section": "BOOSTER",
+"name": "打撃法撃アップ",
+"s_atk": 25,
+"t_atk": 25
+},
+{
+"id": 709,
+"section": "BOOSTER",
+"name": "打撃技量アップ",
+"s_atk": 25,
+"dex": 30
+},
+{
+"id": 710,
+"section": "BOOSTER",
+"name": "射撃法撃アップ",
+"r_atk": 25,
+"t_atk": 25
+},
+{
+"id": 711,
+"section": "BOOSTER",
+"name": "射撃技量アップ",
+"r_atk": 25,
+"dex": 30
+},
+{
+"id": 712,
+"section": "BOOSTER",
+"name": "法撃技量アップ",
+"t_atk": 25,
+"dex": 30
+},
+{
+"id": 713,
+"section": "BOOSTER",
+"name": "トウオウ・ソール",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 714,
+"section": "BOOSTER",
+"name": "アクト・ジ・ソール",
+"s_atk": 35,
+"pp": 3
+},
+{
+"id": 715,
+"section": "BOOSTER",
+"name": "ティル・ジ・ソール",
+"r_atk": 35,
+"pp": 3
+},
+{
+"id": 716,
+"section": "BOOSTER",
+"name": "マギー・ジ・ソール",
+"t_atk": 35,
+"pp": 3
+},
+{
+"id": 717,
+"section": "BOOSTER",
+"name": "ミューテーションⅡ",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"hp": 15
+},
+{
+"id": 718,
+"section": "BOOSTER",
+"name": "ペットスタミナⅠ",
+"hp": 10
+},
+{
+"id": 719,
+"section": "BOOSTER",
+"name": "ペットスタミナⅡ",
+"hp": 15
+},
+{
+"id": 720,
+"section": "BOOSTER",
+"name": "ペットスタミナⅢ",
+"hp": 25
+},
+{
+"id": 721,
+"section": "BOOSTER",
+"name": "ペットボディⅠ",
+"s_def": 100
+},
+{
+"id": 722,
+"section": "BOOSTER",
+"name": "ペットボディⅡ",
+"s_def": 120
+},
+{
+"id": 723,
+"section": "BOOSTER",
+"name": "ペットボディⅢ",
+"s_def": 130
+},
+{
+"id": 724,
+"section": "BOOSTER",
+"name": "ペットリアクトⅠ",
+"r_def": 100
+},
+{
+"id": 725,
+"section": "BOOSTER",
+"name": "ペットリアクトⅡ",
+"r_def": 120
+},
+{
+"id": 726,
+"section": "BOOSTER",
+"name": "ペットリアクトⅢ",
+"r_def": 130
+},
+{
+"id": 727,
+"section": "BOOSTER",
+"name": "ペットマインドⅠ",
+"t_def": 100
+},
+{
+"id": 728,
+"section": "BOOSTER",
+"name": "ペットマインドⅡ",
+"t_def": 120
+},
+{
+"id": 729,
+"section": "BOOSTER",
+"name": "ペットマインドⅢ",
+"t_def": 130
+},
+{
+"id": 730,
+"section": "BOOSTER",
+"name": "ヤマト・ファクター",
+"s_atk": 10,
+"r_atk": 20,
+"t_atk": 10,
+"hp": 20,
+"pp": 1
+},
+{
+"id": 731,
+"section": "BOOSTER",
+"name": "オフェンス・ブースト",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"pp": 1,
+"dex": 25
+},
+{
+"id": 732,
+"section": "BOOSTER",
+"name": "ディフェンス・ブースト",
+"s_def": 25,
+"r_def": 25,
+"t_def": 25,
+"hp": 55,
+"pp": 1
+},
+{
+"id": 733,
+"section": "BOOSTER",
+"name": "アタックレセプター",
+"s_atk": 5,
+"r_atk": 5,
+"t_atk": 5,
+"s_def": 5,
+"r_def": 5,
+"t_def": 5,
+"dex": 5
+},
+{
+"id": 734,
+"section": "BOOSTER",
+"name": "ガードレセプター",
+"s_atk": 5,
+"r_atk": 5,
+"t_atk": 5,
+"s_def": 5,
+"r_def": 5,
+"t_def": 5,
+"dex": 5
+},
+{
+"id": 735,
+"section": "BOOSTER",
+"name": "フォトンレセプター",
+"s_atk": 5,
+"r_atk": 5,
+"t_atk": 5,
+"s_def": 5,
+"r_def": 5,
+"t_def": 5,
+"dex": 5
+},
+{
+"id": 736,
+"section": "BOOSTER",
+"name": "ドゥームブレイクⅠ",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"pp": 2
+},
+{
+"id": 737,
+"section": "BOOSTER",
+"name": "テノラ・ブースト",
+"s_atk": 35
+},
+{
+"id": 738,
+"section": "BOOSTER",
+"name": "ＧＲＭ・ブースト",
+"r_atk": 35
+},
+{
+"id": 739,
+"section": "BOOSTER",
+"name": "ヨウメイ・ブースト",
+"t_atk": 35
+},
+{
+"id": 740,
+"section": "BOOSTER",
+"name": "フルベガス・ソール",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15
+},
+{
+"id": 741,
+"section": "BOOSTER",
+"name": "エクストレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 742,
+"section": "BOOSTER",
+"name": "エレガント・パワー",
+"s_atk": 40,
+"pp": 4
+},
+{
+"id": 743,
+"section": "BOOSTER",
+"name": "エレガント・シュート",
+"r_atk": 40,
+"pp": 4
+},
+{
+"id": 744,
+"section": "BOOSTER",
+"name": "エレガント・テクニック",
+"t_atk": 40,
+"pp": 4
+},
+{
+"id": 745,
+"section": "BOOSTER",
+"name": "エレガント・スタミナ",
+"hp": 70,
+"pp": 4
+},
+{
+"id": 746,
+"section": "BOOSTER",
+"name": "ネッキー・スマイル",
+"s_atk": 5,
+"r_atk": 5,
+"t_atk": 5,
+"pp": 2
+},
+{
+"id": 747,
+"section": "BOOSTER",
+"name": "打射法撃ＰＰアップ",
+"s_atk": 20,
+"r_atk": 20,
+"t_atk": 20,
+"pp": 3
+},
+{
+"id": 748,
+"section": "BOOSTER",
+"name": "イザネカヅチ・ソール",
+"s_atk": 20,
+"r_atk": 20,
+"t_atk": 20,
+"pp": 2
+},
+{
+"id": 749,
+"section": "BOOSTER",
+"name": "マザー・ファクター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 20,
+"hp": 20,
+"pp": 1
+},
+{
+"id": 750,
+"section": "BOOSTER",
+"name": "エスカード・ソール",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"dex": 20
+},
+{
+"id": 751,
+"section": "BOOSTER",
+"name": "センテンス・パワー",
+"s_atk": 20,
+"pp": 4
+},
+{
+"id": 752,
+"section": "BOOSTER",
+"name": "センテンス・シュート",
+"r_atk": 20,
+"pp": 4
+},
+{
+"id": 753,
+"section": "BOOSTER",
+"name": "センテンス・テクニック",
+"t_atk": 20,
+"pp": 4
+},
+{
+"id": 754,
+"section": "BOOSTER",
+"name": "バトルソードⅠ",
+"hp": 100
+},
+{
+"id": 755,
+"section": "BOOSTER",
+"name": "バトルソードⅡ",
+"hp": 175
+},
+{
+"id": 756,
+"section": "BOOSTER",
+"name": "バトルソードⅢ",
+"hp": 250
+},
+{
+"id": 757,
+"section": "BOOSTER",
+"name": "バトルライフルⅠ"
+},
+{
+"id": 758,
+"section": "BOOSTER",
+"name": "バトルライフルⅡ",
+"hp": 50
+},
+{
+"id": 759,
+"section": "BOOSTER",
+"name": "バトルライフルⅢ",
+"hp": 100
+},
+{
+"id": 760,
+"section": "BOOSTER",
+"name": "バトルロッドⅠ"
+},
+{
+"id": 761,
+"section": "BOOSTER",
+"name": "バトルロッドⅡ",
+"hp": 30
+},
+{
+"id": 762,
+"section": "BOOSTER",
+"name": "バトルロッドⅢ",
+"hp": 70
+},
+{
+"id": 763,
+"section": "BOOSTER",
+"name": "バトルパルチザンⅠ",
+"hp": 100
+},
+{
+"id": 764,
+"section": "BOOSTER",
+"name": "バトルパルチザンⅡ",
+"hp": 175
+},
+{
+"id": 765,
+"section": "BOOSTER",
+"name": "バトルパルチザンⅢ",
+"hp": 250
+},
+{
+"id": 766,
+"section": "BOOSTER",
+"name": "バトルＴマシンガンⅠ"
+},
+{
+"id": 767,
+"section": "BOOSTER",
+"name": "バトルＴマシンガンⅡ",
+"hp": 50
+},
+{
+"id": 768,
+"section": "BOOSTER",
+"name": "バトルＴマシンガンⅢ",
+"hp": 100
+},
+{
+"id": 769,
+"section": "BOOSTER",
+"name": "バトルボウⅠ"
+},
+{
+"id": 770,
+"section": "BOOSTER",
+"name": "バトルボウⅡ",
+"hp": 50
+},
+{
+"id": 771,
+"section": "BOOSTER",
+"name": "バトルボウⅢ",
+"hp": 100
+},
+{
+"id": 772,
+"section": "BOOSTER",
+"name": "poka19"
+},
+{
+"id": 773,
+"section": "BOOSTER",
+"name": "マークレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 774,
+"section": "BOOSTER",
+"name": "フレイズレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 775,
+"section": "BOOSTER",
+"name": "センテンスレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 776,
+"section": "BOOSTER",
+"name": "センテンス・トリプル",
+"s_atk": 30,
+"r_atk": 30,
+"t_atk": 30
+},
+{
+"id": 777,
+"section": "BOOSTER",
+"name": "デウス・ファクター",
+"s_atk": 20,
+"r_atk": 10,
+"t_atk": 10,
+"hp": 20,
+"pp": 1
+},
+{
+"id": 778,
+"section": "BOOSTER",
+"name": "ファクター・カタリスト",
+"hp": 10,
+"pp": 1
+},
+{
+"id": 779,
+"section": "BOOSTER",
+"name": "エーテル・ソール",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"s_def": 15,
+"r_def": 15,
+"t_def": 15,
+"hp": 15,
+"pp": 2,
+"dex": 15
+},
+{
+"id": 780,
+"section": "BOOSTER",
+"name": "エーテル・ファクター",
+"s_atk": 30,
+"r_atk": 30,
+"t_atk": 30,
+"s_def": 30,
+"r_def": 30,
+"t_def": 30,
+"hp": 10,
+"pp": 6,
+"dex": 30
+},
+{
+"id": 781,
+"section": "BOOSTER",
+"name": "パワーⅥ",
+"s_atk": 45
+},
+{
+"id": 782,
+"section": "BOOSTER",
+"name": "シュートⅥ",
+"r_atk": 45
+},
+{
+"id": 783,
+"section": "BOOSTER",
+"name": "テクニックⅥ",
+"t_atk": 45
+},
+{
+"id": 784,
+"section": "BOOSTER",
+"name": "オメガ・レヴリー",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"hp": 20,
+"pp": 1
+},
+{
+"id": 785,
+"section": "BOOSTER",
+"name": "ファーブラ・ソール",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"hp": 20
+},
+{
+"id": 786,
+"section": "BOOSTER",
+"name": "アレス・ジ・ソール",
+"s_atk": 25,
+"r_atk": 25,
+"t_atk": 25,
+"hp": 35,
+"pp": 3
+},
+{
+"id": 787,
+"section": "BOOSTER",
+"name": "スピリタⅥ",
+"pp": 7
+},
+{
+"id": 788,
+"section": "BOOSTER",
+"name": "センテンス・アルマ",
+"s_atk": 20,
+"hp": 20,
+"pp": 3
+},
+{
+"id": 789,
+"section": "BOOSTER",
+"name": "センテンス・ティロ",
+"r_atk": 20,
+"hp": 20,
+"pp": 3
+},
+{
+"id": 790,
+"section": "BOOSTER",
+"name": "センテンス・マギア",
+"t_atk": 20,
+"hp": 20,
+"pp": 3
+},
+{
+"id": 791,
+"section": "BOOSTER",
+"name": "アクス・ＭＡＸ",
+"s_atk": 25,
+"r_atk": 25,
+"t_atk": 25
+},
+{
+"id": 792,
+"section": "BOOSTER",
+"name": "エルダー・レヴリー",
+"s_atk": 40,
+"r_atk": 20,
+"t_atk": 20,
+"pp": -2
+},
+{
+"id": 793,
+"section": "BOOSTER",
+"name": "ファクターレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 794,
+"section": "BOOSTER",
+"name": "バトルＴダガーⅠ",
+"hp": 25
+},
+{
+"id": 795,
+"section": "BOOSTER",
+"name": "バトルＴダガーⅡ",
+"hp": 50
+},
+{
+"id": 796,
+"section": "BOOSTER",
+"name": "バトルＴダガーⅢ",
+"hp": 100
+},
+{
+"id": 797,
+"section": "BOOSTER",
+"name": "バトルＤブレードⅠ",
+"hp": 25
+},
+{
+"id": 798,
+"section": "BOOSTER",
+"name": "バトルＤブレードⅡ",
+"hp": 50
+},
+{
+"id": 799,
+"section": "BOOSTER",
+"name": "バトルＤブレードⅢ",
+"hp": 100
+},
+{
+"id": 800,
+"section": "BOOSTER",
+"name": "バトルタリスⅠ",
+"hp": 30
+},
+{
+"id": 801,
+"section": "BOOSTER",
+"name": "バトルタリスⅡ",
+"hp": 70
+},
+{
+"id": 802,
+"section": "BOOSTER",
+"name": "バトルタリスⅢ",
+"hp": 100
+},
+{
+"id": 803,
+"section": "BOOSTER",
+"name": "イストリア・ソール",
+"s_def": 25,
+"r_def": 25,
+"t_def": 25,
+"hp": 30,
+"pp": 2
+},
+{
+"id": 804,
+"section": "BOOSTER",
+"name": "グレース・パワー",
+"s_atk": 50,
+"pp": 5
+},
+{
+"id": 805,
+"section": "BOOSTER",
+"name": "グレース・シュート",
+"r_atk": 50,
+"pp": 5
+},
+{
+"id": 806,
+"section": "BOOSTER",
+"name": "グレース・テクニック",
+"t_atk": 50,
+"pp": 5
+},
+{
+"id": 807,
+"section": "BOOSTER",
+"name": "グレース・スタミナ",
+"hp": 80,
+"pp": 5
+},
+{
+"id": 808,
+"section": "BOOSTER",
+"name": "ルーサー・レヴリー",
+"s_atk": 20,
+"r_atk": 20,
+"t_atk": 40,
+"hp": -20
+},
+{
+"id": 809,
+"section": "BOOSTER",
+"name": "アプレジナ・レヴリー",
+"s_atk": 20,
+"r_atk": 40,
+"t_atk": 20,
+"hp": -10,
+"pp": -1
+},
+{
+"id": 810,
+"section": "BOOSTER",
+"name": "レッサーパワーⅠ",
+"s_atk": 5
+},
+{
+"id": 811,
+"section": "BOOSTER",
+"name": "レッサーパワーⅡ",
+"s_atk": 15
+},
+{
+"id": 812,
+"section": "BOOSTER",
+"name": "レッサーパワーⅢ",
+"s_atk": 25
+},
+{
+"id": 813,
+"section": "BOOSTER",
+"name": "レッサーパワーⅣ",
+"s_atk": 30
+},
+{
+"id": 814,
+"section": "BOOSTER",
+"name": "レッサーパワーⅤ",
+"s_atk": 35
+},
+{
+"id": 815,
+"section": "BOOSTER",
+"name": "レッサーシュートⅠ",
+"r_atk": 5
+},
+{
+"id": 816,
+"section": "BOOSTER",
+"name": "レッサーシュートⅡ",
+"r_atk": 15
+},
+{
+"id": 817,
+"section": "BOOSTER",
+"name": "レッサーシュートⅢ",
+"r_atk": 25
+},
+{
+"id": 818,
+"section": "BOOSTER",
+"name": "レッサーシュートⅣ",
+"r_atk": 30
+},
+{
+"id": 819,
+"section": "BOOSTER",
+"name": "レッサーシュートⅤ",
+"r_atk": 35
+},
+{
+"id": 820,
+"section": "BOOSTER",
+"name": "レッサーテクニックⅠ",
+"t_atk": 5
+},
+{
+"id": 821,
+"section": "BOOSTER",
+"name": "レッサーテクニックⅡ",
+"t_atk": 15
+},
+{
+"id": 822,
+"section": "BOOSTER",
+"name": "レッサーテクニックⅢ",
+"t_atk": 25
+},
+{
+"id": 823,
+"section": "BOOSTER",
+"name": "レッサーテクニックⅣ",
+"t_atk": 30
+},
+{
+"id": 824,
+"section": "BOOSTER",
+"name": "レッサーテクニックⅤ",
+"t_atk": 35
+},
+{
+"id": 825,
+"section": "BOOSTER",
+"name": "レッサースタミナⅠ",
+"hp": 15
+},
+{
+"id": 826,
+"section": "BOOSTER",
+"name": "レッサースタミナⅡ",
+"hp": 35
+},
+{
+"id": 827,
+"section": "BOOSTER",
+"name": "レッサースタミナⅢ",
+"hp": 45
+},
+{
+"id": 828,
+"section": "BOOSTER",
+"name": "レッサースタミナⅣ",
+"hp": 55
+},
+{
+"id": 829,
+"section": "BOOSTER",
+"name": "レッサースタミナⅤ",
+"hp": 65
+},
+{
+"id": 830,
+"section": "BOOSTER",
+"name": "レッサースピリタⅠ",
+"pp": 1
+},
+{
+"id": 831,
+"section": "BOOSTER",
+"name": "レッサースピリタⅡ",
+"pp": 2
+},
+{
+"id": 832,
+"section": "BOOSTER",
+"name": "レッサースピリタⅢ",
+"pp": 3
+},
+{
+"id": 833,
+"section": "BOOSTER",
+"name": "レッサースピリタⅣ",
+"pp": 4
+},
+{
+"id": 834,
+"section": "BOOSTER",
+"name": "レッサースピリタⅤ",
+"pp": 5
+},
+{
+"id": 835,
+"section": "BOOSTER",
+"name": "ＥＶ・パワーＨＰ",
+"s_atk": 35,
+"hp": 60
+},
+{
+"id": 836,
+"section": "BOOSTER",
+"name": "ＥＶ・パワーＰＰ",
+"s_atk": 35,
+"pp": 4
+},
+{
+"id": 837,
+"section": "BOOSTER",
+"name": "ＥＶ・シュートＨＰ",
+"r_atk": 35,
+"hp": 60
+},
+{
+"id": 838,
+"section": "BOOSTER",
+"name": "ＥＶ・シュートＰＰ",
+"r_atk": 35,
+"pp": 4
+},
+{
+"id": 839,
+"section": "BOOSTER",
+"name": "ＥＶ・テクニックＨＰ",
+"t_atk": 35,
+"hp": 60
+},
+{
+"id": 840,
+"section": "BOOSTER",
+"name": "ＥＶ・テクニックＰＰ",
+"t_atk": 35,
+"pp": 4
+},
+{
+"id": 841,
+"section": "BOOSTER",
+"name": "ダブル・レヴリー",
+"s_atk": -20,
+"r_atk": -20,
+"t_atk": -20,
+"hp": 50,
+"pp": 5
+},
+{
+"id": 842,
+"section": "BOOSTER",
+"name": "バトルナックルⅠ",
+"hp": 100
+},
+{
+"id": 843,
+"section": "BOOSTER",
+"name": "バトルナックルⅡ",
+"hp": 175
+},
+{
+"id": 844,
+"section": "BOOSTER",
+"name": "バトルナックルⅢ",
+"hp": 250
+},
+{
+"id": 845,
+"section": "BOOSTER",
+"name": "ドゥームブレイクⅡ",
+"s_atk": 25,
+"r_atk": 25,
+"t_atk": 25,
+"pp": 3
+},
+{
+"id": 846,
+"section": "BOOSTER",
+"name": "ペルソナ・レヴリー",
+"s_atk": 40,
+"r_atk": 40,
+"t_atk": 40,
+"s_def": -20,
+"r_def": -20,
+"t_def": -20
+},
+{
+"id": 847,
+"section": "BOOSTER",
+"name": "レヴリー・カタリスト",
+"hp": 10,
+"pp": 1
+},
+{
+"id": 848,
+"section": "BOOSTER",
+"name": "オメガ・メモリア",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"s_def": 15,
+"r_def": 15,
+"t_def": 15,
+"hp": 15,
+"pp": 2,
+"dex": 15
+},
+{
+"id": 849,
+"section": "BOOSTER",
+"name": "マナ・レヴリー",
+"s_atk": 50,
+"r_atk": 50,
+"t_atk": 50,
+"hp": 20,
+"pp": 4
+},
+{
+"id": 850,
+"section": "BOOSTER",
+"name": "イクスアクト・ソール",
+"s_atk": 30,
+"s_def": 20,
+"r_def": 20,
+"t_def": 20,
+"hp": 20,
+"pp": 2
+},
+{
+"id": 851,
+"section": "BOOSTER",
+"name": "イクスティル・ソール",
+"r_atk": 30,
+"s_def": 20,
+"r_def": 20,
+"t_def": 20,
+"hp": 20,
+"pp": 2
+},
+{
+"id": 852,
+"section": "BOOSTER",
+"name": "イクスマギー・ソール",
+"t_atk": 30,
+"s_def": 20,
+"r_def": 20,
+"t_def": 20,
+"hp": 20,
+"pp": 2
+},
+{
+"id": 853,
+"section": "BOOSTER",
+"name": "イクスアレス・ソール",
+"s_atk": 20,
+"r_atk": 20,
+"t_atk": 20,
+"s_def": 20,
+"r_def": 20,
+"t_def": 20,
+"hp": 50,
+"pp": 2
+},
+{
+"id": 854,
+"section": "BOOSTER",
+"name": "イクシード・エナジー",
+"s_atk": 50,
+"r_atk": 50,
+"t_atk": 50,
+"s_def": 20,
+"r_def": 20,
+"t_def": 20,
+"hp": 20,
+"pp": 5,
+"dex": 20
+},
+{
+"id": 855,
+"section": "BOOSTER",
+"name": "アタック・ブースト",
+"s_atk": 25,
+"r_atk": 25,
+"t_atk": 25,
+"pp": 3,
+"dex": 40
+},
+{
+"id": 856,
+"section": "BOOSTER",
+"name": "ガード・ブースト",
+"s_def": 35,
+"r_def": 35,
+"t_def": 35,
+"hp": 75,
+"pp": 3
+},
+{
+"id": 857,
+"section": "BOOSTER",
+"name": "ディバイン・ウィル",
+"s_atk": 20,
+"r_atk": 20,
+"t_atk": 20,
+"pp": 5
+},
+{
+"id": 858,
+"section": "BOOSTER",
+"name": "ディバイン・オーダー",
+"s_atk": 50,
+"r_atk": 50,
+"t_atk": 50,
+"hp": 20,
+"pp": 10
+},
+{
+"id": 859,
+"section": "BOOSTER",
+"name": "クラックⅠ",
+"s_atk": 3,
+"r_atk": 3,
+"t_atk": 3,
+"s_def": 5,
+"r_def": 5,
+"t_def": 5,
+"hp": 5,
+"pp": 1
+},
+{
+"id": 860,
+"section": "BOOSTER",
+"name": "クラックⅡ",
+"s_atk": 5,
+"r_atk": 5,
+"t_atk": 5,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"hp": 10,
+"pp": 1
+},
+{
+"id": 861,
+"section": "BOOSTER",
+"name": "クラックⅢ",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 15,
+"r_def": 15,
+"t_def": 15,
+"hp": 15,
+"pp": 1
+},
+{
+"id": 862,
+"section": "BOOSTER",
+"name": "クラックⅣ",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"s_def": 30,
+"r_def": 30,
+"t_def": 30,
+"hp": 30,
+"pp": 2
+},
+{
+"id": 863,
+"section": "BOOSTER",
+"name": "クラックⅤ",
+"s_atk": 30,
+"r_atk": 30,
+"t_atk": 30,
+"s_def": 50,
+"r_def": 50,
+"t_def": 50,
+"hp": 50,
+"pp": 2
+},
+{
+"id": 864,
+"section": "BOOSTER",
+"name": "グランド・スタミナ",
+"hp": 100,
+"pp": 6
+},
+{
+"id": 865,
+"section": "BOOSTER",
+"name": "グランド・スピリタ",
+"pp": 15
+},
+{
+"id": 866,
+"section": "BOOSTER",
+"name": "グランド・パワー",
+"s_atk": 60,
+"hp": 20,
+"pp": 5
+},
+{
+"id": 867,
+"section": "BOOSTER",
+"name": "グランド・シュート",
+"r_atk": 60,
+"hp": 20,
+"pp": 5
+},
+{
+"id": 868,
+"section": "BOOSTER",
+"name": "グランド・テクニック",
+"t_atk": 60,
+"hp": 20,
+"pp": 5
+},
+{
+"id": 869,
+"section": "BOOSTER",
+"name": "カタリストレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 870,
+"section": "BOOSTER",
+"name": "アンジュール・グレア",
+"s_atk": 30,
+"s_def": 40,
+"r_def": 20,
+"t_def": 20
+},
+{
+"id": 871,
+"section": "BOOSTER",
+"name": "ベルージュ・グレア",
+"r_atk": 30,
+"s_def": 20,
+"r_def": 40,
+"t_def": 20
+},
+{
+"id": 872,
+"section": "BOOSTER",
+"name": "ドゥミヌス・グレア",
+"t_atk": 30,
+"s_def": 20,
+"r_def": 20,
+"t_def": 40
+},
+{
+"id": 873,
+"section": "BOOSTER",
+"name": "スタミナⅥ",
+"hp": 80
+},
+{
+"id": 874,
+"section": "BOOSTER",
+"name": "フォードルス・グレア",
+"s_def": 35,
+"r_def": 35,
+"t_def": 35,
+"hp": 40,
+"pp": 4
+},
+{
+"id": 875,
+"section": "BOOSTER",
+"name": "ドゥームブレイクⅢ",
+"s_atk": 30,
+"r_atk": 30,
+"t_atk": 30,
+"pp": 4
+},
+{
+"id": 876,
+"section": "BOOSTER",
+"name": "ディバインレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 877,
+"section": "BOOSTER",
+"name": "イクシードレセプター",
+"s_atk": 10,
+"r_atk": 10,
+"t_atk": 10,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"dex": 10
+},
+{
+"id": 878,
+"section": "BOOSTER",
+"name": "バトルブーツⅠ"
+},
+{
+"id": 879,
+"section": "BOOSTER",
+"name": "バトルブーツⅡ",
+"hp": 10
+},
+{
+"id": 880,
+"section": "BOOSTER",
+"name": "バトルブーツⅢ",
+"hp": 30
+},
+{
+"id": 881,
+"section": "BOOSTER",
+"name": "エクゼクル・グレア",
+"s_atk": 20,
+"r_atk": 20,
+"t_atk": 20,
+"s_def": 50,
+"r_def": 50,
+"t_def": 50
+},
+{
+"id": 882,
+"section": "BOOSTER",
+"name": "ミトラ・グレア",
+"s_atk": 30,
+"r_atk": 30,
+"s_def": 20,
+"r_def": 20,
+"t_def": 20,
+"hp": 20,
+"pp": 2
+},
+{
+"id": 883,
+"section": "BOOSTER",
+"name": "ヴァルナ・グレア",
+"s_atk": 30,
+"t_atk": 30,
+"s_def": 20,
+"r_def": 20,
+"t_def": 20,
+"hp": 20,
+"pp": 2
+},
+{
+"id": 884,
+"section": "BOOSTER",
+"name": "シバ・グレア",
+"r_atk": 30,
+"t_atk": 30,
+"s_def": 20,
+"r_def": 20,
+"t_def": 20,
+"hp": 20,
+"pp": 2
+},
+{
+"id": 885,
+"section": "BOOSTER",
+"name": "オリジン・グレア",
+"s_atk": 30,
+"r_atk": 30,
+"t_atk": 30,
+"s_def": 10,
+"r_def": 10,
+"t_def": 10,
+"hp": 20,
+"pp": 2
+},
+{
+"id": 886,
+"section": "BOOSTER",
+"name": "フォトナー・グレア",
+"s_atk": 15,
+"r_atk": 15,
+"t_atk": 15,
+"s_def": 15,
+"r_def": 15,
+"t_def": 15,
+"hp": 15,
+"pp": 2,
+"dex": 15
+},
+{
+"id": 887,
+"section": "BOOSTER",
+"name": "グレア・カタリスト",
+"hp": 10,
+"pp": 1
+},
+{
+"id": 888,
+"section": "BOOSTER",
+"name": "アブソリュート・グレア",
+"s_atk": 40,
+"r_atk": 40,
+"t_atk": 40,
+"s_def": 40,
+"r_def": 40,
+"t_def": 40,
+"hp": 30,
+"pp": 3,
+"dex": 40
+},
+{
+"id": 889,
+"section": "BOOSTER",
+"name": "ガーディアン・ソール",
+"s_atk": 70,
+"r_atk": 70,
+"t_atk": 70,
+"s_def": 70,
+"r_def": 70,
+"t_def": 70,
+"hp": 70,
+"pp": 7,
+"dex": 70
+},
+{
+"id": 1024,
+"section": "ABNORMAL",
+"name": "バーンⅠ"
+},
+{
+"id": 1025,
+"section": "ABNORMAL",
+"name": "バーンⅡ"
+},
+{
+"id": 1026,
+"section": "ABNORMAL",
+"name": "バーンⅢ"
+},
+{
+"id": 1027,
+"section": "ABNORMAL",
+"name": "バーンⅣ"
+},
+{
+"id": 1028,
+"section": "ABNORMAL",
+"name": "バーンⅤ"
+},
+{
+"id": 1029,
+"section": "ABNORMAL",
+"name": "フリーズⅠ"
+},
+{
+"id": 1030,
+"section": "ABNORMAL",
+"name": "フリーズⅡ"
+},
+{
+"id": 1031,
+"section": "ABNORMAL",
+"name": "フリーズⅢ"
+},
+{
+"id": 1032,
+"section": "ABNORMAL",
+"name": "フリーズⅣ"
+},
+{
+"id": 1033,
+"section": "ABNORMAL",
+"name": "フリーズⅤ"
+},
+{
+"id": 1034,
+"section": "ABNORMAL",
+"name": "ショックⅠ"
+},
+{
+"id": 1035,
+"section": "ABNORMAL",
+"name": "ショックⅡ"
+},
+{
+"id": 1036,
+"section": "ABNORMAL",
+"name": "ショックⅢ"
+},
+{
+"id": 1037,
+"section": "ABNORMAL",
+"name": "ショックⅣ"
+},
+{
+"id": 1038,
+"section": "ABNORMAL",
+"name": "ショックⅤ"
+},
+{
+"id": 1039,
+"section": "ABNORMAL",
+"name": "ミラージュⅠ"
+},
+{
+"id": 1040,
+"section": "ABNORMAL",
+"name": "ミラージュⅡ"
+},
+{
+"id": 1041,
+"section": "ABNORMAL",
+"name": "ミラージュⅢ"
+},
+{
+"id": 1042,
+"section": "ABNORMAL",
+"name": "ミラージュⅣ"
+},
+{
+"id": 1043,
+"section": "ABNORMAL",
+"name": "ミラージュⅤ"
+},
+{
+"id": 1044,
+"section": "ABNORMAL",
+"name": "ポイズンⅠ"
+},
+{
+"id": 1045,
+"section": "ABNORMAL",
+"name": "ポイズンⅡ"
+},
+{
+"id": 1046,
+"section": "ABNORMAL",
+"name": "ポイズンⅢ"
+},
+{
+"id": 1047,
+"section": "ABNORMAL",
+"name": "ポイズンⅣ"
+},
+{
+"id": 1048,
+"section": "ABNORMAL",
+"name": "ポイズンⅤ"
+},
+{
+"id": 1049,
+"section": "ABNORMAL",
+"name": "パニックⅠ"
+},
+{
+"id": 1050,
+"section": "ABNORMAL",
+"name": "パニックⅡ"
+},
+{
+"id": 1051,
+"section": "ABNORMAL",
+"name": "パニックⅢ"
+},
+{
+"id": 1052,
+"section": "ABNORMAL",
+"name": "パニックⅣ"
+},
+{
+"id": 1053,
+"section": "ABNORMAL",
+"name": "パニックⅤ"
+},
+{
+"id": 1054,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー30"
+},
+{
+"id": 1055,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー31"
+},
+{
+"id": 1056,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー32"
+},
+{
+"id": 1057,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー33"
+},
+{
+"id": 1058,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー34"
+},
+{
+"id": 1059,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー35"
+},
+{
+"id": 1060,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー36"
+},
+{
+"id": 1061,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー37"
+},
+{
+"id": 1062,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー38"
+},
+{
+"id": 1063,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー39"
+},
+{
+"id": 1064,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー40"
+},
+{
+"id": 1065,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー41"
+},
+{
+"id": 1066,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー42"
+},
+{
+"id": 1067,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー43"
+},
+{
+"id": 1068,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー44"
+},
+{
+"id": 1069,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー45"
+},
+{
+"id": 1070,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー46"
+},
+{
+"id": 1071,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー47"
+},
+{
+"id": 1072,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー48"
+},
+{
+"id": 1073,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー49"
+},
+{
+"id": 1074,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー50"
+},
+{
+"id": 1075,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー51"
+},
+{
+"id": 1076,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー52"
+},
+{
+"id": 1077,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー53"
+},
+{
+"id": 1078,
+"section": "ABNORMAL",
+"name": "ENT_ABNダミー54"
+},
+{
+"id": 1536,
+"section": "RESIST",
+"name": "ブロウレジストⅠ"
+},
+{
+"id": 1537,
+"section": "RESIST",
+"name": "ブロウレジストⅡ"
+},
+{
+"id": 1538,
+"section": "RESIST",
+"name": "ブロウレジストⅢ"
+},
+{
+"id": 1539,
+"section": "RESIST",
+"name": "ブロウレジストⅣ"
+},
+{
+"id": 1540,
+"section": "RESIST",
+"name": "ブロウレジストⅤ"
+},
+{
+"id": 1541,
+"section": "RESIST",
+"name": "ショットレジストⅠ"
+},
+{
+"id": 1542,
+"section": "RESIST",
+"name": "ショットレジストⅡ"
+},
+{
+"id": 1543,
+"section": "RESIST",
+"name": "ショットレジストⅢ"
+},
+{
+"id": 1544,
+"section": "RESIST",
+"name": "ショットレジストⅣ"
+},
+{
+"id": 1545,
+"section": "RESIST",
+"name": "ショットレジストⅤ"
+},
+{
+"id": 1546,
+"section": "RESIST",
+"name": "マインドレジストⅠ"
+},
+{
+"id": 1547,
+"section": "RESIST",
+"name": "マインドレジストⅡ"
+},
+{
+"id": 1548,
+"section": "RESIST",
+"name": "マインドレジストⅢ"
+},
+{
+"id": 1549,
+"section": "RESIST",
+"name": "マインドレジストⅣ"
+},
+{
+"id": 1550,
+"section": "RESIST",
+"name": "マインドレジストⅤ"
+},
+{
+"id": 1551,
+"section": "RESIST",
+"name": "フレイムレジストⅠ"
+},
+{
+"id": 1552,
+"section": "RESIST",
+"name": "フレイムレジストⅡ"
+},
+{
+"id": 1553,
+"section": "RESIST",
+"name": "フレイムレジストⅢ"
+},
+{
+"id": 1554,
+"section": "RESIST",
+"name": "フレイムレジストⅣ"
+},
+{
+"id": 1555,
+"section": "RESIST",
+"name": "フレイムレジストⅤ"
+},
+{
+"id": 1556,
+"section": "RESIST",
+"name": "アイスレジストⅠ"
+},
+{
+"id": 1557,
+"section": "RESIST",
+"name": "アイスレジストⅡ"
+},
+{
+"id": 1558,
+"section": "RESIST",
+"name": "アイスレジストⅢ"
+},
+{
+"id": 1559,
+"section": "RESIST",
+"name": "アイスレジストⅣ"
+},
+{
+"id": 1560,
+"section": "RESIST",
+"name": "アイスレジストⅤ"
+},
+{
+"id": 1561,
+"section": "RESIST",
+"name": "ショックレジストⅠ"
+},
+{
+"id": 1562,
+"section": "RESIST",
+"name": "ショックレジストⅡ"
+},
+{
+"id": 1563,
+"section": "RESIST",
+"name": "ショックレジストⅢ"
+},
+{
+"id": 1564,
+"section": "RESIST",
+"name": "ショックレジストⅣ"
+},
+{
+"id": 1565,
+"section": "RESIST",
+"name": "ショックレジストⅤ"
+},
+{
+"id": 1566,
+"section": "RESIST",
+"name": "ウィンドレジストⅠ"
+},
+{
+"id": 1567,
+"section": "RESIST",
+"name": "ウィンドレジストⅡ"
+},
+{
+"id": 1568,
+"section": "RESIST",
+"name": "ウィンドレジストⅢ"
+},
+{
+"id": 1569,
+"section": "RESIST",
+"name": "ウィンドレジストⅣ"
+},
+{
+"id": 1570,
+"section": "RESIST",
+"name": "ウィンドレジストⅤ"
+},
+{
+"id": 1571,
+"section": "RESIST",
+"name": "ライトレジストⅠ"
+},
+{
+"id": 1572,
+"section": "RESIST",
+"name": "ライトレジストⅡ"
+},
+{
+"id": 1573,
+"section": "RESIST",
+"name": "ライトレジストⅢ"
+},
+{
+"id": 1574,
+"section": "RESIST",
+"name": "ライトレジストⅣ"
+},
+{
+"id": 1575,
+"section": "RESIST",
+"name": "ライトレジストⅤ"
+},
+{
+"id": 1576,
+"section": "RESIST",
+"name": "グルームレジストⅠ"
+},
+{
+"id": 1577,
+"section": "RESIST",
+"name": "グルームレジストⅡ"
+},
+{
+"id": 1578,
+"section": "RESIST",
+"name": "グルームレジストⅢ"
+},
+{
+"id": 1579,
+"section": "RESIST",
+"name": "グルームレジストⅣ"
+},
+{
+"id": 1580,
+"section": "RESIST",
+"name": "グルームレジストⅤ"
+},
+{
+"id": 1581,
+"section": "RESIST",
+"name": "オールレジストⅠ"
+},
+{
+"id": 1582,
+"section": "RESIST",
+"name": "オールレジストⅡ"
+},
+{
+"id": 1583,
+"section": "RESIST",
+"name": "オールレジストⅢ"
+},
+{
+"id": 1584,
+"section": "RESIST",
+"name": "オールレジストⅣ"
+},
+{
+"id": 1585,
+"section": "RESIST",
+"name": "オールレジストⅤ"
+},
+{
+"id": 2048,
+"section": "SPECIAL",
+"name": "ENT_SPダミー0"
+},
+{
+"id": 2049,
+"section": "SPECIAL",
+"name": "ENT_SPダミー1"
+},
+{
+"id": 2050,
+"section": "SPECIAL",
+"name": "ENT_SPダミー2"
+},
+{
+"id": 2051,
+"section": "SPECIAL",
+"name": "ENT_SPダミー3"
+},
+{
+"id": 2052,
+"section": "SPECIAL",
+"name": "ENT_SPダミー4"
+},
+{
+"id": 2053,
+"section": "SPECIAL",
+"name": "ENT_SPダミー5"
+},
+{
+"id": 2054,
+"section": "SPECIAL",
+"name": "ENT_SPダミー6"
+},
+{
+"id": 2055,
+"section": "SPECIAL",
+"name": "ENT_SPダミー7"
+},
+{
+"id": 2056,
+"section": "SPECIAL",
+"name": "ENT_SPダミー8"
+},
+{
+"id": 2057,
+"section": "SPECIAL",
+"name": "ENT_SPダミー9"
+},
+{
+"id": 2058,
+"section": "SPECIAL",
+"name": "ENT_SPダミー10"
+},
+{
+"id": 2059,
+"section": "SPECIAL",
+"name": "ENT_SPダミー11"
+},
+{
+"id": 2060,
+"section": "SPECIAL",
+"name": "ENT_SPダミー12"
+},
+{
+"id": 2061,
+"section": "SPECIAL",
+"name": "ENT_SPダミー13"
+},
+{
+"id": 2062,
+"section": "SPECIAL",
+"name": "ENT_SPダミー14"
+},
+{
+"id": 2063,
+"section": "SPECIAL",
+"name": "ENT_SPダミー15"
+},
+{
+"id": 2064,
+"section": "SPECIAL",
+"name": "ENT_SPダミー16"
+},
+{
+"id": 2065,
+"section": "SPECIAL",
+"name": "ENT_SPダミー17"
+},
+{
+"id": 2066,
+"section": "SPECIAL",
+"name": "ENT_SPダミー18"
+},
+{
+"id": 2067,
+"section": "SPECIAL",
+"name": "ENT_SPダミー19"
+},
+{
+"id": 2068,
+"section": "SPECIAL",
+"name": "ENT_SPダミー20"
+},
+{
+"id": 2069,
+"section": "SPECIAL",
+"name": "ENT_SPダミー21"
+},
+{
+"id": 2070,
+"section": "SPECIAL",
+"name": "ENT_SPダミー22"
+},
+{
+"id": 2071,
+"section": "SPECIAL",
+"name": "ENT_SPダミー23"
+},
+{
+"id": 2072,
+"section": "SPECIAL",
+"name": "ENT_SPダミー24"
+},
+{
+"id": 2073,
+"section": "SPECIAL",
+"name": "ENT_SPダミー25"
+},
+{
+"id": 2074,
+"section": "SPECIAL",
+"name": "ENT_SPダミー26"
+},
+{
+"id": 2075,
+"section": "SPECIAL",
+"name": "ENT_SPダミー27"
+},
+{
+"id": 2076,
+"section": "SPECIAL",
+"name": "ENT_SPダミー28"
+},
+{
+"id": 2077,
+"section": "SPECIAL",
+"name": "ENT_SPダミー29"
+},
+{
+"id": 2078,
+"section": "SPECIAL",
+"name": "ENT_SPダミー30"
+},
+{
+"id": 2079,
+"section": "SPECIAL",
+"name": "ENT_SPダミー31"
+},
+{
+"id": 2080,
+"section": "SPECIAL",
+"name": "ENT_SPダミー32"
+},
+{
+"id": 2081,
+"section": "SPECIAL",
+"name": "ENT_SPダミー33"
+},
+{
+"id": 2082,
+"section": "SPECIAL",
+"name": "ENT_SPダミー34"
+},
+{
+"id": 2083,
+"section": "SPECIAL",
+"name": "ENT_SPダミー35"
+},
+{
+"id": 2084,
+"section": "SPECIAL",
+"name": "ENT_SPダミー36"
+},
+{
+"id": 2085,
+"section": "SPECIAL",
+"name": "ENT_SPダミー37"
+},
+{
+"id": 2086,
+"section": "SPECIAL",
+"name": "ENT_SPダミー38"
+},
+{
+"id": 2087,
+"section": "SPECIAL",
+"name": "ENT_SPダミー39"
+},
+{
+"id": 2088,
+"section": "SPECIAL",
+"name": "ENT_SPダミー40"
+},
+{
+"id": 2089,
+"section": "SPECIAL",
+"name": "ENT_SPダミー41"
+},
+{
+"id": 2090,
+"section": "SPECIAL",
+"name": "ENT_SPダミー42"
+},
+{
+"id": 2091,
+"section": "SPECIAL",
+"name": "ENT_SPダミー43"
+},
+{
+"id": 2092,
+"section": "SPECIAL",
+"name": "ENT_SPダミー44"
+},
+{
+"id": 2093,
+"section": "SPECIAL",
+"name": "ENT_SPダミー45"
+},
+{
+"id": 2094,
+"section": "SPECIAL",
+"name": "ENT_SPダミー46"
+},
+{
+"id": 2095,
+"section": "SPECIAL",
+"name": "ENT_SPダミー47"
+},
+{
+"id": 2096,
+"section": "SPECIAL",
+"name": "ENT_SPダミー48"
+},
+{
+"id": 2097,
+"section": "SPECIAL",
+"name": "ENT_SPダミー49"
+},
+{
+"id": 2098,
+"section": "SPECIAL",
+"name": "ENT_SPダミー50"
+},
+{
+"id": 2099,
+"section": "SPECIAL",
+"name": "ENT_SPダミー51"
+},
+{
+"id": 2100,
+"section": "SPECIAL",
+"name": "ENT_SPダミー52"
+},
+{
+"id": 2101,
+"section": "SPECIAL",
+"name": "ENT_SPダミー53"
+},
+{
+"id": 2102,
+"section": "SPECIAL",
+"name": "ENT_SPダミー54"
+},
+{
+"id": 2103,
+"section": "SPECIAL",
+"name": "ENT_SPダミー55"
+},
+{
+"id": 2104,
+"section": "SPECIAL",
+"name": "ENT_SPダミー56"
+},
+{
+"id": 2105,
+"section": "SPECIAL",
+"name": "ENT_SPダミー57"
+},
+{
+"id": 2106,
+"section": "SPECIAL",
+"name": "ENT_SPダミー58"
+},
+{
+"id": 2107,
+"section": "SPECIAL",
+"name": "ENT_SPダミー59"
+},
+{
+"id": 2108,
+"section": "SPECIAL",
+"name": "ENT_SPダミー60"
+},
+{
+"id": 2109,
+"section": "SPECIAL",
+"name": "ENT_SPダミー61"
+},
+{
+"id": 2110,
+"section": "SPECIAL",
+"name": "ENT_SPダミー62"
+},
+{
+"id": 2111,
+"section": "SPECIAL",
+"name": "ENT_SPダミー63"
+},
+{
+"id": 2112,
+"section": "SPECIAL",
+"name": "ENT_SPダミー64"
+},
+{
+"id": 2113,
+"section": "SPECIAL",
+"name": "ENT_SPダミー65"
+},
+{
+"id": 2114,
+"section": "SPECIAL",
+"name": "ENT_SPダミー66"
+},
+{
+"id": 2115,
+"section": "SPECIAL",
+"name": "ENT_SPダミー67"
+},
+{
+"id": 2116,
+"section": "SPECIAL",
+"name": "ENT_SPダミー68"
+},
+{
+"id": 2117,
+"section": "SPECIAL",
+"name": "ENT_SPダミー69"
+},
+{
+"id": 2118,
+"section": "SPECIAL",
+"name": "ENT_SPダミー70"
+},
+{
+"id": 2119,
+"section": "SPECIAL",
+"name": "ENT_SPダミー71"
+},
+{
+"id": 2120,
+"section": "SPECIAL",
+"name": "ENT_SPダミー72"
+},
+{
+"id": 2121,
+"section": "SPECIAL",
+"name": "ENT_SPダミー73"
+},
+{
+"id": 2122,
+"section": "SPECIAL",
+"name": "ENT_SPダミー74"
+},
+{
+"id": 2123,
+"section": "SPECIAL",
+"name": "ENT_SPダミー75"
+},
+{
+"id": 2124,
+"section": "SPECIAL",
+"name": "ENT_SPダミー76"
+},
+{
+"id": 2125,
+"section": "SPECIAL",
+"name": "ENT_SPダミー77"
+},
+{
+"id": 2126,
+"section": "SPECIAL",
+"name": "ENT_SPダミー78"
+},
+{
+"id": 2127,
+"section": "SPECIAL",
+"name": "ENT_SPダミー79"
+},
+{
+"id": 2128,
+"section": "SPECIAL",
+"name": "ENT_SPダミー80"
+},
+{
+"id": 2129,
+"section": "SPECIAL",
+"name": "ENT_SPダミー81"
+},
+{
+"id": 2130,
+"section": "SPECIAL",
+"name": "ENT_SPダミー82"
+},
+{
+"id": 2131,
+"section": "SPECIAL",
+"name": "ENT_SPダミー83"
+},
+{
+"id": 2132,
+"section": "SPECIAL",
+"name": "ENT_SPダミー84"
+},
+{
+"id": 2133,
+"section": "SPECIAL",
+"name": "ENT_SPダミー85"
+},
+{
+"id": 2134,
+"section": "SPECIAL",
+"name": "メセタフィーバーⅠ"
+},
+{
+"id": 2135,
+"section": "SPECIAL",
+"name": "メセタフィーバーⅡ"
+},
+{
+"id": 2136,
+"section": "SPECIAL",
+"name": "メセタフィーバーⅢ"
+},
+{
+"id": 2137,
+"section": "SPECIAL",
+"name": "ENT_SPダミー89"
+},
+{
+"id": 2138,
+"section": "SPECIAL",
+"name": "ENT_SPダミー90"
+},
+{
+"id": 2139,
+"section": "SPECIAL",
+"name": "ＥＸＰブーストⅠ"
+},
+{
+"id": 2140,
+"section": "SPECIAL",
+"name": "アナザーヒストリー"
+},
+{
+"id": 2141,
+"section": "SPECIAL",
+"name": "ＥＸＰブーストⅡ"
+},
+{
+"id": 2142,
+"section": "SPECIAL",
+"name": "ＥＸＰブーストⅢ"
+},
+{
+"id": 2143,
+"section": "SPECIAL",
+"name": "ENT_SPダミー95"
+},
+{
+"id": 2144,
+"section": "SPECIAL",
+"name": "ラッキーライズⅠ"
+},
+{
+"id": 2145,
+"section": "SPECIAL",
+"name": "テンプテーション"
+},
+{
+"id": 2146,
+"section": "SPECIAL",
+"name": "ラッキーライズⅡ"
+},
+{
+"id": 2147,
+"section": "SPECIAL",
+"name": "ラッキーライズⅢ"
+},
+{
+"id": 2148,
+"section": "SPECIAL",
+"name": "ENT_SPダミー100"
+},
+{
+"id": 2149,
+"section": "SPECIAL",
+"name": "ENT_SPダミー101"
+},
+{
+"id": 2150,
+"section": "SPECIAL",
+"name": "ENT_SPダミー102"
+},
+{
+"id": 2151,
+"section": "SPECIAL",
+"name": "ENT_SPダミー103"
+},
+{
+"id": 2152,
+"section": "SPECIAL",
+"name": "ENT_SPダミー104"
+},
+{
+"id": 2153,
+"section": "SPECIAL",
+"name": "ENT_SPダミー105"
+},
+{
+"id": 2154,
+"section": "SPECIAL",
+"name": "ENT_SPダミー106"
+},
+{
+"id": 2155,
+"section": "SPECIAL",
+"name": "ENT_SPダミー107"
+},
+{
+"id": 2156,
+"section": "SPECIAL",
+"name": "ENT_SPダミー108"
+},
+{
+"id": 2157,
+"section": "SPECIAL",
+"name": "ENT_SPダミー109"
+},
+{
+"id": 2158,
+"section": "SPECIAL",
+"name": "ENT_SPダミー110"
+},
+{
+"id": 2159,
+"section": "SPECIAL",
+"name": "ENT_SPダミー111"
+},
+{
+"id": 2160,
+"section": "SPECIAL",
+"name": "ENT_SPダミー112"
+},
+{
+"id": 2161,
+"section": "SPECIAL",
+"name": "ENT_SPダミー113"
+},
+{
+"id": 2162,
+"section": "SPECIAL",
+"name": "ENT_SPダミー114"
+},
+{
+"id": 2163,
+"section": "SPECIAL",
+"name": "ENT_SPダミー115"
+},
+{
+"id": 2164,
+"section": "SPECIAL",
+"name": "ENT_SPダミー116"
+},
+{
+"id": 2165,
+"section": "SPECIAL",
+"name": "ENT_SPダミー117"
+},
+{
+"id": 2166,
+"section": "SPECIAL",
+"name": "ENT_SPダミー118"
+},
+{
+"id": 2167,
+"section": "SPECIAL",
+"name": "ENT_SPダミー119"
+},
+{
+"id": 2168,
+"section": "SPECIAL",
+"name": "ENT_SPダミー120"
+},
+{
+"id": 2169,
+"section": "SPECIAL",
+"name": "ENT_SPダミー121"
+},
+{
+"id": 2170,
+"section": "SPECIAL",
+"name": "ENT_SPダミー122"
+},
+{
+"id": 2171,
+"section": "SPECIAL",
+"name": "ENT_SPダミー123"
+},
+{
+"id": 2172,
+"section": "SPECIAL",
+"name": "ENT_SPダミー124"
+},
+{
+"id": 2173,
+"section": "SPECIAL",
+"name": "ENT_SPダミー125"
+},
+{
+"id": 2174,
+"section": "SPECIAL",
+"name": "ENT_SPダミー126"
+},
+{
+"id": 2175,
+"section": "SPECIAL",
+"name": "ENT_SPダミー127"
+},
+{
+"id": 2176,
+"section": "SPECIAL",
+"name": "ENT_SPダミー128"
+},
+{
+"id": 2177,
+"section": "SPECIAL",
+"name": "ENT_SPダミー129"
+},
+{
+"id": 2178,
+"section": "SPECIAL",
+"name": "ENT_SPダミー130"
+},
+{
+"id": 2179,
+"section": "SPECIAL",
+"name": "ENT_SPダミー131"
+},
+{
+"id": 2180,
+"section": "SPECIAL",
+"name": "ENT_SPダミー132"
+},
+{
+"id": 2181,
+"section": "SPECIAL",
+"name": "ENT_SPダミー133"
+},
+{
+"id": 2182,
+"section": "SPECIAL",
+"name": "フレッシュ・サイン"
+},
+{
+"id": 2188,
+"section": "SPECIAL",
+"name": "エンペ・エンブレイス"
+},
+{
+"id": 2189,
+"section": "SPECIAL",
+"name": "ＮＴウェポンブースト"
+},
+{
+"id": 2190,
+"section": "SPECIAL",
+"name": "ポリタン・スマイル"
+},
+{
+"id": 2191,
+"section": "SPECIAL",
+"name": "アークマ・スマイル"
+},
+{
+"id": 2192,
+"section": "SPECIAL",
+"name": "ウェポンブーストｅｓ"
+},
+{
+"id": 2193,
+"section": "SPECIAL",
+"name": "ＮＴウェポンブースト２"
+},
+{
+"id": 2660,
+"section": "USERSKILL",
+"name": "アルティメットバスター"
+},
+{
+"id": 2661,
+"section": "USERSKILL",
+"name": "フレイズ・ウィーク"
+},
+{
+"id": 2662,
+"section": "USERSKILL",
+"name": "フレイズ・レスポンス"
+},
+{
+"id": 2663,
+"section": "USERSKILL",
+"name": "フレイズ・リカバリー"
+},
+{
+"id": 2664,
+"section": "USERSKILL",
+"name": "フレイズ・チェイス"
+},
+{
+"id": 2665,
+"section": "USERSKILL",
+"name": "フレイズ・リデュース"
+},
+{
+"id": 2666,
+"section": "USERSKILL",
+"name": "オメガバスター"
+},
+{
+"id": 2667,
+"section": "USERSKILL",
+"name": "フレイズ・ディケイ"
+},
+{
+"id": 2669,
+"section": "USERSKILL",
+"name": "錬成の導き"
+},
+{
+"id": 2671,
+"section": "USERSKILL",
+"name": "リーパー／雷弱点"
+},
+{
+"id": 2672,
+"section": "USERSKILL",
+"name": "スレイヤー／機甲種"
+},
+{
+"id": 2673,
+"section": "USERSKILL",
+"name": "リーパー／炎弱点"
+},
+{
+"id": 2674,
+"section": "USERSKILL",
+"name": "スレイヤー／原生種"
+},
+{
+"id": 2675,
+"section": "USERSKILL",
+"name": "リーパー／氷弱点"
+},
+{
+"id": 2676,
+"section": "USERSKILL",
+"name": "スレイヤー／海王種"
+},
+{
+"id": 2677,
+"section": "USERSKILL",
+"name": "リーパー／闇弱点"
+},
+{
+"id": 2678,
+"section": "USERSKILL",
+"name": "スレイヤー／黒の民"
+},
+{
+"id": 2679,
+"section": "USERSKILL",
+"name": "リーパー／風弱点"
+},
+{
+"id": 2680,
+"section": "USERSKILL",
+"name": "スレイヤー／幻創種"
+},
+{
+"id": 2681,
+"section": "USERSKILL",
+"name": "リーパー／光弱点"
+},
+{
+"id": 2682,
+"section": "USERSKILL",
+"name": "スレイヤー／ダーカー"
+},
+{
+"id": 2683,
+"section": "USERSKILL",
+"name": "スレイヤー／龍族"
+},
+{
+"id": 2684,
+"section": "USERSKILL",
+"name": "スレイヤー／閃機種"
+},
+{
+"id": 2691,
+"section": "USERSKILL",
+"name": "Ｓ２：剛乱活与"
+},
+{
+"id": 2693,
+"section": "USERSKILL",
+"name": "Ｓ１：剛撃の志"
+},
+{
+"id": 2694,
+"section": "USERSKILL",
+"name": "Ｓ２：剛撃の志"
+},
+{
+"id": 2695,
+"section": "USERSKILL",
+"name": "Ｓ３：剛撃の志"
+},
+{
+"id": 2696,
+"section": "USERSKILL",
+"name": "Ｓ１：光子縮減"
+},
+{
+"id": 2697,
+"section": "USERSKILL",
+"name": "Ｓ２：光子縮減"
+},
+{
+"id": 2698,
+"section": "USERSKILL",
+"name": "Ｓ３：光子縮減"
+},
+{
+"id": 2701,
+"section": "USERSKILL",
+"name": "Ｓ３：活実の志"
+},
+{
+"id": 2703,
+"section": "USERSKILL",
+"name": "Ｓ２：災転輝与"
+},
+{
+"id": 2704,
+"section": "USERSKILL",
+"name": "Ｓ３：災転輝与"
+},
+{
+"id": 2705,
+"section": "USERSKILL",
+"name": "Ｓ１：妙技の巧"
+},
+{
+"id": 2706,
+"section": "USERSKILL",
+"name": "Ｓ２：妙技の巧"
+},
+{
+"id": 2707,
+"section": "USERSKILL",
+"name": "Ｓ３：妙技の巧"
+},
+{
+"id": 2708,
+"section": "USERSKILL",
+"name": "Ｓ１：輝剰の撃"
+},
+{
+"id": 2709,
+"section": "USERSKILL",
+"name": "Ｓ２：輝剰の撃"
+},
+{
+"id": 2710,
+"section": "USERSKILL",
+"name": "Ｓ３：輝剰の撃"
+},
+{
+"id": 2711,
+"section": "USERSKILL",
+"name": "Ｓ１：守護の備"
+},
+{
+"id": 2712,
+"section": "USERSKILL",
+"name": "Ｓ２：守護の備"
+},
+{
+"id": 2713,
+"section": "USERSKILL",
+"name": "Ｓ３：守護の備"
+},
+{
+"id": 2714,
+"section": "USERSKILL",
+"name": "Ｓ１：妙撃の志"
+},
+{
+"id": 2715,
+"section": "USERSKILL",
+"name": "Ｓ２：妙撃の志"
+},
+{
+"id": 2716,
+"section": "USERSKILL",
+"name": "Ｓ３：妙撃の志"
+},
+{
+"id": 2717,
+"section": "USERSKILL",
+"name": "Ｓ１：輝充の志"
+},
+{
+"id": 2718,
+"section": "USERSKILL",
+"name": "Ｓ２：輝充の志"
+},
+{
+"id": 2720,
+"section": "USERSKILL",
+"name": "Ｓ１：諸刃の撃"
+},
+{
+"id": 2721,
+"section": "USERSKILL",
+"name": "Ｓ２：諸刃の撃"
+},
+{
+"id": 2722,
+"section": "USERSKILL",
+"name": "Ｓ３：諸刃の撃"
+},
+{
+"id": 2723,
+"section": "USERSKILL",
+"name": "Ｓ１：輝勢の恵"
+},
+{
+"id": 2724,
+"section": "USERSKILL",
+"name": "Ｓ２：輝勢の恵"
+},
+{
+"id": 2725,
+"section": "USERSKILL",
+"name": "Ｓ３：輝勢の恵"
+},
+{
+"id": 2726,
+"section": "USERSKILL",
+"name": "Ｓ１：時流活与"
+},
+{
+"id": 2727,
+"section": "USERSKILL",
+"name": "Ｓ２：時流活与"
+},
+{
+"id": 2728,
+"section": "USERSKILL",
+"name": "Ｓ３：時流活与"
+},
+{
+"id": 2729,
+"section": "USERSKILL",
+"name": "Ｓ４：瞬護輝与"
+},
+{
+"id": 2730,
+"section": "USERSKILL",
+"name": "Ｓ４：鋼の決意"
+},
+{
+"id": 2731,
+"section": "USERSKILL",
+"name": "Ｓ４：輝器応変"
+},
+{
+"id": 2732,
+"section": "USERSKILL",
+"name": "Ｓ４：正対の巧"
+},
+{
+"id": 2733,
+"section": "USERSKILL",
+"name": "Ｓ４：鎌風重吹"
+},
+{
+"id": 2734,
+"section": "USERSKILL",
+"name": "Ｓ４：賢勇両撃"
+},
+{
+"id": 2735,
+"section": "USERSKILL",
+"name": "Ｓ４：奪命の撃"
+},
+{
+"id": 2736,
+"section": "USERSKILL",
+"name": "Ｓ４：静の胆力"
+},
+{
+"id": 2737,
+"section": "USERSKILL",
+"name": "Ｓ４：輝剰の罠"
+},
+{
+"id": 2738,
+"section": "USERSKILL",
+"name": "Ｓ４：鎖動強身"
+},
+{
+"id": 2739,
+"section": "USERSKILL",
+"name": "Ｓ４：摂理洗練"
+},
+{
+"id": 2740,
+"section": "USERSKILL",
+"name": "Ｓ４：回路輪転"
+},
+{
+"id": 2741,
+"section": "USERSKILL",
+"name": "Ｓ４：短杖強打"
+},
+{
+"id": 2742,
+"section": "USERSKILL",
+"name": "Ｓ４：刃機放縮"
+},
+{
+"id": 2743,
+"section": "USERSKILL",
+"name": "Ｓ４：迅弓の撃"
+},
+{
+"id": 2744,
+"section": "USERSKILL",
+"name": "Ｓ４：支援限長"
+},
+{
+"id": 2745,
+"section": "USERSKILL",
+"name": "Ｓ４：変素応輪"
+},
+{
+"id": 2747,
+"section": "USERSKILL",
+"name": "Ｓ２：瞬撃繚乱"
+},
+{
+"id": 2748,
+"section": "USERSKILL",
+"name": "Ｓ３：瞬撃繚乱"
+},
+{
+"id": 2749,
+"section": "USERSKILL",
+"name": "Ｓ１：瞬連の志"
+},
+{
+"id": 2752,
+"section": "USERSKILL",
+"name": "Ｓ１：気輝応変"
+},
+{
+"id": 2753,
+"section": "USERSKILL",
+"name": "Ｓ２：気輝応変"
+},
+{
+"id": 2755,
+"section": "USERSKILL",
+"name": "Ｓ１：滅域輝与"
+},
+{
+"id": 2756,
+"section": "USERSKILL",
+"name": "Ｓ２：滅域輝与"
+},
+{
+"id": 2757,
+"section": "USERSKILL",
+"name": "Ｓ３：滅域輝与"
+},
+{
+"id": 2760,
+"section": "USERSKILL",
+"name": "隣闘連陣"
+},
+{
+"id": 2761,
+"section": "USERSKILL",
+"name": "負滅牙"
+},
+{
+"id": 2762,
+"section": "USERSKILL",
+"name": "原生滅牙"
+},
+{
+"id": 2763,
+"section": "USERSKILL",
+"name": "機甲滅牙"
+},
+{
+"id": 2764,
+"section": "USERSKILL",
+"name": "龍滅牙"
+},
+{
+"id": 2765,
+"section": "USERSKILL",
+"name": "海王滅牙"
+},
+{
+"id": 2766,
+"section": "USERSKILL",
+"name": "妖滅牙"
+},
+{
+"id": 2767,
+"section": "USERSKILL",
+"name": "壊世滅牙"
+},
+{
+"id": 2768,
+"section": "USERSKILL",
+"name": "属性値強化"
+},
+{
+"id": 2769,
+"section": "USERSKILL",
+"name": "背水陣"
+},
+{
+"id": 2770,
+"section": "USERSKILL",
+"name": "常昂気功"
+},
+{
+"id": 2771,
+"section": "USERSKILL",
+"name": "必撃衝打"
+},
+{
+"id": 2772,
+"section": "USERSKILL",
+"name": "古の誓い"
+},
+{
+"id": 2773,
+"section": "USERSKILL",
+"name": "追の衝撃"
+},
+{
+"id": 2774,
+"section": "USERSKILL",
+"name": "強闘心"
+},
+{
+"id": 2775,
+"section": "USERSKILL",
+"name": "瞬闇の翼"
+},
+{
+"id": 2776,
+"section": "USERSKILL",
+"name": "心血万全の剛力"
+},
+{
+"id": 2777,
+"section": "USERSKILL",
+"name": "限界駆動"
+},
+{
+"id": 2778,
+"section": "USERSKILL",
+"name": "幻精天恵"
+},
+{
+"id": 2779,
+"section": "USERSKILL",
+"name": "青息の施し"
+},
+{
+"id": 2780,
+"section": "USERSKILL",
+"name": "止息の施し"
+},
+{
+"id": 2781,
+"section": "USERSKILL",
+"name": "安息の施し"
+},
+{
+"id": 2782,
+"section": "USERSKILL",
+"name": "慈愛の風"
+},
+{
+"id": 2783,
+"section": "USERSKILL",
+"name": "修羅の構え"
+},
+{
+"id": 2784,
+"section": "USERSKILL",
+"name": "絶強印"
+},
+{
+"id": 2785,
+"section": "USERSKILL",
+"name": "絶対障壁"
+},
+{
+"id": 2786,
+"section": "USERSKILL",
+"name": "集気光"
+},
+{
+"id": 2787,
+"section": "USERSKILL",
+"name": "調甲変換"
+},
+{
+"id": 2788,
+"section": "USERSKILL",
+"name": "共闘の調べ"
+},
+{
+"id": 2789,
+"section": "USERSKILL",
+"name": "共奏の輝き"
+},
+{
+"id": 2790,
+"section": "USERSKILL",
+"name": "一心同体の功"
+},
+{
+"id": 2791,
+"section": "USERSKILL",
+"name": "再起の旋風"
+},
+{
+"id": 2792,
+"section": "USERSKILL",
+"name": "属性変化（炎）"
+},
+{
+"id": 2793,
+"section": "USERSKILL",
+"name": "属性変化（氷）"
+},
+{
+"id": 2794,
+"section": "USERSKILL",
+"name": "属性変化（雷）"
+},
+{
+"id": 2795,
+"section": "USERSKILL",
+"name": "属性変化（風）"
+},
+{
+"id": 2796,
+"section": "USERSKILL",
+"name": "属性変化（光）"
+},
+{
+"id": 2797,
+"section": "USERSKILL",
+"name": "属性変化（闇）"
+},
+{
+"id": 2798,
+"section": "USERSKILL",
+"name": "幻創滅牙"
+},
+{
+"id": 2799,
+"section": "USERSKILL",
+"name": "クリティカルⅠ"
+},
+{
+"id": 2800,
+"section": "USERSKILL",
+"name": "PPスレイヤー"
+},
+{
+"id": 2801,
+"section": "USERSKILL",
+"name": "PPマルチ効果"
+},
+{
+"id": 2802,
+"section": "USERSKILL",
+"name": "遠距離支援"
+},
+{
+"id": 2803,
+"section": "USERSKILL",
+"name": "ＰＰオーバースレイヤー"
+},
+{
+"id": 2804,
+"section": "USERSKILL",
+"name": "アルターエゴ強化"
+},
+{
+"id": 2805,
+"section": "USERSKILL",
+"name": "魔物滅牙"
+},
+{
+"id": 2806,
+"section": "USERSKILL",
+"name": "障壁強化"
+},
+{
+"id": 2807,
+"section": "USERSKILL",
+"name": "部位破壊ボーナス"
+},
+{
+"id": 2808,
+"section": "USERSKILL",
+"name": "周囲エネミー数ボーナス"
+},
+{
+"id": 2809,
+"section": "USERSKILL",
+"name": "キルカウント"
+},
+{
+"id": 2810,
+"section": "USERSKILL",
+"name": "心血万全の剛力２"
+},
+{
+"id": 2811,
+"section": "USERSKILL",
+"name": "強闘心２"
+},
+{
+"id": 2812,
+"section": "USERSKILL",
+"name": "ＰＰスレイヤー２"
+},
+{
+"id": 2813,
+"section": "USERSKILL",
+"name": "遠距離支援２"
+},
+{
+"id": 2814,
+"section": "USERSKILL",
+"name": "複合パーフェクトキーパー"
+},
+{
+"id": 2815,
+"section": "USERSKILL",
+"name": "複合アルターエゴ強化"
+},
+{
+"id": 2816,
+"section": "USERSKILL",
+"name": "複合デッドラインスレイヤー"
+},
+{
+"id": 2817,
+"section": "USERSKILL",
+"name": "限界駆動２"
+},
+{
+"id": 2818,
+"section": "USERSKILL",
+"name": "PPマルチ効果２"
+},
+{
+"id": 2819,
+"section": "USERSKILL",
+"name": "複合PBGダメージボーナス"
+},
+{
+"id": 2820,
+"section": "USERSKILL",
+"name": "複合ジャイアントキリング"
+},
+{
+"id": 2821,
+"section": "USERSKILL",
+"name": "複合キルカウントボーナス"
+},
+{
+"id": 2822,
+"section": "USERSKILL",
+"name": "複合オーバーPPスレイヤー"
+},
+{
+"id": 2823,
+"section": "USERSKILL",
+"name": "複合クリティカルストライク"
+},
+{
+"id": 2824,
+"section": "USERSKILL",
+"name": "複合PPオーバードライブ"
+},
+{
+"id": 2825,
+"section": "USERSKILL",
+"name": "タイムカウントシンパシー"
+},
+{
+"id": 2826,
+"section": "USERSKILL",
+"name": "エレメントウェポンペット"
+},
+{
+"id": 2827,
+"section": "USERSKILL",
+"name": "エレメントウェポンペット2"
+},
+{
+"id": 2828,
+"section": "USERSKILL",
+"name": "エレメントウェポンペット3"
+},
+{
+"id": 2829,
+"section": "USERSKILL",
+"name": "リスクダメージペット"
+},
+{
+"id": 2830,
+"section": "USERSKILL",
+"name": "ダークブラストボーナス"
+},
+{
+"id": 2831,
+"section": "USERSKILL",
+"name": "隣闘連陣2"
+},
+{
+"id": 2832,
+"section": "USERSKILL",
+"name": "てきちゅうパフェ"
+},
+{
+"id": 2833,
+"section": "USERSKILL",
+"name": "超てきちゅうパフェ"
+},
+{
+"id": 2834,
+"section": "USERSKILL",
+"name": "ちゅうもくロール"
+},
+{
+"id": 2835,
+"section": "USERSKILL",
+"name": "めろめろロール"
+},
+{
+"id": 2836,
+"section": "USERSKILL",
+"name": "どきどきパフェ"
+},
+{
+"id": 2837,
+"section": "USERSKILL",
+"name": "超どきどきパフェ"
+},
+{
+"id": 2838,
+"section": "USERSKILL",
+"name": "ふんわりロール"
+},
+{
+"id": 2839,
+"section": "USERSKILL",
+"name": "超ぴったりパフェ"
+},
+{
+"id": 2840,
+"section": "USERSKILL",
+"name": "超ひっさつパフェ"
+},
+{
+"id": 2841,
+"section": "USERSKILL",
+"name": "超ぎゃくてんパフェ"
+},
+{
+"id": 2842,
+"section": "USERSKILL",
+"name": "超げきからパフェ"
+},
+{
+"id": 2843,
+"section": "USERSKILL",
+"name": "超ブラストパフェ"
+},
+{
+"id": 2844,
+"section": "USERSKILL",
+"name": "超ぐんぐんパフェ"
+},
+{
+"id": 2845,
+"section": "USERSKILL",
+"name": "超はりきりパフェ"
+},
+{
+"id": 2846,
+"section": "USERSKILL",
+"name": "超かけひきパフェ"
+},
+{
+"id": 2847,
+"section": "USERSKILL",
+"name": "超アルティメットパフェ"
+},
+{
+"id": 2848,
+"section": "USERSKILL",
+"name": "超まんぷくパフェ"
+},
+{
+"id": 2849,
+"section": "USERSKILL",
+"name": "超ぶいぶいパフェ"
+},
+{
+"id": 2850,
+"section": "USERSKILL",
+"name": "超どたばたパフェ"
+},
+{
+"id": 2851,
+"section": "USERSKILL",
+"name": "絶品どきどきパフェ"
+},
+{
+"id": 2852,
+"section": "USERSKILL",
+"name": "絶品てきちゅうパフェ"
+},
+{
+"id": 2853,
+"section": "USERSKILL",
+"name": "どっしりパフェ"
+},
+{
+"id": 2854,
+"section": "USERSKILL",
+"name": "超どっしりパフェ"
+},
+{
+"id": 2855,
+"section": "USERSKILL",
+"name": "絶品きあいパフェ"
+},
+{
+"id": 2912,
+"section": "USERSKILL",
+"name": "Ｓ２：時流の恵"
+},
+{
+"id": 2913,
+"section": "USERSKILL",
+"name": "Ｓ３：時流の恵"
+},
+{
+"id": 2914,
+"section": "USERSKILL",
+"name": "Ｓ１：花ノ赤閃"
+},
+{
+"id": 2915,
+"section": "USERSKILL",
+"name": "Ｓ１：海ノ青閃"
+},
+{
+"id": 2916,
+"section": "USERSKILL",
+"name": "Ｓ１：葉ノ緑閃"
+},
+{
+"id": 2917,
+"section": "USERSKILL",
+"name": "Ｓ１：月ノ黄閃"
+},
+{
+"id": 2918,
+"section": "USERSKILL",
+"name": "Ｓ１：雪ノ白閃"
+},
+{
+"id": 2919,
+"section": "USERSKILL",
+"name": "Ｓ１：影ノ黒閃"
+},
+{
+"id": 2921,
+"section": "USERSKILL",
+"name": "Ｓ２：花海雪の志"
+},
+{
+"id": 2922,
+"section": "USERSKILL",
+"name": "Ｓ３：月葉影の志"
+},
+{
+"id": 2924,
+"section": "USERSKILL",
+"name": "Ｓ２：月葉影の備"
+},
+{
+"id": 2925,
+"section": "USERSKILL",
+"name": "Ｓ３：花海雪の備"
+},
+{
+"id": 2927,
+"section": "USERSKILL",
+"name": "Ｓ２：花海雪の縮減"
+},
+{
+"id": 2928,
+"section": "USERSKILL",
+"name": "Ｓ３：月葉影の縮減"
+},
+{
+"id": 2930,
+"section": "USERSKILL",
+"name": "Ｓ２：花海雪の活与"
+},
+{
+"id": 2931,
+"section": "USERSKILL",
+"name": "Ｓ３：月葉影の活与"
+},
+{
+"id": 2933,
+"section": "USERSKILL",
+"name": "Ｓ２：花海雪の巧"
+},
+{
+"id": 2934,
+"section": "USERSKILL",
+"name": "Ｓ３：月葉影の巧"
+},
+{
+"id": 2936,
+"section": "USERSKILL",
+"name": "Ｓ２：月葉影の輝剰"
+},
+{
+"id": 2937,
+"section": "USERSKILL",
+"name": "Ｓ３：花海雪の輝剰"
+},
+{
+"id": 2939,
+"section": "USERSKILL",
+"name": "Ｓ２：月葉影の輝勢"
+},
+{
+"id": 2940,
+"section": "USERSKILL",
+"name": "Ｓ３：花海雪の輝勢"
+},
+{
+"id": 2941,
+"section": "USERSKILL",
+"name": "Ｓ１：死中の志"
+},
+{
+"id": 2942,
+"section": "USERSKILL",
+"name": "Ｓ２：死中の志"
+},
+{
+"id": 2943,
+"section": "USERSKILL",
+"name": "Ｓ３：死中の志"
+},
+{
+"id": 2944,
+"section": "USERSKILL",
+"name": "Ｓ１：猛威の奮激"
+},
+{
+"id": 2945,
+"section": "USERSKILL",
+"name": "Ｓ２：猛威の奮激"
+},
+{
+"id": 2946,
+"section": "USERSKILL",
+"name": "Ｓ３：猛威の奮激"
+},
+{
+"id": 2948,
+"section": "USERSKILL",
+"name": "Ｓ２：月葉影の歌"
+},
+{
+"id": 2949,
+"section": "USERSKILL",
+"name": "Ｓ３：花海雪の歌"
+},
+{
+"id": 2950,
+"section": "USERSKILL",
+"name": "Ｓ１：裂砕の志"
+},
+{
+"id": 2951,
+"section": "USERSKILL",
+"name": "Ｓ２：裂砕の志"
+},
+{
+"id": 2952,
+"section": "USERSKILL",
+"name": "Ｓ３：裂砕の志"
+},
+{
+"id": 2953,
+"section": "USERSKILL",
+"name": "Ｓ１：裂砕の剰"
+},
+{
+"id": 2954,
+"section": "USERSKILL",
+"name": "Ｓ２：裂砕の剰"
+},
+{
+"id": 2955,
+"section": "USERSKILL",
+"name": "Ｓ３：裂砕の剰"
+},
+{
+"id": 2956,
+"section": "USERSKILL",
+"name": "Ｓ１：強闘の志"
+},
+{
+"id": 2957,
+"section": "USERSKILL",
+"name": "Ｓ２：強闘の志"
+},
+{
+"id": 2958,
+"section": "USERSKILL",
+"name": "Ｓ３：強闘の志"
+},
+{
+"id": 2959,
+"section": "USERSKILL",
+"name": "Ｓ１：狂幻の利"
+},
+{
+"id": 2960,
+"section": "USERSKILL",
+"name": "Ｓ２：狂幻の利"
+},
+{
+"id": 2961,
+"section": "USERSKILL",
+"name": "Ｓ３：狂幻の利"
+},
+{
+"id": 2962,
+"section": "USERSKILL",
+"name": "Ｓ１：光子縮減２"
+},
+{
+"id": 2963,
+"section": "USERSKILL",
+"name": "Ｓ１：滅域輝与２"
+},
+{
+"id": 2964,
+"section": "USERSKILL",
+"name": "Ｓ２：花海雪の縮減２"
+},
+{
+"id": 2965,
+"section": "USERSKILL",
+"name": "Ｓ２：月葉影の輝剰２"
+},
+{
+"id": 2966,
+"section": "USERSKILL",
+"name": "Ｓ２：妙技の巧２"
+},
+{
+"id": 2967,
+"section": "USERSKILL",
+"name": "Ｓ２：妙撃の志２"
+},
+{
+"id": 2968,
+"section": "USERSKILL",
+"name": "Ｓ２：輝剰の撃２"
+},
+{
+"id": 2969,
+"section": "USERSKILL",
+"name": "Ｓ３：花海雪の輝勢２"
+},
+{
+"id": 2970,
+"section": "USERSKILL",
+"name": "Ｓ３：時流活与２"
+},
+{
+"id": 2971,
+"section": "USERSKILL",
+"name": "Ｓ３：輝勢の恵２"
+},
+{
+"id": 2972,
+"section": "USERSKILL",
+"name": "Ｓ１：時流の志"
+},
+{
+"id": 2973,
+"section": "USERSKILL",
+"name": "Ｓ４：天輝の守護"
+},
+{
+"id": 2975,
+"section": "USERSKILL",
+"name": "Ｓ４：静心の志"
+},
+{
+"id": 2976,
+"section": "USERSKILL",
+"name": "Ｓ４：妙撃の秤"
+},
+{
+"id": 2977,
+"section": "USERSKILL",
+"name": "Ｓ１：依属の志"
+},
+{
+"id": 2978,
+"section": "USERSKILL",
+"name": "Ｓ４：聖者の盾"
+},
+{
+"id": 2980,
+"section": "USERSKILL",
+"name": "Ｓ２：瞬乱縮減"
+},
+{
+"id": 2981,
+"section": "USERSKILL",
+"name": "Ｓ１：幻精の志"
+},
+{
+"id": 2985,
+"section": "USERSKILL",
+"name": "Ｓ２：幻精輝剰"
+},
+{
+"id": 2988,
+"section": "USERSKILL",
+"name": "Ｓ２：幻精輝勢"
+},
+{
+"id": 2991,
+"section": "USERSKILL",
+"name": "Ｓ２：幻精の備"
+},
+{
+"id": 2995,
+"section": "USERSKILL",
+"name": "Ｓ３：幻精縮減"
+},
+{
+"id": 2998,
+"section": "USERSKILL",
+"name": "Ｓ２：服薬の恵"
+},
+{
+"id": 3000,
+"section": "USERSKILL",
+"name": "Ｓ１：活剰増進"
+},
+{
+"id": 3003,
+"section": "USERSKILL",
+"name": "Ｓ４：六色の輝秤"
+},
+{
+"id": 3004,
+"section": "USERSKILL",
+"name": "Ｓ２：走者高揚"
+},
+{
+"id": 3006,
+"section": "USERSKILL",
+"name": "Ｓ１：賭死の撃"
+},
+{
+"id": 3008,
+"section": "USERSKILL",
+"name": "Ｓ２：火炎の備志"
+},
+{
+"id": 3011,
+"section": "USERSKILL",
+"name": "Ｓ２：氷雪の備志"
+},
+{
+"id": 3014,
+"section": "USERSKILL",
+"name": "Ｓ２：轟雷の備志"
+},
+{
+"id": 3017,
+"section": "USERSKILL",
+"name": "Ｓ２：暴風の備志"
+},
+{
+"id": 3020,
+"section": "USERSKILL",
+"name": "Ｓ２：光明の備志"
+},
+{
+"id": 3023,
+"section": "USERSKILL",
+"name": "Ｓ２：暗闇の備志"
+},
+{
+"id": 3025,
+"section": "USERSKILL",
+"name": "Ｓ１：打撃増幅"
+},
+{
+"id": 3028,
+"section": "USERSKILL",
+"name": "Ｓ１：射撃増幅"
+},
+{
+"id": 3031,
+"section": "USERSKILL",
+"name": "Ｓ１：法撃増幅"
+},
+{
+"id": 3034,
+"section": "USERSKILL",
+"name": "Ｓ１：錬成の志"
+},
+{
+"id": 3039,
+"section": "USERSKILL",
+"name": "Ｓ３：静心活与"
+},
+{
+"id": 3040,
+"section": "USERSKILL",
+"name": "Ｓ３：撃流の備"
+},
+{
+"id": 3041,
+"section": "USERSKILL",
+"name": "Ｓ３：撃流縮減"
+},
+{
+"id": 3042,
+"section": "USERSKILL",
+"name": "Ｓ３：撃流の巧"
+},
+{
+"id": 3043,
+"section": "USERSKILL",
+"name": "Ｓ１：失力の蝕"
+},
+{
+"id": 3044,
+"section": "USERSKILL",
+"name": "Ｓ２：技巧縮減"
+},
+{
+"id": 3045,
+"section": "USERSKILL",
+"name": "Ｓ４：累加追撃"
+},
+{
+"id": 3046,
+"section": "USERSKILL",
+"name": "Ｓ３：瞬連の輝"
+},
+{
+"id": 3047,
+"section": "USERSKILL",
+"name": "Ｓ１：瞬連の巧"
+},
+{
+"id": 3048,
+"section": "USERSKILL",
+"name": "Ｓ３：裂砕妙撃の志"
+},
+{
+"id": 3049,
+"section": "USERSKILL",
+"name": "Ｓ２：瞬護の与"
+},
+{
+"id": 3050,
+"section": "USERSKILL",
+"name": "Ｓ２：保天輝地"
+},
+{
+"id": 3051,
+"section": "USERSKILL",
+"name": "Ｓ３：時流の勇"
+},
+{
+"id": 3052,
+"section": "USERSKILL",
+"name": "Ｓ２：時流の護"
+},
+{
+"id": 3053,
+"section": "USERSKILL",
+"name": "Ｓ１：光子の秤"
+},
+{
+"id": 3054,
+"section": "USERSKILL",
+"name": "Ｓ１：戦友の加護"
+},
+{
+"id": 3072,
+"section": "USERSKILL2",
+"name": "Ｓ１：輝勢の恵２"
+},
+{
+"id": 3073,
+"section": "USERSKILL2",
+"name": "Ｓ１：妙技の巧２"
+},
+{
+"id": 3074,
+"section": "USERSKILL2",
+"name": "Ｓ２：光子縮減２"
+},
+{
+"id": 3075,
+"section": "USERSKILL2",
+"name": "Ｓ２：時流活与２"
+},
+{
+"id": 3076,
+"section": "USERSKILL2",
+"name": "Ｓ３：妙撃の志２"
+},
+{
+"id": 3077,
+"section": "USERSKILL2",
+"name": "Ｓ３：輝剰の撃２"
+},
+{
+"id": 3078,
+"section": "USERSKILL2",
+"name": "Ｓ４：追蝕の巧"
+},
+{
+"id": 3079,
+"section": "USERSKILL2",
+"name": "Ｓ４：六色の災転"
+},
+{
+"id": 3080,
+"section": "USERSKILL2",
+"name": "Ｓ４：回避訓練"
+},
+{
+"id": 3081,
+"section": "USERSKILL2",
+"name": "Ｓ４：強闘輝与"
+},
+{
+"id": 3082,
+"section": "USERSKILL2",
+"name": "Ｓ５：瞬護解放"
+},
+{
+"id": 3083,
+"section": "USERSKILL2",
+"name": "Ｓ５：瞬護無双"
+},
+{
+"id": 3084,
+"section": "USERSKILL2",
+"name": "Ｓ５：疾駆突貫"
+},
+{
+"id": 3085,
+"section": "USERSKILL2",
+"name": "Ｓ５：輝境の旋"
+},
+{
+"id": 3086,
+"section": "USERSKILL2",
+"name": "Ｓ５：巧避連撃"
+},
+{
+"id": 3087,
+"section": "USERSKILL2",
+"name": "Ｓ５：巧避巨拳"
+},
+{
+"id": 3088,
+"section": "USERSKILL2",
+"name": "Ｓ５：錬成萌花"
+},
+{
+"id": 3089,
+"section": "USERSKILL2",
+"name": "Ｓ５：反撃鋭刃"
+},
+{
+"id": 3090,
+"section": "USERSKILL2",
+"name": "Ｓ５：雷光追撃"
+},
+{
+"id": 3091,
+"section": "USERSKILL2",
+"name": "Ｓ５：烈終焉弾"
+},
+{
+"id": 3092,
+"section": "USERSKILL2",
+"name": "Ｓ５：烈零射砲"
+},
+{
+"id": 3093,
+"section": "USERSKILL2",
+"name": "Ｓ５：巧避輝与"
+},
+{
+"id": 3094,
+"section": "USERSKILL2",
+"name": "Ｓ５：追射剛矢"
+},
+{
+"id": 3095,
+"section": "USERSKILL2",
+"name": "Ｓ５：静心杖弾"
+},
+{
+"id": 3096,
+"section": "USERSKILL2",
+"name": "Ｓ５：急速補助"
+},
+{
+"id": 3097,
+"section": "USERSKILL2",
+"name": "Ｓ５：静心衝杖"
+},
+{
+"id": 3098,
+"section": "USERSKILL2",
+"name": "Ｓ５：追災律動"
+},
+{
+"id": 3099,
+"section": "USERSKILL2",
+"name": "Ｓ５：妙の巧志"
+},
+{
+"id": 3100,
+"section": "USERSKILL2",
+"name": "Ｓ５：瞬術略唱"
+},
+{
+"id": 3101,
+"section": "USERSKILL2",
+"name": "Ｓ５：活器応変"
+},
+{
+"id": 3102,
+"section": "USERSKILL2",
+"name": "Ｓ４：追蝕輝剰"
+},
+{
+"id": 3115,
+"section": "USERSKILL2",
+"name": "Ｓ４：滅域分与"
+},
+{
+"id": 3116,
+"section": "USERSKILL2",
+"name": "Ｓ５：追蝕の縛"
+},
+{
+"id": 3117,
+"section": "USERSKILL2",
+"name": "Ｓ２：六色の志"
+},
+{
+"id": 3118,
+"section": "USERSKILL2",
+"name": "Ｓ２：六色の活与"
+},
+{
+"id": 3119,
+"section": "USERSKILL2",
+"name": "Ｓ２：月葉影の歌２"
+},
+{
+"id": 3120,
+"section": "USERSKILL2",
+"name": "Ｓ３：花海雪の歌２"
+},
+{
+"id": 3121,
+"section": "USERSKILL2",
+"name": "Ｓ３：六色の縮減"
+},
+{
+"id": 3122,
+"section": "USERSKILL2",
+"name": "Ｓ３：六色の輝剰"
+},
+{
+"id": 3123,
+"section": "USERSKILL2",
+"name": "Ｓ３：六色の輝勢"
+},
+{
+"id": 3124,
+"section": "USERSKILL2",
+"name": "Ｓ５：槍機天悠"
+},
+{
+"id": 3125,
+"section": "USERSKILL2",
+"name": "Ｓ５：連鎖輝与"
+},
+{
+"id": 3126,
+"section": "USERSKILL2",
+"name": "Ｓ５：静心四連"
+},
+{
+"id": 3127,
+"section": "USERSKILL2",
+"name": "Ｓ５：静心拡域"
+},
+{
+"id": 3128,
+"section": "USERSKILL2",
+"name": "Ｓ５：領域加勢"
+},
+{
+"id": 3129,
+"section": "USERSKILL2",
+"name": "Ｓ５：回避輝与"
+},
+{
+"id": 3130,
+"section": "USERSKILL2",
+"name": "Ｓ５：堅守の秤"
+},
+{
+"id": 3131,
+"section": "USERSKILL2",
+"name": "Ｓ４：追蝕の志"
+},
+{
+"id": 3132,
+"section": "USERSKILL2",
+"name": "Ｓ２：瞬乱巧志"
+},
+{
+"id": 3133,
+"section": "USERSKILL2",
+"name": "Ｓ３：素撃の志"
+},
+{
+"id": 3134,
+"section": "USERSKILL2",
+"name": "Ｓ１：剛撃の志２"
+},
+{
+"id": 3135,
+"section": "USERSKILL2",
+"name": "Ｓ２：光子縮減３"
+},
+{
+"id": 3136,
+"section": "USERSKILL2",
+"name": "Ｓ３：活実の志２"
+},
+{
+"id": 3137,
+"section": "USERSKILL2",
+"name": "Ｓ３：輝剰の撃３"
+},
+{
+"id": 3138,
+"section": "USERSKILL2",
+"name": "Ｓ２：守護の備２"
+},
+{
+"id": 3139,
+"section": "USERSKILL2",
+"name": "Ｓ１：輝充の志２"
+},
+{
+"id": 3140,
+"section": "USERSKILL2",
+"name": "Ｓ３：輝勢の恵３"
+},
+{
+"id": 3141,
+"section": "USERSKILL2",
+"name": "Ｓ２：瞬撃繚乱２"
+},
+{
+"id": 3142,
+"section": "USERSKILL2",
+"name": "Ｓ２：瞬乱縮減２"
+},
+{
+"id": 3143,
+"section": "USERSKILL2",
+"name": "Ｓ２：服薬の恵２"
+},
+{
+"id": 3144,
+"section": "USERSKILL2",
+"name": "Ｓ１：錬成の志２"
+},
+{
+"id": 3145,
+"section": "USERSKILL2",
+"name": "Ｓ２：保天輝地２"
+},
+{
+"id": 3146,
+"section": "USERSKILL2",
+"name": "Ｓ１：光子の秤２"
+},
+{
+"id": 3147,
+"section": "USERSKILL2",
+"name": "Ｓ１：戦友の加護２"
+},
+{
+"id": 3273,
+"section": "USERSKILL2",
+"name": "Ｓ６：英雄咆哮"
+},
+{
+"id": 3274,
+"section": "USERSKILL2",
+"name": "Ｓ６：翔機天舞"
+},
+{
+"id": 3275,
+"section": "USERSKILL2",
+"name": "Ｓ６：機魂の守護"
+},
+{
+"id": 3276,
+"section": "USERSKILL2",
+"name": "Ｓ６：癒蝕頑強"
+},
+{
+"id": 3277,
+"section": "USERSKILL2",
+"name": "Ｓ７：輝静の恵"
+},
+{
+"id": 3278,
+"section": "USERSKILL2",
+"name": "Ｓ８：舞空の援"
+},
+{
+"id": 3290,
+"section": "USERSKILL2",
+"name": "Ｓ８：服薬強身"
+},
+{
+"id": 3294,
+"section": "USERSKILL2",
+"name": "Ｓ６：妙技の巧"
+},
+{
+"id": 3297,
+"section": "USERSKILL2",
+"name": "Ｓ６：守護の備"
+},
+{
+"id": 3306,
+"section": "USERSKILL2",
+"name": "Ｓ６：打撃上昇"
+},
+{
+"id": 3307,
+"section": "USERSKILL2",
+"name": "Ｓ７：打撃上昇"
+},
+{
+"id": 3308,
+"section": "USERSKILL2",
+"name": "Ｓ８：打撃上昇"
+},
+{
+"id": 3309,
+"section": "USERSKILL2",
+"name": "Ｓ６：射撃上昇"
+},
+{
+"id": 3310,
+"section": "USERSKILL2",
+"name": "Ｓ７：射撃上昇"
+},
+{
+"id": 3311,
+"section": "USERSKILL2",
+"name": "Ｓ８：射撃上昇"
+},
+{
+"id": 3312,
+"section": "USERSKILL2",
+"name": "Ｓ６：法撃上昇"
+},
+{
+"id": 3313,
+"section": "USERSKILL2",
+"name": "Ｓ７：法撃上昇"
+},
+{
+"id": 3314,
+"section": "USERSKILL2",
+"name": "Ｓ８：法撃上昇"
+},
+{
+"id": 3315,
+"section": "USERSKILL2",
+"name": "Ｓ６：活器上昇"
+},
+{
+"id": 3316,
+"section": "USERSKILL2",
+"name": "Ｓ７：活器上昇"
+},
+{
+"id": 3317,
+"section": "USERSKILL2",
+"name": "Ｓ８：活器上昇"
+},
+{
+"id": 3318,
+"section": "USERSKILL2",
+"name": "Ｓ６：輝器上昇"
+},
+{
+"id": 3319,
+"section": "USERSKILL2",
+"name": "Ｓ７：輝器上昇"
+},
+{
+"id": 3320,
+"section": "USERSKILL2",
+"name": "Ｓ８：輝器上昇"
+},
+{
+"id": 3321,
+"section": "USERSKILL2",
+"name": "Ｓ６：守護乱備"
+},
+{
+"id": 3324,
+"section": "USERSKILL2",
+"name": "Ｓ６：滅域輝与"
+},
+{
+"id": 3329,
+"section": "USERSKILL2",
+"name": "Ｓ７：打撃上昇２"
+},
+{
+"id": 3332,
+"section": "USERSKILL2",
+"name": "Ｓ７：射撃上昇２"
+},
+{
+"id": 3335,
+"section": "USERSKILL2",
+"name": "Ｓ７：法撃上昇２"
+},
+{
+"id": 3339,
+"section": "USERSKILL2",
+"name": "Ｓ８：活器上昇２"
+},
+{
+"id": 3342,
+"section": "USERSKILL2",
+"name": "Ｓ８：輝器上昇２"
+},
+{
+"id": 3344,
+"section": "USERSKILL2",
+"name": "Ｓ７：攻撃上昇"
+},
+{
+"id": 3347,
+"section": "USERSKILL2",
+"name": "Ｓ７：攻撃上昇２"
+},
+{
+"id": 3349,
+"section": "USERSKILL2",
+"name": "Ｓ６：翔天の翼"
+},
+{
+"id": 3350,
+"section": "USERSKILL2",
+"name": "Ｓ６：回避の口笛"
+},
+{
+"id": 3351,
+"section": "USERSKILL2",
+"name": "Ｓ７：瞬撃の極"
+},
+{
+"id": 3352,
+"section": "USERSKILL2",
+"name": "Ｓ６：修羅の備"
+},
+{
+"id": 3354,
+"section": "USERSKILL2",
+"name": "Ｓ７：薬効増大"
+},
+{
+"id": 3355,
+"section": "USERSKILL2",
+"name": "Ｓ８：一念滞空"
+},
+{
+"id": 3356,
+"section": "USERSKILL2",
+"name": "Ｓ６：長夜の明星"
+},
+{
+"id": 3357,
+"section": "USERSKILL2",
+"name": "Ｓ７：以心伝心"
+},
+{
+"id": 3358,
+"section": "USERSKILL2",
+"name": "Ｓ６：超限活器"
+},
+{
+"id": 3359,
+"section": "USERSKILL2",
+"name": "Ｓ６：奇跡再演"
+},
+{
+"id": 3362,
+"section": "USERSKILL2",
+"name": "Ｓ７：法護の与"
+},
+{
+"id": 3363,
+"section": "USERSKILL2",
+"name": "Ｓ７：視敵無双"
+}
+]
+}
