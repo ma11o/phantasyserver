@@ -568,6 +568,29 @@ impl Inventory {
         *uuid += 1;
         self.add_item(item)
     }
+    /// [pso2_vita_offline] One of a consumable used (T62): the first stack of `id` goes down by one, answered with
+    /// UpdateInventory (0F-06) as discarding is. None when none is held.
+    pub fn use_consumable(&mut self, id: ItemId) -> Option<Packet> {
+        let uuid = self
+            .inventory
+            .items
+            .iter()
+            .find(|i| i.id == id && matches!(i.data, ItemType::Consumable(_)))?
+            .uuid;
+        let new_amount = match decrease_item(&mut self.inventory.items, uuid, 1).ok()? {
+            ChangeItemResult::Changed { new_amount, .. } => new_amount,
+            _ => 0,
+        };
+        Some(Packet::UpdateInventory(UpdateInventoryPacket {
+            updated: vec![pso2packetlib::protocol::items::UpdatedInventoryItem {
+                uuid,
+                new_amount,
+                moved: 1,
+            }],
+            unk2: 1,
+            ..Default::default()
+        }))
+    }
     /// [pso2_vita_offline] Picked-up meseta: the held amount goes up, InventoryMeseta (0F-14) with the new total.
     pub fn add_meseta(&mut self, amount: u64) -> Packet {
         self.inventory.meseta += amount;

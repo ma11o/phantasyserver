@@ -9,7 +9,7 @@ use pso2packetlib::protocol::{
     self, ObjectHeader, ObjectType, Packet, PacketType,
     flag::{CutsceneEndPacket, SkitItemAddRequestPacket},
     models::Position,
-    objects::EnemyActionPacket,
+    objects::{DamageReceivePacket, EnemyActionPacket},
     playerstatus::{DealDamagePacket, GainedEXPPacket, SetPlayerIDPacket},
     questlist::{MinimapRevealPacket, RevealedRegions},
     server::{LoadLevelPacket, MapTransferPacket},
@@ -959,6 +959,7 @@ impl Zone {
                 Packet::MovementEnd(data)
             }
             Packet::MovementAction(data) => {
+                log::debug!("[pso2-action] {data:?}");
                 let packet = protocol::objects::MovementActionServerPacket {
                     performer: data.performer,
                     receiver: ObjectHeader {
@@ -1263,6 +1264,61 @@ impl Zone {
             dmg.attack_id,
             dmg.hitbox_id
         );
+        if inflicter.entity_type == ObjectType::Player && target.entity_type == ObjectType::Player {
+            // [pso2_vita_offline] a recovery item on oneself (see consumables.rs): heal, one off the stack,
+            // UpdateInventory to the user and DamageReceive with the new HP to everyone
+            let Some(item) = crate::consumables::by_attack(dmg.attack_id) else {
+                log::warn!("[pso2-item] unknown self attack {} {dmg:?}", dmg.attack_id);
+                return Ok(None);
+            };
+            if inflicter.id != target.id {
+                log::warn!("[pso2-item] {} on another player is not handled", item.skill);
+                return Ok(None);
+            }
+            let Some(user) = self
+                .players
+                .iter()
+                .find(|u| u.player_id == target.id)
+                .and_then(|p| p.user.upgrade())
+            else {
+                return Err(Error::InvalidInput("deal_damage"));
+            };
+            let mut lock = user.lock().await;
+            let Some(inv_packet) = lock
+                .character
+                .as_mut()
+                .and_then(|c| c.inventory.use_consumable(item.item_id()))
+            else {
+                log::warn!("[pso2-item] {} used but none held", item.skill);
+                return Ok(None);
+            };
+            let (hp, max) = lock.get_stats().get_hp();
+            let new_hp = if hp == 0 { 0 } else { (hp + max * item.hp_percent / 100).min(max) };
+            lock.get_stats_mut().set_hp(new_hp);
+            log::info!("[pso2-item] {} hp {hp} -> {new_hp}/{max} (+{}%)", item.skill, item.hp_percent);
+            lock.try_send_packet(&inv_packet)?;
+            drop(lock);
+            let mut packet = Packet::DamageReceive(DamageReceivePacket {
+                dmg_target: target,
+                dmg_inflicter: inflicter,
+                damage_id: dmg.attack_id,
+                dmg_amount: -((new_hp - hp) as i32),
+                new_hp,
+                hitbox_id: dmg.hitbox_id,
+                x_pos: dmg.x_pos,
+                y_pos: dmg.y_pos,
+                z_pos: dmg.z_pos,
+                ..Default::default()
+            });
+            exec_users(&self.players, |_, mut player| {
+                if let Packet::DamageReceive(data) = &mut packet {
+                    data.receiver = player.create_object_header();
+                    let _ = player.try_send_packet(&packet);
+                }
+            })
+            .await;
+            return Ok(None);
+        }
         if inflicter.entity_type == ObjectType::Player && target.entity_type == ObjectType::Object {
             let Some((enemy_pos, (_, target))) = self
                 .enemies

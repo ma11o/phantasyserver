@@ -1,0 +1,10 @@
+{
+ "source": "hp_percent: pso2_research systems.consumables reviewed_effect (swiki 戦闘消耗アイテム, PC). skill: client common.ski. Dimate / Trimate / atomizers: the skill name sent as attack_id is unchecked (only Monomate was seen)",
+ "items": [
+  {"skill": "Monomate", "item": [3, 1, 0], "hp_percent": 30},
+  {"skill": "Dimate", "item": [3, 1, 1], "hp_percent": 60},
+  {"skill": "Trimate", "item": [3, 1, 2], "hp_percent": 100},
+  {"skill": "SolAtomizer", "item": [3, 1, 6], "hp_percent": 0},
+  {"skill": "StarAtomizer", "item": [3, 1, 8], "hp_percent": 50}
+ ]
+}

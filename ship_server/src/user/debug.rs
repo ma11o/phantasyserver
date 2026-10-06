@@ -548,6 +548,31 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 pos.pos_z.to_f32()
             ))
         }
+        ("give", [id, rest @ ..]) if rest.len() <= 1 => {
+            // give type:id:subid [n]: a consumable straight into the inventory, as a pickup does (UpdateInventory onto
+            // a stack of 10 or less, else AddedItem)
+            let usage = "give type:id:subid [n]";
+            let n: Vec<u16> = id.split(':').map(parse_num).collect::<Option<_>>().ok_or(Error::InvalidInput(usage))?;
+            let [t, i, sub] = n[..] else { return Err(Error::InvalidInput(usage)) };
+            let amount = match rest { [a] => parse_num::<u16>(a).ok_or(Error::InvalidInput(usage))?, _ => 1 };
+            let mut item = crate::map::monomate();
+            item.id.item_type = t;
+            item.id.id = i;
+            item.id.subid = sub;
+            if let pso2packetlib::protocol::items::ItemType::Consumable(c) = &mut item.data {
+                c.amount = amount;
+            }
+            let mut lock = user.lock().await;
+            let lock = &mut *lock;
+            let packet = lock
+                .character
+                .as_mut()
+                .ok_or(Error::InvalidInput("no character"))?
+                .inventory
+                .add_picked_item(item, &mut lock.user_data.last_uuid);
+            lock.send_packet(&packet).await?;
+            Ok(format!("give {t}:{i}:{sub} x{amount}"))
+        }
         ("grind", opts) => {
             // grind <n> [element=E force=F affix=a,b,..]: set the equipped weapon's grind (and element, affixes),
             // recompute the stats and resend it as AddedItem 0F-05 with the same uuid
