@@ -24,6 +24,8 @@ pub struct PlayerStats {
     base_mel_def: u32,
     base_rng_def: u32,
     base_tec_def: u32,
+    /// Damage taken from skills (FuryStance), 0 = none; the multiplier is `1 + taken_extra`
+    taken_extra: f32,
 }
 
 #[derive(Debug, Clone, Default)]
@@ -157,6 +159,29 @@ impl PlayerStats {
             add(&mut resulting_stats.max_hp, b.hp);
             add(&mut resulting_stats.hp, b.hp);
             add(&mut resulting_stats.dex, b.dex);
+        }
+        // [pso2_vita_offline] passive skills (provisional build, see skills.rs): flat adds, then the attack
+        // multipliers on base and weapon attack together (order of the multipliers is not checked)
+        let class_name = if char_data.classes.main_class == Class::Hunter { "hunter" } else { "" };
+        let sk = crate::skills::bonus(class_name, level as u32);
+        if sk != Default::default() {
+            let r = &mut resulting_stats;
+            r.max_hp += sk.hp;
+            r.hp += sk.hp;
+            r.dex += sk.dex;
+            r.base_mel_pwr += sk.s_atk;
+            r.base_mel_def += sk.s_def;
+            let (m0, r0) = (r.base_mel_pwr + r.weapon_mel_pwr, r.base_rng_pwr + r.weapon_rng_pwr);
+            r.base_mel_pwr = (r.base_mel_pwr as f32 * sk.s_atk_mul) as u32;
+            r.weapon_mel_pwr = (r.weapon_mel_pwr as f32 * sk.s_atk_mul) as u32;
+            r.base_rng_pwr = (r.base_rng_pwr as f32 * sk.r_atk_mul) as u32;
+            r.weapon_rng_pwr = (r.weapon_rng_pwr as f32 * sk.r_atk_mul) as u32;
+            r.taken_extra = sk.taken_mul - 1.0;
+            log::debug!(
+                "[pso2-battle] skills hp +{} mel +{} def +{} atk x{:.3} (mel {m0} -> {}, rng {r0} -> {}) taken x{:.2}",
+                sk.hp, sk.s_atk, sk.s_def, sk.s_atk_mul, r.base_mel_pwr + r.weapon_mel_pwr,
+                r.base_rng_pwr + r.weapon_rng_pwr, sk.taken_mul
+            );
         }
         Ok(resulting_stats)
     }
@@ -462,7 +487,7 @@ impl EnemyStats {
             data_structs::stats::AttackType::Rng => player.base_rng_def,
             data_structs::stats::AttackType::Tec => player.base_tec_def,
         };
-        let total_mul = 1.0;
+        let total_mul = 1.0 + player.taken_extra;
         let min_pure_attack = min_pwr.saturating_sub(def).clamp(1, u32::MAX) as f32;
         let pure_attack = max_pwr.saturating_sub(def).clamp(1, u32::MAX) as f32;
         let damage_mul = match damage.damage {

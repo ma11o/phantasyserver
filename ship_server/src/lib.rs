@@ -5,6 +5,7 @@
 #![allow(dead_code)]
 
 mod affixes;
+mod skills;
 mod battle_stats;
 mod drops;
 mod block;
