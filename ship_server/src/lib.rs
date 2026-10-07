@@ -349,7 +349,7 @@ async fn make_block_balance(
     port: u16,
 ) -> io::Result<()> {
     use tokio::net::TcpListener;
-    let listener = TcpListener::bind(("127.0.0.1", port)).await?;
+    let listener = TcpListener::bind((data_structs::listen_addr().as_str(), port)).await?;
     tokio::spawn(async move {
         loop {
             match listener.accept().await {

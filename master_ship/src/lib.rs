@@ -590,9 +590,9 @@ async fn make_query(servers: Arc<MSData>) -> io::Result<()> {
     let mut info_listeners: Vec<TcpListener> = vec![];
     for i in 0..10 {
         // pc ships
-        info_listeners.push(TcpListener::bind(("127.0.0.1", 12199 + (i * 100))).await?);
+        info_listeners.push(TcpListener::bind((data_structs::listen_addr().as_str(), 12199 + (i * 100))).await?);
         // vita ships
-        info_listeners.push(TcpListener::bind(("127.0.0.1", 12094 + (i * 100))).await?);
+        info_listeners.push(TcpListener::bind((data_structs::listen_addr().as_str(), 12094 + (i * 100))).await?);
     }
     for listener in info_listeners {
         let servers = servers.clone();
@@ -646,9 +646,9 @@ async fn make_block_balance(server_statuses: Arc<MSData>) -> Result<(), Error> {
     let mut listeners = vec![];
     for i in 0..10 {
         //pc balance
-        listeners.push(TcpListener::bind(("127.0.0.1", 12100 + (i * 100))).await?);
+        listeners.push(TcpListener::bind((data_structs::listen_addr().as_str(), 12100 + (i * 100))).await?);
         //vita balance
-        listeners.push(TcpListener::bind(("127.0.0.1", 12093 + (i * 100))).await?);
+        listeners.push(TcpListener::bind((data_structs::listen_addr().as_str(), 12093 + (i * 100))).await?);
     }
     for listener in listeners {
         let server_statuses = server_statuses.clone();

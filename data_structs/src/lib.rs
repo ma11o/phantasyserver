@@ -161,6 +161,15 @@ pub struct ServerData {
     pub default_classes: DefaultClassesData,
 }
 
+/// Address the client-facing listeners bind to: `PSO2_LISTEN` (e.g. the LAN address, to let
+/// another device on the network connect), or loopback by default.
+pub fn listen_addr() -> String {
+    std::env::var("PSO2_LISTEN")
+        .ok()
+        .filter(|s| !s.is_empty())
+        .unwrap_or_else(|| "127.0.0.1".to_string())
+}
+
 pub fn name_to_id(name: &str) -> u32 {
     name.chars().fold(0u32, |acc, c| {
         acc ^ ((acc << 6).overflowing_add((acc >> 2).overflowing_sub(0x61c88647 - c as u32).0)).0
