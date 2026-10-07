@@ -280,7 +280,7 @@ async fn grind_result(user: &mut User, ok: bool) -> HResult {
 }
 
 /// An `Item` as the client reads it (0x38 B: uuid, ItemId, 0x28 B data), through the library's own writer
-fn item_bytes(item: &Item) -> Vec<u8> {
+pub(super) fn item_bytes(item: &Item) -> Vec<u8> {
     let p = Packet::AddedItem(pso2packetlib::protocol::items::AddedItemPacket {
         item: item.clone(),
         ..Default::default()

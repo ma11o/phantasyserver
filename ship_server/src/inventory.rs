@@ -591,6 +591,68 @@ impl Inventory {
             ..Default::default()
         }))
     }
+    /// [pso2_vita_offline] Shop (shop.rs): the bag's entries
+    pub fn bag_items(&self) -> &[Item] {
+        &self.inventory.items
+    }
+    /// [pso2_vita_offline] Shop (shop.rs): LoadItem (0F-30) for the ids the client has no name for yet
+    pub fn load_names(&mut self, items: &[Item], item_names: &ItemParameters, lang: Language) -> Option<Packet> {
+        load_items_inner(&mut self.loaded_items, items, item_names, lang).map(Packet::LoadItem)
+    }
+    /// [pso2_vita_offline] Shop (shop.rs): `amount` of a bought item into the bag. A consumable fills stacks of the
+    /// same id up to `stack` and opens new ones; anything else is one new entry per piece. Returns every touched
+    /// entry as it is now. `uuid` is the user's last_uuid (never below the bag's uuids, as add_picked_item).
+    pub fn add_bought(&mut self, item: &Item, amount: u16, stack: u16, uuid: &mut u64) -> Vec<Item> {
+        let mut out = vec![];
+        let mut left = amount;
+        let mut next_uuid = |items: &Vec<Item>| {
+            let next = items.iter().map(|i| i.uuid).max().unwrap_or(0) + 1;
+            *uuid = (*uuid).max(next);
+            let u = *uuid;
+            *uuid += 1;
+            u
+        };
+        if let ItemType::Consumable(_) = &item.data {
+            for i in self.inventory.items.iter_mut().filter(|i| i.id == item.id) {
+                if let ItemType::Consumable(c) = &mut i.data {
+                    let add = left.min(stack.saturating_sub(c.amount));
+                    if add > 0 {
+                        c.amount += add;
+                        left -= add;
+                        out.push(i.clone());
+                    }
+                }
+            }
+            while left > 0 {
+                let n = left.min(stack.max(1));
+                let mut new = item.clone();
+                if let ItemType::Consumable(c) = &mut new.data {
+                    c.amount = n;
+                }
+                new.uuid = next_uuid(&self.inventory.items);
+                self.inventory.items.push(new.clone());
+                out.push(new);
+                left -= n;
+            }
+        } else {
+            for _ in 0..amount {
+                let mut new = item.clone();
+                new.uuid = next_uuid(&self.inventory.items);
+                self.inventory.items.push(new.clone());
+                out.push(new);
+            }
+        }
+        out
+    }
+    /// [pso2_vita_offline] Shop: take `amount` of a bag entry to sell. Returns the entry as it was and the amount left
+    /// (0 = gone), or None when it is not in the bag.
+    pub fn take_for_sale(&mut self, uuid: u64, amount: u16) -> Option<(Item, u16)> {
+        let before = self.inventory.items.iter().find(|i| i.uuid == uuid)?.clone();
+        match decrease_item(&mut self.inventory.items, uuid, amount.max(1)).ok()? {
+            ChangeItemResult::Changed { new_amount, .. } => Some((before, new_amount)),
+            _ => Some((before, 0)),
+        }
+    }
     /// [pso2_vita_offline] Item lab (lab.rs): held meseta
     pub fn meseta(&self) -> u64 {
         self.inventory.meseta
@@ -749,7 +811,11 @@ fn increase_item(
     item: Item,
     amount: u16,
 ) -> Result<ChangeItemResult, Error> {
-    let inv_item = items.iter_mut().find(|x| x.id == item.id);
+    // [pso2_vita_offline] only consumables stack; a second weapon of the same id is its own entry (fork元 failed
+    // with InvalidInput after the item had already left the other side, losing it)
+    let inv_item = items
+        .iter_mut()
+        .find(|x| x.id == item.id && matches!((&x.data, &item.data), (ItemType::Consumable(_), ItemType::Consumable(_))));
     match inv_item {
         Some(i_item) => {
             if let ItemType::Consumable(i_data) = &mut i_item.data {

@@ -14,6 +14,7 @@ pub mod player_status;
 pub mod quest;
 pub mod server;
 pub mod settings;
+pub mod shop;
 pub mod symbolart;
 
 type HResult = Result<Action, Error>;

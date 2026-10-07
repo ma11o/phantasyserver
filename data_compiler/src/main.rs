@@ -516,6 +516,34 @@ fn create_attr_files(path: &Path, srv_data: &mut ServerData) -> Result<(), Box<d
                     // Sword reads 0x41 and the client shows 1 star
                     w.rarity &= 0x0F;
                 }
+                // PSO2_DUMP_VITA_WEAPONS=<file>: the weapons as TSV (id, subid, rarity, melee, range, force raw,
+                // req_stat, req_stat_type, unk1..unk12 raw) for matching names outside the client's name cache
+                if let Some(out) = env::var_os("PSO2_DUMP_VITA_WEAPONS") {
+                    let mut t = String::new();
+                    for w in srv_data.item_params.attrs.weapons.iter() {
+                        t += &format!(
+                            "{}\t{}\t{}\t{}\t{}\t{}\t{}\t{:?}\t{:?}\n",
+                            w.id,
+                            w.subid,
+                            w.rarity,
+                            w.melee_dmg,
+                            w.range_dmg,
+                            w.gender_force_dmg.force_dmg,
+                            w.req_stat,
+                            w.req_stat_type,
+                            w
+                        );
+                    }
+                    fs::write(&out, t)?;
+                    println!("dumped weapons to {out:?}");
+                    let mut t = String::new();
+                    for c in srv_data.item_params.attrs.consumables.iter() {
+                        t += &format!("{}\t{}\t{}\t{:?}\n", c.id, c.subid, c.max_qty, c);
+                    }
+                    let mut out = out.clone();
+                    out.push(".consumables");
+                    fs::write(&out, t)?;
+                }
             }
             Err(e) => println!("Vita item_parameter.bin from {path:?}: {} bytes, not parsed ({e})", raw.len()),
         }

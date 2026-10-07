@@ -1,0 +1,114 @@
+{
+ "item_shop": {
+  "id": 2,
+  "items": [
+   {
+    "item": "3:1:0",
+    "name": "モノメイト",
+    "price": 50,
+    "sell": 10,
+    "source": "research shops.pspedia.memberships + systems.consumables"
+   },
+   {
+    "item": "3:1:1",
+    "name": "ディメイト",
+    "price": 150,
+    "sell": 30,
+    "source": "research shops.pspedia.memberships + systems.consumables"
+   },
+   {
+    "item": "3:1:2",
+    "name": "トリメイト",
+    "price": 400,
+    "sell": 80,
+    "source": "research shops.pspedia.memberships + systems.consumables"
+   },
+   {
+    "item": "3:1:6",
+    "name": "ソルアトマイザー",
+    "price": 200,
+    "sell": 40,
+    "source": "research shops.pspedia.memberships + systems.consumables"
+   },
+   {
+    "item": "3:1:7",
+    "name": "ムーンアトマイザー",
+    "price": 250,
+    "sell": 50,
+    "source": "research shops.pspedia.memberships + systems.consumables"
+   },
+   {
+    "item": "3:1:8",
+    "name": "スターアトマイザー",
+    "price": 500,
+    "sell": 100,
+    "source": "research shops.pspedia.memberships + systems.consumables"
+   },
+   {
+    "item": "3:1:11",
+    "name": "シフタライド",
+    "price": 200,
+    "sell": 40,
+    "source": "research shops.pspedia.memberships + systems.consumables"
+   },
+   {
+    "item": "3:1:12",
+    "name": "デバンライド",
+    "price": 200,
+    "sell": 40,
+    "source": "research shops.pspedia.memberships + systems.consumables"
+   },
+   {
+    "item": "3:7:0",
+    "name": "テレパイプ",
+    "price": 200,
+    "sell": 20,
+    "source": "research shops.pspedia.memberships + systems.consumables"
+   },
+   {
+    "item": "3:7:1",
+    "name": "グラインダー",
+    "price": 200,
+    "sell": 20,
+    "source": "仮 (研究の品目に無い。T68 の強化の素材。テレパイプと同じ値段)"
+   }
+  ]
+ },
+ "weapon_shop": {
+  "id": 1,
+  "source": "仮 (研究 shops.pspedia.random_stock_rules は仕様だけ。間隔・確率・値段は無い)",
+  "refresh_minutes": 60,
+  "levels": [
+   {
+    "level_min": 1,
+    "rarity_max": 2,
+    "count": 8
+   },
+   {
+    "level_min": 10,
+    "rarity_max": 3,
+    "count": 12
+   },
+   {
+    "level_min": 20,
+    "rarity_max": 4,
+    "count": 16
+   },
+   {
+    "level_min": 30,
+    "rarity_max": 5,
+    "count": 20
+   },
+   {
+    "level_min": 40,
+    "rarity_max": 6,
+    "count": 24
+   }
+  ],
+  "per_rarity": 1000,
+  "per_affix": 500
+ },
+ "sell_ratio": 0.1,
+ "sell_default": 10,
+ "source_note": "item_parameter.bin に買値・売値の欄は見つからなかった (T72、モノメイトの未読の欄は回復量)"
+}
