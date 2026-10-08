@@ -2081,6 +2081,35 @@
           "rot_w": 47528
         }
       }
+    },
+    {
+      "name": "cutscene",
+      "is_special_zone": true,
+      "zone_id": 3,
+      "settings": {
+        "world_id": 301,
+        "unk1": 0,
+        "zone_id": 4294967293,
+        "map_id": 9000,
+        "zone_type": 0,
+        "seed": 0,
+        "args": 0,
+        "size_x": 0,
+        "size_y": 0,
+        "unk2": 0,
+        "area_index": 4294967295,
+        "sub_area": 4294967295,
+        "unk3": 2561
+      },
+      "default_location": {
+        "rot_x": 0,
+        "rot_y": 0,
+        "rot_z": 0,
+        "rot_w": 15360,
+        "pos_x": 0,
+        "pos_y": 17664,
+        "pos_z": 0
+      }
     }
   ],
   "init_map": 1
