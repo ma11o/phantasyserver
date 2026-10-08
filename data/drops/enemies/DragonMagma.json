@@ -1,0 +1,122 @@
+{
+  "rate": 1.0,
+  "drop_count": {
+    "min": 4,
+    "max": 4
+  },
+  "rare_rate": 0.0,
+  "source": "research (volcano, T80): cirnopedia area ~ Volcano + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:1:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 11,
+      "level_max": 20,
+      "name": "ザックス",
+      "source": "swiki swiki-enemy-8ce3f4c95617ade8761a"
+    },
+    {
+      "item": "1:1:42",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "ヴォルスケイル",
+      "source": "swiki swiki-enemy-766e3d0bd11871522531"
+    },
+    {
+      "item": "1:4:41",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "フィンヴォルグ",
+      "source": "swiki swiki-enemy-766e3d0bd11871522531"
+    },
+    {
+      "item": "1:12:17",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ヴィスバーン",
+      "source": "swiki swiki-enemy-bfc438eb9f21589eadac"
+    },
+    {
+      "item": "1:1:24",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ブリザックス",
+      "source": "swiki swiki-enemy-ae29196de2b795324d21"
+    },
+    {
+      "item": "1:10:15",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ラムダラディエグル",
+      "source": "swiki swiki-enemy-291987a09225bdfccfa7"
+    },
+    {
+      "item": "1:12:51",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "グリンデュエルゲイズ",
+      "source": "swiki swiki-enemy-cee2c98adbcbb77f4d26"
+    },
+    {
+      "item": "1:4:20",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオアステラ",
+      "source": "swiki swiki-enemy-016d1f719e65a0c31e70"
+    },
+    {
+      "item": "1:17:97",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ヒャッカリョウラン",
+      "source": "swiki swiki-enemy-016d1f719e65a0c31e70"
+    },
+    {
+      "item": "1:6:104",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ベルトシュバンカー",
+      "source": "swiki swiki-enemy-a0a6a2a5a1a154ba1602"
+    },
+    {
+      "item": "1:11:105",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "スイレンシャク",
+      "source": "swiki swiki-enemy-6fd2db01233064876071"
+    }
+  ],
+  "boss_drops": 4
+}

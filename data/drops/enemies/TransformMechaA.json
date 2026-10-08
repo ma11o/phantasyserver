@@ -1,0 +1,111 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (desert, T80): cirnopedia area ~ Desert + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:7:21",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "サーハリング",
+      "source": "swiki swiki-enemy-6b6785a36de43909bf8a"
+    },
+    {
+      "item": "1:12:52",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "メタリソリドム",
+      "source": "swiki swiki-enemy-6b6785a36de43909bf8a"
+    },
+    {
+      "item": "1:2:36",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ベルクヴェルカー",
+      "source": "swiki swiki-enemy-2110018278ecafc499e5"
+    },
+    {
+      "item": "1:6:57",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "マイザークロウ",
+      "source": "swiki swiki-enemy-2110018278ecafc499e5"
+    },
+    {
+      "item": "1:10:62",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "マイザーバレット",
+      "source": "swiki swiki-enemy-2110018278ecafc499e5"
+    },
+    {
+      "item": "1:7:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ラムダブラオレット",
+      "source": "swiki swiki-enemy-8cd9b4146d1c4a920b7a"
+    },
+    {
+      "item": "1:4:43",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "マイザーリッパー",
+      "source": "swiki swiki-enemy-f83bba609ae8cfef4681"
+    },
+    {
+      "item": "1:5:69",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "テンイムソウ",
+      "source": "swiki swiki-enemy-f83bba609ae8cfef4681"
+    },
+    {
+      "item": "1:14:77",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "エレヌバティン",
+      "source": "swiki swiki-enemy-cf65c0cc08a88bfe13da"
+    },
+    {
+      "item": "1:10:76",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "ノワルミラーズ",
+      "source": "swiki swiki-enemy-4e573e6cd6693b209d2b"
+    }
+  ]
+}

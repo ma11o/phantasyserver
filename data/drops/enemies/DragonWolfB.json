@@ -1,0 +1,71 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (volcano, T80): cirnopedia area ~ Volcano + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:7:29",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "アキシオン",
+      "source": "swiki swiki-enemy-c2e4cde94865bfa831ba"
+    },
+    {
+      "item": "1:7:28",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "アインマズルガ",
+      "source": "swiki swiki-enemy-1fbb830726c5ec849f81"
+    },
+    {
+      "item": "1:4:36",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "メッサーアゲート",
+      "source": "swiki swiki-enemy-1fbb830726c5ec849f81"
+    },
+    {
+      "item": "1:7:30",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "カラカサジコミ",
+      "source": "swiki swiki-enemy-86696d29966b9d9c69b2"
+    },
+    {
+      "item": "1:12:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "シルキーコレット",
+      "source": "swiki swiki-enemy-150e7b752d2432a9e4b2"
+    },
+    {
+      "item": "1:15:97",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "クラテルアーチェ",
+      "source": "swiki swiki-enemy-55f65cf55aa7b05c58cb"
+    }
+  ]
+}

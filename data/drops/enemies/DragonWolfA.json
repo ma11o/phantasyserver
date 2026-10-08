@@ -1,0 +1,71 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (volcano, T80): cirnopedia area ~ Volcano + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:2:15",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "クシャネビュラ",
+      "source": "swiki swiki-enemy-ebb0c107bfd4eef2e1e0"
+    },
+    {
+      "item": "1:1:19",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "アーディロウ",
+      "source": "swiki swiki-enemy-043ab212d081deb26539"
+    },
+    {
+      "item": "1:4:36",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "メッサーアゲート",
+      "source": "swiki swiki-enemy-043ab212d081deb26539"
+    },
+    {
+      "item": "1:9:20",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ラムダアドラステア",
+      "source": "swiki swiki-enemy-82affd29f03b8918b423"
+    },
+    {
+      "item": "1:15:18",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオタービュラス",
+      "source": "swiki swiki-enemy-5ffdcc111b84a225b6c0"
+    },
+    {
+      "item": "1:2:116",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "クラテルネイルス",
+      "source": "swiki swiki-enemy-ec3f5d7dc4664acdd7e1"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (volcano, T80): cirnopedia area ~ Volcano + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:5:27",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "ダブルセイバーレガシー",
+      "source": "swiki swiki-enemy-3225f4ef465e620ad5d4"
+    },
+    {
+      "item": "1:16:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "ラムダラウンジブル",
+      "source": "swiki swiki-enemy-3225f4ef465e620ad5d4"
+    },
+    {
+      "item": "1:7:27",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ガンスラッシュゼロ",
+      "source": "swiki swiki-enemy-1d1d0ea118b5b7c412a5"
+    },
+    {
+      "item": "1:3:41",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ディッグピラー",
+      "source": "swiki swiki-enemy-9d4c5b779609f08142f6"
+    },
+    {
+      "item": "1:5:19",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオスピルティア",
+      "source": "swiki swiki-enemy-321ae8da241464c38a05"
+    },
+    {
+      "item": "1:5:97",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "パッカーヴォーグ",
+      "source": "swiki swiki-enemy-c593ba7519b8dc330599"
+    }
+  ]
+}

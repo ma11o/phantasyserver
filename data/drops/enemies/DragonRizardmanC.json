@@ -1,0 +1,71 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (volcano, T80): cirnopedia area ~ Volcano + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:13:28",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 11,
+      "level_max": 20,
+      "name": "ラコニウムの杖",
+      "source": "swiki swiki-enemy-175b70ef11774ae84b8b"
+    },
+    {
+      "item": "1:11:48",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "ディニアロッド",
+      "source": "swiki swiki-enemy-1d4c828148951451daf0"
+    },
+    {
+      "item": "1:13:34",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "シュミットール",
+      "source": "swiki swiki-enemy-0a781c7a0b9d5f3cb215"
+    },
+    {
+      "item": "1:11:19",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "シージプロセッサ",
+      "source": "swiki swiki-enemy-039d6e94a5351e67994c"
+    },
+    {
+      "item": "1:13:53",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ヴォルカノメイス",
+      "source": "swiki swiki-enemy-cad726a866d88d1bad52"
+    },
+    {
+      "item": "1:11:131",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ベルトロダン",
+      "source": "swiki swiki-enemy-5116bc80118806504515"
+    }
+  ]
+}

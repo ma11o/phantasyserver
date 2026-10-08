@@ -1,0 +1,91 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (desert, T80): cirnopedia area ~ Desert + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:10:52",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "スパルマシンガン",
+      "source": "swiki swiki-enemy-08736f7610459b7fa9f4"
+    },
+    {
+      "item": "1:16:31",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "ハルトブリズ",
+      "source": "swiki swiki-enemy-08736f7610459b7fa9f4"
+    },
+    {
+      "item": "1:2:24",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ベルカード",
+      "source": "swiki swiki-enemy-ca0c73dcd37dd68f3e88"
+    },
+    {
+      "item": "1:10:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダアレスヴィス",
+      "source": "swiki swiki-enemy-a497327d2b49bc4081dc"
+    },
+    {
+      "item": "1:7:37",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "デオマズルガ",
+      "source": "swiki swiki-enemy-366e2ae9807964c13f1f"
+    },
+    {
+      "item": "1:8:53",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "アラオシリンダー",
+      "source": "swiki swiki-enemy-765449330d7c5af43d7e"
+    },
+    {
+      "item": "1:10:127",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "エレヌトレーガー",
+      "source": "swiki swiki-enemy-72e348126367e75c5dc2"
+    },
+    {
+      "item": "1:8:70",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "ヴァルツフェニクス",
+      "source": "swiki swiki-enemy-4264daf693da6efe725b"
+    }
+  ]
+}

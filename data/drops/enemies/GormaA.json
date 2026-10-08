@@ -1,0 +1,81 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (desert, T80): cirnopedia area ~ Desert + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:2:27",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "デイライトスカー",
+      "source": "swiki swiki-enemy-327979889a535f50bf80"
+    },
+    {
+      "item": "1:17:34",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "フォルブライト",
+      "source": "swiki swiki-enemy-327979889a535f50bf80"
+    },
+    {
+      "item": "1:3:45",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "スパルダイオン",
+      "source": "swiki swiki-enemy-da070f1ba4fb52def2aa"
+    },
+    {
+      "item": "1:1:22",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ラムダアリスティン",
+      "source": "swiki swiki-enemy-16bfd187f1db3fbb7ca2"
+    },
+    {
+      "item": "1:3:52",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "フリューシャジール",
+      "source": "swiki swiki-enemy-704baa7759c69e182bd0"
+    },
+    {
+      "item": "1:3:108",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "エレヌパラータ",
+      "source": "swiki swiki-enemy-8c236f49e517203b7959"
+    },
+    {
+      "item": "1:8:70",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "ヴァルツフェニクス",
+      "source": "swiki swiki-enemy-f717a593fbcf9735d838"
+    }
+  ]
+}

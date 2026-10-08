@@ -1,0 +1,71 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (desert, T80): cirnopedia area ~ Desert + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:13:15",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "レガリア",
+      "source": "swiki swiki-enemy-b70964eebca551943524"
+    },
+    {
+      "item": "1:16:30",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "サーハブリズ",
+      "source": "swiki swiki-enemy-b70964eebca551943524"
+    },
+    {
+      "item": "1:12:27",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "タリスレガシー",
+      "source": "swiki swiki-enemy-c1967da0a84d4251b752"
+    },
+    {
+      "item": "1:6:18",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "エイヴィンド",
+      "source": "swiki swiki-enemy-d92d91f1f60a8a815abf"
+    },
+    {
+      "item": "1:4:27",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ブレイドダンス",
+      "source": "swiki swiki-enemy-8d9562b04cbf0fcf038d"
+    },
+    {
+      "item": "1:15:40",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ティラールク",
+      "source": "swiki swiki-enemy-b8fe6ae76c84f94939f5"
+    }
+  ]
+}

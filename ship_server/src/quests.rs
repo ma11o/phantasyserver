@@ -21,8 +21,11 @@ pub struct Quests {
 }
 
 
-/// Quests listed at the counter for every character (forest exploration; the fork's test quest 200030 is no longer listed).
-const ALWAYS_UNLOCKED: &[u32] = &[20010];
+/// Quests listed at the counter for every character: every free field that has a definition
+/// (name_id 20000..30000, quest_type Expedition). The fork's test quest 200030 is not listed.
+fn always_unlocked(q: &QuestData) -> bool {
+    (20000..30000).contains(&q.definition.name_id) && q.definition.quest_type == QuestType::Expedition
+}
 impl Quests {
     pub const fn load(quests: Vec<QuestData>) -> Self {
         Self { quests }
@@ -32,7 +35,7 @@ impl Quests {
         for quest in self
             .quests
             .iter()
-            .filter(|q| unlocked.contains(&q.definition.name_id) || ALWAYS_UNLOCKED.contains(&q.definition.name_id))
+            .filter(|q| unlocked.contains(&q.definition.name_id) || always_unlocked(q))
         {
             match quest.definition.quest_type {
                 QuestType::Unk0 => {
@@ -318,7 +321,7 @@ impl Quests {
             quests: self
                 .quests
                 .iter()
-                .filter(|q| unlocked.contains(&q.definition.name_id) || ALWAYS_UNLOCKED.contains(&q.definition.name_id))
+                .filter(|q| unlocked.contains(&q.definition.name_id) || always_unlocked(q))
                 .filter(|q| q.definition.quest_type == category)
                 .map(|q| {
                     let mut def = q.definition.clone();

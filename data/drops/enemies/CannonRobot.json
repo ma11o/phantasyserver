@@ -1,0 +1,71 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (desert, T80): cirnopedia area ~ Desert + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:3:39",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ルストデバイス",
+      "source": "swiki swiki-enemy-99ae7823da7f477f1c30"
+    },
+    {
+      "item": "1:8:56",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "シグノヘッドガン",
+      "source": "swiki swiki-enemy-10e033794898250cd94a"
+    },
+    {
+      "item": "1:9:67",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "シグノヘッドランチャー",
+      "source": "swiki swiki-enemy-10e033794898250cd94a"
+    },
+    {
+      "item": "1:9:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオウルスラグナ",
+      "source": "swiki swiki-enemy-5b95849136d4203cf373"
+    },
+    {
+      "item": "1:7:111",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "アラオスラッシュ",
+      "source": "swiki swiki-enemy-a275a84df08791fc5a25"
+    },
+    {
+      "item": "1:4:79",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "イブリスフィーダ",
+      "source": "swiki swiki-enemy-8d049aa8ceee52ed2ba4"
+    }
+  ]
+}

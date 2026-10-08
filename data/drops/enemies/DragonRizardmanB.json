@@ -1,0 +1,61 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (volcano, T80): cirnopedia area ~ Volcano + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:9:52",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "ディニアランチャー",
+      "source": "swiki swiki-enemy-619ce98c53016c56c0e5"
+    },
+    {
+      "item": "1:8:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダシュトラウス",
+      "source": "swiki swiki-enemy-687314667293bbfee255"
+    },
+    {
+      "item": "1:5:31",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "迅雷",
+      "source": "swiki swiki-enemy-6d079ea0d80e7cea92cd"
+    },
+    {
+      "item": "1:9:65",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "アグニバズーカ",
+      "source": "swiki swiki-enemy-f0c29dc2edd24fa59099"
+    },
+    {
+      "item": "1:10:128",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ベルトガベル",
+      "source": "swiki swiki-enemy-58ac4591e32e83b3998c"
+    }
+  ]
+}
