@@ -533,8 +533,12 @@ impl Map {
         // from it.
         if let (MapType::QuestMap, Some((pos, _, id, _))) = (&self.map_type, killed) {
             let zone = &self.zones[zone_pos];
+            // a quest with a boss clears only when the boss dies: the zones before it never clear on their own
+            let quest_has_boss = self.zones.iter().any(|z| z.boss_id.is_some() || z.data.boss.is_some());
             let clear = if zone.boss_id.is_some() || zone.data.boss.is_some() {
                 zone.boss_id == Some(id)
+            } else if quest_has_boss {
+                false
             } else {
                 zone.enemies.is_empty() && !zone.chunk_spawns.is_empty()
             };
