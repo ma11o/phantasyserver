@@ -1,0 +1,640 @@
+[
+  {
+    "attack_name": "Partisan:AA1Damage",
+    "damage_name": "Partisan:AA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.7
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:AA2Damage",
+    "damage_name": "Partisan:AA2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.67
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:AA3Damage",
+    "damage_name": "Partisan:AA3DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.36
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:GA1Damage",
+    "damage_name": "Partisan:GA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.7
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:GA2Damage",
+    "damage_name": "Partisan:GA2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.67
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:GA3Damage",
+    "damage_name": "Partisan:GA3DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.36
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA10c0",
+    "damage_name": "Partisan:PA10c0AddDmgA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA10",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA10c0Exp",
+    "damage_name": "Partisan:PA10c0Exp",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA10",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA10c1",
+    "damage_name": "Partisan:PA10c1AddDmgA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA10",
+        "mul": 0.11
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA10c1Exp",
+    "damage_name": "Partisan:PA10c1Exp",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA10",
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA11LDamage",
+    "damage_name": "Partisan:PA11LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA11",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA11LFinish",
+    "damage_name": "Partisan:PA11LFinishA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA11",
+        "mul": 0.74
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA11SDamage",
+    "damage_name": "Partisan:PA11SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA11",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA11SFinish",
+    "damage_name": "Partisan:PA11SFinishA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA11",
+        "mul": 0.64
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA1LBlowOut",
+    "damage_name": "Partisan:PA1LBlowOutA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA01",
+        "mul": 0.55
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA1LDamage",
+    "damage_name": "Partisan:PA1LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA01",
+        "mul": 0.11
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA1SBlowOut",
+    "damage_name": "Partisan:PA1SBlowOutA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA01",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA1SDamage",
+    "damage_name": "Partisan:PA1SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA01",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA2LDamage",
+    "damage_name": "Partisan:PA2LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA02",
+        "mul": 0.22
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA2SDamage",
+    "damage_name": "Partisan:PA2SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA02",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA3LBlowUp",
+    "damage_name": "Partisan:PA3LBlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA03",
+        "mul": 0.88
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA3LDamage",
+    "damage_name": "Partisan:PA3LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA03",
+        "mul": 0.22
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA3SBlowUp",
+    "damage_name": "Partisan:PA3SBlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA03",
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA3SDamage",
+    "damage_name": "Partisan:PA3SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA03",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA4LBlowUp",
+    "damage_name": "Partisan:PA4LBlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA04",
+        "mul": 0.605
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA4LTriggerG",
+    "damage_name": "Partisan:PA4LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA04",
+        "mul": 0.165
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA4LTriggerJ",
+    "damage_name": "Partisan:PA4LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA04",
+        "mul": 0.165
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA4SBlowUp",
+    "damage_name": "Partisan:PA4SBlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA04",
+        "mul": 0.55
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA4STriggerG",
+    "damage_name": "Partisan:PA4SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA04",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA4STriggerJ",
+    "damage_name": "Partisan:PA4SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA04",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA5LBlowUp",
+    "damage_name": "Partisan:PA5LBlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA05",
+        "mul": 0.22
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA5LDamage",
+    "damage_name": "Partisan:PA5LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA05",
+        "mul": 0.22
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA5SBlowUp",
+    "damage_name": "Partisan:PA5SBlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA05",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA5SDamage",
+    "damage_name": "Partisan:PA5SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA05",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA6LBlowOut",
+    "damage_name": "Partisan:PA6LBlowOutA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA06",
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA6LDamage",
+    "damage_name": "Partisan:PA6LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA06",
+        "mul": 0.451
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA6SBlowOut",
+    "damage_name": "Partisan:PA6SBlowOutA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA06",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA6SDamage",
+    "damage_name": "Partisan:PA6SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA06",
+        "mul": 0.41
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA7LBlowUp",
+    "damage_name": "Partisan:PA7LBlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA07",
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA7LDamage",
+    "damage_name": "Partisan:PA7LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA07",
+        "mul": 0.363
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA7SBlowUp",
+    "damage_name": "Partisan:PA7SBlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA07",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA7SDamage",
+    "damage_name": "Partisan:PA7SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA07",
+        "mul": 0.33
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA8LDamage",
+    "damage_name": "Partisan:PA8LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA08",
+        "mul": 0.374
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA8SDamage",
+    "damage_name": "Partisan:PA8SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA08",
+        "mul": 0.34
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA9CustomLc0Damage",
+    "damage_name": "Partisan:PA9CustomLc0DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA09",
+        "mul": 0.72
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA9CustomLc1Damage",
+    "damage_name": "Partisan:PA9CustomLc1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA09",
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA9CustomSc0Damage",
+    "damage_name": "Partisan:PA9CustomSc0DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA09",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA9CustomSc1Damage",
+    "damage_name": "Partisan:PA9CustomSc1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA09",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA9LDamage",
+    "damage_name": "Partisan:PA9LDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA09",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:PA9SDamage",
+    "damage_name": "Partisan:PA9SDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "PartisanPA09",
+        "mul": 0.34
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:SA1Damage",
+    "damage_name": "Partisan:SA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.0
+      }
+    }
+  },
+  {
+    "attack_name": "Partisan:SB1Damage",
+    "damage_name": "Partisan:SB1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.0
+      }
+    }
+  },
+  {
+    "attack_name": "item_Partisan:SlashStrong",
+    "damage_name": "Partisan:SlashStrongA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.75
+      }
+    }
+  },
+  {
+    "attack_name": "item_Partisan:SlashWeak",
+    "damage_name": "Partisan:SlashWeakA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.1
+      }
+    }
+  }
+]

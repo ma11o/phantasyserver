@@ -1,0 +1,491 @@
+[
+  {
+    "attack_name": "Knuckle:AA1Damage",
+    "damage_name": "Knuckle:AA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.8
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:AA1Damage2",
+    "damage_name": "Knuckle:AA1Damage2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.8
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:AA2Damage",
+    "damage_name": "Knuckle:AA2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 4.8
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:AA2Damage2",
+    "damage_name": "Knuckle:AA2Damage2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 4.8
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:AA3Damage",
+    "damage_name": "Knuckle:AA3DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 5.2
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:AA3Damage2",
+    "damage_name": "Knuckle:AA3Damage2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 5.2
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:GA1Damage",
+    "damage_name": "Knuckle:GA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.8
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:GA1Damage2",
+    "damage_name": "Knuckle:GA1Damage2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.8
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:GA2Damage",
+    "damage_name": "Knuckle:GA2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 4.8
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:GA2Damage2",
+    "damage_name": "Knuckle:GA2Damage2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 4.8
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:GA3Damage",
+    "damage_name": "Knuckle:GA3DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 5.2
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:GA3Damage2",
+    "damage_name": "Knuckle:GA3Damage2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 5.2
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:GPA1",
+    "damage_name": "Knuckle:GPA1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:GPA2",
+    "damage_name": "Knuckle:GPA2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA10A1Damage",
+    "damage_name": "Knuckle:PA10A1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA10",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA10A2Damage",
+    "damage_name": "Knuckle:PA10A2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA10",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA10B1Damage",
+    "damage_name": "Knuckle:PA10B1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA10",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA10B2Damage",
+    "damage_name": "Knuckle:PA10B2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA10",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA10C1Damage",
+    "damage_name": "Knuckle:PA10C1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA10",
+        "mul": 4.16
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA10C2Damage",
+    "damage_name": "Knuckle:PA10C2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA10",
+        "mul": 4.16
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA11Damage",
+    "damage_name": "Knuckle:PA11DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA11",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA11Hit",
+    "damage_name": "Knuckle:PA11HitA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA11",
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA1Damage",
+    "damage_name": "Knuckle:PA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA2Damage",
+    "damage_name": "Knuckle:PA2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA02",
+        "mul": 0.34
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA3Damage",
+    "damage_name": "Knuckle:PA3DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA03",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA4Damage",
+    "damage_name": "Knuckle:PA4DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA04",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA4DamageC1",
+    "damage_name": "Knuckle:PA4DamageC1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA04",
+        "mul": 0.44
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA4DamageC2",
+    "damage_name": "Knuckle:PA4DamageC2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA04",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA5C1BlowOut",
+    "damage_name": "Knuckle:PA5C1BlowOutA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA05",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA5C1Damage",
+    "damage_name": "Knuckle:PA5C1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA05",
+        "mul": 0.11
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA5C2BlowOut",
+    "damage_name": "Knuckle:PA5C2BlowOutA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA05",
+        "mul": 0.42
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA5C2Damage",
+    "damage_name": "Knuckle:PA5C2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA05",
+        "mul": 0.29
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA5Custom",
+    "damage_name": "Knuckle:PA5CustomA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA05",
+        "mul": 0.33
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA5CustomUp",
+    "damage_name": "Knuckle:PA5CustomUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA05",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA6Damage",
+    "damage_name": "Knuckle:PA6DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA06",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA7Damage",
+    "damage_name": "Knuckle:PA7DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA07",
+        "mul": 0.34
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA8BlowUp",
+    "damage_name": "Knuckle:PA8BlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA08",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA8Damage",
+    "damage_name": "Knuckle:PA8DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA08",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA9BlowOut1",
+    "damage_name": "Knuckle:PA9BlowOut1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA09",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA9BlowOut2",
+    "damage_name": "Knuckle:PA9BlowOut2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA09",
+        "mul": 1.13
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:PA9BlowOut3",
+    "damage_name": "Knuckle:PA9BlowOut3A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KnucklePA09",
+        "mul": 1.25
+      }
+    }
+  },
+  {
+    "attack_name": "Knuckle:SA1Damage",
+    "damage_name": "Knuckle:SA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 6.0
+      }
+    }
+  }
+]

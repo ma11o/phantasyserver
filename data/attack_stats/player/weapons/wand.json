@@ -1,0 +1,203 @@
+[
+  {
+    "attack_name": "Wand:GA1",
+    "damage_name": "Wand:GA1b",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.36
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:GA2",
+    "damage_name": "Wand:GA2b",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.0
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:GA3",
+    "damage_name": "Wand:GA3b",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.7
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:GearAddDark",
+    "damage_name": "Wand:GearAddDarkA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.4
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:GearAddFire",
+    "damage_name": "Wand:GearAddFireA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.4
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:GearAddIce",
+    "damage_name": "Wand:GearAddIceA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.4
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:GearAddLight",
+    "damage_name": "Wand:GearAddLightA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.4
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:GearAddNone",
+    "damage_name": "Wand:GearAddNone",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.4
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:GearAddThunder",
+    "damage_name": "Wand:GearAddThunderA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.4
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:GearAddWind",
+    "damage_name": "Wand:GearAddWindA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.4
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:PA1",
+    "damage_name": "Wand:PA1b",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WandPA01",
+        "mul": 0.08
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:PA1Charge",
+    "damage_name": "Wand:PA1ChargeB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WandPA01",
+        "mul": 0.66
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:PA1Charge2",
+    "damage_name": "Wand:PA1Charge2B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WandPA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Wand:SA1",
+    "damage_name": "Wand:SA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.5
+      }
+    }
+  },
+  {
+    "attack_name": "item_SaberStyleDamage",
+    "damage_name": "item_SaberStyleDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "item_SaberStyleDamageMst",
+    "damage_name": "item_SaberStyleDamageAMst",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "item_SaberStyleDamagePA",
+    "damage_name": "item_SaberStyleDamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.6
+      }
+    }
+  },
+  {
+    "attack_name": "item_SaberStyleDamagePA1",
+    "damage_name": "item_SaberStyleDamageC",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.4
+      }
+    }
+  }
+]

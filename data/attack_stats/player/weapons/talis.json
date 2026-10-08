@@ -1,0 +1,35 @@
+[
+  {
+    "attack_name": "Talis:GA1",
+    "damage_name": "Talis:GA1a",
+    "attack_type": "Tec",
+    "defense_type": "Tec",
+    "damage": {
+      "Generic": {
+        "mul": 0.58
+      }
+    }
+  },
+  {
+    "attack_name": "Talis:GA2",
+    "damage_name": "Talis:GA2a",
+    "attack_type": "Tec",
+    "defense_type": "Tec",
+    "damage": {
+      "Generic": {
+        "mul": 0.58
+      }
+    }
+  },
+  {
+    "attack_name": "Talis:GA3",
+    "damage_name": "Talis:GA3a",
+    "attack_type": "Tec",
+    "defense_type": "Tec",
+    "damage": {
+      "Generic": {
+        "mul": 0.58
+      }
+    }
+  }
+]

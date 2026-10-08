@@ -1,0 +1,511 @@
+[
+  {
+    "attack_name": "WLance:AA1",
+    "damage_name": "WLance:AA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.8
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:AA2",
+    "damage_name": "WLance:AA2a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.15
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:AA3",
+    "damage_name": "WLance:AA3a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 9.08
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:GA1",
+    "damage_name": "WLance:GA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.8
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:GA2",
+    "damage_name": "WLance:GA2a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.15
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:GA3",
+    "damage_name": "WLance:GA3a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 9.08
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA10",
+    "damage_name": "WLance:PA10A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA10",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA11",
+    "damage_name": "WLance:PA11A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA11",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA1AirTrigger",
+    "damage_name": "WLance:PA1TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA01",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA1Damage",
+    "damage_name": "WLance:PA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA01",
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA1Trigger",
+    "damage_name": "WLance:PA1TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA01",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA2",
+    "damage_name": "WLance:PA2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA02",
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA2AirTrigger",
+    "damage_name": "WLance:PA2TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA02",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA2Miss",
+    "damage_name": "WLance:PA2MissA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA02",
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA2Trigger",
+    "damage_name": "WLance:PA2TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA02",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA3AirTrigger",
+    "damage_name": "WLance:PA3TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA03",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA3Damage",
+    "damage_name": "WLance:PA3DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA03",
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA3Trigger",
+    "damage_name": "WLance:PA3TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA03",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA4",
+    "damage_name": "WLance:PA4DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA04",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA4AirTrigger",
+    "damage_name": "WLance:PA4TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA04",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA4C",
+    "damage_name": "WLance:PA4CDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA04",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA4CAirTrigger",
+    "damage_name": "WLance:PA4CTriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA04",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA4CFinish",
+    "damage_name": "WLance:PA4CFinishDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA04",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA4CSpin",
+    "damage_name": "WLance:PA4CSpinA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA04",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA4CTrigger",
+    "damage_name": "WLance:PA4CTriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA04",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA4Spin",
+    "damage_name": "WLance:PA4SpinA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA04",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA4Trigger",
+    "damage_name": "WLance:PA4TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA04",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA5",
+    "damage_name": "WLance:PA5A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA05",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA5AirTrigger",
+    "damage_name": "WLance:PA5TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA05",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA5Spin",
+    "damage_name": "WLance:PA5SpinA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA05",
+        "mul": 0.27
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA5Trigger",
+    "damage_name": "WLance:PA5TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA05",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA6",
+    "damage_name": "WLance:PA6A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA06",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA6AirTrigger",
+    "damage_name": "WLance:PA6TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA06",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA6D",
+    "damage_name": "WLance:PA6DA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA06",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA6Trigger",
+    "damage_name": "WLance:PA6TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA06",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA6Wire",
+    "damage_name": "WLance:PA6WireA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA06",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA7",
+    "damage_name": "WLance:PA7A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA07",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA8",
+    "damage_name": "WLance:PA8A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA08",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA8C",
+    "damage_name": "WLance:PA8CA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA08",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA8CFinish",
+    "damage_name": "WLance:PA8CFinishA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA08",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA8Finish",
+    "damage_name": "WLance:PA8FinishA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA08",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:PA9",
+    "damage_name": "WLance:PA9A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "WlancePA09",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "WLance:SA1",
+    "damage_name": "WLance:SA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.49
+      }
+    }
+  }
+]

@@ -1,0 +1,965 @@
+[
+  {
+    "attack_name": "ElementalBurstDark",
+    "damage_name": "ElementalBurstDarkA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.8
+      }
+    }
+  },
+  {
+    "attack_name": "ElementalBurstFire",
+    "damage_name": "ElementalBurstFireA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.8
+      }
+    }
+  },
+  {
+    "attack_name": "ElementalBurstIce",
+    "damage_name": "ElementalBurstIceA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.8
+      }
+    }
+  },
+  {
+    "attack_name": "ElementalBurstLight",
+    "damage_name": "ElementalBurstLightA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.8
+      }
+    }
+  },
+  {
+    "attack_name": "ElementalBurstThunder",
+    "damage_name": "ElementalBurstThunderA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.8
+      }
+    }
+  },
+  {
+    "attack_name": "ElementalBurstWind",
+    "damage_name": "ElementalBurstWindA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.8
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GA1",
+    "damage_name": "JetBoots:GA1Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.34
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GA1JumpNone",
+    "damage_name": "JetBoots:GA1Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.34
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GA2",
+    "damage_name": "JetBoots:GA2Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.81
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GA2JumpNone",
+    "damage_name": "JetBoots:GA2Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.81
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GA3",
+    "damage_name": "JetBoots:GA3Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 6.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GA3JumpNone",
+    "damage_name": "JetBoots:GA3Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 6.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GPAShift",
+    "damage_name": "JetBoots:GPAShiftA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GPAShiftJumpNone",
+    "damage_name": "JetBoots:GPAShiftA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GPAShot",
+    "damage_name": "JetBoots:GPAShotA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.18
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GPAShot2",
+    "damage_name": "JetBoots:GPAShot2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GPAShot2JumpNone",
+    "damage_name": "JetBoots:GPAShot2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GPAShotJumpNone",
+    "damage_name": "JetBoots:GPAShotA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.18
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GPAStun",
+    "damage_name": "JetBoots:GPAStunA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:GPAStunJumpNone",
+    "damage_name": "JetBoots:GPAStunA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:JumpDark",
+    "damage_name": "JetBoots:JumpDarkA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:JumpFire",
+    "damage_name": "JetBoots:JumpFireA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:JumpIce",
+    "damage_name": "JetBoots:JumpIceA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:JumpLight",
+    "damage_name": "JetBoots:JumpLightA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:JumpNone",
+    "damage_name": "JetBoots:JumpNoneA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:JumpThunder",
+    "damage_name": "JetBoots:JumpThunderA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:JumpWind",
+    "damage_name": "JetBoots:JumpWindA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1Custom",
+    "damage_name": "JetBoots:PA1CustomAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1CustomJumpNone",
+    "damage_name": "JetBoots:PA1CustomAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1CustomShift",
+    "damage_name": "JetBoots:PA1CustomShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1CustomShiftJumpNone",
+    "damage_name": "JetBoots:PA1CustomShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1CustomShiftUp",
+    "damage_name": "JetBoots:PA1CustomShiftUpAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1CustomShiftUpDown",
+    "damage_name": "JetBoots:PA1CustomShiftUpDownAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1CustomShiftUpDownJumpNone",
+    "damage_name": "JetBoots:PA1CustomShiftUpDownAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1CustomShiftUpJumpNone",
+    "damage_name": "JetBoots:PA1CustomShiftUpAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1CustomUp",
+    "damage_name": "JetBoots:PA1CustomUpAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.45
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1CustomUpJumpNone",
+    "damage_name": "JetBoots:PA1CustomUpAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.45
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1L",
+    "damage_name": "JetBoots:PA1LAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1LJumpNone",
+    "damage_name": "JetBoots:PA1LAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1LUpper",
+    "damage_name": "JetBoots:PA1LUpperAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.275
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1LUpperJumpNone",
+    "damage_name": "JetBoots:PA1LUpperAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.275
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1M",
+    "damage_name": "JetBoots:PA1MAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1MJumpNone",
+    "damage_name": "JetBoots:PA1MAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1MUpper",
+    "damage_name": "JetBoots:PA1MUpperAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1MUpperJumpNone",
+    "damage_name": "JetBoots:PA1MUpperAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1S",
+    "damage_name": "JetBoots:PA1SAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.035
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1SJumpNone",
+    "damage_name": "JetBoots:PA1SAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.035
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1SUpper",
+    "damage_name": "JetBoots:PA1SUpperAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.055
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1SUpperJumpNone",
+    "damage_name": "JetBoots:PA1SUpperAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.055
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1Shift",
+    "damage_name": "JetBoots:PA1ShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.125
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA1ShiftJumpNone",
+    "damage_name": "JetBoots:PA1ShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA01",
+        "mul": 0.125
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA2",
+    "damage_name": "JetBoots:PA2Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA02",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA2Hit",
+    "damage_name": "JetBoots:PA2HitAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA02",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA2Hit2",
+    "damage_name": "JetBoots:PA2HitAttack2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA02",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA2Hit2JumpNone",
+    "damage_name": "JetBoots:PA2HitAttack2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA02",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA2HitJumpNone",
+    "damage_name": "JetBoots:PA2HitAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA02",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA2JumpNone",
+    "damage_name": "JetBoots:PA2Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA02",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA2Shift",
+    "damage_name": "JetBoots:PA2ShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA02",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA2ShiftJumpNone",
+    "damage_name": "JetBoots:PA2ShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA02",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA3",
+    "damage_name": "JetBoots:PA3Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA03",
+        "mul": 0.08
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA3Finish",
+    "damage_name": "JetBoots:PA3FinishAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA03",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA3FinishJumpNone",
+    "damage_name": "JetBoots:PA3FinishAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA03",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA3JumpNone",
+    "damage_name": "JetBoots:PA3Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA03",
+        "mul": 0.08
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA3Shift",
+    "damage_name": "JetBoots:PA3ShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA03",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA3ShiftJumpNone",
+    "damage_name": "JetBoots:PA3ShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA03",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4L",
+    "damage_name": "JetBoots:PA4LAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4LJumpNone",
+    "damage_name": "JetBoots:PA4LAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4LShift",
+    "damage_name": "JetBoots:PA4LShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 4.2
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4LShiftJumpNone",
+    "damage_name": "JetBoots:PA4LShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 4.2
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4M",
+    "damage_name": "JetBoots:PA4MAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4MJumpNone",
+    "damage_name": "JetBoots:PA4MAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4MShift",
+    "damage_name": "JetBoots:PA4MShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 2.5
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4MShiftJumpNone",
+    "damage_name": "JetBoots:PA4MShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 2.5
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4S",
+    "damage_name": "JetBoots:PA4SAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4SJumpNone",
+    "damage_name": "JetBoots:PA4SAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4SShift",
+    "damage_name": "JetBoots:PA4SShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:PA4SShiftJumpNone",
+    "damage_name": "JetBoots:PA4SShiftAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "JetBootsPA04",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:SA1",
+    "damage_name": "JetBoots:SA1Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 6.6
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:SA1JumpNone",
+    "damage_name": "JetBoots:SA1Attack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 6.6
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:ShiftA",
+    "damage_name": "JetBoots:ShiftAAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.7
+      }
+    }
+  },
+  {
+    "attack_name": "JetBoots:ShiftAJumpNone",
+    "damage_name": "JetBoots:ShiftAAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.7
+      }
+    }
+  },
+  {
+    "attack_name": "elm_PursuitDamageAreaC",
+    "damage_name": "elm_PursuitDamageAreaCA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "item_PursuitDamageArea",
+    "damage_name": "item_PursuitDamageAreaA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  }
+]

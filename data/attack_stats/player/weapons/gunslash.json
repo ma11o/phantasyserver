@@ -1,0 +1,599 @@
+[
+  {
+    "attack_name": "GunSlash:AA1Damage",
+    "damage_name": "GunSlash:AA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.12
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:AA2Damage",
+    "damage_name": "GunSlash:AA2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.75
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:AA3Damage",
+    "damage_name": "GunSlash:AA3DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.7
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:AR1Damage",
+    "damage_name": "GunSlash:AR1DamageA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:AR2Damage",
+    "damage_name": "GunSlash:AR2DamageA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:AR3Damage",
+    "damage_name": "GunSlash:AR3DamageA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:GA1Damage",
+    "damage_name": "GunSlash:GA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.12
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:GA2Damage",
+    "damage_name": "GunSlash:GA2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.75
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:GA3Damage",
+    "damage_name": "GunSlash:GA3DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.7
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:GR1Damage",
+    "damage_name": "GunSlash:GR1DamageA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:GR2Damage",
+    "damage_name": "GunSlash:GR2DamageA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:GR3Damage",
+    "damage_name": "GunSlash:GR3DamageA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA10DamageS",
+    "damage_name": "GunSlash:PA10DamageSA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA10",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA10DamageT",
+    "damage_name": "GunSlash:PA10DamageTA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA10",
+        "mul": 0.35
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA10Hold",
+    "damage_name": "GunSlash:PA10DamageHA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA10",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA11AtkG",
+    "damage_name": "GunSlash:PA11DamageSDA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA11",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA11AtkJ",
+    "damage_name": "GunSlash:PA11DamageSDA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA11",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA11AtkShiftG",
+    "damage_name": "GunSlash:PA11DamageSDA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA11",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA11AtkShiftJ",
+    "damage_name": "GunSlash:PA11DamageSDA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA11",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA11DamageR1",
+    "damage_name": "GunSlash:PA11DamageR1A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA11",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA11DamageR3",
+    "damage_name": "GunSlash:PA11DamageR3A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA11",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA11DamageS1",
+    "damage_name": "GunSlash:PA11DamageS1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA11",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA11DamageS3",
+    "damage_name": "GunSlash:PA11DamageS3A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA11",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA1CustomDamage",
+    "damage_name": "GunSlash:PA1CustomDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA01",
+        "mul": 0.07
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA1CustomLurch",
+    "damage_name": "GunSlash:PA1CustomLurchA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA01",
+        "mul": 0.11
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA1CustomShot",
+    "damage_name": "GunSlash:PA1CustomShotA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA01",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA1Damage",
+    "damage_name": "GunSlash:PA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA01",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA1Lurch",
+    "damage_name": "GunSlash:PA1LurchA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA01",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA2Damage",
+    "damage_name": "GunSlash:PA2DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA02",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA2DamageR",
+    "damage_name": "GunSlash:PA2DamageRA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA02",
+        "mul": 0.35
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA3CDamage",
+    "damage_name": "GunSlash:PA3CDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA03",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA3CDamageR",
+    "damage_name": "GunSlash:PA3CDamageRA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA03",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA3CDamageShot",
+    "damage_name": "GunSlash:PA3CDamageShotA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA03",
+        "mul": 0.65
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA3Damage",
+    "damage_name": "GunSlash:PA3DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA03",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA3DamageR",
+    "damage_name": "GunSlash:PA3DamageRA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA03",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA4BlowUp",
+    "damage_name": "GunSlash:PA4BlowUpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA04",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA4Damage",
+    "damage_name": "GunSlash:PA4DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA04",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA5Damage0",
+    "damage_name": "GunSlash:PA5Damage0A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA05",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA5Damage1",
+    "damage_name": "GunSlash:PA5Damage1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA05",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA6Damage",
+    "damage_name": "GunSlash:PA6DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA06",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA7BlowOut",
+    "damage_name": "GunSlash:PA7BlowOutA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA07",
+        "mul": 0.46
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA7DamageR",
+    "damage_name": "GunSlash:PA7DamageRA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA07",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA7DamageRR",
+    "damage_name": "GunSlash:PA7DamageRRA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA07",
+        "mul": 0.46
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA7DamageS",
+    "damage_name": "GunSlash:PA7DamageSA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA07",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA8BlowOut",
+    "damage_name": "GunSlash:PA8BlowOutA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA08",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA8Damage",
+    "damage_name": "GunSlash:PA8DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA08",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA9BlowOut",
+    "damage_name": "GunSlash:PA9BlowOutA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA09",
+        "mul": 0.26
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:PA9Damage",
+    "damage_name": "GunSlash:PA9DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "GunslashPA09",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:SA1Damage",
+    "damage_name": "GunSlash:SA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.4
+      }
+    }
+  },
+  {
+    "attack_name": "GunSlash:SB1Damage",
+    "damage_name": "GunSlash:SB1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.4
+      }
+    }
+  },
+  {
+    "attack_name": "item_ExplosionWeaponDmg",
+    "damage_name": "item_ExplosionWeaponDmg",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 675.0
+      }
+    }
+  }
+]

@@ -66,6 +66,641 @@
     }
   },
   {
+    "attack_name": "Sword:PA1",
+    "damage_name": "Sword:PA1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA01",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10AirTrigger",
+    "damage_name": "Sword:PA10TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10CAirTrigger",
+    "damage_name": "Sword:PA10CTriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10CFinishDamage",
+    "damage_name": "Sword:PA10CFinishDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.39
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10CHoldDamage",
+    "damage_name": "Sword:PA10CHoldDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10CMissDamage",
+    "damage_name": "Sword:PA10CMissDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10CTrigger",
+    "damage_name": "Sword:PA10CTriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10FinishDamage",
+    "damage_name": "Sword:PA10FinishDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10HoldDamage",
+    "damage_name": "Sword:PA10HoldDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10MissDamage",
+    "damage_name": "Sword:PA10MissDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA10Trigger",
+    "damage_name": "Sword:PA10TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA10",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA11",
+    "damage_name": "Sword:PA11A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA11",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA11Counter",
+    "damage_name": "Sword:PA11CounterA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA11",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA11CounterFinishH",
+    "damage_name": "Sword:PA11CounterFinishHA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA11",
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA11CounterFinishL",
+    "damage_name": "Sword:PA11CounterFinishLA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA11",
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA11CounterFinishM",
+    "damage_name": "Sword:PA11CounterFinishMA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA11",
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA11FinishH",
+    "damage_name": "Sword:PA11FinishHA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA11",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA11FinishL",
+    "damage_name": "Sword:PA11FinishLA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA11",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA11FinishM",
+    "damage_name": "Sword:PA11FinishMA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA11",
+        "mul": 0.35
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA1Up",
+    "damage_name": "Sword:PA1UpA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA01",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA2",
+    "damage_name": "Sword:PA2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA02",
+        "mul": 0.19
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA2C",
+    "damage_name": "Sword:PA2CA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA02",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA2CH",
+    "damage_name": "Sword:PA2CHA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA02",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA2CL",
+    "damage_name": "Sword:PA2CLA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA02",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA2CM",
+    "damage_name": "Sword:PA2CMA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA02",
+        "mul": 0.18
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA2H",
+    "damage_name": "Sword:PA2HA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA02",
+        "mul": 0.27
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA2L",
+    "damage_name": "Sword:PA2LA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA02",
+        "mul": 0.39
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA2M",
+    "damage_name": "Sword:PA2MA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA02",
+        "mul": 0.26
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA3FinishG0",
+    "damage_name": "Sword:PA3FinishAG0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA03",
+        "mul": 0.45
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA3FinishG1",
+    "damage_name": "Sword:PA3FinishAG1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA03",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA3FinishG2",
+    "damage_name": "Sword:PA3FinishAG2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA03",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA3H",
+    "damage_name": "Sword:PA3HA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA03",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA3M",
+    "damage_name": "Sword:PA3MA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA03",
+        "mul": 0.225
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA4",
+    "damage_name": "Sword:PA4A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA04",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA5Finish",
+    "damage_name": "Sword:PA5FinishA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA05",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA5H",
+    "damage_name": "Sword:PA5HA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA05",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA5L",
+    "damage_name": "Sword:PA5LA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA05",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA5M",
+    "damage_name": "Sword:PA5MA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA05",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA6",
+    "damage_name": "Sword:PA6A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA06",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA7H",
+    "damage_name": "Sword:PA7HA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA07",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA7L",
+    "damage_name": "Sword:PA7LA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA07",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA7M",
+    "damage_name": "Sword:PA7MA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA07",
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA7Tail",
+    "damage_name": "Sword:PA7TailA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA07",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA8AirTrigger",
+    "damage_name": "Sword:PA8TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA08",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA8Damage",
+    "damage_name": "Sword:PA8A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA08",
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA8Trigger",
+    "damage_name": "Sword:PA8TriggerDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA08",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA9H",
+    "damage_name": "Sword:PA9HA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA09",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA9HBO",
+    "damage_name": "Sword:PA9HBOA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA09",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA9L",
+    "damage_name": "Sword:PA9LA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA09",
+        "mul": 0.32
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA9LBO",
+    "damage_name": "Sword:PA9LBOA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA09",
+        "mul": 0.32
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA9M",
+    "damage_name": "Sword:PA9MA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA09",
+        "mul": 0.41
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:PA9MBO",
+    "damage_name": "Sword:PA9MBOA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "SwordPA09",
+        "mul": 0.41
+      }
+    }
+  },
+  {
+    "attack_name": "Sword:Reflect",
+    "damage_name": "Sword:Reflect",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
     "attack_name": "Sword:SA1",
     "damage_name": "Sword:SA1a",
     "attack_type": "Mel",
@@ -73,6 +708,28 @@
     "damage": {
       "Generic": {
         "mul": 5.4
+      }
+    }
+  },
+  {
+    "attack_name": "SwordGPA",
+    "damage_name": "SwordGPAA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.125
+      }
+    }
+  },
+  {
+    "attack_name": "SwordGPAShot",
+    "damage_name": "SwordGPAShotA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
       }
     }
   }

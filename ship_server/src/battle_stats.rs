@@ -290,7 +290,7 @@ impl PlayerStats {
             .clamp(1, u32::MAX) as f32;
         let damage_mul = match damage.damage {
             data_structs::stats::DamageType::Generic(m) => m,
-            data_structs::stats::DamageType::PA(_) => todo!(),
+            data_structs::stats::DamageType::PA((disc, share)) => crate::pa_power::multiplier(disc, share),
         };
         let min_weapon_attack = min_pure_attack / 5.0 * 1.05 * part_mul * damage_mul * total_mul;
         let max_weapon_attack = pure_attack / 5.0 * 1.05 * part_mul * damage_mul * total_mul;
@@ -372,7 +372,8 @@ impl EnemyStats {
 
         resulting_stats.level = level_stats.level;
         resulting_stats.exp = (base_level_stats.exp * level_stats.exp).floor() as _;
-        resulting_stats.max_hp = (base_level_stats.hp * level_stats.hp).floor() as _;
+        resulting_stats.max_hp =
+            (base_level_stats.hp * level_stats.hp / old_hp_ratio(level)).floor() as _;
         resulting_stats.hp = resulting_stats.max_hp;
         resulting_stats.dex = (base_level_stats.dex * level_stats.dex).floor() as _;
         resulting_stats.max_mel_pwr =
@@ -492,7 +493,7 @@ impl EnemyStats {
         let pure_attack = max_pwr.saturating_sub(def).clamp(1, u32::MAX) as f32;
         let damage_mul = match damage.damage {
             data_structs::stats::DamageType::Generic(m) => m,
-            data_structs::stats::DamageType::PA(_) => unimplemented!(),
+            data_structs::stats::DamageType::PA((disc, share)) => crate::pa_power::multiplier(disc, share),
         };
         let min_weapon_attack = min_pure_attack / 5.0 * 1.05 * damage_mul * total_mul;
         let max_weapon_attack = pure_attack / 5.0 * 1.05 * damage_mul * total_mul;
@@ -551,6 +552,29 @@ impl EnemyStats {
     }
 }
 
+/// [pso2_vita_offline] HP before the 2018-03-22 update that raised the HP of Lv1-40 enemies (the client has the
+/// raised values): the client's HP is divided by the research's current / old ratio (`pso2-iroiro-forest-hp-low-level.csv`,
+/// Oodan; Za Oodan and Gulf have the same ratios), linearly interpolated between the measured levels. Lv41 and up is
+/// 1 (provisional: the update names Lv1-40, the last measured point is Lv31 = 1.23). `PSO2_ENEMY_HP=client` keeps the
+/// client's values.
+fn old_hp_ratio(level: u32) -> f32 {
+    const POINTS: [(u32, f32); 7] =
+        [(1, 3.421), (3, 4.089), (5, 3.833), (9, 3.707), (21, 1.938), (31, 1.231), (41, 1.0)];
+    static CLIENT: std::sync::OnceLock<bool> = std::sync::OnceLock::new();
+    if *CLIENT.get_or_init(|| std::env::var("PSO2_ENEMY_HP").is_ok_and(|v| v == "client")) {
+        return 1.0;
+    }
+    let lv = level.max(1);
+    match POINTS.windows(2).find(|w| lv < w[1].0) {
+        Some(w) => {
+            let (l0, r0) = w[0];
+            let (l1, r1) = w[1];
+            r0 + (r1 - r0) * (lv - l0) as f32 / (l1 - l0) as f32
+        }
+        None => 1.0,
+    }
+}
+
 /// Looks up an attack by the id the client sends. Unknown ids are logged and fall back to a generic melee attack
 /// (multiplier 1.0, damage id = attack id) instead of failing, because the error message blocks the client's input.
 fn find_attack(srv_data: &ServerData, attack_id: u32, dir: &str, enemy: &str) -> AttackStats {
@@ -586,5 +610,15 @@ mod tests {
         assert_eq!(super::actor_key("SoldierAnt"), 0x5DA0_8B21);
         assert_eq!(super::actor_key("SoldierAntElite"), 0x3464_D276);
         assert_eq!(super::actor_key("AntReaper"), 0x782D_2586);
+    }
+
+    #[test]
+    fn old_hp_ratio() {
+        // Dagan Lv5: client 920, research (before 2018-03-22) 240
+        assert_eq!((920.0 / super::old_hp_ratio(5)).floor(), 240.0);
+        assert!((super::old_hp_ratio(21) - 1.938).abs() < 1e-4);
+        assert_eq!(super::old_hp_ratio(41), 1.0);
+        assert_eq!(super::old_hp_ratio(80), 1.0);
+        assert!((super::old_hp_ratio(7) - 3.77).abs() < 1e-3);
     }
 }

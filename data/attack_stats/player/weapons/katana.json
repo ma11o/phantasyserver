@@ -1,0 +1,585 @@
+[
+  {
+    "attack_name": "Cursefire1",
+    "damage_name": "Cursefire1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Cursefire2",
+    "damage_name": "Cursefire2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Cursefire3",
+    "damage_name": "Cursefire3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:AA1",
+    "damage_name": "Katana:AA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.8
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:AA2",
+    "damage_name": "Katana:AA2a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.0
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:AA3",
+    "damage_name": "Katana:AA3a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.2
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:CounterLv0",
+    "damage_name": "Katana:CounterLv0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.5
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:CounterLv1",
+    "damage_name": "Katana:CounterLv1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.5
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:CounterLv2",
+    "damage_name": "Katana:CounterLv2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.5
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:CounterLv3",
+    "damage_name": "Katana:CounterLv3At",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.5
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:CounterLvMax",
+    "damage_name": "Katana:CounterLvMax",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.5
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:Finish1",
+    "damage_name": "Katana:Finish1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.54
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:FinishUp",
+    "damage_name": "Katana:FinishUpa",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.0
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:GA1",
+    "damage_name": "Katana:GA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.8
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:GA2",
+    "damage_name": "Katana:GA2a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.0
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:GA3",
+    "damage_name": "Katana:GA3a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.2
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA1",
+    "damage_name": "Katana:PA1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA10",
+    "damage_name": "Katana:PA10A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA10",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA11Slash",
+    "damage_name": "Katana:PA11SlashA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA11",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA11SlashF",
+    "damage_name": "Katana:PA11SlashFA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA11",
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA2FallSlash",
+    "damage_name": "Katana:PA2FallSlashA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA02",
+        "mul": 0.23
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA2UpperSlash",
+    "damage_name": "Katana:PA2UpperSlashA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA02",
+        "mul": 0.77
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA3",
+    "damage_name": "Katana:PA3A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA03",
+        "mul": 0.34
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA3C",
+    "damage_name": "Katana:PA3CA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA03",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA4",
+    "damage_name": "Katana:PA4A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA04",
+        "mul": 0.38
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA4C",
+    "damage_name": "Katana:PA4CA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA04",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA4C1",
+    "damage_name": "Katana:PA4C1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA04",
+        "mul": 0.45
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA4C1Add",
+    "damage_name": "Katana:PA4C1AAdd",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA04",
+        "mul": 0.55
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA5",
+    "damage_name": "Katana:PA5A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA05",
+        "mul": 0.14
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA6",
+    "damage_name": "Katana:PA6A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA06",
+        "mul": 0.125
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA6End",
+    "damage_name": "Katana:PA6EndA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA06",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA6Saya",
+    "damage_name": "Katana:PA6SayaA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA06",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA7NC",
+    "damage_name": "Katana:PA7NC_Damage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA07",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA7Slash",
+    "damage_name": "Katana:PA7SlashDamage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA07",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA7SlashC",
+    "damage_name": "Katana:PA7SlashCDamage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA07",
+        "mul": 0.04
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA7_1",
+    "damage_name": "Katana:PA7_1Damage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA07",
+        "mul": 0.02
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA7_2",
+    "damage_name": "Katana:PA7_2Damage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA07",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA7_3",
+    "damage_name": "Katana:PA7_3Damage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA07",
+        "mul": 0.12
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA7_4",
+    "damage_name": "Katana:PA7_4Damage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA07",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA8AddSideSlash",
+    "damage_name": "Katana:PA8AddSideSlashA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA08",
+        "mul": 0.12
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA8AddSlash",
+    "damage_name": "Katana:PA8AddSlashA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA08",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA8Finish",
+    "damage_name": "Katana:PA8FinishA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA08",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA8Finish2",
+    "damage_name": "Katana:PA8Finish2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA08",
+        "mul": 0.34
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA8Slash",
+    "damage_name": "Katana:PA8SlashA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA08",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA8SlashC",
+    "damage_name": "Katana:PA8SlashCA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA08",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA9",
+    "damage_name": "Katana:PA9A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA09",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA9C1",
+    "damage_name": "Katana:PA9C1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA09",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA9C2",
+    "damage_name": "Katana:PA9C2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA09",
+        "mul": 0.45
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:PA9C3",
+    "damage_name": "Katana:PA9C3A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "KatanaPA09",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Katana:SA1",
+    "damage_name": "Katana:SA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.9
+      }
+    }
+  }
+]

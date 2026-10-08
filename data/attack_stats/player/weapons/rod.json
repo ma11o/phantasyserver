@@ -1,0 +1,57 @@
+[
+  {
+    "attack_name": "Rod:GA1",
+    "damage_name": "Rod:GA1a",
+    "attack_type": "Tec",
+    "defense_type": "Tec",
+    "damage": {
+      "Generic": {
+        "mul": 1.05
+      }
+    }
+  },
+  {
+    "attack_name": "Rod:GA2",
+    "damage_name": "Rod:GA2a",
+    "attack_type": "Tec",
+    "defense_type": "Tec",
+    "damage": {
+      "Generic": {
+        "mul": 1.04
+      }
+    }
+  },
+  {
+    "attack_name": "Rod:GA3",
+    "damage_name": "Rod:GA3a",
+    "attack_type": "Tec",
+    "defense_type": "Tec",
+    "damage": {
+      "Generic": {
+        "mul": 1.08
+      }
+    }
+  },
+  {
+    "attack_name": "RodShoot",
+    "damage_name": "RodShootA",
+    "attack_type": "Tec",
+    "defense_type": "Tec",
+    "damage": {
+      "Generic": {
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "RodShootRingRSC",
+    "damage_name": "RodShootRingRSCa",
+    "attack_type": "Tec",
+    "defense_type": "Tec",
+    "damage": {
+      "Generic": {
+        "mul": 0.3
+      }
+    }
+  }
+]

@@ -1,0 +1,1290 @@
+[
+  {
+    "attack_name": "TDagger:AA1Damage",
+    "damage_name": "TDagger:AA1Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA1Gear1",
+    "damage_name": "TDagger:AA1Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA1Gear2",
+    "damage_name": "TDagger:AA1Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA1Gear3",
+    "damage_name": "TDagger:AA1Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA2Damage",
+    "damage_name": "TDagger:AA2Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA2Gear1",
+    "damage_name": "TDagger:AA2Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA2Gear2",
+    "damage_name": "TDagger:AA2Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.44
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA2Gear3",
+    "damage_name": "TDagger:AA2Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.8
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA3Damage",
+    "damage_name": "TDagger:AA3Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA3Gear1",
+    "damage_name": "TDagger:AA3Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA3Gear2",
+    "damage_name": "TDagger:AA3Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.64
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:AA3Gear3",
+    "damage_name": "TDagger:AA3Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.3
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:GA1Damage",
+    "damage_name": "TDagger:GA1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:GA2Damage",
+    "damage_name": "TDagger:GA2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:GA3Damage",
+    "damage_name": "TDagger:GA3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA1",
+    "damage_name": "TDagger:PA1Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_1",
+    "damage_name": "TDagger:PA10_1Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.12
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_1Gear1",
+    "damage_name": "TDagger:PA10_1Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.12
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_1Gear2",
+    "damage_name": "TDagger:PA10_1Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.14
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_1Gear3",
+    "damage_name": "TDagger:PA10_1Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_2",
+    "damage_name": "TDagger:PA10_2Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_2Gear1",
+    "damage_name": "TDagger:PA10_2Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_2Gear2",
+    "damage_name": "TDagger:PA10_2Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_2Gear3",
+    "damage_name": "TDagger:PA10_2Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.21
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_3",
+    "damage_name": "TDagger:PA10_3Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.23
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_3Gear1",
+    "damage_name": "TDagger:PA10_3Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.23
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_3Gear2",
+    "damage_name": "TDagger:PA10_3Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.27
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA10_3Gear3",
+    "damage_name": "TDagger:PA10_3Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA10",
+        "mul": 0.35
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA11_K",
+    "damage_name": "TDagger:PA11_KA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA11",
+        "mul": 0.33
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA11_X_1",
+    "damage_name": "TDagger:PA11_X_1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA11",
+        "mul": 0.33
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA11_X_2",
+    "damage_name": "TDagger:PA11_X_2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA11",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA11_X_3",
+    "damage_name": "TDagger:PA11_X_3A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA11",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA1C",
+    "damage_name": "TDagger:PA1CGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA1CGear1",
+    "damage_name": "TDagger:PA1CGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA1CGear2",
+    "damage_name": "TDagger:PA1CGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA01",
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA1CGear3",
+    "damage_name": "TDagger:PA1CGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA01",
+        "mul": 1.53
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA1Gear1",
+    "damage_name": "TDagger:PA1Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA1Gear2",
+    "damage_name": "TDagger:PA1Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA01",
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA1Gear3",
+    "damage_name": "TDagger:PA1Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA01",
+        "mul": 1.53
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA2",
+    "damage_name": "TDagger:PA2Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA02",
+        "mul": 0.34
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA2Gear1",
+    "damage_name": "TDagger:PA2Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA02",
+        "mul": 0.34
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA2Gear2",
+    "damage_name": "TDagger:PA2Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA02",
+        "mul": 0.41
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA2Gear3",
+    "damage_name": "TDagger:PA2Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA02",
+        "mul": 0.51
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3AHold",
+    "damage_name": "TDagger:PA3HoldGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3GHold",
+    "damage_name": "TDagger:PA3HoldGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3HoldDamage",
+    "damage_name": "TDagger:PA3HoldDamageGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3HoldDamageGear1",
+    "damage_name": "TDagger:PA3HoldDamageGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3HoldDamageGear2",
+    "damage_name": "TDagger:PA3HoldDamageGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3HoldDamageGear3",
+    "damage_name": "TDagger:PA3HoldDamageGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.53
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3HoldGear1",
+    "damage_name": "TDagger:PA3HoldGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3HoldGear2",
+    "damage_name": "TDagger:PA3HoldGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3HoldGear3",
+    "damage_name": "TDagger:PA3HoldGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.53
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3ThrowDamage",
+    "damage_name": "TDagger:PA3ThrowDamageGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3ThrowDamageGear1",
+    "damage_name": "TDagger:PA3ThrowDamageGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3ThrowDamageGear2",
+    "damage_name": "TDagger:PA3ThrowDamageGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA3ThrowDamageGear3",
+    "damage_name": "TDagger:PA3ThrowDamageGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA03",
+        "mul": 0.77
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA4",
+    "damage_name": "TDagger:PA4Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA04",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA4Gear1",
+    "damage_name": "TDagger:PA4Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA04",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA4Gear2",
+    "damage_name": "TDagger:PA4Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA04",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA4Gear3",
+    "damage_name": "TDagger:PA4Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA04",
+        "mul": 0.38
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA5_1",
+    "damage_name": "TDagger:PA5_1Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA05",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA5_1Gear1",
+    "damage_name": "TDagger:PA5_1Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA05",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA5_1Gear2",
+    "damage_name": "TDagger:PA5_1Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA05",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA5_1Gear3",
+    "damage_name": "TDagger:PA5_1Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA05",
+        "mul": 0.38
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA5_2",
+    "damage_name": "TDagger:PA5_2Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA05",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA5_2Gear1",
+    "damage_name": "TDagger:PA5_2Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA05",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA5_2Gear2",
+    "damage_name": "TDagger:PA5_2Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA05",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA5_2Gear3",
+    "damage_name": "TDagger:PA5_2Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA05",
+        "mul": 0.77
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA6_1",
+    "damage_name": "TDagger:PA6_1Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA06",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA6_1Gear1",
+    "damage_name": "TDagger:PA6_1Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA06",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA6_1Gear2",
+    "damage_name": "TDagger:PA6_1Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA06",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA6_1Gear3",
+    "damage_name": "TDagger:PA6_1Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA06",
+        "mul": 0.38
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA6_2",
+    "damage_name": "TDagger:PA6_2Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA06",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA6_2Gear1",
+    "damage_name": "TDagger:PA6_2Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA06",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA6_2Gear2",
+    "damage_name": "TDagger:PA6_2Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA06",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA6_2Gear3",
+    "damage_name": "TDagger:PA6_2Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA06",
+        "mul": 0.77
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA7_1",
+    "damage_name": "TDagger:PA7_1Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA07",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA7_1Gear1",
+    "damage_name": "TDagger:PA7_1Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA07",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA7_1Gear2",
+    "damage_name": "TDagger:PA7_1Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA07",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA7_1Gear3",
+    "damage_name": "TDagger:PA7_1Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA07",
+        "mul": 0.77
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA7_2",
+    "damage_name": "TDagger:PA7_2Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA07",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA7_2Gear1",
+    "damage_name": "TDagger:PA7_2Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA07",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA7_2Gear2",
+    "damage_name": "TDagger:PA7_2Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA07",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA7_2Gear3",
+    "damage_name": "TDagger:PA7_2Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA07",
+        "mul": 0.77
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA8_1",
+    "damage_name": "TDagger:PA8_1Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA08",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA8_1Gear1",
+    "damage_name": "TDagger:PA8_1Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA08",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA8_1Gear2",
+    "damage_name": "TDagger:PA8_1Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA08",
+        "mul": 0.12
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA8_1Gear3",
+    "damage_name": "TDagger:PA8_1Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA08",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA8_2",
+    "damage_name": "TDagger:PA8_2Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA08",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA8_2Gear1",
+    "damage_name": "TDagger:PA8_2Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA08",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA8_2Gear2",
+    "damage_name": "TDagger:PA8_2Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA08",
+        "mul": 0.36
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA8_2Gear3",
+    "damage_name": "TDagger:PA8_2Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA08",
+        "mul": 0.46
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_1",
+    "damage_name": "TDagger:PA9_1Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_1Gear1",
+    "damage_name": "TDagger:PA9_1Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_1Gear2",
+    "damage_name": "TDagger:PA9_1Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_1Gear3",
+    "damage_name": "TDagger:PA9_1Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_2A",
+    "damage_name": "TDagger:PA9_2AGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_2AGear1",
+    "damage_name": "TDagger:PA9_2AGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_2AGear2",
+    "damage_name": "TDagger:PA9_2AGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.19
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_2AGear3",
+    "damage_name": "TDagger:PA9_2AGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_2G",
+    "damage_name": "TDagger:PA9_2GGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_2GGear1",
+    "damage_name": "TDagger:PA9_2GGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_2GGear2",
+    "damage_name": "TDagger:PA9_2GGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.19
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:PA9_2GGear3",
+    "damage_name": "TDagger:PA9_2GGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "TdaggerPA09",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:SA1Damage",
+    "damage_name": "TDagger:SA1DamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.5
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:SpinDamage",
+    "damage_name": "TDagger:SpinGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:SpinGear1",
+    "damage_name": "TDagger:SpinGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:SpinGear2",
+    "damage_name": "TDagger:SpinGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.24
+      }
+    }
+  },
+  {
+    "attack_name": "TDagger:SpinGear3",
+    "damage_name": "TDagger:SpinGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.3
+      }
+    }
+  }
+]

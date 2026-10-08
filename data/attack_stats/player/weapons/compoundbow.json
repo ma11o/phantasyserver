@@ -1,0 +1,359 @@
+[
+  {
+    "attack_name": "CompoundBow:GPA1_1",
+    "damage_name": "CompoundBow:GPA1_1A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:GPA1_2",
+    "damage_name": "CompoundBow:GPA1_2A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.66
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA10",
+    "damage_name": "CompoundBow:PA10a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA10",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA11Anti",
+    "damage_name": "CompoundBow:PA11a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA11",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA3c0",
+    "damage_name": "CompoundBow:PA3c0a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA03",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA3c1",
+    "damage_name": "CompoundBow:PA3c1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA03",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA4Bc0",
+    "damage_name": "CompoundBow:PA4Bc0a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA04",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA4Bc1",
+    "damage_name": "CompoundBow:PA4Bc1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA04",
+        "mul": 0.23
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA4Sc0",
+    "damage_name": "CompoundBow:PA4Sc0a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA04",
+        "mul": 0.07
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA4Sc1",
+    "damage_name": "CompoundBow:PA4Sc1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA04",
+        "mul": 0.08
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA5Hc0",
+    "damage_name": "CompoundBow:PA5Zc0a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA05",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA5Hc1",
+    "damage_name": "CompoundBow:PA5Zc1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA05",
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA5Kc0",
+    "damage_name": "CompoundBow:PA5Kc0a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA05",
+        "mul": 0.26
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA5Kc1",
+    "damage_name": "CompoundBow:PA5Kc1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA05",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA6B",
+    "damage_name": "CompoundBow:PA6Ba",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA06",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA6CustomBc0",
+    "damage_name": "CompoundBow:PA6CustomBc0a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA06",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA6CustomBc1",
+    "damage_name": "CompoundBow:PA6CustomBc1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA06",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA6K",
+    "damage_name": "CompoundBow:PA6Ka",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA06",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA7",
+    "damage_name": "CompoundBow:PA7a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA07",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA8CK",
+    "damage_name": "CompoundBow:PA8CKa",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA08",
+        "mul": 0.04
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA8CS",
+    "damage_name": "CompoundBow:PA8CSa",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA08",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA8CTK",
+    "damage_name": "CompoundBow:PA8CTKa",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA08",
+        "mul": 0.02
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA8K",
+    "damage_name": "CompoundBow:PA8Ka",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA08",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA8S",
+    "damage_name": "CompoundBow:PA8Sa",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA08",
+        "mul": 0.14
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA8TK",
+    "damage_name": "CompoundBow:PA8TKa",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA08",
+        "mul": 0.07
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA9",
+    "damage_name": "CompoundBow:PA9AddDmgA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA09",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA9Exp",
+    "damage_name": "CompoundBow:PA9Exp",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA09",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA9PpHeal",
+    "damage_name": "CompoundBow:PA9AddDmgA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA09",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:PA9PpHealExp",
+    "damage_name": "CompoundBow:PA9PpHealExpA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "CompoundBowPA09",
+        "mul": 0.005
+      }
+    }
+  },
+  {
+    "attack_name": "CompoundBow:Shot",
+    "damage_name": "CompoundBow:Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  }
+]

@@ -1,0 +1,1750 @@
+[
+  {
+    "attack_name": "TMachineGun:DummyShot",
+    "damage_name": "TMachineGun:DummyShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:GPAN",
+    "damage_name": "TMachineGun:GPANAttack",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.02
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:GPAP",
+    "damage_name": "TMachineGun:GPAPAttack",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.27
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_1_1",
+    "damage_name": "TMachineGun:PA10_1_1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.08
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_1_1Gear1",
+    "damage_name": "TMachineGun:PA10_1_1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.084
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_1_1Gear2",
+    "damage_name": "TMachineGun:PA10_1_1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.088
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_1_1Gear3",
+    "damage_name": "TMachineGun:PA10_1_1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.104
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_1_2",
+    "damage_name": "TMachineGun:PA10_1_2Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.08
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_1_2Gear1",
+    "damage_name": "TMachineGun:PA10_1_2Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.084
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_1_2Gear2",
+    "damage_name": "TMachineGun:PA10_1_2Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.088
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_1_2Gear3",
+    "damage_name": "TMachineGun:PA10_1_2Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.104
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_1",
+    "damage_name": "TMachineGun:PA10_2_1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.18
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_1Gear1",
+    "damage_name": "TMachineGun:PA10_2_1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.189
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_1Gear2",
+    "damage_name": "TMachineGun:PA10_2_1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.198
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_1Gear3",
+    "damage_name": "TMachineGun:PA10_2_1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.234
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_2",
+    "damage_name": "TMachineGun:PA10_2_2Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.18
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_2Gear1",
+    "damage_name": "TMachineGun:PA10_2_2Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.189
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_2Gear2",
+    "damage_name": "TMachineGun:PA10_2_2Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.198
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_2Gear3",
+    "damage_name": "TMachineGun:PA10_2_2Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.234
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_3",
+    "damage_name": "TMachineGun:PA10_2_3Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.18
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_3Gear1",
+    "damage_name": "TMachineGun:PA10_2_3Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.189
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_3Gear2",
+    "damage_name": "TMachineGun:PA10_2_3Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.198
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA10_2_3Gear3",
+    "damage_name": "TMachineGun:PA10_2_3Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA10",
+        "mul": 0.234
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA11_1",
+    "damage_name": "TMachineGun:PA11_1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA11",
+        "mul": 0.21
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA11_1Gear1",
+    "damage_name": "TMachineGun:PA11_1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA11",
+        "mul": 0.2205
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA11_1Gear2",
+    "damage_name": "TMachineGun:PA11_1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA11",
+        "mul": 0.231
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA11_1Gear3",
+    "damage_name": "TMachineGun:PA11_1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA11",
+        "mul": 0.273
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA11_2",
+    "damage_name": "TMachineGun:PA11_2Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA11",
+        "mul": 0.145
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA11_2Gear1",
+    "damage_name": "TMachineGun:PA11_2Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA11",
+        "mul": 0.1523
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA11_2Gear2",
+    "damage_name": "TMachineGun:PA11_2Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA11",
+        "mul": 0.1595
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA11_2Gear3",
+    "damage_name": "TMachineGun:PA11_2Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA11",
+        "mul": 0.1885
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_01",
+    "damage_name": "TMachineGun:PA1_C0G0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.33
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_11",
+    "damage_name": "TMachineGun:PA1_C1_1G0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_12",
+    "damage_name": "TMachineGun:PA1_C1_2G0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_13",
+    "damage_name": "TMachineGun:PA1_C1_3G0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C0G1",
+    "damage_name": "TMachineGun:PA1_C0G1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.3465
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C0G2",
+    "damage_name": "TMachineGun:PA1_C0G2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.363
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C0G3",
+    "damage_name": "TMachineGun:PA1_C0G3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.429
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C1_1G1",
+    "damage_name": "TMachineGun:PA1_C1_1G1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.21
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C1_1G2",
+    "damage_name": "TMachineGun:PA1_C1_1G2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.22
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C1_1G3",
+    "damage_name": "TMachineGun:PA1_C1_1G3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.26
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C1_2G1",
+    "damage_name": "TMachineGun:PA1_C1_2G1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.42
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C1_2G2",
+    "damage_name": "TMachineGun:PA1_C1_2G2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.44
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C1_2G3",
+    "damage_name": "TMachineGun:PA1_C1_2G3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.52
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C1_3G1",
+    "damage_name": "TMachineGun:PA1_C1_3G1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.42
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C1_3G2",
+    "damage_name": "TMachineGun:PA1_C1_3G2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.44
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA1_C1_3G3",
+    "damage_name": "TMachineGun:PA1_C1_3G3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA01",
+        "mul": 0.52
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA2",
+    "damage_name": "TMachineGun:PA2Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA02",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA2Gear1",
+    "damage_name": "TMachineGun:PA2Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA02",
+        "mul": 0.21
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA2Gear2",
+    "damage_name": "TMachineGun:PA2Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA02",
+        "mul": 0.22
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA2Gear3",
+    "damage_name": "TMachineGun:PA2Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA02",
+        "mul": 0.26
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA2Shot",
+    "damage_name": "TMachineGun:PA2Shot1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA02",
+        "mul": 0.03
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA2Shot1Gear1",
+    "damage_name": "TMachineGun:PA2Shot1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA02",
+        "mul": 0.04
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA2Shot1Gear2",
+    "damage_name": "TMachineGun:PA2Shot1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA02",
+        "mul": 0.06
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA2Shot1Gear3",
+    "damage_name": "TMachineGun:PA2Shot1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA02",
+        "mul": 0.07
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA3",
+    "damage_name": "TMachineGun:PA3Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA03",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA3Gear1",
+    "damage_name": "TMachineGun:PA3Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA03",
+        "mul": 1.05
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA3Gear2",
+    "damage_name": "TMachineGun:PA3Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA03",
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA3Gear3",
+    "damage_name": "TMachineGun:PA3Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA03",
+        "mul": 1.3
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA4Shot",
+    "damage_name": "TMachineGun:PA4ShotGear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA04",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA4ShotGear1",
+    "damage_name": "TMachineGun:PA4ShotGear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA04",
+        "mul": 0.0525
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA4ShotGear2",
+    "damage_name": "TMachineGun:PA4ShotGear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA04",
+        "mul": 0.055
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA4ShotGear3",
+    "damage_name": "TMachineGun:PA4ShotGear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA04",
+        "mul": 0.065
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CFinish",
+    "damage_name": "TMachineGun:PA5CFinishGear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CFinishGear1",
+    "damage_name": "TMachineGun:PA5CFinishGear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.525
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CFinishGear2",
+    "damage_name": "TMachineGun:PA5CFinishGear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.55
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CFinishGear3",
+    "damage_name": "TMachineGun:PA5CFinishGear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.65
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CKick",
+    "damage_name": "TMachineGun:PA5CKickGear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.02
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CKickGear1",
+    "damage_name": "TMachineGun:PA5CKickGear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.021
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CKickGear2",
+    "damage_name": "TMachineGun:PA5CKickGear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.022
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CKickGear3",
+    "damage_name": "TMachineGun:PA5CKickGear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.026
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CShot",
+    "damage_name": "TMachineGun:PA5CShotGear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.04
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CShotGear1",
+    "damage_name": "TMachineGun:PA5CShotGear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.042
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CShotGear2",
+    "damage_name": "TMachineGun:PA5CShotGear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.044
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5CShotGear3",
+    "damage_name": "TMachineGun:PA5CShotGear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.052
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5FShot",
+    "damage_name": "TMachineGun:PA5FShotGear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.07
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5FShotGear1",
+    "damage_name": "TMachineGun:PA5FShotGear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.0735
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5FShotGear2",
+    "damage_name": "TMachineGun:PA5FShotGear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.077
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5FShotGear3",
+    "damage_name": "TMachineGun:PA5FShotGear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.091
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5Shot",
+    "damage_name": "TMachineGun:PA5ShotGear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.04
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5ShotGear1",
+    "damage_name": "TMachineGun:PA5ShotGear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.042
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5ShotGear2",
+    "damage_name": "TMachineGun:PA5ShotGear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.044
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA5ShotGear3",
+    "damage_name": "TMachineGun:PA5ShotGear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA05",
+        "mul": 0.052
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA6_1",
+    "damage_name": "TMachineGun:PA6_1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA06",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA6_1Gear1",
+    "damage_name": "TMachineGun:PA6_1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA06",
+        "mul": 0.525
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA6_1Gear2",
+    "damage_name": "TMachineGun:PA6_1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA06",
+        "mul": 0.55
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA6_1Gear3",
+    "damage_name": "TMachineGun:PA6_1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA06",
+        "mul": 0.65
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA6_2",
+    "damage_name": "TMachineGun:PA6_2Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA06",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA6_2Gear1",
+    "damage_name": "TMachineGun:PA6_2Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA06",
+        "mul": 0.525
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA6_2Gear2",
+    "damage_name": "TMachineGun:PA6_2Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA06",
+        "mul": 0.55
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA6_2Gear3",
+    "damage_name": "TMachineGun:PA6_2Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA06",
+        "mul": 0.65
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_1Gear1",
+    "damage_name": "TMachineGun:PA7_1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.105
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_1Gear2",
+    "damage_name": "TMachineGun:PA7_1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.11
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_1Gear3",
+    "damage_name": "TMachineGun:PA7_1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_1Shot",
+    "damage_name": "TMachineGun:PA7_1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_2Gear1",
+    "damage_name": "TMachineGun:PA7_2Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_2Gear2",
+    "damage_name": "TMachineGun:PA7_2Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.13
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_2Gear3",
+    "damage_name": "TMachineGun:PA7_2Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_2Shot",
+    "damage_name": "TMachineGun:PA7_2Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.12
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_3Gear1",
+    "damage_name": "TMachineGun:PA7_3Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_3Gear2",
+    "damage_name": "TMachineGun:PA7_3Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.18
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_3Gear3",
+    "damage_name": "TMachineGun:PA7_3Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.21
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA7_3Shot",
+    "damage_name": "TMachineGun:PA7_3Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA07",
+        "mul": 0.16
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA8",
+    "damage_name": "TMachineGun:PA8Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA08",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA8Gear1",
+    "damage_name": "TMachineGun:PA8Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA08",
+        "mul": 0.2625
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA8Gear2",
+    "damage_name": "TMachineGun:PA8Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA08",
+        "mul": 0.275
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA8Gear3",
+    "damage_name": "TMachineGun:PA8Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA08",
+        "mul": 0.325
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9Shot",
+    "damage_name": "TMachineGun:PA9ShotGear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.08
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9ShotGear1",
+    "damage_name": "TMachineGun:PA9ShotGear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.084
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9ShotGear2",
+    "damage_name": "TMachineGun:PA9ShotGear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.088
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9ShotGear3",
+    "damage_name": "TMachineGun:PA9ShotGear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.104
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_1",
+    "damage_name": "TMachineGun:PA9_1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.22
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_1Gear1",
+    "damage_name": "TMachineGun:PA9_1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.231
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_1Gear2",
+    "damage_name": "TMachineGun:PA9_1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.242
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_1Gear3",
+    "damage_name": "TMachineGun:PA9_1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.286
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_2C1",
+    "damage_name": "TMachineGun:PA9_2C1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_2C1Gear1",
+    "damage_name": "TMachineGun:PA9_2C1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.315
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_2C1Gear2",
+    "damage_name": "TMachineGun:PA9_2C1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.33
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_2C1Gear3",
+    "damage_name": "TMachineGun:PA9_2C1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.39
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_2C2",
+    "damage_name": "TMachineGun:PA9_2C2Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_2C2Gear1",
+    "damage_name": "TMachineGun:PA9_2C2Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.315
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_2C2Gear2",
+    "damage_name": "TMachineGun:PA9_2C2Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.33
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:PA9_2C2Gear3",
+    "damage_name": "TMachineGun:PA9_2C2Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "MachinegunPA09",
+        "mul": 0.39
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot1",
+    "damage_name": "TMachineGun:Shot1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot1Gear1",
+    "damage_name": "TMachineGun:Shot1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.735
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot1Gear2",
+    "damage_name": "TMachineGun:Shot1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.77
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot1Gear3",
+    "damage_name": "TMachineGun:Shot1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.91
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot2",
+    "damage_name": "TMachineGun:Shot2Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot2Gear1",
+    "damage_name": "TMachineGun:Shot2Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.84
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot2Gear2",
+    "damage_name": "TMachineGun:Shot2Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.88
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot2Gear3",
+    "damage_name": "TMachineGun:Shot2Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.04
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot3",
+    "damage_name": "TMachineGun:Shot3Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot3Gear1",
+    "damage_name": "TMachineGun:Shot3Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.05
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot3Gear2",
+    "damage_name": "TMachineGun:Shot3Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:Shot3Gear3",
+    "damage_name": "TMachineGun:Shot3Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.3
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:ShotSA1",
+    "damage_name": "TMachineGun:ShotSA1Gear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.5
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:ShotSA1Gear1",
+    "damage_name": "TMachineGun:ShotSA1Gear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.575
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:ShotSA1Gear2",
+    "damage_name": "TMachineGun:ShotSA1Gear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.65
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:ShotSA1Gear3",
+    "damage_name": "TMachineGun:ShotSA1Gear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.95
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:StepShotGear1",
+    "damage_name": "TMachineGun:StepShotGear1",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.735
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:StepShotGear1_ModeA",
+    "damage_name": "TMachineGun:StepShotGear1_ModeA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.882
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:StepShotGear2",
+    "damage_name": "TMachineGun:StepShotGear2",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.77
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:StepShotGear2_ModeA",
+    "damage_name": "TMachineGun:StepShotGear2_ModeA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.924
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:StepShotGear3",
+    "damage_name": "TMachineGun:StepShotGear3",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.91
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:StepShotGear3_ModeA",
+    "damage_name": "TMachineGun:StepShotGear3_ModeA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.092
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:StepShotModeA",
+    "damage_name": "TMachineGun:StepShotGear0_ModeA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.84
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:StepShotPaRG01",
+    "damage_name": "TMachineGun:StepShotGear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "TMachineGun:StepShotRG01",
+    "damage_name": "TMachineGun:StepShotGear0",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  }
+]

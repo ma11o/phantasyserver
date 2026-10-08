@@ -1,0 +1,330 @@
+[
+  {
+    "attack_name": "Rifle:A1Bind",
+    "damage_name": "Rifle:A1BindA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 8.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:A1Panic",
+    "damage_name": "Rifle:A1PanicA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.23
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:A1Weak",
+    "damage_name": "Rifle:A1WeakA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 8.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:LastBulletBonus",
+    "damage_name": "Rifle:LastBulletBonus",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:LastBulletBonusExp",
+    "damage_name": "Rifle:LastBulletBonusExpA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA1",
+    "damage_name": "Rifle:PA1A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA10_0",
+    "damage_name": "Rifle:PA10_0A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA10",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA10_1",
+    "damage_name": "Rifle:PA10_1A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA10",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA10_2",
+    "damage_name": "Rifle:PA10_2A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA10",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA11_0",
+    "damage_name": "Rifle:PA11_0A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA11",
+        "mul": 0.55
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA11_1",
+    "damage_name": "Rifle:PA11_1A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA11",
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA11_2",
+    "damage_name": "Rifle:PA11_2A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA11",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA2",
+    "damage_name": "Rifle:PA2A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA02",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA2Shot",
+    "damage_name": "Rifle:PA2Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA02",
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA3",
+    "damage_name": "Rifle:PA3A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA03",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA4",
+    "damage_name": "Rifle:PA4A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA04",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA5",
+    "damage_name": "Rifle:PA5A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA05",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA5C",
+    "damage_name": "Rifle:PA5CA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA05",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA6",
+    "damage_name": "Rifle:PA6A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA06",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA6Kick",
+    "damage_name": "Rifle:PA6KickA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA06",
+        "mul": 0.02
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA7",
+    "damage_name": "Rifle:PA7A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA07",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA8",
+    "damage_name": "Rifle:PA8A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA08",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA8Upper",
+    "damage_name": "Rifle:PA8UpperA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA08",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA9",
+    "damage_name": "Rifle:PA9A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA09",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:PA9C",
+    "damage_name": "Rifle:PA9CA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "RiflePA09",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:SA1",
+    "damage_name": "Rifle:SA1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.8
+      }
+    }
+  },
+  {
+    "attack_name": "Rifle:Shot",
+    "damage_name": "Rifle:Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "RiflePotentialWideShot",
+    "damage_name": "RiflePotentialWideShotA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 5.0
+      }
+    }
+  }
+]

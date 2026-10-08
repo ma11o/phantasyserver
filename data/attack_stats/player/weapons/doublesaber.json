@@ -1,0 +1,478 @@
+[
+  {
+    "attack_name": "DSaber:AA1Damage",
+    "damage_name": "DSaber:AA1DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.7
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:AA2Damage",
+    "damage_name": "DSaber:AA2DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.45
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:AA3Damage",
+    "damage_name": "DSaber:AA3DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.9
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:BigTornado1",
+    "damage_name": "DSaber:BigTornado1B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:BigTornado2",
+    "damage_name": "DSaber:BigTornado2B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.51
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:BigTornado3",
+    "damage_name": "DSaber:BigTornado3B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:GA1Damage",
+    "damage_name": "DSaber:GA1DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.9
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:GA2Damage",
+    "damage_name": "DSaber:GA2DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.6
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:GA3Damage",
+    "damage_name": "DSaber:GA3DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.0
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA11BlowOut1",
+    "damage_name": "DSaber:PA11BlowOut1B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA11",
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA11BlowOut2",
+    "damage_name": "DSaber:PA11BlowOut2B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA11",
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA11BlowOut3",
+    "damage_name": "DSaber:PA11BlowOut3B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA11",
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA11Damage1",
+    "damage_name": "DSaber:PA11Damage1B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA11",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA11Damage2",
+    "damage_name": "DSaber:PA11Damage2B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA11",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA11Damage3",
+    "damage_name": "DSaber:PA11Damage3B",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA11",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA1C1Damage",
+    "damage_name": "DSaber:PA1C1DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA01",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA1C2Damage",
+    "damage_name": "DSaber:PA1C2DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA1Damage",
+    "damage_name": "DSaber:PA1DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA01",
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA2BlowUp",
+    "damage_name": "DSaber:PA2BlowUpB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA02",
+        "mul": 0.64
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA2Damage",
+    "damage_name": "DSaber:PA2DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA02",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA3BlowOut",
+    "damage_name": "DSaber:PA3BlowOutB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA03",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA3Damage",
+    "damage_name": "DSaber:PA3DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA03",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA4BlowOut",
+    "damage_name": "DSaber:PA4BlowOutB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA04",
+        "mul": 0.35
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA4Damage",
+    "damage_name": "DSaber:PA4DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA04",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA4Slash",
+    "damage_name": "DSaber:PA3SlashB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA04",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA5BlowUp",
+    "damage_name": "DSaber:PA5BlowUpB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA05",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA5TriggerG",
+    "damage_name": "DSaber:PA5DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA05",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA5TriggerJ",
+    "damage_name": "DSaber:PA5DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA05",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA6BlowUp",
+    "damage_name": "DSaber:PA6BlowUpB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA06",
+        "mul": 0.58
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA6Damage",
+    "damage_name": "DSaber:PA6DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA06",
+        "mul": 0.14
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA7Damage",
+    "damage_name": "DSaber:PA7DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA07",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA8Damage",
+    "damage_name": "DSaber:PA8DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA08",
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA9CDamage",
+    "damage_name": "DSaber:PA9CDamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA09",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:PA9Damage",
+    "damage_name": "DSaber:PA9DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DsaberPA09",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:SA1Damage",
+    "damage_name": "DSaber:SA1DamageB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.3
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:Tornado1",
+    "damage_name": "DSaber:Tornado1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.54
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:Tornado2",
+    "damage_name": "DSaber:Tornado2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.82
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:Tornado3",
+    "damage_name": "DSaber:Tornado3A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.08
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:TornadoBoost1",
+    "damage_name": "DSaber:TornadoBoost1A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.54
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:TornadoBoost2",
+    "damage_name": "DSaber:TornadoBoost2A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.82
+      }
+    }
+  },
+  {
+    "attack_name": "DSaber:TornadoBoost3",
+    "damage_name": "DSaber:TornadoBoost3A",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.08
+      }
+    }
+  }
+]

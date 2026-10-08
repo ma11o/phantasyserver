@@ -1,0 +1,770 @@
+[
+  {
+    "attack_name": "DBlade:AA1",
+    "damage_name": "DBlade:AA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.7
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:AA2",
+    "damage_name": "DBlade:AA2a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.9
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:AA3",
+    "damage_name": "DBlade:AA3a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.7
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:BladeF_RingFBH",
+    "damage_name": "DBlade:BladeFe",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:Blade_RingFBH",
+    "damage_name": "DBlade:Bladed",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:GA1",
+    "damage_name": "DBlade:GA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.7
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:GA2",
+    "damage_name": "DBlade:GA2a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.9
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:GA3",
+    "damage_name": "DBlade:GA3a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 3.7
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA1S",
+    "damage_name": "DBlade:PA1SGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA01",
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA1SGear1",
+    "damage_name": "DBlade:PA1SGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA01",
+        "mul": 0.58
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA1SGear2",
+    "damage_name": "DBlade:PA1SGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA01",
+        "mul": 0.59
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA1SGear3",
+    "damage_name": "DBlade:PA1SGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA01",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA2",
+    "damage_name": "DBlade:PA2Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA02",
+        "mul": 0.112
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA2Gear1",
+    "damage_name": "DBlade:PA2Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA02",
+        "mul": 0.128
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA2Gear2",
+    "damage_name": "DBlade:PA2Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA02",
+        "mul": 0.132
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA2Gear3",
+    "damage_name": "DBlade:PA2Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA02",
+        "mul": 0.134
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA3A",
+    "damage_name": "DBlade:PA3AGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA03",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA3AGear1",
+    "damage_name": "DBlade:PA3AGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA03",
+        "mul": 0.115
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA3AGear2",
+    "damage_name": "DBlade:PA3AGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA03",
+        "mul": 0.118
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA3AGear3",
+    "damage_name": "DBlade:PA3AGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA03",
+        "mul": 0.12
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA3B",
+    "damage_name": "DBlade:PA3BGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA03",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA3BGear1",
+    "damage_name": "DBlade:PA3BGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA03",
+        "mul": 0.115
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA3BGear2",
+    "damage_name": "DBlade:PA3BGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA03",
+        "mul": 0.118
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA3BGear3",
+    "damage_name": "DBlade:PA3BGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA03",
+        "mul": 0.12
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA4E",
+    "damage_name": "DBlade:PA4EGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA04",
+        "mul": 0.88
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA4EGear1",
+    "damage_name": "DBlade:PA4EGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA04",
+        "mul": 1.012
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA4EGear2",
+    "damage_name": "DBlade:PA4EGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA04",
+        "mul": 1.0384
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA4EGear3",
+    "damage_name": "DBlade:PA4EGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA04",
+        "mul": 1.056
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA4S",
+    "damage_name": "DBlade:PA4SGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA04",
+        "mul": 0.02
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA4SGear1",
+    "damage_name": "DBlade:PA4SGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA04",
+        "mul": 0.023
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA4SGear2",
+    "damage_name": "DBlade:PA4SGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA04",
+        "mul": 0.0236
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA4SGear3",
+    "damage_name": "DBlade:PA4SGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA04",
+        "mul": 0.024
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA5B",
+    "damage_name": "DBlade:PA5BGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA05",
+        "mul": 0.075
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA5BGear1",
+    "damage_name": "DBlade:PA5BGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA05",
+        "mul": 0.0862
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA5BGear2",
+    "damage_name": "DBlade:PA5BGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA05",
+        "mul": 0.0885
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA5BGear3",
+    "damage_name": "DBlade:PA5BGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA05",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA5E",
+    "damage_name": "DBlade:PA5EGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA05",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA5EGear1",
+    "damage_name": "DBlade:PA5EGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA05",
+        "mul": 0.115
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA5EGear2",
+    "damage_name": "DBlade:PA5EGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA05",
+        "mul": 0.118
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA5EGear3",
+    "damage_name": "DBlade:PA5EGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA05",
+        "mul": 0.12
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA6",
+    "damage_name": "DBlade:PA6Gear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA06",
+        "mul": 0.04
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA6C",
+    "damage_name": "DBlade:PA6CGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA06",
+        "mul": 0.04
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA6C0",
+    "damage_name": "DBlade:PA6CGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA06",
+        "mul": 0.04
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA6C1",
+    "damage_name": "DBlade:PA6CGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA06",
+        "mul": 0.07
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA6C2",
+    "damage_name": "DBlade:PA6CGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA06",
+        "mul": 0.09
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA6C3",
+    "damage_name": "DBlade:PA6CGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA06",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA6Gear1",
+    "damage_name": "DBlade:PA6Gear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA06",
+        "mul": 0.046
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA6Gear2",
+    "damage_name": "DBlade:PA6Gear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA06",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA6Gear3",
+    "damage_name": "DBlade:PA6Gear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA06",
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7A",
+    "damage_name": "DBlade:PA7AGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7AGear1",
+    "damage_name": "DBlade:PA7AGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 1.15
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7AGear2",
+    "damage_name": "DBlade:PA7AGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 1.18
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7AGear3",
+    "damage_name": "DBlade:PA7AGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7D",
+    "damage_name": "DBlade:PA7DGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7DGear1",
+    "damage_name": "DBlade:PA7DGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 0.75
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7DGear2",
+    "damage_name": "DBlade:PA7DGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 0.78
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7DGear3",
+    "damage_name": "DBlade:PA7DGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7U",
+    "damage_name": "DBlade:PA7UGear0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7UGear1",
+    "damage_name": "DBlade:PA7UGear1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7UGear2",
+    "damage_name": "DBlade:PA7UGear2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:PA7UGear3",
+    "damage_name": "DBlade:PA7UGear3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "PA": {
+        "name": "DbladePA07",
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:RG01",
+    "damage_name": "DBlade:RG01a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.32
+      }
+    }
+  },
+  {
+    "attack_name": "DBlade:SA1",
+    "damage_name": "DBlade:SA1a",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.5
+      }
+    }
+  },
+  {
+    "attack_name": "item_AutoPhotonShotDamage",
+    "damage_name": "item_AutoPhotonShotDamageA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "item_AutoPhotonShotDamageMst",
+    "damage_name": "item_AutoPhotonShotDamageAMst",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  }
+]

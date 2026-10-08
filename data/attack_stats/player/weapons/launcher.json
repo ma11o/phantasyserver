@@ -1,0 +1,721 @@
+[
+  {
+    "attack_name": "Launcher:A1",
+    "damage_name": "Launcher:A1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 3.92
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A1Jellen",
+    "damage_name": "Launcher:A1JellenA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 10.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A1JellenShot",
+    "damage_name": "Launcher:A1JellenShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A1Mirage",
+    "damage_name": "Launcher:A1MirageA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 10.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A1MirageShot",
+    "damage_name": "Launcher:A1MirageShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A1Panic",
+    "damage_name": "Launcher:A1PanicA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 10.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A1PanicShot",
+    "damage_name": "Launcher:A1PanicShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A1Shot",
+    "damage_name": "Launcher:A1Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A1ShotUS",
+    "damage_name": "Launcher:A1ShotUS",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A1US",
+    "damage_name": "Launcher:A1aUS",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.31
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2",
+    "damage_name": "Launcher:A2a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 4.2
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2Jellen",
+    "damage_name": "Launcher:A2JellenA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 10.6
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2JellenShot",
+    "damage_name": "Launcher:A2JellenShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2Mirage",
+    "damage_name": "Launcher:A2MirageA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 10.6
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2MirageShot",
+    "damage_name": "Launcher:A2MirageShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2Panic",
+    "damage_name": "Launcher:A2PanicA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 10.6
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2PanicShot",
+    "damage_name": "Launcher:A2PanicShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2Shot",
+    "damage_name": "Launcher:A2Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2ShotUS",
+    "damage_name": "Launcher:A2ShotUS",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A2US",
+    "damage_name": "Launcher:A2aUS",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.4
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3",
+    "damage_name": "Launcher:A3a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 5.6
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3Jellen",
+    "damage_name": "Launcher:A3JellenA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 11.2
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3JellenShot",
+    "damage_name": "Launcher:A3JellenShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3Mirage",
+    "damage_name": "Launcher:A3MirageA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 11.2
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3MirageShot",
+    "damage_name": "Launcher:A3MirageShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3Panic",
+    "damage_name": "Launcher:A3PanicA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 11.2
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3PanicShot",
+    "damage_name": "Launcher:A3PanicShot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3Shot",
+    "damage_name": "Launcher:A3Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3ShotUS",
+    "damage_name": "Launcher:A3ShotUS",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:A3US",
+    "damage_name": "Launcher:A3aUS",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.87
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA1",
+    "damage_name": "Launcher:PA1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA10",
+    "damage_name": "Launcher:PA10a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA10",
+        "mul": 0.07
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA10Shot",
+    "damage_name": "Launcher:PA10Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA10",
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA11",
+    "damage_name": "Launcher:PA11a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA11",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA1C0",
+    "damage_name": "Launcher:PA1C0a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA01",
+        "mul": 0.86
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA1C1",
+    "damage_name": "Launcher:PA1C1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA01",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA1Shot",
+    "damage_name": "Launcher:PA1Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA01",
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA2",
+    "damage_name": "Launcher:PA2a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA02",
+        "mul": 0.34
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA2Shot",
+    "damage_name": "Launcher:PA2Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA02",
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA3",
+    "damage_name": "Launcher:PA3a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA03",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA3Shot",
+    "damage_name": "Launcher:PA3Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA03",
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA4",
+    "damage_name": "Launcher:PA4a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA04",
+        "mul": 0.74
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA4P",
+    "damage_name": "Launcher:PA4Pa",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA04",
+        "mul": 0.02
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA4Shot",
+    "damage_name": "Launcher:PA4Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA04",
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA5",
+    "damage_name": "Launcher:PA5a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA05",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA6B",
+    "damage_name": "Launcher:PA6Ba",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA06",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA6CExplosionC0",
+    "damage_name": "Launcher:PA6CExplosionC0A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA06",
+        "mul": 0.15
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA6CExplosionC1",
+    "damage_name": "Launcher:PA6CExplosionC1A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA06",
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA6CRush",
+    "damage_name": "Launcher:PA6CRushA",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA06",
+        "mul": 0.1
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA6F",
+    "damage_name": "Launcher:PA6Fa",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA06",
+        "mul": 0.17
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA7B",
+    "damage_name": "Launcher:PA7a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA07",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA7T",
+    "damage_name": "Launcher:PA7a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA07",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA7TAir",
+    "damage_name": "Launcher:PA7a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA07",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA8Explosion",
+    "damage_name": "Launcher:PA8Ea",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA08",
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA8Shot",
+    "damage_name": "Launcher:PA8Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA08",
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:PA9",
+    "damage_name": "Launcher:PA9a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "PA": {
+        "name": "LauncherPA09",
+        "mul": 0.07
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:SA1",
+    "damage_name": "Launcher:SA1a",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 5.6
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:SA1Shot",
+    "damage_name": "Launcher:SA1Shot",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:SA1ShotUS",
+    "damage_name": "Launcher:SA1ShotUS",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.0
+      }
+    }
+  },
+  {
+    "attack_name": "Launcher:SA1US",
+    "damage_name": "Launcher:SA1aUS",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 1.87
+      }
+    }
+  },
+  {
+    "attack_name": "LauncherGPA1",
+    "damage_name": "LauncherGPA1A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.01
+      }
+    }
+  },
+  {
+    "attack_name": "LauncherGPA2",
+    "damage_name": "LauncherGPA2A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.05
+      }
+    }
+  },
+  {
+    "attack_name": "LauncherGPA3",
+    "damage_name": "LauncherGPA3A",
+    "attack_type": "Rng",
+    "defense_type": "Rng",
+    "damage": {
+      "Generic": {
+        "mul": 0.29
+      }
+    }
+  }
+]
