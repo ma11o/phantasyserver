@@ -2141,18 +2141,7 @@
           ],
           "zone_id": 2
         }
-      ],
-      "boss": {
-        "enemy_name": "Doodlebug",
-        "chunk_id": 4294967295,
-        "position": {
-          "pos_x": 54536,
-          "pos_y": 0,
-          "pos_z": 22494,
-          "rot_y": 0,
-          "rot_w": 48128
-        }
-      }
+      ]
     }
   ],
   "init_map": 1

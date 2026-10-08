@@ -49,7 +49,64 @@
       0
     ],
     "unk7": "urgency_010150",
-    "warps": [],
+    "warps": [
+      {
+        "unk1": 0,
+        "zone_id": 0,
+        "door_id": 2,
+        "dest_zone": 1,
+        "backdoor_id": 1
+      },
+      {
+        "unk1": 0,
+        "zone_id": 1,
+        "door_id": 1,
+        "dest_zone": 0,
+        "backdoor_id": 2
+      },
+      {
+        "unk1": 0,
+        "zone_id": 1,
+        "door_id": 3,
+        "dest_zone": 2,
+        "backdoor_id": 2
+      },
+      {
+        "unk1": 0,
+        "zone_id": 2,
+        "door_id": 2,
+        "dest_zone": 1,
+        "backdoor_id": 3
+      },
+      {
+        "unk1": 0,
+        "zone_id": 2,
+        "door_id": 4,
+        "dest_zone": 3,
+        "backdoor_id": 3
+      },
+      {
+        "unk1": 0,
+        "zone_id": 3,
+        "door_id": 3,
+        "dest_zone": 2,
+        "backdoor_id": 4
+      },
+      {
+        "unk1": 0,
+        "zone_id": 3,
+        "door_id": 5,
+        "dest_zone": 4,
+        "backdoor_id": 4
+      },
+      {
+        "unk1": 0,
+        "zone_id": 4,
+        "door_id": 4,
+        "dest_zone": 3,
+        "backdoor_id": 5
+      }
+    ],
     "unk10": [
       {
         "unk1": 0,
@@ -2429,14 +2486,3771 @@
           ],
           "zone_id": 2
         }
+      ]
+    },
+    {
+      "name": "area2",
+      "is_special_zone": false,
+      "zone_id": 3,
+      "settings": {
+        "world_id": 301,
+        "unk1": 0,
+        "zone_id": 1,
+        "map_id": 2200,
+        "zone_type": 2,
+        "seed": 2012513828,
+        "args": 400,
+        "size_x": 0,
+        "size_y": 0,
+        "unk2": 0,
+        "area_index": 2,
+        "sub_area": 4294967295,
+        "unk3": 2561
+      },
+      "default_location": {
+        "rot_x": 0,
+        "rot_y": 15360,
+        "rot_z": 0,
+        "rot_w": 0,
+        "pos_x": 0,
+        "pos_y": 13517,
+        "pos_z": 22752
+      },
+      "enemies": [
+        {
+          "enemy_name": "SoldierAnt",
+          "spawn_category": 1
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_id": 0,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55298,
+              "pos_y": 49316,
+              "pos_z": 55599
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55560,
+              "pos_y": 46694,
+              "pos_z": 55496
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55531,
+              "pos_y": 49178,
+              "pos_z": 55458
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55377,
+              "pos_y": 49306,
+              "pos_z": 55565
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55469,
+              "pos_y": 47350,
+              "pos_z": 55679
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55452,
+              "pos_y": 47575,
+              "pos_z": 55680
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55358,
+              "pos_y": 49341,
+              "pos_z": 55564
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55421,
+              "pos_y": 49157,
+              "pos_z": 55596
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 1
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 1,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54417,
+              "pos_y": 48609,
+              "pos_z": 55611
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54758,
+              "pos_y": 48456,
+              "pos_z": 55434
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54343,
+              "pos_y": 48456,
+              "pos_z": 55503
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54423,
+              "pos_y": 49362,
+              "pos_z": 55243
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54720,
+              "pos_y": 48548,
+              "pos_z": 55411
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54556,
+              "pos_y": 48814,
+              "pos_z": 55565
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54307,
+              "pos_y": 48415,
+              "pos_z": 55463
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54980,
+              "pos_y": 49244,
+              "pos_z": 55620
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 2
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 3,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 22310,
+              "pos_y": 47739,
+              "pos_z": 55614
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21612,
+              "pos_y": 48497,
+              "pos_z": 55709
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 22329,
+              "pos_y": 47329,
+              "pos_z": 55529
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21271,
+              "pos_y": 46449,
+              "pos_z": 55675
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 22232,
+              "pos_y": 48128,
+              "pos_z": 55581
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21648,
+              "pos_y": 48138,
+              "pos_z": 55409
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21666,
+              "pos_y": 47493,
+              "pos_z": 55751
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21602,
+              "pos_y": 48896,
+              "pos_z": 55678
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 4
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 5,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55507,
+              "pos_y": 49254,
+              "pos_z": 53921
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55383,
+              "pos_y": 49367,
+              "pos_z": 54400
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55589,
+              "pos_y": 49454,
+              "pos_z": 54411
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55658,
+              "pos_y": 49352,
+              "pos_z": 54507
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55621,
+              "pos_y": 49388,
+              "pos_z": 54538
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55376,
+              "pos_y": 49198,
+              "pos_z": 54714
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55511,
+              "pos_y": 49213,
+              "pos_z": 54700
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55483,
+              "pos_y": 49992,
+              "pos_z": 54459
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 1
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 6,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54602,
+              "pos_y": 49444,
+              "pos_z": 54548
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54388,
+              "pos_y": 49244,
+              "pos_z": 54272
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54488,
+              "pos_y": 49080,
+              "pos_z": 54641
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54919,
+              "pos_y": 49234,
+              "pos_z": 54634
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54387,
+              "pos_y": 49367,
+              "pos_z": 54359
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55049,
+              "pos_y": 49306,
+              "pos_z": 54636
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54874,
+              "pos_y": 49193,
+              "pos_z": 54283
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54587,
+              "pos_y": 50002,
+              "pos_z": 54367
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 2
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 8,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21568,
+              "pos_y": 47698,
+              "pos_z": 54811
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 22052,
+              "pos_y": 46367,
+              "pos_z": 54407
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21932,
+              "pos_y": 47145,
+              "pos_z": 54405
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21667,
+              "pos_y": 48159,
+              "pos_z": 54036
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21908,
+              "pos_y": 45507,
+              "pos_z": 54860
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21932,
+              "pos_y": 47862,
+              "pos_z": 54647
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21883,
+              "pos_y": 48200,
+              "pos_z": 54047
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21627,
+              "pos_y": 48292,
+              "pos_z": 54534
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 4
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 9,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55488,
+              "pos_y": 49270,
+              "pos_z": 53323
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55521,
+              "pos_y": 49224,
+              "pos_z": 50504
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55219,
+              "pos_y": 49132,
+              "pos_z": 51799
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55606,
+              "pos_y": 48220,
+              "pos_z": 19309
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55379,
+              "pos_y": 49408,
+              "pos_z": 13844
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55345,
+              "pos_y": 49306,
+              "pos_z": 49736
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55470,
+              "pos_y": 48271,
+              "pos_z": 52056
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55456,
+              "pos_y": 47677,
+              "pos_z": 52512
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 1
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 10,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54756,
+              "pos_y": 15340,
+              "pos_z": 20114
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54943,
+              "pos_y": 49198,
+              "pos_z": 19283
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54877,
+              "pos_y": 47555,
+              "pos_z": 52041
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54888,
+              "pos_y": 47473,
+              "pos_z": 18493
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54936,
+              "pos_y": 47821,
+              "pos_z": 51963
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54822,
+              "pos_y": 49203,
+              "pos_z": 19439
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54852,
+              "pos_y": 47882,
+              "pos_z": 51708
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55090,
+              "pos_y": 49239,
+              "pos_z": 51382
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 2
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 11,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 50291,
+              "pos_y": 48814,
+              "pos_z": 52475
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 13476,
+              "pos_y": 47555,
+              "pos_z": 53275
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52298,
+              "pos_y": 49019,
+              "pos_z": 19462
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 17838,
+              "pos_y": 48998,
+              "pos_z": 18929
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 50033,
+              "pos_y": 49352,
+              "pos_z": 51379
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52396,
+              "pos_y": 49167,
+              "pos_z": 19091
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 16947,
+              "pos_y": 48005,
+              "pos_z": 20245
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52472,
+              "pos_y": 47944,
+              "pos_z": 52026
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 3
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 12,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21641,
+              "pos_y": 49111,
+              "pos_z": 51924
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21860,
+              "pos_y": 49183,
+              "pos_z": 51021
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21863,
+              "pos_y": 46080,
+              "pos_z": 53277
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21612,
+              "pos_y": 49162,
+              "pos_z": 18825
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21935,
+              "pos_y": 49167,
+              "pos_z": 51212
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21903,
+              "pos_y": 46367,
+              "pos_z": 53341
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21696,
+              "pos_y": 47923,
+              "pos_z": 52899
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 15352,
+              "rot_z": 0,
+              "rot_w": 11669,
+              "pos_x": 21645,
+              "pos_y": 49009,
+              "pos_z": 19300
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 4
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 14,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 15360,
+              "rot_z": 0,
+              "rot_w": 0,
+              "pos_x": 49434,
+              "pos_y": 15360,
+              "pos_z": 21780
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 49157,
+              "pos_y": 46326,
+              "pos_z": 21629
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52045,
+              "pos_y": 16579,
+              "pos_z": 21608
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 19016,
+              "pos_y": 46981,
+              "pos_z": 21875
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 20635,
+              "pos_y": 47104,
+              "pos_z": 21724
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 50491,
+              "pos_y": 45588,
+              "pos_z": 22274
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 20597,
+              "pos_y": 47124,
+              "pos_z": 21684
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 47985,
+              "pos_y": 48148,
+              "pos_z": 21900
+            }
+          ],
+          "reveals": [
+            {
+              "row": 4,
+              "column": 3
+            }
+          ],
+          "zone_id": 3
+        },
+        {
+          "chunk_id": 15,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21951,
+              "pos_y": 47206,
+              "pos_z": 22016
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21775,
+              "pos_y": 48435,
+              "pos_z": 22016
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21998,
+              "pos_y": 48517,
+              "pos_z": 21171
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21035,
+              "pos_y": 47329,
+              "pos_z": 21618
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 22115,
+              "pos_y": 47800,
+              "pos_z": 21729
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21299,
+              "pos_y": 48589,
+              "pos_z": 21907
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21871,
+              "pos_y": 47636,
+              "pos_z": 22069
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21650,
+              "pos_y": 47411,
+              "pos_z": 22077
+            }
+          ],
+          "reveals": [
+            {
+              "row": 4,
+              "column": 4
+            }
+          ],
+          "zone_id": 3
+        }
+      ]
+    },
+    {
+      "name": "area3",
+      "is_special_zone": false,
+      "zone_id": 4,
+      "settings": {
+        "world_id": 301,
+        "unk1": 0,
+        "zone_id": 2,
+        "map_id": 2200,
+        "zone_type": 2,
+        "seed": 2012513828,
+        "args": 400,
+        "size_x": 0,
+        "size_y": 0,
+        "unk2": 0,
+        "area_index": 3,
+        "sub_area": 4294967295,
+        "unk3": 2561
+      },
+      "default_location": {
+        "rot_x": 0,
+        "rot_y": 15360,
+        "rot_z": 0,
+        "rot_w": 0,
+        "pos_x": 0,
+        "pos_y": 13517,
+        "pos_z": 22752
+      },
+      "enemies": [
+        {
+          "enemy_name": "SoldierAnt",
+          "spawn_category": 1
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_id": 0,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55298,
+              "pos_y": 49316,
+              "pos_z": 55599
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55560,
+              "pos_y": 46694,
+              "pos_z": 55496
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55531,
+              "pos_y": 49178,
+              "pos_z": 55458
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55377,
+              "pos_y": 49306,
+              "pos_z": 55565
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55469,
+              "pos_y": 47350,
+              "pos_z": 55679
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55452,
+              "pos_y": 47575,
+              "pos_z": 55680
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55358,
+              "pos_y": 49341,
+              "pos_z": 55564
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55421,
+              "pos_y": 49157,
+              "pos_z": 55596
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 1
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 1,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54417,
+              "pos_y": 48609,
+              "pos_z": 55611
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54758,
+              "pos_y": 48456,
+              "pos_z": 55434
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54343,
+              "pos_y": 48456,
+              "pos_z": 55503
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54423,
+              "pos_y": 49362,
+              "pos_z": 55243
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54720,
+              "pos_y": 48548,
+              "pos_z": 55411
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54556,
+              "pos_y": 48814,
+              "pos_z": 55565
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54307,
+              "pos_y": 48415,
+              "pos_z": 55463
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54980,
+              "pos_y": 49244,
+              "pos_z": 55620
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 2
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 3,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 22310,
+              "pos_y": 47739,
+              "pos_z": 55614
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21612,
+              "pos_y": 48497,
+              "pos_z": 55709
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 22329,
+              "pos_y": 47329,
+              "pos_z": 55529
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21271,
+              "pos_y": 46449,
+              "pos_z": 55675
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 22232,
+              "pos_y": 48128,
+              "pos_z": 55581
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21648,
+              "pos_y": 48138,
+              "pos_z": 55409
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21666,
+              "pos_y": 47493,
+              "pos_z": 55751
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21602,
+              "pos_y": 48896,
+              "pos_z": 55678
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 4
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 5,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55507,
+              "pos_y": 49254,
+              "pos_z": 53921
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55383,
+              "pos_y": 49367,
+              "pos_z": 54400
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55589,
+              "pos_y": 49454,
+              "pos_z": 54411
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55658,
+              "pos_y": 49352,
+              "pos_z": 54507
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55621,
+              "pos_y": 49388,
+              "pos_z": 54538
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55376,
+              "pos_y": 49198,
+              "pos_z": 54714
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55511,
+              "pos_y": 49213,
+              "pos_z": 54700
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55483,
+              "pos_y": 49992,
+              "pos_z": 54459
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 1
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 6,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54602,
+              "pos_y": 49444,
+              "pos_z": 54548
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54388,
+              "pos_y": 49244,
+              "pos_z": 54272
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54488,
+              "pos_y": 49080,
+              "pos_z": 54641
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54919,
+              "pos_y": 49234,
+              "pos_z": 54634
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54387,
+              "pos_y": 49367,
+              "pos_z": 54359
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55049,
+              "pos_y": 49306,
+              "pos_z": 54636
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54874,
+              "pos_y": 49193,
+              "pos_z": 54283
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54587,
+              "pos_y": 50002,
+              "pos_z": 54367
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 2
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 8,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21568,
+              "pos_y": 47698,
+              "pos_z": 54811
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 22052,
+              "pos_y": 46367,
+              "pos_z": 54407
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21932,
+              "pos_y": 47145,
+              "pos_z": 54405
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21667,
+              "pos_y": 48159,
+              "pos_z": 54036
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21908,
+              "pos_y": 45507,
+              "pos_z": 54860
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21932,
+              "pos_y": 47862,
+              "pos_z": 54647
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21883,
+              "pos_y": 48200,
+              "pos_z": 54047
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21627,
+              "pos_y": 48292,
+              "pos_z": 54534
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 4
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 9,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55488,
+              "pos_y": 49270,
+              "pos_z": 53323
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55521,
+              "pos_y": 49224,
+              "pos_z": 50504
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55219,
+              "pos_y": 49132,
+              "pos_z": 51799
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55606,
+              "pos_y": 48220,
+              "pos_z": 19309
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55379,
+              "pos_y": 49408,
+              "pos_z": 13844
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55345,
+              "pos_y": 49306,
+              "pos_z": 49736
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55470,
+              "pos_y": 48271,
+              "pos_z": 52056
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55456,
+              "pos_y": 47677,
+              "pos_z": 52512
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 1
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 10,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54756,
+              "pos_y": 15340,
+              "pos_z": 20114
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54943,
+              "pos_y": 49198,
+              "pos_z": 19283
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54877,
+              "pos_y": 47555,
+              "pos_z": 52041
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54888,
+              "pos_y": 47473,
+              "pos_z": 18493
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54936,
+              "pos_y": 47821,
+              "pos_z": 51963
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54822,
+              "pos_y": 49203,
+              "pos_z": 19439
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54852,
+              "pos_y": 47882,
+              "pos_z": 51708
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55090,
+              "pos_y": 49239,
+              "pos_z": 51382
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 2
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 11,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 50291,
+              "pos_y": 48814,
+              "pos_z": 52475
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 13476,
+              "pos_y": 47555,
+              "pos_z": 53275
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52298,
+              "pos_y": 49019,
+              "pos_z": 19462
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 17838,
+              "pos_y": 48998,
+              "pos_z": 18929
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 50033,
+              "pos_y": 49352,
+              "pos_z": 51379
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52396,
+              "pos_y": 49167,
+              "pos_z": 19091
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 16947,
+              "pos_y": 48005,
+              "pos_z": 20245
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52472,
+              "pos_y": 47944,
+              "pos_z": 52026
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 3
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 12,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21641,
+              "pos_y": 49111,
+              "pos_z": 51924
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21860,
+              "pos_y": 49183,
+              "pos_z": 51021
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21863,
+              "pos_y": 46080,
+              "pos_z": 53277
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21612,
+              "pos_y": 49162,
+              "pos_z": 18825
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21935,
+              "pos_y": 49167,
+              "pos_z": 51212
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21903,
+              "pos_y": 46367,
+              "pos_z": 53341
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21696,
+              "pos_y": 47923,
+              "pos_z": 52899
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 15352,
+              "rot_z": 0,
+              "rot_w": 11669,
+              "pos_x": 21645,
+              "pos_y": 49009,
+              "pos_z": 19300
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 4
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 14,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 15360,
+              "rot_z": 0,
+              "rot_w": 0,
+              "pos_x": 49434,
+              "pos_y": 15360,
+              "pos_z": 21780
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 49157,
+              "pos_y": 46326,
+              "pos_z": 21629
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52045,
+              "pos_y": 16579,
+              "pos_z": 21608
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 19016,
+              "pos_y": 46981,
+              "pos_z": 21875
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 20635,
+              "pos_y": 47104,
+              "pos_z": 21724
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 50491,
+              "pos_y": 45588,
+              "pos_z": 22274
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 20597,
+              "pos_y": 47124,
+              "pos_z": 21684
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 47985,
+              "pos_y": 48148,
+              "pos_z": 21900
+            }
+          ],
+          "reveals": [
+            {
+              "row": 4,
+              "column": 3
+            }
+          ],
+          "zone_id": 4
+        },
+        {
+          "chunk_id": 15,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21951,
+              "pos_y": 47206,
+              "pos_z": 22016
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21775,
+              "pos_y": 48435,
+              "pos_z": 22016
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21998,
+              "pos_y": 48517,
+              "pos_z": 21171
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21035,
+              "pos_y": 47329,
+              "pos_z": 21618
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 22115,
+              "pos_y": 47800,
+              "pos_z": 21729
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21299,
+              "pos_y": 48589,
+              "pos_z": 21907
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21871,
+              "pos_y": 47636,
+              "pos_z": 22069
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21650,
+              "pos_y": 47411,
+              "pos_z": 22077
+            }
+          ],
+          "reveals": [
+            {
+              "row": 4,
+              "column": 4
+            }
+          ],
+          "zone_id": 4
+        }
+      ]
+    },
+    {
+      "name": "area4",
+      "is_special_zone": false,
+      "zone_id": 5,
+      "settings": {
+        "world_id": 301,
+        "unk1": 0,
+        "zone_id": 3,
+        "map_id": 2200,
+        "zone_type": 2,
+        "seed": 2012513828,
+        "args": 400,
+        "size_x": 0,
+        "size_y": 0,
+        "unk2": 0,
+        "area_index": 4,
+        "sub_area": 4294967295,
+        "unk3": 2561
+      },
+      "default_location": {
+        "rot_x": 0,
+        "rot_y": 15360,
+        "rot_z": 0,
+        "rot_w": 0,
+        "pos_x": 0,
+        "pos_y": 13517,
+        "pos_z": 22752
+      },
+      "enemies": [
+        {
+          "enemy_name": "SoldierAnt",
+          "spawn_category": 1
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_id": 0,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55298,
+              "pos_y": 49316,
+              "pos_z": 55599
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55560,
+              "pos_y": 46694,
+              "pos_z": 55496
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55531,
+              "pos_y": 49178,
+              "pos_z": 55458
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55377,
+              "pos_y": 49306,
+              "pos_z": 55565
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55469,
+              "pos_y": 47350,
+              "pos_z": 55679
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55452,
+              "pos_y": 47575,
+              "pos_z": 55680
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55358,
+              "pos_y": 49341,
+              "pos_z": 55564
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55421,
+              "pos_y": 49157,
+              "pos_z": 55596
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 1
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 1,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54417,
+              "pos_y": 48609,
+              "pos_z": 55611
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54758,
+              "pos_y": 48456,
+              "pos_z": 55434
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54343,
+              "pos_y": 48456,
+              "pos_z": 55503
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54423,
+              "pos_y": 49362,
+              "pos_z": 55243
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54720,
+              "pos_y": 48548,
+              "pos_z": 55411
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54556,
+              "pos_y": 48814,
+              "pos_z": 55565
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54307,
+              "pos_y": 48415,
+              "pos_z": 55463
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54980,
+              "pos_y": 49244,
+              "pos_z": 55620
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 2
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 3,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 22310,
+              "pos_y": 47739,
+              "pos_z": 55614
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21612,
+              "pos_y": 48497,
+              "pos_z": 55709
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 22329,
+              "pos_y": 47329,
+              "pos_z": 55529
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21271,
+              "pos_y": 46449,
+              "pos_z": 55675
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 22232,
+              "pos_y": 48128,
+              "pos_z": 55581
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21648,
+              "pos_y": 48138,
+              "pos_z": 55409
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21666,
+              "pos_y": 47493,
+              "pos_z": 55751
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 21602,
+              "pos_y": 48896,
+              "pos_z": 55678
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 4
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 5,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55507,
+              "pos_y": 49254,
+              "pos_z": 53921
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55383,
+              "pos_y": 49367,
+              "pos_z": 54400
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55589,
+              "pos_y": 49454,
+              "pos_z": 54411
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55658,
+              "pos_y": 49352,
+              "pos_z": 54507
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55621,
+              "pos_y": 49388,
+              "pos_z": 54538
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55376,
+              "pos_y": 49198,
+              "pos_z": 54714
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55511,
+              "pos_y": 49213,
+              "pos_z": 54700
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 47528,
+              "pos_x": 55483,
+              "pos_y": 49992,
+              "pos_z": 54459
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 1
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 6,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54602,
+              "pos_y": 49444,
+              "pos_z": 54548
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54388,
+              "pos_y": 49244,
+              "pos_z": 54272
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54488,
+              "pos_y": 49080,
+              "pos_z": 54641
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54919,
+              "pos_y": 49234,
+              "pos_z": 54634
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54387,
+              "pos_y": 49367,
+              "pos_z": 54359
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55049,
+              "pos_y": 49306,
+              "pos_z": 54636
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54874,
+              "pos_y": 49193,
+              "pos_z": 54283
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54587,
+              "pos_y": 50002,
+              "pos_z": 54367
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 2
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 8,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21568,
+              "pos_y": 47698,
+              "pos_z": 54811
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 22052,
+              "pos_y": 46367,
+              "pos_z": 54407
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21932,
+              "pos_y": 47145,
+              "pos_z": 54405
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21667,
+              "pos_y": 48159,
+              "pos_z": 54036
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21908,
+              "pos_y": 45507,
+              "pos_z": 54860
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21932,
+              "pos_y": 47862,
+              "pos_z": 54647
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21883,
+              "pos_y": 48200,
+              "pos_z": 54047
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21627,
+              "pos_y": 48292,
+              "pos_z": 54534
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 4
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 9,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55488,
+              "pos_y": 49270,
+              "pos_z": 53323
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55521,
+              "pos_y": 49224,
+              "pos_z": 50504
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55219,
+              "pos_y": 49132,
+              "pos_z": 51799
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55606,
+              "pos_y": 48220,
+              "pos_z": 19309
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55379,
+              "pos_y": 49408,
+              "pos_z": 13844
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55345,
+              "pos_y": 49306,
+              "pos_z": 49736
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55470,
+              "pos_y": 48271,
+              "pos_z": 52056
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 55456,
+              "pos_y": 47677,
+              "pos_z": 52512
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 1
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 10,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54756,
+              "pos_y": 15340,
+              "pos_z": 20114
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54943,
+              "pos_y": 49198,
+              "pos_z": 19283
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54877,
+              "pos_y": 47555,
+              "pos_z": 52041
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54888,
+              "pos_y": 47473,
+              "pos_z": 18493
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54936,
+              "pos_y": 47821,
+              "pos_z": 51963
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54822,
+              "pos_y": 49203,
+              "pos_z": 19439
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 54852,
+              "pos_y": 47882,
+              "pos_z": 51708
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 55090,
+              "pos_y": 49239,
+              "pos_z": 51382
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 2
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 11,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 50291,
+              "pos_y": 48814,
+              "pos_z": 52475
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 13476,
+              "pos_y": 47555,
+              "pos_z": 53275
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52298,
+              "pos_y": 49019,
+              "pos_z": 19462
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 17838,
+              "pos_y": 48998,
+              "pos_z": 18929
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 50033,
+              "pos_y": 49352,
+              "pos_z": 51379
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52396,
+              "pos_y": 49167,
+              "pos_z": 19091
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 16947,
+              "pos_y": 48005,
+              "pos_z": 20245
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52472,
+              "pos_y": 47944,
+              "pos_z": 52026
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 3
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 12,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21641,
+              "pos_y": 49111,
+              "pos_z": 51924
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21860,
+              "pos_y": 49183,
+              "pos_z": 51021
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21863,
+              "pos_y": 46080,
+              "pos_z": 53277
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21612,
+              "pos_y": 49162,
+              "pos_z": 18825
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21935,
+              "pos_y": 49167,
+              "pos_z": 51212
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21903,
+              "pos_y": 46367,
+              "pos_z": 53341
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21696,
+              "pos_y": 47923,
+              "pos_z": 52899
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 15352,
+              "rot_z": 0,
+              "rot_w": 11669,
+              "pos_x": 21645,
+              "pos_y": 49009,
+              "pos_z": 19300
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 4
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 14,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 15360,
+              "rot_z": 0,
+              "rot_w": 0,
+              "pos_x": 49434,
+              "pos_y": 15360,
+              "pos_z": 21780
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 49157,
+              "pos_y": 46326,
+              "pos_z": 21629
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 52045,
+              "pos_y": 16579,
+              "pos_z": 21608
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 19016,
+              "pos_y": 46981,
+              "pos_z": 21875
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 20635,
+              "pos_y": 47104,
+              "pos_z": 21724
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 50491,
+              "pos_y": 45588,
+              "pos_z": 22274
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 20597,
+              "pos_y": 47124,
+              "pos_z": 21684
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 47985,
+              "pos_y": 48148,
+              "pos_z": 21900
+            }
+          ],
+          "reveals": [
+            {
+              "row": 4,
+              "column": 3
+            }
+          ],
+          "zone_id": 5
+        },
+        {
+          "chunk_id": 15,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21951,
+              "pos_y": 47206,
+              "pos_z": 22016
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21775,
+              "pos_y": 48435,
+              "pos_z": 22016
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21998,
+              "pos_y": 48517,
+              "pos_z": 21171
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21035,
+              "pos_y": 47329,
+              "pos_z": 21618
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 22115,
+              "pos_y": 47800,
+              "pos_z": 21729
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21299,
+              "pos_y": 48589,
+              "pos_z": 21907
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21871,
+              "pos_y": 47636,
+              "pos_z": 22069
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 21650,
+              "pos_y": 47411,
+              "pos_z": 22077
+            }
+          ],
+          "reveals": [
+            {
+              "row": 4,
+              "column": 4
+            }
+          ],
+          "zone_id": 5
+        }
+      ]
+    },
+    {
+      "name": "area5",
+      "is_special_zone": false,
+      "zone_id": 6,
+      "settings": {
+        "world_id": 301,
+        "unk1": 0,
+        "zone_id": 4,
+        "map_id": 2220,
+        "zone_type": 2,
+        "seed": 2012513828,
+        "args": 1541,
+        "size_x": 0,
+        "size_y": 0,
+        "unk2": 0,
+        "area_index": 5,
+        "sub_area": 4294967295,
+        "unk3": 2561
+      },
+      "default_location": {
+        "rot_x": 0,
+        "rot_y": 15360,
+        "rot_z": 0,
+        "rot_w": 0,
+        "pos_x": 21760,
+        "pos_y": 17034,
+        "pos_z": 22199
+      },
+      "enemies": [
+        {
+          "enemy_name": "SoldierAnt",
+          "spawn_category": 1
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_id": 1,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 12333,
+              "rot_z": 0,
+              "rot_w": 15342,
+              "pos_x": 54629,
+              "pos_y": 16906,
+              "pos_z": 55233
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54530,
+              "pos_y": 16891,
+              "pos_z": 55195
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54534,
+              "pos_y": 16783,
+              "pos_z": 55327
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 12333,
+              "rot_z": 0,
+              "rot_w": 48110,
+              "pos_x": 54429,
+              "pos_y": 16922,
+              "pos_z": 55237
+            }
+          ],
+          "reveals": [
+            {
+              "row": 1,
+              "column": 2
+            }
+          ],
+          "zone_id": 6
+        },
+        {
+          "chunk_id": 2,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 13348,
+              "rot_z": 0,
+              "rot_w": 48058,
+              "pos_x": 54382,
+              "pos_y": 17229,
+              "pos_z": 54002
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 12686,
+              "rot_z": 0,
+              "rot_w": 15329,
+              "pos_x": 54632,
+              "pos_y": 17039,
+              "pos_z": 54089
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 13348,
+              "rot_z": 0,
+              "rot_w": 15290,
+              "pos_x": 54676,
+              "pos_y": 17009,
+              "pos_z": 53873
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 13348,
+              "rot_z": 0,
+              "rot_w": 15290,
+              "pos_x": 54684,
+              "pos_y": 17106,
+              "pos_z": 53754
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54440,
+              "pos_y": 17039,
+              "pos_z": 54188
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 12686,
+              "rot_z": 0,
+              "rot_w": 48097,
+              "pos_x": 54408,
+              "pos_y": 17009,
+              "pos_z": 54089
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 13348,
+              "rot_z": 0,
+              "rot_w": 48058,
+              "pos_x": 54367,
+              "pos_y": 17060,
+              "pos_z": 53743
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 54552,
+              "pos_y": 17039,
+              "pos_z": 54252
+            }
+          ],
+          "reveals": [
+            {
+              "row": 2,
+              "column": 2
+            }
+          ],
+          "zone_id": 6
+        },
+        {
+          "chunk_id": 3,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 53521,
+              "pos_y": 16906,
+              "pos_z": 45343
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 53571,
+              "pos_y": 16932,
+              "pos_z": 18074
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 53555,
+              "pos_y": 16891,
+              "pos_z": 50248
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 2
+            }
+          ],
+          "zone_id": 6
+        },
+        {
+          "chunk_id": 4,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 51854,
+              "pos_y": 15319,
+              "pos_z": 17546
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 51409,
+              "pos_y": 17559,
+              "pos_z": 19057
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 16988,
+              "pos_y": 14541,
+              "pos_z": 18756
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14336,
+              "rot_z": 0,
+              "rot_w": 15086,
+              "pos_x": 18404,
+              "pos_y": 18099,
+              "pos_z": 52243
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 16492,
+              "pos_y": 17928,
+              "pos_z": 51889
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 53454,
+              "pos_y": 17050,
+              "pos_z": 18604
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 53466,
+              "pos_y": 16876,
+              "pos_z": 17388
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 14760,
+              "rot_z": 0,
+              "rot_w": 14760,
+              "pos_x": 53159,
+              "pos_y": 17300,
+              "pos_z": 50993
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 3
+            }
+          ],
+          "zone_id": 6
+        },
+        {
+          "chunk_id": 5,
+          "enemy_spawn_type": {
+            "Automatic": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          "enemy_spawn_points": [
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21716,
+              "pos_y": 16783,
+              "pos_z": 20467
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21616,
+              "pos_y": 17019,
+              "pos_z": 20638
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21803,
+              "pos_y": 16804,
+              "pos_z": 20471
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21892,
+              "pos_y": 17142,
+              "pos_z": 19801
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21883,
+              "pos_y": 17111,
+              "pos_z": 19495
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21699,
+              "pos_y": 16855,
+              "pos_z": 44810
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21583,
+              "pos_y": 16768,
+              "pos_z": 15811
+            },
+            {
+              "rot_x": 0,
+              "rot_y": 0,
+              "rot_z": 0,
+              "rot_w": 15360,
+              "pos_x": 21695,
+              "pos_y": 17254,
+              "pos_z": 51299
+            }
+          ],
+          "reveals": [
+            {
+              "row": 3,
+              "column": 4
+            }
+          ],
+          "zone_id": 6
+        }
       ],
       "boss": {
         "enemy_name": "BigBeastA",
         "chunk_id": 4294967295,
         "position": {
-          "pos_x": 22772,
-          "pos_y": 13517,
-          "pos_z": 22623,
+          "pos_x": 21760,
+          "pos_y": 17034,
+          "pos_z": 22071,
           "rot_y": 0,
           "rot_w": 48128
         }
