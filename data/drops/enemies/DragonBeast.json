@@ -1,0 +1,61 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (skyscape, T81): cirnopedia area ~ Skyscape + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:12:29",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ヒトガタ",
+      "source": "swiki swiki-enemy-413cae9f70b56597ee76"
+    },
+    {
+      "item": "1:6:22",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ラムダリドルモール",
+      "source": "swiki swiki-enemy-2a74cbb0fc3975f8079d"
+    },
+    {
+      "item": "1:13:55",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "バリドランウォンド",
+      "source": "swiki swiki-enemy-39f38373f4d2af26b3c5"
+    },
+    {
+      "item": "1:9:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオウルスラグナ",
+      "source": "swiki swiki-enemy-cf1f79740a13e7f2a5d8"
+    },
+    {
+      "item": "1:12:146",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ザフリジェ",
+      "source": "swiki swiki-enemy-d06b82db036300553a57"
+    }
+  ]
+}

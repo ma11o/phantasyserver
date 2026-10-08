@@ -1,0 +1,152 @@
+{
+  "rate": 1.0,
+  "drop_count": {
+    "min": 4,
+    "max": 4
+  },
+  "rare_rate": 0.0,
+  "source": "research (illusion, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:5:32",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 11,
+      "level_max": 20,
+      "name": "ニョイボウ",
+      "source": "swiki swiki-enemy-beecba87f799a4179915"
+    },
+    {
+      "item": "1:15:44",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "アルテイリ",
+      "source": "swiki swiki-enemy-4559cb3fc22b998f4678"
+    },
+    {
+      "item": "1:11:35",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "トワイライトルーン",
+      "source": "swiki swiki-enemy-4559cb3fc22b998f4678"
+    },
+    {
+      "item": "1:6:38",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "グラヴェルコア",
+      "source": "swiki swiki-enemy-cbd77eeda5f3757c9f61"
+    },
+    {
+      "item": "1:12:22",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダハードクォーツ",
+      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b"
+    },
+    {
+      "item": "1:2:62",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "グワナーダランス",
+      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b"
+    },
+    {
+      "item": "1:4:56",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "グワナーダガー",
+      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b"
+    },
+    {
+      "item": "1:5:59",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "グワナーダブル",
+      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b"
+    },
+    {
+      "item": "1:7:17",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ラムダトゥウィスラー",
+      "source": "swiki swiki-enemy-68468efdb27f013562c5"
+    },
+    {
+      "item": "1:11:107",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "エスカヘルメス",
+      "source": "swiki swiki-enemy-9a2e270ba96ef4625cfe"
+    },
+    {
+      "item": "1:3:183",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ノクスロザン",
+      "source": "swiki swiki-enemy-9a2e270ba96ef4625cfe"
+    },
+    {
+      "item": "1:9:209",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ノクスクラード",
+      "source": "swiki swiki-enemy-9a2e270ba96ef4625cfe"
+    },
+    {
+      "item": "1:13:151",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "グルダルミナ",
+      "source": "swiki swiki-enemy-f6701da96c69be6f2184"
+    },
+    {
+      "item": "1:1:67",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "トレイターグリフ",
+      "source": "swiki swiki-enemy-341057e4c45661e36fb6"
+    }
+  ],
+  "boss_drops": 4
+}

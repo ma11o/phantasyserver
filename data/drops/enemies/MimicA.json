@@ -1,0 +1,71 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (ruins, T81): cirnopedia area ~ Ruins + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:12:34",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "オンミョウキカミ",
+      "source": "swiki swiki-enemy-a18090e80cee0fb3f84d"
+    },
+    {
+      "item": "1:10:21",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "フユジオン",
+      "source": "swiki swiki-enemy-dd8417af9218a7ed7b9a"
+    },
+    {
+      "item": "1:14:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "サリザニア",
+      "source": "swiki swiki-enemy-dd8417af9218a7ed7b9a"
+    },
+    {
+      "item": "1:13:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ラムダヘキサグラフ",
+      "source": "swiki swiki-enemy-87f254b1a71f50d5697f"
+    },
+    {
+      "item": "1:7:26",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオブラオレット",
+      "source": "swiki swiki-enemy-d643d0c829b60d29e85e"
+    },
+    {
+      "item": "1:5:98",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ウェドルスエッジ",
+      "source": "swiki swiki-enemy-02afb4cb54254f3f0fe7"
+    }
+  ]
+}

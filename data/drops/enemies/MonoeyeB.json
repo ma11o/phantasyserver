@@ -1,0 +1,81 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (illusion, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:13:19",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "カリーノライト",
+      "source": "swiki swiki-enemy-3fdfd738db00306b6984"
+    },
+    {
+      "item": "1:16:18",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダレザスイフト",
+      "source": "swiki swiki-enemy-c374066e3b4d74058587"
+    },
+    {
+      "item": "1:2:29",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ギガススピナー",
+      "source": "swiki swiki-enemy-c374066e3b4d74058587"
+    },
+    {
+      "item": "1:15:46",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "コヌパダリ",
+      "source": "swiki swiki-enemy-c374066e3b4d74058587"
+    },
+    {
+      "item": "1:11:113",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "カジバゴコウ",
+      "source": "swiki swiki-enemy-be43d0e5b4f0257705a6"
+    },
+    {
+      "item": "1:9:36",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ボマーノワール",
+      "source": "swiki swiki-enemy-d3846dcc31fbb7acaee5"
+    },
+    {
+      "item": "1:6:85",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "パオジェイド",
+      "source": "swiki swiki-enemy-c74e6deacf4db880d720"
+    }
+  ]
+}

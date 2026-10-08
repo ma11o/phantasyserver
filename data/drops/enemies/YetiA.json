@@ -1,0 +1,81 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (tundra, T81): cirnopedia area ~ Tundra + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:17:27",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "スターフリサ",
+      "source": "swiki swiki-enemy-34e7db50cea4bd1be928"
+    },
+    {
+      "item": "1:1:27",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ラストサバイバー",
+      "source": "swiki swiki-enemy-1267348f83426c61eb22"
+    },
+    {
+      "item": "1:7:46",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "クルールコフィン",
+      "source": "swiki swiki-enemy-1267348f83426c61eb22"
+    },
+    {
+      "item": "1:11:22",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ラムダサルバドール",
+      "source": "swiki swiki-enemy-442b43e4a9d85b37a774"
+    },
+    {
+      "item": "1:9:28",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "インフェルノバズーカ",
+      "source": "swiki swiki-enemy-12670247915f477c4c99"
+    },
+    {
+      "item": "1:14:21",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ラムダキャスティロン",
+      "source": "swiki swiki-enemy-b19d013821558bdda923"
+    },
+    {
+      "item": "1:13:40",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "キングイエーデクラブ",
+      "source": "swiki swiki-enemy-120fb705b11e67e09e44"
+    }
+  ]
+}

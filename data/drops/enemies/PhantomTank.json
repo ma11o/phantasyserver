@@ -1,0 +1,42 @@
+{
+  "rate": 1.0,
+  "drop_count": {
+    "min": 4,
+    "max": 4
+  },
+  "rare_rate": 0.0,
+  "source": "research (tokyo, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:11:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 36,
+      "level_max": 40,
+      "name": "ディオサルバドール",
+      "source": "swiki swiki-enemy-759ea2e121e062f3268e"
+    },
+    {
+      "item": "1:11:107",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "エスカヘルメス",
+      "source": "swiki swiki-enemy-63c4ad67677ccecbf269"
+    },
+    {
+      "item": "1:17:103",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "スプルコル",
+      "source": "swiki swiki-enemy-884c149f43fd0d68800e"
+    }
+  ],
+  "boss_drops": 4
+}

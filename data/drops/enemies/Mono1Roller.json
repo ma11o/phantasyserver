@@ -1,0 +1,42 @@
+{
+  "rate": 1.0,
+  "drop_count": {
+    "min": 4,
+    "max": 4
+  },
+  "rare_rate": 0.0,
+  "source": "research (shironia, T81): cirnopedia area ~ Shironia + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:17:57",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "新光鎧刀",
+      "source": "swiki swiki-enemy-d6e4b161df0183d2d9e3"
+    },
+    {
+      "item": "1:10:174",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "フブキリンカ",
+      "source": "swiki swiki-enemy-7de43c4f5360f0632d78"
+    },
+    {
+      "item": "1:12:173",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "舞姫歌扇",
+      "source": "swiki swiki-enemy-7de43c4f5360f0632d78"
+    }
+  ],
+  "boss_drops": 4
+}

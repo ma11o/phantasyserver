@@ -1,0 +1,102 @@
+{
+  "rate": 1.0,
+  "drop_count": {
+    "min": 4,
+    "max": 4
+  },
+  "rare_rate": 0.0,
+  "source": "research (tundra, T81): cirnopedia area ~ Tundra + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:9:21",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ウルスラグナ",
+      "source": "swiki swiki-enemy-bd3562e422e9f372b135"
+    },
+    {
+      "item": "1:5:18",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダスピルティア",
+      "source": "swiki swiki-enemy-a08ae6527fcfd2a079ef"
+    },
+    {
+      "item": "1:12:30",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "ガディアンナ",
+      "source": "swiki swiki-enemy-ed76530bb278024aad76"
+    },
+    {
+      "item": "1:1:54",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "トレイターリニア",
+      "source": "swiki swiki-enemy-f699013b50b033ed6596"
+    },
+    {
+      "item": "1:17:29",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "シェーンフリサ",
+      "source": "swiki swiki-enemy-f699013b50b033ed6596"
+    },
+    {
+      "item": "1:17:51",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ケイトレイター",
+      "source": "swiki swiki-enemy-f699013b50b033ed6596"
+    },
+    {
+      "item": "1:4:94",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ホローギムレット",
+      "source": "swiki swiki-enemy-f699013b50b033ed6596"
+    },
+    {
+      "item": "1:14:78",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ヒュリオサンジン",
+      "source": "swiki swiki-enemy-2f7b740913ae5db81ce7"
+    },
+    {
+      "item": "1:14:60",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "ビューレイアール",
+      "source": "swiki swiki-enemy-a23e59ddd56fd7d13ab2"
+    }
+  ],
+  "boss_drops": 4
+}

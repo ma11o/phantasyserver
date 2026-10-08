@@ -1,0 +1,61 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (tundra, T81): cirnopedia area ~ Tundra + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:3:18",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "パティルメリア",
+      "source": "swiki swiki-enemy-fc5e1eed7ab83e21d43c"
+    },
+    {
+      "item": "1:7:35",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ネルシール",
+      "source": "swiki swiki-enemy-320ee895e2c2ff5c2678"
+    },
+    {
+      "item": "1:3:37",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "リーガルランサー",
+      "source": "swiki swiki-enemy-485414d57d9288e35274"
+    },
+    {
+      "item": "1:13:52",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "トレイターピーク",
+      "source": "swiki swiki-enemy-b46042cd280126d4f50c"
+    },
+    {
+      "item": "1:2:118",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ヒュリオランサー",
+      "source": "swiki swiki-enemy-9b48f54ce3f64a10de54"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "rate": 1.0,
+  "drop_count": {
+    "min": 4,
+    "max": 4
+  },
+  "rare_rate": 0.0,
+  "source": "research (sanctum, T81): cirnopedia area ~ Sanctum + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:12:34",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "オンミョウキカミ",
+      "source": "swiki swiki-enemy-21c3837711035fa89a40"
+    },
+    {
+      "item": "1:5:22",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダヘルフレット",
+      "source": "swiki swiki-enemy-d92df62d685c9f037558"
+    },
+    {
+      "item": "1:6:88",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "エクスブロウ",
+      "source": "swiki swiki-enemy-2302f6fc4e7f56d8798f"
+    },
+    {
+      "item": "1:7:99",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "エクスリーザー",
+      "source": "swiki swiki-enemy-2302f6fc4e7f56d8798f"
+    },
+    {
+      "item": "1:11:110",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "セイントフェザー",
+      "source": "swiki swiki-enemy-2302f6fc4e7f56d8798f"
+    },
+    {
+      "item": "1:13:106",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "エクスウォンド",
+      "source": "swiki swiki-enemy-2302f6fc4e7f56d8798f"
+    },
+    {
+      "item": "1:16:98",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "シュバイアティーガー",
+      "source": "swiki swiki-enemy-2302f6fc4e7f56d8798f"
+    },
+    {
+      "item": "1:14:105",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "アセラクタ",
+      "source": "swiki swiki-enemy-c15a8ac115537924f6df"
+    },
+    {
+      "item": "1:15:64",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "スサノシナリ",
+      "source": "swiki swiki-enemy-c83a9a1d17cf3d134059"
+    }
+  ],
+  "boss_drops": 4
+}

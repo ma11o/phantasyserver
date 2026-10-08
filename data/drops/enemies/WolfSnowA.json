@@ -1,0 +1,51 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (tundra, T81): cirnopedia area ~ Tundra + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:11:28",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "クラーリタ・ヴィサス",
+      "source": "swiki swiki-enemy-d001d0d392fd601aae88"
+    },
+    {
+      "item": "1:15:19",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダタービュラス",
+      "source": "swiki swiki-enemy-a36a5116105a69f65851"
+    },
+    {
+      "item": "1:12:26",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ブルーミィコレット",
+      "source": "swiki swiki-enemy-37d99353319f59a5faf5"
+    },
+    {
+      "item": "1:10:49",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ツーハンドサバイブ",
+      "source": "swiki swiki-enemy-0fd7d210b3616bc1b9ae"
+    }
+  ]
+}

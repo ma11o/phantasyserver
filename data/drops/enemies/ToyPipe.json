@@ -1,0 +1,51 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (kuronia, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:12:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "シルキーコレット",
+      "source": "swiki swiki-enemy-6ba48057249ab38e57c4"
+    },
+    {
+      "item": "1:17:137",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "パルシュクレ",
+      "source": "swiki swiki-enemy-8d35fbb60a7b199ef1e8"
+    },
+    {
+      "item": "1:8:114",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "チュロスタ",
+      "source": "swiki swiki-enemy-8d35fbb60a7b199ef1e8"
+    },
+    {
+      "item": "1:13:188",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "メイセン",
+      "source": "swiki swiki-enemy-ef2af618ea12c4f59b1d"
+    }
+  ]
+}

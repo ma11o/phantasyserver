@@ -1,0 +1,41 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (coast+quarry+illusion, T81): cirnopedia area ~ Coast + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:11:28",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "クラーリタ・ヴィサス",
+      "source": "swiki swiki-enemy-2fb31a13ab7dfe328838"
+    },
+    {
+      "item": "1:15:47",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "リカルバリ",
+      "source": "swiki swiki-enemy-13991c88b872464a7200"
+    },
+    {
+      "item": "1:6:84",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "パオネリアン",
+      "source": "swiki swiki-enemy-a3690ab341cc40b6a3ee"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (quarry, T81): cirnopedia area ~ Quarry + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:14:17",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "ラクルイコウ",
+      "source": "swiki swiki-enemy-691a2893882d2cceeab2"
+    },
+    {
+      "item": "1:2:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダベルカード",
+      "source": "swiki swiki-enemy-ba996a0fea59249fc231"
+    },
+    {
+      "item": "1:12:121",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ノシュヴィー",
+      "source": "swiki swiki-enemy-8b0d99b7de6e4c0f3a0d"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "rate": 1.0,
+  "drop_count": {
+    "min": 4,
+    "max": 4
+  },
+  "rare_rate": 0.0,
+  "source": "research (tunnels, T81): cirnopedia area ~ Tunnels + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:9:29",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "ショットレガシー",
+      "source": "swiki swiki-enemy-8968604873a8a1c73863"
+    },
+    {
+      "item": "1:5:46",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "エクセランブレード",
+      "source": "swiki swiki-enemy-8968604873a8a1c73863"
+    },
+    {
+      "item": "1:8:22",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "シュトラウス",
+      "source": "swiki swiki-enemy-a24d56da824c8aab5165"
+    },
+    {
+      "item": "1:7:49",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ブロックベロウ",
+      "source": "swiki swiki-enemy-827554c48d7c72214de9"
+    },
+    {
+      "item": "1:9:54",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ヴァーダーカノン",
+      "source": "swiki swiki-enemy-827554c48d7c72214de9"
+    },
+    {
+      "item": "1:12:58",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ヴァーダービット",
+      "source": "swiki swiki-enemy-827554c48d7c72214de9"
+    },
+    {
+      "item": "1:13:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ラムダヘキサグラフ",
+      "source": "swiki swiki-enemy-00f1fceefb6741872fff"
+    },
+    {
+      "item": "1:11:20",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ヘイズプロセッサ",
+      "source": "swiki swiki-enemy-74e91a7016cc26915bf7"
+    },
+    {
+      "item": "1:15:145",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ガーンデーヴァ",
+      "source": "swiki swiki-enemy-74e91a7016cc26915bf7"
+    },
+    {
+      "item": "1:5:110",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "スウェルカドル",
+      "source": "swiki swiki-enemy-dddac66e5e6014924053"
+    },
+    {
+      "item": "1:17:69",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "イスアリス",
+      "source": "swiki swiki-enemy-dddac66e5e6014924053"
+    },
+    {
+      "item": "1:6:82",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "スティールゴコウ",
+      "source": "swiki swiki-enemy-341344b23c97fac09c76"
+    },
+    {
+      "item": "1:10:76",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "ノワルミラーズ",
+      "source": "swiki swiki-enemy-341344b23c97fac09c76"
+    },
+    {
+      "item": "1:11:114",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "バレンゴコウ",
+      "source": "swiki swiki-enemy-341344b23c97fac09c76"
+    }
+  ],
+  "boss_drops": 4
+}

@@ -21,7 +21,7 @@ use super::{User, UserState};
 use crate::{BlockData, Error, mutex::Mutex};
 use pso2packetlib::protocol::{
     Flags, ObjectHeader, ObjectType, Packet, PacketHeader, chat::ChatMessage, models::Position,
-    objects::{SetTagPacket, TeleportTransferPacket}, playerstatus::GainedEXPPacket, questlist::{AcceptQuestPacket, SetQuestPointsPacket}, spawn::ObjectSpawnPacket,
+    objects::{SetTagPacket, TeleportTransferPacket}, playerstatus::{DealDamagePacket, GainedEXPPacket}, questlist::{AcceptQuestPacket, SetQuestPointsPacket}, spawn::ObjectSpawnPacket,
 };
 use std::{sync::Arc, time::Duration};
 use tokio::{
@@ -308,7 +308,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | tp pipe | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] [boss] | send <id> <subid> <flag> <hex> | ehp <n> | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | exp <n> | unlock <name_id>... | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | tp pipe | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] [boss] | send <id> <subid> <flag> <hex> | ehp <n> | ekill | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | exp <n> | unlock <name_id>... | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -463,6 +463,37 @@ async fn run_command(line: &str) -> Result<String, Error> {
             }
             let list: Vec<String> = counts.iter().map(|(k, (c, a))| format!("{k}={c}(sum {a})")).collect();
             Ok(format!("roll {enemy} x{n} in {area}: {}", if list.is_empty() { "nothing".into() } else { list.join(" ") }))
+        }
+        ("ekill", []) => {
+            // The zone's boss to 1 HP, then one player hit (a sword normal attack) through the normal damage path
+            // (kill -> drops -> clear). For unattended runs where the boss moves or keeps its distance.
+            let lock = user.lock().await;
+            let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
+            let zone = lock.zone_pos;
+            let player_id = lock.get_user_id();
+            drop(lock);
+            let mut map = map.lock().await;
+            let boss = map.zone_boss_id(zone).ok_or(Error::InvalidInput("no boss in this zone yet"))?;
+            map.set_enemy_hp(zone, 1);
+            map.deal_damage(
+                zone,
+                DealDamagePacket {
+                    inflicter: ObjectHeader {
+                        id: player_id,
+                        entity_type: ObjectType::Player,
+                        ..Default::default()
+                    },
+                    target: ObjectHeader {
+                        id: boss,
+                        entity_type: ObjectType::Object,
+                        ..Default::default()
+                    },
+                    attack_id: 3813693250,
+                    ..Default::default()
+                },
+            )
+            .await?;
+            Ok(format!("ekill boss {boss}"))
         }
         ("ehp", [hp]) => {
             // HP of every enemy in the player's zone (the next hit goes through the normal damage path)

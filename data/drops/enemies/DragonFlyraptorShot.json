@@ -1,0 +1,31 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (sanctum, T81): cirnopedia area ~ Sanctum + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:13:16",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダクレスディガー",
+      "source": "swiki swiki-enemy-3200a6c51c570c48644b"
+    },
+    {
+      "item": "1:15:24",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオビッグロウ",
+      "source": "swiki swiki-enemy-8c00bed477d01d9fafd9"
+    }
+  ]
+}

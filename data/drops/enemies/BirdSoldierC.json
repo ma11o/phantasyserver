@@ -1,0 +1,51 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (seabed+facility, T81): cirnopedia area ~ Seabed + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:4:32",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "ツインチャクラム",
+      "source": "swiki swiki-enemy-f518cd28272a49bd0a42"
+    },
+    {
+      "item": "1:2:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダベルカード",
+      "source": "swiki swiki-enemy-03d459326de0ece2dccc"
+    },
+    {
+      "item": "1:17:26",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダレクスティー",
+      "source": "swiki swiki-enemy-03d459326de0ece2dccc"
+    },
+    {
+      "item": "1:4:20",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオアステラ",
+      "source": "swiki swiki-enemy-45bc7f5fbd5f6339c4cb"
+    }
+  ]
+}

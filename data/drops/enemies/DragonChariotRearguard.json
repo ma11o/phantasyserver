@@ -1,0 +1,61 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (sanctum, T81): cirnopedia area ~ Sanctum + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:4:24",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "レリギオー",
+      "source": "swiki swiki-enemy-2bca2b49363e930d9138"
+    },
+    {
+      "item": "1:9:34",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ブラングレネード",
+      "source": "swiki swiki-enemy-58779d668cf8f96e8edd"
+    },
+    {
+      "item": "1:8:100",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "スフィアートロン",
+      "source": "swiki swiki-enemy-bc280c885de2c5682044"
+    },
+    {
+      "item": "1:9:112",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "セイントブーム",
+      "source": "swiki swiki-enemy-38d7f77a88f1b2ae4b8a"
+    },
+    {
+      "item": "1:9:146",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ネメジブレン",
+      "source": "swiki swiki-enemy-ac0f9d4bf157d4566671"
+    }
+  ]
+}

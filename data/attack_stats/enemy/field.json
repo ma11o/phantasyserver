@@ -1,0 +1,1630 @@
+[
+  {
+    "attack_name": "AbyssCrabClaw",
+    "damage_name": "AbyssCrabClaw",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "AbyssCrabHoldCatch",
+    "damage_name": "AbyssCrabHoldCatch",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "AbyssCrabHoldSlashDamage",
+    "damage_name": "AbyssCrabHoldSlashDamage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 5.0
+      }
+    }
+  },
+  {
+    "attack_name": "AbyssCrabHoldTight",
+    "damage_name": "AbyssCrabHoldTight",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "AbyssCrabRush",
+    "damage_name": "AbyssCrabRush",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "AlgtBody",
+    "damage_name": "AlgtBody",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "AlgtSFire",
+    "damage_name": "AlgtSFire",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "AlgtShell",
+    "damage_name": "AlgtShell",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "AlgtSlash",
+    "damage_name": "AlgtSlash",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "AlgtStamp",
+    "damage_name": "AlgtStamp",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "AlgtTail",
+    "damage_name": "AlgtTail",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "AntReper:Mod_Scratch",
+    "damage_name": "AntReper:Mod_Scratch",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "AttackDragonRaptor",
+    "damage_name": "AttackDragonRaptor",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "AttackDragonWolf",
+    "damage_name": "AttackDragonWolf",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "AttackLocust",
+    "damage_name": "AttackLocust",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "AttackMimic",
+    "damage_name": "AttackMimic",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "BackBrow_YetiA",
+    "damage_name": "BackBrow_YetiA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "BirdBirdcrowAttack",
+    "damage_name": "BirdBirdcrowAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "BirdCentaurAttack",
+    "damage_name": "BirdCentaurAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "BirdCentaurCharge",
+    "damage_name": "BirdCentaurCharge",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "BirdCentaurDoubleCyclone",
+    "damage_name": "BirdCentaurDoubleCyclone",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.7
+      }
+    }
+  },
+  {
+    "attack_name": "BirdCentaurIai",
+    "damage_name": "BirdCentaurIai",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "BirdCentaurIaiLeft",
+    "damage_name": "BirdCentaurIaiLeft",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "BirdCentaurIaiRight",
+    "damage_name": "BirdCentaurIaiRight",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "BirdCentaurShot",
+    "damage_name": "BirdCentaurShot",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "BirdCentaurTail",
+    "damage_name": "BirdCentaurTail",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "BirdCentaurZero",
+    "damage_name": "BirdCentaurZero",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "BirdDoubleHeadSideSlash1",
+    "damage_name": "BirdDoubleHeadSideSlash1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "BirdDoubleHeadSideSlash2",
+    "damage_name": "BirdDoubleHeadSideSlash2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierGlideSlashSword",
+    "damage_name": "BirdSoldierGlideSlashSword",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierGlideSlashTwin",
+    "damage_name": "BirdSoldierGlideSlashTwin",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.75
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierLanceAssault",
+    "damage_name": "BirdSoldierLanceAssault",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierRagingCharge",
+    "damage_name": "BirdSoldierRagingCharge",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierRagingSlash",
+    "damage_name": "BirdSoldierRagingSlash",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierSlashLance",
+    "damage_name": "BirdSoldierSlashLance",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierSlashSword",
+    "damage_name": "BirdSoldierSlashSword",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierSlashTwinL",
+    "damage_name": "BirdSoldierSlashTwinL",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierSlashTwinR",
+    "damage_name": "BirdSoldierSlashTwinR",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.25
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierTwistRollSlash",
+    "damage_name": "BirdSoldierTwistRollSlash",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "BirdSoldierTwistRollSlashFinish",
+    "damage_name": "BirdSoldierTwistRollSlashFinish",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.3
+      }
+    }
+  },
+  {
+    "attack_name": "BiteDragonRaptor",
+    "damage_name": "BiteDragonRaptor",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "BodyPress_YetiA",
+    "damage_name": "BodyPress_YetiA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "BossMechaDead",
+    "damage_name": "BossMechaDead",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.5
+      }
+    }
+  },
+  {
+    "attack_name": "CanadinCustomStunGun",
+    "damage_name": "CanadinCustomStunGun",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.3
+      }
+    }
+  },
+  {
+    "attack_name": "CrabClaw",
+    "damage_name": "CrabClaw",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DartAttack",
+    "damage_name": "DartAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DoodlebugNormal",
+    "damage_name": "DoodlebugNormal",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DoodlebugRushBody",
+    "damage_name": "DoodlebugRushBody",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "DoodlebugThrust",
+    "damage_name": "DoodlebugThrust",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorBash",
+    "damage_name": "DragonGladiatorBash",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.2
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorCharge",
+    "damage_name": "DragonGladiatorCharge",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorChargeFinish",
+    "damage_name": "DragonGladiatorChargeFinish",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorDance",
+    "damage_name": "DragonGladiatorDance",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorDanceFinish",
+    "damage_name": "DragonGladiatorDanceFinish",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.5
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorDeadDamage",
+    "damage_name": "DragonGladiatorDeadDamage",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorFSomer",
+    "damage_name": "DragonGladiatorFSomer",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.3
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorFSomerWave",
+    "damage_name": "DragonGladiatorFSomerWave",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorHorizon",
+    "damage_name": "DragonGladiatorHorizon",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorRound",
+    "damage_name": "DragonGladiatorRound",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorVertical",
+    "damage_name": "DragonGladiatorVertical",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "DragonGladiatorVerticalLoop",
+    "damage_name": "DragonGladiatorVerticalLoop",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DragonHammerImpact",
+    "damage_name": "DragonHammerImpact",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DragonHammerSwing",
+    "damage_name": "DragonHammerSwing",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "DragonWorm:ModSpinAtk",
+    "damage_name": "DragonWorm:ModSpinAtk",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "DragonWormDive",
+    "damage_name": "DragonWormDive",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "DragonWormHead",
+    "damage_name": "DragonWormHead",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "DragonWormSpin",
+    "damage_name": "DragonWormSpin",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "DragonWormTail",
+    "damage_name": "DragonWormTail",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "DragonWyvernSwoop",
+    "damage_name": "DragonWyvernSwoop",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "FloatageFishRush",
+    "damage_name": "FloatageFishRush",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "ForwardRoll_YetiA",
+    "damage_name": "ForwardRoll_YetiA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "GormaBodyAttack",
+    "damage_name": "GormaBodyAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "GormaSuicideBomb",
+    "damage_name": "GormaSuicideBomb",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 2.0
+      }
+    }
+  },
+  {
+    "attack_name": "HummingBirdGetUp",
+    "damage_name": "HummingBirdGetUp",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "HummingBirdWave",
+    "damage_name": "HummingBirdWave",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "HummingBirdWaveL",
+    "damage_name": "HummingBirdWaveL",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "HurlDragonWolf",
+    "damage_name": "HurlDragonWolf",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "ID1AntDartAttack",
+    "damage_name": "ID1AntDartAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "IceBulletHit_YetiA",
+    "damage_name": "IceBulletHit_YetiA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.15
+      }
+    }
+  },
+  {
+    "attack_name": "MachineKickDiveKickHit",
+    "damage_name": "MachineKickDiveKickHit",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MachineKickDiveKickOverDrive",
+    "damage_name": "MachineKickDiveKickOverDrive",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "MammothAttackA0",
+    "damage_name": "MammothAttackA0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothAttackA1",
+    "damage_name": "MammothAttackA1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothAttackB0",
+    "damage_name": "MammothAttackB0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothAttackB1",
+    "damage_name": "MammothAttackB1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothHip",
+    "damage_name": "MammothHip",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "MammothPress",
+    "damage_name": "MammothPress",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "MammothRushA0",
+    "damage_name": "MammothRushA0",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothRushA1",
+    "damage_name": "MammothRushA1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothRushA2",
+    "damage_name": "MammothRushA2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothRushA3",
+    "damage_name": "MammothRushA3",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothRushB1",
+    "damage_name": "MammothRushB1",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothRushB2",
+    "damage_name": "MammothRushB2",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MammothStep",
+    "damage_name": "MammothStep",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1FootDiveKick",
+    "damage_name": "Mono1FootDiveKick",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1FootDoubleWlariat",
+    "damage_name": "Mono1FootDoubleWlariat",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1FootHeadAttack",
+    "damage_name": "Mono1FootHeadAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1RollerIncidentRushAttack",
+    "damage_name": "Mono1RollerIncidentRushAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1RollerIncidentRushAttackKatana",
+    "damage_name": "Mono1RollerIncidentRushAttackKatana",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1RollerIncidentRushAttackKatanaBroken",
+    "damage_name": "Mono1RollerIncidentRushAttackKatanaBroken",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.7
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1RollerRushAttack",
+    "damage_name": "Mono1RollerRushAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.3
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1RollerRushAttackKatana",
+    "damage_name": "Mono1RollerRushAttackKatana",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1RollerRushAttackKatanaBroken",
+    "damage_name": "Mono1RollerRushAttackKatanaBroken",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1RollerSideAttack",
+    "damage_name": "Mono1RollerSideAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1RollerSpinAttack",
+    "damage_name": "Mono1RollerSpinAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "Mono1RollerUplandPress",
+    "damage_name": "Mono1RollerUplandPress",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "MonoeyeAHard",
+    "damage_name": "MonoeyeAHard",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.7
+      }
+    }
+  },
+  {
+    "attack_name": "MonoeyeANormal",
+    "damage_name": "MonoeyeANormal",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.15
+      }
+    }
+  },
+  {
+    "attack_name": "MonoeyeBHard",
+    "damage_name": "MonoeyeBHard",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.5
+      }
+    }
+  },
+  {
+    "attack_name": "MonoeyeBNormal",
+    "damage_name": "MonoeyeBNormal",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "MonoeyeEyeBeam",
+    "damage_name": "MonoeyeEyeBeam",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "NeedleAntReaper",
+    "damage_name": "NeedleAntReaper",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.3
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomBearBite",
+    "damage_name": "PhantomBearBite",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.5
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomBearPunch",
+    "damage_name": "PhantomBearPunch",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomManPress",
+    "damage_name": "PhantomManPress",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.4
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomManSlash",
+    "damage_name": "PhantomManSlash",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomManSlashSp",
+    "damage_name": "PhantomManSlashSp",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomManStepSlash",
+    "damage_name": "PhantomManStepSlash",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.4
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomManStepSlashSp",
+    "damage_name": "PhantomManStepSlashSp",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.4
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomPierrot:Ball",
+    "damage_name": "PhantomPierrot:Ball",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomPierrot:BallExp",
+    "damage_name": "PhantomPierrot:BallExp",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.1
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomPierrot:Saw",
+    "damage_name": "PhantomPierrot:Saw",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.4
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomUFO:CattleAtkPress",
+    "damage_name": "PhantomUFO:CattleAtkPress",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.3
+      }
+    }
+  },
+  {
+    "attack_name": "PhantomUFO:CattleThrow",
+    "damage_name": "PhantomUFO:CattleThrow",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "PillbugCutPress",
+    "damage_name": "PillbugCutPress",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Punch_YetiA",
+    "damage_name": "Punch_YetiA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "RiseAntReaper",
+    "damage_name": "RiseAntReaper",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "RushAntReaper",
+    "damage_name": "RushAntReaper",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "RushDragonChariot",
+    "damage_name": "RushDragonChariot",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.2
+      }
+    }
+  },
+  {
+    "attack_name": "RushPunch_YetiA",
+    "damage_name": "RushPunch_YetiA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "ScratchAntReaper",
+    "damage_name": "ScratchAntReaper",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "ShieldRizardman",
+    "damage_name": "ShieldRizardman",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "SpinMimicA",
+    "damage_name": "SpinMimicA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "SpinMimicB",
+    "damage_name": "SpinMimicB",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.3
+      }
+    }
+  },
+  {
+    "attack_name": "SwingDragonChariot",
+    "damage_name": "SwingDragonChariot",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.6
+      }
+    }
+  },
+  {
+    "attack_name": "SwordRizardman",
+    "damage_name": "SwordRizardman",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "ThrowIce_YetiA",
+    "damage_name": "ThrowIce_YetiA",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "ToyBoxBite",
+    "damage_name": "ToyBoxBite",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "ToyCrazyBearSlash",
+    "damage_name": "ToyCrazyBearSlash",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "ToyCrazyRabbit:ModNAAttack",
+    "damage_name": "ToyCrazyRabbit:ModNAAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.9
+      }
+    }
+  },
+  {
+    "attack_name": "ToyCrazyRabbit:ModNAAttackZero",
+    "damage_name": "ToyCrazyRabbit:ModNAAttackZero",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.35
+      }
+    }
+  },
+  {
+    "attack_name": "ToyCrazyRabbitSlash",
+    "damage_name": "ToyCrazyRabbitSlash",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.5
+      }
+    }
+  },
+  {
+    "attack_name": "ToyCrazyRabbitSurpriseAttack",
+    "damage_name": "ToyCrazyRabbitSurpriseAttack",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.35
+      }
+    }
+  },
+  {
+    "attack_name": "ToyPipeRush",
+    "damage_name": "ToyPipeRush",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "UpperDragonChariot",
+    "damage_name": "UpperDragonChariot",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Wop3ApeCheatCat",
+    "damage_name": "Wop3ApeCheatCat",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  },
+  {
+    "attack_name": "Wop3ApeScratch",
+    "damage_name": "Wop3ApeScratch",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 0.8
+      }
+    }
+  },
+  {
+    "attack_name": "ZombieRobotLKick",
+    "damage_name": "ZombieRobotLKick",
+    "attack_type": "Mel",
+    "defense_type": "Mel",
+    "damage": {
+      "Generic": {
+        "mul": 1.0
+      }
+    }
+  }
+]

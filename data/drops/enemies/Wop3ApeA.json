@@ -1,0 +1,51 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (facility, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:1:28",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "ザンバ",
+      "source": "swiki swiki-enemy-79a44eeb5487e1bf6dbd"
+    },
+    {
+      "item": "1:1:20",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "アリスティン",
+      "source": "swiki swiki-enemy-6dbce01c7ae3298900eb"
+    },
+    {
+      "item": "1:1:22",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダアリスティン",
+      "source": "swiki swiki-enemy-67d0eac9440d51b0fc20"
+    },
+    {
+      "item": "1:6:37",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "トゥエルブオンス",
+      "source": "swiki swiki-enemy-a74b78a695693992d02a"
+    }
+  ]
+}

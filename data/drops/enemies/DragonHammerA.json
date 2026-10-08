@@ -1,0 +1,61 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (sanctum, T81): cirnopedia area ~ Sanctum + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:2:17",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ラムダクシャネビュラ",
+      "source": "swiki swiki-enemy-9e85baf9c8a6ec4eb877"
+    },
+    {
+      "item": "1:14:31",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダラウンディート",
+      "source": "swiki swiki-enemy-3c4b2f886770bbad2700"
+    },
+    {
+      "item": "1:7:43",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "フリギアエンド",
+      "source": "swiki swiki-enemy-e0bedcf3bec64de8ab53"
+    },
+    {
+      "item": "1:8:24",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオシュトラウス",
+      "source": "swiki swiki-enemy-095e41a9ff5dda27da02"
+    },
+    {
+      "item": "1:11:161",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "アリシアリビリス",
+      "source": "swiki swiki-enemy-6615dedddd9ef2054366"
+    }
+  ]
+}

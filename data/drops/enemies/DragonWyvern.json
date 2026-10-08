@@ -1,0 +1,51 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (skyscape, T81): cirnopedia area ~ Skyscape + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:15:17",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "タービュラス",
+      "source": "swiki swiki-enemy-70f7a3bb80b48b54d032"
+    },
+    {
+      "item": "1:6:41",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "ジェイドラシオン",
+      "source": "swiki swiki-enemy-70f7a3bb80b48b54d032"
+    },
+    {
+      "item": "1:11:50",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 46,
+      "level_max": 50,
+      "name": "ウィンディシャフト",
+      "source": "swiki swiki-enemy-7b0efe2e111f024bdb6b"
+    },
+    {
+      "item": "1:15:63",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "スサノヒキ",
+      "source": "swiki swiki-enemy-ea6ea159ba9138955d6b"
+    }
+  ]
+}

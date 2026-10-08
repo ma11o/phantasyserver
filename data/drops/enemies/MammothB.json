@@ -1,0 +1,71 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (tundra, T81): cirnopedia area ~ Tundra + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:16:27",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "スターサニス",
+      "source": "swiki swiki-enemy-7024ae5dc79436e414b9"
+    },
+    {
+      "item": "1:2:41",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 26,
+      "level_max": 30,
+      "name": "マルモスファング",
+      "source": "swiki swiki-enemy-84461ddcbf4537031827"
+    },
+    {
+      "item": "1:4:19",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ラムダアステラ",
+      "source": "swiki swiki-enemy-d105ade7dcab85723952"
+    },
+    {
+      "item": "1:7:40",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "クリアデュプル",
+      "source": "swiki swiki-enemy-87a24dfd2ae21e22ceb0"
+    },
+    {
+      "item": "1:7:16",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオトゥウィスラー",
+      "source": "swiki swiki-enemy-07c27d0468ec26215688"
+    },
+    {
+      "item": "1:15:98",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ヒュリオロア",
+      "source": "swiki swiki-enemy-b7e06d8c8a3b929736c5"
+    }
+  ]
+}

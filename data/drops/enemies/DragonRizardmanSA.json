@@ -1,0 +1,51 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (skyscape+sanctum, T81): cirnopedia area ~ Skyscape + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "3:5:323",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "シル・サディニアンドール",
+      "source": "swiki swiki-enemy-77f5e74393413dd22087"
+    },
+    {
+      "item": "1:4:21",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 31,
+      "level_max": 35,
+      "name": "朧",
+      "source": "swiki swiki-enemy-4ba0f4e12639e1960dfb"
+    },
+    {
+      "item": "1:1:41",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "サディーナエッジ",
+      "source": "swiki swiki-enemy-0a85737aea50d51d309a"
+    },
+    {
+      "item": "1:3:23",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ディオバシレイオン",
+      "source": "swiki swiki-enemy-10edc8583ba40f907a72"
+    }
+  ]
+}

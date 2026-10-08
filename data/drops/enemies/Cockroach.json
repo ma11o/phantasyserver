@@ -1,0 +1,111 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (illusion, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:1:135",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ダーヴルソード",
+      "source": "swiki swiki-enemy-3aec614ef426c6de2eab"
+    },
+    {
+      "item": "1:2:37",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ブルートギフト",
+      "source": "swiki swiki-enemy-3aec614ef426c6de2eab"
+    },
+    {
+      "item": "1:9:50",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "イリーガルボマー",
+      "source": "swiki swiki-enemy-3aec614ef426c6de2eab"
+    },
+    {
+      "item": "1:10:45",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "アシダーゼ",
+      "source": "swiki swiki-enemy-3aec614ef426c6de2eab"
+    },
+    {
+      "item": "1:13:36",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "グリムグリン",
+      "source": "swiki swiki-enemy-3aec614ef426c6de2eab"
+    },
+    {
+      "item": "1:1:136",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ダルバダソード",
+      "source": "swiki swiki-enemy-621f7d5734a6543cc945"
+    },
+    {
+      "item": "1:2:52",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ブルートカース",
+      "source": "swiki swiki-enemy-621f7d5734a6543cc945"
+    },
+    {
+      "item": "1:9:60",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "イリーガルイル",
+      "source": "swiki swiki-enemy-621f7d5734a6543cc945"
+    },
+    {
+      "item": "1:10:46",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "エメラダーゼ",
+      "source": "swiki swiki-enemy-621f7d5734a6543cc945"
+    },
+    {
+      "item": "1:13:48",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "ブラディグリン",
+      "source": "swiki swiki-enemy-621f7d5734a6543cc945"
+    }
+  ]
+}

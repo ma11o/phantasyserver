@@ -1,0 +1,112 @@
+{
+  "rate": 1.0,
+  "drop_count": {
+    "min": 4,
+    "max": 4
+  },
+  "rare_rate": 0.0,
+  "source": "research (kuronia, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:12:25",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 11,
+      "level_max": 20,
+      "name": "シルキーコレット",
+      "source": "swiki swiki-enemy-458f064370a94ab881dc"
+    },
+    {
+      "item": "1:13:20",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 11,
+      "level_max": 20,
+      "name": "カリーノコラウ",
+      "source": "swiki swiki-enemy-458f064370a94ab881dc"
+    },
+    {
+      "item": "1:16:29",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 11,
+      "level_max": 20,
+      "name": "スターカルディア",
+      "source": "swiki swiki-enemy-458f064370a94ab881dc"
+    },
+    {
+      "item": "1:1:120",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ジェラーテ",
+      "source": "swiki swiki-enemy-b8b88bb7d1cb7216a8cc"
+    },
+    {
+      "item": "1:6:101",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ラプクルラー",
+      "source": "swiki swiki-enemy-b8b88bb7d1cb7216a8cc"
+    },
+    {
+      "item": "1:16:79",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "トルタルタ",
+      "source": "swiki swiki-enemy-b8b88bb7d1cb7216a8cc"
+    },
+    {
+      "item": "1:6:165",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ノクスデスティム",
+      "source": "swiki swiki-enemy-b8b88bb7d1cb7216a8cc"
+    },
+    {
+      "item": "1:11:231",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ノクスリフェル",
+      "source": "swiki swiki-enemy-b8b88bb7d1cb7216a8cc"
+    },
+    {
+      "item": "1:5:148",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "イダテン",
+      "source": "swiki swiki-enemy-25dc17e431c689a865d5"
+    },
+    {
+      "item": "1:13:188",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "メイセン",
+      "source": "swiki swiki-enemy-25dc17e431c689a865d5"
+    }
+  ],
+  "boss_drops": 4
+}

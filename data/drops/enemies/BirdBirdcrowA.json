@@ -1,0 +1,41 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (coast+quarry, T81): cirnopedia area ~ Coast + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:13:32",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 11,
+      "level_max": 20,
+      "name": "コンサイコン",
+      "source": "swiki swiki-enemy-e4bdfd77cd041b6fc6e7"
+    },
+    {
+      "item": "1:13:26",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 51,
+      "level_max": 55,
+      "name": "ウィンドミル",
+      "source": "swiki swiki-enemy-d12eaba40408ac7546d7"
+    },
+    {
+      "item": "1:10:111",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "パオホウオウ",
+      "source": "swiki swiki-enemy-76486f4aecdf1b79d2fe"
+    }
+  ]
+}

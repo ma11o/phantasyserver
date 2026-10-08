@@ -1,0 +1,41 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (shironia, T81): cirnopedia area ~ Shironia + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:6:132",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 1,
+      "level_max": 10,
+      "name": "フレタル",
+      "source": "swiki swiki-enemy-09b3e6fc1dadadba89e4"
+    },
+    {
+      "item": "1:15:125",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "新光鋼弓",
+      "source": "swiki swiki-enemy-58a68b87343d134dbb6f"
+    },
+    {
+      "item": "1:15:138",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 61,
+      "level_max": 65,
+      "name": "フブキジュウキ",
+      "source": "swiki swiki-enemy-d8a1a8030874253283dc"
+    }
+  ]
+}

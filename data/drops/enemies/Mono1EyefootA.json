@@ -1,0 +1,31 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (shironia, T81): cirnopedia area ~ Shironia + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:16:62",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 41,
+      "level_max": 45,
+      "name": "ジギリバルティ",
+      "source": "swiki swiki-enemy-25873a6e74427a857153"
+    },
+    {
+      "item": "1:16:59",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "フブキトウシュウ",
+      "source": "swiki swiki-enemy-9a23cd8df13f2da8688f"
+    }
+  ]
+}

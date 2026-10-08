@@ -1,0 +1,41 @@
+{
+  "rate": 0.05,
+  "drop_count": {
+    "min": 1,
+    "max": 1
+  },
+  "rare_rate": 0.0,
+  "source": "research (kuronia, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "entries": [
+    {
+      "item": "1:16:28",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 21,
+      "level_max": 25,
+      "name": "スターカイム",
+      "source": "swiki swiki-enemy-88c499e6b23826595032"
+    },
+    {
+      "item": "1:9:125",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 66,
+      "level_max": 70,
+      "name": "ガレトショコラ",
+      "source": "swiki swiki-enemy-3446e3ad87762ca7d15a"
+    },
+    {
+      "item": "1:14:72",
+      "weight": 1,
+      "min": 1,
+      "max": 1,
+      "level_min": 71,
+      "level_max": 75,
+      "name": "シュガラカサ",
+      "source": "swiki swiki-enemy-3af07bf7dbebb54203b0"
+    }
+  ]
+}
