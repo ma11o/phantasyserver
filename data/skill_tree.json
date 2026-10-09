@@ -1,0 +1,5675 @@
+{
+ "source": "client",
+ "classes": {
+  "0": {
+   "name": "hunter",
+   "cells": [
+    {
+     "skill": "HunterHPUp1",
+     "x": 0,
+     "y": 0,
+     "byte": 1,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "HunterDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 24,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "HunterFirstArtsJAAddition",
+     "x": 2,
+     "y": 0,
+     "byte": 21,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 20,
+     "pre": -1
+    },
+    {
+     "skill": "HunterAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 22,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "HunterJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 25,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "HunterNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 21,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 40,
+     "pre": -1
+    },
+    {
+     "skill": "WarCryJellen",
+     "x": 1,
+     "y": 1,
+     "byte": 19,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "HunterHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 20,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "HunterStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 24,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "HunterDexUp1",
+     "x": 1,
+     "y": 2,
+     "byte": 3,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "HunterAtpStrikeUp1",
+     "x": 2,
+     "y": 2,
+     "byte": 7,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Rare10Hunter",
+     "x": 3,
+     "y": 2,
+     "byte": 1,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Guard",
+     "x": 4,
+     "y": 2,
+     "byte": 2,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Step",
+     "x": 5,
+     "y": 2,
+     "byte": 2,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "HunterHPUp2",
+     "x": 1,
+     "y": 3,
+     "byte": 13,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "HunterAtpStrikeUp2",
+     "x": 2,
+     "y": 3,
+     "byte": 16,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "FuryGearBoost",
+     "x": 3,
+     "y": 3,
+     "byte": 4,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "JustGuard",
+     "x": 4,
+     "y": 3,
+     "byte": 8,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "StepAdvance",
+     "x": 5,
+     "y": 3,
+     "byte": 5,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "HunterHPUp3",
+     "x": 1,
+     "y": 4,
+     "byte": 20,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "HunterAtpStrikeUp3",
+     "x": 2,
+     "y": 4,
+     "byte": 26,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "ChargeParrying",
+     "x": 3,
+     "y": 4,
+     "byte": 18,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "JustCounter",
+     "x": 4,
+     "y": 4,
+     "byte": 11,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "StepAttack",
+     "x": 5,
+     "y": 4,
+     "byte": 8,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "HunterDfpStrikeUp1",
+     "x": 1,
+     "y": 5,
+     "byte": 5,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "JustGuardPpSave",
+     "x": 3,
+     "y": 5,
+     "byte": 18,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "AdvanceGuard",
+     "x": 4,
+     "y": 5,
+     "byte": 0,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "HunterJustReversal",
+     "x": 5,
+     "y": 5,
+     "byte": 11,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "SwordGear",
+     "x": 1,
+     "y": 6,
+     "byte": 14,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WiredlanceGear",
+     "x": 2,
+     "y": 6,
+     "byte": 9,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PartisanGear",
+     "x": 3,
+     "y": 6,
+     "byte": 6,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AllGuard",
+     "x": 4,
+     "y": 6,
+     "byte": 10,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "JustAttackBonus1",
+     "x": 0,
+     "y": 7,
+     "byte": 3,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GuardStance",
+     "x": 2,
+     "y": 7,
+     "byte": 4,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WarCry",
+     "x": 4,
+     "y": 7,
+     "byte": 7,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "IronWill",
+     "x": 5,
+     "y": 7,
+     "byte": 10,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GuardStanceUp1",
+     "x": 3,
+     "y": 8,
+     "byte": 14,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "WarBrave",
+     "x": 4,
+     "y": 8,
+     "byte": 0,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "NeverGiveup",
+     "x": 5,
+     "y": 8,
+     "byte": 13,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "FuryStance",
+     "x": 0,
+     "y": 9,
+     "byte": 6,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "JustAttackBonus2",
+     "x": 1,
+     "y": 9,
+     "byte": 9,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "Sacrifice",
+     "x": 3,
+     "y": 9,
+     "byte": 17,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "AutoMateHalfline",
+     "x": 4,
+     "y": 9,
+     "byte": 17,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "GuardStancePoison",
+     "x": 5,
+     "y": 9,
+     "byte": 22,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "FuryStanceCritical",
+     "x": 1,
+     "y": 10,
+     "byte": 12,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MaterialDefence1",
+     "x": 2,
+     "y": 10,
+     "byte": 19,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "GuardStanceJustGuradAttack",
+     "x": 3,
+     "y": 10,
+     "byte": 16,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "GuardStanceBurn",
+     "x": 5,
+     "y": 10,
+     "byte": 25,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "FuryComboUp",
+     "x": 1,
+     "y": 11,
+     "byte": 15,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MaterialDefence2",
+     "x": 2,
+     "y": 11,
+     "byte": 26,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "TechDefence",
+     "x": 3,
+     "y": 11,
+     "byte": 23,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "MassiveHunter",
+     "x": 4,
+     "y": 11,
+     "byte": 23,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "PrettyGood",
+     "x": 5,
+     "y": 11,
+     "byte": 28,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "FuryStanceUp1",
+     "x": 0,
+     "y": 12,
+     "byte": 12,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "FuryStanceUp2",
+     "x": 1,
+     "y": 12,
+     "byte": 15,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    }
+   ]
+  },
+  "1": {
+   "name": "ranger",
+   "cells": [
+    {
+     "skill": "RangerDexUp1",
+     "x": 0,
+     "y": 0,
+     "byte": 0,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "RangerDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 20,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "RangerFirstArtsJAAddition",
+     "x": 2,
+     "y": 0,
+     "byte": 18,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 20,
+     "pre": -1
+    },
+    {
+     "skill": "RangerAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 18,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "RangerJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 21,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "RangerNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 17,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 40,
+     "pre": -1
+    },
+    {
+     "skill": "ExTrapMode",
+     "x": 1,
+     "y": 1,
+     "byte": 7,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "RangerHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 7,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "RangerStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 21,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "RangerAtpFirearmUp1",
+     "x": 2,
+     "y": 2,
+     "byte": 11,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "RangerDfpFirearmUp1",
+     "x": 3,
+     "y": 2,
+     "byte": 8,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Rare10Ranger",
+     "x": 4,
+     "y": 2,
+     "byte": 2,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Diveroll",
+     "x": 5,
+     "y": 2,
+     "byte": 2,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "RangerDexUp2",
+     "x": 1,
+     "y": 3,
+     "byte": 6,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "RangerAtpFirearmUp2",
+     "x": 2,
+     "y": 3,
+     "byte": 14,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "TrapSearch",
+     "x": 3,
+     "y": 3,
+     "byte": 13,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "SniperPride",
+     "x": 4,
+     "y": 3,
+     "byte": 5,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "DiverollAdvance",
+     "x": 5,
+     "y": 3,
+     "byte": 5,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "RangerDexUp3",
+     "x": 1,
+     "y": 4,
+     "byte": 12,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "DiverollShoot",
+     "x": 5,
+     "y": 4,
+     "byte": 3,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "BulletDiverollShoot",
+     "x": 4,
+     "y": 5,
+     "byte": 4,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "RangerJustReversal",
+     "x": 5,
+     "y": 5,
+     "byte": 8,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TrapFlash",
+     "x": 1,
+     "y": 6,
+     "byte": 20,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GravityBom",
+     "x": 2,
+     "y": 6,
+     "byte": 0,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TrapUpper",
+     "x": 3,
+     "y": 6,
+     "byte": 13,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TrapPoizon",
+     "x": 4,
+     "y": 6,
+     "byte": 16,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ToolMastery",
+     "x": 5,
+     "y": 6,
+     "byte": 10,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TrapUpperCustom",
+     "x": 3,
+     "y": 7,
+     "byte": 16,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "TrapPoizonCustom",
+     "x": 4,
+     "y": 7,
+     "byte": 19,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "TacticsTrap",
+     "x": 5,
+     "y": 7,
+     "byte": 19,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "WeakSnipeBonus1",
+     "x": 0,
+     "y": 8,
+     "byte": 3,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "FirstHit",
+     "x": 1,
+     "y": 8,
+     "byte": 10,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "KillingBonus",
+     "x": 2,
+     "y": 8,
+     "byte": 15,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ReloadWeak",
+     "x": 1,
+     "y": 9,
+     "byte": 6,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ReloadBind",
+     "x": 2,
+     "y": 9,
+     "byte": 11,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ReloadMirage",
+     "x": 3,
+     "y": 9,
+     "byte": 23,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ReloadPanic",
+     "x": 4,
+     "y": 9,
+     "byte": 14,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ReloadJellen",
+     "x": 5,
+     "y": 9,
+     "byte": 17,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WeakSnipeBonus2",
+     "x": 0,
+     "y": 10,
+     "byte": 9,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "StandUpSnipe1",
+     "x": 1,
+     "y": 10,
+     "byte": 9,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MovingSnipe",
+     "x": 2,
+     "y": 10,
+     "byte": 1,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PowerBullet",
+     "x": 3,
+     "y": 10,
+     "byte": 23,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BulletKeep",
+     "x": 4,
+     "y": 10,
+     "byte": 1,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MassiveBullet",
+     "x": 5,
+     "y": 10,
+     "byte": 4,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WeakSnipeAddPB",
+     "x": 0,
+     "y": 11,
+     "byte": 15,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "StandUpSnipe2",
+     "x": 1,
+     "y": 11,
+     "byte": 12,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "BulletPPSave",
+     "x": 3,
+     "y": 11,
+     "byte": 26,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 3
+    }
+   ]
+  },
+  "2": {
+   "name": "force",
+   "cells": [
+    {
+     "skill": "ForceAtpTechnicUp1",
+     "x": 0,
+     "y": 0,
+     "byte": 1,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ForceDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 18,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "ForceFirstArtsJAAddition",
+     "x": 2,
+     "y": 0,
+     "byte": 13,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 20,
+     "pre": -1
+    },
+    {
+     "skill": "ForceAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 14,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "ForceJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 21,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "ForceNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 12,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 40,
+     "pre": -1
+    },
+    {
+     "skill": "PhotonFlareDenoise",
+     "x": 1,
+     "y": 1,
+     "byte": 6,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "ForceHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 7,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "ForceStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 20,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ForceDexUp1",
+     "x": 1,
+     "y": 2,
+     "byte": 0,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ForcePPUp1",
+     "x": 2,
+     "y": 2,
+     "byte": 13,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ForceDfpTechnicUp1",
+     "x": 3,
+     "y": 2,
+     "byte": 16,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Rare10Force",
+     "x": 4,
+     "y": 2,
+     "byte": 2,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MirageEscape",
+     "x": 5,
+     "y": 2,
+     "byte": 2,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ForceAtpTechnicUp2",
+     "x": 1,
+     "y": 3,
+     "byte": 12,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ForcePPUp2",
+     "x": 2,
+     "y": 3,
+     "byte": 14,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ForceHPUp1",
+     "x": 3,
+     "y": 3,
+     "byte": 1,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TalisTecBonus",
+     "x": 4,
+     "y": 3,
+     "byte": 8,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ForceJustReversal",
+     "x": 5,
+     "y": 3,
+     "byte": 5,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "TalisTecFastThrow",
+     "x": 4,
+     "y": 4,
+     "byte": 3,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "RodShoot",
+     "x": 5,
+     "y": 4,
+     "byte": 4,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ForceAtpTechnicUp3",
+     "x": 1,
+     "y": 5,
+     "byte": 22,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ErementConversion",
+     "x": 4,
+     "y": 5,
+     "byte": 5,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ForceChargeTechJA",
+     "x": 5,
+     "y": 5,
+     "byte": 4,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TechNonChargeBonus1",
+     "x": 1,
+     "y": 6,
+     "byte": 17,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ChargeEscape",
+     "x": 2,
+     "y": 6,
+     "byte": 0,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ChargePPRestraint",
+     "x": 3,
+     "y": 6,
+     "byte": 15,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TechJustAttackBonus1",
+     "x": 4,
+     "y": 6,
+     "byte": 17,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "RodKeepBornus",
+     "x": 2,
+     "y": 7,
+     "byte": 3,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "TechChargeBonus1",
+     "x": 1,
+     "y": 8,
+     "byte": 15,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TechChargeBonus2",
+     "x": 2,
+     "y": 8,
+     "byte": 18,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PhotonFlare",
+     "x": 1,
+     "y": 9,
+     "byte": 16,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PhotonFlareBoost",
+     "x": 1,
+     "y": 10,
+     "byte": 19,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "PhotonFlareAfterBurst",
+     "x": 2,
+     "y": 10,
+     "byte": 19,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "PhotonFlareTactics",
+     "x": 1,
+     "y": 11,
+     "byte": 28,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "MasteryFire1",
+     "x": 0,
+     "y": 12,
+     "byte": 6,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasteryIce1",
+     "x": 2,
+     "y": 12,
+     "byte": 7,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasteryLightning1",
+     "x": 4,
+     "y": 12,
+     "byte": 8,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "FireTechnicShortCharge",
+     "x": 1,
+     "y": 13,
+     "byte": 9,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "FreezeKeep",
+     "x": 3,
+     "y": 13,
+     "byte": 25,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "LightningTechnicPPSave",
+     "x": 5,
+     "y": 13,
+     "byte": 11,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "MasteryFire2",
+     "x": 0,
+     "y": 14,
+     "byte": 21,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BurnBoost",
+     "x": 1,
+     "y": 14,
+     "byte": 9,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "FreezeBoost",
+     "x": 3,
+     "y": 14,
+     "byte": 10,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "MasteryLightning2",
+     "x": 4,
+     "y": 14,
+     "byte": 20,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "ShockBoost",
+     "x": 5,
+     "y": 14,
+     "byte": 11,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "MasteryIce2",
+     "x": 2,
+     "y": 15,
+     "byte": 22,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "FreezeIgnition",
+     "x": 3,
+     "y": 15,
+     "byte": 10,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "FreezeIgnitionUP",
+     "x": 3,
+     "y": 16,
+     "byte": 31,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 3
+    }
+   ]
+  },
+  "3": {
+   "name": "fighter",
+   "cells": [
+    {
+     "skill": "FighterAtpStrikeUp1",
+     "x": 0,
+     "y": 0,
+     "byte": 1,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FighterDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 22,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "FighterFirstArtsJAAddition",
+     "x": 2,
+     "y": 0,
+     "byte": 21,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 20,
+     "pre": -1
+    },
+    {
+     "skill": "FighterAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 21,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "FighterJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 23,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "FighterNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 19,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 40,
+     "pre": -1
+    },
+    {
+     "skill": "LimitBreakInsurance",
+     "x": 1,
+     "y": 1,
+     "byte": 17,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "FighterHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 18,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "FighterStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 22,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FighterDexUp1",
+     "x": 1,
+     "y": 2,
+     "byte": 1,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FighterHPUp1",
+     "x": 2,
+     "y": 2,
+     "byte": 12,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Rare10Fighter",
+     "x": 3,
+     "y": 2,
+     "byte": 2,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FighterDfpStrikeUp1",
+     "x": 4,
+     "y": 2,
+     "byte": 14,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FighterStep",
+     "x": 5,
+     "y": 2,
+     "byte": 2,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FighterAtpStrikeUp2",
+     "x": 1,
+     "y": 3,
+     "byte": 9,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "FighterHPUp2",
+     "x": 2,
+     "y": 3,
+     "byte": 13,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FighterStepAdvance",
+     "x": 5,
+     "y": 3,
+     "byte": 5,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "FighterAtpStrikeUp3",
+     "x": 1,
+     "y": 4,
+     "byte": 10,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "CriticalStrike",
+     "x": 3,
+     "y": 4,
+     "byte": 5,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FighterJustReversal",
+     "x": 4,
+     "y": 4,
+     "byte": 11,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FighterStepAttack",
+     "x": 5,
+     "y": 4,
+     "byte": 8,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "DoublesaverGear",
+     "x": 1,
+     "y": 5,
+     "byte": 11,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TwindaggerGear",
+     "x": 2,
+     "y": 5,
+     "byte": 10,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "KnuckleGear",
+     "x": 3,
+     "y": 5,
+     "byte": 7,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "DoubleSaberTwister",
+     "x": 1,
+     "y": 6,
+     "byte": 4,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "TwinDaggerSpinMove",
+     "x": 2,
+     "y": 6,
+     "byte": 12,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "KnuckleGearKeep",
+     "x": 3,
+     "y": 6,
+     "byte": 9,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "BraveStance",
+     "x": 1,
+     "y": 7,
+     "byte": 3,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WiseStance",
+     "x": 3,
+     "y": 7,
+     "byte": 4,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "Adrenalin",
+     "x": 4,
+     "y": 7,
+     "byte": 3,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TecArtsJABonus",
+     "x": 5,
+     "y": 7,
+     "byte": 0,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BraveStanceUp1",
+     "x": 1,
+     "y": 8,
+     "byte": 6,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "BraveCritical",
+     "x": 2,
+     "y": 8,
+     "byte": 6,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WiseStanceUp1",
+     "x": 3,
+     "y": 8,
+     "byte": 7,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "WiseCritical",
+     "x": 4,
+     "y": 8,
+     "byte": 8,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "TecArtsJAPPSave",
+     "x": 5,
+     "y": 8,
+     "byte": 15,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "AbnormalAdvance",
+     "x": 0,
+     "y": 9,
+     "byte": 13,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "HalflineAbnormal",
+     "x": 1,
+     "y": 9,
+     "byte": 15,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "DeadlineSlayer",
+     "x": 2,
+     "y": 9,
+     "byte": 16,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "HalflineSlayer",
+     "x": 3,
+     "y": 9,
+     "byte": 17,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "LimitBreak",
+     "x": 5,
+     "y": 9,
+     "byte": 0,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AbnormalAdvance2",
+     "x": 0,
+     "y": 10,
+     "byte": 18,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AbnormalBind",
+     "x": 1,
+     "y": 10,
+     "byte": 16,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PPSlayer",
+     "x": 2,
+     "y": 10,
+     "byte": 19,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "CrazyHeart",
+     "x": 3,
+     "y": 10,
+     "byte": 20,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "CrazyBeat",
+     "x": 4,
+     "y": 10,
+     "byte": 20,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "LimitBreakPhotonCharge",
+     "x": 5,
+     "y": 10,
+     "byte": 14,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 5
+    }
+   ]
+  },
+  "4": {
+   "name": "gunner",
+   "cells": [
+    {
+     "skill": "GunnerAtpFirearmUp1",
+     "x": 0,
+     "y": 0,
+     "byte": 1,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 16,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerFirstArtsJAAddition",
+     "x": 2,
+     "y": 0,
+     "byte": 14,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 20,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 15,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 19,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 11,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 40,
+     "pre": -1
+    },
+    {
+     "skill": "SRollArtsModeA",
+     "x": 1,
+     "y": 1,
+     "byte": 9,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 11,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 18,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerDexUp1",
+     "x": 2,
+     "y": 2,
+     "byte": 7,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerDfpFirearmUp1",
+     "x": 3,
+     "y": 2,
+     "byte": 9,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Rare10Gunner",
+     "x": 4,
+     "y": 2,
+     "byte": 2,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerDiveroll",
+     "x": 5,
+     "y": 2,
+     "byte": 2,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerAtpFirearmUp2",
+     "x": 1,
+     "y": 3,
+     "byte": 10,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GunnerDexUp2",
+     "x": 2,
+     "y": 3,
+     "byte": 14,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "GunnerDfpFirearmUp2",
+     "x": 3,
+     "y": 3,
+     "byte": 17,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasteryTwinmachinegun",
+     "x": 4,
+     "y": 3,
+     "byte": 4,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerDiverollAdvance",
+     "x": 5,
+     "y": 3,
+     "byte": 5,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "GunnerAtpFirearmUp3",
+     "x": 1,
+     "y": 4,
+     "byte": 12,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GunnerHPUp1",
+     "x": 2,
+     "y": 4,
+     "byte": 6,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TecArtsChargePA",
+     "x": 4,
+     "y": 4,
+     "byte": 7,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "GunnerDiverollShoot",
+     "x": 5,
+     "y": 4,
+     "byte": 3,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TwinmachinegunGear",
+     "x": 1,
+     "y": 5,
+     "byte": 6,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GunnerJustReversal",
+     "x": 5,
+     "y": 5,
+     "byte": 8,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "AerialAdvance",
+     "x": 1,
+     "y": 6,
+     "byte": 8,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GunnerAutoMateDeadline",
+     "x": 2,
+     "y": 6,
+     "byte": 13,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ShowTime",
+     "x": 3,
+     "y": 6,
+     "byte": 15,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ChainTrigger",
+     "x": 4,
+     "y": 6,
+     "byte": 4,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GunnerZeroRangeBonus1",
+     "x": 0,
+     "y": 7,
+     "byte": 3,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ShowTimeStar",
+     "x": 3,
+     "y": 7,
+     "byte": 18,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "ChainFinish",
+     "x": 4,
+     "y": 7,
+     "byte": 10,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "ChainFinishBonus",
+     "x": 5,
+     "y": 7,
+     "byte": 0,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "OnemoreTime",
+     "x": 2,
+     "y": 8,
+     "byte": 1,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "ToughnessTime",
+     "x": 3,
+     "y": 8,
+     "byte": 24,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "TwiceChain",
+     "x": 4,
+     "y": 8,
+     "byte": 0,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "SRollUP",
+     "x": 5,
+     "y": 8,
+     "byte": 17,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "HighTime",
+     "x": 3,
+     "y": 9,
+     "byte": 5,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "SRollArts",
+     "x": 5,
+     "y": 9,
+     "byte": 20,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "GunnerZeroRangeBonus2",
+     "x": 0,
+     "y": 10,
+     "byte": 13,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GunnerZeroRangeCritical",
+     "x": 1,
+     "y": 10,
+     "byte": 21,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "GunnerAttackPPRestraint",
+     "x": 2,
+     "y": 10,
+     "byte": 12,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PerfectKeeper",
+     "x": 3,
+     "y": 10,
+     "byte": 16,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "SRollCombo",
+     "x": 5,
+     "y": 10,
+     "byte": 23,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 5
+    }
+   ]
+  },
+  "5": {
+   "name": "techer",
+   "cells": [
+    {
+     "skill": "TecherAtpTechnicUp1",
+     "x": 0,
+     "y": 0,
+     "byte": 1,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TechterDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 23,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "TechterFirstArtsJAAddition",
+     "x": 2,
+     "y": 0,
+     "byte": 22,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 20,
+     "pre": -1
+    },
+    {
+     "skill": "TechterAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 23,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "TechterJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 25,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "TechterNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 21,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 40,
+     "pre": -1
+    },
+    {
+     "skill": "AllAssist",
+     "x": 1,
+     "y": 1,
+     "byte": 11,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "TechterHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 20,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "TechterStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 24,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TecherDexUp1",
+     "x": 1,
+     "y": 2,
+     "byte": 1,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TecherPPUp1",
+     "x": 2,
+     "y": 2,
+     "byte": 12,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TecherDfpTechnicUp1",
+     "x": 3,
+     "y": 2,
+     "byte": 17,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Rare10Techer",
+     "x": 4,
+     "y": 2,
+     "byte": 2,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TecherMirageEscape",
+     "x": 5,
+     "y": 2,
+     "byte": 2,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TecherAtpTechnicUp2",
+     "x": 1,
+     "y": 3,
+     "byte": 15,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TecherPPUp2",
+     "x": 2,
+     "y": 3,
+     "byte": 18,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ExtendAssist",
+     "x": 3,
+     "y": 3,
+     "byte": 8,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TecherJustReversal",
+     "x": 5,
+     "y": 3,
+     "byte": 5,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "TecherAtpStrikeUp",
+     "x": 1,
+     "y": 4,
+     "byte": 24,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "LongTimeAssist",
+     "x": 3,
+     "y": 4,
+     "byte": 5,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TechterChargeTechJA",
+     "x": 5,
+     "y": 4,
+     "byte": 8,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WandGear",
+     "x": 1,
+     "y": 5,
+     "byte": 9,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PPRestraint",
+     "x": 1,
+     "y": 6,
+     "byte": 16,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ShiftaAdvance",
+     "x": 2,
+     "y": 6,
+     "byte": 3,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "RestaAdvance",
+     "x": 3,
+     "y": 6,
+     "byte": 13,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "DebandAdvance",
+     "x": 4,
+     "y": 6,
+     "byte": 4,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "RebirthBornus",
+     "x": 5,
+     "y": 6,
+     "byte": 4,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ShiftaCritical",
+     "x": 2,
+     "y": 7,
+     "byte": 6,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "ShiftaStrike",
+     "x": 3,
+     "y": 7,
+     "byte": 0,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "DebandCut",
+     "x": 4,
+     "y": 7,
+     "byte": 7,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "DebandToughness",
+     "x": 5,
+     "y": 7,
+     "byte": 0,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "MainWand",
+     "x": 1,
+     "y": 8,
+     "byte": 18,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TecherPPConvert",
+     "x": 2,
+     "y": 8,
+     "byte": 20,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "TerritoryBurst",
+     "x": 3,
+     "y": 8,
+     "byte": 10,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "SuperTreatment",
+     "x": 4,
+     "y": 8,
+     "byte": 19,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "RebirtherField",
+     "x": 5,
+     "y": 8,
+     "byte": 3,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PowerWand",
+     "x": 1,
+     "y": 9,
+     "byte": 21,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WandGearElement",
+     "x": 2,
+     "y": 9,
+     "byte": 7,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WideSupport",
+     "x": 3,
+     "y": 9,
+     "byte": 6,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "TerritoryPPSave",
+     "x": 3,
+     "y": 10,
+     "byte": 22,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasteryWind1",
+     "x": 0,
+     "y": 11,
+     "byte": 9,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasteryLight1",
+     "x": 2,
+     "y": 11,
+     "byte": 10,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasteryDark1",
+     "x": 4,
+     "y": 11,
+     "byte": 11,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ElementalWeakPoint",
+     "x": 5,
+     "y": 11,
+     "byte": 19,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasteryWind2",
+     "x": 0,
+     "y": 12,
+     "byte": 15,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MirageBoost",
+     "x": 1,
+     "y": 12,
+     "byte": 12,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasteryLight2",
+     "x": 2,
+     "y": 12,
+     "byte": 16,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "PanicBoost",
+     "x": 3,
+     "y": 12,
+     "byte": 13,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "PoisonBoost",
+     "x": 5,
+     "y": 12,
+     "byte": 14,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "MasteryDark2",
+     "x": 4,
+     "y": 13,
+     "byte": 17,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "PoisonExplosion",
+     "x": 5,
+     "y": 13,
+     "byte": 14,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 4
+    }
+   ]
+  },
+  "6": {
+   "name": "braver",
+   "cells": [
+    {
+     "skill": "BraverDexUp1",
+     "x": 0,
+     "y": 0,
+     "byte": 0,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "BraverDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 10,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "BraverFirstArtsJAAddition",
+     "x": 2,
+     "y": 0,
+     "byte": 9,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 20,
+     "pre": -1
+    },
+    {
+     "skill": "BraverAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 10,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "BraverJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 15,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "BraverNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 9,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 40,
+     "pre": -1
+    },
+    {
+     "skill": "BraverCombination",
+     "x": 1,
+     "y": 1,
+     "byte": 7,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "BraverHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 7,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "BraverStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 11,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Rare10Braver",
+     "x": 3,
+     "y": 2,
+     "byte": 1,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "BraverMag",
+     "x": 4,
+     "y": 2,
+     "byte": 2,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "BraverStep",
+     "x": 5,
+     "y": 2,
+     "byte": 2,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "BraverDexUp2",
+     "x": 1,
+     "y": 3,
+     "byte": 28,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BraverStepAttack",
+     "x": 4,
+     "y": 3,
+     "byte": 8,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "BraverStepAdvance",
+     "x": 5,
+     "y": 3,
+     "byte": 5,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "BraverAtpStrikeUp1",
+     "x": 1,
+     "y": 4,
+     "byte": 3,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BraverAtpFirearmUp1",
+     "x": 2,
+     "y": 4,
+     "byte": 4,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BraverJustReversal",
+     "x": 4,
+     "y": 4,
+     "byte": 11,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "SnatchStep",
+     "x": 5,
+     "y": 4,
+     "byte": 8,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "KatanaGear",
+     "x": 1,
+     "y": 5,
+     "byte": 13,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AttackAdvance",
+     "x": 2,
+     "y": 5,
+     "byte": 0,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "QuickMate",
+     "x": 3,
+     "y": 5,
+     "byte": 4,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "JustReversalBonus",
+     "x": 4,
+     "y": 5,
+     "byte": 14,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "CounterEdge",
+     "x": 1,
+     "y": 6,
+     "byte": 16,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "KatanaGearBoost",
+     "x": 2,
+     "y": 6,
+     "byte": 6,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "KatanaCounterBonus",
+     "x": 1,
+     "y": 7,
+     "byte": 6,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "AverageStance",
+     "x": 0,
+     "y": 8,
+     "byte": 12,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "Combat",
+     "x": 1,
+     "y": 8,
+     "byte": 12,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WeakStance",
+     "x": 3,
+     "y": 8,
+     "byte": 13,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ShortTime",
+     "x": 4,
+     "y": 8,
+     "byte": 14,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ChargeShoot",
+     "x": 5,
+     "y": 8,
+     "byte": 1,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AverageStanceUp1",
+     "x": 0,
+     "y": 9,
+     "byte": 21,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "CombatJABonus1",
+     "x": 1,
+     "y": 9,
+     "byte": 18,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "CombatFinish",
+     "x": 2,
+     "y": 9,
+     "byte": 19,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WeakStanceUp1",
+     "x": 3,
+     "y": 9,
+     "byte": 16,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "BowChargeBonus",
+     "x": 5,
+     "y": 9,
+     "byte": 5,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "CombatEscape",
+     "x": 1,
+     "y": 10,
+     "byte": 21,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WeakStanceCritical",
+     "x": 2,
+     "y": 10,
+     "byte": 29,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "WeakChargeBonus",
+     "x": 3,
+     "y": 10,
+     "byte": 32,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "ShortTimeUp1",
+     "x": 4,
+     "y": 10,
+     "byte": 17,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "ShortTimeBonus1",
+     "x": 5,
+     "y": 10,
+     "byte": 17,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "AverageChargeBonus",
+     "x": 0,
+     "y": 11,
+     "byte": 30,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AverageStanceCritical",
+     "x": 1,
+     "y": 11,
+     "byte": 27,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ShortTimeUp2",
+     "x": 4,
+     "y": 11,
+     "byte": 20,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "ShortTimeAdvance",
+     "x": 5,
+     "y": 11,
+     "byte": 20,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 5
+    }
+   ]
+  },
+  "7": {
+   "name": "bouncer",
+   "cells": [
+    {
+     "skill": "BouncerDexUp1",
+     "x": 0,
+     "y": 0,
+     "byte": 4,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 21,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerFirstArtsJAAddition",
+     "x": 2,
+     "y": 0,
+     "byte": 20,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 20,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 21,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 22,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 20,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 40,
+     "pre": -1
+    },
+    {
+     "skill": "DodgeAutoField",
+     "x": 1,
+     "y": 1,
+     "byte": 19,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 19,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 22,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "CraftMastaryBouncer",
+     "x": 3,
+     "y": 2,
+     "byte": 5,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Rare10Bouncer",
+     "x": 4,
+     "y": 2,
+     "byte": 6,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerStep",
+     "x": 5,
+     "y": 2,
+     "byte": 0,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerAtpStrikeUp1",
+     "x": 1,
+     "y": 3,
+     "byte": 2,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BouncerAtpTechnicUp1",
+     "x": 2,
+     "y": 3,
+     "byte": 3,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BouncerMag",
+     "x": 4,
+     "y": 3,
+     "byte": 6,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "BouncerStepAdvance",
+     "x": 5,
+     "y": 3,
+     "byte": 0,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "BouncerAtpStrikeUp2",
+     "x": 1,
+     "y": 4,
+     "byte": 3,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "JetBootsGear",
+     "x": 1,
+     "y": 5,
+     "byte": 4,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "JetBootsEscape",
+     "x": 2,
+     "y": 5,
+     "byte": 17,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "OnemoreJump",
+     "x": 3,
+     "y": 5,
+     "byte": 18,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "DualbladeGear",
+     "x": 4,
+     "y": 5,
+     "byte": 5,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BouncerStepAttack",
+     "x": 5,
+     "y": 5,
+     "byte": 1,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "JetBootsGearBoost",
+     "x": 1,
+     "y": 6,
+     "byte": 18,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "ElementalPPRestraintField",
+     "x": 1,
+     "y": 7,
+     "byte": 7,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "CriticalField",
+     "x": 2,
+     "y": 7,
+     "byte": 7,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "FieldRemain",
+     "x": 4,
+     "y": 7,
+     "byte": 17,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BouncerJustReversal",
+     "x": 5,
+     "y": 7,
+     "byte": 1,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "JustReversalPPBonus",
+     "x": 5,
+     "y": 8,
+     "byte": 2,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "ShiftaAirAttackBurst",
+     "x": 1,
+     "y": 9,
+     "byte": 8,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "DebundPPRestraint",
+     "x": 3,
+     "y": 9,
+     "byte": 8,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "HealShare",
+     "x": 4,
+     "y": 9,
+     "byte": 9,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "HealBonus",
+     "x": 4,
+     "y": 10,
+     "byte": 9,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "RapidBurst",
+     "x": 1,
+     "y": 11,
+     "byte": 10,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ElementalBurst",
+     "x": 2,
+     "y": 11,
+     "byte": 11,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "JetBootsStrike",
+     "x": 3,
+     "y": 11,
+     "byte": 16,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PhotonBladeFever",
+     "x": 4,
+     "y": 11,
+     "byte": 11,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PhotonBladeEscape",
+     "x": 5,
+     "y": 11,
+     "byte": 12,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "RapidBurstJABonus",
+     "x": 1,
+     "y": 12,
+     "byte": 10,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "PhotonBladeFeverUp1",
+     "x": 4,
+     "y": 12,
+     "byte": 12,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "ElementalStance",
+     "x": 0,
+     "y": 13,
+     "byte": 13,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BreakStance",
+     "x": 2,
+     "y": 13,
+     "byte": 14,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ElementalStanceUp1",
+     "x": 0,
+     "y": 14,
+     "byte": 13,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "ElementalStanceCritical",
+     "x": 1,
+     "y": 14,
+     "byte": 14,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "BreakStanceDualBonus",
+     "x": 3,
+     "y": 14,
+     "byte": 16,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "BreakStanceUp1",
+     "x": 2,
+     "y": 15,
+     "byte": 15,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "BreakStanceCritical",
+     "x": 3,
+     "y": 15,
+     "byte": 15,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    }
+   ]
+  },
+  "8": {
+   "name": "challenger",
+   "cells": [
+    {
+     "skill": "Dummy",
+     "x": 0,
+     "y": 0,
+     "byte": 0,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    }
+   ]
+  },
+  "9": {
+   "name": "summoner",
+   "cells": [
+    {
+     "skill": "SummonerHPUp1",
+     "x": 0,
+     "y": 0,
+     "byte": 0,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "SummonerDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 25,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "SummonerFirstArtsJAAddition",
+     "x": 2,
+     "y": 0,
+     "byte": 24,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 20,
+     "pre": -1
+    },
+    {
+     "skill": "SummonerAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 25,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "SummonerJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 26,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "SummonerNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 24,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 40,
+     "pre": -1
+    },
+    {
+     "skill": "PetStandHarmony",
+     "x": 1,
+     "y": 1,
+     "byte": 23,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "SummonerHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 23,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "SummonerStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 26,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "TakeOver",
+     "x": 3,
+     "y": 2,
+     "byte": 22,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "SummonerSubClassEXPUp",
+     "x": 4,
+     "y": 2,
+     "byte": 10,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "SummonerMirageEscape",
+     "x": 5,
+     "y": 2,
+     "byte": 20,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "PetSwtichStrike",
+     "x": 1,
+     "y": 3,
+     "byte": 17,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetSwtichShoot",
+     "x": 2,
+     "y": 3,
+     "byte": 17,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "SummonerJustReversal",
+     "x": 5,
+     "y": 3,
+     "byte": 20,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "HPAutoRestraint",
+     "x": 0,
+     "y": 4,
+     "byte": 8,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AllAttackBonus1",
+     "x": 0,
+     "y": 5,
+     "byte": 18,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "QuickRecovery",
+     "x": 1,
+     "y": 5,
+     "byte": 9,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MassiveMate",
+     "x": 2,
+     "y": 5,
+     "byte": 8,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetSympathy",
+     "x": 0,
+     "y": 6,
+     "byte": 13,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetResque",
+     "x": 1,
+     "y": 6,
+     "byte": 7,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AllAttackBonus2",
+     "x": 0,
+     "y": 7,
+     "byte": 18,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "HarmonizeUp",
+     "x": 1,
+     "y": 7,
+     "byte": 21,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "SympathyTime",
+     "x": 2,
+     "y": 7,
+     "byte": 14,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "EasySympathy",
+     "x": 3,
+     "y": 7,
+     "byte": 21,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "LongDistanceLove",
+     "x": 4,
+     "y": 7,
+     "byte": 22,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetAssist",
+     "x": 0,
+     "y": 8,
+     "byte": 11,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetPhotonBarrier",
+     "x": 1,
+     "y": 8,
+     "byte": 7,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetAssistPlus",
+     "x": 1,
+     "y": 9,
+     "byte": 11,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetHPRestraint",
+     "x": 0,
+     "y": 10,
+     "byte": 12,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "SubPetRrcoverUp",
+     "x": 1,
+     "y": 10,
+     "byte": 12,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetElementalWeakPoint",
+     "x": 1,
+     "y": 11,
+     "byte": 19,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetElementPPRestraint",
+     "x": 2,
+     "y": 11,
+     "byte": 19,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "SummonerPPUp1",
+     "x": 2,
+     "y": 12,
+     "byte": 1,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AllAttackUp1",
+     "x": 3,
+     "y": 12,
+     "byte": 2,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "AllFDiffenceUp1",
+     "x": 4,
+     "y": 12,
+     "byte": 3,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "SummonerHPUp2",
+     "x": 1,
+     "y": 13,
+     "byte": 1,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "SummonerPPUp2",
+     "x": 2,
+     "y": 13,
+     "byte": 2,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "AllAttackUp2",
+     "x": 3,
+     "y": 13,
+     "byte": 3,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "AllFDiffenceUp2",
+     "x": 4,
+     "y": 13,
+     "byte": 4,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "SummonerPPAdvance",
+     "x": 0,
+     "y": 14,
+     "byte": 15,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PetStand",
+     "x": 1,
+     "y": 14,
+     "byte": 15,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    }
+   ]
+  },
+  "10": {
+   "name": "poka",
+   "cells": [
+    {
+     "skill": "CaptureShot",
+     "x": 0,
+     "y": 0,
+     "byte": 0,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "PPOneTimeUp",
+     "x": 1,
+     "y": 0,
+     "byte": 0,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FirstAid",
+     "x": 2,
+     "y": 0,
+     "byte": 1,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Barrier",
+     "x": 3,
+     "y": 0,
+     "byte": 1,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "Sprint",
+     "x": 4,
+     "y": 0,
+     "byte": 2,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    }
+   ]
+  },
+  "11": {
+   "name": "wpnman",
+   "cells": [
+    {
+     "skill": "Intensive",
+     "x": 0,
+     "y": 0,
+     "byte": 0,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 18,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 17,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 19,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanRefresh",
+     "x": 1,
+     "y": 1,
+     "byte": 19,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 20,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 18,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanCounter",
+     "x": 1,
+     "y": 2,
+     "byte": 2,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "FirstBlood",
+     "x": 2,
+     "y": 2,
+     "byte": 16,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanMag",
+     "x": 4,
+     "y": 2,
+     "byte": 9,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanStep",
+     "x": 5,
+     "y": 2,
+     "byte": 16,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanWeaponBonus1",
+     "x": 0,
+     "y": 3,
+     "byte": 0,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WpnmanTime",
+     "x": 1,
+     "y": 3,
+     "byte": 2,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WpnmanAttackBonus",
+     "x": 2,
+     "y": 3,
+     "byte": 8,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WpnmanStepAttack",
+     "x": 5,
+     "y": 3,
+     "byte": 17,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanWeaponBonus2",
+     "x": 0,
+     "y": 4,
+     "byte": 1,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "WpnmanTimeFinish",
+     "x": 1,
+     "y": 4,
+     "byte": 3,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WpnmanTimeCounterBonus",
+     "x": 2,
+     "y": 4,
+     "byte": 8,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WpnmanTimeCounterPpGain",
+     "x": 3,
+     "y": 4,
+     "byte": 9,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WpnmanJustReversal",
+     "x": 5,
+     "y": 4,
+     "byte": 12,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "ZeroRangeGearUp",
+     "x": 1,
+     "y": 5,
+     "byte": 5,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "LongRangeGearUp",
+     "x": 2,
+     "y": 5,
+     "byte": 5,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "ComboGearUp",
+     "x": 3,
+     "y": 5,
+     "byte": 6,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WpnmanGearTimeGain",
+     "x": 4,
+     "y": 5,
+     "byte": 15,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "WpnmanNextJump",
+     "x": 5,
+     "y": 5,
+     "byte": 13,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "SwordShotCharge2",
+     "x": 0,
+     "y": 6,
+     "byte": 3,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "SwordShotComboShortCharge",
+     "x": 1,
+     "y": 6,
+     "byte": 4,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanTMGAttackPPSave",
+     "x": 2,
+     "y": 6,
+     "byte": 15,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanChargeKeep",
+     "x": 3,
+     "y": 6,
+     "byte": 14,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanComeAgain",
+     "x": 4,
+     "y": 6,
+     "byte": 14,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanOneMoreJump",
+     "x": 5,
+     "y": 6,
+     "byte": 13,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "HFlushGuard",
+     "x": 0,
+     "y": 7,
+     "byte": 7,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanWill",
+     "x": 1,
+     "y": 7,
+     "byte": 12,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "AllTechPPSave",
+     "x": 2,
+     "y": 7,
+     "byte": 4,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VictoryShout",
+     "x": 3,
+     "y": 7,
+     "byte": 6,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WeakAttackCritical",
+     "x": 4,
+     "y": 7,
+     "byte": 1,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanHPUp1",
+     "x": 0,
+     "y": 8,
+     "byte": 11,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanPPUp1",
+     "x": 1,
+     "y": 8,
+     "byte": 11,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanAtpAllUp1",
+     "x": 2,
+     "y": 8,
+     "byte": 10,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "WpnmanDfpAllUp1",
+     "x": 3,
+     "y": 8,
+     "byte": 10,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    }
+   ]
+  },
+  "12": {
+   "name": "villain",
+   "cells": [
+    {
+     "skill": "VillainMarker",
+     "x": 0,
+     "y": 0,
+     "byte": 10,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 5,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "VillainFirstBlood",
+     "x": 2,
+     "y": 0,
+     "byte": 17,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 4,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "VillainJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 6,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "VillainNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 1,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainGespenst",
+     "x": 1,
+     "y": 1,
+     "byte": 22,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "VillainHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 25,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "VillainStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 5,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainSprintTecCharge",
+     "x": 1,
+     "y": 2,
+     "byte": 22,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainDodge",
+     "x": 2,
+     "y": 2,
+     "byte": 24,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainTalisShortCharge",
+     "x": 3,
+     "y": 2,
+     "byte": 26,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainMag",
+     "x": 4,
+     "y": 2,
+     "byte": 16,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainStep",
+     "x": 5,
+     "y": 2,
+     "byte": 0,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainDodgeCounterShot",
+     "x": 1,
+     "y": 3,
+     "byte": 21,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "PrimalTime",
+     "x": 2,
+     "y": 3,
+     "byte": 2,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainAttackJellen",
+     "x": 3,
+     "y": 3,
+     "byte": 20,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainWeaponBonus1",
+     "x": 4,
+     "y": 3,
+     "byte": 7,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainStepAdvance",
+     "x": 5,
+     "y": 3,
+     "byte": 27,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "VillainDodgePPRegain",
+     "x": 1,
+     "y": 4,
+     "byte": 8,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "VillainTimeFinish",
+     "x": 2,
+     "y": 4,
+     "byte": 3,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "VillainJellenRedress",
+     "x": 3,
+     "y": 4,
+     "byte": 20,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 3
+    },
+    {
+     "skill": "VillainWeaponBonus2",
+     "x": 4,
+     "y": 4,
+     "byte": 7,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 4
+    },
+    {
+     "skill": "VillainStepAttack",
+     "x": 5,
+     "y": 4,
+     "byte": 0,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "PrimalTimePlus2",
+     "x": 2,
+     "y": 5,
+     "byte": 24,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "PrimalTimePlus",
+     "x": 3,
+     "y": 5,
+     "byte": 14,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "VillainJustReversal",
+     "x": 5,
+     "y": 5,
+     "byte": 4,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainZeroRangeBoost",
+     "x": 1,
+     "y": 6,
+     "byte": 12,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainLongRangeBoost",
+     "x": 2,
+     "y": 6,
+     "byte": 13,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainChaseMarkBoost",
+     "x": 3,
+     "y": 6,
+     "byte": 13,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainLoadOfThorn",
+     "x": 4,
+     "y": 6,
+     "byte": 19,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainChargeTechJA",
+     "x": 5,
+     "y": 6,
+     "byte": 18,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainMarkPpDrain",
+     "x": 0,
+     "y": 7,
+     "byte": 11,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainMarkHeal",
+     "x": 1,
+     "y": 7,
+     "byte": 11,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainQuickCut",
+     "x": 2,
+     "y": 7,
+     "byte": 21,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainBullsEye",
+     "x": 3,
+     "y": 7,
+     "byte": 19,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainAmbivalence",
+     "x": 4,
+     "y": 7,
+     "byte": 23,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "VillainAllAttackBonus",
+     "x": 0,
+     "y": 8,
+     "byte": 25,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainPhotonStream1",
+     "x": 1,
+     "y": 8,
+     "byte": 16,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainPPRestraint",
+     "x": 2,
+     "y": 8,
+     "byte": 18,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainTecShortCharge",
+     "x": 3,
+     "y": 8,
+     "byte": 15,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainFullDrive",
+     "x": 0,
+     "y": 9,
+     "byte": 8,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "VillainPhotonStream2",
+     "x": 1,
+     "y": 9,
+     "byte": 26,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "VillainPPHighUp",
+     "x": 2,
+     "y": 9,
+     "byte": 6,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    }
+   ]
+  },
+  "13": {
+   "name": "master",
+   "cells": [
+    {
+     "skill": "MasterClockUp",
+     "x": 0,
+     "y": 0,
+     "byte": 0,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterDushJump",
+     "x": 1,
+     "y": 0,
+     "byte": 1,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 10,
+     "pre": -1
+    },
+    {
+     "skill": "MasterFirstBlood",
+     "x": 2,
+     "y": 0,
+     "byte": 2,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterAirReversal",
+     "x": 3,
+     "y": 0,
+     "byte": 0,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "MasterJustReversalJACombo",
+     "x": 4,
+     "y": 0,
+     "byte": 2,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 30,
+     "pre": -1
+    },
+    {
+     "skill": "MasterNextJump",
+     "x": 5,
+     "y": 0,
+     "byte": 3,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterTimeLeap",
+     "x": 1,
+     "y": 1,
+     "byte": 19,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 85,
+     "pre": -1
+    },
+    {
+     "skill": "MasterHighLevelBonus",
+     "x": 2,
+     "y": 1,
+     "byte": 8,
+     "shift": 4,
+     "max": 5,
+     "req_lv": 80,
+     "pre": -1
+    },
+    {
+     "skill": "MasterStepJACombo",
+     "x": 5,
+     "y": 1,
+     "byte": 1,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterWandReferenceChange",
+     "x": 3,
+     "y": 2,
+     "byte": 22,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterMag",
+     "x": 4,
+     "y": 2,
+     "byte": 15,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterStep",
+     "x": 5,
+     "y": 2,
+     "byte": 3,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterHPRestraint",
+     "x": 0,
+     "y": 3,
+     "byte": 19,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterOverClock",
+     "x": 1,
+     "y": 3,
+     "byte": 14,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterCoherence",
+     "x": 2,
+     "y": 3,
+     "byte": 11,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterEfficient",
+     "x": 3,
+     "y": 3,
+     "byte": 16,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterStepAdvance",
+     "x": 5,
+     "y": 3,
+     "byte": 22,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": 5
+    },
+    {
+     "skill": "MasterAllAttackBonus",
+     "x": 0,
+     "y": 4,
+     "byte": 16,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterFlatAttackBonus",
+     "x": 1,
+     "y": 4,
+     "byte": 14,
+     "shift": 0,
+     "max": 5,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterAmbitionMassive",
+     "x": 2,
+     "y": 4,
+     "byte": 18,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterStepAttack",
+     "x": 5,
+     "y": 4,
+     "byte": 7,
+     "shift": 4,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterJABonus",
+     "x": 0,
+     "y": 5,
+     "byte": 21,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterHeatArtsPPSave",
+     "x": 1,
+     "y": 5,
+     "byte": 13,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterDamageThrottling",
+     "x": 2,
+     "y": 5,
+     "byte": 21,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterJustReversal",
+     "x": 5,
+     "y": 5,
+     "byte": 8,
+     "shift": 0,
+     "max": 0,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterJACritical",
+     "x": 0,
+     "y": 6,
+     "byte": 13,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterCountArtsBonus",
+     "x": 1,
+     "y": 6,
+     "byte": 20,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 1
+    },
+    {
+     "skill": "MasterWeaponBonus1",
+     "x": 2,
+     "y": 6,
+     "byte": 4,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "MasterInstinct",
+     "x": 3,
+     "y": 6,
+     "byte": 17,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "MasterWeaponBonus2",
+     "x": 2,
+     "y": 7,
+     "byte": 4,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "MasterDoublesaverGear",
+     "x": 0,
+     "y": 8,
+     "byte": 5,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterDSaberSkipArts",
+     "x": 0,
+     "y": 9,
+     "byte": 7,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterAxel",
+     "x": 1,
+     "y": 9,
+     "byte": 6,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterDSaberBlink",
+     "x": 2,
+     "y": 9,
+     "byte": 9,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterArcane",
+     "x": 3,
+     "y": 9,
+     "byte": 17,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterDualbladeGear",
+     "x": 0,
+     "y": 10,
+     "byte": 5,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterWandGear",
+     "x": 2,
+     "y": 10,
+     "byte": 6,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterDBladeNaHoming",
+     "x": 0,
+     "y": 11,
+     "byte": 12,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterDBladeGearSkill",
+     "x": 1,
+     "y": 11,
+     "byte": 12,
+     "shift": 4,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 0
+    },
+    {
+     "skill": "MasterWandNimble",
+     "x": 2,
+     "y": 11,
+     "byte": 15,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "MasterWandTeleport",
+     "x": 3,
+     "y": 11,
+     "byte": 20,
+     "shift": 0,
+     "max": 1,
+     "req_lv": 0,
+     "pre": 2
+    },
+    {
+     "skill": "MasterHPUp1",
+     "x": 0,
+     "y": 12,
+     "byte": 10,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterPPUp1",
+     "x": 1,
+     "y": 12,
+     "byte": 10,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterAtpAllUp1",
+     "x": 2,
+     "y": 12,
+     "byte": 11,
+     "shift": 0,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    },
+    {
+     "skill": "MasterDfpAllUp1",
+     "x": 3,
+     "y": 12,
+     "byte": 9,
+     "shift": 4,
+     "max": 10,
+     "req_lv": 0,
+     "pre": -1
+    }
+   ]
+  }
+ }
+}

@@ -1,7 +1,7 @@
-//! [pso2_vita_offline] Passive skills of the main class (provisional build). `data/skills.json` (`PSO2_SKILLS`
-//! overrides) has, per skill, the client's per-Lv values (`.usk`) and `lv_div`: the skill's Lv is the character's
-//! level / `lv_div`, at least 1 and at most the table's length. Which skills are taken is not modelled (no
-//! skill-tree packets are handled), so the whole list is always on. Only hunter is filled in.
+//! [pso2_vita_offline] Passive skills of the main class. `data/skills.json` (`PSO2_SKILLS` overrides) has, per skill,
+//! the client's per-Lv values (`.usk`) and `lv_div`. The Lv is the one learnt on the class's applied skill tree sheet
+//! (skill_tree.rs). With no SP spent there, the provisional build is used: Lv = the character's level / `lv_div`, at
+//! least 1 and at most the table's length, for the skills with `lv_div` > 0. Only hunter is filled in.
 use serde::Deserialize;
 use std::{collections::HashMap, sync::OnceLock};
 
@@ -56,7 +56,7 @@ fn file() -> &'static SkillFile {
 }
 
 /// Effects of the passives for a character of `class_name` ("hunter") and `level`, with a log line per skill
-pub fn bonus(class_name: &str, level: u32) -> SkillBonus {
+pub fn bonus(class_name: &str, level: u32, learnt: Option<&HashMap<&str, u32>>) -> SkillBonus {
     let f = file();
     let mut b = SkillBonus::default();
     if f.class != class_name {
@@ -64,7 +64,14 @@ pub fn bonus(class_name: &str, level: u32) -> SkillBonus {
     }
     for s in &f.skills {
         let n = s.fields.values().map(Vec::len).max().unwrap_or(0) as u32;
-        let lv = (level / s.lv_div.max(1)).clamp(1, n.max(1));
+        let lv = match learnt {
+            Some(l) => l.get(s.skill.as_str()).copied().unwrap_or(0).min(n),
+            None if s.lv_div == 0 => 0,
+            None => (level / s.lv_div).clamp(1, n.max(1)),
+        };
+        if lv == 0 {
+            continue;
+        }
         let v = |k: &str| s.fields.get(k).and_then(|t| t.get(lv as usize - 1)).copied();
         if let Some(x) = v("HpMax") { b.hp += x as u32; }
         if let Some(x) = v("Strike") { b.s_atk += x as u32; }
@@ -83,6 +90,6 @@ mod tests {
     use super::*;
     #[test]
     fn default_is_neutral() {
-        assert_eq!(bonus("nobody", 10), SkillBonus::default());
+        assert_eq!(bonus("nobody", 10, None), SkillBonus::default());
     }
 }

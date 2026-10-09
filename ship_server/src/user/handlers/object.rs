@@ -67,3 +67,25 @@ pub async fn change_class(
 
     Ok(Action::Nothing)
 }
+
+/// [pso2_vita_offline] 04-27 skill tree request (skill_tree.rs): change the sheet, resend it (04-28 mode 2), reply
+/// 04-2C and rebuild the stats
+pub async fn skill_tree(mut user: MutexGuard<'_, User>, data: Vec<u8>) -> HResult {
+    let Some(req) = crate::skill_tree::Request::parse(&data) else {
+        log::warn!("[pso2-skilltree] short 04-27 ({} B)", data.len());
+        return Ok(Action::Nothing);
+    };
+    log::info!("[pso2-skilltree] 04-27 {req:?} raw {:02x?}", &data[0x18..data.len().min(0x24)]);
+    let player = user.create_object_header();
+    let Some(char) = user.character.as_mut() else {
+        unreachable!("Character should be already setup");
+    };
+    let (ok, err, changed) = crate::skill_tree::apply(&mut char.skill_trees, &char.character.classes, &req);
+    if !changed.is_empty() {
+        let p = crate::skill_tree::sheets_packet(player, 2, &char.skill_trees, Some(&changed));
+        user.send_packet(&p).await?;
+        user.battle_stats = crate::battle_stats::PlayerStats::build(&user)?;
+    }
+    user.send_packet(&crate::skill_tree::result_packet(player, req.op, ok, err)).await?;
+    Ok(Action::Nothing)
+}

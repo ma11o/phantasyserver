@@ -649,6 +649,7 @@ pub async fn packet_handler(
         (US::InGame, P::Unknown((h, d))) if h.id == 0x0F && h.subid == 0x23 => H::lab::grind(user_guard, d).await,
         (US::InGame, P::Unknown((h, d))) if h.id == 0x0F && h.subid == 0x3D => H::lab::preview_3d(user, d).await,
         // [pso2-shop] NPC shops: 34-00 -> 34-01 stock, 34-02 buy, 34-04 sell (handlers/shop.rs)
+        (US::InGame, P::Unknown((h, d))) if h.id == 0x04 && h.subid == 0x27 => H::object::skill_tree(user_guard, d).await,
         (US::InGame, P::Unknown((h, d))) if h.id == 0x34 && h.subid == 0x00 => H::shop::open(user, d).await,
         (US::InGame, P::Unknown((h, d))) if h.id == 0x34 && h.subid == 0x02 => H::shop::buy(user, d).await,
         (US::InGame, P::Unknown((h, d))) if h.id == 0x34 && h.subid == 0x04 => H::shop::sell(user, d).await,

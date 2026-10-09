@@ -6,6 +6,7 @@
 
 mod affixes;
 mod skills;
+mod skill_tree;
 mod pa_power;
 mod consumables;
 mod battle_stats;

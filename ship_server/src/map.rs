@@ -811,6 +811,14 @@ impl Zone {
                 ..Default::default()
             })
             .await?;
+        // [pso2-skilltree] the player's sheets right after its own spawn (skill_tree.rs; mode 1 creates the store)
+        if let Some(c) = np_lock.character.as_mut() {
+            c.skill_trees.ensure();
+        }
+        if let Some(c) = np_lock.character.as_ref() {
+            let sheets = crate::skill_tree::sheets_packet(np_lock.create_object_header(), 1, &c.skill_trees, None);
+            np_lock.send_packet(&sheets).await?;
+        }
         Self::load_objects(&self.lua, &self.objects, &mut np_lock)?;
         for (character, position, isgm) in other_characters {
             let player_id = character.player_id;

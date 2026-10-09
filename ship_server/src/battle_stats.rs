@@ -160,10 +160,12 @@ impl PlayerStats {
             add(&mut resulting_stats.hp, b.hp);
             add(&mut resulting_stats.dex, b.dex);
         }
-        // [pso2_vita_offline] passive skills (provisional build, see skills.rs): flat adds, then the attack
-        // multipliers on base and weapon attack together (order of the multipliers is not checked)
+        // [pso2_vita_offline] passive skills (skill tree sheet, or the provisional build, see skills.rs): flat
+        // adds, then the attack multipliers on base and weapon attack together (order of the multipliers is not
+        // checked)
         let class_name = if char_data.classes.main_class == Class::Hunter { "hunter" } else { "" };
-        let sk = crate::skills::bonus(class_name, level as u32);
+        let learnt = char.skill_trees.levels(char_data.classes.main_class as u8);
+        let sk = crate::skills::bonus(class_name, level as u32, learnt.as_ref());
         if sk != Default::default() {
             let r = &mut resulting_stats;
             r.max_hp += sk.hp;
@@ -178,8 +180,8 @@ impl PlayerStats {
             r.weapon_rng_pwr = (r.weapon_rng_pwr as f32 * sk.r_atk_mul) as u32;
             r.taken_extra = sk.taken_mul - 1.0;
             log::debug!(
-                "[pso2-battle] skills hp +{} mel +{} def +{} atk x{:.3} (mel {m0} -> {}, rng {r0} -> {}) taken x{:.2}",
-                sk.hp, sk.s_atk, sk.s_def, sk.s_atk_mul, r.base_mel_pwr + r.weapon_mel_pwr,
+                "[pso2-battle] skills hp +{} (max {}) mel +{} def +{} atk x{:.3} (mel {m0} -> {}, rng {r0} -> {}) taken x{:.2}",
+                sk.hp, r.max_hp, sk.s_atk, sk.s_def, sk.s_atk_mul, r.base_mel_pwr + r.weapon_mel_pwr,
                 r.base_rng_pwr + r.weapon_rng_pwr, sk.taken_mul
             );
         }

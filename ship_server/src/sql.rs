@@ -52,6 +52,8 @@ pub struct CharData {
     pub play_time: Duration,
     /// [pso2-quest] name_ids of quests the character has cleared (story list clear mark)
     pub cleared_quests: Vec<u32>,
+    /// [pso2-skilltree] skill tree sheets (skill_tree.rs)
+    pub skill_trees: crate::skill_tree::SkillTrees,
 }
 
 #[derive(Default, serde::Serialize, serde::Deserialize)]
