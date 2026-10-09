@@ -194,7 +194,12 @@ pub async fn map_loaded(mut user_guard: MutexGuard<'_, User>, _: MapLoadedPacket
     user.send_packet(&Packet::LobbyMonitor(packet)).await?;
     user.firstload = false;
     if let Some(opts) = user.pending_result.take() {
-        user.send_packet(&quest_result(opts)).await?;
+        let mut packet = quest_result(opts);
+        if let (Some((meseta, exp)), Packet::QuestResult(p)) = (user.pending_reward.take(), &mut packet) {
+            p.meseta_earned = meseta;
+            p.exp_earned = exp;
+        }
+        user.send_packet(&packet).await?;
     }
     crate::user::debug::on_map_loaded(user).await;
 

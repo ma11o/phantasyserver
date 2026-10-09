@@ -2,4 +2,5 @@
 if call_type == "on_quest_clear" then
     clear_quest(sender, 700230)
     unlock_quest(sender, 700231)
+    story_reward(sender, "DragonMagmaUniq", true)
 end

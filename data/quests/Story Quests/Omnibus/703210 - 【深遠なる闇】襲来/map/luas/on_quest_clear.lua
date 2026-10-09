@@ -2,4 +2,5 @@
 if call_type == "on_quest_clear" then
     clear_quest(sender, 703210)
     unlock_quest(sender, 703212)
+    story_reward(sender, "DpAbyss", true)
 end

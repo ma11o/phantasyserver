@@ -2,4 +2,5 @@
 if call_type == "on_quest_clear" then
     clear_quest(sender, 701130)
     unlock_quest(sender, 701132)
+    story_reward(sender, "DpFishElder", true)
 end

@@ -2,4 +2,5 @@
 if call_type == "on_quest_clear" then
     clear_quest(sender, 702810)
     unlock_quest(sender, 702820)
+    story_reward(sender, "Mono0GreatEvilA", true)
 end

@@ -1133,7 +1133,7 @@
         "map_id": 393,
         "zone_type": 2,
         "seed": 2012513828,
-        "args": 4,
+        "args": 2,
         "size_x": 0,
         "size_y": 0,
         "unk2": 0,
@@ -1146,9 +1146,9 @@
         "rot_y": 15360,
         "rot_z": 0,
         "rot_w": 0,
-        "pos_x": 0,
+        "pos_x": 11715,
         "pos_y": 0,
-        "pos_z": 19072
+        "pos_z": 17928
       },
       "enemies": [
         {
@@ -1158,7 +1158,7 @@
       ],
       "chunks": [
         {
-          "chunk_id": 0,
+          "chunk_id": 6,
           "enemy_spawn_type": {
             "Automatic": {
               "min": 1,
@@ -1168,9 +1168,9 @@
           "enemy_spawn_points": [
             {
               "rot_x": 0,
-              "rot_y": 0,
+              "rot_y": 15360,
               "rot_z": 0,
-              "rot_w": 15360,
+              "rot_w": 0,
               "pos_x": 0,
               "pos_y": 0,
               "pos_z": 0
@@ -1178,8 +1178,8 @@
           ],
           "reveals": [
             {
-              "row": 2,
-              "column": 2
+              "row": 4,
+              "column": 4
             }
           ],
           "zone_id": 2
@@ -1189,9 +1189,9 @@
         "enemy_name": "DpAbyss",
         "chunk_id": 4294967295,
         "position": {
-          "pos_x": 0,
+          "pos_x": 11715,
           "pos_y": 0,
-          "pos_z": 17664,
+          "pos_z": 49121,
           "rot_y": 0,
           "rot_w": 48128
         }

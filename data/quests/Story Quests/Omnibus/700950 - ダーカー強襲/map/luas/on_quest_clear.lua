@@ -2,4 +2,5 @@
 if call_type == "on_quest_clear" then
     clear_quest(sender, 700950)
     unlock_quest(sender, 700951)
+    story_reward(sender, "Doodlebug", true)
 end

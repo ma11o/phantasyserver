@@ -2,4 +2,5 @@
 if call_type == "on_quest_clear" then
     clear_quest(sender, 703060)
     unlock_quest(sender, 703080)
+    story_reward(sender, "Char01_Maskman", true)
 end

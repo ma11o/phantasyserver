@@ -356,6 +356,10 @@ impl EnemyStats {
     pub fn name(&self) -> &str {
         &self.name
     }
+    /// Kill EXP before the player's multiplier.
+    pub fn exp(&self) -> u32 {
+        self.exp
+    }
     pub fn build(name: &str, level: u32, pos: Position, data: &ServerData) -> Result<Self, Error> {
         let mut resulting_stats = Self {
             name: name.to_string(),

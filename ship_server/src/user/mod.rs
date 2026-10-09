@@ -55,6 +55,8 @@ pub struct User {
     debug_pending: Option<String>,
     /// QuestResult to send on the next `MapLoaded` (bits: `handlers::server::RESULT_*`).
     pub(crate) pending_result: Option<u8>,
+    /// [pso2_vita_offline] story clear reward (meseta, EXP) already added, shown by the next `QuestResult`
+    pub(crate) pending_reward: Option<(u32, u32)>,
     /// [pso2_vita_offline] last autosave (`tick`)
     last_save: Instant,
 }
@@ -116,6 +118,7 @@ impl User {
                 debug_started: false,
                 debug_pending: None,
                 pending_result: None,
+                pending_reward: None,
             },
             read,
         ))

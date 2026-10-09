@@ -90,6 +90,8 @@ struct LuaState {
     // fighting with async recursion
     to_move: Vec<(PlayerId, String)>,
     to_lobby_move: Vec<PlayerId>,
+    // [pso2_vita_offline] `story_reward` calls: (player, boss name or "", show on the result screen)
+    to_reward: Vec<(PlayerId, String, bool)>,
     procs: HashMap<String, String>,
 }
 
@@ -114,6 +116,7 @@ impl Map {
             lua: Lua::new_with(lua_libs, mlua::LuaOptions::default())?,
             to_move: vec![],
             to_lobby_move: vec![],
+            to_reward: vec![],
             procs: HashMap::new(),
         }));
         let map_obj = ObjectHeader {
@@ -748,11 +751,69 @@ impl Map {
         })
         .await?
     }
+    /// [pso2_vita_offline] Story clear reward (estimated, no period data): battle = the boss's kill EXP at the map's
+    /// enemy level x 3 and enemy level x 100 meseta, talk (`boss` empty) = no EXP and enemy level x 50 meseta. The kill
+    /// EXP multiplier (`exp_mul`) is not applied. Added at once (GainedEXP, InventoryMeseta); `show` keeps it for the
+    /// next `QuestResult`.
+    async fn story_reward(&mut self, player: PlayerId, boss: &str, show: bool) -> Result<(), Error> {
+        let lvl = self.enemy_level.max(1);
+        let exp = if boss.is_empty() {
+            0
+        } else {
+            match &self.block_data {
+                Some(b) => match EnemyStats::build(boss, lvl, Position::default(), &b.server_data) {
+                    Ok(e) => e.exp() * 3,
+                    Err(e) => {
+                        log::warn!("[pso2-quest] story_reward: no stats for {boss}: {e}");
+                        0
+                    }
+                },
+                None => 0,
+            }
+        };
+        let meseta = lvl * if boss.is_empty() { 50 } else { 100 };
+        let Some(user) = self
+            .zones
+            .iter()
+            .flat_map(|z| z.players.iter())
+            .find(|p| p.player_id == player)
+            .and_then(|p| p.user.upgrade())
+        else {
+            return Ok(());
+        };
+        let mut lock = user.lock().await;
+        log::info!("[pso2-quest] story reward Lv{lvl} {boss:?}: meseta +{meseta} exp +{exp} (result: {show})");
+        if exp > 0 {
+            let receiver = lock.add_exp(exp)?;
+            let packet = Packet::GainedEXP(GainedEXPPacket {
+                sender: lock.create_object_header(),
+                receivers: vec![receiver],
+            });
+            lock.try_send_packet(&packet)?;
+        }
+        let packet = lock
+            .character
+            .as_mut()
+            .ok_or(Error::InvalidInput("story_reward: no character"))?
+            .inventory
+            .add_meseta(meseta as u64);
+        lock.try_send_packet(&packet)?;
+        if show {
+            lock.pending_reward = Some((meseta, exp));
+        }
+        Ok(())
+    }
+
     async fn check_move_lua(&mut self) -> Result<(), Error> {
         let mut lua = self.lua.lock();
         let to_move: Vec<_> = lua.to_move.drain(..).collect();
         let to_lobby_move: Vec<_> = lua.to_lobby_move.drain(..).collect();
+        let to_reward: Vec<_> = lua.to_reward.drain(..).collect();
         drop(lua);
+        // rewards first: the result screen is sent on the MapLoaded after the move
+        for (player, boss, show) in to_reward {
+            self.story_reward(player, &boss, show).await?;
+        }
         for (player, zone) in to_move {
             self.move_player_named(player, &zone).await?;
         }
@@ -1716,6 +1777,7 @@ impl Zone {
     ) -> Result<(), Error> {
         let mut scheduled_move = vec![];
         let mut lobby_moves = vec![];
+        let mut rewards = vec![];
 
         let Some(caller) = self
             .players
@@ -1739,7 +1801,7 @@ impl Zone {
             globals.set("players", player_ids)?;
             globals.set("call_type", call_type)?;
             lua.scope(|scope| {
-                self.setup_scope(&globals, scope, &mut scheduled_move, &mut lobby_moves)?;
+                self.setup_scope(&globals, scope, &mut scheduled_move, &mut lobby_moves, &mut rewards)?;
 
                 /* LUA FUNCTIONS */
 
@@ -1780,6 +1842,7 @@ impl Zone {
         for receiver in lobby_moves {
             lua_lock.to_lobby_move.push(receiver);
         }
+        lua_lock.to_reward.append(&mut rewards);
         Ok(())
     }
 
@@ -1789,6 +1852,7 @@ impl Zone {
         scope: &'s mlua::Scope<'s, '_>,
         scheduled_move: &'s mut Vec<(PlayerId, String)>,
         lobby_moves: &'s mut Vec<PlayerId>,
+        rewards: &'s mut Vec<(PlayerId, String, bool)>,
     ) -> Result<(), mlua::Error> {
         /* LUA FUNCTIONS */
 
@@ -1866,6 +1930,15 @@ impl Zone {
             "move_lobby",
             scope.create_function_mut(|_, receiver: u32| {
                 lobby_moves.push(receiver);
+                Ok(())
+            })?,
+        )?;
+        // [pso2_vita_offline] story clear reward (`Map::story_reward`): boss name ("" = talk quest), show = put it on
+        // the next result screen
+        globals.set(
+            "story_reward",
+            scope.create_function_mut(|_, (receiver, boss, show): (u32, String, bool)| {
+                rewards.push((receiver, boss, show));
                 Ok(())
             })?,
         )?;

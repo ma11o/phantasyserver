@@ -2,4 +2,5 @@
 if call_type == "on_quest_clear" then
     clear_quest(sender, 701450)
     unlock_quest(sender, 701451)
+    story_reward(sender, "DragonBerserkAUniq1", true)
 end

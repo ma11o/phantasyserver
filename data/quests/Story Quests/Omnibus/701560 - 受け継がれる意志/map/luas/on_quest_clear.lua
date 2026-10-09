@@ -2,4 +2,5 @@
 if call_type == "on_quest_clear" then
     clear_quest(sender, 701560)
     unlock_quest(sender, 701570)
+    story_reward(sender, "MarineOrca", true)
 end

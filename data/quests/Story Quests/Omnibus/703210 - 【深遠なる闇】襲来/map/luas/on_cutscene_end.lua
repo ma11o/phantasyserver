@@ -4,6 +4,7 @@ if call_type == "on_cutscene_end" then
         if story_phase == "after" then
             clear_quest(sender, 703210)
             unlock_quest(sender, 703212)
+            story_reward(sender, "DpAbyss", false)
             move_lobby(sender)
         else
             story_phase = "field"

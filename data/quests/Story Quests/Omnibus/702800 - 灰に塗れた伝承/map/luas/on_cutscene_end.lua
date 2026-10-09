@@ -4,6 +4,7 @@ if call_type == "on_cutscene_end" then
         if story_phase == "after" then
             clear_quest(sender, 702800)
             unlock_quest(sender, 702810)
+            story_reward(sender, "Mono1Roller", false)
             move_lobby(sender)
         else
             story_phase = "field"

@@ -4,6 +4,7 @@ if call_type == "on_cutscene_end" then
         if story_phase == "after" then
             clear_quest(sender, 701590)
             unlock_quest(sender, 701610)
+            story_reward(sender, "BirdStacked", false)
             move_lobby(sender)
         else
             story_phase = "field"
