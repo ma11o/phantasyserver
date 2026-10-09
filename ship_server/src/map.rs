@@ -109,6 +109,8 @@ pub struct Map {
     quest_obj: ObjectHeader,
     /// [pso2_vita_offline] story battle: (name_id, difficulty 0 casual / 1 hardcore, first-clear items `type:id:subid`)
     story: Option<(u32, u32, Vec<String>)>,
+    /// [pso2_vita_offline] the quest played on this map: (name_id, difficulty) for client order quest targets
+    quest: Option<(u32, u32)>,
 }
 impl Map {
     pub fn new_from_data(mut data: MapData, map_obj_id: &AtomicU32) -> Result<Self, Error> {
@@ -193,6 +195,7 @@ impl Map {
             enemy_level: 0,
             map_type: MapType::QuestMap,
             story: None,
+            quest: None,
             quest_obj: ObjectHeader {
                 entity_type: ObjectType::Quest,
                 ..Default::default()
@@ -211,6 +214,9 @@ impl Map {
     }
     pub const fn set_enemy_level(&mut self, level: u32) {
         self.enemy_level = level;
+    }
+    pub fn set_quest(&mut self, name_id: u32, diff: u32) {
+        self.quest = Some((name_id, diff));
     }
     pub fn set_story(&mut self, name_id: u32, diff: u32, items: Vec<String>) {
         self.story = Some((name_id, diff, items));
@@ -576,6 +582,13 @@ impl Map {
         self.zones[zone_pos].spawn_clear_pipe(id, pos).await;
         // [pso2_vita_offline] the map's `on_quest_clear` Lua, once per player in the zone (story battles mark
         // themselves cleared and unlock the next quest here)
+        // [pso2_vita_offline] client orders: the quest clear counts for every player in the zone
+        if let Some((quest, diff)) = self.quest {
+            exec_users(&self.zones[zone_pos].players, |_, mut player| {
+                crate::user::handlers::orders::count_quest(&mut player, quest, diff);
+            })
+            .await;
+        }
         let lua = self.lua.lock().procs.get("on_quest_clear").cloned();
         if let Some(lua) = lua {
             let players: Vec<_> = self.zones[zone_pos].players.iter().map(|p| p.player_id).collect();

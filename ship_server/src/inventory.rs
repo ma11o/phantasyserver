@@ -699,6 +699,28 @@ impl Inventory {
         }
         out
     }
+    /// [pso2_vita_offline] Client order report: hands `amount` of a consumable in from the bag. UpdateInventory (0F-0D)
+    /// with the touched stacks. Call `count_items` first.
+    pub fn hand_in(&mut self, id: ItemId, mut amount: u16) -> Packet {
+        let mut updated = vec![];
+        while amount > 0 {
+            let Some(uuid) = self.inventory.items.iter().find(|i| i.id == id).map(|i| i.uuid) else {
+                break;
+            };
+            match decrease_item(&mut self.inventory.items, uuid, amount) {
+                Ok(ChangeItemResult::Changed { new_amount, moved, .. }) => {
+                    amount -= moved;
+                    updated.push(pso2packetlib::protocol::items::UpdatedInventoryItem { uuid, new_amount, moved });
+                }
+                Ok(ChangeItemResult::Removed { amount: taken, .. }) => {
+                    amount = amount.saturating_sub(taken);
+                    updated.push(pso2packetlib::protocol::items::UpdatedInventoryItem { uuid, new_amount: 0, moved: taken });
+                }
+                _ => break,
+            }
+        }
+        Packet::UpdateInventory(UpdateInventoryPacket { updated, unk2: 1, ..Default::default() })
+    }
     /// [pso2_vita_offline] Picked-up meseta: the held amount goes up, InventoryMeseta (0F-14) with the new total.
     pub fn add_meseta(&mut self, amount: u64) -> Packet {
         self.inventory.meseta += amount;

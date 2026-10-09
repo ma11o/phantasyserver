@@ -34,6 +34,11 @@ pub async fn taken(user: &mut User, data: TakenOrdersRequestPacket) -> HResult {
         c.client_orders.taken.retain(|t| client_orders::get(t.id).is_some());
     }
     let taken = user.character.as_ref().map(|c| c.client_orders.taken.clone()).unwrap_or_default();
+    let progress: Vec<_> = user
+        .character
+        .as_ref()
+        .map(|c| taken.iter().map(|t| c.client_orders.progress(t, &c.inventory)).collect())
+        .unwrap_or_default();
     let orders: Vec<_> = taken
         .iter()
         .map(|t| ClientOrder {
@@ -43,12 +48,12 @@ pub async fn taken(user: &mut User, data: TakenOrdersRequestPacket) -> HResult {
             finish_date: 0,
         })
         .collect();
-    let statues: Vec<_> = taken
+    let statues: Vec<_> = progress
         .iter()
-        .map(|t| OrderStatus {
-            unk1: t.counts.first().copied().unwrap_or(0),
-            unk2: t.counts.get(1).copied().unwrap_or(0),
-            unk3: t.counts.get(2).copied().unwrap_or(0),
+        .map(|p| OrderStatus {
+            unk1: p.first().copied().unwrap_or(0),
+            unk2: p.get(1).copied().unwrap_or(0),
+            unk3: p.get(2).copied().unwrap_or(0),
             ..Default::default()
         })
         .collect();
@@ -81,21 +86,19 @@ pub async fn taken(user: &mut User, data: TakenOrdersRequestPacket) -> HResult {
 pub async fn list(user: &mut User, data: OrderListRequestPacket) -> HResult {
     log::info!("[pso2-co] 1F-02 {data:?}");
     let npc = data.source.to_string();
-    let (taken, cleared) = user
+    let (taken, offered) = user
         .character
         .as_ref()
         .map(|c| {
+            let ctx = context(c);
             (
                 c.client_orders.taken.iter().map(|t| t.id).collect::<Vec<_>>(),
-                c.client_orders.cleared.clone(),
+                c.client_orders.offered(&npc, &ctx, client_orders::now()),
             )
         })
         .unwrap_or_default();
-    let orders: Vec<_> = client_orders::table()
-        .map(|t| t.orders.iter().filter(|o| o.npc == npc).collect::<Vec<_>>())
-        .unwrap_or_default()
+    let orders: Vec<_> = offered
         .into_iter()
-        .filter(|o| !cleared.contains(&o.id))
         .map(|o| ClientOrder {
             unk1: 0,
             id: o.id,
@@ -114,6 +117,47 @@ pub async fn list(user: &mut User, data: OrderListRequestPacket) -> HResult {
     };
     user.send_packet(&Packet::OrderList(packet)).await?;
     Ok(Action::Nothing)
+}
+
+fn context(c: &crate::sql::CharData) -> client_orders::Context<'_> {
+    client_orders::Context {
+        classes: &c.character.classes,
+        main_level: c.character.get_level().level1 as u32,
+        story_cleared: &c.cleared_quests,
+    }
+}
+
+/// Sets each NPC's open flag (CharaFlag_coOpen*) to whether it has an order to offer or one taken (provisional: when
+/// the original set them is not known). Returns the flags that changed (the caller sends them when the character's
+/// flags were already sent)
+pub fn update_open_flags(c: &mut crate::sql::CharData) -> Vec<(u32, bool)> {
+    let Some(t) = client_orders::table() else { return vec![] };
+    let now = client_orders::now();
+    let mut want = vec![];
+    {
+        let ctx = context(c);
+        for (npc, f) in &t.open_flags {
+            want.push((f.id, !c.client_orders.offered(npc, &ctx, now).is_empty()));
+        }
+    }
+    let mut changed = vec![];
+    for (id, open) in want {
+        if (c.flags.get(id as _) != 0) != open {
+            c.flags.set(id as _, open as _);
+            changed.push((id, open));
+        }
+    }
+    changed
+}
+
+/// `update_open_flags` and ServerSetFlag (23-04) for the changes
+pub async fn send_open_flags(user: &mut User) -> Result<(), crate::Error> {
+    let changed = user.character.as_mut().map(update_open_flags).unwrap_or_default();
+    for (id, open) in changed {
+        log::info!("[pso2-co] open flag {id} -> {open}");
+        user.set_char_flag(id, open).await?;
+    }
+    Ok(())
 }
 
 fn raw(subid: u16, body: Vec<u8>) -> Packet {
@@ -138,6 +182,11 @@ fn result_packet(result: u32, kind: u32, id: u32, request: u32) -> Packet {
 /// 1F-04 (0x40 B, receiver in 0x82f01110): the player, one taken order (kind, id, row state 4, 0) and its 24 B
 /// status, request number (-1 = none). The status words are the kill counts per target (provisional reading)
 pub fn status_packet(user: &User, kind: u32, t: &client_orders::TakenOrder) -> Packet {
+    let progress = user
+        .character
+        .as_ref()
+        .map(|c| c.client_orders.progress(t, &c.inventory))
+        .unwrap_or_else(|| t.counts.clone());
     let o = user.create_object_header();
     let mut b = vec![];
     put(&mut b, o.id);
@@ -148,7 +197,7 @@ pub fn status_packet(user: &User, kind: u32, t: &client_orders::TakenOrder) -> P
         put(&mut b, v);
     }
     for i in 0..6 {
-        put(&mut b, t.counts.get(i).copied().unwrap_or(0));
+        put(&mut b, progress.get(i).copied().unwrap_or(0));
     }
     put(&mut b, u32::MAX);
     raw(0x04, b)
@@ -202,7 +251,7 @@ async fn action_inner(user: &mut User, act: u32, kind: u32, id: u32, request: u3
                 user.send_packet(&result_packet(1, kind, id, request)).await?;
                 return Ok(Action::Nothing);
             };
-            if !orders.taken[pos].done() {
+            if !orders.done(&orders.taken[pos], &character.inventory) {
                 log::info!("[pso2-co] report {id}: not done {:?}", orders.taken[pos].counts);
                 user.send_packet(&result_packet(1, kind, id, request)).await?;
                 return Ok(Action::Nothing);
@@ -211,7 +260,12 @@ async fn action_inner(user: &mut User, act: u32, kind: u32, id: u32, request: u3
             if !orders.cleared.contains(&id) {
                 orders.cleared.push(id);
             }
+            orders.reported_at.insert(id, client_orders::now());
             let mut packets = vec![];
+            // items handed in
+            for t in order.targets.iter().filter(|t| t.kind == 1) {
+                packets.push(character.inventory.hand_in(t.item_id(), t.num as u16));
+            }
             let mut exp = 0;
             for r in &order.rewards {
                 match r.kind {
@@ -231,6 +285,14 @@ async fn action_inner(user: &mut User, act: u32, kind: u32, id: u32, request: u3
                         }
                         packets.push(character.inventory.add_picked_item(item, &mut user.user_data.last_uuid));
                     }
+                    // SP of class `job` (the client's Job number; T95 reading, the window shows it): total SP is the
+                    // class's level2
+                    5 if r.num > 0 => {
+                        if let Some(l) = client_orders::class_level_mut(&mut character.character.classes, r.job) {
+                            l.level2 += r.num as u16;
+                            log::info!("[pso2-co] class {} SP +{} -> {}", r.job, r.num, l.level2);
+                        }
+                    }
                     k => log::info!("[pso2-co] reward type {k} not handled ({:?} x{})", r.item, r.num),
                 }
             }
@@ -244,6 +306,7 @@ async fn action_inner(user: &mut User, act: u32, kind: u32, id: u32, request: u3
                 let p = Packet::GainedEXP(GainedEXPPacket { sender: user.create_object_header(), receivers: vec![receiver] });
                 user.send_packet(&p).await?;
             }
+            send_open_flags(user).await?;
         }
         _ => log::info!("[pso2-co] action {act} not handled"),
     }
@@ -254,9 +317,21 @@ async fn action_inner(user: &mut User, act: u32, kind: u32, id: u32, request: u3
 pub fn count_kill(user: &mut User, enemy: &str) {
     let Some(c) = user.character.as_mut() else { return };
     let changed = c.client_orders.count_kill(enemy);
+    send_counts(user, &changed, enemy);
+}
+
+/// A quest clear (name_id, difficulty) counts for the player's taken orders with that quest as a target
+pub fn count_quest(user: &mut User, quest: u32, diff: u32) {
+    let Some(c) = user.character.as_mut() else { return };
+    let changed = c.client_orders.count_quest(quest, diff);
+    send_counts(user, &changed, &format!("quest {quest} diff {diff}"));
+}
+
+fn send_counts(user: &mut User, changed: &[u32], what: &str) {
+    let Some(c) = user.character.as_ref() else { return };
     let taken: Vec<_> = c.client_orders.taken.iter().filter(|t| changed.contains(&t.id)).cloned().collect();
     for t in taken {
-        log::info!("[pso2-co] {enemy} counts for {}: {:?}", t.id, t.counts);
+        log::info!("[pso2-co] {what} counts for {}: {:?}", t.id, t.counts);
         let p = status_packet(user, 0, &t);
         let _ = user.try_send_packet(&p);
     }

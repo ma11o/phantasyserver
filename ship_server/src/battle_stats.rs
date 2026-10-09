@@ -560,8 +560,8 @@ impl EnemyStats {
 
 /// Kill EXP multiplier by the player's level (tuned, `data/exp_curve.json`: [lv_min, lv_max, mul] bands made by a
 /// tool from the level table so that the best field of each difficulty takes 10-15 runs to reach the next difficulty's
-/// entry level). The period's main EXP source was client orders, which this server doesn't have yet; set the table to 1
-/// once they give EXP. `PSO2_EXP_MUL` overrides every level with one value.
+/// entry level). The table is all 1 now: client orders give the period's EXP, and the multiplier was their stand-in
+/// (the tool keeps the computed values to bring back if growth feels slow). `PSO2_EXP_MUL` overrides every level.
 pub fn exp_mul(player_level: u32) -> f32 {
     static CURVE: std::sync::OnceLock<Vec<(u32, u32, f32)>> = std::sync::OnceLock::new();
     static FIXED: std::sync::OnceLock<Option<f32>> = std::sync::OnceLock::new();

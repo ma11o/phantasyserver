@@ -324,7 +324,8 @@ impl User {
                     return;
                 }
                 level.level1 += 1;
-                level.level2 = level.level1;
+                // [pso2_vita_offline] +1 SP per level, kept on top of SP from client orders (T95)
+                level.level2 += 1;
             }
         }
 

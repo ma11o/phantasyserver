@@ -390,6 +390,7 @@ impl Quests {
         }
         let mut map = Map::new_from_data(quest.map.clone(), map_obj_id)?;
         map.set_enemy_level(quest.difficulties.diffs[packet.diff as usize].monster_level as _);
+        map.set_quest(quest.definition.name_id, packet.diff as u32);
         let map = Arc::new(Mutex::new(map));
         Ok(PartyQuest {
             quest: quest.clone(),
@@ -427,6 +428,7 @@ impl Quests {
             None => map.set_enemy_level(quest.difficulties.diffs[0].monster_level as _),
         }
         map.set_quest_obj(quest.definition.quest_obj);
+        map.set_quest(packet.name_id, diff);
         let map = Arc::new(Mutex::new(map));
         Ok(PartyQuest {
             quest: quest.clone(),

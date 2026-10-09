@@ -157,13 +157,9 @@ pub async fn map_loaded(mut user_guard: MutexGuard<'_, User>, _: MapLoadedPacket
     let equiped = character.inventory.send_equiped(user_id);
     let change_palette = character.palette.send_change_palette(user_id);
 
-    // [pso2_vita_offline] open every lobby NPC's client order window (CharaFlag_coOpen*, client_orders.rs).
-    // When the original set these is not known (provisional: always open)
-    if let Some(t) = crate::client_orders::table() {
-        for f in t.open_flags.values() {
-            character.flags.set(f.id as _, 1);
-        }
-    }
+    // [pso2_vita_offline] open the client order window of the lobby NPCs with an order to offer (CharaFlag_coOpen*,
+    // handlers/orders.rs). The first load sends every flag below; later loads send the changes (level ups, ...)
+    let open_changed = super::orders::update_open_flags(character);
     let char_flags = character.flags.to_char_flags();
     for packet in inventory_packets {
         user.send_packet(&packet).await?;
@@ -172,6 +168,11 @@ pub async fn map_loaded(mut user_guard: MutexGuard<'_, User>, _: MapLoadedPacket
         let flags = user.user_data.accountflags.to_account_flags();
         user.send_packet(&flags).await?;
         user.send_packet(&char_flags).await?;
+    } else {
+        for (id, open) in open_changed {
+            log::info!("[pso2-co] open flag {id} -> {open}");
+            user.set_char_flag(id, open).await?;
+        }
     }
 
     user.send_packet(&Packet::LoadPAs(protocol::objects::LoadPAsPacket {
