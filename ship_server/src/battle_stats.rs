@@ -373,7 +373,7 @@ impl EnemyStats {
         let level_stats = &enemy_stats.levels[level as usize - 1];
 
         resulting_stats.level = level_stats.level;
-        resulting_stats.exp = (base_level_stats.exp * level_stats.exp * exp_mul()).floor() as _;
+        resulting_stats.exp = (base_level_stats.exp * level_stats.exp).floor() as _;
         resulting_stats.max_hp =
             (base_level_stats.hp * level_stats.hp / old_hp_ratio(level)).floor() as _;
         resulting_stats.hp = resulting_stats.max_hp;
@@ -554,19 +554,33 @@ impl EnemyStats {
     }
 }
 
-/// Kill EXP multiplier (tuned, `PSO2_EXP_MUL`, default 3): the period's main EXP source was client orders, which this
-/// server doesn't have yet, so kills alone would be too slow. Aim: forest N once (about 15 enemies and the boss) takes
-/// Lv1 to 3, 8-10 runs of N fields reach Lv10. Set it back to 1 once client orders give EXP.
-fn exp_mul() -> f32 {
-    static MUL: std::sync::OnceLock<f32> = std::sync::OnceLock::new();
-    *MUL.get_or_init(|| {
-        let mul = std::env::var("PSO2_EXP_MUL")
-            .ok()
-            .and_then(|v| v.parse().ok())
-            .unwrap_or(3.0);
-        log::info!("[pso2-battle] kill EXP multiplier {mul} (PSO2_EXP_MUL)");
-        mul
-    })
+/// Kill EXP multiplier by the player's level (tuned, `data/exp_curve.json`: [lv_min, lv_max, mul] bands made by a
+/// tool from the level table so that the best field of each difficulty takes 10-15 runs to reach the next difficulty's
+/// entry level). The period's main EXP source was client orders, which this server doesn't have yet; set the table to 1
+/// once they give EXP. `PSO2_EXP_MUL` overrides every level with one value.
+pub fn exp_mul(player_level: u32) -> f32 {
+    static CURVE: std::sync::OnceLock<Vec<(u32, u32, f32)>> = std::sync::OnceLock::new();
+    static FIXED: std::sync::OnceLock<Option<f32>> = std::sync::OnceLock::new();
+    let fixed = *FIXED.get_or_init(|| {
+        let v = std::env::var("PSO2_EXP_MUL").ok().and_then(|v| v.parse().ok());
+        if let Some(v) = v {
+            log::info!("[pso2-battle] kill EXP multiplier {v} for every level (PSO2_EXP_MUL)");
+        }
+        v
+    });
+    if let Some(v) = fixed {
+        return v;
+    }
+    let curve = CURVE.get_or_init(|| {
+        serde_json::from_str(include_str!("../../data/exp_curve.json")).unwrap_or_default()
+    });
+    let mul = curve
+        .iter()
+        .find(|(lo, hi, _)| (*lo..=*hi).contains(&player_level))
+        .map(|c| c.2)
+        .unwrap_or(1.0);
+    log::info!("[pso2-battle] kill EXP: Lv {player_level} -> x{mul}");
+    mul
 }
 
 /// [pso2_vita_offline] HP before the 2018-03-22 update that raised the HP of Lv1-40 enemies (the client has the

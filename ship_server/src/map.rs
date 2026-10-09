@@ -1407,7 +1407,15 @@ impl Zone {
                     let mut kill_packet = Packet::EnemyKilled(kill_packet);
                     let mut exp_packets = vec![];
                     exec_users(&self.players, |_, mut player| {
-                        exp_packets.push(player.add_exp(exp_amount))
+                        {
+                            let lv = player
+                                .character
+                                .as_ref()
+                                .map(|c| c.character.get_level().level1 as u32)
+                                .unwrap_or(1);
+                            let exp = (exp_amount as f32 * crate::battle_stats::exp_mul(lv)).floor() as u32;
+                            exp_packets.push(player.add_exp(exp))
+                        }
                     })
                     .await;
                     let exp_packets = exp_packets.into_iter().collect::<Result<Vec<_>, _>>()?;
