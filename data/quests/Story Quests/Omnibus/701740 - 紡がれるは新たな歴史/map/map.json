@@ -1146,7 +1146,7 @@
         "rot_y": 14760,
         "rot_z": 0,
         "rot_w": 47528,
-        "pos_x": 20876,
+        "pos_x": 17506,
         "pos_y": 16904,
         "pos_z": 55855
       },
@@ -2138,7 +2138,7 @@
         "enemy_name": "DpHuman",
         "chunk_id": 4294967295,
         "position": {
-          "pos_x": 20620,
+          "pos_x": 49981,
           "pos_y": 16901,
           "pos_z": 55855,
           "rot_y": 47528,
