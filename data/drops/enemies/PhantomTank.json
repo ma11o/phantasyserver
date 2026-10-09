@@ -12,10 +12,12 @@
       "weight": 1,
       "min": 1,
       "max": 1,
-      "level_min": 36,
+      "level_min": 20,
       "level_max": 40,
       "name": "ディオサルバドール",
-      "source": "swiki swiki-enemy-759ea2e121e062f3268e"
+      "source": "swiki swiki-enemy-759ea2e121e062f3268e",
+      "level_min_research": 36,
+      "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv20); the nearest band's lower bound 36 lowered to 20"
     },
     {
       "item": "1:11:107",

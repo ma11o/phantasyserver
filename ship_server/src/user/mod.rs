@@ -313,13 +313,16 @@ impl User {
             offset: usize,
             exp: u32,
         ) {
-            let stats = &srv_data.player_stats.stats[offset][level.level1 as usize - 1];
+            // several thresholds can be crossed at once (big boss EXP at low level)
             let new_exp = level.exp + exp;
-            if new_exp < stats.exp_to_next as _ {
-                return;
+            while level.level1 < 100 {
+                let stats = &srv_data.player_stats.stats[offset][level.level1 as usize - 1];
+                if new_exp < stats.exp_to_next as _ {
+                    return;
+                }
+                level.level1 += 1;
+                level.level2 = level.level1;
             }
-            level.level1 += 1;
-            level.level2 = level.level1;
         }
 
         // main class

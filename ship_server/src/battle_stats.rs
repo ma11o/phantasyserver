@@ -371,7 +371,7 @@ impl EnemyStats {
         let level_stats = &enemy_stats.levels[level as usize - 1];
 
         resulting_stats.level = level_stats.level;
-        resulting_stats.exp = (base_level_stats.exp * level_stats.exp).floor() as _;
+        resulting_stats.exp = (base_level_stats.exp * level_stats.exp * exp_mul()).floor() as _;
         resulting_stats.max_hp =
             (base_level_stats.hp * level_stats.hp / old_hp_ratio(level)).floor() as _;
         resulting_stats.hp = resulting_stats.max_hp;
@@ -550,6 +550,21 @@ impl EnemyStats {
             BattleResult::Damaged { dmg_packet }
         })
     }
+}
+
+/// Kill EXP multiplier (tuned, `PSO2_EXP_MUL`, default 3): the period's main EXP source was client orders, which this
+/// server doesn't have yet, so kills alone would be too slow. Aim: forest N once (about 15 enemies and the boss) takes
+/// Lv1 to 3, 8-10 runs of N fields reach Lv10. Set it back to 1 once client orders give EXP.
+fn exp_mul() -> f32 {
+    static MUL: std::sync::OnceLock<f32> = std::sync::OnceLock::new();
+    *MUL.get_or_init(|| {
+        let mul = std::env::var("PSO2_EXP_MUL")
+            .ok()
+            .and_then(|v| v.parse().ok())
+            .unwrap_or(3.0);
+        log::info!("[pso2-battle] kill EXP multiplier {mul} (PSO2_EXP_MUL)");
+        mul
+    })
 }
 
 /// [pso2_vita_offline] HP before the 2018-03-22 update that raised the HP of Lv1-40 enemies (the client has the

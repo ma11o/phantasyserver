@@ -12,10 +12,12 @@
       "weight": 1,
       "min": 1,
       "max": 1,
-      "level_min": 41,
+      "level_min": 19,
       "level_max": 45,
       "name": "パティルメリア",
-      "source": "swiki swiki-enemy-55d87fd5b74b62ba0866"
+      "source": "swiki swiki-enemy-55d87fd5b74b62ba0866",
+      "level_min_research": 41,
+      "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv19); the nearest band's lower bound 41 lowered to 19"
     },
     {
       "item": "1:3:61",

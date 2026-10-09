@@ -12,10 +12,12 @@
       "weight": 1,
       "min": 1,
       "max": 1,
-      "level_min": 41,
+      "level_min": 16,
       "level_max": 45,
       "name": "新光鎧刀",
-      "source": "swiki swiki-enemy-d6e4b161df0183d2d9e3"
+      "source": "swiki swiki-enemy-d6e4b161df0183d2d9e3",
+      "level_min_research": 41,
+      "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv16); the nearest band's lower bound 41 lowered to 16"
     },
     {
       "item": "1:10:174",

@@ -42,10 +42,12 @@
       "weight": 1,
       "min": 1,
       "max": 1,
-      "level_min": 41,
+      "level_min": 29,
       "level_max": 45,
       "name": "ブラオレットゼロ",
-      "source": "swiki swiki-enemy-3f6a41cbe02c8b3dc7c8"
+      "source": "swiki swiki-enemy-3f6a41cbe02c8b3dc7c8",
+      "level_min_research": 41,
+      "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv29); the nearest band's lower bound 41 lowered to 29"
     },
     {
       "item": "1:10:102",
