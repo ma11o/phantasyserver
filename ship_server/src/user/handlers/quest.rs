@@ -197,10 +197,14 @@ pub async fn set_story_quest(
     packet: AcceptStoryQuestPacket,
 ) -> HResult {
     log::debug!("[pso2-quest] AcceptStoryQuest name_id={} unk={}", packet.name_id, packet.unk);
+    let player_level = user
+        .character
+        .as_ref()
+        .map_or(1, |c| c.character.get_level().level1 as u32);
     let quest = user
         .blockdata
         .quests
-        .get_story_quest(packet, &user.blockdata.latest_mapid)?;
+        .get_story_quest(packet, &user.blockdata.latest_mapid, player_level)?;
     start_quest(user, quest).await
 }
 

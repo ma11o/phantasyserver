@@ -10,6 +10,34 @@ use pso2packetlib::protocol::{
     },
 };
 
+/// [pso2_vita_offline] Story battle data (`data/story_levels.json`, tools/gen_story_levels.py): enemy level bands of the
+/// two difficulties (casual / hardcore) and the first-clear items (`type:id:subid`, 1 each).
+#[derive(serde::Deserialize, Default)]
+#[serde(default)]
+struct StoryLevels {
+    c: [u32; 2],
+    h: [u32; 2],
+    items: Vec<String>,
+}
+
+fn story_levels() -> &'static std::collections::HashMap<u32, StoryLevels> {
+    static T: std::sync::OnceLock<std::collections::HashMap<u32, StoryLevels>> = std::sync::OnceLock::new();
+    T.get_or_init(|| serde_json::from_str(include_str!("../../data/story_levels.json")).unwrap_or_default())
+}
+
+/// [pso2_vita_offline] Enemy level of a story battle: clamp(player level, band of the difficulty) (the formula is
+/// unknown in the research, estimated). `PSO2_STORY_LV=min|max` pins it to the band's end. Returns (level, first-clear items).
+fn story_enemy_level(name_id: u32, diff: u32, player_level: u32) -> Option<(u32, Vec<String>)> {
+    let t = story_levels().get(&name_id)?;
+    let [lo, hi] = if diff == 0 { t.c } else { t.h };
+    let lv = match std::env::var("PSO2_STORY_LV").as_deref() {
+        Ok("min") => lo,
+        Ok("max") => hi,
+        _ => player_level.clamp(lo, hi),
+    };
+    Some((lv, t.items.clone()))
+}
+
 pub struct PartyQuest {
     quest: QuestData,
     diff: u16,
@@ -373,6 +401,7 @@ impl Quests {
         &self,
         packet: AcceptStoryQuestPacket,
         map_obj_id: &AtomicU32,
+        player_level: u32,
     ) -> Result<PartyQuest, Error> {
         let Some(quest) = self
             .quests
@@ -382,12 +411,26 @@ impl Quests {
             return Err(Error::InvalidInput("get_quest"));
         };
         let mut map = Map::new_from_data(quest.map.clone(), map_obj_id)?;
-        map.set_enemy_level(quest.difficulties.diffs[0].monster_level as _);
+        // [pso2_vita_offline] `unk` is taken as the difficulty (0 casual, 1 hardcore; unverified)
+        // (`PSO2_STORY_DIFF=0|1` pins it: the client's casual flag is not found yet and it sends 1 for every battle)
+        let diff = std::env::var("PSO2_STORY_DIFF")
+            .ok()
+            .and_then(|v| v.parse::<u32>().ok())
+            .unwrap_or(packet.unk)
+            .min(1);
+        match story_enemy_level(packet.name_id, diff, player_level) {
+            Some((lv, items)) => {
+                log::info!("[pso2-quest] story {} diff {diff}: player Lv{player_level} -> enemy Lv{lv}", packet.name_id);
+                map.set_enemy_level(lv);
+                map.set_story(packet.name_id, diff, items);
+            }
+            None => map.set_enemy_level(quest.difficulties.diffs[0].monster_level as _),
+        }
         map.set_quest_obj(quest.definition.quest_obj);
         let map = Arc::new(Mutex::new(map));
         Ok(PartyQuest {
             quest: quest.clone(),
-            diff: 0,
+            diff: diff as u16,
             map,
         })
     }

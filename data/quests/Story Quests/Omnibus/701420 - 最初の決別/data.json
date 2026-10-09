@@ -15,11 +15,11 @@
     ],
     "length": 1,
     "party_type": "Solo",
-    "difficulties": "NORMAL",
+    "difficulties": "NORMAL | HARD",
     "difficulties_completed": "NORMAL",
     "req_level": 1,
     "sub_class_req_level": 0,
-    "enemy_level": 1,
+    "enemy_level": 15,
     "unk10": 1,
     "quest_type": "StoryEP1",
     "unk11": [
@@ -854,7 +854,7 @@
       {
         "req_level": 1,
         "sub_class_req_level": 0,
-        "monster_level": 1,
+        "monster_level": 15,
         "unk1": 1,
         "ability_adj": 0,
         "dmg_limit": 0,
@@ -870,7 +870,7 @@
       {
         "req_level": 1,
         "sub_class_req_level": 0,
-        "monster_level": 255,
+        "monster_level": 30,
         "unk1": 255,
         "ability_adj": 0,
         "dmg_limit": 0,

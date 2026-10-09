@@ -359,6 +359,10 @@ impl User {
         self.battle_stats = PlayerStats::build(self)?;
         Ok(packet)
     }
+    /// [pso2_vita_offline] true when this account had not taken the story battle's first-clear reward yet (marks it)
+    pub async fn claim_story_first_clear(&self, name_id: u32) -> Result<bool, Error> {
+        self.blockdata.sql.claim_story_first_clear(self.user_data.id, name_id).await
+    }
     pub async fn set_account_flag(&mut self, flag: u32, value: bool) -> Result<(), Error> {
         self.user_data.accountflags.set(flag as _, value as _);
         self.send_packet(&Packet::ServerSetFlag(Pr::flag::ServerSetFlagPacket {

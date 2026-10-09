@@ -107,6 +107,8 @@ pub struct Map {
     enemy_level: u32,
     map_type: MapType,
     quest_obj: ObjectHeader,
+    /// [pso2_vita_offline] story battle: (name_id, difficulty 0 casual / 1 hardcore, first-clear items `type:id:subid`)
+    story: Option<(u32, u32, Vec<String>)>,
 }
 impl Map {
     pub fn new_from_data(mut data: MapData, map_obj_id: &AtomicU32) -> Result<Self, Error> {
@@ -190,6 +192,7 @@ impl Map {
             block_data: None,
             enemy_level: 0,
             map_type: MapType::QuestMap,
+            story: None,
             quest_obj: ObjectHeader {
                 entity_type: ObjectType::Quest,
                 ..Default::default()
@@ -208,6 +211,9 @@ impl Map {
     }
     pub const fn set_enemy_level(&mut self, level: u32) {
         self.enemy_level = level;
+    }
+    pub fn set_story(&mut self, name_id: u32, diff: u32, items: Vec<String>) {
+        self.story = Some((name_id, diff, items));
     }
     pub const fn set_quest_obj(&mut self, obj: ObjectHeader) {
         self.quest_obj = obj;
@@ -751,27 +757,18 @@ impl Map {
         })
         .await?
     }
-    /// [pso2_vita_offline] Story clear reward (estimated, no period data): battle = the boss's kill EXP at the map's
-    /// enemy level x 3 and enemy level x 100 meseta, talk (`boss` empty) = no EXP and enemy level x 50 meseta. The kill
-    /// EXP multiplier (`exp_mul`) is not applied. Added at once (GainedEXP, InventoryMeseta); `show` keeps it for the
-    /// next `QuestResult`.
+    /// [pso2_vita_offline] Story battle clear reward. First clear of the quest on the account (shared by characters and
+    /// difficulties; research `story_combat.rewards`, historical): 1,000 meseta, 0 EXP and the quest's items (1 each,
+    /// estimated). Every later clear (tuned, the research has none): 100 meseta x (difficulty + 1), 0 EXP. Talk quests
+    /// (`boss` empty) and quests without story data give nothing. Added at once (InventoryMeseta, AddedItem); `show`
+    /// keeps the amount for the next `QuestResult`.
     async fn story_reward(&mut self, player: PlayerId, boss: &str, show: bool) -> Result<(), Error> {
-        let lvl = self.enemy_level.max(1);
-        let exp = if boss.is_empty() {
-            0
-        } else {
-            match &self.block_data {
-                Some(b) => match EnemyStats::build(boss, lvl, Position::default(), &b.server_data) {
-                    Ok(e) => e.exp() * 3,
-                    Err(e) => {
-                        log::warn!("[pso2-quest] story_reward: no stats for {boss}: {e}");
-                        0
-                    }
-                },
-                None => 0,
-            }
+        let Some((name_id, diff, items)) = self.story.clone() else {
+            return Ok(());
         };
-        let meseta = lvl * if boss.is_empty() { 50 } else { 100 };
+        if boss.is_empty() {
+            return Ok(());
+        }
         let Some(user) = self
             .zones
             .iter()
@@ -782,24 +779,31 @@ impl Map {
             return Ok(());
         };
         let mut lock = user.lock().await;
-        log::info!("[pso2-quest] story reward Lv{lvl} {boss:?}: meseta +{meseta} exp +{exp} (result: {show})");
-        if exp > 0 {
-            let receiver = lock.add_exp(exp)?;
-            let packet = Packet::GainedEXP(GainedEXPPacket {
-                sender: lock.create_object_header(),
-                receivers: vec![receiver],
-            });
-            lock.try_send_packet(&packet)?;
-        }
-        let packet = lock
+        let first = lock.claim_story_first_clear(name_id).await?;
+        let meseta = if first { 1000 } else { 100 * (diff + 1) };
+        log::info!(
+            "[pso2-quest] story reward {name_id} diff {diff}: first clear {first}, meseta +{meseta}, items {items:?} (result: {show})"
+        );
+        let lock = &mut *lock;
+        let character = lock
             .character
             .as_mut()
-            .ok_or(Error::InvalidInput("story_reward: no character"))?
-            .inventory
-            .add_meseta(meseta as u64);
-        lock.try_send_packet(&packet)?;
+            .ok_or(Error::InvalidInput("story_reward: no character"))?;
+        let packet = character.inventory.add_meseta(meseta as u64);
+        let mut packets = vec![packet];
+        if first {
+            for spec in &items {
+                let mut f = spec.split(':').map(|v| v.parse::<u16>().unwrap_or(0));
+                let (item_type, id, subid) = (f.next().unwrap_or(0), f.next().unwrap_or(0), f.next().unwrap_or(0));
+                let item_id = pso2packetlib::protocol::items::ItemId { item_type, id, subid, ..Default::default() };
+                packets.push(character.inventory.add_default_item(&mut lock.user_data.last_uuid, item_id));
+            }
+        }
+        for packet in &packets {
+            lock.try_send_packet(packet)?;
+        }
         if show {
-            lock.pending_reward = Some((meseta, exp));
+            lock.pending_reward = Some((meseta, 0));
         }
         Ok(())
     }

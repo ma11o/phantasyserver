@@ -38,6 +38,9 @@ struct UserData {
     symbol_arts: Vec<u128>,
     unlocked_quests: Vec<u32>,
     unlocked_quests_notif: Vec<u32>,
+    /// [pso2_vita_offline] name_ids of story battles whose first-clear reward the account already took
+    /// (shared by the characters and the difficulties)
+    story_first_clear: Vec<u32>,
 }
 
 #[derive(Default, serde::Serialize, serde::Deserialize, Clone)]
@@ -504,6 +507,26 @@ impl Sql {
             .await?;
         let user_data: UserData = rmp_serde::from_slice(row.try_get("Data")?)?;
         Ok(user_data.symbol_arts)
+    }
+    /// [pso2_vita_offline] Marks the story battle's first clear for the account; true when it was not marked yet.
+    pub async fn claim_story_first_clear(&self, id: u32, name_id: u32) -> Result<bool, Error> {
+        let mut transaction = self.connection.begin().await?;
+        let row = sqlx::query("select Data from Users where Id = ?")
+            .bind(id as i64)
+            .fetch_one(&mut *transaction)
+            .await?;
+        let mut user_data: UserData = rmp_serde::from_slice(row.try_get("Data")?)?;
+        if user_data.story_first_clear.contains(&name_id) {
+            return Ok(false);
+        }
+        user_data.story_first_clear.push(name_id);
+        sqlx::query("update Users set Data = ? where Id = ?")
+            .bind(rmp_serde::to_vec(&user_data)?)
+            .bind(id as i64)
+            .execute(&mut *transaction)
+            .await?;
+        transaction.commit().await?;
+        Ok(true)
     }
     pub async fn set_symbol_art_list(&self, uuids: Vec<u128>, id: u32) -> Result<(), Error> {
         self.update_userdata(id, |user_data| user_data.symbol_arts = uuids)
