@@ -8,6 +8,7 @@ pub mod lab;
 pub mod login;
 pub mod missionpass;
 pub mod object;
+pub mod orders;
 pub mod palette;
 pub mod party;
 pub mod player_status;

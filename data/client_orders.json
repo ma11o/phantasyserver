@@ -1,0 +1,11485 @@
+{
+ "source": "client Lua RootOrder.ClientOrder + skit_flag.lua (tools/server_client_orders.py)",
+ "open_flags": {
+  "Npc_03": {
+   "flag": "CharaFlag_coOpen5003",
+   "id": 3913
+  },
+  "Npc_108": {
+   "flag": "CharaFlag_coOpen5108",
+   "id": 1806
+  },
+  "Npc_150": {
+   "flag": "CharaFlag_coOpen5150",
+   "id": 1985
+  },
+  "Npc_151": {
+   "flag": "CharaFlag_coOpen5151",
+   "id": 1986
+  },
+  "Npc_19": {
+   "flag": "CharaFlag_coOpen5019",
+   "id": 3929
+  },
+  "Npc_20": {
+   "flag": "CharaFlag_coOpen5020",
+   "id": 3930
+  },
+  "Npc_200": {
+   "flag": "CharaFlag_coOpen5200",
+   "id": 1967
+  },
+  "Npc_206": {
+   "flag": "CharaFlag_coOpen5206",
+   "id": 9141
+  },
+  "Npc_242": {
+   "flag": "CharaFlag_coOpen5242",
+   "id": 9183
+  },
+  "Npc_26": {
+   "flag": "CharaFlag_coOpen5026",
+   "id": 3936
+  },
+  "Npc_318": {
+   "flag": "CharaFlag_coOpen5318",
+   "id": 9376
+  },
+  "Npc_319": {
+   "flag": "CharaFlag_coOpen5319",
+   "id": 9401
+  },
+  "Npc_347": {
+   "flag": "CharaFlag_coOpen5347",
+   "id": 9443
+  },
+  "Npc_360": {
+   "flag": "CharaFlag_coOpen5360",
+   "id": 9470
+  },
+  "Npc_437": {
+   "flag": "CharaFlag_coOpen5437",
+   "id": 9922
+  },
+  "Npc_50": {
+   "flag": "CharaFlag_coOpen5050",
+   "id": 3960
+  },
+  "Npc_52": {
+   "flag": "CharaFlag_coOpen5052",
+   "id": 3962
+  },
+  "Npc_53": {
+   "flag": "CharaFlag_coOpen5053",
+   "id": 3963
+  },
+  "Npc_59": {
+   "flag": "CharaFlag_coOpen5059",
+   "id": 3969
+  },
+  "Npc_62": {
+   "flag": "CharaFlag_coOpen5062",
+   "id": 3972
+  },
+  "Npc_63": {
+   "flag": "CharaFlag_coOpen5063",
+   "id": 3973
+  },
+  "Npc_69": {
+   "flag": "CharaFlag_coOpen5069",
+   "id": 4020
+  },
+  "Npc_77": {
+   "flag": "CharaFlag_coOpen5077",
+   "id": 4027
+  },
+  "Npc_80": {
+   "flag": "CharaFlag_coOpen5080",
+   "id": 4028
+  },
+  "Npc_87": {
+   "flag": "CharaFlag_coOpen5087",
+   "id": 4060
+  },
+  "Npc_91": {
+   "flag": "CharaFlag_coOpen5091",
+   "id": 4091
+  },
+  "Npc_96": {
+   "flag": "CharaFlag_coOpen5096",
+   "id": 4037
+  },
+  "Npc_99": {
+   "flag": "CharaFlag_coOpen5099",
+   "id": 4051
+  }
+ },
+ "orders": [
+  {
+   "id": 1010220,
+   "key": "co01010220",
+   "npc": "Npc_50",
+   "name": "サブクラス許可申請試練",
+   "targets": [
+    {
+     "enemy": "ArmadilloA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonWolfA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011000,
+   "key": "co01011000",
+   "npc": "Npc_20",
+   "name": "一流ハンターを目指して",
+   "targets": [
+    {
+     "enemy": "PantherB",
+     "num": 1
+    },
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011001,
+   "key": "co01011001",
+   "npc": "Npc_20",
+   "name": "ハンターの極致を目指して",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011100,
+   "key": "co01011100",
+   "npc": "Npc_20",
+   "name": "一流ファイターを目指して",
+   "targets": [
+    {
+     "enemy": "PantherB",
+     "num": 1
+    },
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011101,
+   "key": "co01011101",
+   "npc": "Npc_20",
+   "name": "ファイターの極致を目指して",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011200,
+   "key": "co01011200",
+   "npc": "Npc_26",
+   "name": "レンジャーに慣れましょうよお",
+   "targets": [
+    {
+     "enemy": "PantherB",
+     "num": 1
+    },
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011201,
+   "key": "co01011201",
+   "npc": "Npc_26",
+   "name": "これこそレンジャーですねえ",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011300,
+   "key": "co01011300",
+   "npc": "Npc_26",
+   "name": "ガンナーに慣れましょうよお",
+   "targets": [
+    {
+     "enemy": "PantherB",
+     "num": 1
+    },
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011301,
+   "key": "co01011301",
+   "npc": "Npc_26",
+   "name": "これこそガンナーですねえ",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011400,
+   "key": "co01011400",
+   "npc": "Npc_19",
+   "name": "一流フォースになるために",
+   "targets": [
+    {
+     "enemy": "PantherB",
+     "num": 1
+    },
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011401,
+   "key": "co01011401",
+   "npc": "Npc_19",
+   "name": "フォースのさらなる極み",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011500,
+   "key": "co01011500",
+   "npc": "Npc_19",
+   "name": "一流テクターになるために",
+   "targets": [
+    {
+     "enemy": "PantherB",
+     "num": 1
+    },
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1011501,
+   "key": "co01011501",
+   "npc": "Npc_19",
+   "name": "テクターのさらなる極み",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1019200,
+   "key": "co01019200",
+   "npc": "Npc_50",
+   "name": "新規任務模擬訓練・森林",
+   "targets": [
+    {
+     "enemy": "NativeBeast",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      8
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1019201,
+   "key": "co01019201",
+   "npc": "Npc_50",
+   "name": "新規任務模擬訓練・火山洞窟",
+   "targets": [
+    {
+     "enemy": "DragonRaptor",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      8
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1019202,
+   "key": "co01019202",
+   "npc": "Npc_50",
+   "name": "新規任務模擬訓練・砂漠",
+   "targets": [
+    {
+     "enemy": "GormaA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      8
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1030307,
+   "key": "co01030307",
+   "npc": "Npc_03",
+   "name": "ダーカー討伐依頼の依頼",
+   "targets": [
+    {
+     "enemy": "SoldierAnt",
+     "num": 15
+    },
+    {
+     "enemy": "Snail",
+     "num": 5
+    },
+    {
+     "enemy": "AntReaper",
+     "num": 5
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 15000,
+     "correction": 750
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040304,
+   "key": "co01040304",
+   "npc": "Npc_52",
+   "name": "森林に潜む罠",
+   "targets": [
+    {
+     "enemy": "BigBeastA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040308,
+   "key": "co01040308",
+   "npc": "Npc_52",
+   "name": "地獄の使者",
+   "targets": [
+    {
+     "enemy": "DragonWorm",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040309,
+   "key": "co01040309",
+   "npc": "Npc_52",
+   "name": "地獄の王",
+   "targets": [
+    {
+     "enemy": "DragonMagma",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 12000,
+     "max": 30000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040318,
+   "key": "co01040318",
+   "npc": "Npc_52",
+   "name": "長鼻の親子",
+   "targets": [
+    {
+     "enemy": "MammothA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040321,
+   "key": "co01040321",
+   "npc": "Npc_52",
+   "name": "凍土の雌雄爪獣",
+   "targets": [
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowB",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 30000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040330,
+   "key": "co01040330",
+   "npc": "Npc_52",
+   "name": "変幻自在の巨大機甲",
+   "targets": [
+    {
+     "enemy": "TransformMechaA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040331,
+   "key": "co01040331",
+   "npc": "Npc_52",
+   "name": "超弩級戦艦機甲",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 30000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040332,
+   "key": "co01040332",
+   "npc": "Npc_52",
+   "name": "森林を駆る雌雄爪獣",
+   "targets": [
+    {
+     "enemy": "PantherA",
+     "num": 1
+    },
+    {
+     "enemy": "PantherB",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 30000,
+     "correction": 500
+    }
+   ]
+  },
+  {
+   "id": 1040337,
+   "key": "co01040337",
+   "npc": "Npc_52",
+   "name": "地より出ずる龍",
+   "targets": [
+    {
+     "enemy": "DragonWormB",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040338,
+   "key": "co01040338",
+   "npc": "Npc_52",
+   "name": "天を覆いし青き王",
+   "targets": [
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 12000,
+     "max": 30000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040600,
+   "key": "co01040600",
+   "npc": "Npc_53",
+   "name": "ラッピーなる希少種",
+   "targets": [
+    {
+     "enemy": "Rappy",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      5,
+      0,
+      320
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 10000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040601,
+   "key": "co01040601",
+   "npc": "Npc_53",
+   "name": "クリスタルが貫く希少種",
+   "targets": [
+    {
+     "enemy": "DragonRaptorRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 8000,
+     "correction": 400
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040602,
+   "key": "co01040602",
+   "npc": "Npc_53",
+   "name": "岩石由来の希少種",
+   "targets": [
+    {
+     "enemy": "BigBeastRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040603,
+   "key": "co01040603",
+   "npc": "Npc_53",
+   "name": "龍王の調査",
+   "targets": [
+    {
+     "enemy": "DragonWormRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040604,
+   "key": "co01040604",
+   "npc": "Npc_53",
+   "name": "溶岩窟を統べる希少種",
+   "targets": [
+    {
+     "enemy": "DragonMagmaRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040605,
+   "key": "co01040605",
+   "npc": "Npc_53",
+   "name": "紅黒のダガン・ネロ",
+   "targets": [
+    {
+     "enemy": "SoldierAntEliteRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040606,
+   "key": "co01040606",
+   "npc": "Npc_53",
+   "name": "黒砂の希少種",
+   "targets": [
+    {
+     "enemy": "DoodlebugRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040607,
+   "key": "co01040607",
+   "npc": "Npc_53",
+   "name": "頑強なるミ・ミクダ",
+   "targets": [
+    {
+     "enemy": "MimicC",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040608,
+   "key": "co01040608",
+   "npc": "Npc_53",
+   "name": "おおきなはなの希少種",
+   "targets": [
+    {
+     "enemy": "MammothRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040609,
+   "key": "co01040609",
+   "npc": "Npc_53",
+   "name": "雪と舞う一対の希少種",
+   "targets": [
+    {
+     "enemy": "PantherSnowARare",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowBRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040610,
+   "key": "co01040610",
+   "npc": "Npc_53",
+   "name": "疾走する青き機甲種",
+   "targets": [
+    {
+     "enemy": "HologramRobotRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040611,
+   "key": "co01040611",
+   "npc": "Npc_53",
+   "name": "特異なる変形機甲",
+   "targets": [
+    {
+     "enemy": "TransformMechaRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040612,
+   "key": "co01040612",
+   "npc": "Npc_53",
+   "name": "王たる名を抱くもの",
+   "targets": [
+    {
+     "enemy": "BossMechaRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040613,
+   "key": "co01040613",
+   "npc": "Npc_53",
+   "name": "希少なる巨大ダーカー",
+   "targets": [
+    {
+     "enemy": "SpiderRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040614,
+   "key": "co01040614",
+   "npc": "Npc_53",
+   "name": "森を駆ける一対の希少種",
+   "targets": [
+    {
+     "enemy": "PantherARare",
+     "num": 1
+    },
+    {
+     "enemy": "PantherBRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040615,
+   "key": "co01040615",
+   "npc": "Npc_53",
+   "name": "悪意の大型希少種",
+   "targets": [
+    {
+     "enemy": "FishBigBeastB",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 23000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 6000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040616,
+   "key": "co01040616",
+   "npc": "Npc_53",
+   "name": "碧き角を抱きし希少種",
+   "targets": [
+    {
+     "enemy": "DragonCrystalRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 22000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040617,
+   "key": "co01040617",
+   "npc": "Npc_53",
+   "name": "紅き甲羅に包まれし希少種",
+   "targets": [
+    {
+     "enemy": "AlligatorSnapperRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 24000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 6500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040618,
+   "key": "co01040618",
+   "npc": "Npc_53",
+   "name": "金色の召喚主なる希少種",
+   "targets": [
+    {
+     "enemy": "DragonSummonerRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 26000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1040619,
+   "key": "co01040619",
+   "npc": "Npc_53",
+   "name": "破滅もたらす凶角の希少種",
+   "targets": [
+    {
+     "enemy": "DragonGladiatorRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 28000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042100,
+   "key": "co01042100",
+   "npc": "Npc_59",
+   "name": "ブラック・スローター・Ⅰ",
+   "targets": [
+    {
+     "enemy": "SoldierAnt",
+     "num": 12
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 2000,
+     "max": 5000,
+     "correction": 200
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042102,
+   "key": "co01042102",
+   "npc": "Npc_59",
+   "name": "ブラック・スローター・Ⅱ",
+   "targets": [
+    {
+     "enemy": "Snail",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 2000,
+     "max": 7000,
+     "correction": 200
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042103,
+   "key": "co01042103",
+   "npc": "Npc_59",
+   "name": "ブラック・スローター・Ⅲ",
+   "targets": [
+    {
+     "enemy": "QueenAnt",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 2000,
+     "max": 7000,
+     "correction": 200
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042105,
+   "key": "co01042105",
+   "npc": "Npc_59",
+   "name": "ブラック・スローター・Ⅳ",
+   "targets": [
+    {
+     "enemy": "SoldierAnt",
+     "num": 10
+    },
+    {
+     "enemy": "Locust",
+     "num": 10
+    },
+    {
+     "enemy": "AntReaper",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 2500,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042106,
+   "key": "co01042106",
+   "npc": "Npc_59",
+   "name": "ブラック・スローター・Ⅴ",
+   "targets": [
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042107,
+   "key": "co01042107",
+   "npc": "Npc_59",
+   "name": "ブラック・スローター・Ⅵ",
+   "targets": [
+    {
+     "enemy": "Spider",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 30000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042108,
+   "key": "co01042108",
+   "npc": "Npc_59",
+   "name": "マイルドマイルド・マーダー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "MimicA",
+     "num": 5
+    },
+    {
+     "enemy": "FishShield",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4000,
+     "max": 12000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042109,
+   "key": "co01042109",
+   "npc": "Npc_59",
+   "name": "マイルドマイルド・マーダー・Ⅱ",
+   "targets": [
+    {
+     "enemy": "Locust",
+     "num": 10
+    },
+    {
+     "enemy": "SoldierAnt",
+     "num": 10
+    },
+    {
+     "enemy": "Snail",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4000,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042110,
+   "key": "co01042110",
+   "npc": "Npc_59",
+   "name": "マイルドマイルド・マーダー・Ⅲ",
+   "targets": [
+    {
+     "enemy": "SoldierAntElite",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3000,
+     "max": 8000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 800,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042111,
+   "key": "co01042111",
+   "npc": "Npc_59",
+   "name": "マイルドマイルド・マーダー・Ⅳ",
+   "targets": [
+    {
+     "enemy": "MimicB",
+     "num": 2
+    },
+    {
+     "enemy": "FloatageFishB",
+     "num": 8
+    },
+    {
+     "enemy": "FloatageFishA",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5100,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042112,
+   "key": "co01042112",
+   "npc": "Npc_59",
+   "name": "マイルドマイルド・マーダー・Ⅴ",
+   "targets": [
+    {
+     "enemy": "FishShield",
+     "num": 2
+    },
+    {
+     "enemy": "FishShieldReverse",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3500,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042117,
+   "key": "co01042117",
+   "npc": "Npc_59",
+   "name": "ブラッディ・スカフォード・Ⅰ",
+   "targets": [
+    {
+     "enemy": "Crab",
+     "num": 2
+    },
+    {
+     "enemy": "MimicB",
+     "num": 5
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3000,
+     "max": 13000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042118,
+   "key": "co01042118",
+   "npc": "Npc_59",
+   "name": "ブラッディ・スカフォード・Ⅱ",
+   "targets": [
+    {
+     "enemy": "MonoeyeA",
+     "num": 2
+    },
+    {
+     "enemy": "MonoeyeB",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3000,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042119,
+   "key": "co01042119",
+   "npc": "Npc_59",
+   "name": "ブラッディ・スカフォード・Ⅲ",
+   "targets": [
+    {
+     "enemy": "AlligatorSnapperA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 30000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042120,
+   "key": "co01042120",
+   "npc": "Npc_59",
+   "name": "アタシと組む気はないか？",
+   "targets": [
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    },
+    {
+     "enemy": "FishBigBeastA",
+     "num": 1
+    },
+    {
+     "enemy": "AlligatorSnapperA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042121,
+   "key": "co01042121",
+   "npc": "Npc_59",
+   "name": "ブラッディ・スカフォード・Ⅳ",
+   "targets": [
+    {
+     "enemy": "MantisWarriorB",
+     "num": 5
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3000,
+     "max": 15000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042122,
+   "key": "co01042122",
+   "npc": "Npc_59",
+   "name": "ブラッディ・スカフォード・Ⅴ",
+   "targets": [
+    {
+     "enemy": "MantisWarriorA",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4000,
+     "max": 16000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042700,
+   "key": "co01042700",
+   "npc": "Npc_63",
+   "name": "ガロンゴの弱点は！？",
+   "targets": [
+    {
+     "enemy": "ArmadilloA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 7500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042701,
+   "key": "co01042701",
+   "npc": "Npc_63",
+   "name": "ダガンの弱点は！？",
+   "targets": [
+    {
+     "enemy": "SoldierAnt",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 7500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 4000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042702,
+   "key": "co01042702",
+   "npc": "Npc_63",
+   "name": "カルターゴの弱点は！？",
+   "targets": [
+    {
+     "enemy": "Snail",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 7500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042703,
+   "key": "co01042703",
+   "npc": "Npc_63",
+   "name": "ブリアーダの弱点は！？",
+   "targets": [
+    {
+     "enemy": "QueenAnt",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 7500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042704,
+   "key": "co01042704",
+   "npc": "Npc_63",
+   "name": "ノーディランの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "DragonWolfB",
+     "num": 5
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 7500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 4500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042705,
+   "key": "co01042705",
+   "npc": "Npc_63",
+   "name": "フォードランの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "DragonWolfA",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 7500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 4500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042706,
+   "key": "co01042706",
+   "npc": "Npc_63",
+   "name": "デ・マルモスの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "MammothA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 12000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1042707,
+   "key": "co01042707",
+   "npc": "Npc_63",
+   "name": "ディランダールの弱点は！？",
+   "targets": [
+    {
+     "enemy": "DragonChariotVanguard",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 8000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 10000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043000,
+   "key": "co01043000",
+   "npc": "Npc_62",
+   "name": "森林のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "NativeBeast",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043001,
+   "key": "co01043001",
+   "npc": "Npc_62",
+   "name": "森林のブーストエネミー・Ⅱ",
+   "targets": [
+    {
+     "enemy": "WolfA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043002,
+   "key": "co01043002",
+   "npc": "Npc_62",
+   "name": "森林のブーストエネミー・Ⅲ",
+   "targets": [
+    {
+     "enemy": "BigBeastA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043003,
+   "key": "co01043003",
+   "npc": "Npc_62",
+   "name": "火山洞窟のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "DragonRaptor",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043004,
+   "key": "co01043004",
+   "npc": "Npc_62",
+   "name": "火山洞窟のブーストエネミー・Ⅱ",
+   "targets": [
+    {
+     "enemy": "DragonWolfA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043005,
+   "key": "co01043005",
+   "npc": "Npc_62",
+   "name": "火山洞窟のブーストエネミー・Ⅲ",
+   "targets": [
+    {
+     "enemy": "DragonWorm",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043006,
+   "key": "co01043006",
+   "npc": "Npc_62",
+   "name": "砂漠のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "Locust",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043007,
+   "key": "co01043007",
+   "npc": "Npc_62",
+   "name": "砂漠のブーストエネミー・Ⅱ",
+   "targets": [
+    {
+     "enemy": "CannonRobot",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043008,
+   "key": "co01043008",
+   "npc": "Npc_62",
+   "name": "砂漠のブーストエネミー・Ⅲ",
+   "targets": [
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043009,
+   "key": "co01043009",
+   "npc": "Npc_62",
+   "name": "凍土のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "YetiB",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 6000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043010,
+   "key": "co01043010",
+   "npc": "Npc_62",
+   "name": "凍土のブーストエネミー・Ⅱ",
+   "targets": [
+    {
+     "enemy": "WolfSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 6000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043011,
+   "key": "co01043011",
+   "npc": "Npc_62",
+   "name": "凍土のブーストエネミー・Ⅲ",
+   "targets": [
+    {
+     "enemy": "MammothA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 6000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043012,
+   "key": "co01043012",
+   "npc": "Npc_62",
+   "name": "地下坑道のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "GormaB",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 6500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043013,
+   "key": "co01043013",
+   "npc": "Npc_62",
+   "name": "地下坑道のブーストエネミー・Ⅱ",
+   "targets": [
+    {
+     "enemy": "HologramRobot",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 6500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043014,
+   "key": "co01043014",
+   "npc": "Npc_62",
+   "name": "地下坑道のブーストエネミー・Ⅲ",
+   "targets": [
+    {
+     "enemy": "TransformMechaA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 6500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043015,
+   "key": "co01043015",
+   "npc": "Npc_62",
+   "name": "浮遊大陸のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "DragonRizardmanSD",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043016,
+   "key": "co01043016",
+   "npc": "Npc_62",
+   "name": "浮遊大陸のブーストエネミー・Ⅱ",
+   "targets": [
+    {
+     "enemy": "DragonWyvern",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043017,
+   "key": "co01043017",
+   "npc": "Npc_62",
+   "name": "浮遊大陸のブーストエネミー・Ⅲ",
+   "targets": [
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 1043018,
+   "key": "co01043018",
+   "npc": "Npc_62",
+   "name": "龍祭壇のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "DragonHammerA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 10000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2038702,
+   "key": "co02038702",
+   "npc": "Npc_87",
+   "name": "もっとカタナを特訓しちゃうよ！",
+   "targets": [
+    {
+     "enemy": "DragonMagma",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 10000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2038705,
+   "key": "co02038705",
+   "npc": "Npc_87",
+   "name": "カタナでがんばってみ？",
+   "targets": [
+    {
+     "enemy": "MammothA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 10000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2038708,
+   "key": "co02038708",
+   "npc": "Npc_87",
+   "name": "バレットボウを猛特訓しちゃうよ！",
+   "targets": [
+    {
+     "enemy": "DragonMagma",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 10000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2038711,
+   "key": "co02038711",
+   "npc": "Npc_87",
+   "name": "バレットボウでがんばってみ？",
+   "targets": [
+    {
+     "enemy": "MammothA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 10000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2038715,
+   "key": "co02038715",
+   "npc": "Npc_87",
+   "name": "一流ブレイバーを目指して",
+   "targets": [
+    {
+     "enemy": "PantherB",
+     "num": 1
+    },
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2038716,
+   "key": "co02038716",
+   "npc": "Npc_87",
+   "name": "ブレイバーの極致を目指して",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039100,
+   "key": "co02039100",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅰ",
+   "targets": [
+    {
+     "enemy": "WolfA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 9000,
+     "correction": 450
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039101,
+   "key": "co02039101",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅱ",
+   "targets": [
+    {
+     "enemy": "DragonRizardmanA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 9000,
+     "correction": 450
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039102,
+   "key": "co02039102",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅲ",
+   "targets": [
+    {
+     "enemy": "DragonWolfA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 9000,
+     "correction": 450
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039103,
+   "key": "co02039103",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅳ",
+   "targets": [
+    {
+     "enemy": "GormaA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 9000,
+     "correction": 450
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039104,
+   "key": "co02039104",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅴ",
+   "targets": [
+    {
+     "enemy": "CannonRobot",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 9000,
+     "correction": 450
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1350,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039105,
+   "key": "co02039105",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅵ",
+   "targets": [
+    {
+     "enemy": "BirdDoubleHead",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 9000,
+     "correction": 450
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1350,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039108,
+   "key": "co02039108",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅶ",
+   "targets": [
+    {
+     "enemy": "MammothB",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1400,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039109,
+   "key": "co02039109",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅷ",
+   "targets": [
+    {
+     "enemy": "HologramRobot",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1400,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039110,
+   "key": "co02039110",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅸ",
+   "targets": [
+    {
+     "enemy": "DragonBeast",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1400,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2039111,
+   "key": "co02039111",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・Ⅹ",
+   "targets": [
+    {
+     "enemy": "MonoeyeA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1400,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040302,
+   "key": "co02040302",
+   "npc": "Npc_52",
+   "name": "砂塵を巻く鋼の狩人",
+   "targets": [
+    {
+     "enemy": "MachineCCanon",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4500,
+     "max": 12000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040303,
+   "key": "co02040303",
+   "npc": "Npc_52",
+   "name": "飛来せし鉄の巨影",
+   "targets": [
+    {
+     "enemy": "MachineLittleBoss",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 15000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040310,
+   "key": "co02040310",
+   "npc": "Npc_52",
+   "name": "巨龍を呼ぶ龍族",
+   "targets": [
+    {
+     "enemy": "DragonSummoner",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 15000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040311,
+   "key": "co02040311",
+   "npc": "Npc_52",
+   "name": "巨大な剣盾を携えし龍",
+   "targets": [
+    {
+     "enemy": "DragonGladiator",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 12000,
+     "max": 30000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040315,
+   "key": "co02040315",
+   "npc": "Npc_52",
+   "name": "暴威をまとう海の王",
+   "targets": [
+    {
+     "enemy": "MarineOrca",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 15000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040316,
+   "key": "co02040316",
+   "npc": "Npc_52",
+   "name": "波間より来たる邪蛇",
+   "targets": [
+    {
+     "enemy": "MarineOarfish",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040318,
+   "key": "co02040318",
+   "npc": "Npc_52",
+   "name": "甲殻を持つ三つ首",
+   "targets": [
+    {
+     "enemy": "AbyssGidora",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 6000,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040319,
+   "key": "co02040319",
+   "npc": "Npc_52",
+   "name": "強鋏の海獣",
+   "targets": [
+    {
+     "enemy": "AbyssFlower",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040600,
+   "key": "co02040600",
+   "npc": "Npc_53",
+   "name": "海岸を闊歩する希少種",
+   "targets": [
+    {
+     "enemy": "MarineOrcaRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040601,
+   "key": "co02040601",
+   "npc": "Npc_53",
+   "name": "大海に潜みし蛇龍の希少種",
+   "targets": [
+    {
+     "enemy": "MarineOarfishRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 22000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 4000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040602,
+   "key": "co02040602",
+   "npc": "Npc_53",
+   "name": "砂に隠れし希少の機甲",
+   "targets": [
+    {
+     "enemy": "MachineCCanonRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 26000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040603,
+   "key": "co02040603",
+   "npc": "Npc_53",
+   "name": "希少なる巨大鉄騎",
+   "targets": [
+    {
+     "enemy": "MachineLittleBossRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 30000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040604,
+   "key": "co02040604",
+   "npc": "Npc_53",
+   "name": "舞い踊る鮮血の希少種",
+   "targets": [
+    {
+     "enemy": "BirdCentaurRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 32000,
+     "correction": 700
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040605,
+   "key": "co02040605",
+   "npc": "Npc_53",
+   "name": "暴虐のリリーパ族？",
+   "targets": [
+    {
+     "enemy": "MassiveLillipa",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 32000,
+     "correction": 700
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040606,
+   "key": "co02040606",
+   "npc": "Npc_53",
+   "name": "水面を彩る花の希少種",
+   "targets": [
+    {
+     "enemy": "MarineFlowerRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040607,
+   "key": "co02040607",
+   "npc": "Npc_53",
+   "name": "海底にうごめく希少種",
+   "targets": [
+    {
+     "enemy": "AbyssFlowerRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 33000,
+     "correction": 660
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 9000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040608,
+   "key": "co02040608",
+   "npc": "Npc_53",
+   "name": "海底に立錐する希少種",
+   "targets": [
+    {
+     "enemy": "BirdStackedRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 32000,
+     "correction": 640
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040609,
+   "key": "co02040609",
+   "npc": "Npc_53",
+   "name": "海底を疾駆する希少種",
+   "targets": [
+    {
+     "enemy": "AbyssPenguinRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 400
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040610,
+   "key": "co02040610",
+   "npc": "Npc_53",
+   "name": "紅き甲殻をまとう希少種",
+   "targets": [
+    {
+     "enemy": "CockroachRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2040611,
+   "key": "co02040611",
+   "npc": "Npc_53",
+   "name": "巨腕を振るいし真紅の希少種",
+   "targets": [
+    {
+     "enemy": "BeetleRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 35000,
+     "correction": 700
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 9000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042100,
+   "key": "co02042100",
+   "npc": "Npc_59",
+   "name": "イレイザー・レポート・Ⅰ",
+   "targets": [
+    {
+     "enemy": "BirdBirdcrowA",
+     "num": 10
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3000,
+     "max": 8000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 800,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042101,
+   "key": "co02042101",
+   "npc": "Npc_59",
+   "name": "イレイザー・レポート・Ⅱ",
+   "targets": [
+    {
+     "enemy": "BirdBirdcrowB",
+     "num": 10
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3000,
+     "max": 8000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 800,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042102,
+   "key": "co02042102",
+   "npc": "Npc_59",
+   "name": "イレイザー・レポート・Ⅲ",
+   "targets": [
+    {
+     "enemy": "HummingBird",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3500,
+     "max": 9000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 900,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042103,
+   "key": "co02042103",
+   "npc": "Npc_59",
+   "name": "イレイザー・レポート・Ⅳ",
+   "targets": [
+    {
+     "enemy": "BirdDoubleHead",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4000,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042106,
+   "key": "co02042106",
+   "npc": "Npc_59",
+   "name": "エクスタミネート・ジャーニー・Ⅲ",
+   "targets": [
+    {
+     "enemy": "MonoeyeA",
+     "num": 3
+    },
+    {
+     "enemy": "MonoeyeB",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 8500,
+     "correction": 150
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042107,
+   "key": "co02042107",
+   "npc": "Npc_59",
+   "name": "エクスタミネート・ジャーニー・Ⅳ",
+   "targets": [
+    {
+     "enemy": "FishBigBeastA",
+     "num": 1
+    },
+    {
+     "enemy": "AlligatorSnapperA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 340
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042108,
+   "key": "co02042108",
+   "npc": "Npc_59",
+   "name": "イレイザー・レポート・Ⅴ",
+   "targets": [
+    {
+     "enemy": "BirdCentaur",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042109,
+   "key": "co02042109",
+   "npc": "Npc_59",
+   "name": "ファナティック・キリング・Ⅰ",
+   "targets": [
+    {
+     "enemy": "BirdCrest",
+     "num": 8
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3500,
+     "max": 11000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1100,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042110,
+   "key": "co02042110",
+   "npc": "Npc_59",
+   "name": "ファナティック・キリング・Ⅱ",
+   "targets": [
+    {
+     "enemy": "BirdSoldierA",
+     "num": 2
+    },
+    {
+     "enemy": "BirdSoldierB",
+     "num": 3
+    },
+    {
+     "enemy": "BirdSoldierC",
+     "num": 4
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 3900,
+     "max": 12000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042111,
+   "key": "co02042111",
+   "npc": "Npc_59",
+   "name": "ファナティック・キリング・Ⅲ",
+   "targets": [
+    {
+     "enemy": "BirdStacked",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 15000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042112,
+   "key": "co02042112",
+   "npc": "Npc_59",
+   "name": "エラディケート・エイム・Ⅰ",
+   "targets": [
+    {
+     "enemy": "Cockroach",
+     "num": 99
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042113,
+   "key": "co02042113",
+   "npc": "Npc_59",
+   "name": "エラディケート・エイム・Ⅱ",
+   "targets": [
+    {
+     "enemy": "Beetle",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042114,
+   "key": "co02042114",
+   "npc": "Npc_59",
+   "name": "エラディケート・エイム・Ⅲ",
+   "targets": [
+    {
+     "enemy": "Pillbug",
+     "num": 10
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042115,
+   "key": "co02042115",
+   "npc": "Npc_59",
+   "name": "エラディケート・エイム・Ⅳ",
+   "targets": [
+    {
+     "enemy": "Ladybird",
+     "num": 30
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042700,
+   "key": "co02042700",
+   "npc": "Npc_63",
+   "name": "ドラゴン・エクスの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "DragonGladiator",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 12000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 10000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042701,
+   "key": "co02042701",
+   "npc": "Npc_63",
+   "name": "ヴァーダーソーマの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "MachineLittleBoss",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 12000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 10000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042702,
+   "key": "co02042702",
+   "npc": "Npc_63",
+   "name": "ブリュー・リンガーダの弱点は！？",
+   "targets": [
+    {
+     "enemy": "BirdCentaur",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 18000,
+     "correction": 360
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 12000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042703,
+   "key": "co02042703",
+   "npc": "Npc_63",
+   "name": "ヴィド・ギロスの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "AbyssGidora",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 11000,
+     "correction": 220
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042704,
+   "key": "co02042704",
+   "npc": "Npc_63",
+   "name": "ビオル・メデューナの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "AbyssFlower",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 13000,
+     "correction": 260
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 11000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042705,
+   "key": "co02042705",
+   "npc": "Npc_63",
+   "name": "ソルダ・カピタの弱点は！？",
+   "targets": [
+    {
+     "enemy": "BirdSoldierA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 11000,
+     "correction": 220
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042706,
+   "key": "co02042706",
+   "npc": "Npc_63",
+   "name": "グル・ソルダの弱点は！？",
+   "targets": [
+    {
+     "enemy": "BirdSoldierB",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 11000,
+     "correction": 220
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042707,
+   "key": "co02042707",
+   "npc": "Npc_63",
+   "name": "デコル・マリューダの弱点は！？",
+   "targets": [
+    {
+     "enemy": "BirdStacked",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 13000,
+     "correction": 260
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 11000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042708,
+   "key": "co02042708",
+   "npc": "Npc_63",
+   "name": "一緒に任務へ行きましょう！",
+   "targets": [
+    {
+     "enemy": "ArmadilloA",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 14000,
+     "correction": 280
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042709,
+   "key": "co02042709",
+   "npc": "Npc_63",
+   "name": "フォードランの部位破壊を共に！",
+   "targets": [
+    {
+     "enemy": "DragonWolfA",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 13000,
+     "correction": 260
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2042710,
+   "key": "co02042710",
+   "npc": "Npc_63",
+   "name": "カルターゴの弱点調査！",
+   "targets": [
+    {
+     "enemy": "Snail",
+     "num": 5
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 13000,
+     "correction": 260
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2043000,
+   "key": "co02043000",
+   "npc": "Npc_62",
+   "name": "海岸のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "MarineFlower",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2043002,
+   "key": "co02043002",
+   "npc": "Npc_62",
+   "name": "採掘場跡のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "MachineWolf",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 11000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2043003,
+   "key": "co02043003",
+   "npc": "Npc_62",
+   "name": "海底のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "AbyssPenguin",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 12500,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 6000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2043004,
+   "key": "co02043004",
+   "npc": "Npc_62",
+   "name": "ブーストエネミーの調査同行・Ⅰ",
+   "targets": [
+    {
+     "enemy": "WolfA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 14000,
+     "correction": 280
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2043005,
+   "key": "co02043005",
+   "npc": "Npc_62",
+   "name": "ブーストエネミーの調査同行・Ⅱ",
+   "targets": [
+    {
+     "enemy": "DragonWolfA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 13000,
+     "correction": 260
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2043006,
+   "key": "co02043006",
+   "npc": "Npc_62",
+   "name": "ブーストエネミーの調査同行・Ⅲ",
+   "targets": [
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 13000,
+     "correction": 260
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 2061000,
+   "key": "co02061000",
+   "npc": "Npc_69",
+   "name": "マスコットのトップを狙うみャ！",
+   "targets": [
+    {
+     "enemy": "Rappy",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 5000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3039100,
+   "key": "co03039100",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・白ノ領域",
+   "targets": [
+    {
+     "enemy": "ToyCrazyBear",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 15000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3039101,
+   "key": "co03039101",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・浮上施設",
+   "targets": [
+    {
+     "enemy": "Wop3ShieldA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 15000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3039102,
+   "key": "co03039102",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・黒ノ領域",
+   "targets": [
+    {
+     "enemy": "ToyDollhouse",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 15000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040300,
+   "key": "co03040300",
+   "npc": "Npc_52",
+   "name": "悪鬼襲来",
+   "targets": [
+    {
+     "enemy": "Mono1OniClub",
+     "num": 3
+    },
+    {
+     "enemy": "Mono1OniGun",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 6000,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040301,
+   "key": "co03040301",
+   "npc": "Npc_52",
+   "name": "嵐と雷の神々",
+   "targets": [
+    {
+     "enemy": "Mono1OrkWind",
+     "num": 2
+    },
+    {
+     "enemy": "Mono1OrkThunder",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 7200,
+     "max": 20000,
+     "correction": 400
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1300,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 2,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040302,
+   "key": "co03040302",
+   "npc": "Npc_52",
+   "name": "鋼をまといし武者",
+   "targets": [
+    {
+     "enemy": "Mono1YoroiA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 11200,
+     "max": 28000,
+     "correction": 560
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040304,
+   "key": "co03040304",
+   "npc": "Npc_52",
+   "name": "竜宮の駒からの挑戦",
+   "targets": [
+    {
+     "enemy": "Wop3GaicoEdge",
+     "num": 3
+    },
+    {
+     "enemy": "Wop3GaicoGun",
+     "num": 3
+    },
+    {
+     "enemy": "Wop3GaicoJuggle",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 6000,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040305,
+   "key": "co03040305",
+   "npc": "Npc_52",
+   "name": "立ちはだかる盾と装甲",
+   "targets": [
+    {
+     "enemy": "Wop3ShieldA",
+     "num": 2
+    },
+    {
+     "enemy": "Wop3Massive",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 8000,
+     "max": 20000,
+     "correction": 400
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1300,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040306,
+   "key": "co03040306",
+   "npc": "Npc_52",
+   "name": "対なる好敵手",
+   "targets": [
+    {
+     "enemy": "Wop3Sleigh",
+     "num": 1
+    },
+    {
+     "enemy": "Wop3Wany",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 11200,
+     "max": 28000,
+     "correction": 560
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040308,
+   "key": "co03040308",
+   "npc": "Npc_52",
+   "name": "霊山侵入",
+   "targets": [
+    {
+     "enemy": "Mono2EyeArm",
+     "num": 10
+    },
+    {
+     "enemy": "Mono2Lantern",
+     "num": 5
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4500,
+     "max": 12000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040309,
+   "key": "co03040309",
+   "npc": "Npc_52",
+   "name": "参道に立ち塞がりし悪鬼",
+   "targets": [
+    {
+     "enemy": "Mono2Mink",
+     "num": 5
+    },
+    {
+     "enemy": "Mono2OniAx",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5400,
+     "max": 18000,
+     "correction": 360
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1300,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040310,
+   "key": "co03040310",
+   "npc": "Npc_52",
+   "name": "暴虐なる執行者",
+   "targets": [
+    {
+     "enemy": "Mono2Xcutioner",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      48
+     ],
+     "num": 3,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 12000,
+     "max": 30000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040313,
+   "key": "co03040313",
+   "npc": "Npc_52",
+   "name": "壊世に踊りし猛威",
+   "targets": [
+    {
+     "enemy": "UltBigBeastA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      3,
+      0,
+      680
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 12500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040314,
+   "key": "co03040314",
+   "npc": "Npc_52",
+   "name": "猛炎を放つ極彩色の怪鳥",
+   "targets": [
+    {
+     "enemy": "UltDragonMagma",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      3,
+      0,
+      680
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 12500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1800,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040316,
+   "key": "co03040316",
+   "npc": "Npc_52",
+   "name": "光刃を装いし機械獣",
+   "targets": [
+    {
+     "enemy": "UltMechaPanthBlade",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      3,
+      0,
+      682
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 12500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040317,
+   "key": "co03040317",
+   "npc": "Npc_52",
+   "name": "弾雨に吠えし機械獣",
+   "targets": [
+    {
+     "enemy": "UltMechaPanthBuster",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      3,
+      0,
+      682
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 12500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1800,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040600,
+   "key": "co03040600",
+   "npc": "Npc_53",
+   "name": "ニャウなる希少種",
+   "targets": [
+    {
+     "enemy": "UnknownCat",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 15000,
+     "correction": 745
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040601,
+   "key": "co03040601",
+   "npc": "Npc_53",
+   "name": "金色のひげをたくわえし希少種",
+   "targets": [
+    {
+     "enemy": "Mono1OrkThunderRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040602,
+   "key": "co03040602",
+   "npc": "Npc_53",
+   "name": "白銀のたてがみを持つ希少種",
+   "targets": [
+    {
+     "enemy": "Mono1OrkWindRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040603,
+   "key": "co03040603",
+   "npc": "Npc_53",
+   "name": "金色の札をまといし希少種",
+   "targets": [
+    {
+     "enemy": "Mono1PlateARare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040604,
+   "key": "co03040604",
+   "npc": "Npc_53",
+   "name": "金色の炎をまといし希少種",
+   "targets": [
+    {
+     "enemy": "Mono1RollerRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040605,
+   "key": "co03040605",
+   "npc": "Npc_53",
+   "name": "黒黄色の角を持ちし希少種",
+   "targets": [
+    {
+     "enemy": "Mono1YoroiRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 28000,
+     "correction": 698
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040606,
+   "key": "co03040606",
+   "npc": "Npc_53",
+   "name": "青金の殻を背負いし希少種",
+   "targets": [
+    {
+     "enemy": "Wop3ApeARare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040607,
+   "key": "co03040607",
+   "npc": "Npc_53",
+   "name": "紫紅に輝く希少種",
+   "targets": [
+    {
+     "enemy": "Wop3SleighRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 28000,
+     "correction": 700
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040608,
+   "key": "co03040608",
+   "npc": "Npc_53",
+   "name": "黒紫の棘を持ちし希少種",
+   "targets": [
+    {
+     "enemy": "Wop3WanyRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 28000,
+     "correction": 700
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040609,
+   "key": "co03040609",
+   "npc": "Npc_53",
+   "name": "紅の卵を産みし希少種",
+   "targets": [
+    {
+     "enemy": "BirdOstrichRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040610,
+   "key": "co03040610",
+   "npc": "Npc_53",
+   "name": "滑空せし茜色の希少種",
+   "targets": [
+    {
+     "enemy": "BirdBatRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040611,
+   "key": "co03040611",
+   "npc": "Npc_53",
+   "name": "金色の鎧をまといし番兵",
+   "targets": [
+    {
+     "enemy": "Mono2SkullAllRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040612,
+   "key": "co03040612",
+   "npc": "Npc_53",
+   "name": "濃紫の鎌を携えし断罪者",
+   "targets": [
+    {
+     "enemy": "Mono2XcutionerRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 32000,
+     "correction": 640
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040613,
+   "key": "co03040613",
+   "npc": "Npc_53",
+   "name": "住屋に擬態せし希少種",
+   "targets": [
+    {
+     "enemy": "ToyDollhouseRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040614,
+   "key": "co03040614",
+   "npc": "Npc_53",
+   "name": "虚ろの玩具束ねし希少種",
+   "targets": [
+    {
+     "enemy": "ToyBlockRare",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 32000,
+     "correction": 640
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3040615,
+   "key": "co03040615",
+   "npc": "Npc_53",
+   "name": "風雷を喚びし凶鳥",
+   "targets": [
+    {
+     "enemy": "GG",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 32000,
+     "correction": 640
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      23
+     ],
+     "num": 3,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042100,
+   "key": "co03042100",
+   "npc": "Npc_59",
+   "name": "デモリション・アンビション・Ⅰ",
+   "targets": [
+    {
+     "enemy": "ToyBoxBite",
+     "num": 4
+    },
+    {
+     "enemy": "ToyBoxMissile",
+     "num": 3
+    },
+    {
+     "enemy": "ToyCrazyBear",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5400,
+     "max": 18000,
+     "correction": 360
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1800,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042101,
+   "key": "co03042101",
+   "npc": "Npc_59",
+   "name": "カリア・エグゼキューション・Ⅰ",
+   "targets": [
+    {
+     "enemy": "BirdBat",
+     "num": 3
+    },
+    {
+     "enemy": "BirdOstrich",
+     "num": 3
+    },
+    {
+     "enemy": "BirdOstrichHeal",
+     "num": 3
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5400,
+     "max": 18000,
+     "correction": 360
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1800,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042102,
+   "key": "co03042102",
+   "npc": "Npc_59",
+   "name": "デモリション・アンビション・Ⅱ",
+   "targets": [
+    {
+     "enemy": "ToyBoxNitro",
+     "num": 10
+    },
+    {
+     "enemy": "ToyCrazyRabbit",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4000,
+     "max": 10000,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042103,
+   "key": "co03042103",
+   "npc": "Npc_59",
+   "name": "デモリション・アンビション・Ⅲ",
+   "targets": [
+    {
+     "enemy": "ToyDollhouse",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4500,
+     "max": 12000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042104,
+   "key": "co03042104",
+   "npc": "Npc_59",
+   "name": "デモリション・アンビション・Ⅳ",
+   "targets": [
+    {
+     "enemy": "ToyPipe",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5400,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042105,
+   "key": "co03042105",
+   "npc": "Npc_59",
+   "name": "デモリション・アンビション・Ⅴ",
+   "targets": [
+    {
+     "enemy": "ToyBlock",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042106,
+   "key": "co03042106",
+   "npc": "Npc_59",
+   "name": "エラディケート・エイム・Ⅴ",
+   "targets": [
+    {
+     "enemy": "BugLegion",
+     "num": 99
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042700,
+   "key": "co03042700",
+   "npc": "Npc_63",
+   "name": "ギグル・グンネガムの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "Mono1YoroiA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 14000,
+     "correction": 280
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042701,
+   "key": "co03042701",
+   "npc": "Npc_63",
+   "name": "ネプト・キャサドーラの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "Wop3Sleigh",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 14000,
+     "correction": 280
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3042702,
+   "key": "co03042702",
+   "npc": "Npc_63",
+   "name": "グアル・ジグモルデの部位破壊を！",
+   "targets": [
+    {
+     "enemy": "Mono2Xcutioner",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3043002,
+   "key": "co03043002",
+   "npc": "Npc_62",
+   "name": "黒ノ領域のブーストエネミー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "Mono2OniAx",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 8000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3050039,
+   "key": "co03050039",
+   "npc": "Npc_96",
+   "name": "森林火災の危機？",
+   "targets": [
+    {
+     "enemy": "Wop3Sleigh",
+     "num": 1
+    },
+    {
+     "enemy": "Wop3Wany",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 36000,
+     "correction": 1800
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      10,
+      16,
+      0,
+      8
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3050054,
+   "key": "co03050054",
+   "npc": "Npc_192",
+   "name": "お月見Ⅴ",
+   "targets": [
+    {
+     "enemy": "Mono2Xcutioner",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 1,
+     "item": [
+      3,
+      12,
+      0,
+      105
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 30000,
+     "correction": 1500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 3000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3050064,
+   "key": "co03050064",
+   "npc": "Npc_77",
+   "name": "クリスマスまであと何歩？",
+   "targets": [
+    {
+     "enemy": "UnknownCat",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 31000,
+     "correction": 1550
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      10,
+      9,
+      0,
+      20
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3061000,
+   "key": "co03061000",
+   "npc": "Npc_69",
+   "name": "マスコットの頂点になるみャ！",
+   "targets": [
+    {
+     "enemy": "UnknownCat",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 100,
+     "max": 15000,
+     "correction": 700
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3061002,
+   "key": "co03061002",
+   "npc": "Npc_69",
+   "name": "部位破壊はオトコのロマンだみャ！",
+   "targets": [
+    {
+     "enemy": "Mono1YoroiA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3063005,
+   "key": "co03063005",
+   "npc": "Npc_108",
+   "name": "時空渡航の原因解明のために",
+   "targets": [
+    {
+     "enemy": "Rappy",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 10000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3063201,
+   "key": "co03063201",
+   "npc": "Npc_200",
+   "name": "まずは力試しといきましょう",
+   "targets": [
+    {
+     "enemy": "DragonMagma",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 15000,
+     "correction": 750
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3063202,
+   "key": "co03063202",
+   "npc": "Npc_200",
+   "name": "ダーカーとの戦闘訓練",
+   "targets": [
+    {
+     "enemy": "AlligatorSnapperA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 15000,
+     "correction": 750
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3063203,
+   "key": "co03063203",
+   "npc": "Npc_200",
+   "name": "強固な盾剣を持つ龍族との力比べ",
+   "targets": [
+    {
+     "enemy": "DragonGladiator",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 20000,
+     "correction": 1000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 3000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3063204,
+   "key": "co03063204",
+   "npc": "Npc_200",
+   "name": "機甲の要塞との死闘",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 20000,
+     "correction": 1000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 3000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3063210,
+   "key": "co03063210",
+   "npc": "Npc_206",
+   "name": "天を制する青き王との激闘",
+   "targets": [
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 30000,
+     "correction": 1000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 7500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3071010,
+   "key": "co03071010",
+   "npc": "Npc_151",
+   "name": "バウンサーの極致へ",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 3072010,
+   "key": "co03072010",
+   "npc": "Npc_150",
+   "name": "これで一流バウンサーですわ！",
+   "targets": [
+    {
+     "enemy": "PantherB",
+     "num": 1
+    },
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4037006,
+   "key": "co04037006",
+   "npc": "Npc_242",
+   "name": "一流サモナーの条件とは！",
+   "targets": [
+    {
+     "enemy": "PantherB",
+     "num": 1
+    },
+    {
+     "enemy": "Doodlebug",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4037007,
+   "key": "co04037007",
+   "npc": "Npc_242",
+   "name": "サモナーを極めようじゃないか！",
+   "targets": [
+    {
+     "enemy": "BossMechaA",
+     "num": 1
+    },
+    {
+     "enemy": "DragonCrystal",
+     "num": 1
+    },
+    {
+     "enemy": "PantherSnowA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4039102,
+   "key": "co04039102",
+   "npc": "Npc_91",
+   "name": "ジャストアタック特訓・ラスベガス",
+   "targets": [
+    {
+     "enemy": "PhantomRider",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 15000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4040302,
+   "key": "co04040302",
+   "npc": "Npc_52",
+   "name": "太古の記憶を宿せし怪異",
+   "targets": [
+    {
+     "enemy": "PhantomRex",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4500,
+     "max": 12000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4040303,
+   "key": "co04040303",
+   "npc": "Npc_52",
+   "name": "地獄の業火をまといし騎兵",
+   "targets": [
+    {
+     "enemy": "PhantomHeli",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4500,
+     "max": 12000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4040304,
+   "key": "co04040304",
+   "npc": "Npc_52",
+   "name": "変異せし長砲身の防人",
+   "targets": [
+    {
+     "enemy": "PhantomTank",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4040305,
+   "key": "co04040305",
+   "npc": "Npc_52",
+   "name": "鉄の道を外れし暴威",
+   "targets": [
+    {
+     "enemy": "PhantomTrainA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 9000,
+     "max": 30000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      3,
+      0,
+      715
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4040308,
+   "key": "co04040308",
+   "npc": "Npc_52",
+   "name": "妖車に煌く鬼火",
+   "targets": [
+    {
+     "enemy": "PhantomRider",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 4500,
+     "max": 12000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1200,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4040309,
+   "key": "co04040309",
+   "npc": "Npc_52",
+   "name": "暴進せし鋼鉄の健脚",
+   "targets": [
+    {
+     "enemy": "PhantomTrack",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 20000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      1
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4040310,
+   "key": "co04040310",
+   "npc": "Npc_52",
+   "name": "混沌の旗幟となりし彫像",
+   "targets": [
+    {
+     "enemy": "PhantomGoddess",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 9000,
+     "max": 30000,
+     "correction": 600
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      3,
+      0,
+      715
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4040313,
+   "key": "co04040313",
+   "npc": "Npc_52",
+   "name": "疾駆する四本腕の突撃龍",
+   "targets": [
+    {
+     "enemy": "UltDragonTransform",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 12500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1500,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4040314,
+   "key": "co04040314",
+   "npc": "Npc_52",
+   "name": "万有を撃砕せし巨腕の紫龍",
+   "targets": [
+    {
+     "enemy": "UltDragonGladiator",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5000,
+     "max": 12500,
+     "correction": 250
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 1800,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4050003,
+   "key": "co04050003",
+   "npc": "Npc_80",
+   "name": "バレンタイン・Ⅲ",
+   "targets": [
+    {
+     "enemy": "UltDragonMagma",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 50000,
+     "correction": 2500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 15000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      10,
+      2,
+      0,
+      13
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4063701,
+   "key": "co04063701",
+   "npc": "Npc_360",
+   "name": "ネッキーからの挑戦状・Ⅰ",
+   "targets": [
+    {
+     "enemy": "HologramRobot",
+     "num": 10
+    },
+    {
+     "enemy": "BirdDoubleHead",
+     "num": 5
+    },
+    {
+     "enemy": "Mono1Roller",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 1000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 2000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      53
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4063702,
+   "key": "co04063702",
+   "npc": "Npc_360",
+   "name": "ネッキーからの挑戦状・Ⅱ",
+   "targets": [
+    {
+     "enemy": "Mono2Mink",
+     "num": 10
+    },
+    {
+     "enemy": "MachineCCanon",
+     "num": 5
+    },
+    {
+     "enemy": "BirdStacked",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 1000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 4000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      3,
+      7,
+      0,
+      53
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4065421,
+   "key": "co04065421",
+   "npc": "Npc_314",
+   "name": "バレンタインイベントの前に",
+   "targets": [
+    {
+     "enemy": "Snail",
+     "num": 2
+    },
+    {
+     "enemy": "AntReaper",
+     "num": 2
+    },
+    {
+     "enemy": "Ladybird",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 1000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4065422,
+   "key": "co04065422",
+   "npc": "Npc_319",
+   "name": "他ならぬＲＩＮＡさんのために",
+   "targets": [
+    {
+     "enemy": "Cockroach",
+     "num": 10
+    },
+    {
+     "enemy": "CockroachRare",
+     "num": 1
+    },
+    {
+     "enemy": "UltCockroach",
+     "num": 5
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 1000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4065423,
+   "key": "co04065423",
+   "npc": "Npc_347",
+   "name": "一生懸命なＲＩＮＡのために",
+   "targets": [
+    {
+     "enemy": "UltDragonRizardmanB",
+     "num": 5
+    },
+    {
+     "enemy": "UltDragonWolfB",
+     "num": 3
+    },
+    {
+     "enemy": "UltDragonChariotRearguard",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 25000,
+     "correction": 1000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 4065445,
+   "key": "co04065445",
+   "npc": "Npc_318",
+   "name": "親玉をやっつけろ！",
+   "targets": [
+    {
+     "enemy": "UltDragonCrystal",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 50000,
+     "correction": 2000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 50000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      10,
+      13,
+      0,
+      22
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 5010235,
+   "key": "co05010235",
+   "npc": "Npc_50",
+   "name": "ヒーロークラス適性審査試験・Ⅳ",
+   "targets": [
+    {
+     "enemy": "AlligatorSnapperA",
+     "num": 1
+    },
+    {
+     "enemy": "BirdCentaur",
+     "num": 1
+    },
+    {
+     "enemy": "Mono2Xcutioner",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 0,
+     "correction": 0
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 15000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 5033131,
+   "key": "co05033131",
+   "npc": "Npc_437",
+   "name": "ヒーローの発展のために！",
+   "targets": [
+    {
+     "enemy": "FishBigBeastA",
+     "num": 1
+    },
+    {
+     "enemy": "MachineLittleBoss",
+     "num": 1
+    },
+    {
+     "enemy": "Mono1Roller",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 5033132,
+   "key": "co05033132",
+   "npc": "Npc_437",
+   "name": "ヒーローのさらなる発展のために！",
+   "targets": [
+    {
+     "enemy": "DragonGladiator",
+     "num": 1
+    },
+    {
+     "enemy": "Mono1YoroiA",
+     "num": 1
+    },
+    {
+     "enemy": "PhantomTrainA",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 5,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 8,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 5042111,
+   "key": "co05042111",
+   "npc": "Npc_59",
+   "name": "ミラージュ・アグレッサー・Ⅰ",
+   "targets": [
+    {
+     "enemy": "PtmToyBoxMissile",
+     "num": 5
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5400,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 3000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 5042112,
+   "key": "co05042112",
+   "npc": "Npc_59",
+   "name": "ミラージュ・アグレッサー・Ⅱ",
+   "targets": [
+    {
+     "enemy": "PtmBirdBat",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5400,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 3000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 5042113,
+   "key": "co05042113",
+   "npc": "Npc_59",
+   "name": "ミラージュ・アグレッサー・Ⅲ",
+   "targets": [
+    {
+     "enemy": "PtmCockroach",
+     "num": 2
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 5400,
+     "max": 15000,
+     "correction": 300
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 3000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 5042114,
+   "key": "co05042114",
+   "npc": "Npc_59",
+   "name": "ミラージュ・アグレッサー・Ⅳ",
+   "targets": [
+    {
+     "enemy": "PtmBirdStacked",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 5042115,
+   "key": "co05042115",
+   "npc": "Npc_59",
+   "name": "ミラージュ・アグレッサー・Ⅴ",
+   "targets": [
+    {
+     "enemy": "PtmSpider",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 10000,
+     "max": 25000,
+     "correction": 500
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 5000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  },
+  {
+   "id": 5050205,
+   "key": "co05050205",
+   "npc": "Npc_99",
+   "name": "シーオーダー・５",
+   "targets": [
+    {
+     "enemy": "Char24_ALT",
+     "num": 1
+    }
+   ],
+   "rewards": [
+    {
+     "type": 3,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": 0,
+     "max": 50000,
+     "correction": 2000
+    },
+    {
+     "type": 2,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": 50000,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 1,
+     "item": [
+      10,
+      9,
+      0,
+      2
+     ],
+     "num": 1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    },
+    {
+     "type": 9,
+     "item": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "num": -1,
+     "min": -1,
+     "max": -1,
+     "correction": -1
+    }
+   ]
+  }
+ ]
+}

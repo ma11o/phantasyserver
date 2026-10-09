@@ -57,6 +57,8 @@ pub struct CharData {
     pub cleared_quests: Vec<u32>,
     /// [pso2-skilltree] skill tree sheets (skill_tree.rs)
     pub skill_trees: crate::skill_tree::SkillTrees,
+    /// [pso2_vita_offline] client orders taken / cleared (client_orders.rs)
+    pub client_orders: crate::client_orders::ClientOrders,
 }
 
 #[derive(Default, serde::Serialize, serde::Deserialize)]

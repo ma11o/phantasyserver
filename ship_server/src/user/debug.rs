@@ -891,6 +891,23 @@ async fn run_command(line: &str) -> Result<String, Error> {
             map.lock().await.spawn_enemy_as(zone, name, pos, boss).await?;
             Ok(format!("spawned {name}{}", if boss { " (boss)" } else { "" }))
         }
+        ("co", [op, id]) => {
+            // [pso2_vita_offline] co take|drop <order id>: client orders without the NPC window (counts start at 0;
+            // the window shows them after it is opened again)
+            let id: u32 = parse_num(id).ok_or(Error::InvalidInput("co take|drop <id>"))?;
+            let order = crate::client_orders::get(id).ok_or(Error::InvalidInput("no such order"))?;
+            let mut lock = user.lock().await;
+            let c = lock.character.as_mut().ok_or(Error::InvalidInput("no character"))?;
+            match *op {
+                "take" => {
+                    c.client_orders.taken.retain(|t| t.id != id);
+                    c.client_orders.taken.push(crate::client_orders::TakenOrder { id, counts: vec![0; order.targets.len()] });
+                }
+                "drop" => c.client_orders.taken.retain(|t| t.id != id),
+                _ => return Err(Error::InvalidInput("co take|drop <id>")),
+            }
+            Ok(format!("co {op} {id} {}", order.name))
+        }
         ("send", [id, subid, flag, hex @ ..]) => {
             let (Some(id), Some(subid), Some(flag)) =
                 (parse_num::<u8>(id), parse_num::<u16>(subid), parse_num::<u8>(flag))

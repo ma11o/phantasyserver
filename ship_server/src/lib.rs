@@ -10,6 +10,7 @@ mod skill_tree;
 mod pa_power;
 mod consumables;
 mod battle_stats;
+mod client_orders;
 mod drops;
 mod block;
 mod inventory;

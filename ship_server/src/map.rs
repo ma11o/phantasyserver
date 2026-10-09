@@ -1508,7 +1508,13 @@ impl Zone {
                     })
                     .await;
                     let (enemy_id, stats) = self.enemies.remove(enemy_pos);
-                    killed = Some((inflicter_pos, enemy_xyz, enemy_id, stats.name().to_string()));
+                    // [pso2_vita_offline] client orders: every player in the zone counts the kill
+                    let name = stats.name().to_string();
+                    exec_users(&self.players, |_, mut player| {
+                        crate::user::handlers::orders::count_kill(&mut player, &name);
+                    })
+                    .await;
+                    killed = Some((inflicter_pos, enemy_xyz, enemy_id, name));
                 }
             }
         } else if inflicter.entity_type == ObjectType::Object

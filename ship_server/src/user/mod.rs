@@ -655,6 +655,14 @@ pub async fn packet_handler(
         (US::InGame, P::Unknown((h, _))) if h.id == 0x0F && h.subid == 0x64 => H::lab::open_64(user).await,
         (US::InGame, P::Unknown((h, d))) if h.id == 0x0F && h.subid == 0x23 => H::lab::grind(user_guard, d).await,
         (US::InGame, P::Unknown((h, d))) if h.id == 0x0F && h.subid == 0x3D => H::lab::preview_3d(user, d).await,
+        // [pso2_vita_offline] client orders (handlers/orders.rs)
+        (US::InGame, P::TakenOrdersRequest(data)) => H::orders::taken(user, data).await,
+        (US::InGame, P::OrderListRequest(data)) => H::orders::list(user, data).await,
+        (US::InGame, P::Unknown((h, d))) if h.id == 0x1F && h.subid == 0x00 => H::orders::action(user_guard, d).await,
+        (US::InGame, P::Unknown((h, d))) if h.id == 0x1F => {
+            log::info!("[pso2-co] unhandled 1F-{:02X} flag {:?} {:02x?}", h.subid, h.flag, d);
+            Ok(Action::Nothing)
+        }
         // [pso2-shop] NPC shops: 34-00 -> 34-01 stock, 34-02 buy, 34-04 sell (handlers/shop.rs)
         (US::InGame, P::Unknown((h, d))) if h.id == 0x04 && h.subid == 0x27 => H::object::skill_tree(user_guard, d).await,
         (US::InGame, P::Unknown((h, d))) if h.id == 0x34 && h.subid == 0x00 => H::shop::open(user, d).await,

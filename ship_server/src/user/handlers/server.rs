@@ -157,6 +157,13 @@ pub async fn map_loaded(mut user_guard: MutexGuard<'_, User>, _: MapLoadedPacket
     let equiped = character.inventory.send_equiped(user_id);
     let change_palette = character.palette.send_change_palette(user_id);
 
+    // [pso2_vita_offline] open every lobby NPC's client order window (CharaFlag_coOpen*, client_orders.rs).
+    // When the original set these is not known (provisional: always open)
+    if let Some(t) = crate::client_orders::table() {
+        for f in t.open_flags.values() {
+            character.flags.set(f.id as _, 1);
+        }
+    }
     let char_flags = character.flags.to_char_flags();
     for packet in inventory_packets {
         user.send_packet(&packet).await?;
