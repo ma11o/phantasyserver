@@ -60,6 +60,8 @@ struct Zone {
     boss_id: Option<u32>,
     // [pso2_vita_offline] emergency trials running in the zone (etrial.rs)
     etrials: Vec<crate::etrial::Active>,
+    // [pso2_vita_offline] PSE of the zone (pse.rs)
+    pse: crate::pse::ZonePse,
 }
 
 /// [pso2_vita_offline] An item on the ground. The client keys its drop registry by `drop_id` and finds the entry
@@ -181,6 +183,7 @@ impl Map {
                 drops: vec![],
                 boss_id: None,
                 etrials: vec![],
+                pse: Default::default(),
                 data: zone,
                 objects: Objects {
                     objects,
@@ -531,7 +534,16 @@ impl Map {
         // where the enemy was spawned
         if let Some((_, enemy_pos, _, name)) = &killed {
             let area = self.zones[zone_pos].data.name.clone();
-            let items = crate::drops::roll(name, &area, self.enemy_level);
+            // [pso2_vita_offline] PSE: more rolls during a burst, meseta PSE scales the meseta
+            let pse = &self.zones[zone_pos].pse;
+            let meseta_mul = pse.mul("meseta");
+            let items: Vec<_> = (0..pse.drop_rolls())
+                .flat_map(|_| crate::drops::roll(name, &area, self.enemy_level))
+                .map(|item| match meseta_amount(&item) {
+                    Some(n) if meseta_mul != 1.0 => meseta((n as f32 * meseta_mul).round() as u32),
+                    _ => item,
+                })
+                .collect();
             log::info!(
                 "[pso2-drop] {name} in {area}: {}",
                 items.iter().map(crate::drops::describe).collect::<Vec<_>>().join(" ")
@@ -553,6 +565,10 @@ impl Map {
         // goes where the last hit came from: the client closes its dialog when the player is more than ~3 m away
         // from it.
         // [pso2_vita_offline] emergency trials: the trial's last enemy ends it with a success
+        if killed.is_some() && matches!(self.map_type, MapType::QuestMap) {
+            let out = self.zones[zone_pos].pse.on_kill();
+            self.pse_apply(zone_pos, out).await?;
+        }
         if let Some((_, _, id, _)) = &killed {
             let mut progress = vec![];
             let done: Vec<u32> = self.zones[zone_pos]
@@ -785,6 +801,99 @@ impl Map {
         Ok(Some((obj_id, def.time_limit_s)))
     }
 
+    /// [pso2_vita_offline] Once a second (`pse::spawn_ticker`): PSE decay, burst chance timeout, burst spawns / end.
+    pub async fn pse_tick(&mut self) -> Result<(), Error> {
+        for zone_pos in 0..self.zones.len() {
+            if self.zones[zone_pos].players.is_empty() {
+                continue;
+            }
+            let alive = self.zones[zone_pos].enemies.len() as u32;
+            let out = self.zones[zone_pos].pse.tick(alive);
+            self.pse_apply(zone_pos, out).await?;
+        }
+        Ok(())
+    }
+
+    /// [pso2_vita_offline] Sends a PSE outcome to the zone and spawns the burst's enemies around a player: at the
+    /// opened chunk's enemy spawn point nearest to them (or the player's position), zone enemies of one spawn category.
+    pub async fn pse_apply(&mut self, zone_pos: usize, out: crate::pse::Outcome) -> Result<(), Error> {
+        let zone = &self.zones[zone_pos];
+        if !out.packets.is_empty() {
+            exec_users(&zone.players, |_, mut player| {
+                for packet in &out.packets {
+                    let _ = player.try_send_packet(packet);
+                }
+            })
+            .await;
+        }
+        if out.spawn == 0 {
+            return Ok(());
+        }
+        let Some(block_data) = self.block_data.to_owned() else {
+            return Ok(());
+        };
+        let Some(player) = zone.players.iter().find_map(|p| p.user.upgrade()) else {
+            return Ok(());
+        };
+        let at = player.lock().await.position;
+        let d2 = |p: &Position| {
+            let (dx, dz) = (p.pos_x.to_f32() - at.pos_x.to_f32(), p.pos_z.to_f32() - at.pos_z.to_f32());
+            dx * dx + dz * dz
+        };
+        let base = zone
+            .data
+            .chunks
+            .iter()
+            .filter(|c| zone.chunk_spawns.iter().any(|s| s.0 == c.chunk_id))
+            .flat_map(|c| c.enemy_spawn_points.iter().copied())
+            .min_by(|a, b| d2(a).total_cmp(&d2(b)))
+            .unwrap_or(at);
+        let category = zone.data.enemies.iter().map(|e| e.spawn_category).choose(&mut rand::thread_rng());
+        let names: Vec<String> = zone
+            .data
+            .enemies
+            .iter()
+            .filter(|e| Some(e.spawn_category) == category)
+            .map(|e| e.enemy_name.clone())
+            .collect();
+        if names.is_empty() {
+            return Ok(());
+        }
+        let n = out.spawn;
+        for i in 0..n {
+            let a = i as f32 * std::f32::consts::TAU / n as f32;
+            let mut p = base;
+            p.pos_x = half::f16::from_f32(base.pos_x.to_f32() + 3.0 * a.cos());
+            p.pos_z = half::f16::from_f32(base.pos_z.to_f32() + 3.0 * a.sin());
+            let name = names.iter().choose(&mut rand::thread_rng()).cloned().unwrap_or_default();
+            self.zones[zone_pos]
+                .spawn_enemy(&block_data, &mut self.max_id, self.enemy_level, &name, p)
+                .await?;
+        }
+        log::info!("[pso2-pse] burst spawned {n} ({}) in {}", names.join("/"), self.zones[zone_pos].data.name);
+        Ok(())
+    }
+
+    /// [pso2_vita_offline] Ids of the zone's living enemies (debug `pse kill`).
+    pub fn zone_enemy_ids(&self, zone_pos: usize) -> Vec<u32> {
+        self.zones[zone_pos].enemies.iter().map(|e| e.0).collect()
+    }
+    /// [pso2_vita_offline] Debug `pse set <id> <level>` on the zone.
+    pub async fn pse_set(&mut self, zone_pos: usize, id: u32, level: u32) -> Result<(), Error> {
+        let out = self.zones[zone_pos].pse.set(id, level);
+        self.pse_apply(zone_pos, out).await
+    }
+    /// [pso2_vita_offline] Debug `pse show`: (type, level) running in the zone and the burst's type.
+    pub fn pse_state(&self, zone_pos: usize) -> String {
+        let z = &self.zones[zone_pos].pse;
+        format!(
+            "pool {:?} active {:?} burst {:?}",
+            z.pool,
+            z.active.iter().map(|a| (a.id, a.level, a.chance_until.is_some())).collect::<Vec<_>>(),
+            z.burst.map(|b| (b.0, b.1.saturating_duration_since(Instant::now()).as_secs()))
+        )
+    }
+
     /// [pso2_vita_offline] Enemies still alive in the zone's running emergency trials (debug `etrial kill`).
     pub fn etrial_enemies(&self, zone_pos: usize) -> Vec<u32> {
         self.zones[zone_pos].etrials.iter().flat_map(|t| t.enemies.iter().copied()).collect()
@@ -910,6 +1019,20 @@ impl Map {
     }
 
     pub async fn on_map_loaded(&mut self, zone_pos: usize, player: PlayerId) -> Result<(), Error> {
+        // [pso2_vita_offline] show the zone's running PSEs to the player who just loaded it
+        if let Some(zone) = self.zones.get(zone_pos) {
+            let packets = zone.pse.show();
+            if !packets.is_empty() {
+                exec_users(&zone.players, |p, mut user| {
+                    if p.player_id == player {
+                        for packet in &packets {
+                            let _ = user.try_send_packet(packet);
+                        }
+                    }
+                })
+                .await;
+            }
+        }
         let Some(lua) = self.lua.lock().procs.get("on_map_loaded").cloned() else {
             return Ok(());
         };
@@ -1192,6 +1315,10 @@ impl Zone {
             .enumerate()
             .find(|(_, p)| p.player_id == id)?;
         let user = self.players.swap_remove(pos);
+        // [pso2_vita_offline] changing area resets the PSE (research pse.rules area-transition)
+        if self.players.is_empty() {
+            self.pse = Default::default();
+        }
         let mut packet = Packet::DespawnPlayer(protocol::objects::DespawnPlayerPacket {
             receiver: ObjectHeader {
                 id: 0,
@@ -1660,6 +1787,8 @@ impl Zone {
                     let mut dmg_packet = Packet::DamageReceive(dmg_packet);
                     let mut kill_packet = Packet::EnemyKilled(kill_packet);
                     let mut exp_packets = vec![];
+                    // [pso2_vita_offline] EXP PSE of the zone
+                    let exp_pse = self.pse.mul("exp");
                     exec_users(&self.players, |_, mut player| {
                         {
                             let lv = player
@@ -1667,7 +1796,7 @@ impl Zone {
                                 .as_ref()
                                 .map(|c| c.character.get_level().level1 as u32)
                                 .unwrap_or(1);
-                            let exp = (exp_amount as f32 * crate::battle_stats::exp_mul(lv)).floor() as u32;
+                            let exp = (exp_amount as f32 * crate::battle_stats::exp_mul(lv) * exp_pse).floor() as u32;
                             exp_packets.push(player.add_exp(exp))
                         }
                     })

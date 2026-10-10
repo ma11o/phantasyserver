@@ -392,6 +392,7 @@ impl Quests {
         map.set_enemy_level(quest.difficulties.diffs[packet.diff as usize].monster_level as _);
         map.set_quest(quest.definition.name_id, packet.diff as u32);
         let map = Arc::new(Mutex::new(map));
+        crate::pse::spawn_ticker(Arc::downgrade(&map));
         Ok(PartyQuest {
             quest: quest.clone(),
             diff: packet.diff,
@@ -430,6 +431,7 @@ impl Quests {
         map.set_quest_obj(quest.definition.quest_obj);
         map.set_quest(packet.name_id, diff);
         let map = Arc::new(Mutex::new(map));
+        crate::pse::spawn_ticker(Arc::downgrade(&map));
         Ok(PartyQuest {
             quest: quest.clone(),
             diff: diff as u16,

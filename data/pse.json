@@ -1,0 +1,722 @@
+{
+ "rules": {
+  "types_per_zone": 3,
+  "start_chance": 0.08,
+  "up_chance": 0.2,
+  "decay_s": 60,
+  "burst_chance_s": 60,
+  "burst_s": 60,
+  "burst_spawn_every_s": 10,
+  "burst_spawn": [
+   3,
+   5
+  ],
+  "burst_max_enemies": 15,
+  "burst_drop_rolls": 2
+ },
+ "types": [
+  {
+   "id": 0,
+   "key": "atp_strike",
+   "name": "打撃力UP",
+   "metric": "striking_attack",
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 1,
+   "key": "atp_firearm",
+   "name": "射撃力UP",
+   "metric": "ranged_attack",
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 2,
+   "key": "atp_technic",
+   "name": "法撃力UP",
+   "metric": "technique_attack",
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 3,
+   "key": "meseta_drop",
+   "name": "メセタ増加",
+   "metric": "meseta_gain",
+   "levels": [
+    50,
+    100,
+    150,
+    200,
+    300,
+    350,
+    400,
+    500
+   ],
+   "apply": "meseta",
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 4,
+   "key": "pp_consumption",
+   "name": "PP消費量減少",
+   "metric": "pp_cost",
+   "levels": [
+    null,
+    null,
+    -10,
+    -15,
+    -25,
+    -35,
+    -40,
+    -80
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 5,
+   "key": "experience",
+   "name": "経験値増加",
+   "metric": "experience_gain",
+   "levels": [
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    50
+   ],
+   "apply": "exp",
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 6,
+   "key": "rare_enemy",
+   "name": "レアエネミー出現率UP",
+   "metric": "rare_enemy_appearance",
+   "levels": [
+    10,
+    15,
+    25,
+    45,
+    65,
+    85,
+    100,
+    200
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 7,
+   "key": "boost_enemy",
+   "name": "ブーストエネミー出現UP",
+   "metric": null,
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name)"
+  },
+  {
+   "id": 8,
+   "key": "photon_blast",
+   "name": "ブラストゲージ上昇率UP",
+   "metric": "photon_blast_gauge_gain",
+   "levels": [
+    10,
+    20,
+    30,
+    40,
+    60,
+    80,
+    100,
+    200
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 9,
+   "key": "critical_up",
+   "name": "クリティカル率UP",
+   "metric": "critical_chance",
+   "levels": [
+    3,
+    6,
+    9,
+    12,
+    16,
+    20,
+    25,
+    50
+   ],
+   "apply": null,
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 10,
+   "key": "atkup_fire",
+   "name": "フレイムブースト",
+   "metric": "elemental_damage",
+   "levels": [
+    5,
+    15,
+    25,
+    35,
+    50,
+    65,
+    80,
+    100
+   ],
+   "apply": null,
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 11,
+   "key": "atkup_ice",
+   "name": "アイスブースト",
+   "metric": "elemental_damage",
+   "levels": [
+    5,
+    15,
+    25,
+    35,
+    50,
+    65,
+    80,
+    100
+   ],
+   "apply": null,
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 12,
+   "key": "atkup_thunder",
+   "name": "サンダーブースト",
+   "metric": "elemental_damage",
+   "levels": [
+    5,
+    15,
+    25,
+    35,
+    50,
+    65,
+    80,
+    100
+   ],
+   "apply": null,
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 13,
+   "key": "atkup_wind",
+   "name": "ウィンドブースト",
+   "metric": "elemental_damage",
+   "levels": [
+    5,
+    15,
+    25,
+    35,
+    50,
+    65,
+    80,
+    100
+   ],
+   "apply": null,
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 14,
+   "key": "atkup_light",
+   "name": "ライトブースト",
+   "metric": "elemental_damage",
+   "levels": [
+    5,
+    15,
+    25,
+    35,
+    50,
+    65,
+    80,
+    100
+   ],
+   "apply": null,
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 15,
+   "key": "atkup_dark",
+   "name": "ダークブースト",
+   "metric": "elemental_damage",
+   "levels": [
+    5,
+    15,
+    25,
+    35,
+    50,
+    65,
+    80,
+    100
+   ],
+   "apply": null,
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 16,
+   "key": "dropup_fire",
+   "name": "フレイムボーナス",
+   "metric": "weapon_drop_element_assignment",
+   "levels": [
+    3,
+    6,
+    9,
+    12,
+    14,
+    16,
+    20,
+    40
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 17,
+   "key": "dropup_ice",
+   "name": "アイスボーナス",
+   "metric": "weapon_drop_element_assignment",
+   "levels": [
+    3,
+    6,
+    9,
+    12,
+    14,
+    16,
+    20,
+    40
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 18,
+   "key": "dropup_thunder",
+   "name": "サンダーボーナス",
+   "metric": "weapon_drop_element_assignment",
+   "levels": [
+    3,
+    6,
+    9,
+    12,
+    14,
+    16,
+    20,
+    40
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 19,
+   "key": "dropup_wind",
+   "name": "ウィンドボーナス",
+   "metric": "weapon_drop_element_assignment",
+   "levels": [
+    3,
+    6,
+    9,
+    12,
+    14,
+    16,
+    20,
+    40
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 20,
+   "key": "dropup_light",
+   "name": "ライトボーナス",
+   "metric": "weapon_drop_element_assignment",
+   "levels": [
+    3,
+    6,
+    9,
+    12,
+    14,
+    16,
+    20,
+    40
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 21,
+   "key": "dropup_dark",
+   "name": "ダークボーナス",
+   "metric": "weapon_drop_element_assignment",
+   "levels": [
+    3,
+    6,
+    9,
+    12,
+    14,
+    16,
+    20,
+    40
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 22,
+   "key": "add_element",
+   "name": "PSE023",
+   "metric": null,
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name)"
+  },
+  {
+   "id": 23,
+   "key": "justatk_up",
+   "name": "ジャストブースト",
+   "metric": "just_attack_damage",
+   "levels": [
+    3,
+    5,
+    7,
+    10,
+    15,
+    18,
+    20,
+    25
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 24,
+   "key": "weakhit_up",
+   "name": "ウィークブースト",
+   "metric": "weak_target_damage",
+   "levels": [
+    3,
+    5,
+    7,
+    10,
+    15,
+    18,
+    20,
+    25
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 25,
+   "key": "pp_recover",
+   "name": "PP回復UP",
+   "metric": "attack_pp_recovery",
+   "levels": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    40,
+    50
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 26,
+   "key": "zerorange_up",
+   "name": "ゼロレンジブースト",
+   "metric": "close_range_damage",
+   "levels": [
+    3,
+    5,
+    7,
+    10,
+    15,
+    18,
+    20,
+    25
+   ],
+   "apply": null,
+   "pool": true,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 27,
+   "key": "rare_incident",
+   "name": "レアトライアルブースト",
+   "metric": "rare_trial_appearance",
+   "levels": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    40,
+    100
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 28,
+   "key": "attack",
+   "name": "攻撃力UP",
+   "metric": "base_attack_stats",
+   "levels": [
+    1,
+    3,
+    5,
+    10,
+    15,
+    20,
+    50,
+    120
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 29,
+   "key": "compound1",
+   "name": "マルチブースト",
+   "metric": "combined_attack_close_range_pp",
+   "levels": [
+    3,
+    5,
+    7,
+    10,
+    15,
+    18,
+    20,
+    25
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 30,
+   "key": "costume",
+   "name": "コスチュームボーナス",
+   "metric": "costume_reward_bonus",
+   "levels": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 31,
+   "key": "ta_justattack",
+   "name": "テックアーツJAブースト",
+   "metric": null,
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name)"
+  },
+  {
+   "id": 32,
+   "key": "damage_cut",
+   "name": "ダメージカット",
+   "metric": "incoming_damage",
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 33,
+   "key": "compound1_general",
+   "name": "マルチブースト",
+   "metric": "combined_attack_close_range_pp",
+   "levels": [
+    3,
+    5,
+    7,
+    10,
+    15,
+    18,
+    20,
+    25
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
+  },
+  {
+   "id": 34,
+   "key": "mack_buff1",
+   "name": "攻撃力特大UP",
+   "metric": null,
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name)"
+  },
+  {
+   "id": 35,
+   "key": "mack_buff2",
+   "name": "サバイバル用仮２",
+   "metric": null,
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name)"
+  },
+  {
+   "id": 36,
+   "key": "mack_buff3",
+   "name": "サバイバル用仮３",
+   "metric": null,
+   "levels": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "apply": null,
+   "pool": false,
+   "source": "client (id, name)"
+  }
+ ]
+}

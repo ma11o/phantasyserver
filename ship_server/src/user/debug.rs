@@ -909,6 +909,49 @@ async fn run_command(line: &str) -> Result<String, Error> {
             }
             Ok(format!("co {op} {id} {}", order.name))
         }
+        ("pse", [op, rest @ ..]) => {
+            // pse show | set <id> <level 0..8> | kill [n]: n (default all) enemies of the zone to 1 HP, then one sword
+            // hit each through the normal damage path (kill -> PSE roll -> drops)
+            let (map, zone, player_id) = {
+                let lock = user.lock().await;
+                (lock.get_current_map().ok_or(Error::InvalidInput("no map"))?, lock.zone_pos, lock.get_user_id())
+            };
+            let bad = || Error::InvalidInput("pse show | set <id> <level> | kill [n]");
+            let mut map = map.lock().await;
+            match *op {
+                "show" => {}
+                "set" => {
+                    let (Some(id), Some(lv)) = (
+                        rest.first().and_then(|v| parse_num::<u32>(v)),
+                        rest.get(1).and_then(|v| parse_num::<u32>(v)),
+                    ) else {
+                        return Err(bad());
+                    };
+                    map.pse_set(zone, id, lv).await?;
+                }
+                "kill" => {
+                    let mut ids = map.zone_enemy_ids(zone);
+                    if let Some(n) = rest.first().and_then(|v| parse_num::<usize>(v)) {
+                        ids.truncate(n);
+                    }
+                    map.set_enemy_hp(zone, 1);
+                    for id in &ids {
+                        map.deal_damage(
+                            zone,
+                            DealDamagePacket {
+                                inflicter: ObjectHeader { id: player_id, entity_type: ObjectType::Player, ..Default::default() },
+                                target: ObjectHeader { id: *id, entity_type: ObjectType::Object, ..Default::default() },
+                                attack_id: 3813693250,
+                                ..Default::default()
+                            },
+                        )
+                        .await?;
+                    }
+                }
+                _ => return Err(bad()),
+            }
+            Ok(map.pse_state(zone))
+        }
         ("etrial", [op, rest @ ..]) => {
             // etrial set k=v.. | start | end ok|ng [flags meseta exp npckey] | prog a b done d
             let (map, zone) = {
