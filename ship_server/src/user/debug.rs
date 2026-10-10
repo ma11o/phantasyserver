@@ -1024,7 +1024,7 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 "go" => {
                     // etrial go: the real path (rules except the chance, enemies, timeout) at the player
                     let pos = user.lock().await.position;
-                    let started = map.lock().await.etrial_try_start(zone, pos, true).await?;
+                    let started = map.lock().await.etrial_try_start(zone, pos, None, true).await?;
                     match started {
                         Some((obj_id, secs)) => {
                             crate::etrial::spawn_timeout(Arc::downgrade(&map), zone, obj_id, secs);
@@ -1087,6 +1087,12 @@ async fn run_command(line: &str) -> Result<String, Error> {
                     let packet = Packet::EmergencyProgress(crate::etrial::progress_packet(p.obj_id, p.map_id, num(0), num(1), num(2), num(3)));
                     user.lock().await.send_packet(&packet).await?;
                     "sent 15-05".to_string()
+                }
+                "rem" => {
+                    let left = rest.first().and_then(|v| parse_num::<u32>(v)).unwrap_or(1);
+                    let packet = Packet::Unk1508(crate::etrial::remaining_packet(p.obj_id, p.map_id, left));
+                    user.lock().await.send_packet(&packet).await?;
+                    "sent 15-08".to_string()
                 }
                 _ => return Err(bad()),
             };

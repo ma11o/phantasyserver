@@ -12,7 +12,7 @@ use pso2packetlib::{
     fixed_types::FixedBytes,
     protocol::{
         ObjectHeader, ObjectType,
-        emergency::{EmergencyCondition, EmergencyEndPacket, EmergencyProgressPacket, SpawnEmergencyPacket, Unk1502_1},
+        emergency::{EmergencyCondition, EmergencyEndPacket, EmergencyProgressPacket, SpawnEmergencyPacket, Unk1502_1, Unk1508Packet},
     },
 };
 
@@ -161,6 +161,11 @@ pub fn progress_packet(obj_id: u32, map_id: u16, unk2: u32, unk3: u32, done: u32
     EmergencyProgressPacket { emergency: object(obj_id, map_id), unk2, unk3, done, unk5 }
 }
 
+/// 15-08: the "残り$(0)体！" message (`RemainingEnemyNumMsg`, client `0x82f216aa`). `unk2` = 0 like 15-05, `unk3` = enemies left.
+pub fn remaining_packet(obj_id: u32, map_id: u16, left: u32) -> Unk1508Packet {
+    Unk1508Packet { emergency: object(obj_id, map_id), unk2: 0, unk3: left }
+}
+
 /// One trial kind (`data/etrials/<kind>.json`, made by `tools/gen_etrials.py`).
 #[derive(Debug, Clone, Default, serde::Deserialize)]
 #[serde(default)]
@@ -183,6 +188,10 @@ pub struct Def {
     pub npcs: Vec<u32>,
     /// target slot 0 (`TrialObjectiveKind`): (slot kind, kind); the second u32 is the enemy count
     pub slot: Option<(u8, u8)>,
+    /// fixed places (the map's `incidentcollision`): in the chunk nearest to one, the trial starts there with its enemies
+    pub spots: Vec<Spot>,
+    /// 15-08 "残り N 体！" after a kill while 1..=N enemies are left (0 = never)
+    pub remaining_msg_at: u32,
     /// fixed enemies (internal names, one picked per spawn); empty = the zone's enemies
     pub enemy_names: Vec<String>,
     /// pass the first enemy's name as `$(0)` (`ii_areaboss`: "$(0)討伐")
@@ -199,6 +208,16 @@ pub struct Def {
     pub chance: f32,
     pub max_per_zone: usize,
     pub max_per_run: u32,
+}
+
+/// A fixed place of a kind: the layout (`map_id` + `args`), the position and the enemies there.
+#[derive(Debug, Clone, Default, serde::Deserialize)]
+#[serde(default)]
+pub struct Spot {
+    pub map_id: u32,
+    pub args: u32,
+    pub pos: [f32; 3],
+    pub enemy_names: Vec<String>,
 }
 
 /// The trial kinds (`data/etrials/<kind>.json`). The start rules (chance, caps) are the first kind's.

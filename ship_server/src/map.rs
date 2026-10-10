@@ -577,16 +577,25 @@ impl Map {
                 .filter_map(|t| {
                     let i = t.enemies.iter().position(|e| e == id)?;
                     t.enemies.remove(i);
-                    if crate::etrial::kinds()[t.kind].slot.is_some() {
-                        progress.push((t.obj_id, t.total - t.enemies.len() as u32));
+                    let def = &crate::etrial::kinds()[t.kind];
+                    let left = t.enemies.len() as u32;
+                    if def.slot.is_some() {
+                        progress.push((t.obj_id, t.total - left, None));
+                    }
+                    if left > 0 && left <= def.remaining_msg_at {
+                        progress.push((t.obj_id, 0, Some(left)));
                     }
                     t.enemies.is_empty().then_some(t.obj_id)
                 })
                 .collect();
-            // 15-05: slot 0 = enemies killed (the pane's counter; not shown on the Vita yet, etrial.md)
+            // 15-05: slot 0 = enemies killed (the pane's counter; not shown on the Vita yet, etrial.md);
+            // 15-08: "残り N 体！" near the end
             let world_id = self.zone_world_id(zone_pos).unwrap_or(0) as u16;
-            for (obj_id, killed) in progress {
-                let packet = Packet::EmergencyProgress(crate::etrial::progress_packet(obj_id, world_id, 0, 0, killed, 0));
+            for (obj_id, killed, left) in progress {
+                let packet = match left {
+                    Some(left) => Packet::Unk1508(crate::etrial::remaining_packet(obj_id, world_id, left)),
+                    None => Packet::EmergencyProgress(crate::etrial::progress_packet(obj_id, world_id, 0, 0, killed, 0)),
+                };
                 exec_users(&self.zones[zone_pos].players, |_, mut player| {
                     let _ = player.try_send_packet(&packet);
                 })
@@ -716,7 +725,7 @@ impl Map {
                 .find(|c| c.chunk_id == packet.chunk_id)
                 .and_then(|c| c.enemy_spawn_points.iter().choose(&mut rand::thread_rng()).copied());
             if let Some(point) = point {
-                return self.etrial_try_start(zone_pos, point, false).await;
+                return self.etrial_try_start(zone_pos, point, Some(packet.chunk_id), false).await;
             }
         }
         Ok(None)
@@ -730,6 +739,7 @@ impl Map {
         &mut self,
         zone_pos: usize,
         pos: Position,
+        chunk: Option<u32>,
         force: bool,
     ) -> Result<Option<(u32, u64)>, Error> {
         let rules = crate::etrial::rules();
@@ -747,7 +757,26 @@ impl Map {
             return Ok(None);
         };
         let def = &crate::etrial::kinds()[kind];
-        let names: Vec<String> = if def.enemy_names.is_empty() {
+        // a fixed place of the kind when the opened chunk is the one nearest to it (debug `go`: any chunk)
+        let settings = &zone.data.settings;
+        let spot = def.spots.iter().find(|s| {
+            s.map_id == settings.map_id
+                && s.args == settings.args
+                && chunk.map_or(true, |c| Some(c) == Self::chunk_near(&zone.data.chunks, s.pos))
+        });
+        let (pos, spot_names) = match spot {
+            Some(s) => {
+                let mut p = pos;
+                p.pos_x = half::f16::from_f32(s.pos[0]);
+                p.pos_y = half::f16::from_f32(s.pos[1]);
+                p.pos_z = half::f16::from_f32(s.pos[2]);
+                (p, Some(s.enemy_names.clone()))
+            }
+            None => (pos, None),
+        };
+        let names: Vec<String> = if let Some(n) = spot_names.filter(|n| !n.is_empty()) {
+            n
+        } else if def.enemy_names.is_empty() {
             zone.data.enemies.iter().map(|e| e.enemy_name.clone()).collect()
         } else {
             def.enemy_names.clone()
@@ -892,6 +921,17 @@ impl Map {
             z.active.iter().map(|a| (a.id, a.level, a.chance_until.is_some())).collect::<Vec<_>>(),
             z.burst.map(|b| (b.0, b.1.saturating_duration_since(Instant::now()).as_secs()))
         )
+    }
+
+    /// [pso2_vita_offline] The chunk with the enemy spawn point nearest to `pos` (within 40 m).
+    fn chunk_near(chunks: &[data_structs::map::ZoneChunk], pos: [f32; 3]) -> Option<u32> {
+        chunks
+            .iter()
+            .flat_map(|c| c.enemy_spawn_points.iter().map(move |p| (c.chunk_id, p)))
+            .map(|(id, p)| (id, (p.pos_x.to_f32() - pos[0]).hypot(p.pos_z.to_f32() - pos[2])))
+            .filter(|(_, d)| *d <= 40.0)
+            .min_by(|a, b| a.1.total_cmp(&b.1))
+            .map(|(id, _)| id)
     }
 
     /// [pso2_vita_offline] Enemies still alive in the zone's running emergency trials (debug `etrial kill`).

@@ -26,6 +26,7 @@
   2,
   2
  ],
+ "remaining_msg_at": 0,
  "enemy_names": [
   "BigBeastA"
  ],
@@ -70,7 +71,23 @@
   "flags": "client",
   "npcs": "tuned",
   "weight": "tuned",
+  "remaining_msg_at": "tuned",
   "enemy_names": "tuned",
+  "spots": "client",
   "reward_scale": "tuned"
- }
+ },
+ "spots": [
+  {
+   "map_id": 310,
+   "args": 1744,
+   "pos": [
+    -40.0,
+    0.0,
+    -140.0
+   ],
+   "enemy_names": [
+    "Spider"
+   ]
+  }
+ ]
 }
