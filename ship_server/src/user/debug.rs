@@ -945,6 +945,17 @@ async fn run_command(line: &str) -> Result<String, Error> {
                             "op" => p.op = n(v)?,
                             "u17" => p.unk17 = n(v)?,
                             "u21" => p.unk21 = n(v)?,
+                            "slot0" | "slot1" => {
+                                let i = (k == "slot1") as usize;
+                                // slotN=kind,sub,a,b | slotN=-
+                                p.slots[i] = if v == "-" {
+                                    None
+                                } else {
+                                    let f: Vec<u32> = v.split(',').map(|x| parse_num::<u32>(x).ok_or_else(bad)).collect::<Result<_, _>>()?;
+                                    let g = |j: usize| f.get(j).copied().unwrap_or(0);
+                                    Some((g(0) as u8, g(1) as u8, g(2), g(3)))
+                                };
+                            }
                             _ => return Err(bad()),
                         }
                     }

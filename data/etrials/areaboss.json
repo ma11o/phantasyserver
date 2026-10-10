@@ -1,6 +1,6 @@
 {
- "trial_id": "ii_boss_ahl_3boss",
- "kind": 2,
+ "trial_id": "ii_areaboss",
+ "kind": 0,
  "color": 1,
  "name_key": "IncidentName",
  "abstract_key": "TrialAbstract",
@@ -12,7 +12,7 @@
   "FCondTimeLimitOver"
  ],
  "pass_keys": [
-  "ProgNoDataAllEnemyKill"
+  "ProgNumEnemyKill"
  ],
  "flags": 8,
  "npcs": [
@@ -26,15 +26,17 @@
   2,
   2
  ],
- "enemy_names": [],
- "name_arg": false,
- "weight": 3,
- "reward_scale": 1.0,
- "enemies": [
-  6,
-  9
+ "enemy_names": [
+  "BigBeastA"
  ],
- "time_limit_s": 120,
+ "name_arg": true,
+ "weight": 1,
+ "reward_scale": 1.5,
+ "enemies": [
+  1,
+  1
+ ],
+ "time_limit_s": 180,
  "meseta_per_level": 29,
  "exp_points": [
   [
@@ -56,10 +58,10 @@
  "max_per_run": 3,
  "source": {
   "trial_id": "client",
-  "kind": "client",
+  "kind": "estimated",
   "meseta_per_level": "estimated",
   "exp_points": "estimated",
-  "time_limit_s": "estimated",
+  "time_limit_s": "tuned",
   "max_per_zone": "historical",
   "chance": "tuned",
   "max_per_run": "tuned",
@@ -67,6 +69,8 @@
   "failure_ratio": "tuned",
   "flags": "client",
   "npcs": "tuned",
-  "weight": "tuned"
+  "weight": "tuned",
+  "enemy_names": "tuned",
+  "reward_scale": "tuned"
  }
 }

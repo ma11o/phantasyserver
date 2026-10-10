@@ -554,15 +554,28 @@ impl Map {
         // from it.
         // [pso2_vita_offline] emergency trials: the trial's last enemy ends it with a success
         if let Some((_, _, id, _)) = &killed {
+            let mut progress = vec![];
             let done: Vec<u32> = self.zones[zone_pos]
                 .etrials
                 .iter_mut()
                 .filter_map(|t| {
                     let i = t.enemies.iter().position(|e| e == id)?;
                     t.enemies.remove(i);
+                    if crate::etrial::kinds()[t.kind].slot.is_some() {
+                        progress.push((t.obj_id, t.total - t.enemies.len() as u32));
+                    }
                     t.enemies.is_empty().then_some(t.obj_id)
                 })
                 .collect();
+            // 15-05: slot 0 = enemies killed (the pane's counter; not shown on the Vita yet, etrial.md)
+            let world_id = self.zone_world_id(zone_pos).unwrap_or(0) as u16;
+            for (obj_id, killed) in progress {
+                let packet = Packet::EmergencyProgress(crate::etrial::progress_packet(obj_id, world_id, 0, 0, killed, 0));
+                exec_users(&self.zones[zone_pos].players, |_, mut player| {
+                    let _ = player.try_send_packet(&packet);
+                })
+                .await;
+            }
             for obj_id in done {
                 self.etrial_end(zone_pos, obj_id, true).await?;
             }
@@ -693,7 +706,7 @@ impl Map {
         Ok(None)
     }
 
-    /// [pso2_vita_offline] Starts an emergency trial (annihilation, `etrial.rs`) around `pos` when the rules allow it:
+    /// [pso2_vita_offline] Starts an emergency trial (a kind picked by weight, `etrial.rs`) around `pos` when the rules allow it:
     /// a quest map, fewer than `max_per_zone` running in the zone and `max_per_run` started in the run, then the
     /// chance (`force` skips only the chance). Spawns the trial's enemies and sends 15-02 to the zone. Returns
     /// (trial object id, time limit in seconds) for the caller's timeout (`etrial::spawn_timeout`).
@@ -703,18 +716,26 @@ impl Map {
         pos: Position,
         force: bool,
     ) -> Result<Option<(u32, u64)>, Error> {
-        let def = crate::etrial::annihilation();
+        let rules = crate::etrial::rules();
         let zone = &self.zones[zone_pos];
         if !matches!(self.map_type, MapType::QuestMap)
-            || zone.etrials.len() >= def.max_per_zone
-            || self.etrial_runs >= def.max_per_run
+            || zone.etrials.len() >= rules.max_per_zone
+            || self.etrial_runs >= rules.max_per_run
         {
             return Ok(None);
         }
-        if !force && rand::random::<f32>() >= crate::etrial::chance(def) {
+        if !force && rand::random::<f32>() >= crate::etrial::chance(rules) {
             return Ok(None);
         }
-        let names: Vec<String> = zone.data.enemies.iter().map(|e| e.enemy_name.clone()).collect();
+        let Some(kind) = crate::etrial::pick_kind() else {
+            return Ok(None);
+        };
+        let def = &crate::etrial::kinds()[kind];
+        let names: Vec<String> = if def.enemy_names.is_empty() {
+            zone.data.enemies.iter().map(|e| e.enemy_name.clone()).collect()
+        } else {
+            def.enemy_names.clone()
+        };
         let Some(block_data) = self.block_data.to_owned() else {
             return Ok(None);
         };
@@ -730,15 +751,18 @@ impl Map {
         for i in 0..n {
             let a = i as f32 * std::f32::consts::TAU / n as f32;
             let mut p = pos;
-            p.pos_x = half::f16::from_f32(pos.pos_x.to_f32() + 4.0 * a.cos());
-            p.pos_z = half::f16::from_f32(pos.pos_z.to_f32() + 4.0 * a.sin());
+            if n > 1 {
+                p.pos_x = half::f16::from_f32(pos.pos_x.to_f32() + 4.0 * a.cos());
+                p.pos_z = half::f16::from_f32(pos.pos_z.to_f32() + 4.0 * a.sin());
+            }
             let name = names.iter().choose(&mut rand::thread_rng()).cloned().unwrap_or_default();
             let id = self.zones[zone_pos]
                 .spawn_enemy(&block_data, &mut self.max_id, self.enemy_level, &name, p)
                 .await?;
             enemies.push(id);
         }
-        let packet = Packet::SpawnEmergency(crate::etrial::start_packet(&def.start_params(obj_id, world_id)));
+        let params = def.start_params(obj_id, world_id, &names[0], n);
+        let packet = Packet::SpawnEmergency(crate::etrial::start_packet(&params));
         exec_users(&self.zones[zone_pos].players, |_, mut player| {
             let _ = player.try_send_packet(&packet);
         })
@@ -752,6 +776,8 @@ impl Map {
         );
         self.zones[zone_pos].etrials.push(crate::etrial::Active {
             obj_id,
+            kind,
+            total: n,
             enemies,
             started: Instant::now(),
         });
@@ -774,7 +800,7 @@ impl Map {
             return Ok(false);
         };
         let trial = zone.etrials.remove(i);
-        let def = crate::etrial::annihilation();
+        let def = &crate::etrial::kinds()[trial.kind];
         let (mut meseta, mut exp) = def.reward(self.enemy_level);
         if !success {
             meseta = (meseta as f32 * def.failure_ratio) as u32;

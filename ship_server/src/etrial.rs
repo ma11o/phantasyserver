@@ -12,7 +12,7 @@ use pso2packetlib::{
     fixed_types::FixedBytes,
     protocol::{
         ObjectHeader, ObjectType,
-        emergency::{EmergencyCondition, EmergencyEndPacket, EmergencyProgressPacket, SpawnEmergencyPacket},
+        emergency::{EmergencyCondition, EmergencyEndPacket, EmergencyProgressPacket, SpawnEmergencyPacket, Unk1502_1},
     },
 };
 
@@ -39,6 +39,10 @@ pub struct StartParams {
     pub op: u32,
     pub unk17: u32,
     pub unk21: u32,
+    /// `unk1` target slots: (kind +0x14, sub +0x15, u32 +0x00, u32 +0x04); `None` = empty (kind 0 / sub 0xFF)
+    pub slots: [Option<(u8, u8, u32, u32)>; 2],
+    /// `$(0)` of the name / abstract / begin line / begin message (`unk3` / `unk5` / `unk11` / `unk13`)
+    pub args: Vec<Unk1502_1>,
 }
 
 impl Default for StartParams {
@@ -64,6 +68,8 @@ impl Default for StartParams {
             op: 0,
             unk17: 0,
             unk21: 0,
+            slots: [None, None],
+            args: vec![],
         }
     }
 }
@@ -79,8 +85,18 @@ fn cond(key: &str) -> EmergencyCondition {
 pub fn start_packet(p: &StartParams) -> SpawnEmergencyPacket {
     // unk1: two empty target slots (0x18 each), then u32 x2, flags, 4 bytes
     let mut unk1 = vec![0u8; 0x40];
-    unk1[0x15] = 0xFF;
-    unk1[0x18 + 0x15] = 0xFF;
+    for (i, slot) in p.slots.iter().enumerate() {
+        let o = i * 0x18;
+        match slot {
+            Some((kind, sub, a, b)) => {
+                unk1[o..o + 4].copy_from_slice(&a.to_le_bytes());
+                unk1[o + 4..o + 8].copy_from_slice(&b.to_le_bytes());
+                unk1[o + 0x14] = *kind;
+                unk1[o + 0x15] = *sub;
+            }
+            None => unk1[o + 0x15] = 0xFF,
+        }
+    }
     unk1[0x38..0x3C].copy_from_slice(&p.flags.to_le_bytes());
     unk1[0x3C] = p.disp;
     unk1[0x3D] = p.b3d;
@@ -95,13 +111,17 @@ pub fn start_packet(p: &StartParams) -> SpawnEmergencyPacket {
         trial_id: p.trial_id.as_str().into(),
         unk1: unk1.into(),
         unk2: p.name_key.as_str().into(),
+        unk3: p.args.clone(),
         unk4: p.abstract_key.as_str().into(),
+        unk5: p.args.clone(),
         fail_conds: p.fail_keys.iter().map(|k| cond(k)).collect::<Vec<_>>().into(),
         pass_conds: p.pass_keys.iter().map(|k| cond(k)).collect::<Vec<_>>().into(),
         unk8: p.fail_keys.len() as u32,
         unk9: p.pass_keys.len() as u32,
         unk10: p.begin_key.as_str().into(),
+        unk11: p.args.clone(),
         unk12: p.key12.as_str().into(),
+        unk13: p.args.clone(),
         unk14: u32::from_le_bytes(unk14),
         unk15: unk15.into(),
         unk16: p.op,
@@ -125,6 +145,18 @@ pub fn end_packet(obj_id: u32, map_id: u16, success: bool, flags: u32, meseta: u
     }
 }
 
+/// A text argument: a string (type 2) for role `role` (`DispTextArg`: 12 = NameEnemyAtAssign, the enemy's
+/// internal name, shown with its display name).
+pub fn text_arg(text: &str, role: u32) -> Unk1502_1 {
+    let mut b = vec![0u8; 0x24];
+    let t = text.as_bytes();
+    let n = t.len().min(0x1E);
+    b[..n].copy_from_slice(&t[..n]);
+    b[0x1F] = 2;
+    b[0x20..0x24].copy_from_slice(&role.to_le_bytes());
+    Unk1502_1 { unk1: b.into() }
+}
+
 pub fn progress_packet(obj_id: u32, map_id: u16, unk2: u32, unk3: u32, done: u32, unk5: u32) -> EmergencyProgressPacket {
     EmergencyProgressPacket { emergency: object(obj_id, map_id), unk2, unk3, done, unk5 }
 }
@@ -143,6 +175,22 @@ pub struct Def {
     pub failure_key: String,
     pub fail_keys: Vec<String>,
     pub pass_keys: Vec<String>,
+    /// `TrialBeginMsg` (the band under the code)
+    pub begin_msg_key: String,
+    /// `unk1[0x38]`: 8 = NPC lines (begin / end)
+    pub flags: u32,
+    /// `unk16`, one picked at random: the NPC who speaks (0 Brigitta, 1 Hilda, 2 Melita, 3 Henrietta, 4 Xiera)
+    pub npcs: Vec<u32>,
+    /// target slot 0 (`TrialObjectiveKind`): (slot kind, kind); the second u32 is the enemy count
+    pub slot: Option<(u8, u8)>,
+    /// fixed enemies (internal names, one picked per spawn); empty = the zone's enemies
+    pub enemy_names: Vec<String>,
+    /// pass the first enemy's name as `$(0)` (`ii_areaboss`: "$(0)討伐")
+    pub name_arg: bool,
+    /// relative weight among the kinds when one starts
+    pub weight: u32,
+    /// reward multiplier
+    pub reward_scale: f32,
     pub enemies: (u32, u32),
     pub time_limit_s: u64,
     pub meseta_per_level: u32,
@@ -153,16 +201,48 @@ pub struct Def {
     pub max_per_run: u32,
 }
 
-pub fn annihilation() -> &'static Def {
-    static DEF: std::sync::OnceLock<Def> = std::sync::OnceLock::new();
-    DEF.get_or_init(|| serde_json::from_str(include_str!("../../data/etrials/annihilation.json")).unwrap_or_default())
+/// The trial kinds (`data/etrials/<kind>.json`). The start rules (chance, caps) are the first kind's.
+pub fn kinds() -> &'static [Def] {
+    static DEFS: std::sync::OnceLock<Vec<Def>> = std::sync::OnceLock::new();
+    DEFS.get_or_init(|| {
+        [include_str!("../../data/etrials/annihilation.json"), include_str!("../../data/etrials/areaboss.json")]
+            .iter()
+            .filter_map(|s| serde_json::from_str(s).map_err(|e| log::warn!("[pso2-etrial] bad def: {e}")).ok())
+            .collect()
+    })
+}
+
+pub fn rules() -> &'static Def {
+    static EMPTY: std::sync::OnceLock<Def> = std::sync::OnceLock::new();
+    kinds().first().unwrap_or_else(|| EMPTY.get_or_init(Def::default))
+}
+
+/// A kind index by weight. `PSO2_ETRIAL_KIND=<trial_id>` picks that one.
+pub fn pick_kind() -> Option<usize> {
+    let k = kinds();
+    if let Ok(id) = std::env::var("PSO2_ETRIAL_KIND") {
+        return k.iter().position(|d| d.trial_id == id);
+    }
+    let total: u32 = k.iter().map(|d| d.weight).sum();
+    if total == 0 {
+        return None;
+    }
+    let mut r = rand::random::<u32>() % total;
+    k.iter().position(|d| {
+        if r < d.weight {
+            true
+        } else {
+            r -= d.weight;
+            false
+        }
+    })
 }
 
 impl Def {
     /// (meseta, exp) for a success at the quest's enemy level. EXP: log-log interpolation of `exp_points`,
     /// extended past both ends with the nearest segment.
     pub fn reward(&self, level: u32) -> (u32, u32) {
-        let meseta = self.meseta_per_level * level.max(1);
+        let meseta = (self.meseta_per_level * level.max(1)) as f32 * self.reward_scale;
         let p = &self.exp_points;
         let exp = if p.len() < 2 {
             0.0
@@ -173,10 +253,11 @@ impl Def {
             let (l0, e0, l1, e1) = ((l0 as f64).ln(), (e0 as f64).ln(), (l1 as f64).ln(), (e1 as f64).ln());
             (e0 + (lv.ln() - l0) * (e1 - e0) / (l1 - l0)).exp()
         };
-        (meseta, exp.round() as u32)
+        (meseta.round() as u32, (exp * self.reward_scale as f64).round() as u32)
     }
 
-    pub fn start_params(&self, obj_id: u32, map_id: u16) -> StartParams {
+    pub fn start_params(&self, obj_id: u32, map_id: u16, enemy_name: &str, count: u32) -> StartParams {
+        let npc = self.npcs.get(rand::random::<usize>() % self.npcs.len().max(1)).copied().unwrap_or(0);
         StartParams {
             obj_id,
             map_id,
@@ -186,8 +267,13 @@ impl Def {
             fail_keys: self.fail_keys.clone(),
             pass_keys: self.pass_keys.clone(),
             begin_key: self.begin_key.clone(),
+            key12: self.begin_msg_key.clone(),
+            flags: self.flags,
+            op: npc,
             disp: self.color,
             b3e: self.kind,
+            slots: [self.slot.map(|(k, s)| (k, s, 0, count)), None],
+            args: if self.name_arg { vec![text_arg(enemy_name, 12)] } else { vec![] },
             ..Default::default()
         }
     }
@@ -197,6 +283,9 @@ impl Def {
 #[derive(Debug, Clone)]
 pub struct Active {
     pub obj_id: u32,
+    /// index in `kinds()`
+    pub kind: usize,
+    pub total: u32,
     pub enemies: Vec<u32>,
     pub started: std::time::Instant,
 }
