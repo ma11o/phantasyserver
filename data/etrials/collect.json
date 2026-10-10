@@ -1,0 +1,98 @@
+{
+ "trial_id": "ii_collect_goods_a",
+ "kind": 3,
+ "color": 1,
+ "name_key": "IncidentName",
+ "abstract_key": "TrialAbstract",
+ "begin_key": "NpcComOnBegin",
+ "success_key": "NpcComOnSuccess",
+ "failure_key": "NpcComOnFailure",
+ "begin_msg_key": "TrialBeginMsg",
+ "fail_keys": [
+  "FCondTimeLimitOver"
+ ],
+ "pass_keys": [
+  "ProgNumGoods"
+ ],
+ "flags": 8,
+ "npcs": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "slot": [
+  2,
+  5
+ ],
+ "remaining_msg_at": 0,
+ "enemy_names": [],
+ "name_arg": false,
+ "weight": 2,
+ "reward_scale": 1.0,
+ "enemies": [
+  0,
+  0
+ ],
+ "time_limit_s": 180,
+ "meseta_per_level": 29,
+ "exp_points": [
+  [
+   32,
+   1011
+  ],
+  [
+   42,
+   1676
+  ],
+  [
+   80,
+   4532
+  ]
+ ],
+ "failure_ratio": 0.25,
+ "chance": 0.15,
+ "max_per_zone": 2,
+ "max_per_run": 3,
+ "source": {
+  "trial_id": "client",
+  "kind": "estimated",
+  "meseta_per_level": "estimated",
+  "exp_points": "estimated",
+  "time_limit_s": "tuned",
+  "max_per_zone": "historical",
+  "chance": "tuned",
+  "max_per_run": "tuned",
+  "enemies": "tuned",
+  "failure_ratio": "tuned",
+  "flags": "client",
+  "npcs": "tuned",
+  "weight": "tuned",
+  "remaining_msg_at": "tuned",
+  "goods": "client",
+  "pod_object": "client",
+  "goods_count": "tuned",
+  "goods_radius": "tuned"
+ },
+ "goods": [
+  {
+   "trial_id": "ii_collect_goods_a",
+   "object": "oa_handcarry_insect"
+  },
+  {
+   "trial_id": "ii_collect_goods_b",
+   "object": "oa_handcarry_egg"
+  },
+  {
+   "trial_id": "ii_collect_goods_c",
+   "object": "oa_handcarry_crystal"
+  }
+ ],
+ "pod_object": "oa_handcarry_pod",
+ "goods_count": [
+  3,
+  3
+ ],
+ "goods_radius": 8.0
+}

@@ -208,6 +208,21 @@ pub struct Def {
     pub chance: f32,
     pub max_per_zone: usize,
     pub max_per_run: u32,
+    /// collect kinds: the goods to carry to the pod, one variant picked per trial (the variant's text file and object)
+    pub goods: Vec<GoodsVariant>,
+    /// collect kinds: the pod object (`oa_handcarry_pod`, `Object:SalvagePod`)
+    pub pod_object: String,
+    /// collect kinds: how many goods (min, max) and how far from the pod (m)
+    pub goods_count: (u32, u32),
+    pub goods_radius: f32,
+}
+
+/// A collect variant: the text file (`ii_collect_goods_a`) and its goods object (`oa_handcarry_insect`).
+#[derive(Debug, Clone, Default, serde::Deserialize)]
+#[serde(default)]
+pub struct GoodsVariant {
+    pub trial_id: String,
+    pub object: String,
 }
 
 /// A fixed place of a kind: the layout (`map_id` + `args`), the position and the enemies there.
@@ -224,7 +239,11 @@ pub struct Spot {
 pub fn kinds() -> &'static [Def] {
     static DEFS: std::sync::OnceLock<Vec<Def>> = std::sync::OnceLock::new();
     DEFS.get_or_init(|| {
-        [include_str!("../../data/etrials/annihilation.json"), include_str!("../../data/etrials/areaboss.json")]
+        [
+            include_str!("../../data/etrials/annihilation.json"),
+            include_str!("../../data/etrials/areaboss.json"),
+            include_str!("../../data/etrials/collect.json"),
+        ]
             .iter()
             .filter_map(|s| serde_json::from_str(s).map_err(|e| log::warn!("[pso2-etrial] bad def: {e}")).ok())
             .collect()
@@ -307,6 +326,13 @@ pub struct Active {
     pub total: u32,
     pub enemies: Vec<u32>,
     pub started: std::time::Instant,
+    /// collect kinds: goods objects not delivered yet, the pod, (player, goods) being carried, goods delivered
+    pub goods: Vec<u32>,
+    pub pod: Option<u32>,
+    pub carried: Vec<(u32, u32)>,
+    pub delivered: u32,
+    /// where the pod and the goods were spawned (debug `etrial to`)
+    pub places: Vec<(u32, pso2packetlib::protocol::models::Position)>,
 }
 
 /// `PSO2_ETRIAL`: `off` (never), `force` (every chunk opened, still within the caps) or a chance 0..1;

@@ -807,15 +807,78 @@ impl Map {
                 .await?;
             enemies.push(id);
         }
-        let params = def.start_params(obj_id, world_id, &names[0], n);
+        // collect kinds: the pod at the trial's place and the goods around it (shown by "APPEAR" when the client
+        // sends "ONHITAPPEAR", `etrial_interact`)
+        let mut goods = vec![];
+        let mut pod = None;
+        let mut places = vec![];
+        let mut trial_id = def.trial_id.clone();
+        let variant = def.goods.iter().choose(&mut rand::thread_rng());
+        if let Some(v) = variant {
+            trial_id = v.trial_id.clone();
+            let (lo, hi) = def.goods_count;
+            let g = rand::distributions::Uniform::new_inclusive(lo.min(hi), hi.max(lo)).sample(&mut rand::thread_rng());
+            // goods on the zone's enemy spawn points (walkable ground) 4 m..3 x radius from the pod and 4 m apart,
+            // then on a circle of `goods_radius` (may be inside a wall: such goods can't be accessed)
+            let dist = |a: &Position, b: &Position| (a.pos_x.to_f32() - b.pos_x.to_f32()).hypot(a.pos_z.to_f32() - b.pos_z.to_f32());
+            let mut points: Vec<Position> = self.zones[zone_pos]
+                .data
+                .chunks
+                .iter()
+                .flat_map(|c| c.enemy_spawn_points.iter().copied())
+                .filter(|p| (4.0..=def.goods_radius * 3.0).contains(&dist(p, &pos)))
+                .collect();
+            rand::seq::SliceRandom::shuffle(&mut points[..], &mut rand::thread_rng());
+            let mut spawns = vec![(def.pod_object.clone(), pos)];
+            for p in points {
+                if spawns.len() as u32 > g {
+                    break;
+                }
+                if spawns.iter().skip(1).all(|(_, q)| dist(&p, q) >= 4.0) {
+                    spawns.push((v.object.clone(), p));
+                }
+            }
+            let a0 = rand::Rng::gen_range(&mut rand::thread_rng(), 0.0f32..std::f32::consts::TAU);
+            for i in 0..g.saturating_sub(spawns.len() as u32 - 1) {
+                let a = a0 + i as f32 * std::f32::consts::TAU / g.max(1) as f32;
+                let mut p = pos;
+                p.pos_x = half::f16::from_f32(pos.pos_x.to_f32() + def.goods_radius * a.cos());
+                p.pos_z = half::f16::from_f32(pos.pos_z.to_f32() + def.goods_radius * a.sin());
+                spawns.push((v.object.clone(), p));
+            }
+            for (i, (name, p)) in spawns.into_iter().enumerate() {
+                self.max_id += 1;
+                let id = self.max_id;
+                places.push((id, p));
+                if i == 0 {
+                    pod = Some(id);
+                } else {
+                    goods.push(id);
+                }
+                let packet = Packet::ObjectSpawn(ObjectSpawnPacket {
+                    object: ObjectHeader { id, entity_type: ObjectType::Object, map_id: world_id, ..Default::default() },
+                    position: p,
+                    name: name.into(),
+                    flags: 4,
+                    ..Default::default()
+                });
+                exec_users(&self.zones[zone_pos].players, |_, mut player| {
+                    let _ = player.try_send_packet(&packet);
+                })
+                .await;
+            }
+        }
+        let count = if pod.is_some() { goods.len() as u32 } else { n };
+        let mut params = def.start_params(obj_id, world_id, &names[0], count);
+        params.trial_id = trial_id.clone();
         let packet = Packet::SpawnEmergency(crate::etrial::start_packet(&params));
         exec_users(&self.zones[zone_pos].players, |_, mut player| {
             let _ = player.try_send_packet(&packet);
         })
         .await;
         log::info!(
-            "[pso2-etrial] start {} obj {obj_id} in {} with {n} enemies (Lv {}, run {})",
-            def.trial_id,
+            "[pso2-etrial] start {} obj {obj_id} in {} with {n} enemies, goods {goods:?}, pod {pod:?} (Lv {}, run {})",
+            trial_id,
             self.zones[zone_pos].data.name,
             self.enemy_level,
             self.etrial_runs + 1
@@ -823,9 +886,14 @@ impl Map {
         self.zones[zone_pos].etrials.push(crate::etrial::Active {
             obj_id,
             kind,
-            total: n,
+            total: count,
             enemies,
             started: Instant::now(),
+            goods,
+            pod,
+            carried: vec![],
+            delivered: 0,
+            places,
         });
         self.etrial_runs += 1;
         Ok(Some((obj_id, def.time_limit_s)))
@@ -956,6 +1024,113 @@ impl Map {
             .map(|(id, _)| id)
     }
 
+    /// [pso2_vita_offline] Collect trials (`Object:PortableObject` goods, `Object:SalvagePod` pod; client
+    /// `0x81803e42` takes the goods' tags): "ONHITAPPEAR" from goods -> "APPEAR" (the presence flag; the goods and the
+    /// pod stay invisible without it, "OnHitAppear" does not show them) to the goods and the pod; "Access" on goods by a player carrying nothing -> "Pickup" (alpha 0, carried by `object3`,
+    /// the client answers "PickupEnd"); "Access" on the pod by a carrying player -> "Release" and despawn of those goods,
+    /// one delivered (15-05 slot 0), all delivered = success. False if the object is not a trial's.
+    pub async fn etrial_interact(
+        &mut self,
+        zone_pos: usize,
+        packet: &protocol::objects::InteractPacket,
+        sender: PlayerId,
+    ) -> Result<bool, Error> {
+        let id = packet.object1.id;
+        let world_id = self.zone_world_id(zone_pos).unwrap_or(0) as u16;
+        let Some(t) = self.zones[zone_pos].etrials.iter_mut().find(|t| t.pod == Some(id) || t.goods.contains(&id)) else {
+            return Ok(false);
+        };
+        let action = packet.action.to_string();
+        let mut tags: Vec<(u32, &str)> = vec![];
+        let mut despawn = vec![];
+        let mut progress = None;
+        let mut done = None;
+        if action == "ONHITAPPEAR" && t.goods.contains(&id) {
+            tags.push((id, "APPEAR"));
+            tags.extend(t.pod.map(|p| (p, "APPEAR")));
+        } else if action == "Access" && t.goods.contains(&id) {
+            if !t.carried.iter().any(|c| c.0 == sender || c.1 == id) {
+                t.carried.push((sender, id));
+                tags.push((id, "Pickup"));
+            }
+        } else if action == "Access" && t.pod == Some(id) {
+            if let Some(i) = t.carried.iter().position(|c| c.0 == sender) {
+                let (_, g) = t.carried.remove(i);
+                t.goods.retain(|x| *x != g);
+                t.delivered += 1;
+                tags.push((g, "Release"));
+                despawn.push(g);
+                progress = Some((t.obj_id, t.delivered));
+                if t.delivered >= t.total {
+                    done = Some(t.obj_id);
+                }
+            }
+        }
+        log::info!("[pso2-etrial] {action} on {id} by {sender}: tags {tags:?}, delivered {:?}", progress.map(|p| p.1));
+        let obj = |id| ObjectHeader { id, entity_type: ObjectType::Object, map_id: world_id, ..Default::default() };
+        let actor = ObjectHeader { id: sender, entity_type: ObjectType::Player, ..Default::default() };
+        let packets: Vec<Packet> = tags
+            .into_iter()
+            .map(|(target, attr)| {
+                Packet::SetTag(protocol::objects::SetTagPacket {
+                    receiver: actor,
+                    target: obj(target),
+                    object3: actor,
+                    attribute: attr.into(),
+                    ..Default::default()
+                })
+            })
+            .chain(progress.map(|(t, n)| Packet::EmergencyProgress(crate::etrial::progress_packet(t, world_id, 0, 0, n, 0))))
+            .collect();
+        exec_users(&self.zones[zone_pos].players, |_, mut player| {
+            for packet in &packets {
+                let _ = player.try_send_packet(packet);
+            }
+        })
+        .await;
+        self.etrial_despawn(zone_pos, &despawn).await;
+        if let Some(obj_id) = done {
+            self.etrial_end(zone_pos, obj_id, true).await?;
+        }
+        Ok(true)
+    }
+
+    /// [pso2_vita_offline] Debug `etrial to goods|pod`: where to stand to access the first goods not carried (1.2 m
+    /// past it, away from the pod: ○ picks the pod when it is nearer) / the pod of a running collect trial.
+    pub fn etrial_place(&self, zone_pos: usize, pod: bool) -> Option<Position> {
+        let t = self.zones[zone_pos].etrials.iter().find(|t| t.pod.is_some())?;
+        let at = |id: u32| t.places.iter().find(|p| p.0 == id).map(|p| p.1);
+        let pod_at = at(t.pod?)?;
+        let mut p = if pod {
+            pod_at
+        } else {
+            at(*t.goods.iter().find(|g| !t.carried.iter().any(|c| c.1 == **g))?)?
+        };
+        let (dx, dz) = (p.pos_x.to_f32() - pod_at.pos_x.to_f32(), p.pos_z.to_f32() - pod_at.pos_z.to_f32());
+        let d = dx.hypot(dz);
+        let (ux, uz) = if d > 0.1 { (dx / d, dz / d) } else { (1.0, 0.0) };
+        p.pos_x = half::f16::from_f32(p.pos_x.to_f32() + 1.2 * ux);
+        p.pos_z = half::f16::from_f32(p.pos_z.to_f32() + 1.2 * uz);
+        Some(p)
+    }
+
+    async fn etrial_despawn(&self, zone_pos: usize, ids: &[u32]) {
+        if ids.is_empty() {
+            return;
+        }
+        let world_id = self.zone_world_id(zone_pos).unwrap_or(0) as u16;
+        exec_users(&self.zones[zone_pos].players, |_, mut player| {
+            let me = player.create_object_header();
+            for id in ids {
+                let _ = player.try_send_packet(&Packet::DespawnObject(protocol::objects::DespawnObjectPacket {
+                    player: me,
+                    item: ObjectHeader { id: *id, entity_type: ObjectType::Object, map_id: world_id, ..Default::default() },
+                }));
+            }
+        })
+        .await;
+    }
+
     /// [pso2_vita_offline] Enemies still alive in the zone's running emergency trials (debug `etrial kill`).
     pub fn etrial_enemies(&self, zone_pos: usize) -> Vec<u32> {
         self.zones[zone_pos].etrials.iter().flat_map(|t| t.enemies.iter().copied()).collect()
@@ -972,6 +1147,8 @@ impl Map {
         };
         let trial = zone.etrials.remove(i);
         let def = &crate::etrial::kinds()[trial.kind];
+        let leftovers: Vec<u32> = trial.goods.iter().copied().chain(trial.pod).collect();
+        self.etrial_despawn(zone_pos, &leftovers).await;
         let (mut meseta, mut exp) = def.reward(self.enemy_level);
         if !success {
             meseta = (meseta as f32 * def.failure_ratio) as u32;
@@ -1011,6 +1188,9 @@ impl Map {
         packet: protocol::objects::InteractPacket,
         sender_id: PlayerId,
     ) -> Result<(), Error> {
+        if self.etrial_interact(zone_pos, &packet, sender_id).await? {
+            return Ok(());
+        }
         if packet.action == "InitPosition"
             && self.zones[zone_pos]
                 .answer_init_position(sender_id, packet.object1)

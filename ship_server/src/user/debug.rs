@@ -439,6 +439,59 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 pos.pos_z.to_f32()
             ))
         }
+        ("obj", [name, opts @ ..]) => {
+            // Any object by name near the player: obj <name> [dx=<m>] [dz=<m>] [u=<unk2[0]>] [flags=<n>] [data=<pc csv>]
+            let usage = "obj <name> [dx=m] [dz=m] [u=n] [flags=n] [data=a,b,..]";
+            let (mut dx, mut dz, mut u, mut flags, mut data) = (0.0f32, 2.0f32, 0u32, 4u32, Vec::<u32>::new());
+            for o in opts {
+                let (k, v) = o.split_once('=').ok_or(Error::InvalidInput(usage))?;
+                match k {
+                    "dx" => dx = v.parse().map_err(|_| Error::InvalidInput(usage))?,
+                    "dz" => dz = v.parse().map_err(|_| Error::InvalidInput(usage))?,
+                    "u" => u = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                    "flags" => flags = parse_num(v).ok_or(Error::InvalidInput(usage))?,
+                    "data" => {
+                        data = v
+                            .split(',')
+                            .filter(|x| !x.is_empty())
+                            .map(|x| x.parse::<i64>().map(|n| n as u32))
+                            .collect::<Result<_, _>>()
+                            .map_err(|_| Error::InvalidInput(usage))?
+                    }
+                    _ => return Err(Error::InvalidInput(usage)),
+                }
+            }
+            let lock = user.lock().await;
+            let map = lock.get_current_map().ok_or(Error::InvalidInput("no map"))?;
+            let zone = lock.zone_pos;
+            let mut pos = lock.position;
+            drop(lock);
+            pos.pos_x = half::f16::from_f32(pos.pos_x.to_f32() + dx);
+            pos.pos_z = half::f16::from_f32(pos.pos_z.to_f32() + dz);
+            let world_id = map.lock().await.zone_world_id(zone).unwrap_or(0);
+            let id = PIPE_ID.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
+            let packet = ObjectSpawnPacket {
+                object: ObjectHeader {
+                    id,
+                    entity_type: ObjectType::Object,
+                    map_id: world_id as u16,
+                    ..Default::default()
+                },
+                position: pos,
+                name: name.to_string().into(),
+                unk2: [u, 0, 0, 0, 0],
+                flags,
+                data: pc_to_vita_object_data(&data).into(),
+                ..Default::default()
+            };
+            map.lock().await.send_to_all(zone, &Packet::ObjectSpawn(packet)).await;
+            Ok(format!(
+                "obj {name} id={id} map_id={world_id} at ({:.2}, {:.2}, {:.2})",
+                pos.pos_x.to_f32(),
+                pos.pos_y.to_f32(),
+                pos.pos_z.to_f32()
+            ))
+        }
         ("roll", [enemy, rest @ ..]) => {
             // roll <enemy> [n] [area]: rolls the drop tables n times (default 1000, area default area2) and counts the results
             let n: u32 = rest.first().and_then(|s| parse_num(s)).unwrap_or(1000);
@@ -1041,6 +1094,25 @@ async fn run_command(line: &str) -> Result<String, Error> {
                         }
                         None => "etrial not started (caps or no enemies)".to_string(),
                     }
+                }
+                "to" => {
+                    // etrial to goods|pod: next to the first goods not carried (away from the pod) / the pod of a running collect trial
+                    let pod = rest.first().copied() == Some("pod");
+                    let at = map.lock().await.etrial_place(zone, pod).ok_or(Error::InvalidInput("no collect trial"))?;
+                    let mut lock = user.lock().await;
+                    let mut pos = lock.position;
+                    pos.pos_x = at.pos_x;
+                    pos.pos_y = at.pos_y;
+                    pos.pos_z = at.pos_z;
+                    let id = lock.get_user_id();
+                    lock.send_packet(&Packet::TeleportTransfer(TeleportTransferPacket {
+                        source_tele: ObjectHeader { id, entity_type: ObjectType::Player, ..Default::default() },
+                        location: pos,
+                        ..Default::default()
+                    }))
+                    .await?;
+                    lock.position = pos;
+                    format!("etrial to ({:.1}, {:.1}, {:.1})", pos.pos_x.to_f32(), pos.pos_y.to_f32(), pos.pos_z.to_f32())
                 }
                 "kill" => {
                     // etrial kill [n]: n (default all) enemies of the zone's running trials to 1 HP, then one sword hit
