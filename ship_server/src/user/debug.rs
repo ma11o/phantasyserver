@@ -54,7 +54,8 @@ pub struct DebugStart {
 }
 
 /// T25: (zone name, position) used once by the next spawn into that zone (`map.rs`, `Zone::add_player`).
-static SPAWN_OVERRIDE: std::sync::Mutex<Option<(String, (f32, f32, f32))>> = std::sync::Mutex::new(None);
+static ETRIAL_PARAMS: std::sync::Mutex<Option<crate::etrial::StartParams>> = std::sync::Mutex::new(None);
+static SPAWN_OVERRIDE:std::sync::Mutex<Option<(String, (f32, f32, f32))>> = std::sync::Mutex::new(None);
 
 pub fn set_spawn_override(zone: &str, p: (f32, f32, f32)) {
     *SPAWN_OVERRIDE.lock().unwrap() = Some((zone.to_string(), p));
@@ -907,6 +908,136 @@ async fn run_command(line: &str) -> Result<String, Error> {
                 _ => return Err(Error::InvalidInput("co take|drop <id>")),
             }
             Ok(format!("co {op} {id} {}", order.name))
+        }
+        ("etrial", [op, rest @ ..]) => {
+            // etrial set k=v.. | start | end ok|ng [flags meseta exp npckey] | prog a b done d
+            let (map, zone) = {
+                let lock = user.lock().await;
+                (lock.get_current_map().ok_or(Error::InvalidInput("no map"))?, lock.zone_pos)
+            };
+            let world_id = map.lock().await.zone_world_id(zone).unwrap_or(0) as u16;
+            let mut p = ETRIAL_PARAMS.lock().unwrap().clone().unwrap_or_default();
+            p.map_id = world_id;
+            let bad = || Error::InvalidInput("etrial set k=v.. | start | end ok|ng [flags meseta exp npckey] | prog a b done d");
+            let reply = match *op {
+                "set" => {
+                    for kv in rest {
+                        let (k, v) = kv.split_once('=').ok_or_else(bad)?;
+                        let s = |v: &str| if v == "-" { String::new() } else { v.to_string() };
+                        let n = |v: &str| parse_num::<u32>(v).ok_or_else(bad);
+                        match k {
+                            "obj" => p.obj_id = n(v)?,
+                            "id" => p.trial_id = s(v),
+                            "name" => p.name_key = s(v),
+                            "abs" => p.abstract_key = s(v),
+                            "fail" => p.fail_keys = v.split(',').filter(|x| !x.is_empty() && *x != "-").map(String::from).collect(),
+                            "pass" => p.pass_keys = v.split(',').filter(|x| !x.is_empty() && *x != "-").map(String::from).collect(),
+                            "begin" => p.begin_key = s(v),
+                            "k12" => p.key12 = s(v),
+                            "k18" => p.key18 = s(v),
+                            "delay" => p.delay = v.parse().map_err(|_| bad())?,
+                            "flags" => p.flags = n(v)?,
+                            "disp" => p.disp = n(v)? as u8,
+                            "b3d" => p.b3d = n(v)? as u8,
+                            "b3e" => p.b3e = n(v)? as u8,
+                            "b3f" => p.b3f = n(v)? as u8,
+                            "kind" => p.kind15 = n(v)?,
+                            "op" => p.op = n(v)?,
+                            "u17" => p.unk17 = n(v)?,
+                            "u21" => p.unk21 = n(v)?,
+                            _ => return Err(bad()),
+                        }
+                    }
+                    format!("{p:?}")
+                }
+                "start" => {
+                    let packet = Packet::SpawnEmergency(crate::etrial::start_packet(&p));
+                    user.lock().await.send_packet(&packet).await?;
+                    format!("sent 15-02 {} obj {} map {}", p.trial_id, p.obj_id, p.map_id)
+                }
+                "end" => {
+                    let ok = match rest.first() {
+                        Some(&"ok") => true,
+                        Some(&"ng") => false,
+                        _ => return Err(bad()),
+                    };
+                    let num = |i: usize| rest.get(i).and_then(|v| parse_num::<u32>(v)).unwrap_or(0);
+                    let npc = rest.get(4).copied().unwrap_or("");
+                    let packet = Packet::EmergencyEnd(crate::etrial::end_packet(p.obj_id, p.map_id, ok, num(1), num(2), num(3), npc));
+                    user.lock().await.send_packet(&packet).await?;
+                    format!("sent 15-03 {}", if ok { "success" } else { "failure" })
+                }
+                "go" => {
+                    // etrial go: the real path (rules except the chance, enemies, timeout) at the player
+                    let pos = user.lock().await.position;
+                    let started = map.lock().await.etrial_try_start(zone, pos, true).await?;
+                    match started {
+                        Some((obj_id, secs)) => {
+                            crate::etrial::spawn_timeout(Arc::downgrade(&map), zone, obj_id, secs);
+                            format!("etrial {obj_id} started ({secs} s)")
+                        }
+                        None => "etrial not started (caps or no enemies)".to_string(),
+                    }
+                }
+                "kill" => {
+                    // etrial kill [n]: n (default all) enemies of the zone's running trials to 1 HP, then one sword hit
+                    // each through the normal damage path (kill -> count -> success)
+                    let player_id = user.lock().await.get_user_id();
+                    let mut map = map.lock().await;
+                    let mut ids = map.etrial_enemies(zone);
+                    if let Some(n) = rest.first().and_then(|v| parse_num::<usize>(v)) {
+                        ids.truncate(n);
+                    }
+                    map.set_enemy_hp(zone, 1);
+                    for id in &ids {
+                        map.deal_damage(
+                            zone,
+                            DealDamagePacket {
+                                inflicter: ObjectHeader { id: player_id, entity_type: ObjectType::Player, ..Default::default() },
+                                target: ObjectHeader { id: *id, entity_type: ObjectType::Object, ..Default::default() },
+                                attack_id: 3813693250,
+                                ..Default::default()
+                            },
+                        )
+                        .await?;
+                    }
+                    format!("etrial kill {} enemies", ids.len())
+                }
+                "finish" => {
+                    // etrial finish <obj id> ok|ng: ends a running trial with its reward
+                    let (Some(obj_id), Some(r)) = (rest.first().and_then(|v| parse_num::<u32>(v)), rest.get(1)) else {
+                        return Err(bad());
+                    };
+                    let ended = map.lock().await.etrial_end(zone, obj_id, *r == "ok").await?;
+                    format!("etrial {obj_id} ended: {ended}")
+                }
+                "obj" => {
+                    // etrial obj <name> [u32..]: an object with the trial's id at the player
+                    let name = rest.first().ok_or_else(bad)?;
+                    let data: Vec<u32> = rest[1..].iter().filter_map(|v| parse_num::<u32>(v)).collect();
+                    let pos = user.lock().await.position;
+                    let packet = ObjectSpawnPacket {
+                        object: crate::etrial::object(p.obj_id, p.map_id),
+                        position: pos,
+                        name: name.to_string().into(),
+                        unk2: [16, 0, 0, 0, 0],
+                        flags: 4,
+                        data: pc_to_vita_object_data(&data).into(),
+                        ..Default::default()
+                    };
+                    user.lock().await.send_packet(&Packet::ObjectSpawn(packet)).await?;
+                    format!("spawned {name} obj {}", p.obj_id)
+                }
+                "prog" => {
+                    let num = |i: usize| rest.get(i).and_then(|v| parse_num::<u32>(v)).unwrap_or(0);
+                    let packet = Packet::EmergencyProgress(crate::etrial::progress_packet(p.obj_id, p.map_id, num(0), num(1), num(2), num(3)));
+                    user.lock().await.send_packet(&packet).await?;
+                    "sent 15-05".to_string()
+                }
+                _ => return Err(bad()),
+            };
+            *ETRIAL_PARAMS.lock().unwrap() = Some(p);
+            Ok(reply)
         }
         ("send", [id, subid, flag, hex @ ..]) => {
             let (Some(id), Some(subid), Some(flag)) =

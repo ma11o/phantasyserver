@@ -12,6 +12,7 @@ mod consumables;
 mod battle_stats;
 mod client_orders;
 mod drops;
+mod etrial;
 mod block;
 mod inventory;
 mod invites;

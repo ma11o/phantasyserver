@@ -58,6 +58,8 @@ struct Zone {
     drops: Vec<FieldDrop>,
     // [pso2_vita_offline] object id of the zone's boss once spawned (`ZoneData::boss` or debug `spawn ... boss`)
     boss_id: Option<u32>,
+    // [pso2_vita_offline] emergency trials running in the zone (etrial.rs)
+    etrials: Vec<crate::etrial::Active>,
 }
 
 /// [pso2_vita_offline] An item on the ground. The client keys its drop registry by `drop_id` and finds the entry
@@ -111,6 +113,8 @@ pub struct Map {
     story: Option<(u32, u32, Vec<String>)>,
     /// [pso2_vita_offline] the quest played on this map: (name_id, difficulty) for client order quest targets
     quest: Option<(u32, u32)>,
+    // [pso2_vita_offline] emergency trials started in this run (all zones)
+    etrial_runs: u32,
 }
 impl Map {
     pub fn new_from_data(mut data: MapData, map_obj_id: &AtomicU32) -> Result<Self, Error> {
@@ -176,6 +180,7 @@ impl Map {
                 clear_pipe: None,
                 drops: vec![],
                 boss_id: None,
+                etrials: vec![],
                 data: zone,
                 objects: Objects {
                     objects,
@@ -196,6 +201,7 @@ impl Map {
             map_type: MapType::QuestMap,
             story: None,
             quest: None,
+            etrial_runs: 0,
             quest_obj: ObjectHeader {
                 entity_type: ObjectType::Quest,
                 ..Default::default()
@@ -546,6 +552,21 @@ impl Map {
         // enemy spawned so far by the zone's chunks is dead (chunks not entered yet are not counted). The telepipe
         // goes where the last hit came from: the client closes its dialog when the player is more than ~3 m away
         // from it.
+        // [pso2_vita_offline] emergency trials: the trial's last enemy ends it with a success
+        if let Some((_, _, id, _)) = &killed {
+            let done: Vec<u32> = self.zones[zone_pos]
+                .etrials
+                .iter_mut()
+                .filter_map(|t| {
+                    let i = t.enemies.iter().position(|e| e == id)?;
+                    t.enemies.remove(i);
+                    t.enemies.is_empty().then_some(t.obj_id)
+                })
+                .collect();
+            for obj_id in done {
+                self.etrial_end(zone_pos, obj_id, true).await?;
+            }
+        }
         if let (MapType::QuestMap, Some((pos, _, id, _))) = (&self.map_type, killed) {
             let zone = &self.zones[zone_pos];
             // a quest with a boss clears only when the boss dies: the zones before it never clear on their own
@@ -639,11 +660,12 @@ impl Map {
         zone_pos: usize,
         sender_id: PlayerId,
         packet: protocol::questlist::MinimapRevealRequestPacket,
-    ) -> Result<(), Error> {
+    ) -> Result<Option<(u32, u64)>, Error> {
         let Some(block_data) = self.block_data.to_owned() else {
             return Err(Error::InvalidInput("minimap_reveal: no block data"));
         };
 
+        let opened = self.zones[zone_pos].chunk_spawns.len();
         self.zones[zone_pos]
             .minimap_reveal(
                 sender_id,
@@ -655,7 +677,135 @@ impl Map {
             .await?;
 
         self.check_move_lua().await?;
-        Ok(())
+        // [pso2_vita_offline] emergency trials: a chunk opened for the first time may start one at one of its
+        // enemy spawn points
+        if self.zones[zone_pos].chunk_spawns.len() > opened {
+            let point = self.zones[zone_pos]
+                .data
+                .chunks
+                .iter()
+                .find(|c| c.chunk_id == packet.chunk_id)
+                .and_then(|c| c.enemy_spawn_points.iter().choose(&mut rand::thread_rng()).copied());
+            if let Some(point) = point {
+                return self.etrial_try_start(zone_pos, point, false).await;
+            }
+        }
+        Ok(None)
+    }
+
+    /// [pso2_vita_offline] Starts an emergency trial (annihilation, `etrial.rs`) around `pos` when the rules allow it:
+    /// a quest map, fewer than `max_per_zone` running in the zone and `max_per_run` started in the run, then the
+    /// chance (`force` skips only the chance). Spawns the trial's enemies and sends 15-02 to the zone. Returns
+    /// (trial object id, time limit in seconds) for the caller's timeout (`etrial::spawn_timeout`).
+    pub async fn etrial_try_start(
+        &mut self,
+        zone_pos: usize,
+        pos: Position,
+        force: bool,
+    ) -> Result<Option<(u32, u64)>, Error> {
+        let def = crate::etrial::annihilation();
+        let zone = &self.zones[zone_pos];
+        if !matches!(self.map_type, MapType::QuestMap)
+            || zone.etrials.len() >= def.max_per_zone
+            || self.etrial_runs >= def.max_per_run
+        {
+            return Ok(None);
+        }
+        if !force && rand::random::<f32>() >= crate::etrial::chance(def) {
+            return Ok(None);
+        }
+        let names: Vec<String> = zone.data.enemies.iter().map(|e| e.enemy_name.clone()).collect();
+        let Some(block_data) = self.block_data.to_owned() else {
+            return Ok(None);
+        };
+        if names.is_empty() {
+            return Ok(None);
+        }
+        self.max_id += 1;
+        let obj_id = self.max_id;
+        let world_id = self.zone_world_id(zone_pos).unwrap_or(0) as u16;
+        let (lo, hi) = def.enemies;
+        let n = rand::distributions::Uniform::new_inclusive(lo.min(hi), hi.max(lo)).sample(&mut rand::thread_rng());
+        let mut enemies = vec![];
+        for i in 0..n {
+            let a = i as f32 * std::f32::consts::TAU / n as f32;
+            let mut p = pos;
+            p.pos_x = half::f16::from_f32(pos.pos_x.to_f32() + 4.0 * a.cos());
+            p.pos_z = half::f16::from_f32(pos.pos_z.to_f32() + 4.0 * a.sin());
+            let name = names.iter().choose(&mut rand::thread_rng()).cloned().unwrap_or_default();
+            let id = self.zones[zone_pos]
+                .spawn_enemy(&block_data, &mut self.max_id, self.enemy_level, &name, p)
+                .await?;
+            enemies.push(id);
+        }
+        let packet = Packet::SpawnEmergency(crate::etrial::start_packet(&def.start_params(obj_id, world_id)));
+        exec_users(&self.zones[zone_pos].players, |_, mut player| {
+            let _ = player.try_send_packet(&packet);
+        })
+        .await;
+        log::info!(
+            "[pso2-etrial] start {} obj {obj_id} in {} with {n} enemies (Lv {}, run {})",
+            def.trial_id,
+            self.zones[zone_pos].data.name,
+            self.enemy_level,
+            self.etrial_runs + 1
+        );
+        self.zones[zone_pos].etrials.push(crate::etrial::Active {
+            obj_id,
+            enemies,
+            started: Instant::now(),
+        });
+        self.etrial_runs += 1;
+        Ok(Some((obj_id, def.time_limit_s)))
+    }
+
+    /// [pso2_vita_offline] Enemies still alive in the zone's running emergency trials (debug `etrial kill`).
+    pub fn etrial_enemies(&self, zone_pos: usize) -> Vec<u32> {
+        self.zones[zone_pos].etrials.iter().flat_map(|t| t.enemies.iter().copied()).collect()
+    }
+
+    /// [pso2_vita_offline] Ends a running emergency trial: 15-03 to the zone and the reward to every player in it
+    /// (success: `Def::reward` at the quest's enemy level, failure: `failure_ratio` of it). False if it already ended.
+    pub async fn etrial_end(&mut self, zone_pos: usize, obj_id: u32, success: bool) -> Result<bool, Error> {
+        let Some(zone) = self.zones.get_mut(zone_pos) else {
+            return Ok(false);
+        };
+        let Some(i) = zone.etrials.iter().position(|t| t.obj_id == obj_id) else {
+            return Ok(false);
+        };
+        let trial = zone.etrials.remove(i);
+        let def = crate::etrial::annihilation();
+        let (mut meseta, mut exp) = def.reward(self.enemy_level);
+        if !success {
+            meseta = (meseta as f32 * def.failure_ratio) as u32;
+            exp = (exp as f32 * def.failure_ratio) as u32;
+        }
+        let world_id = self.zone_world_id(zone_pos).unwrap_or(0) as u16;
+        let npc = if success { &def.success_key } else { &def.failure_key };
+        let packet = Packet::EmergencyEnd(crate::etrial::end_packet(obj_id, world_id, success, 0x10000, meseta, exp, npc));
+        exec_users(&self.zones[zone_pos].players, |_, mut player| {
+            let _ = player.try_send_packet(&packet);
+            let header = player.create_object_header();
+            let meseta_packet = player.character.as_mut().map(|c| c.inventory.add_meseta(meseta as u64));
+            if let Some(p) = meseta_packet {
+                let _ = player.try_send_packet(&p);
+            }
+            if let Ok(r) = player.add_exp(exp) {
+                let _ = player.try_send_packet(&Packet::GainedEXP(GainedEXPPacket {
+                    sender: header,
+                    receivers: vec![r],
+                    ..Default::default()
+                }));
+            }
+        })
+        .await;
+        log::info!(
+            "[pso2-etrial] end obj {obj_id}: {} after {:.0} s, {} enemies left, meseta +{meseta}, exp +{exp}",
+            if success { "success" } else { "failure" },
+            trial.started.elapsed().as_secs_f32(),
+            trial.enemies.len()
+        );
+        Ok(true)
     }
 
     pub async fn interaction(

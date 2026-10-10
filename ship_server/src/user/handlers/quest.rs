@@ -257,10 +257,11 @@ pub async fn minimap_reveal(
         let playerid = user.get_user_id();
         let zone = user.zone_pos;
         drop(user);
-        map.lock()
-            .await
-            .minimap_reveal(zone, playerid, data)
-            .await?;
+        let started = map.lock().await.minimap_reveal(zone, playerid, data).await?;
+        // [pso2_vita_offline] emergency trial started by the chunk: fail it when its time is up
+        if let Some((obj_id, secs)) = started {
+            crate::etrial::spawn_timeout(std::sync::Arc::downgrade(&map), zone, obj_id, secs);
+        }
     }
     Ok(Action::Nothing)
 }

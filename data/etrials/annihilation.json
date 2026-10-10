@@ -1,0 +1,52 @@
+{
+ "trial_id": "ii_boss_ahl_3boss",
+ "kind": 2,
+ "color": 1,
+ "name_key": "IncidentName",
+ "abstract_key": "TrialAbstract",
+ "begin_key": "NpcComOnBegin",
+ "success_key": "NpcComOnSuccess",
+ "failure_key": "NpcComOnFailure",
+ "fail_keys": [
+  "FCondTimeLimitOver"
+ ],
+ "pass_keys": [
+  "ProgNoDataAllEnemyKill"
+ ],
+ "enemies": [
+  6,
+  9
+ ],
+ "time_limit_s": 120,
+ "meseta_per_level": 29,
+ "exp_points": [
+  [
+   32,
+   1011
+  ],
+  [
+   42,
+   1676
+  ],
+  [
+   80,
+   4532
+  ]
+ ],
+ "failure_ratio": 0.25,
+ "chance": 0.15,
+ "max_per_zone": 2,
+ "max_per_run": 3,
+ "source": {
+  "trial_id": "client",
+  "kind": "client",
+  "meseta_per_level": "estimated",
+  "exp_points": "estimated",
+  "time_limit_s": "estimated",
+  "max_per_zone": "historical",
+  "chance": "tuned",
+  "max_per_run": "tuned",
+  "enemies": "tuned",
+  "failure_ratio": "tuned"
+ }
+}

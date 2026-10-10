@@ -1,0 +1,4947 @@
+{
+ "ii_2ev_boss": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "D",
+   "t"
+  ]
+ },
+ "ii_abd_clone_apc": {
+  "name": "アークスの模倣体？を迎撃せよ",
+  "abstract": "アークスの模倣体？を<br>すべて撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L"
+  ]
+ },
+ "ii_abd_clone_boss": {
+  "name": "アークスの模倣体？を撃退せよ",
+  "abstract": "全ての敵を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "D"
+  ]
+ },
+ "ii_anh_fantasy_mob": {
+  "name": "大量発生したエネミーを討伐せよ！",
+  "abstract": "大量発生したエネミーを討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnAfterBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnBeginEnd",
+   "NpcComOnEnemy",
+   "NpcComOnEnemyLast",
+   "NpcComOnTimeLeftHalf",
+   "NpcComOnTimeLeftLess"
+  ]
+ },
+ "ii_anh_phantom_ship": {
+  "name": "幻創戦艦・大和を撃退せよ！",
+  "abstract": "制限時間内に幻創戦艦・大和を撃退せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComOnBeginNext",
+   "NpcComOnBreakBarrier",
+   "NpcComOnDeathblow",
+   "NpcComOnBeginNextNoBarrier",
+   "NpcComOnChangeShin",
+   "d"
+  ]
+ },
+ "ii_anh_rd": {
+  "name": "$(0)撃退",
+  "abstract": "$(0)の撃退",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnOpenLastFence",
+   "NpcComOnOuterCitadel",
+   "NpcComOnInnerCitadel",
+   "NpcComOnBattleStartOuterCitadel",
+   "NpcComOnSkillHp50",
+   "NpcComOnSkillHp10",
+   "NpcComOnSkillHp50End",
+   "NpcComOnSkillHp10End",
+   "NpcComOnFirstBegin"
+  ]
+ },
+ "ii_anh_thunder_hell": {
+  "name": "$(0)を討伐せよ！",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess"
+  ]
+ },
+ "ii_annihilation_aold": {
+  "name": "$(0)撃破",
+  "abstract": "【巨躯】と共闘し、<br>$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_annihilation_bomb_wave": {
+  "name": "イグニクスから逃れ、元凶を撃破せよ！",
+  "abstract": "元凶のエネミーを倒し<br>イグニクスを停止させろ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBegin1",
+   "NpcComOnBegin2",
+   "NpcComBossInfo",
+   "NpcComOnSuccess",
+   "T"
+  ]
+ },
+ "ii_annihilation_dark_hell": {
+  "name": "$(0)を討伐せよ！",
+  "abstract": "式神を排除して<br>$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnHint",
+   "NpcComOnChance"
+  ]
+ },
+ "ii_annihilation_ice_hell": {
+  "name": "$(0)を討伐せよ！",
+  "abstract": "氷柱に乗ってバリアを飛び越え<br>$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnHint"
+  ]
+ },
+ "ii_annihilation_mge": {
+  "name": "全てのマガツを撃破せよ！",
+  "abstract": "制限時間内に全てのマガツを撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnMge1Hp50",
+   "NpcComOnMge1Hp10",
+   "NpcComOnMge1Dead",
+   "NpcComOnMge2Hp50",
+   "NpcComOnMge2Hp10",
+   "NpcComOnMge2Dead",
+   "NpcComOnMge3Attack",
+   "NpcComOnMge3Hp50",
+   "NpcComOnMge3Hp10",
+   "NpcComOnSuccess",
+   "NpcComOnBegin2S",
+   "NpcComOnBegin3S",
+   "NpcComOnMge1Hp90S",
+   "NpcComOnMge2Begin2S",
+   "NpcComOnMge2Begin3S",
+   "NpcComOnMge2Hp90S",
+   "NpcComOnMge3Begin2S",
+   "NpcComOnMge3Begin3S",
+   "NpcComOnMge3Hp90S",
+   "NpcComOnTimeOut0Mge1S",
+   "NpcComOnTimeOut0Mge2S",
+   "NpcComOnTimeOut1Mge1S",
+   "NpcComOnTimeOut1Mge2S"
+  ]
+ },
+ "ii_annihilation_spd": {
+  "name": "時間経過まで生存",
+  "abstract": "エネミーの攻撃をしのぎ、時間経過まで生存せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_areaboss": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComLastEnemy"
+  ]
+ },
+ "ii_areaboss_ab": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComOnAISBegin",
+   "NpcComOnAISEnd",
+   "A",
+   "NpcComOnAISEnd2"
+  ]
+ },
+ "ii_areaboss_ap": {
+  "name": "$(0)撃退",
+  "abstract": "$(0)の撃退",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBegin2",
+   "NpcComOnHpDecreased",
+   "NpcComOnBossSkillAir",
+   "NpcComOnGround0",
+   "NpcComOnGround1",
+   "NpcComOnBossSkill",
+   "NpcComOnSuccess",
+   "NpcComOnBossSkillFail"
+  ]
+ },
+ "ii_areaboss_bh": {
+  "name": "$(0)を撃破せよ！",
+  "abstract": "$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnAnger",
+   "NpcComOnSP",
+   "NpcComOnSPSuccess",
+   "HP_Under_50",
+   "HP_Under_10"
+  ]
+ },
+ "ii_areaboss_c3_f": {
+  "name": "$(0)を倒せ！",
+  "abstract": "制限時間内に<br>$(0)を倒せ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_areaboss_db": {
+  "name": "【原初の闇】を撃破せよ！",
+  "abstract": "$(0)を撃破し、復活を阻止せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin_1",
+   "NpcComOnJumpDown_1",
+   "NpcComOnBegin_2",
+   "NpcComOnJumpDown_2",
+   "NpcComOnFootholdsAlert",
+   "NpcComOnBegin_3"
+  ]
+ },
+ "ii_areaboss_de": {
+  "name": "$(0)撃退",
+  "abstract": "$(0)の撃退",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnHpDecreased0",
+   "NpcComOnHpDecreased1",
+   "NpcComOnBossSkill",
+   "NpcComOnBossSkillSuccess",
+   "NpcComOnBossSkillFail"
+  ]
+ },
+ "ii_areaboss_de_duel": {
+  "name": "地球を守れ！",
+  "abstract": "地球を守れ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "LineMsg_Time_60",
+   "LineMsg_Time_120",
+   "LineMsg_Time_180",
+   "LineMsg_Time_240",
+   "NpcComOnSuccess",
+   "HP_Under_20",
+   "L"
+  ]
+ },
+ "ii_areaboss_df": {
+  "name": "最終決戦に勝利せよ！",
+  "abstract": "最終決戦に勝利せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastMatoiBuffMsg",
+   "ToastHitsugiBuffMsg",
+   "ToastHarrietBuffMsg",
+   "NpcComOnBegin_1",
+   "NpcComOnGetAngry",
+   "HP_Under_50_1",
+   "NpcComOnLastPhase",
+   "NpcComOnBuffMatoi",
+   "NpcComOnBuffHitsugi",
+   "NpcComOnBuffHarriet",
+   "HP_Under_10_1",
+   "HP_Under_10_2",
+   "HP_Under_10_3",
+   "NpcComOnPowerUp",
+   "D"
+  ]
+ },
+ "ii_areaboss_dk": {
+  "name": "闘神オーディン討滅戦",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComLastEnemy"
+  ]
+ },
+ "ii_areaboss_dp": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComLastEnemy"
+  ]
+ },
+ "ii_areaboss_dp2": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComLastEnemy"
+  ]
+ },
+ "ii_areaboss_dp_tower": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComLastEnemy"
+  ]
+ },
+ "ii_areaboss_dp_toy": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComLastEnemy"
+  ]
+ },
+ "ii_areaboss_dpp_duel": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "HP_Under_50",
+   "HP_Under_10"
+  ]
+ },
+ "ii_areaboss_med": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnSpCharge",
+   "NpcComOnSpBegin",
+   "NpcComOnSpGuardSuccess",
+   "NpcComOnSpGuardDraw",
+   "NpcComOnSpGuardFailure",
+   "NpcComOnDamage1",
+   "NpcComOnDamage2"
+  ]
+ },
+ "ii_areaboss_neo": {
+  "name": "強敵を撃破せよ！",
+  "abstract": "全ての強敵を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBeginMultiEnemy",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComLastEnemy",
+   "NpcCom2RemainingEnemy",
+   "l"
+  ]
+ },
+ "ii_areaboss_prism": {
+  "name": "$(0)殲滅作戦",
+  "abstract": "$(0)を攻撃し、陽動せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBegin_2",
+   "NpcComOnBegin_3",
+   "NpcComOnTargetPlayerFirstTime",
+   "NpcComOnHelpBattery",
+   "NpcComOnHelpBattery_2",
+   "NpcComOnBatteryAttack",
+   "NpcComOnBossDown",
+   "NpcComOnBatteryBreak1_1",
+   "NpcComOnBatteryStart2",
+   "NpcComOnBatteryBreak2_1",
+   "NpcComOnBatteryStart3",
+   "NpcComOnBatteryBreak3_1",
+   "NpcComOnEmergency",
+   "NpcComOnChangeModeSt",
+   "NpcComOnChangeModeAs",
+   "NpcComOnChangeModeAs_2",
+   "NpcComOnLose_1",
+   "NpcComOnLose_2",
+   "NpcComOnWin_1",
+   "NpcComOnWin_2",
+   "NpcComOnSuccess",
+   "NpcComOnBegin_4",
+   "NpcComOnBegin40Sec_1",
+   "NpcComOnBegin40Sec_2",
+   "NpcComOnHelpBattery_1",
+   "NpcComOnHelpBattery_3",
+   "NpcComOnHelpBattery_4",
+   "NpcComOnHelpBatteryDisp_1",
+   "NpcComOnHelpBatteryDisp_2",
+   "NpcComOnBatteryReadyFree",
+   "NpcComOnBatteryReadyNorth",
+   "NpcComOnBatteryReadyEast",
+   "NpcComOnBatteryReadyWest",
+   "NpcComOnBatteryAttackSucceeded",
+   "NpcComOnBatteryAttackFailed",
+   "NpcComOnTargetBattery",
+   "NpcComOnBatteryBreak1_2",
+   "NpcComOnBatteryBreak2_2",
+   "NpcComOnBatteryBreak3_2",
+   "NpcComOnTargetShaftFirstTime",
+   "NpcComOnHpUnder40_1",
+   "NpcComOnHpUnder40_2",
+   "NpcComOnFailure",
+   "NpcComOnSuccess_2"
+  ]
+ },
+ "ii_areaboss_raid": {
+  "name": "強敵を撃破せよ！",
+  "abstract": "出現した強敵を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBeginMultiEnemy",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComLastEnemy",
+   "NpcCom2RemainingEnemy",
+   "l"
+  ]
+ },
+ "ii_areaboss_volcano": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)の討伐",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnAnger",
+   "HP_Under_10",
+   "L",
+   "l"
+  ]
+ },
+ "ii_beach_naura_search": {
+  "name": "迷子のナウラをカーゴに護送せよ",
+  "abstract": "ナウラ長女を見つけだし<br>カーゴに護送せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOnSuccess",
+   "OnFind1",
+   "OnFind2",
+   "OnFind3",
+   "OnStopEnemy",
+   "OnFollow",
+   "OnStopPlayer",
+   "OnRefollow",
+   "OnDefeat",
+   "OnDead",
+   "OnSuccess3",
+   "OnSuccess6",
+   "OnFailure3",
+   "OnStart2",
+   "OnStart3",
+   "OnSuccess1",
+   "OnSuccess4",
+   "OnFailure1",
+   "OnFailure4",
+   "OnSecondBefore1",
+   "OnSecondBefore2",
+   "OnStart1",
+   "OnStart4",
+   "OnSuccess2",
+   "OnSuccess5",
+   "OnFailure2",
+   "OnThirdBefore1",
+   "OnThirdBefore2",
+   "first",
+   "second",
+   "third"
+  ]
+ },
+ "ii_bonusmap_ahl": {
+  "name": "$(0)討伐",
+  "abstract": "全ての$(0)を倒せ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_boss_ahl": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L",
+   "l"
+  ]
+ },
+ "ii_boss_ahl_3boss": {
+  "name": "出現したエネミーを全て討伐せよ",
+  "abstract": "出現したエネミーを全て討伐せよ",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L",
+   "l"
+  ]
+ },
+ "ii_boss_ahl_dk": {
+  "name": "古の闘神「オーディン」",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L",
+   "l"
+  ]
+ },
+ "ii_boss_ahl_humanoid": {
+  "name": "$(0)撃退",
+  "abstract": "$(0)を撃退せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_boss_ahl_m_oarfish": {
+  "name": "$(0)を撃退せよ！",
+  "abstract": "$(0)撃退",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBegin2",
+   "NpcComOnSuccess",
+   "D",
+   "t"
+  ]
+ },
+ "ii_boss_ahl_m_oarfish_ev": {
+  "name": "$(0)を討伐せよ！",
+  "abstract": "$(0)を討伐する",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "D",
+   "t"
+  ]
+ },
+ "ii_boss_ahl_nyau": {
+  "name": "ニャウと勝負せよ！",
+  "abstract": "$(0)に勝て！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnBegin_Other",
+   "NpcComOnSuccess_Other",
+   "NpcComOnBegin_Darker",
+   "NpcComOnSuccess_Darker"
+  ]
+ },
+ "ii_boss_ahl_nyau_ev_boss": {
+  "name": "$(0)撃破",
+  "abstract": "乱入してきた<br>$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnPreBegin_Other",
+   "NpcComOnBegin_Other",
+   "NpcComOnSuccess_Other",
+   "NpcComOnFailure_Other",
+   "NpcComOnPreBegin_Darker",
+   "NpcComOnBegin_Darker",
+   "NpcComOnSuccess_Darker",
+   "NpcComOnFailure_Darker"
+  ]
+ },
+ "ii_boss_ahl_nyau_ev_rare": {
+  "name": "$(0)撃破",
+  "abstract": "乱入してきた<br>$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnPreBegin_Other",
+   "NpcComOnBegin_Other",
+   "NpcComOnSuccess_Other",
+   "NpcComOnPreBegin_Darker",
+   "NpcComOnBegin_Darker",
+   "NpcComOnSuccess_Darker",
+   "t"
+  ]
+ },
+ "ii_boss_ahl_nyau_ev_two": {
+  "name": "討伐対象を全て撃破せよ！",
+  "abstract": "全てのエネミーを撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnEnemyDead",
+   "NpcComOnSuccess",
+   "NpcComOnPreBegin_Other",
+   "NpcComOnBegin_Other",
+   "NpcComOnEnemyDead_Other",
+   "NpcComOnSuccess_Other",
+   "NpcComOnPreBegin_Darker",
+   "NpcComOnBegin_Darker",
+   "NpcComOnEnemyDead_Darker",
+   "NpcComOnSuccess_Darker"
+  ]
+ },
+ "ii_boss_ahl_ranking": {
+  "name": "条件達成に尽力せよ！",
+  "abstract": "条件達成に尽力せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnExplain"
+  ]
+ },
+ "ii_boss_ahl_remaining_buff": {
+  "name": "共振エネミー討伐",
+  "abstract": "指定エネミーを同時に討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnDefeatedFirstOne",
+   "NpcComOnAddCondition"
+  ]
+ },
+ "ii_boss_ahl_si": {
+  "name": "シバを倒せ！",
+  "abstract": "終の女神・シバを撃退せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L",
+   "l"
+  ]
+ },
+ "ii_boss_ahl_timelimit": {
+  "name": "【仮面】撃退",
+  "abstract": "【仮面】撃退",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L",
+   "l"
+  ]
+ },
+ "ii_boss_ahl_volcano": {
+  "name": "エルゼリオン撃破",
+  "abstract": "エルゼリオンの撃破",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L",
+   "l"
+  ]
+ },
+ "ii_bss_chase": {
+  "name": "全ての幻創暴走車を破壊せよ！",
+  "abstract": "時間内に全ての幻創暴走車を破壊せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnHalf",
+   "NpcComOnLastOne"
+  ]
+ },
+ "ii_burning_ranger": {
+  "name": "炎のＡＮＧＥＬ",
+  "abstract": "炎に囲まれた要救助者を救助せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NotifyPos",
+   "NotifyMethod",
+   "FirstTrans",
+   "RescueeFound",
+   "GeneratorAdd",
+   "TimeLimitNear",
+   "TimeLimitHurry",
+   "RescueMethod"
+  ]
+ },
+ "ii_castle_town_terror": {
+  "name": "パジャドゥリンの暴走を止めろ！",
+  "abstract": "$(0)を$(1)体倒せ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBegin2",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnLevelUp",
+   "zzL0",
+   "NpcComOnLevelUp34",
+   "NpcComOnLevelUp45",
+   "NpcComOnLevelDown",
+   "NpcComOnLevelDown21",
+   "NpcComOnRelease",
+   "NpcComOnBlack",
+   "NpcComRollerPos"
+  ]
+ },
+ "ii_cleanup_shell_flower": {
+  "name": "砲仙花掃討作戦",
+  "abstract": "砲仙花を一掃しろ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOnHalfFinish",
+   "ToastOnLast",
+   "NpcComOnBegin",
+   "NpcComOnBeginNext",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnAccess",
+   "NpcComOnHit",
+   "NpcComOnPreSuccess",
+   "NpcComOnPreFinish"
+  ]
+ },
+ "ii_collect_goods_a": {
+  "name": "昆虫の化石を確保せよ！",
+  "abstract": "各所に散らばる昆虫の化石を確保せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastPickup",
+   "ToastCollect",
+   "ToastRewards",
+   "NpcComOnBegin",
+   "NpcComOnBeginAtRareCase",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "GoodsPosition",
+   "RepopGoods",
+   "OnAccessPodByEmptyHand",
+   "Collect1st",
+   "CollectHalf",
+   "CollectMostly",
+   "Pickup1st",
+   "PickupHalf",
+   "PickupEnough",
+   "Destroy1st",
+   "DestroyWarning",
+   "DestroyEmergency",
+   "TimeupWarning",
+   "TimeupEmergency",
+   "D"
+  ]
+ },
+ "ii_collect_goods_b": {
+  "name": "卵型の物質を回収せよ！",
+  "abstract": "隠された卵型の物質を回収せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastPickup",
+   "ToastCollect",
+   "ToastRewards",
+   "NpcComOnBegin",
+   "NpcComOnBeginAtRareCase",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "GoodsPosition",
+   "RepopGoods",
+   "OnAccessPodByEmptyHand",
+   "Collect1st",
+   "CollectHalf",
+   "CollectMostly",
+   "Pickup1st",
+   "PickupHalf",
+   "PickupEnough",
+   "KillTarget1st",
+   "KillTargetHalf",
+   "KillTargetAll",
+   "TimeupWarning",
+   "TimeupEmergency",
+   "D"
+  ]
+ },
+ "ii_collect_goods_c": {
+  "name": "稀少鉱物を回収せよ！",
+  "abstract": "点在する稀少鉱物を回収せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastPickup",
+   "ToastCollect",
+   "ToastRewards",
+   "NpcComOnBegin",
+   "NpcComOnBeginAtRareCase",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "GoodsPosition",
+   "RepopGoods",
+   "OnAccessPodByEmptyHand",
+   "Collect1st",
+   "CollectHalf",
+   "CollectMostly",
+   "Pickup1st",
+   "PickupHalf",
+   "PickupEnough",
+   "TimeupWarning",
+   "TimeupEmergency",
+   "D"
+  ]
+ },
+ "ii_collect_sample": {
+  "name": "多数のサンプルを採掘せよ！",
+  "abstract": "採掘機を用い、一定時間内に<br>一定数のサンプルを採掘せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOnHalfFinish",
+   "ToastOnLast",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnAccess",
+   "NpcComOnHit",
+   "NpcComOnMiss",
+   "NpcComOnPreSuccess",
+   "NpcComOnPreFinish"
+  ]
+ },
+ "ii_darkercore": {
+  "name": "侵食戦闘機の制御機構を破壊",
+  "abstract": "ダーカーに侵食された戦闘機の<br>制御機構を見つけだし、破壊せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBeginAtRareCase",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "AppearHeli",
+   "BreakHeli",
+   "RespawnHeli",
+   "UrgesFindCore",
+   "UrgesArrivalCore1st",
+   "UrgesArrivalCore",
+   "FindCore",
+   "DamagedCore",
+   "TimeupWarning",
+   "TimeupEmergency"
+  ]
+ },
+ "ii_defense_from_mge": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "GateBreak1",
+   "GateBreak2",
+   "MonoPrincessLevelUpdate1",
+   "MonoPrincessLevelUpdate2",
+   "MonoPrincessLevelUpdate3",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HP_Under_50",
+   "HP_Under_10",
+   "NpcComLastEnemy",
+   "FinalGateArrival",
+   "FinalGateWarning1",
+   "FinalGateWarning2",
+   "T"
+  ]
+ },
+ "ii_destroy_neo_burufu": {
+  "name": "ゲル・ブルフを迎撃せよ！",
+  "abstract": "ゲル・ブルフを撃破<br>または制限時間まで回避せよ",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "TrialOutbreak",
+   "NpcComOnBegin",
+   "NpcComOnBeginAtRareCase",
+   "NpcComOnBeginEmplacement",
+   "NpcComOnSuccess",
+   "NpcComOnSuccessDestroy",
+   "NpcComOnFailure",
+   "NpcComOnTarget",
+   "NpcComOnTime1",
+   "NpcComOnTime2",
+   "NpcComOnHit",
+   "NpcComDeadEmplacement",
+   "NpcComOnRepop"
+  ]
+ },
+ "ii_destroy_phs_cannon": {
+  "name": "艦砲を破壊せよ！",
+  "abstract": "甲板上にある艦砲を13個全て破壊せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_destroy_pirate_ship": {
+  "name": "水上艦の動力源を破壊しろ！",
+  "abstract": "敵勢力を撃破の後<br>水上艦に乗り込み、動力源を破壊せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnCannonBreak",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "L"
+  ]
+ },
+ "ii_dpp_chase": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)の討伐",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnHpDecreased0",
+   "NpcComOnHpDecreased1",
+   "NpcComOnHpDecreasedLast",
+   "NpcComOnTimeCourse",
+   "NpcComOnTimeSecond"
+  ]
+ },
+ "ii_dwarf_defense": {
+  "name": "リリーパ族を防衛せよ！",
+  "abstract": "危険にさらされている<br>リリーパ族を守り切れ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnAfterBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnFirstDamage",
+   "NpcComOnPinch"
+  ]
+ },
+ "ii_dwarf_junkspot": {
+  "name": "リリーパ族の宝探し",
+  "abstract": "宝を探すリリーパ族を最後まで守り抜け！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBeginNext",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnFindPlayer",
+   "NpcComOnFindLilipa",
+   "NpcComOnArrivalFirst",
+   "NpcComOnArrivalNext",
+   "NpcComOnArrivalFinal",
+   "S0S0L0",
+   "NpcComOnSearchFailure",
+   "NpcComOnJoin",
+   "OnFun",
+   "OnFind",
+   "OnDrop",
+   "OnDamage",
+   "OnMove",
+   "OnSuccess",
+   "OnDie",
+   "apc"
+  ]
+ },
+ "ii_dwarf_msg": {
+  "name": "リリーパ族への伝言",
+  "abstract": "リリーパ族の伝言を【ロビーアクション】で伝えろ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOnEnableGestureRange",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnDwarfGestureA",
+   "NpcComOnDwarfGestureB",
+   "NpcComOnAppearDwarfA",
+   "NpcComOnAppearDwarfB",
+   "NpcComOnEnableGesture",
+   "NpcComOnDisableGesture",
+   "NpcComOnGestureOK",
+   "NpcComOnGestureNG",
+   "NpcComOnHintKiss",
+   "NpcComOnHintYes",
+   "NpcComOnHintThanks",
+   "NpcComOnHintSorry",
+   "NpcComOnHintClap",
+   "NpcComOnHintEncourage",
+   "NpcComOnHintYell",
+   "NpcComOnHintHeat"
+  ]
+ },
+ "ii_dwarf_ult_defense": {
+  "name": "リリーパ族を防衛せよ！",
+  "abstract": "危険にさらされている<br>リリーパ族を守り切れ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnAfterBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnFirstDamage",
+   "NpcComOnPinch"
+  ]
+ },
+ "ii_dwarfhome_defense": {
+  "name": "リリーパ族集落防衛",
+  "abstract": "リリーパ族の集落を守り通せ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnAfterBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnArrive",
+   "NpcComOnBroken1",
+   "NpcComOnBroken2",
+   "NpcComOnTimeLimit1",
+   "NpcComOnTimeLimit2",
+   "t"
+  ]
+ },
+ "ii_enemy_capture": {
+  "name": "$(0)を捕獲せよ！",
+  "abstract": "$(0)を捕獲装置で捕獲せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOnRestTryCaptureNum",
+   "ToastOnUselessAccess",
+   "NpcComOnBegin",
+   "NpcComOnAfterBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnEnableCapture",
+   "NpcComOnCaptureSwitch",
+   "NpcComOnDisableCapture",
+   "NpcComOnSuccessCapture",
+   "NpcComOnFailedCapture",
+   "NpcComOnAttackTarget",
+   "NpcComOnDeadTarget",
+   "NpcComOnLastCapture"
+  ]
+ },
+ "ii_enemy_fever_ahl": {
+  "name": "多数の希少種を討伐せよ！",
+  "abstract": "一定時間、希少種を倒せ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess"
+  ]
+ },
+ "ii_enemy_generator": {
+  "name": "ダーカイムを破壊せよ！",
+  "abstract": "ダーカイムをすべて破壊せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "GeneratorLastOne",
+   "GeneratorAdd",
+   "TimeLimitNear",
+   "DestroyGenerator",
+   "DestroyIndicated",
+   "l"
+  ]
+ },
+ "ii_enemy_ranking": {
+  "name": "条件達成に尽力せよ！",
+  "abstract": "条件達成に尽力せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnExplain"
+  ]
+ },
+ "ii_enemybomb": {
+  "name": "ベイゼ破壊",
+  "abstract": "ベイゼが爆発する前に破壊せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_escape_boost_v": {
+  "name": "暴走ヴィスボルトを回避せよ！",
+  "abstract": "暴走ヴィスボルトを回避し続けろ。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "TrialLightningStrike",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnHitOtherPlayer",
+   "NpcComOnLightningStrike",
+   "NpcComOn60SecondLeft",
+   "NpcComOn30SecondLeft"
+  ]
+ },
+ "ii_escape_boost_v_ev_rare": {
+  "name": "$(0)撃破",
+  "abstract": "乱入してきた<br>$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess"
+  ]
+ },
+ "ii_escape_enemy_ahl": {
+  "name": "逃走$(0)討伐",
+  "abstract": "逃走$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "TrialBeginMsgForKeyII",
+   "NpcComOnBegin",
+   "NpcComOnBeginAtRareCase",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "T"
+  ]
+ },
+ "ii_escape_from_darker_light": {
+  "name": "ヴィスボルトを回避せよ！",
+  "abstract": "ヴィスボルトの攻撃を回避し続けろ。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "TrialLightningStrike",
+   "TrialDarkerKilledInfo",
+   "TrialDegradationInfo",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnBeginTrial",
+   "NpcComOnLightningStrike",
+   "NpcComOnOneLife",
+   "D",
+   "t"
+  ]
+ },
+ "ii_escape_from_neo_burufu": {
+  "name": "ゲル・ブルフを凌ぎきれ！",
+  "abstract": "ゲル・ブルフの襲来を凌ぎ<br>生還せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "TrialOutbreak",
+   "NpcComOnBegin",
+   "NpcComOnBeginAtRareCase",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnTarget",
+   "NpcComOnTime1",
+   "NpcComOnTime2",
+   "NpcComOnRepop",
+   "t"
+  ]
+ },
+ "ii_escape_rare_enemy_ahl": {
+  "name": "逃走$(0)討伐",
+  "abstract": "逃走$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "TrialBeginMsgForKeyII",
+   "NpcComOnBegin",
+   "NpcComOnBeginAtRareCase",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "T"
+  ]
+ },
+ "ii_ev_boss_capture": {
+  "name": "$(0)を捕獲せよ！",
+  "abstract": "$(0)を捕獲装置で捕獲せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOnRestTryCaptureNum",
+   "ToastOnUselessAccess",
+   "NpcComOnBegin",
+   "NpcComOnAfterBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnEnableCapture",
+   "NpcComOnCaptureSwitch",
+   "NpcComOnDisableCapture",
+   "NpcComOnSuccessCapture",
+   "NpcComOnFailedCapture",
+   "NpcComOnAttackTarget",
+   "NpcComOnDeadTarget",
+   "NpcComOnLastCapture"
+  ]
+ },
+ "ii_ev_boss_rematch": {
+  "name": "$(0)を撃破せよ！",
+  "abstract": "新たに現れた<br>$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "D",
+   "t"
+  ]
+ },
+ "ii_ev_different_sp_boss_ahl": {
+  "name": "討伐対象を全て撃破せよ！",
+  "abstract": "緊急指令！$(0)を<br>含めた全ての敵を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "TargetName",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "D",
+   "T",
+   "d",
+   "t"
+  ]
+ },
+ "ii_ev_double_sp_ahl": {
+  "name": "希少エネミー討伐",
+  "abstract": "希少エネミーを倒せ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "TargetName",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L",
+   "d"
+  ]
+ },
+ "ii_ev_dwarf_escort": {
+  "name": "リリーパ族を護衛せよ！",
+  "abstract": "危険にさらされている<br>リリーパ族を守り切れ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnAfterBegin",
+   "NpcComOnFirstPoint",
+   "NpcComOnPinch",
+   "NpcComOnWalk1",
+   "NpcComOnWalk2",
+   "NpcComOnWalk3",
+   "NpcComOnSuccess",
+   "NpcComOnFailure"
+  ]
+ },
+ "ii_ev_enemybomb_boss": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess"
+  ]
+ },
+ "ii_ev_js_apc": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！<br>パートナーが2回戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnDownA",
+   "NpcComOnDownB",
+   "T"
+  ]
+ },
+ "ii_ev_js_apc_boss": {
+  "name": "$(0)撃破",
+  "abstract": "パートナーと共闘して<br>$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "D"
+  ]
+ },
+ "ii_ev_js_apc_boss_alice": {
+  "name": "no_text",
+  "abstract": "no_text",
+  "keys": [
+   "IncidentName",
+   "n",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure"
+  ]
+ },
+ "ii_ev_js_apc_boss_asai": {
+  "name": "no_text",
+  "abstract": "no_text",
+  "keys": [
+   "IncidentName",
+   "n",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure"
+  ]
+ },
+ "ii_ev_js_apc_boss_collabo1": {
+  "name": "no_text",
+  "abstract": "no_text",
+  "keys": [
+   "IncidentName",
+   "n",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure"
+  ]
+ },
+ "ii_ev_js_apc_boss_nagisa": {
+  "name": "no_text",
+  "abstract": "no_text",
+  "keys": [
+   "IncidentName",
+   "n",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure"
+  ]
+ },
+ "ii_ev_js_apc_boss_orakio": {
+  "name": "no_text",
+  "abstract": "no_text",
+  "keys": [
+   "IncidentName",
+   "n",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure"
+  ]
+ },
+ "ii_ev_partner_boss": {
+  "name": "共棲エネミー撃破",
+  "abstract": "援護に来たエネミーを含め<br>全ての敵を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L",
+   "l"
+  ]
+ },
+ "ii_ev_same_sp_boss_ahl": {
+  "name": "$(0)撃破",
+  "abstract": "乱入してきた<br>$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "L",
+   "l"
+  ]
+ },
+ "ii_ev_shoot_darker_heli": {
+  "name": "侵食戦闘機を破壊せよ",
+  "abstract": "制限時間内に<br>ダーカーに侵食された戦闘機を破壊せよ",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "EnemyAppearMsg",
+   "TrialEvolutionBeginMsg_ReLanding",
+   "TrialEvolutionBeginMsg_ShootDarkerHeli",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnBegin2",
+   "NpcComOnHp50",
+   "NpcComOnHp10",
+   "NpcComOnLanding",
+   "NpcComOnTimeNotice",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "D"
+  ]
+ },
+ "ii_firewall": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を一定数討伐し障壁を解除せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "DestroyDoorMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_fort_attack": {
+  "name": "龍族拠点防衛隊突破",
+  "abstract": "拠点を防衛するすべての龍族を撃破せよ。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnCloseSuccess",
+   "NpcComOnOpenSuccess",
+   "NpcComOnOpenDoor",
+   "NpcComOnDestroyCrystal",
+   "T"
+  ]
+ },
+ "ii_fsm_chase": {
+  "name": "幻創の未確認生物を撃退せよ！",
+  "abstract": "制限時間内に未確認生物を撃退せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "N",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnHalf",
+   "NpcComOnLastOne",
+   "NpcComOnBeginNext",
+   "T"
+  ]
+ },
+ "ii_helicopter_defense": {
+  "name": "戦闘機防衛",
+  "abstract": "戦闘機が修理されるまで防衛せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "EnemyAppearMsg",
+   "TrialEvolutionBeginMsg_ReLanding",
+   "TrialEvolutionBeginMsg_Rescue",
+   "TrialEvolutionBeginMsg_Combat",
+   "TrialAbstract"
+  ]
+ },
+ "ii_indi": {
+  "name": "幻創浮遊要塞を破壊せよ！",
+  "abstract": "制限時間内に幻創浮遊要塞を破壊せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin1",
+   "NpcComOnBegin2",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComRemHalf",
+   "NpcComRemZero",
+   "NpcComOnHPLE50",
+   "NpcComOnTime50",
+   "NpcComOnTime10"
+  ]
+ },
+ "ii_j_s_apc_alice": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！<br>パートナーが2回戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnFailure",
+   "NpcComOnDownB",
+   "L"
+  ]
+ },
+ "ii_j_s_apc_asai": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！<br>パートナーが2回戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnFailure",
+   "NpcComOnDownB",
+   "L"
+  ]
+ },
+ "ii_j_s_apc_boss_revival": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnBeginP1",
+   "NpcComOnBeginP2",
+   "L",
+   "l"
+  ]
+ },
+ "ii_j_s_apc_collabo1": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！<br>パートナーが2回戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnFailure",
+   "NpcComOnDownB",
+   "L"
+  ]
+ },
+ "ii_j_s_apc_nagisa": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！<br>パートナーが2回戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnFailure",
+   "NpcComOnDownB",
+   "L"
+  ]
+ },
+ "ii_j_s_apc_orakio": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！<br>パートナーが2回戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnFailure",
+   "NpcComOnDownB",
+   "L"
+  ]
+ },
+ "ii_j_s_ssn_apc_asai": {
+  "name": "パートナー達と共闘せよ",
+  "abstract": "パートナー達と共闘せよ！<br>パートナー全員が戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_j_s_ssn_apc_collabo1": {
+  "name": "パートナー達と共闘せよ",
+  "abstract": "パートナー達と共闘せよ！<br>パートナー全員が戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_j_s_ssn_apc_eg": {
+  "name": "アースガイド達と共闘せよ",
+  "abstract": "アースガイド達と共闘せよ！<br>アースガイド全員が戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_j_s_ssn_apc_new_afin": {
+  "name": "パートナー達と共闘せよ",
+  "abstract": "パートナー達と共闘せよ！<br>パートナー全員が戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_j_s_ssn_apc_orakio": {
+  "name": "パートナー達と共闘せよ",
+  "abstract": "パートナー達と共闘せよ！<br>パートナー全員が戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_j_s_ssn_apc_revival": {
+  "name": "パートナー達と共闘せよ",
+  "abstract": "パートナー達と共闘せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_joint_struggle_apc": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！<br>パートナーが2回戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnDownA",
+   "NpcComOnDownB",
+   "NpcComOnDownPB",
+   "NpcComOnBeginP1",
+   "NpcComOnBeginP2",
+   "NpcComOnFailureP",
+   "t"
+  ]
+ },
+ "ii_joint_struggle_apc_boss": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！<br>パートナーが2回戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnDownA",
+   "NpcComOnDownB",
+   "NpcComOnDownPB",
+   "NpcComOnBeginP1",
+   "NpcComOnBeginP2",
+   "NpcComOnFailureP",
+   "t"
+  ]
+ },
+ "ii_joint_struggle_giant": {
+  "name": "白の民を助太刀せよ！",
+  "abstract": "$(0)を$(1)体倒せ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailureDead",
+   "NpcComOnFailureTimer",
+   "L",
+   "l"
+  ]
+ },
+ "ii_joint_struggle_multi_apc": {
+  "name": "$(0)撃破",
+  "abstract": "$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_joint_struggle_ssn_apc": {
+  "name": "パートナー達と共闘せよ",
+  "abstract": "パートナー達と共闘せよ！<br>パートナー全員が戦闘不能になったら失敗。",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_js_apc_boss_0000": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "A",
+   "IncidentJsApcSuccessEvo",
+   "o",
+   "d",
+   "lm"
+  ]
+ },
+ "ii_js_apc_boss_5026": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "A",
+   "IncidentJsApcSuccessEvo",
+   "n",
+   "D",
+   "d"
+  ]
+ },
+ "ii_js_apc_boss_5032": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "A",
+   "IncidentJsApcSuccessEvo",
+   "R",
+   "d"
+  ]
+ },
+ "ii_js_apc_boss_5038": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "A",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "IncidentJsApcSuccessEvo",
+   "F",
+   "d"
+  ]
+ },
+ "ii_js_apc_boss_5051": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "A",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "IncidentJsApcSuccessEvo",
+   "d"
+  ]
+ },
+ "ii_js_apc_boss_5052": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "A",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "IncidentJsApcSuccessEvo",
+   "d"
+  ]
+ },
+ "ii_js_apc_boss_5056": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "A",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "IncidentJsApcSuccessEvo",
+   "T"
+  ]
+ },
+ "ii_js_apc_boss_5070": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "A",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "IncidentJsApcSuccessEvo"
+  ]
+ },
+ "ii_js_apc_boss_5520": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "A",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "IncidentJsApcSuccessEvo",
+   "d"
+  ]
+ },
+ "ii_js_apc_boss_8012": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "IncidentJsApcBegin",
+   "A",
+   "IncidentJsApcSuccess",
+   "IncidentJsApcFailure",
+   "IncidentJsApcBeginEvo",
+   "IncidentJsApcSuccessEvo",
+   "E",
+   "d"
+  ]
+ },
+ "ii_key_and_lock": {
+  "name": "障壁解除",
+  "abstract": "$(0)個、鍵を集めて障壁を解除せよ！",
+  "keys": [
+   "IncidentName",
+   "LogPickupKey",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnDispKey",
+   "NpcComOnCollected"
+  ]
+ },
+ "ii_mack_defense": {
+  "name": "エネルギーポッドを補充せよ！",
+  "abstract": "エネルギーポッドに補充しつつ<br>エネミーの攻撃から守れ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ChanceTime",
+   "NpcComOnBegin",
+   "NpcComOnContainerPop",
+   "NpcComOnTargetPosition",
+   "NpcComOnBossTargetPosition",
+   "NpcComOnTimeLimit30",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComGaugeHp25",
+   "NpcComGaugeHp50",
+   "NpcComGaugeHp75",
+   "NpcComGaugeHp90"
+  ]
+ },
+ "ii_mep_annihilation": {
+  "name": "より多くの敵を撃破せよ！",
+  "abstract": "制限時間内に、より多くの敵を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "Toast75EnemyMsg",
+   "Toast50EnemyMsg",
+   "Toast25EnemyMsg",
+   "Toast10EnemyMsg",
+   "NpcComOnBegin",
+   "NpcComOnDefeatedHalfEnemy",
+   "NpcComOnTimeLimit30",
+   "NpcComOnDefeatedAllEnemy",
+   "NpcComOnSuccess",
+   "L"
+  ]
+ },
+ "ii_mep_annihilation_mack": {
+  "name": "より多くの敵を撃破せよ！",
+  "abstract": "制限時間内に、より多くの敵を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "Toast75EnemyMsg",
+   "Toast50EnemyMsg",
+   "Toast25EnemyMsg",
+   "Toast10EnemyMsg",
+   "NpcComOnBegin",
+   "NpcComOnDefeatedHalfEnemy",
+   "NpcComOnTimeLimit30",
+   "NpcComOnDefeatedAllEnemy",
+   "NpcComOnSuccess",
+   "L",
+   "t"
+  ]
+ },
+ "ii_missile_intercept": {
+  "name": "missile_intercept（仮）",
+  "abstract": "missile_intercept（仮）",
+  "keys": [
+   "IncidentName",
+   "m",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "D"
+  ]
+ },
+ "ii_naura_goods_defense": {
+  "name": "ナウラのケーキ屋を守れ！",
+  "abstract": "散らばった商品コンテナを守れ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOnSuccess",
+   "ToastOnDestroy",
+   "ToastOnAllDestroy",
+   "OnBegin",
+   "OnDamage",
+   "OnDestroy",
+   "OnAllDestroy",
+   "OnSuccess",
+   "OnLastOne",
+   "OnFailure",
+   "first",
+   "D",
+   "second",
+   "l",
+   "third"
+  ]
+ },
+ "ii_pamper_jack_box": {
+  "name": "ランプの中からボワワワン！",
+  "abstract": "Ｍｒ．ボワンを時間内に撃破せよ",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "StruckJackBox",
+   "T"
+  ]
+ },
+ "ii_pamper_umblla": {
+  "name": "嵐の贈り物",
+  "abstract": "Mr.アンブラに1回叩かれろ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "M",
+   "TrialAbstract",
+   "TrialFailureAttack",
+   "TrialFailureMiss",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnPreBegin",
+   "StruckUmblla",
+   "BeStruckByUmblla"
+  ]
+ },
+ "ii_pit_ahl": {
+  "name": "隔離状況を打破せよ！",
+  "abstract": "外敵を$(0)体討伐し、隔離状況を打破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "D"
+  ]
+ },
+ "ii_player_ahl": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_pse_defense": {
+  "name": "励起結晶を守り抜け！",
+  "abstract": "一定時間、励起結晶を防衛せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOnSuccess",
+   "ToastOnPinch",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnDestroy",
+   "NpcComOnLast",
+   "NpcComOnAddPse",
+   "l"
+  ]
+ },
+ "ii_rare_enemy_coin": {
+  "name": "$(0)を撃退せよ！",
+  "abstract": "すべての$(0)を撃退せよ",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOwnerPartyLeave"
+  ]
+ },
+ "ii_rescue_darker_trap": {
+  "name": "ファンジを破壊せよ！",
+  "abstract": "さらわれたプレイヤーを助け出せ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnSuccess",
+   "NpcComOnFailure"
+  ]
+ },
+ "ii_session_apc_5003": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5008": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_session_apc_5013": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_session_apc_5014": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_session_apc_5019": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_session_apc_5020": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_session_apc_5021": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5026": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_session_apc_5031": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5032": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5033": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5054": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5057": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5059": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5062": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_session_apc_5063": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5068": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead"
+  ]
+ },
+ "ii_session_apc_5069": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead"
+  ]
+ },
+ "ii_session_apc_5083": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5087": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5091": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_session_apc_5126": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5127": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5150": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5151": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5177": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5178": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5186": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5188": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5206": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5207": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5209": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5210": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5213": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5220": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5221": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5222": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5223": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5227": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5230": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5242": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5244": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5251": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5252": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5254": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5272": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5281": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5282": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5292": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5293": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5306": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5314": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5315": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5316": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5318": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5319": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5320": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5321": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5322": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5323": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5327": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5328": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5331": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5332": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5333": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5334": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5340": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5341": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5342": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5346": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5347": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5348": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5349": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5352": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5353": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5354": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5355": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5356": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5357": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5358": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5359": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5363": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5364": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5365": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5366": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5367": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5368": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5369": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5370": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5371": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5375": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5376": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5378": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5385": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5386": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5387": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5388": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5389": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5390": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5407": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "l"
+  ]
+ },
+ "ii_session_apc_5408": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5412": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5424": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Dead",
+   "BuddyDead",
+   "Failure",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5437": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5444": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5445": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5478": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5483": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5486": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5487": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5493": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5494": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5495": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5504": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5510": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5511": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5512": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5513": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5514": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5515": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5516": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5517": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5526": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5527": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5533": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5534": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5536": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5537": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5556": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5557": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5566": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5576": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5577": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5578": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5579": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5580": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5584": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5589": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5590": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5592": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5593": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5594": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5595": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5597": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "l"
+  ]
+ },
+ "ii_session_apc_5598": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "l"
+  ]
+ },
+ "ii_session_apc_5600": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5601": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5607": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5608": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5609": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5618": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5619": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5620": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5621": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5629": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Dead",
+   "BuddyDead",
+   "Failure",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5630": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Dead",
+   "BuddyDead",
+   "Failure",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5631": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Dead",
+   "BuddyDead",
+   "Failure",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5632": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Dead",
+   "BuddyDead",
+   "Failure",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5634": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5635": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5636": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5646": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Dead",
+   "BuddyDead",
+   "Failure",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5647": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Dead",
+   "BuddyDead",
+   "Failure",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5648": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Dead",
+   "BuddyDead",
+   "Failure",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5658": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5659": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5660": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5661": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5662": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5663": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution"
+  ]
+ },
+ "ii_session_apc_5666": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_5667": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D"
+  ]
+ },
+ "ii_session_apc_pure_f": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_session_apc_pure_m": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "Evolution",
+   "D",
+   "t"
+  ]
+ },
+ "ii_slime_vanish": {
+  "name": "消滅！　マッドゼリー",
+  "abstract": "マッドゼリーを駆除し<br>時間内に消滅ノルマを果たせ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnAfterBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnDanger",
+   "NpcComOnFirstExplode",
+   "NpcComOnHalf",
+   "NpcComOnFinalNotice",
+   "l"
+  ]
+ },
+ "ii_specified_enemy_ahl": {
+  "name": "$(0)討伐",
+  "abstract": "特定数の$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "L",
+   "l"
+  ]
+ },
+ "ii_spene_ahl_rappyemp": {
+  "name": "$(0)を撃退せよ！",
+  "abstract": "突如現れた$(0)を撃退せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "D",
+   "t"
+  ]
+ },
+ "ii_ssn_apc_ev_boss": {
+  "name": "$(0)撃破",
+  "abstract": "パートナー達と共闘して乱入してきた<br>$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_ssn_apc_ev_boss_5068": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_boss_5069": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_nyau": {
+  "name": "ニャウと勝負せよ！",
+  "abstract": "パートナー達と共闘してニャウに勝て！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_ssn_apc_ev_nyau_5068": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_nyau_5069": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_nyau_5150": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_nyau_5151": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_rare": {
+  "name": "$(0)撃破",
+  "abstract": "パートナー達と共闘して乱入してきた<br>$(0)を撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_ssn_apc_ev_rare_5068": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_rare_5069": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_rare_5150": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_rare_5151": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_two": {
+  "name": "討伐対象を全て撃破せよ！",
+  "abstract": "パートナー達と共闘して<br>全てのエネミーを撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_ssn_apc_ev_two_5068": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_ssn_apc_ev_two_5069": {
+  "name": "",
+  "abstract": "",
+  "keys": [
+   "PreBegin",
+   "Begin",
+   "Success",
+   "Failure",
+   "Dead",
+   "BuddyDead",
+   "TargetDead"
+  ]
+ },
+ "ii_story_humanoid_battle": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_story_humanoid_battle_tl": {
+  "name": "$(0)を倒せ",
+  "abstract": "制限時間内に$(0)を倒せ",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract"
+  ]
+ },
+ "ii_time_bomb": {
+  "name": "時限爆弾解除",
+  "abstract": "全ての時限爆弾を解除せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "ToastOnHalfFinish",
+   "ToastOnLast",
+   "ToastCollect",
+   "ToastCollect2",
+   "ToastRewards",
+   "NpcComOnBegin",
+   "NpcComOnBegin2",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnLastHalf",
+   "NpcComOnLastOne",
+   "NpcComOnCorrect",
+   "NpcComOnIncorrect",
+   "NpcComOnRemain30",
+   "NpcComOnJoin",
+   "T"
+  ]
+ },
+ "ii_tower_quest_damage": {
+  "name": "全てのエネミーを撃破せよ！",
+  "abstract": "足場に気を付けつつ、エネミーを倒せ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "DirectionAim",
+   "DirectionRandom",
+   "DamageHalf",
+   "DamageMax"
+  ]
+ },
+ "ii_tower_quest_gas": {
+  "name": "HP回復の妨害を乗り越えろ",
+  "abstract": "HP回復効果の妨害を乗り越えろ！",
+  "keys": [
+   "IncidentName",
+   "H",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "DirectionSwitch",
+   "DirectionNoSwitch",
+   "SwitchFirst",
+   "SwitchLast"
+  ]
+ },
+ "ii_tower_quest_order": {
+  "name": "ステージオーダーをクリアせよ！",
+  "abstract": "ステージオーダーをクリアせよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure"
+  ]
+ },
+ "ii_umincyu_kiki1patu": {
+  "name": "ウォパル危機一髪！",
+  "abstract": "ガムアネモネを破壊しろ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOn1st",
+   "NpcComOn2nd",
+   "NpcComOn3rd"
+  ]
+ },
+ "ii_waker_ahl": {
+  "name": "アンガ・ファンダージ討伐",
+  "abstract": "アンガ・ファンダージを討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "d"
+  ]
+ },
+ "ii_waker_bit_ahl": {
+  "name": "ファンダージ・ビットを破壊せよ",
+  "abstract": "制限時間内にファンダージ・ビットをすべて破壊せよ",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "NpcComOnRemainTimeNotice",
+   "NpcComOnLastOne"
+  ]
+ },
+ "ii_waker_bit_ahl_2ev_boss": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "D",
+   "t"
+  ]
+ },
+ "ii_waker_bit_ahl_ev_boss": {
+  "name": "$(0)討伐",
+  "abstract": "$(0)を討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "D",
+   "t"
+  ]
+ },
+ "ii_waker_bit_ahl_ev_waker": {
+  "name": "アンガ・ファンダージ討伐",
+  "abstract": "アンガ・ファンダージを討伐せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "l"
+  ]
+ },
+ "ii_with_emplacement": {
+  "name": "全てのエネミーを撃破せよ！",
+  "abstract": "銃座を利用して全てのエネミーを撃破せよ！",
+  "keys": [
+   "IncidentName",
+   "TrialBeginMsg",
+   "TrialAbstract",
+   "NpcComOnPreBegin",
+   "NpcComOnBegin",
+   "NpcComOnSuccess",
+   "NpcComOnFailure",
+   "HelpMessage",
+   "EmplacementBroke",
+   "EmplacementRespawn",
+   "EnergyStandRespawn",
+   "l"
+  ]
+ }
+}
