@@ -565,8 +565,9 @@ impl Map {
         // goes where the last hit came from: the client closes its dialog when the player is more than ~3 m away
         // from it.
         // [pso2_vita_offline] emergency trials: the trial's last enemy ends it with a success
-        if killed.is_some() && matches!(self.map_type, MapType::QuestMap) {
-            let out = self.zones[zone_pos].pse.on_kill();
+        if let Some((_, _, id, _)) = killed.as_ref().filter(|_| matches!(self.map_type, MapType::QuestMap)) {
+            let humans = self.zones[zone_pos].human_ids();
+            let out = self.zones[zone_pos].pse.on_kill(*id, &humans);
             self.pse_apply(zone_pos, out).await?;
         }
         if let Some((_, _, id, _)) = &killed {
@@ -830,21 +831,22 @@ impl Map {
         Ok(Some((obj_id, def.time_limit_s)))
     }
 
-    /// [pso2_vita_offline] Once a second (`pse::spawn_ticker`): PSE decay, burst chance timeout, burst spawns / end.
+    /// [pso2_vita_offline] Once a second (`pse::spawn_ticker`): PSE timers, burst slots, burst end / one more.
     pub async fn pse_tick(&mut self) -> Result<(), Error> {
         for zone_pos in 0..self.zones.len() {
             if self.zones[zone_pos].players.is_empty() {
                 continue;
             }
-            let alive = self.zones[zone_pos].enemies.len() as u32;
-            let out = self.zones[zone_pos].pse.tick(alive);
+            let humans = self.zones[zone_pos].human_ids();
+            let out = self.zones[zone_pos].pse.tick(&humans);
             self.pse_apply(zone_pos, out).await?;
         }
         Ok(())
     }
 
-    /// [pso2_vita_offline] Sends a PSE outcome to the zone and spawns the burst's enemies around a player: at the
-    /// opened chunk's enemy spawn point nearest to them (or the player's position), zone enemies of one spawn category.
+    /// [pso2_vita_offline] Sends a PSE outcome to the zone and spawns one burst enemy per slot owner: 3 m from
+    /// the opened chunk's enemy spawn point nearest to the owner (or the owner's position), zone enemies of one spawn
+    /// category; the enemy fills the owner's slot.
     pub async fn pse_apply(&mut self, zone_pos: usize, out: crate::pse::Outcome) -> Result<(), Error> {
         let zone = &self.zones[zone_pos];
         if !out.packets.is_empty() {
@@ -855,28 +857,12 @@ impl Map {
             })
             .await;
         }
-        if out.spawn == 0 {
+        if out.spawn.is_empty() {
             return Ok(());
         }
         let Some(block_data) = self.block_data.to_owned() else {
             return Ok(());
         };
-        let Some(player) = zone.players.iter().find_map(|p| p.user.upgrade()) else {
-            return Ok(());
-        };
-        let at = player.lock().await.position;
-        let d2 = |p: &Position| {
-            let (dx, dz) = (p.pos_x.to_f32() - at.pos_x.to_f32(), p.pos_z.to_f32() - at.pos_z.to_f32());
-            dx * dx + dz * dz
-        };
-        let base = zone
-            .data
-            .chunks
-            .iter()
-            .filter(|c| zone.chunk_spawns.iter().any(|s| s.0 == c.chunk_id))
-            .flat_map(|c| c.enemy_spawn_points.iter().copied())
-            .min_by(|a, b| d2(a).total_cmp(&d2(b)))
-            .unwrap_or(at);
         let category = zone.data.enemies.iter().map(|e| e.spawn_category).choose(&mut rand::thread_rng());
         let names: Vec<String> = zone
             .data
@@ -888,18 +874,35 @@ impl Map {
         if names.is_empty() {
             return Ok(());
         }
-        let n = out.spawn;
-        for i in 0..n {
-            let a = i as f32 * std::f32::consts::TAU / n as f32;
+        for owner in out.spawn {
+            let zone = &self.zones[zone_pos];
+            let Some(player) = zone.players.iter().find(|p| p.player_id == owner).and_then(|p| p.user.upgrade()) else {
+                continue;
+            };
+            let at = player.lock().await.position;
+            let d2 = |p: &Position| {
+                let (dx, dz) = (p.pos_x.to_f32() - at.pos_x.to_f32(), p.pos_z.to_f32() - at.pos_z.to_f32());
+                dx * dx + dz * dz
+            };
+            let base = zone
+                .data
+                .chunks
+                .iter()
+                .filter(|c| zone.chunk_spawns.iter().any(|s| s.0 == c.chunk_id))
+                .flat_map(|c| c.enemy_spawn_points.iter().copied())
+                .min_by(|a, b| d2(a).total_cmp(&d2(b)))
+                .unwrap_or(at);
+            let a = rand::Rng::gen_range(&mut rand::thread_rng(), 0.0f32..std::f32::consts::TAU);
             let mut p = base;
             p.pos_x = half::f16::from_f32(base.pos_x.to_f32() + 3.0 * a.cos());
             p.pos_z = half::f16::from_f32(base.pos_z.to_f32() + 3.0 * a.sin());
             let name = names.iter().choose(&mut rand::thread_rng()).cloned().unwrap_or_default();
-            self.zones[zone_pos]
+            let id = self.zones[zone_pos]
                 .spawn_enemy(&block_data, &mut self.max_id, self.enemy_level, &name, p)
                 .await?;
+            self.zones[zone_pos].pse.assign(owner, id);
+            log::info!("[pso2-pse] burst enemy {id} {name} for {owner} in {}", self.zones[zone_pos].data.name);
         }
-        log::info!("[pso2-pse] burst spawned {n} ({}) in {}", names.join("/"), self.zones[zone_pos].data.name);
         Ok(())
     }
 
@@ -909,7 +912,18 @@ impl Map {
     }
     /// [pso2_vita_offline] Debug `pse set <id> <level>` on the zone.
     pub async fn pse_set(&mut self, zone_pos: usize, id: u32, level: u32) -> Result<(), Error> {
-        let out = self.zones[zone_pos].pse.set(id, level);
+        let humans = self.zones[zone_pos].human_ids();
+        let out = self.zones[zone_pos].pse.set(id, level, &humans);
+        self.pse_apply(zone_pos, out).await
+    }
+    /// [pso2_vita_offline] Debug `pse occur <id>` (as if a kill's roll picked it) / `pse ext <s>` (burst extension).
+    pub async fn pse_occur(&mut self, zone_pos: usize, id: u32, ext: Option<u64>) -> Result<(), Error> {
+        let humans = self.zones[zone_pos].human_ids();
+        let mut out = crate::pse::Outcome::default();
+        match ext {
+            Some(s) => self.zones[zone_pos].pse.extend(s, &mut out),
+            None => self.zones[zone_pos].pse.occur(id, &humans, &mut out),
+        }
         self.pse_apply(zone_pos, out).await
     }
     /// [pso2_vita_offline] Debug `pse show`: (type, level) running in the zone and the burst's type.
@@ -918,8 +932,16 @@ impl Map {
         format!(
             "pool {:?} active {:?} burst {:?}",
             z.pool,
-            z.active.iter().map(|a| (a.id, a.level, a.chance_until.is_some())).collect::<Vec<_>>(),
-            z.burst.map(|b| (b.0, b.1.saturating_duration_since(Instant::now()).as_secs()))
+            z.active
+                .iter()
+                .map(|a| (a.id, a.level, a.until.map(|t| t.saturating_duration_since(Instant::now()).as_secs())))
+                .collect::<Vec<_>>(),
+            z.burst.as_ref().map(|b| (
+                b.id,
+                b.until.saturating_duration_since(Instant::now()).as_secs(),
+                b.one_more,
+                b.slots.iter().map(|s| s.enemy).collect::<Vec<_>>()
+            ))
         )
     }
 
@@ -1181,6 +1203,10 @@ impl Map {
 }
 
 impl Zone {
+    /// [pso2_vita_offline] Player ids of the humans in the zone (PSE burst slot owners).
+    fn human_ids(&self) -> Vec<PlayerId> {
+        self.players.iter().map(|p| p.player_id).collect()
+    }
     async fn add_player(&mut self, new_player: Arc<Mutex<User>>) -> Result<(), Error> {
         let mut other_equipment = Vec::with_capacity(self.players.len() * 2);
         let mut other_characters = Vec::with_capacity(self.players.len());
@@ -1779,6 +1805,8 @@ impl Zone {
             return Ok(None);
         }
         if inflicter.entity_type == ObjectType::Player && target.entity_type == ObjectType::Object {
+            // [pso2_vita_offline] PSE critical rate, element boosts, zero range
+            let pse_bonus = self.pse.bonus();
             let Some((enemy_pos, (_, target))) = self
                 .enemies
                 .iter_mut()
@@ -1796,9 +1824,10 @@ impl Zone {
                 return Err(Error::InvalidInput("deal_damage"));
             };
             let mut lock = inflicter.lock().await;
+            let from = lock.position;
             let result = lock
                 .get_stats_mut()
-                .damage_enemy(target, &block_data.server_data, dmg)?;
+                .damage_enemy(target, &block_data.server_data, dmg, &pse_bonus, from)?;
             let inflicter_pos = lock.position;
             let enemy_xyz = target.position();
             drop(lock);

@@ -1,18 +1,26 @@
 {
  "rules": {
-  "types_per_zone": 3,
-  "start_chance": 0.08,
-  "up_chance": 0.2,
-  "decay_s": 60,
+  "source": "research-design (pso2_research docs/pse-playable-candidates.md), values tuned",
+  "types_per_zone": 4,
+  "occur_chance": 0.08,
+  "expire_s": [
+   60,
+   45,
+   30
+  ],
   "burst_chance_s": 60,
   "burst_s": 60,
-  "burst_spawn_every_s": 10,
-  "burst_spawn": [
-   3,
-   5
+  "slots_per_human": 1,
+  "refill_s": 1.0,
+  "extend_chance": 0.002,
+  "extend_s": [
+   10,
+   20
   ],
-  "burst_max_enemies": 15,
-  "burst_drop_rolls": 2
+  "cross_s": 60,
+  "one_more_chance": 0.1,
+  "burst_drop_rolls": 2,
+  "zero_range_m": 3.0
  },
  "types": [
   {
@@ -201,7 +209,7 @@
     25,
     50
    ],
-   "apply": null,
+   "apply": "critical",
    "pool": true,
    "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
   },
@@ -220,7 +228,8 @@
     80,
     100
    ],
-   "apply": null,
+   "apply": "element",
+   "element": 1,
    "pool": true,
    "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
   },
@@ -239,7 +248,8 @@
     80,
     100
    ],
-   "apply": null,
+   "apply": "element",
+   "element": 2,
    "pool": true,
    "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
   },
@@ -258,7 +268,8 @@
     80,
     100
    ],
-   "apply": null,
+   "apply": "element",
+   "element": 3,
    "pool": true,
    "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
   },
@@ -277,7 +288,8 @@
     80,
     100
    ],
-   "apply": null,
+   "apply": "element",
+   "element": 4,
    "pool": true,
    "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
   },
@@ -296,7 +308,8 @@
     80,
     100
    ],
-   "apply": null,
+   "apply": "element",
+   "element": 5,
    "pool": true,
    "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
   },
@@ -315,7 +328,8 @@
     80,
     100
    ],
-   "apply": null,
+   "apply": "element",
+   "element": 6,
    "pool": true,
    "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
   },
@@ -524,7 +538,7 @@
     20,
     25
    ],
-   "apply": null,
+   "apply": "zero_range",
    "pool": true,
    "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
   },

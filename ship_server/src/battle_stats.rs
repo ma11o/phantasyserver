@@ -26,6 +26,9 @@ pub struct PlayerStats {
     base_tec_def: u32,
     /// Damage taken from skills (FuryStance), 0 = none; the multiplier is `1 + taken_extra`
     taken_extra: f32,
+    /// [pso2_vita_offline] weapon element (1 fire, 2 ice, 3 thunder, ..) and its value (force), for the PSE boosts
+    element: u8,
+    force: u8,
 }
 
 #[derive(Debug, Clone, Default)]
@@ -133,7 +136,11 @@ impl PlayerStats {
                 resulting_stats.base_mel_pwr
             );
             let (grind, affixes) = match &equiped_item.data {
-                pso2packetlib::protocol::items::ItemType::Weapon(w) => (w.grind, w.affixes),
+                pso2packetlib::protocol::items::ItemType::Weapon(w) => {
+                    resulting_stats.element = w.element;
+                    resulting_stats.force = w.force;
+                    (w.grind, w.affixes)
+                }
                 _ => (0, [0; 8]),
             };
             let pct = grind_percent(weapon_stats.rarity, grind);
@@ -245,6 +252,8 @@ impl PlayerStats {
         enemy: &mut EnemyStats,
         srv_data: &ServerData,
         attack: DealDamagePacket,
+        pse: &crate::pse::Bonus,
+        from: Position,
     ) -> Result<BattleResult, Error> {
         let damage = find_attack(srv_data, attack.attack_id, "player -> enemy", &enemy.name);
         // [pso2_vita_offline] unknown parts fall back to the first hitbox with a warning (the part ids of most
@@ -284,7 +293,28 @@ impl PlayerStats {
             data_structs::stats::AttackType::Rng => enemy.rng_def,
             data_structs::stats::AttackType::Tec => enemy.tec_def,
         };
-        let total_mul = 1.0 * hitbox.damage_mul;
+        // [pso2_vita_offline] PSE (T100, estimated): an element boost of the weapon's element raises the element's
+        // share of the hit (force % of it) by the boost's %; zero range multiplies melee hits landing within
+        // `zero_range_m` of the player
+        let elem_pct = pse.element.get(self.element as usize).copied().unwrap_or(0.0);
+        let elem_mul = 1.0 + self.force as f32 / 100.0 * elem_pct / 100.0;
+        let near = {
+            let (dx, dy, dz) = (
+                attack.x_pos.to_f32() - from.pos_x.to_f32(),
+                attack.y_pos.to_f32() - from.pos_y.to_f32(),
+                attack.z_pos.to_f32() - from.pos_z.to_f32(),
+            );
+            (dx * dx + dy * dy + dz * dz).sqrt() < crate::pse::rules().zero_range_m
+        };
+        let zero_mul = if near && matches!(damage.attack_type, data_structs::stats::AttackType::Mel) {
+            1.0 + pse.zero_range / 100.0
+        } else {
+            1.0
+        };
+        if elem_mul != 1.0 || zero_mul != 1.0 || pse.critical != 0.0 {
+            log::debug!("[pso2-pse] attack element x{elem_mul:.2} zero range x{zero_mul:.2} critical +{}%", pse.critical);
+        }
+        let total_mul = 1.0 * hitbox.damage_mul * elem_mul * zero_mul;
         let min_pure_attack =
             (base_pwr as f32 + weapon_pwr as f32 * 0.9 - def as f32).clamp(1.0, f32::MAX);
         let pure_attack = (base_pwr + weapon_pwr)
@@ -300,8 +330,9 @@ impl PlayerStats {
         //TODO: elemental dmg
 
         let mut rng = rand::rngs::OsRng;
-        let crit_chance = rand::distributions::Uniform::new(0, 100).sample(&mut rng);
-        let dmg = if crit_chance < 5 || min_weapon_attack == max_weapon_attack {
+        let crit_chance = rand::distributions::Uniform::new(0.0f32, 100.0).sample(&mut rng);
+        // [pso2_vita_offline] PSE critical rate adds to the 5%
+        let dmg = if crit_chance < 5.0 + pse.critical || min_weapon_attack == max_weapon_attack {
             max_weapon_attack
         } else {
             rand::distributions::Uniform::new(min_weapon_attack, max_weapon_attack).sample(&mut rng)

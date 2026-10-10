@@ -910,13 +910,15 @@ async fn run_command(line: &str) -> Result<String, Error> {
             Ok(format!("co {op} {id} {}", order.name))
         }
         ("pse", [op, rest @ ..]) => {
-            // pse show | set <id> <level 0..8> | kill [n]: n (default all) enemies of the zone to 1 HP, then one sword
-            // hit each through the normal damage path (kill -> PSE roll -> drops)
+            // pse show | set <id> <level 0..8> | occur <id> | ext <s> | kill [n]: n (default all) enemies of the zone
+            // to 1 HP, then one sword hit each through the normal damage path (kill -> PSE roll -> drops). `occur` is
+            // a kill's occurrence roll picking <id> (Lv up, chance, burst, cross); `ext` extends the burst by <s>
+            // seconds
             let (map, zone, player_id) = {
                 let lock = user.lock().await;
                 (lock.get_current_map().ok_or(Error::InvalidInput("no map"))?, lock.zone_pos, lock.get_user_id())
             };
-            let bad = || Error::InvalidInput("pse show | set <id> <level> | kill [n]");
+            let bad = || Error::InvalidInput("pse show | set <id> <level> | occur <id> | ext <s> | kill [n]");
             let mut map = map.lock().await;
             match *op {
                 "show" => {}
@@ -928,6 +930,13 @@ async fn run_command(line: &str) -> Result<String, Error> {
                         return Err(bad());
                     };
                     map.pse_set(zone, id, lv).await?;
+                }
+                "occur" | "ext" => {
+                    let Some(n) = rest.first().and_then(|v| parse_num::<u32>(v)) else {
+                        return Err(bad());
+                    };
+                    let ext = (*op == "ext").then_some(n as u64);
+                    map.pse_occur(zone, n, ext).await?;
                 }
                 "kill" => {
                     let mut ids = map.zone_enemy_ids(zone);
