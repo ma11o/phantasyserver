@@ -476,6 +476,7 @@ pub async fn new_character(user: &mut User, packet: login::CharacterCreatePacket
             .palette
             .set_subpalette_data(class_data.subpalettes.clone());
     }
+    crate::starter::grant(&mut char_data, &mut user.user_data.last_uuid);
     // first ep1 quest
     char_data.unlocked_quests.push(700000);
     let char_id = user
@@ -499,6 +500,10 @@ pub async fn start_game(user: &mut User, packet: login::StartGamePacket) -> HRes
         .sql
         .get_character(user.get_user_id(), packet.char_id)
         .await?;
+    let mut char = char;
+    if crate::starter::needs(&char) && crate::starter::grant(&mut char, &mut user.user_data.last_uuid) {
+        log::info!("[pso2-starter] gave the kit to {}", char.character.name);
+    }
     user.character = Some(char);
     user.session_start = std::time::Instant::now();
     user.send_packet(&Packet::LoadingScreenTransition).await?;

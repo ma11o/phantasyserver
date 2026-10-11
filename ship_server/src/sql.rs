@@ -59,6 +59,8 @@ pub struct CharData {
     pub skill_trees: crate::skill_tree::SkillTrees,
     /// [pso2_vita_offline] client orders taken / cleared (client_orders.rs)
     pub client_orders: crate::client_orders::ClientOrders,
+    /// [pso2_vita_offline] the starter kit (T104) was given (new characters, or once to an old one with no weapon)
+    pub starter_given: bool,
 }
 
 #[derive(Default, serde::Serialize, serde::Deserialize)]

@@ -53,6 +53,10 @@ impl Palette {
         self.cur_palette = packet.palette;
         Ok(())
     }
+    /// [pso2_vita_offline] any weapon on a palette (T104)
+    pub fn has_weapon(&self) -> bool {
+        self.palettes.iter().any(|p| p.uuid != 0)
+    }
     pub const fn set_palette_data(&mut self, id: u32, palette: WeaponPalette) {
         self.palettes[id as usize] = palette;
     }

@@ -25,6 +25,7 @@ mod party;
 mod quests;
 mod settings;
 mod sql;
+mod starter;
 mod user;
 
 use data_structs::{

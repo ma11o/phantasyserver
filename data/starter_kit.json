@@ -1,0 +1,79 @@
+{
+ "source": "仮 (クラスごとの武器種は WEAPON_PREF、所持品・メセタは仮の値)",
+ "items": [
+  {
+   "spec": "3:1:0",
+   "amount": 5,
+   "name": "モノメイト"
+  },
+  {
+   "spec": "3:7:0",
+   "amount": 1,
+   "name": "テレパイプ"
+  }
+ ],
+ "stack": 10,
+ "meseta": 1000,
+ "weapons": {
+  "Hunter": {
+   "id": 1,
+   "subid": 0
+  },
+  "Ranger": {
+   "id": 8,
+   "subid": 0
+  },
+  "Force": {
+   "id": 11,
+   "subid": 0
+  },
+  "Fighter": {
+   "id": 6,
+   "subid": 0
+  },
+  "Gunner": {
+   "id": 10,
+   "subid": 0
+  },
+  "Techer": {
+   "id": 13,
+   "subid": 0
+  },
+  "Braver": {
+   "id": 14,
+   "subid": 0
+  },
+  "Bouncer": {
+   "id": 17,
+   "subid": 0
+  },
+  "Challenger": {
+   "id": 1,
+   "subid": 0
+  },
+  "Summoner": {
+   "id": 18,
+   "subid": 0
+  },
+  "BattleWarrior": {
+   "id": 1,
+   "subid": 0
+  },
+  "Hero": {
+   "id": 1,
+   "subid": 0
+  },
+  "Phantom": {
+   "id": 14,
+   "subid": 0
+  },
+  "Etole": {
+   "id": 13,
+   "subid": 0
+  },
+  "Luster": {
+   "id": 7,
+   "subid": 0
+  }
+ }
+}
