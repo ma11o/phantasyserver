@@ -58,8 +58,13 @@ struct Zone {
     clear_pipe: Option<(u32, Position)>,
     // [pso2_vita_offline] items lying on the ground (NewItemDrop sent, not picked up yet)
     drops: Vec<FieldDrop>,
-    // [pso2_vita_offline] object id of the zone's boss once spawned (`ZoneData::boss` or debug `spawn ... boss`)
+    // [pso2_vita_offline] object id of the debug boss (`spawn ... boss`)
     boss_id: Option<u32>,
+    // [pso2_vita_offline] `ZoneData::boss`: waves started so far (`before` then the boss), alive ids of the current
+    // wave, and whether the last wave is all dead
+    boss_step: usize,
+    boss_wave: Vec<u32>,
+    boss_done: bool,
     // [pso2_vita_offline] emergency trials running in the zone (etrial.rs)
     etrials: Vec<crate::etrial::Active>,
     // [pso2_vita_offline] PSE of the zone (pse.rs)
@@ -185,6 +190,9 @@ impl Map {
                 clear_pipe: None,
                 drops: vec![],
                 boss_id: None,
+                boss_step: 0,
+                boss_wave: vec![],
+                boss_done: false,
                 etrials: vec![],
                 pse: Default::default(),
                 data: zone,
@@ -545,7 +553,7 @@ impl Map {
         if dmg.target.entity_type == ObjectType::Object && self.etrial_goods_hit(zone_pos, &dmg).await? {
             return Ok(());
         }
-        let killed = self.zones[zone_pos].deal_damage(block_data, dmg).await?;
+        let killed = self.zones[zone_pos].deal_damage(block_data.clone(), dmg).await?;
         // [pso2_vita_offline] drop tables (drops.rs): enemy -> common -> area -> meseta, spread on a small ring around
         // where the enemy was spawned
         if let Some((_, enemy_pos, _, name)) = &killed {
@@ -623,19 +631,31 @@ impl Map {
                 self.etrial_end(zone_pos, obj_id, true).await?;
             }
         }
+        // [pso2_vita_offline] the zone's boss waves: the next wave when the current one is all dead
+        if let (MapType::QuestMap, Some((_, _, id, _))) = (&self.map_type, &killed) {
+            let zone = &mut self.zones[zone_pos];
+            if let Some(i) = zone.boss_wave.iter().position(|w| w == id) {
+                zone.boss_wave.remove(i);
+                if zone.boss_wave.is_empty() {
+                    zone.spawn_boss_wave(&block_data, &mut self.max_id, self.enemy_level).await?;
+                }
+            }
+        }
         if let (MapType::QuestMap, Some((pos, _, id, _))) = (&self.map_type, killed) {
             let zone = &self.zones[zone_pos];
-            // a quest with a boss clears only when the boss dies: the zones before it never clear on their own
+            // a quest with a boss clears only when the boss dies: the zones before it never clear on their own.
+            // With bosses in several zones (story battles in two areas) only the last such zone clears.
             let quest_has_boss = self.zones.iter().any(|z| z.boss_id.is_some() || z.data.boss.is_some());
+            let last_boss_zone = !self.zones[zone_pos + 1..].iter().any(|z| z.data.boss.is_some());
             let clear = if zone.boss_id.is_some() || zone.data.boss.is_some() {
-                zone.boss_id == Some(id)
+                zone.boss_id == Some(id) || (zone.boss_done && last_boss_zone)
             } else if quest_has_boss {
                 false
             } else {
                 zone.enemies.is_empty() && !zone.chunk_spawns.is_empty()
             };
             if clear {
-                log::info!("[pso2-quest] clear: zone {} (boss {:?})", zone.data.name, zone.boss_id);
+                log::info!("[pso2-quest] clear: zone {} (boss {:?}, waves done {})", zone.data.name, zone.boss_id, zone.boss_done);
                 self.quest_clear(zone_pos, pos).await?;
             }
         }
@@ -697,7 +717,8 @@ impl Map {
     /// [pso2_vita_offline] debug `ehp`: sets the HP of every enemy in the zone; returns how many.
     /// [pso2_vita_offline] The zone's boss object id once it has spawned (debug `ekill`).
     pub fn zone_boss_id(&self, zone_pos: usize) -> Option<u32> {
-        self.zones[zone_pos].boss_id
+        let zone = &self.zones[zone_pos];
+        zone.boss_wave.first().copied().or(zone.boss_id)
     }
 
     pub fn set_enemy_hp(&mut self, zone_pos: usize, hp: u32) -> usize {
@@ -2140,6 +2161,42 @@ impl Zone {
         Ok(true)
     }
 
+    /// [pso2_vita_offline] Spawns the next wave of `ZoneData::boss` (`before` in order, then the boss itself);
+    /// several of one enemy go on a ring around the boss position. Sets `boss_done` when there is no wave left.
+    async fn spawn_boss_wave(&mut self, block_data: &BlockData, max_id: &mut u32, enemy_lvl: u32) -> Result<(), Error> {
+        let Some(boss) = self.data.boss.clone() else {
+            return Ok(());
+        };
+        let step = self.boss_step;
+        let (name, count) = match boss.before.get(step) {
+            Some(w) => (w.enemy_name.clone(), w.count),
+            None if step == boss.before.len() => (boss.enemy_name.clone(), boss.count),
+            None => {
+                self.boss_done = true;
+                return Ok(());
+            }
+        };
+        self.boss_step += 1;
+        let n = count.max(1);
+        for i in 0..n {
+            let mut pos = boss.position;
+            if n > 1 {
+                let a = i as f32 * std::f32::consts::TAU / n as f32;
+                pos.pos_x = half::f16::from_f32(pos.pos_x.to_f32() + BOSS_RING * a.cos());
+                pos.pos_z = half::f16::from_f32(pos.pos_z.to_f32() + BOSS_RING * a.sin());
+            }
+            let id = self.spawn_enemy(block_data, max_id, enemy_lvl, &name, pos).await?;
+            self.boss_wave.push(id);
+        }
+        log::info!(
+            "[pso2-quest] boss wave {}/{}: {name} x{n} spawned as {:?}",
+            step + 1,
+            boss.before.len() + 1,
+            self.boss_wave
+        );
+        Ok(())
+    }
+
     async fn spawn_enemy(
         &mut self,
         block_data: &BlockData,
@@ -2424,14 +2481,11 @@ impl Zone {
             return Err(Error::InvalidInput("minimap_reveal"));
         };
 
-        // [pso2_vita_offline] the zone's boss, once (chunk_id u32::MAX: on the first chunk the client reports)
-        if let Some(boss) = self.data.boss.clone() {
-            if (boss.chunk_id == packet.chunk_id || boss.chunk_id == u32::MAX) && self.boss_id.is_none() {
-                let id = self
-                    .spawn_enemy(block_data, max_id, enemy_lvl, &boss.enemy_name, boss.position)
-                    .await?;
-                self.boss_id = Some(id);
-                log::info!("[pso2-quest] boss {} spawned as {id} (chunk {})", boss.enemy_name, boss.chunk_id);
+        // [pso2_vita_offline] the zone's boss (its first wave), once (chunk_id u32::MAX: on the first chunk the
+        // client reports)
+        if let Some(boss) = &self.data.boss {
+            if (boss.chunk_id == packet.chunk_id || boss.chunk_id == u32::MAX) && self.boss_step == 0 {
+                self.spawn_boss_wave(block_data, max_id, enemy_lvl).await?;
             }
         }
 
@@ -2992,6 +3046,8 @@ pub fn meseta_amount(item: &protocol::items::Item) -> Option<u32> {
 
 /// [pso2_vita_offline] Session value for 0F-07 (any non-zero; the client echoes it in ItemPickupRequest.unk).
 const DROP_SESSION: u32 = 1;
+/// [pso2_vita_offline] radius (m) of the ring several boss-wave enemies spawn on (four Falz Arms, a guess)
+const BOSS_RING: f32 = 10.0;
 
 /// [pso2_vita_offline] 0F-07 (not in pso2packetlib; reader `0x811ff272`, callback `0x82d3e710` -> `0x830130c2`):
 /// object header 12 B, session u32 (copied into the client's drop registry if it is still 0; the registry ignores

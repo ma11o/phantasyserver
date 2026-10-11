@@ -79,14 +79,28 @@ pub struct ZoneData {
 }
 
 /// [pso2_vita_offline] The zone's boss: spawned once at `position` when the chunk `chunk_id` is revealed (`u32::MAX`:
-/// the first chunk the client reports in the zone). In a zone
-/// with a boss the quest clears when the boss dies (not when every spawned enemy is dead).
+/// the first chunk the client reports in the zone), after the waves of `before`. In a quest with a boss the quest
+/// clears when the boss of the last such zone dies (not when every spawned enemy is dead).
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]
 #[serde(default)]
 pub struct ZoneBoss {
     pub enemy_name: String,
     pub chunk_id: u32,
     pub position: Position,
+    /// how many of `enemy_name` at once (0 = 1), on a ring around `position`
+    pub count: u32,
+    /// enemies before `enemy_name`, in order: each wave spawns at `position` when the previous one is all dead.
+    /// The quest clears when the last wave of the last zone with a boss is all dead.
+    pub before: Vec<ZoneBossWave>,
+}
+
+/// [pso2_vita_offline] One wave of `ZoneBoss::before`
+#[derive(Serialize, Deserialize, Clone, Debug, Default)]
+#[serde(default)]
+pub struct ZoneBossWave {
+    pub enemy_name: String,
+    /// 0 = 1
+    pub count: u32,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]
