@@ -17,6 +17,8 @@ use pso2packetlib::protocol::{
 struct StoryLevels {
     c: [u32; 2],
     h: [u32; 2],
+    /// level offset by enemy name (internal name)
+    offsets: std::collections::HashMap<String, i32>,
     items: Vec<String>,
 }
 
@@ -27,7 +29,11 @@ fn story_levels() -> &'static std::collections::HashMap<u32, StoryLevels> {
 
 /// [pso2_vita_offline] Enemy level of a story battle: clamp(player level, band of the difficulty) (the formula is
 /// unknown in the research, estimated). `PSO2_STORY_LV=min|max` pins it to the band's end. Returns (level, first-clear items).
-fn story_enemy_level(name_id: u32, diff: u32, player_level: u32) -> Option<(u32, Vec<String>)> {
+fn story_enemy_level(
+    name_id: u32,
+    diff: u32,
+    player_level: u32,
+) -> Option<(u32, Vec<String>, std::collections::HashMap<String, i32>)> {
     let t = story_levels().get(&name_id)?;
     let [lo, hi] = if diff == 0 { t.c } else { t.h };
     let lv = match std::env::var("PSO2_STORY_LV").as_deref() {
@@ -35,7 +41,7 @@ fn story_enemy_level(name_id: u32, diff: u32, player_level: u32) -> Option<(u32,
         Ok("max") => hi,
         _ => player_level.clamp(lo, hi),
     };
-    Some((lv, t.items.clone()))
+    Some((lv, t.items.clone(), t.offsets.clone()))
 }
 
 pub struct PartyQuest {
@@ -421,18 +427,22 @@ impl Quests {
             return Err(Error::InvalidInput("get_quest"));
         };
         let mut map = Map::new_from_data(quest.map.clone(), map_obj_id)?;
-        // [pso2_vita_offline] `unk` is taken as the difficulty (0 casual, 1 hardcore; unverified)
-        // (`PSO2_STORY_DIFF=0|1` pins it: the client's casual flag is not found yet and it sends 1 for every battle)
+        // [pso2_vita_offline] `unk` is the difficulty picked in the counter's rank select (0 casual, 1 hardcore).
+        // The select shows only when the quest's wire +0x108 bit 0x800 (definition.unk13[0], "no casual") is clear.
+        // `PSO2_STORY_DIFF=0|1` overrides it.
         let diff = std::env::var("PSO2_STORY_DIFF")
             .ok()
             .and_then(|v| v.parse::<u32>().ok())
             .unwrap_or(packet.unk)
             .min(1);
         match story_enemy_level(packet.name_id, diff, player_level) {
-            Some((lv, items)) => {
+            Some((lv, items, offsets)) => {
                 log::info!("[pso2-quest] story {} diff {diff}: player Lv{player_level} -> enemy Lv{lv}", packet.name_id);
                 map.set_enemy_level(lv);
-                map.set_story(packet.name_id, diff, items);
+                if !offsets.is_empty() {
+                    log::info!("[pso2-quest] story {} level offsets {offsets:?}", packet.name_id);
+                }
+                map.set_story(packet.name_id, diff, items, offsets);
             }
             None => map.set_enemy_level(quest.difficulties.diffs[0].monster_level as _),
         }

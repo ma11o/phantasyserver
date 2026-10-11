@@ -48,6 +48,8 @@ struct Zone {
     obj: ObjectHeader,
     players: Vec<MapPlayer>,
     enemies: Vec<(u32, EnemyStats)>,
+    /// [pso2_vita_offline] story battle: level offset by enemy name (data/story_levels.json `offsets`)
+    level_offsets: std::collections::HashMap<String, i32>,
     chunk_spawns: Vec<(u32, Instant)>,
     minimap_status: RevealedRegions,
     data: ZoneData,
@@ -171,6 +173,7 @@ impl Map {
                 lua: lua.clone(),
                 srv_zone_id: zone.zone_id,
                 players: vec![],
+                level_offsets: Default::default(),
                 obj: ObjectHeader {
                     id: map_obj_id.fetch_add(1, Ordering::Relaxed),
                     entity_type: ObjectType::Map,
@@ -227,7 +230,17 @@ impl Map {
     pub fn set_quest(&mut self, name_id: u32, diff: u32) {
         self.quest = Some((name_id, diff));
     }
-    pub fn set_story(&mut self, name_id: u32, diff: u32, items: Vec<String>) {
+    /// [pso2_vita_offline] story battle; `offsets` = level offset by enemy name (applied where an enemy is spawned)
+    pub fn set_story(
+        &mut self,
+        name_id: u32,
+        diff: u32,
+        items: Vec<String>,
+        offsets: std::collections::HashMap<String, i32>,
+    ) {
+        for z in self.zones.iter_mut() {
+            z.level_offsets = offsets.clone();
+        }
         self.story = Some((name_id, diff, items));
     }
     pub const fn set_quest_obj(&mut self, obj: ObjectHeader) {
@@ -2137,6 +2150,10 @@ impl Zone {
     ) -> Result<u32, Error> {
         let id = *max_id + 1;
         *max_id += 1;
+        let enemy_lvl = match self.level_offsets.get(name) {
+            Some(off) => (enemy_lvl as i32 + off).max(1) as u32,
+            None => enemy_lvl,
+        };
         let data = EnemyStats::build(name, enemy_lvl, pos, &block_data.server_data)?;
         let (packet, mut packet2) = Zone::prepare_enemy_packets(id, &data);
         self.enemies.push((id, data));

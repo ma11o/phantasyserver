@@ -116,7 +116,11 @@
    28,
    75
   ],
-  "offsets": {},
+  "offsets": {
+   "AlligatorSnapperA": -4,
+   "BigBeastA": -4,
+   "PantherSnowA": -9
+  },
   "items": [
    "1:7:38",
    "1:2:33"
