@@ -893,6 +893,7 @@ impl Map {
             pod,
             carried: vec![],
             delivered: 0,
+            variant: variant.cloned(),
             places,
         });
         self.etrial_runs += 1;
@@ -1045,13 +1046,28 @@ impl Map {
         let mut despawn = vec![];
         let mut progress = None;
         let mut done = None;
+        // what the client would show (its toast is not shown on its own, and carried goods are invisible): short
+        // lines on the ticker (19-01 type 4; types 3/5/6 go to the closed log window, 1/2 open a window that blocks
+        // play; the ticker scrolls slowly and queues, so the lines are short)
+        let text = |key: &str| t.variant.as_ref().and_then(|v| v.texts.get(key)).cloned();
+        let mut msg: Option<String> = None;
         if action == "ONHITAPPEAR" && t.goods.contains(&id) {
-            tags.push((id, "APPEAR"));
+            // goods being carried are hidden by Pickup; APPEAR would show them again where they were
+            if !t.carried.iter().any(|c| c.1 == id) {
+                tags.push((id, "APPEAR"));
+            }
             tags.extend(t.pod.map(|p| (p, "APPEAR")));
         } else if action == "Access" && t.goods.contains(&id) {
-            if !t.carried.iter().any(|c| c.0 == sender || c.1 == id) {
+            if t.carried.iter().any(|c| c.0 == sender) {
+                // one at a time (tuned text)
+                msg = Some("1つずつ運べます。先にポッドへ".into());
+            } else if !t.carried.iter().any(|c| c.1 == id) {
                 t.carried.push((sender, id));
                 tags.push((id, "Pickup"));
+                let n = t.delivered + t.carried.len() as u32;
+                let name = t.variant.as_ref().map(|v| v.name.clone()).unwrap_or_default();
+                let toast = text("ToastPickup").map(|s| s.replace("$(0)", &n.to_string()).replace("$(1)", &name));
+                msg = Some(toast.unwrap_or_default() + "→ポッドへ");
             }
         } else if action == "Access" && t.pod == Some(id) {
             if let Some(i) = t.carried.iter().position(|c| c.0 == sender) {
@@ -1063,10 +1079,14 @@ impl Map {
                 progress = Some((t.obj_id, t.delivered));
                 if t.delivered >= t.total {
                     done = Some(t.obj_id);
+                } else {
+                    msg = Some(format!("格納 {}/{}", t.delivered, t.total));
                 }
+            } else {
+                msg = Some("対象物を拾ってからポッドへ".into());
             }
         }
-        log::info!("[pso2-etrial] {action} on {id} by {sender}: tags {tags:?}, delivered {:?}", progress.map(|p| p.1));
+        log::info!("[pso2-etrial] {action} on {id} by {sender}: tags {tags:?}, delivered {:?}, msg {msg:?}", progress.map(|p| p.1));
         let obj = |id| ObjectHeader { id, entity_type: ObjectType::Object, map_id: world_id, ..Default::default() };
         let actor = ObjectHeader { id: sender, entity_type: ObjectType::Player, ..Default::default() };
         let packets: Vec<Packet> = tags
@@ -1081,6 +1101,13 @@ impl Map {
                 })
             })
             .chain(progress.map(|(t, n)| Packet::EmergencyProgress(crate::etrial::progress_packet(t, world_id, 0, 0, n, 0))))
+            .chain(msg.map(|message| {
+                Packet::SystemMessage(protocol::unk19::SystemMessagePacket {
+                    message,
+                    msg_type: protocol::unk19::MessageType::GoldenMessage,
+                    ..Default::default()
+                })
+            }))
             .collect();
         exec_users(&self.zones[zone_pos].players, |_, mut player| {
             for packet in &packets {

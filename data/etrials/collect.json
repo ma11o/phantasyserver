@@ -78,15 +78,27 @@
  "goods": [
   {
    "trial_id": "ii_collect_goods_a",
-   "object": "oa_handcarry_insect"
+   "object": "oa_handcarry_insect",
+   "name": "昆虫の化石",
+   "texts": {
+    "ToastPickup": "$(0)個目の$(1)を拾いました。"
+   }
   },
   {
    "trial_id": "ii_collect_goods_b",
-   "object": "oa_handcarry_egg"
+   "object": "oa_handcarry_egg",
+   "name": "卵型の物質",
+   "texts": {
+    "ToastPickup": "$(0)個目の$(1)を拾いました。"
+   }
   },
   {
    "trial_id": "ii_collect_goods_c",
-   "object": "oa_handcarry_crystal"
+   "object": "oa_handcarry_crystal",
+   "name": "稀少鉱物",
+   "texts": {
+    "ToastPickup": "$(0)個目の$(1)を拾いました。"
+   }
   }
  ],
  "pod_object": "oa_handcarry_pod",

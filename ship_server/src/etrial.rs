@@ -223,6 +223,9 @@ pub struct Def {
 pub struct GoodsVariant {
     pub trial_id: String,
     pub object: String,
+    /// the goods' name (`$(1)` of `ToastPickup`) and the variant's texts by key (`Pickup1st`, `Collect1st`, ...)
+    pub name: String,
+    pub texts: std::collections::HashMap<String, String>,
 }
 
 /// A fixed place of a kind: the layout (`map_id` + `args`), the position and the enemies there.
@@ -331,6 +334,8 @@ pub struct Active {
     pub pod: Option<u32>,
     pub carried: Vec<(u32, u32)>,
     pub delivered: u32,
+    /// collect kinds: the variant picked (texts shown as system messages when goods are picked up / delivered)
+    pub variant: Option<GoodsVariant>,
     /// where the pod and the goods were spawned (debug `etrial to`)
     pub places: Vec<(u32, pso2packetlib::protocol::models::Position)>,
 }
