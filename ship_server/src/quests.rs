@@ -54,6 +54,14 @@ pub struct Quests {
 fn always_unlocked(q: &QuestData) -> bool {
     (20000..30000).contains(&q.definition.name_id) && q.definition.quest_type == QuestType::Expedition
 }
+/// [pso2_vita_offline] what the counter lists: unlocked or always unlocked quests, and urgent quests only
+/// while their window is open (urgent.rs, for everyone)
+fn listed(q: &QuestData, unlocked: &[u32]) -> bool {
+    if q.definition.quest_type == QuestType::Urgent {
+        return crate::urgent::is_open(q.definition.name_id);
+    }
+    unlocked.contains(&q.definition.name_id) || always_unlocked(q)
+}
 impl Quests {
     pub const fn load(quests: Vec<QuestData>) -> Self {
         Self { quests }
@@ -63,7 +71,7 @@ impl Quests {
         for quest in self
             .quests
             .iter()
-            .filter(|q| unlocked.contains(&q.definition.name_id) || always_unlocked(q))
+            .filter(|q| listed(q, unlocked))
         {
             match quest.definition.quest_type {
                 QuestType::Unk0 => {
@@ -349,7 +357,7 @@ impl Quests {
             quests: self
                 .quests
                 .iter()
-                .filter(|q| unlocked.contains(&q.definition.name_id) || always_unlocked(q))
+                .filter(|q| listed(q, unlocked))
                 .filter(|q| q.definition.quest_type == category)
                 .map(|q| {
                     let mut def = q.definition.clone();

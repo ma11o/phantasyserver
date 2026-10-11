@@ -54,6 +54,8 @@ pub async fn init_block(
         .set_block_data(block_data.clone());
 
     tokio::spawn(crate::user::debug::command_listener(block_data.clone()));
+    // [pso2_vita_offline] urgent quests count from the server start, not from the first player
+    crate::urgent::phase();
 
     let mut conn_id = 0usize;
     let (send, mut recv) = mpsc::channel(10);

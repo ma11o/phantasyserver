@@ -13,6 +13,7 @@ mod battle_stats;
 mod client_orders;
 mod drops;
 mod etrial;
+mod urgent;
 mod pse;
 mod block;
 mod inventory;

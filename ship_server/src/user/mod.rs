@@ -37,6 +37,11 @@ pub struct User {
     pub character: Option<CharData>,
     last_ping: Instant,
     failed_pings: u32,
+    /// [pso2_vita_offline] the urgent quest line the player was told last (`urgent::announcement`)
+    urgent_seen: Option<(u64, u8)>,
+    /// [pso2_vita_offline] when the client last said MapLoaded (None while a map loads): ticker lines sent
+    /// during loading are dropped by the client (run-t103-a), so the urgent lines wait for it
+    map_loaded_at: Option<Instant>,
     ready_to_shutdown: bool,
     pub party_invites: Vec<PartyInvite>,
     pub party_ignore: Pr::party::RejectStatus,
@@ -97,6 +102,8 @@ impl User {
                 position: Default::default(),
                 last_ping: Instant::now(),
                 failed_pings: 0,
+                urgent_seen: None,
+                map_loaded_at: None,
                 ready_to_shutdown: false,
                 party_invites: vec![],
                 party_ignore: Default::default(),
@@ -138,6 +145,19 @@ impl User {
             s.last_save = Instant::now();
             if let Err(e) = s.save().await {
                 log::warn!("[pso2-save] autosave of user {} failed: {e}", s.user_data.id);
+            }
+        }
+        // [pso2_vita_offline] urgent quests: the notice / open / closed line on the ticker (urgent.rs)
+        if s.character.is_some() && s.map_loaded_at.is_some_and(|t| t.elapsed().as_secs() >= 5) {
+            if let Some(message) = crate::urgent::announcement(&mut s.urgent_seen) {
+                log::info!("[pso2-urgent] to user {}: {message}", s.user_data.id);
+                let _ = s
+                    .send_packet(&Packet::SystemMessage(Pr::unk19::SystemMessagePacket {
+                        message,
+                        msg_type: Pr::unk19::MessageType::GoldenMessage,
+                        ..Default::default()
+                    }))
+                    .await;
             }
         }
         if s.last_ping.elapsed().as_secs() >= 10 {
@@ -212,6 +232,7 @@ impl User {
         self.party.clone()
     }
     pub fn set_map(&mut self, map: Arc<Mutex<Map>>) {
+        self.map_loaded_at = None;
         self.map = Some(map)
     }
     pub const fn get_user_id(&self) -> u32 {
@@ -454,7 +475,10 @@ pub async fn packet_handler(
             user.failed_pings = 0;
             Ok(Action::Nothing)
         }
-        (US::InGame, P::MapLoaded(data)) => H::server::map_loaded(user_guard, data).await,
+        (US::InGame, P::MapLoaded(data)) => {
+            user.map_loaded_at = Some(Instant::now());
+            H::server::map_loaded(user_guard, data).await
+        }
         (US::InGame, P::ToCampship(data)) => H::server::to_campship(user_guard, data).await,
         (US::InGame, P::CampshipDown(data)) => H::server::campship_down(user_guard, data).await,
         (US::InGame, P::MoveZone(data)) => H::server::move_zone(user_guard, data).await,

@@ -1,0 +1,10 @@
+{
+  "source": "tuned (当時は告知 30 分前・受注 30 分。遊ぶ側の待ち時間に合わせて短くした)",
+  "first_min": 10,
+  "interval_min": 60,
+  "notice_s": 120,
+  "open_s": 900,
+  "quests": [
+    { "name_id": 50035, "title": "ファングバンサー討伐" }
+  ]
+}

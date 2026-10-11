@@ -309,7 +309,7 @@ fn flags_from(v: u8) -> Flags {
     f
 }
 
-const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | tp pipe | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] [boss] | send <id> <subid> <flag> <hex> | ehp <n> | ekill | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | exp <n> | unlock <name_id>... | <any ! chat command>";
+const HELP: &str = "goto <zone> [x y z] | clear [x y z] | pipe <clear|start> [x y z] | tag <obj id> <attr> | finish [hide] [ff] [now] | result [hide] [ff] [rank=S meseta=N exp=N kills=N score=N/M] | tp <x> <y> <z> | tp pipe | place <obj id> <x> <y> <z> | points <total> [gained] | quest <id> <diff> | lobby | spawn <enemy> [x y z] [boss] | send <id> <subid> <flag> <hex> | ehp <n> | ekill | drop [model|-] [type:id:subid] [x y z] | pos | hp [n] | exp <n> | unlock <name_id>... | eq now|open|end|status | <any ! chat command>";
 
 async fn run_command(line: &str) -> Result<String, Error> {
     let mut args = line.split_whitespace();
@@ -318,6 +318,11 @@ async fn run_command(line: &str) -> Result<String, Error> {
     };
     if cmd == "help" {
         return Ok(HELP.into());
+    }
+    // [pso2_vita_offline] urgent quests (urgent.rs): no player needed
+    if cmd == "eq" {
+        let op = args.next().unwrap_or("status");
+        return crate::urgent::debug(op).ok_or(Error::InvalidInput("eq now|open|end|status"));
     }
     let user = find_in_game()
         .await
