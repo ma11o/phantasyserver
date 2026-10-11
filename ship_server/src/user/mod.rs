@@ -693,6 +693,25 @@ pub async fn packet_handler(
         (US::InGame, P::Unknown((h, d))) if h.id == 0x34 && h.subid == 0x00 => H::shop::open(user, d).await,
         (US::InGame, P::Unknown((h, d))) if h.id == 0x34 && h.subid == 0x02 => H::shop::buy(user, d).await,
         (US::InGame, P::Unknown((h, d))) if h.id == 0x34 && h.subid == 0x04 => H::shop::sell(user, d).await,
+        // [pso2-quest] Counter rank menu: 0x0E-0x35 = "join a party in this block" (20 B: quest
+        // object + u8 rank ...), 0x0E-0x3E = "look for parties in other blocks" (after 11-64).
+        // Results come as 0x0E-0x40 (list, none offline), then 0x0E-0x41 (done, 0x1C B; client
+        // keeps the u32 at +0x18). Client counter state 0x18 (0x8289bb5e) waits for 0x41; with no
+        // party it shows "パーティーが見つかりませんでした。" (or asks 0x0E-0x1D, answered by
+        // party::get_details with the stopper).
+        (US::InGame, P::Unknown((h, d))) if h.id == 0x0E && (h.subid == 0x35 || h.subid == 0x3E) => {
+            log::info!("[pso2-quest] party search 0E-{:02X} {d:02x?} -> 0E-41 (no party)", h.subid);
+            user.send_packet(&Packet::Unknown((
+                pso2packetlib::protocol::PacketHeader {
+                    id: 0x0E,
+                    subid: 0x41,
+                    flag: pso2packetlib::protocol::Flags::default(),
+                },
+                vec![0; 0x1C],
+            )))
+            .await?;
+            Ok(Action::Nothing)
+        }
         // [pso2-quest] T16: 0x23-0x19 -> 空の 0x23-0x1A
         (US::InGame, P::Unknown((h, _))) if h.id == 0x23 && h.subid == 0x19 => {
             user.send_packet(&Packet::Unknown((
