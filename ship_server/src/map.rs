@@ -529,6 +529,9 @@ impl Map {
         let Some(block_data) = self.block_data.to_owned() else {
             return Err(Error::InvalidInput("deal_damage"));
         };
+        if dmg.target.entity_type == ObjectType::Object && self.etrial_goods_hit(zone_pos, &dmg).await? {
+            return Ok(());
+        }
         let killed = self.zones[zone_pos].deal_damage(block_data, dmg).await?;
         // [pso2_vita_offline] drop tables (drops.rs): enemy -> common -> area -> meseta, spread on a small ring around
         // where the enemy was spawned
@@ -586,7 +589,8 @@ impl Map {
                     if left > 0 && left <= def.remaining_msg_at {
                         progress.push((t.obj_id, 0, Some(left)));
                     }
-                    t.enemies.is_empty().then_some(t.obj_id)
+                    // defense kinds end on time / broken goods, not when their enemies are gone
+                    (t.enemies.is_empty() && def.defense_hp == 0).then_some(t.obj_id)
                 })
                 .collect();
             // 15-05: slot 0 = enemies killed (the pane's counter; not shown on the Vita yet, etrial.md);
@@ -829,6 +833,7 @@ impl Map {
                 .filter(|p| (4.0..=def.goods_radius * 3.0).contains(&dist(p, &pos)))
                 .collect();
             rand::seq::SliceRandom::shuffle(&mut points[..], &mut rand::thread_rng());
+            // defense kinds: no pod, the goods around the trial's place (the first spawn is dropped below)
             let mut spawns = vec![(def.pod_object.clone(), pos)];
             for p in points {
                 if spawns.len() as u32 > g {
@@ -847,6 +852,9 @@ impl Map {
                 spawns.push((v.object.clone(), p));
             }
             for (i, (name, p)) in spawns.into_iter().enumerate() {
+                if i == 0 && def.pod_object.is_empty() {
+                    continue;
+                }
                 self.max_id += 1;
                 let id = self.max_id;
                 places.push((id, p));
@@ -867,8 +875,12 @@ impl Map {
                 })
                 .await;
             }
+            // defense kinds: shown at once (the presence flag, as for the collect goods)
+            if def.defense_hp > 0 {
+                self.etrial_tags(zone_pos, &goods.iter().map(|g| (*g, "APPEAR")).collect::<Vec<_>>()).await;
+            }
         }
-        let count = if pod.is_some() { goods.len() as u32 } else { n };
+        let count = if pod.is_some() || def.defense_hp > 0 { goods.len() as u32 } else { n };
         let mut params = def.start_params(obj_id, world_id, &names[0], count);
         params.trial_id = trial_id.clone();
         let packet = Packet::SpawnEmergency(crate::etrial::start_packet(&params));
@@ -876,6 +888,7 @@ impl Map {
             let _ = player.try_send_packet(&packet);
         })
         .await;
+        let hp = if def.defense_hp > 0 { goods.iter().map(|g| (*g, def.defense_hp)).collect() } else { vec![] };
         log::info!(
             "[pso2-etrial] start {} obj {obj_id} in {} with {n} enemies, goods {goods:?}, pod {pod:?} (Lv {}, run {})",
             trial_id,
@@ -895,6 +908,8 @@ impl Map {
             delivered: 0,
             variant: variant.cloned(),
             places,
+            hp,
+            destroyed: 0,
         });
         self.etrial_runs += 1;
         Ok(Some((obj_id, def.time_limit_s)))
@@ -1057,6 +1072,8 @@ impl Map {
                 tags.push((id, "APPEAR"));
             }
             tags.extend(t.pod.map(|p| (p, "APPEAR")));
+        } else if t.hp.iter().any(|h| h.0 == id) {
+            // defense goods: nothing to do on other actions (logged)
         } else if action == "Access" && t.goods.contains(&id) {
             if t.carried.iter().any(|c| c.0 == sender) {
                 // one at a time (tuned text)
@@ -1122,11 +1139,185 @@ impl Map {
         Ok(true)
     }
 
+    /// [pso2_vita_offline] SetTag `attr` on trial objects, to the zone (the actor is each receiver).
+    pub async fn etrial_tags(&self, zone_pos: usize, tags: &[(u32, &str)]) {
+        if tags.is_empty() {
+            return;
+        }
+        let world_id = self.zone_world_id(zone_pos).unwrap_or(0) as u16;
+        exec_users(&self.zones[zone_pos].players, |_, mut player| {
+            let me = player.create_object_header();
+            for (id, attr) in tags {
+                let _ = player.try_send_packet(&Packet::SetTag(protocol::objects::SetTagPacket {
+                    receiver: me,
+                    target: ObjectHeader { id: *id, entity_type: ObjectType::Object, map_id: world_id, ..Default::default() },
+                    object3: me,
+                    attribute: (*attr).into(),
+                    ..Default::default()
+                }));
+            }
+        })
+        .await;
+    }
+
+    /// [pso2_vita_offline] Defense trials: a hit on a goods (`Object:NauraGoods`) by an enemy takes one of its hits
+    /// (`defense_hp`); at 0 the goods gets "DEAD" (its Break scene), 15-05 slot 1 = broken count and the ticker says
+    /// so (`ToastOnDestroy`); every goods broken = failure. Player hits on goods are ignored. False if the target is
+    /// not a defense goods.
+    async fn etrial_goods_hit(&mut self, zone_pos: usize, dmg: &DealDamagePacket) -> Result<bool, Error> {
+        let id = dmg.target.id;
+        let world_id = self.zone_world_id(zone_pos).unwrap_or(0) as u16;
+        let Some(t) = self.zones[zone_pos].etrials.iter_mut().find(|t| t.hp.iter().any(|h| h.0 == id)) else {
+            return Ok(false);
+        };
+        log::info!(
+            "[pso2-etrial] hit on goods {id} by {:?} {} attack {} hitbox {}",
+            dmg.inflicter.entity_type,
+            dmg.inflicter.id,
+            dmg.attack_id,
+            dmg.hitbox_id
+        );
+        if dmg.inflicter.entity_type != ObjectType::Object {
+            return Ok(true);
+        }
+        let h = t.hp.iter_mut().find(|h| h.0 == id).unwrap();
+        if h.1 == 0 {
+            return Ok(true);
+        }
+        h.1 -= 1;
+        // the goods' HP to the clients (`DamageType` HP; 100 a hit, the client's own scale is unknown)
+        let hp_packet = Packet::DamageReceive(DamageReceivePacket {
+            dmg_target: ObjectHeader { id, entity_type: ObjectType::Object, map_id: world_id, ..Default::default() },
+            dmg_inflicter: dmg.inflicter,
+            damage_id: dmg.attack_id,
+            dmg_amount: 100,
+            new_hp: h.1 * 100,
+            hitbox_id: dmg.hitbox_id,
+            x_pos: dmg.x_pos,
+            y_pos: dmg.y_pos,
+            z_pos: dmg.z_pos,
+            ..Default::default()
+        });
+        let hits_left = h.1;
+        exec_users(&self.zones[zone_pos].players, |_, mut player| {
+            let mut packet = hp_packet.clone();
+            if let Packet::DamageReceive(data) = &mut packet {
+                data.receiver = player.create_object_header();
+            }
+            let _ = player.try_send_packet(&packet);
+        })
+        .await;
+        let Some(t) = self.zones[zone_pos].etrials.iter_mut().find(|t| t.hp.iter().any(|h| h.0 == id)) else {
+            return Ok(true);
+        };
+        if hits_left > 0 {
+            return Ok(true);
+        }
+        t.destroyed += 1;
+        let total = t.hp.len() as u32;
+        let left = total - t.destroyed;
+        let (obj_id, destroyed) = (t.obj_id, t.destroyed);
+        let text = |key: &str| t.variant.as_ref().and_then(|v| v.texts.get(key)).cloned().unwrap_or_default();
+        let msg = if left == 0 { text("ToastOnAllDestroy") } else { text("ToastOnDestroy").replace("$(0)", &left.to_string()) };
+        log::info!("[pso2-etrial] goods {id} broken ({destroyed}/{total}): {msg}");
+        self.etrial_tags(zone_pos, &[(id, "DEAD")]).await;
+        let packets = [
+            Packet::EmergencyProgress(crate::etrial::progress_packet(obj_id, world_id, 0, 1, destroyed, 0)),
+            Packet::SystemMessage(protocol::unk19::SystemMessagePacket {
+                message: msg,
+                msg_type: protocol::unk19::MessageType::GoldenMessage,
+                ..Default::default()
+            }),
+        ];
+        exec_users(&self.zones[zone_pos].players, |_, mut player| {
+            for packet in &packets {
+                let _ = player.try_send_packet(packet);
+            }
+        })
+        .await;
+        if left == 0 {
+            self.etrial_end(zone_pos, obj_id, false).await?;
+        }
+        Ok(true)
+    }
+
+    /// [pso2_vita_offline] Seconds between a running trial's enemy waves (defense kinds), 0 = none.
+    pub fn etrial_wave_s(&self, zone_pos: usize, obj_id: u32) -> u64 {
+        self.zones
+            .get(zone_pos)
+            .and_then(|z| z.etrials.iter().find(|t| t.obj_id == obj_id))
+            .map(|t| &crate::etrial::kinds()[t.kind])
+            .filter(|d| d.defense_hp > 0)
+            .map_or(0, |d| d.wave_s)
+    }
+
+    /// [pso2_vita_offline] Defense trials: while fewer than `wave_enemies.0` of the trial's enemies are alive, spawns
+    /// up to `wave_enemies.1` near its goods still standing. False once the trial ended.
+    pub async fn etrial_wave(&mut self, zone_pos: usize, obj_id: u32) -> Result<bool, Error> {
+        let Some(t) = self.zones.get(zone_pos).and_then(|z| z.etrials.iter().find(|t| t.obj_id == obj_id)) else {
+            return Ok(false);
+        };
+        let def = &crate::etrial::kinds()[t.kind];
+        let (lo, hi) = def.wave_enemies;
+        let alive = t.enemies.len() as u32;
+        if alive >= lo {
+            return Ok(true);
+        }
+        let standing: Vec<Position> = t
+            .hp
+            .iter()
+            .filter(|h| h.1 > 0)
+            .filter_map(|h| t.places.iter().find(|p| p.0 == h.0).map(|p| p.1))
+            .collect();
+        let names: Vec<String> = if def.enemy_names.is_empty() {
+            self.zones[zone_pos].data.enemies.iter().map(|e| e.enemy_name.clone()).collect()
+        } else {
+            def.enemy_names.clone()
+        };
+        let Some(block_data) = self.block_data.to_owned() else {
+            return Ok(true);
+        };
+        if names.is_empty() || standing.is_empty() {
+            return Ok(true);
+        }
+        let mut ids = vec![];
+        for i in 0..hi.saturating_sub(alive) {
+            // 6 m from a goods, so that they walk to it
+            let base = standing[i as usize % standing.len()];
+            let a = rand::Rng::gen_range(&mut rand::thread_rng(), 0.0f32..std::f32::consts::TAU);
+            let mut p = base;
+            p.pos_x = half::f16::from_f32(base.pos_x.to_f32() + 6.0 * a.cos());
+            p.pos_z = half::f16::from_f32(base.pos_z.to_f32() + 6.0 * a.sin());
+            let name = names.iter().choose(&mut rand::thread_rng()).cloned().unwrap_or_default();
+            ids.push(self.zones[zone_pos].spawn_enemy(&block_data, &mut self.max_id, self.enemy_level, &name, p).await?);
+        }
+        log::info!("[pso2-etrial] wave of {obj_id}: {} more enemies ({alive} alive)", ids.len());
+        if let Some(t) = self.zones[zone_pos].etrials.iter_mut().find(|t| t.obj_id == obj_id) {
+            t.enemies.extend(ids);
+        }
+        Ok(true)
+    }
+
+    /// [pso2_vita_offline] The trial's time is up: a success for defense kinds, else a failure.
+    pub async fn etrial_timeout(&mut self, zone_pos: usize, obj_id: u32) -> Result<bool, Error> {
+        let Some(t) = self.zones.get(zone_pos).and_then(|z| z.etrials.iter().find(|t| t.obj_id == obj_id)) else {
+            return Ok(false);
+        };
+        let success = crate::etrial::kinds()[t.kind].defense_hp > 0;
+        self.etrial_end(zone_pos, obj_id, success).await
+    }
+
     /// [pso2_vita_offline] Debug `etrial to goods|pod`: where to stand to access the first goods not carried (1.2 m
     /// past it, away from the pod: ○ picks the pod when it is nearer) / the pod of a running collect trial.
     pub fn etrial_place(&self, zone_pos: usize, pod: bool) -> Option<Position> {
-        let t = self.zones[zone_pos].etrials.iter().find(|t| t.pod.is_some())?;
+        let t = self.zones[zone_pos].etrials.iter().find(|t| t.pod.is_some() || !t.hp.is_empty())?;
         let at = |id: u32| t.places.iter().find(|p| p.0 == id).map(|p| p.1);
+        if t.pod.is_none() {
+            // defense: 3 m beside the first goods still standing
+            let mut p = at(t.hp.iter().find(|h| h.1 > 0)?.0)?;
+            p.pos_x = half::f16::from_f32(p.pos_x.to_f32() + 3.0);
+            return Some(p);
+        }
         let pod_at = at(t.pod?)?;
         let mut p = if pod {
             pod_at
@@ -1158,6 +1349,14 @@ impl Map {
         .await;
     }
 
+    /// [pso2_vita_offline] Defense goods still standing in the zone's running trials (debug `etrial hit`).
+    pub fn etrial_goods_all(&self, zone_pos: usize) -> Vec<u32> {
+        self.zones[zone_pos].etrials.iter().flat_map(|t| t.hp.iter().map(|h| h.0)).collect()
+    }
+    pub fn etrial_goods_standing(&self, zone_pos: usize) -> Vec<u32> {
+        self.zones[zone_pos].etrials.iter().flat_map(|t| t.hp.iter().filter(|h| h.1 > 0).map(|h| h.0)).collect()
+    }
+
     /// [pso2_vita_offline] Enemies still alive in the zone's running emergency trials (debug `etrial kill`).
     pub fn etrial_enemies(&self, zone_pos: usize) -> Vec<u32> {
         self.zones[zone_pos].etrials.iter().flat_map(|t| t.enemies.iter().copied()).collect()
@@ -1174,8 +1373,24 @@ impl Map {
         };
         let trial = zone.etrials.remove(i);
         let def = &crate::etrial::kinds()[trial.kind];
+        // (defense goods too: "TIME_OUT" / "TIME_OVER" / "DEAD" change nothing visible on the Vita, T102)
         let leftovers: Vec<u32> = trial.goods.iter().copied().chain(trial.pod).collect();
         self.etrial_despawn(zone_pos, &leftovers).await;
+        // defense: "$(0)が開店しました。" on the ticker
+        if success && !trial.hp.is_empty() {
+            if let Some(v) = &trial.variant {
+                let msg = v.texts.get("ToastOnSuccess").map(|t| t.replace("$(0)", &v.name)).unwrap_or_default();
+                let packet = Packet::SystemMessage(protocol::unk19::SystemMessagePacket {
+                    message: msg,
+                    msg_type: protocol::unk19::MessageType::GoldenMessage,
+                    ..Default::default()
+                });
+                exec_users(&self.zones[zone_pos].players, |_, mut player| {
+                    let _ = player.try_send_packet(&packet);
+                })
+                .await;
+            }
+        }
         let (mut meseta, mut exp) = def.reward(self.enemy_level);
         if !success {
             meseta = (meseta as f32 * def.failure_ratio) as u32;

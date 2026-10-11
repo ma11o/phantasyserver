@@ -215,6 +215,14 @@ pub struct Def {
     /// collect kinds: how many goods (min, max) and how far from the pod (m)
     pub goods_count: (u32, u32),
     pub goods_radius: f32,
+    /// defense kinds (`Object:NauraGoods`, the goods variant's object): hits each goods takes before it breaks
+    /// (0 = not a defense kind). A defense kind succeeds when the time runs out and fails when every goods is broken.
+    pub defense_hp: u32,
+    /// defense kinds: more enemies every `wave_s` seconds while fewer than `wave_enemies.0` of the trial are alive
+    pub wave_s: u64,
+    pub wave_enemies: (u32, u32),
+    /// target slot 1 (`TrialObjectiveKind`), like `slot`; the second u32 is the goods count
+    pub slot2: Option<(u8, u8)>,
 }
 
 /// A collect variant: the text file (`ii_collect_goods_a`) and its goods object (`oa_handcarry_insect`).
@@ -246,6 +254,7 @@ pub fn kinds() -> &'static [Def] {
             include_str!("../../data/etrials/annihilation.json"),
             include_str!("../../data/etrials/areaboss.json"),
             include_str!("../../data/etrials/collect.json"),
+            include_str!("../../data/etrials/defense.json"),
         ]
             .iter()
             .filter_map(|s| serde_json::from_str(s).map_err(|e| log::warn!("[pso2-etrial] bad def: {e}")).ok())
@@ -313,7 +322,10 @@ impl Def {
             op: npc,
             disp: self.color,
             b3e: self.kind,
-            slots: [self.slot.map(|(k, s)| (k, s, 0, count)), None],
+            slots: [
+                self.slot.map(|(k, s)| (k, s, 0, if k == 1 { self.time_limit_s as u32 } else { count })),
+                self.slot2.map(|(k, s)| (k, s, 0, count)),
+            ],
             args: if self.name_arg { vec![text_arg(enemy_name, 12)] } else { vec![] },
             ..Default::default()
         }
@@ -338,6 +350,9 @@ pub struct Active {
     pub variant: Option<GoodsVariant>,
     /// where the pod and the goods were spawned (debug `etrial to`)
     pub places: Vec<(u32, pso2packetlib::protocol::models::Position)>,
+    /// defense kinds: (goods, hits left) and how many broke
+    pub hp: Vec<(u32, u32)>,
+    pub destroyed: u32,
 }
 
 /// `PSO2_ETRIAL`: `off` (never), `force` (every chunk opened, still within the caps) or a chance 0..1;
@@ -351,12 +366,38 @@ pub fn chance(def: &Def) -> f32 {
     }
 }
 
-/// Fails the trial after `secs` unless it ended before (the map may be gone by then).
+/// Defense kinds: more enemies every `secs` seconds while the trial runs (`Map::etrial_wave`).
+pub fn spawn_waves(map: std::sync::Weak<crate::mutex::Mutex<crate::map::Map>>, zone_pos: usize, obj_id: u32, secs: u64) {
+    if secs == 0 {
+        return;
+    }
+    tokio::spawn(async move {
+        loop {
+            tokio::time::sleep(std::time::Duration::from_secs(secs)).await;
+            let Some(map) = map.upgrade() else { return };
+            match map.lock().await.etrial_wave(zone_pos, obj_id).await {
+                Ok(true) => {}
+                Ok(false) => return,
+                Err(e) => {
+                    log::warn!("[pso2-etrial] wave of {obj_id}: {e}");
+                    return;
+                }
+            }
+        }
+    });
+}
+
+/// Ends the trial after `secs` (a failure, or a success for defense kinds) unless it ended before (the map may be gone by then).
 pub fn spawn_timeout(map: std::sync::Weak<crate::mutex::Mutex<crate::map::Map>>, zone_pos: usize, obj_id: u32, secs: u64) {
     tokio::spawn(async move {
+        let wave_s = match map.upgrade() {
+            Some(m) => m.lock().await.etrial_wave_s(zone_pos, obj_id),
+            None => 0,
+        };
+        spawn_waves(map.clone(), zone_pos, obj_id, wave_s);
         tokio::time::sleep(std::time::Duration::from_secs(secs)).await;
         if let Some(map) = map.upgrade() {
-            if let Err(e) = map.lock().await.etrial_end(zone_pos, obj_id, false).await {
+            if let Err(e) = map.lock().await.etrial_timeout(zone_pos, obj_id).await {
                 log::warn!("[pso2-etrial] timeout of {obj_id}: {e}");
             }
         }

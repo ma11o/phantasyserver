@@ -1138,6 +1138,36 @@ async fn run_command(line: &str) -> Result<String, Error> {
                     }
                     format!("etrial kill {} enemies", ids.len())
                 }
+                "gtag" => {
+                    // etrial gtag <i> <attr>: SetTag on the i-th defense goods (0..)
+                    let (Some(i), Some(attr)) = (rest.first().and_then(|v| parse_num::<usize>(v)), rest.get(1)) else {
+                        return Err(bad());
+                    };
+                    let map = map.lock().await;
+                    let id = *map.etrial_goods_all(zone).get(i).ok_or(Error::InvalidInput("no such goods"))?;
+                    map.etrial_tags(zone, &[(id, attr)]).await;
+                    format!("etrial gtag {id} {attr}")
+                }
+                "hit" => {
+                    // etrial hit [n]: n (default 1) enemy hits on the first defense goods still standing, as if the
+                    // trial's first enemy dealt them (DealDamage Object -> Object)
+                    let mut map = map.lock().await;
+                    let goods = map.etrial_goods_standing(zone).first().copied().ok_or(Error::InvalidInput("no defense goods"))?;
+                    let enemy = map.etrial_enemies(zone).first().copied().unwrap_or(0);
+                    let n = rest.first().and_then(|v| parse_num::<u32>(v)).unwrap_or(1);
+                    for _ in 0..n {
+                        map.deal_damage(
+                            zone,
+                            DealDamagePacket {
+                                inflicter: ObjectHeader { id: enemy, entity_type: ObjectType::Object, ..Default::default() },
+                                target: ObjectHeader { id: goods, entity_type: ObjectType::Object, ..Default::default() },
+                                ..Default::default()
+                            },
+                        )
+                        .await?;
+                    }
+                    format!("etrial hit {goods} x{n}")
+                }
                 "finish" => {
                     // etrial finish <obj id> ok|ng: ends a running trial with its reward
                     let (Some(obj_id), Some(r)) = (rest.first().and_then(|v| parse_num::<u32>(v)), rest.get(1)) else {
