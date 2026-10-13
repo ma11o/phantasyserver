@@ -178,6 +178,17 @@ pub async fn pickup(
     };
     let user_ref: &mut User = &mut user;
     let character = user_ref.character.as_mut().unwrap();
+    // name first (0F-30), as the shop does: otherwise the name goes out with the next zone's inventory load, in the
+    // middle of the transfer (one Odin froze there right after it)
+    let names = if crate::map::meseta_amount(&drop.item).is_none() {
+        character.inventory.load_names(
+            std::slice::from_ref(&drop.item),
+            &user_ref.blockdata.server_data.item_params,
+            user_ref.user_data.lang,
+        )
+    } else {
+        None
+    };
     let added = if let Some(amount) = crate::map::meseta_amount(&drop.item) {
         character.inventory.add_meseta(amount as u64)
     } else {
@@ -185,6 +196,9 @@ pub async fn pickup(
             .inventory
             .add_picked_item(drop.item, &mut user_ref.user_data.last_uuid)
     };
+    if let Some(p) = names {
+        user.send_packet(&p).await?;
+    }
     user.send_packet(&added).await?;
     user.send_packet(&Packet::ItemPickupResponse(protocol::items::ItemPickupResponsePacket {
         target: me,
