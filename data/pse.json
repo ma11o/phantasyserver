@@ -152,7 +152,7 @@
     100,
     200
    ],
-   "apply": "rare_drop",
+   "apply": null,
    "pool": false,
    "source": "client (id, name) + research pse.groups / pse.level_modifiers (levels)"
   },
