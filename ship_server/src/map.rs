@@ -641,7 +641,10 @@ impl Map {
                 }
             }
         }
-        if let (MapType::QuestMap, Some((pos, _, id, _))) = (&self.map_type, killed) {
+        // [pso2_vita_offline] the clear telepipe goes where the last enemy was spawned (on the ground, like the
+        // drops), not where the server last saw the player: Movement sends only the fields that changed, so the
+        // player's y can be stale and the pipe ended up inside a slope on the real Vita
+        if let (MapType::QuestMap, Some((_, pos, id, _))) = (&self.map_type, killed) {
             let zone = &self.zones[zone_pos];
             // a quest with a boss clears only when the boss dies: the zones before it never clear on their own.
             // With bosses in several zones (story battles in two areas) only the last such zone clears.
