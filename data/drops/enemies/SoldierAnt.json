@@ -1,41 +1,44 @@
 {
-  "rate": 0.05,
+  "rate": 0.01,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:7:24",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 1,
       "level_max": null,
       "name": "ブラオレット",
-      "source": "https://pso2.pspedia.net/ダガン"
+      "source": "https://pso2.pspedia.net/ダガン",
+      "rarity": 7
     },
     {
       "item": "1:17:33",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 1,
       "level_max": null,
       "name": "サーブライト",
-      "source": "https://pso2.pspedia.net/ダガン"
+      "source": "https://pso2.pspedia.net/ダガン",
+      "rarity": 8
     },
     {
       "item": "1:8:18",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": null,
       "name": "ティグリドル",
-      "source": "https://pso2.pspedia.net/ダガン"
+      "source": "https://pso2.pspedia.net/ダガン",
+      "rarity": 9
     },
     {
       "item": "1:7:51",
@@ -45,17 +48,19 @@
       "level_min": 46,
       "level_max": null,
       "name": "ダガンスラッシュ",
-      "source": "https://pso2.pspedia.net/ダガン"
+      "source": "https://pso2.pspedia.net/ダガン",
+      "rarity": 10
     },
     {
       "item": "1:6:23",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 61,
       "level_max": null,
       "name": "ディオリドルモール",
-      "source": "https://pso2.pspedia.net/ダガン"
+      "source": "https://pso2.pspedia.net/ダガン",
+      "rarity": 9
     }
   ]
 }

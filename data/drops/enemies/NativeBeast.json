@@ -1,21 +1,22 @@
 {
-  "rate": 0.05,
+  "rate": 0.01,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:7:31",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 21,
       "level_max": 40,
       "name": "レイデュプル",
-      "source": "https://pso2.pspedia.net/ウーダン"
+      "source": "https://pso2.pspedia.net/ウーダン",
+      "rarity": 7
     },
     {
       "item": "1:1:33",
@@ -25,7 +26,8 @@
       "level_min": 41,
       "level_max": null,
       "name": "マダムノアマガサ",
-      "source": "https://pso2.pspedia.net/ウーダン"
+      "source": "https://pso2.pspedia.net/ウーダン",
+      "rarity": 10
     },
     {
       "item": "1:1:21",
@@ -35,7 +37,8 @@
       "level_min": 61,
       "level_max": null,
       "name": "ディオアリスティン",
-      "source": "https://pso2.pspedia.net/ウーダン"
+      "source": "https://pso2.pspedia.net/ウーダン",
+      "rarity": 10
     },
     {
       "item": "1:9:127",
@@ -45,7 +48,8 @@
       "level_min": 66,
       "level_max": null,
       "name": "ザムレグド",
-      "source": "https://pso2.pspedia.net/ウーダン"
+      "source": "https://pso2.pspedia.net/ウーダン",
+      "rarity": 11
     }
   ]
 }

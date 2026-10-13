@@ -1,0 +1,2139 @@
+{
+ "rate": 0.1,
+ "drop_count": {
+  "min": 1,
+  "max": 1
+ },
+ "rare_rate": 0.0,
+ "source": "client + estimated + tuned (T108): weapons = item_parameter.bin subid 0-14, star 1-6; star level bands / weights in tools/quest_overrides/drops/normal_bands.csv; level_min raised by req_stat (need_lv); rate and the weapon share (~40%) are tuned; no period data",
+ "entries": [
+  {
+   "item": "1:1:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ソード",
+   "rarity": 1
+  },
+  {
+   "item": "1:2:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ワイヤードランス",
+   "rarity": 1
+  },
+  {
+   "item": "1:3:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "パルチザン",
+   "rarity": 1
+  },
+  {
+   "item": "1:4:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ツインダガー",
+   "rarity": 1
+  },
+  {
+   "item": "1:5:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ダブルセイバー",
+   "rarity": 1
+  },
+  {
+   "item": "1:6:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ナックル",
+   "rarity": 1
+  },
+  {
+   "item": "1:7:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ガンスラッシュ",
+   "rarity": 1
+  },
+  {
+   "item": "1:8:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ライフル",
+   "rarity": 1
+  },
+  {
+   "item": "1:9:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ランチャー",
+   "rarity": 1
+  },
+  {
+   "item": "1:10:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ツインマシンガン",
+   "rarity": 1
+  },
+  {
+   "item": "1:11:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ロッド",
+   "rarity": 1
+  },
+  {
+   "item": "1:12:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "タリス",
+   "rarity": 1
+  },
+  {
+   "item": "1:13:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ウォンド",
+   "rarity": 1
+  },
+  {
+   "item": "1:14:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "カタナ",
+   "rarity": 1
+  },
+  {
+   "item": "1:15:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "バレットボウ",
+   "rarity": 1
+  },
+  {
+   "item": "1:16:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ジェットブーツ",
+   "rarity": 1
+  },
+  {
+   "item": "1:17:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "デュアルブレード",
+   "rarity": 1
+  },
+  {
+   "item": "1:18:0",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "タクト",
+   "rarity": 1
+  },
+  {
+   "item": "1:18:2",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "",
+   "rarity": 1
+  },
+  {
+   "item": "1:1:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ギガッシュ",
+   "rarity": 1
+  },
+  {
+   "item": "1:2:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ワイヤードゲイン",
+   "rarity": 1
+  },
+  {
+   "item": "1:3:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ハルベルト",
+   "rarity": 1
+  },
+  {
+   "item": "1:4:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ツインナイフ",
+   "rarity": 1
+  },
+  {
+   "item": "1:5:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ダブルバスター",
+   "rarity": 1
+  },
+  {
+   "item": "1:6:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "クランチャー",
+   "rarity": 1
+  },
+  {
+   "item": "1:7:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ガンスレイヤー",
+   "rarity": 1
+  },
+  {
+   "item": "1:8:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "スナイパー",
+   "rarity": 1
+  },
+  {
+   "item": "1:9:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "グリッパー",
+   "rarity": 1
+  },
+  {
+   "item": "1:10:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ツインアサルト",
+   "rarity": 1
+  },
+  {
+   "item": "1:11:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ポール",
+   "rarity": 1
+  },
+  {
+   "item": "1:12:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "トリビュート",
+   "rarity": 1
+  },
+  {
+   "item": "1:13:3",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "スタッフ",
+   "rarity": 1
+  },
+  {
+   "item": "1:1:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "ブレイカー",
+   "rarity": 1
+  },
+  {
+   "item": "1:2:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "ワイヤードオーバー",
+   "rarity": 1
+  },
+  {
+   "item": "1:3:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "グレイヴ",
+   "rarity": 1
+  },
+  {
+   "item": "1:4:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "ツインリッパー",
+   "rarity": 1
+  },
+  {
+   "item": "1:5:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "ダブルパラッシュ",
+   "rarity": 1
+  },
+  {
+   "item": "1:6:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "ブレスティン",
+   "rarity": 1
+  },
+  {
+   "item": "1:7:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "ガンホーク",
+   "rarity": 1
+  },
+  {
+   "item": "1:8:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "ブラスター",
+   "rarity": 1
+  },
+  {
+   "item": "1:9:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "タグバルブ",
+   "rarity": 1
+  },
+  {
+   "item": "1:10:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "ツインリピーター",
+   "rarity": 1
+  },
+  {
+   "item": "1:11:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "パイラー",
+   "rarity": 1
+  },
+  {
+   "item": "1:12:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "スプレイン",
+   "rarity": 1
+  },
+  {
+   "item": "1:13:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "バトン",
+   "rarity": 1
+  },
+  {
+   "item": "1:18:6",
+   "weight": 1.087,
+   "min": 1,
+   "max": 1,
+   "level_min": 1,
+   "name": "",
+   "rarity": 1
+  },
+  {
+   "item": "1:1:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバソード",
+   "rarity": 2
+  },
+  {
+   "item": "1:2:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバランス",
+   "rarity": 2
+  },
+  {
+   "item": "1:3:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバパルチザン",
+   "rarity": 2
+  },
+  {
+   "item": "1:4:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバＴダガー",
+   "rarity": 2
+  },
+  {
+   "item": "1:5:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバＤセイバー",
+   "rarity": 2
+  },
+  {
+   "item": "1:6:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバナックル",
+   "rarity": 2
+  },
+  {
+   "item": "1:7:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "アルバスラッシュ",
+   "rarity": 2
+  },
+  {
+   "item": "1:8:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバライフル",
+   "rarity": 2
+  },
+  {
+   "item": "1:9:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバランチャー",
+   "rarity": 2
+  },
+  {
+   "item": "1:10:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバＴマシンガン",
+   "rarity": 2
+  },
+  {
+   "item": "1:11:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバロッド",
+   "rarity": 2
+  },
+  {
+   "item": "1:12:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバタリス",
+   "rarity": 2
+  },
+  {
+   "item": "1:13:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 10,
+   "name": "アルバウォンド",
+   "rarity": 2
+  },
+  {
+   "item": "1:14:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "アルバカタナ",
+   "rarity": 2
+  },
+  {
+   "item": "1:15:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 3,
+   "name": "アルバボウ",
+   "rarity": 2
+  },
+  {
+   "item": "1:16:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 5,
+   "name": "アルバＪブーツ",
+   "rarity": 2
+  },
+  {
+   "item": "1:17:1",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 5,
+   "name": "アルバＤブレード",
+   "rarity": 2
+  },
+  {
+   "item": "1:1:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバギガッシュ",
+   "rarity": 2
+  },
+  {
+   "item": "1:2:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバゲイン",
+   "rarity": 2
+  },
+  {
+   "item": "1:3:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバハルベルト",
+   "rarity": 2
+  },
+  {
+   "item": "1:4:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバＴナイフ",
+   "rarity": 2
+  },
+  {
+   "item": "1:5:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバＤバスター",
+   "rarity": 2
+  },
+  {
+   "item": "1:6:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバクランチャー",
+   "rarity": 2
+  },
+  {
+   "item": "1:7:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 7,
+   "name": "アルバスレイヤー",
+   "rarity": 2
+  },
+  {
+   "item": "1:8:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバスナイパー",
+   "rarity": 2
+  },
+  {
+   "item": "1:9:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバグリッパー",
+   "rarity": 2
+  },
+  {
+   "item": "1:10:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバＴアサルト",
+   "rarity": 2
+  },
+  {
+   "item": "1:11:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバポール",
+   "rarity": 2
+  },
+  {
+   "item": "1:12:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバトリビュート",
+   "rarity": 2
+  },
+  {
+   "item": "1:13:4",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "アルバスタッフ",
+   "rarity": 2
+  },
+  {
+   "item": "1:1:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバブレイカー",
+   "rarity": 2
+  },
+  {
+   "item": "1:2:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバオーバー",
+   "rarity": 2
+  },
+  {
+   "item": "1:3:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバグレイヴ",
+   "rarity": 2
+  },
+  {
+   "item": "1:4:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバＴリッパー",
+   "rarity": 2
+  },
+  {
+   "item": "1:5:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバＤパラッシュ",
+   "rarity": 2
+  },
+  {
+   "item": "1:6:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバブレスティン",
+   "rarity": 2
+  },
+  {
+   "item": "1:7:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 12,
+   "name": "アルバホーク",
+   "rarity": 2
+  },
+  {
+   "item": "1:8:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバブラスター",
+   "rarity": 2
+  },
+  {
+   "item": "1:9:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバタグバルブ",
+   "rarity": 2
+  },
+  {
+   "item": "1:10:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバＴリピーター",
+   "rarity": 2
+  },
+  {
+   "item": "1:11:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバパイラー",
+   "rarity": 2
+  },
+  {
+   "item": "1:12:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルバスプレイン",
+   "rarity": 2
+  },
+  {
+   "item": "1:13:7",
+   "weight": 0.6977,
+   "min": 1,
+   "max": 1,
+   "level_min": 23,
+   "name": "アルババトン",
+   "rarity": 2
+  },
+  {
+   "item": "1:1:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタソード",
+   "rarity": 3
+  },
+  {
+   "item": "1:2:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタランス",
+   "rarity": 3
+  },
+  {
+   "item": "1:3:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタパルチザン",
+   "rarity": 3
+  },
+  {
+   "item": "1:4:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタＴダガー",
+   "rarity": 3
+  },
+  {
+   "item": "1:5:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタＤセイバー",
+   "rarity": 3
+  },
+  {
+   "item": "1:6:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタナックル",
+   "rarity": 3
+  },
+  {
+   "item": "1:7:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "ヴィタスラッシュ",
+   "rarity": 3
+  },
+  {
+   "item": "1:8:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタライフル",
+   "rarity": 3
+  },
+  {
+   "item": "1:9:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタランチャー",
+   "rarity": 3
+  },
+  {
+   "item": "1:10:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタＴマシンガン",
+   "rarity": 3
+  },
+  {
+   "item": "1:11:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタロッド",
+   "rarity": 3
+  },
+  {
+   "item": "1:12:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタタリス",
+   "rarity": 3
+  },
+  {
+   "item": "1:13:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "ヴィタウォンド",
+   "rarity": 3
+  },
+  {
+   "item": "1:14:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "ヴィタカタナ",
+   "rarity": 3
+  },
+  {
+   "item": "1:15:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 16,
+   "name": "ヴィタボウ",
+   "rarity": 3
+  },
+  {
+   "item": "1:16:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ヴィタＪブーツ",
+   "rarity": 3
+  },
+  {
+   "item": "1:17:2",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ヴィタＤブレード",
+   "rarity": 3
+  },
+  {
+   "item": "1:1:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタギガッシュ",
+   "rarity": 3
+  },
+  {
+   "item": "1:2:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタゲイン",
+   "rarity": 3
+  },
+  {
+   "item": "1:3:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタハルベルト",
+   "rarity": 3
+  },
+  {
+   "item": "1:4:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタＴナイフ",
+   "rarity": 3
+  },
+  {
+   "item": "1:5:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタＤバスター",
+   "rarity": 3
+  },
+  {
+   "item": "1:6:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタクランチャー",
+   "rarity": 3
+  },
+  {
+   "item": "1:7:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 21,
+   "name": "ヴィタスレイヤー",
+   "rarity": 3
+  },
+  {
+   "item": "1:8:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタスナイパー",
+   "rarity": 3
+  },
+  {
+   "item": "1:9:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタグリッパー",
+   "rarity": 3
+  },
+  {
+   "item": "1:10:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタＴアサルト",
+   "rarity": 3
+  },
+  {
+   "item": "1:11:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタポール",
+   "rarity": 3
+  },
+  {
+   "item": "1:12:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタトリビュート",
+   "rarity": 3
+  },
+  {
+   "item": "1:13:5",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 36,
+   "name": "ヴィタスタッフ",
+   "rarity": 3
+  },
+  {
+   "item": "1:1:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタブレイカー",
+   "rarity": 3
+  },
+  {
+   "item": "1:2:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタオーバー",
+   "rarity": 3
+  },
+  {
+   "item": "1:3:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタグレイヴ",
+   "rarity": 3
+  },
+  {
+   "item": "1:4:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタＴリッパー",
+   "rarity": 3
+  },
+  {
+   "item": "1:5:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタＤパラッシュ",
+   "rarity": 3
+  },
+  {
+   "item": "1:6:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタブレスティン",
+   "rarity": 3
+  },
+  {
+   "item": "1:7:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 25,
+   "name": "ヴィタホーク",
+   "rarity": 3
+  },
+  {
+   "item": "1:8:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタブラスター",
+   "rarity": 3
+  },
+  {
+   "item": "1:9:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタタグバルブ",
+   "rarity": 3
+  },
+  {
+   "item": "1:10:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタＴリピーター",
+   "rarity": 3
+  },
+  {
+   "item": "1:11:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタパイラー",
+   "rarity": 3
+  },
+  {
+   "item": "1:12:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタスプレイン",
+   "rarity": 3
+  },
+  {
+   "item": "1:13:8",
+   "weight": 0.3488,
+   "min": 1,
+   "max": 1,
+   "level_min": 43,
+   "name": "ヴィタバトン",
+   "rarity": 3
+  },
+  {
+   "item": "1:1:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "クレイモア",
+   "rarity": 4
+  },
+  {
+   "item": "1:2:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ワイヤードトライ",
+   "rarity": 4
+  },
+  {
+   "item": "1:3:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "バルディス",
+   "rarity": 4
+  },
+  {
+   "item": "1:4:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ツインブレイド",
+   "rarity": 4
+  },
+  {
+   "item": "1:5:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ダブルレイピア",
+   "rarity": 4
+  },
+  {
+   "item": "1:6:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ブレイクル",
+   "rarity": 4
+  },
+  {
+   "item": "1:7:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ガンシザー",
+   "rarity": 4
+  },
+  {
+   "item": "1:8:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ビーム",
+   "rarity": 4
+  },
+  {
+   "item": "1:9:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ラフレイム",
+   "rarity": 4
+  },
+  {
+   "item": "1:10:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ツインガトリング",
+   "rarity": 4
+  },
+  {
+   "item": "1:11:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ストライカー",
+   "rarity": 4
+  },
+  {
+   "item": "1:12:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "オブサイド",
+   "rarity": 4
+  },
+  {
+   "item": "1:13:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "セプター",
+   "rarity": 4
+  },
+  {
+   "item": "1:14:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ヴァストール",
+   "rarity": 4
+  },
+  {
+   "item": "1:15:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "クワドラプト",
+   "rarity": 4
+  },
+  {
+   "item": "1:16:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ジェットスライダー",
+   "rarity": 4
+  },
+  {
+   "item": "1:17:9",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "デュアルサーベル",
+   "rarity": 4
+  },
+  {
+   "item": "1:1:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "キャリバー",
+   "rarity": 4
+  },
+  {
+   "item": "1:2:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ワイヤードアーチ",
+   "rarity": 4
+  },
+  {
+   "item": "1:3:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "グングニル",
+   "rarity": 4
+  },
+  {
+   "item": "1:4:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ツインエッジ",
+   "rarity": 4
+  },
+  {
+   "item": "1:5:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ダブルグラディウス",
+   "rarity": 4
+  },
+  {
+   "item": "1:6:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "クラシェルブ",
+   "rarity": 4
+  },
+  {
+   "item": "1:7:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ガンハチェット",
+   "rarity": 4
+  },
+  {
+   "item": "1:8:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "レーザー",
+   "rarity": 4
+  },
+  {
+   "item": "1:9:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ピサスティアン",
+   "rarity": 4
+  },
+  {
+   "item": "1:10:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ツインバルカン",
+   "rarity": 4
+  },
+  {
+   "item": "1:11:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "フォールオンス",
+   "rarity": 4
+  },
+  {
+   "item": "1:12:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ディフューズ",
+   "rarity": 4
+  },
+  {
+   "item": "1:13:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ケイン",
+   "rarity": 4
+  },
+  {
+   "item": "1:14:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "エスレイン",
+   "rarity": 4
+  },
+  {
+   "item": "1:15:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "アルクレイ",
+   "rarity": 4
+  },
+  {
+   "item": "1:16:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "ジェットビースオート",
+   "rarity": 4
+  },
+  {
+   "item": "1:17:12",
+   "weight": 0.1176,
+   "min": 1,
+   "max": 1,
+   "level_min": 20,
+   "name": "デュアルスティレット",
+   "rarity": 4
+  },
+  {
+   "item": "1:1:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバクレイモア",
+   "rarity": 5
+  },
+  {
+   "item": "1:2:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバトライ",
+   "rarity": 5
+  },
+  {
+   "item": "1:3:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルババルディス",
+   "rarity": 5
+  },
+  {
+   "item": "1:4:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバＴブレイド",
+   "rarity": 5
+  },
+  {
+   "item": "1:5:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバＤレイピア",
+   "rarity": 5
+  },
+  {
+   "item": "1:6:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバブレイクル",
+   "rarity": 5
+  },
+  {
+   "item": "1:7:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバシザー",
+   "rarity": 5
+  },
+  {
+   "item": "1:8:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバビーム",
+   "rarity": 5
+  },
+  {
+   "item": "1:9:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバラフレイム",
+   "rarity": 5
+  },
+  {
+   "item": "1:10:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバＴガトリング",
+   "rarity": 5
+  },
+  {
+   "item": "1:11:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバストライカー",
+   "rarity": 5
+  },
+  {
+   "item": "1:12:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバオブサイド",
+   "rarity": 5
+  },
+  {
+   "item": "1:13:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバセプター",
+   "rarity": 5
+  },
+  {
+   "item": "1:14:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバヴァストール",
+   "rarity": 5
+  },
+  {
+   "item": "1:15:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバクワドラプト",
+   "rarity": 5
+  },
+  {
+   "item": "1:16:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバＪスライダー",
+   "rarity": 5
+  },
+  {
+   "item": "1:17:10",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバＤサーベル",
+   "rarity": 5
+  },
+  {
+   "item": "1:1:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバキャリバー",
+   "rarity": 5
+  },
+  {
+   "item": "1:2:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバアーチ",
+   "rarity": 5
+  },
+  {
+   "item": "1:3:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバグングニル",
+   "rarity": 5
+  },
+  {
+   "item": "1:4:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバＴエッジ",
+   "rarity": 5
+  },
+  {
+   "item": "1:5:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバＤグラディウス",
+   "rarity": 5
+  },
+  {
+   "item": "1:6:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバクラシェルブ",
+   "rarity": 5
+  },
+  {
+   "item": "1:7:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバハチェット",
+   "rarity": 5
+  },
+  {
+   "item": "1:8:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバレーザー",
+   "rarity": 5
+  },
+  {
+   "item": "1:9:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバピサスティアン",
+   "rarity": 5
+  },
+  {
+   "item": "1:10:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバＴバルカン",
+   "rarity": 5
+  },
+  {
+   "item": "1:11:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバフォールオンス",
+   "rarity": 5
+  },
+  {
+   "item": "1:12:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバディフューズ",
+   "rarity": 5
+  },
+  {
+   "item": "1:13:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 31,
+   "name": "アルバケイン",
+   "rarity": 5
+  },
+  {
+   "item": "1:14:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバエスレイン",
+   "rarity": 5
+  },
+  {
+   "item": "1:15:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバアルクレイ",
+   "rarity": 5
+  },
+  {
+   "item": "1:16:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバＪビースオート",
+   "rarity": 5
+  },
+  {
+   "item": "1:17:13",
+   "weight": 0.0294,
+   "min": 1,
+   "max": 1,
+   "level_min": 30,
+   "name": "アルバＤスティレット",
+   "rarity": 5
+  },
+  {
+   "item": "1:1:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタクレイモア",
+   "rarity": 6
+  },
+  {
+   "item": "1:2:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタトライ",
+   "rarity": 6
+  },
+  {
+   "item": "1:3:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタバルディス",
+   "rarity": 6
+  },
+  {
+   "item": "1:4:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタＴブレイド",
+   "rarity": 6
+  },
+  {
+   "item": "1:5:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタＤレイピア",
+   "rarity": 6
+  },
+  {
+   "item": "1:6:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタブレイクル",
+   "rarity": 6
+  },
+  {
+   "item": "1:7:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタシザー",
+   "rarity": 6
+  },
+  {
+   "item": "1:8:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタビーム",
+   "rarity": 6
+  },
+  {
+   "item": "1:9:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタラフレイム",
+   "rarity": 6
+  },
+  {
+   "item": "1:10:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタＴガトリング",
+   "rarity": 6
+  },
+  {
+   "item": "1:11:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタストライカー",
+   "rarity": 6
+  },
+  {
+   "item": "1:12:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタオブサイド",
+   "rarity": 6
+  },
+  {
+   "item": "1:13:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタセプター",
+   "rarity": 6
+  },
+  {
+   "item": "1:14:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタヴァストール",
+   "rarity": 6
+  },
+  {
+   "item": "1:15:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタクワドラプト",
+   "rarity": 6
+  },
+  {
+   "item": "1:16:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタＪスライダー",
+   "rarity": 6
+  },
+  {
+   "item": "1:17:11",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタＤサーベル",
+   "rarity": 6
+  },
+  {
+   "item": "1:1:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタキャリバー",
+   "rarity": 6
+  },
+  {
+   "item": "1:2:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタアーチ",
+   "rarity": 6
+  },
+  {
+   "item": "1:3:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタグングニル",
+   "rarity": 6
+  },
+  {
+   "item": "1:4:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタＴエッジ",
+   "rarity": 6
+  },
+  {
+   "item": "1:5:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタＤグラディウス",
+   "rarity": 6
+  },
+  {
+   "item": "1:6:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタクラシェルブ",
+   "rarity": 6
+  },
+  {
+   "item": "1:7:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタハチェット",
+   "rarity": 6
+  },
+  {
+   "item": "1:8:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタレーザー",
+   "rarity": 6
+  },
+  {
+   "item": "1:9:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタピサスティアン",
+   "rarity": 6
+  },
+  {
+   "item": "1:10:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタＴバルカン",
+   "rarity": 6
+  },
+  {
+   "item": "1:11:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタフォールオンス",
+   "rarity": 6
+  },
+  {
+   "item": "1:12:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタディフューズ",
+   "rarity": 6
+  },
+  {
+   "item": "1:13:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 47,
+   "name": "ヴィタケイン",
+   "rarity": 6
+  },
+  {
+   "item": "1:14:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタエスレイン",
+   "rarity": 6
+  },
+  {
+   "item": "1:15:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタアルクレイ",
+   "rarity": 6
+  },
+  {
+   "item": "1:16:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタＪビースオート",
+   "rarity": 6
+  },
+  {
+   "item": "1:17:14",
+   "weight": 0.0147,
+   "min": 1,
+   "max": 1,
+   "level_min": 40,
+   "name": "ヴィタＤスティレット",
+   "rarity": 6
+  },
+  {
+   "item": "3:1:0",
+   "weight": 60,
+   "min": 1,
+   "max": 1,
+   "name": "モノメイト"
+  },
+  {
+   "item": "3:1:1",
+   "weight": 20,
+   "min": 1,
+   "max": 1,
+   "name": "ディメイト",
+   "level_min": 10
+  },
+  {
+   "item": "3:7:0",
+   "weight": 20,
+   "min": 1,
+   "max": 1,
+   "name": "テレパイプ"
+  }
+ ]
+}

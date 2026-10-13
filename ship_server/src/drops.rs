@@ -1,7 +1,8 @@
-//! [pso2_vita_offline] Data-driven drop tables. The stages follow the original's order: the enemy's own table, the
-//! common table, the area's table, then meseta. Data lives in `data/drops/` (`PSO2_DROPS_DIR` overrides):
-//! `enemies/<internal name>.json`, `common.json`, `areas/<zone name>.json`. Read once on first use, not compiled
-//! into `com_data.mp`.
+//! [pso2_vita_offline] Data-driven drop tables. The stages follow the original's order: the enemy's own table (the
+//! rare stage), the normal table (star 1-6 weapons by enemy level, plus recovery items), the common table, the
+//! area's table, then meseta. Data lives in `data/drops/` (`PSO2_DROPS_DIR` overrides):
+//! `enemies/<internal name>.json`, `normal.json`, `common.json`, `areas/<zone name>.json`. Read once on first use,
+//! not compiled into `com_data.mp`.
 use crate::map::meseta;
 use pso2packetlib::protocol::items::{ConsumableItem, Item, ItemId, ItemType};
 use rand::Rng;
@@ -45,7 +46,8 @@ pub struct Table {
     pub drop_count: Range,
     /// rare-rate addition (class rare / boost): present but not used yet
     pub rare_rate: f32,
-    /// bosses drop 4 (8 with the kill points in the original, not done)
+    /// enemy tables only: a boss draws this many items (8 with the kill points in the original, not done) from the
+    /// normal stage, which then ignores its own rate and count
     pub boss_drops: u32,
     pub meseta: Option<Meseta>,
     pub source: String,
@@ -69,6 +71,7 @@ impl Default for Table {
 #[derive(Debug, Default)]
 pub struct DropData {
     pub enemies: HashMap<String, Table>,
+    pub normal: Option<Table>,
     pub common: Option<Table>,
     pub areas: HashMap<String, Table>,
 }
@@ -100,13 +103,15 @@ impl DropData {
     pub fn load(dir: &Path) -> Self {
         let data = Self {
             enemies: read_dir_tables(&dir.join("enemies")),
+            normal: read_table(&dir.join("normal.json")),
             common: read_table(&dir.join("common.json")),
             areas: read_dir_tables(&dir.join("areas")),
         };
         log::info!(
-            "[pso2-drop] loaded {}: {} enemies, common {}, {} areas",
+            "[pso2-drop] loaded {}: {} enemies, normal {}, common {}, {} areas",
             dir.display(),
             data.enemies.len(),
+            data.normal.is_some(),
             data.common.is_some(),
             data.areas.len()
         );
@@ -160,14 +165,19 @@ fn in_band(e: &Entry, level: u32) -> bool {
 }
 
 fn roll_table<R: Rng>(rng: &mut R, t: &Table, level: u32, out: &mut Vec<Item>) {
-    if rng.gen_range(0.0f32..1.0) >= t.rate {
+    roll_stage(rng, t, level, t.rate, None, out)
+}
+
+/// One stage: `rate` is the chance it drops anything, `count` overrides the table's `drop_count`
+fn roll_stage<R: Rng>(rng: &mut R, t: &Table, level: u32, rate: f32, count: Option<u32>, out: &mut Vec<Item>) {
+    if rng.gen_range(0.0f32..1.0) >= rate {
         return;
     }
     // entries outside the enemy's level band are not candidates; an empty result drops nothing from this stage
     let entries: Vec<&Entry> = t.entries.iter().filter(|e| in_band(e, level)).collect();
     let total: f32 = entries.iter().map(|e| e.weight.max(0.0)).sum();
     if total > 0.0 {
-        for _ in 0..range(rng, t.drop_count).max(t.boss_drops) {
+        for _ in 0..count.unwrap_or_else(|| range(rng, t.drop_count)) {
             let mut x = rng.gen_range(0.0f32..1.0) * total;
             let Some(e) = entries.iter().find(|e| {
                 x -= e.weight.max(0.0);
@@ -195,12 +205,22 @@ fn roll_table<R: Rng>(rng: &mut R, t: &Table, level: u32, out: &mut Vec<Item>) {
     }
 }
 
-/// Stages: enemy table -> common -> area (its `meseta` is the meseta stage). An enemy without a table only gets
-/// the common and area stages.
+/// Stages: enemy table (rare) -> normal -> common -> area (its `meseta` is the meseta stage). An enemy without a
+/// table only gets the normal, common and area stages. A boss (`boss_drops` in its table) draws that many items from
+/// the normal stage every time.
 pub fn roll_with<R: Rng>(rng: &mut R, data: &DropData, enemy: &str, area: &str, level: u32) -> Vec<Item> {
     let mut out = vec![];
-    let stages = [data.enemies.get(enemy), data.common.as_ref(), data.areas.get(area)];
-    for t in stages.into_iter().flatten() {
+    let own = data.enemies.get(enemy);
+    if let Some(t) = own {
+        roll_table(rng, t, level, &mut out);
+    }
+    if let Some(t) = &data.normal {
+        match own.map(|t| t.boss_drops).filter(|&n| n > 0) {
+            Some(n) => roll_stage(rng, t, level, 1.0, Some(n), &mut out),
+            None => roll_table(rng, t, level, &mut out),
+        }
+    }
+    for t in [data.common.as_ref(), data.areas.get(area)].into_iter().flatten() {
         roll_table(rng, t, level, &mut out);
     }
     out
@@ -265,6 +285,64 @@ mod tests {
         let r = roll_with(&mut StdRng::seed_from_u64(2), &data, "NoTable", "a", 5);
         assert_eq!(r.len(), 2);
         assert_eq!(crate::map::meseta_amount(&r[1]), Some(5));
+    }
+
+    /// The feel target (T108): one lap of Forest N (Lv10) = 35 common enemies + 1 boss.
+    /// Star 1-3 weapons 2-4 per lap, rare (star 7+) about 0.1 per lap, the boss always drops 4 normal items.
+    #[test]
+    fn one_lap_feel() {
+        let e = |item: &str, weight: f32, level_min: Option<u32>| Entry {
+            item: item.into(), weight, min: 1, max: 1, level_min, level_max: None,
+        };
+        // normal: star 1 (id 1) / star 2 (id 2, from Lv3) weapons in the generator's proportions, then recovery
+        let normal = Table {
+            rate: 0.10,
+            entries: vec![
+                e("1:1:0", 50.0, Some(1)),
+                e("1:2:1", 12.6, Some(3)),
+                e("3:1:0", 60.0, None),
+                e("3:1:1", 20.0, Some(10)),
+                e("3:7:0", 20.0, None),
+            ],
+            ..Default::default()
+        };
+        // rare: a common enemy 1% (a third of them have a Lv10 candidate), the boss 10% x 1 and boss_drops 4
+        let mob = Table { rate: 0.01, entries: vec![e("1:7:24", 4.0, Some(1))], ..Default::default() };
+        let boss = Table { rate: 0.10, boss_drops: 4, entries: vec![e("1:17:33", 2.0, Some(1))], ..Default::default() };
+        let data = DropData {
+            enemies: HashMap::from([("Mob".into(), mob), ("Boss".into(), boss)]),
+            normal: Some(normal),
+            ..Default::default()
+        };
+        let mut rng = StdRng::seed_from_u64(7);
+        let (mut low, mut rare, mut boss_items) = (0u32, 0u32, 0u32);
+        let laps = 1000;
+        for _ in 0..laps {
+            for n in 0..35 {
+                let name = if n % 3 == 0 { "Mob" } else { "NoTable" };
+                for i in roll_with(&mut rng, &data, name, "none", 10) {
+                    match i.id.id {
+                        1 | 2 if i.id.item_type == 1 => low += 1,
+                        _ if i.id.item_type == 1 => rare += 1,
+                        _ => {}
+                    }
+                }
+            }
+            let r = roll_with(&mut rng, &data, "Boss", "none", 10);
+            boss_items += r.iter().filter(|i| i.id.item_type != 1 || matches!(i.id.id, 1 | 2)).count() as u32;
+            for i in &r {
+                if i.id.item_type == 1 && !matches!(i.id.id, 1 | 2) {
+                    rare += 1;
+                } else if i.id.item_type == 1 {
+                    low += 1;
+                }
+            }
+        }
+        let per_lap = |n: u32| n as f32 / laps as f32;
+        // the boss's 4 normal picks are counted in `low` too (weapons among them); here 2-4 weapons per lap
+        assert!((2.0..=4.0).contains(&per_lap(low)), "star 1-3 weapons per lap: {}", per_lap(low));
+        assert!((0.03..=0.30).contains(&per_lap(rare)), "rare per lap: {}", per_lap(rare));
+        assert!(per_lap(boss_items) >= 3.5, "boss normal items per lap: {}", per_lap(boss_items));
     }
 
     #[test]

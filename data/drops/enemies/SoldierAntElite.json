@@ -1,41 +1,44 @@
 {
-  "rate": 0.15,
+  "rate": 0.03,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:7:24",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 1,
       "level_max": 10,
       "name": "ブラオレット",
-      "source": "swiki swiki-enemy-2d8deffe883bc5e6de1e"
+      "source": "swiki swiki-enemy-2d8deffe883bc5e6de1e",
+      "rarity": 7
     },
     {
       "item": "1:17:33",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 1,
       "level_max": 10,
       "name": "サーブライト",
-      "source": "swiki swiki-enemy-2d8deffe883bc5e6de1e"
+      "source": "swiki swiki-enemy-2d8deffe883bc5e6de1e",
+      "rarity": 8
     },
     {
       "item": "1:8:18",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 35,
       "name": "ティグリドル",
-      "source": "swiki swiki-enemy-69027ed8dacf758f83ef"
+      "source": "swiki swiki-enemy-69027ed8dacf758f83ef",
+      "rarity": 9
     },
     {
       "item": "1:7:51",
@@ -45,17 +48,19 @@
       "level_min": 46,
       "level_max": 50,
       "name": "ダガンスラッシュ",
-      "source": "swiki swiki-enemy-6a4e737f105af9ae3e38"
+      "source": "swiki swiki-enemy-6a4e737f105af9ae3e38",
+      "rarity": 10
     },
     {
       "item": "1:6:23",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 61,
       "level_max": 65,
       "name": "ディオリドルモール",
-      "source": "swiki swiki-enemy-98e449d394f7623260d9"
+      "source": "swiki swiki-enemy-98e449d394f7623260d9",
+      "rarity": 9
     }
   ]
 }

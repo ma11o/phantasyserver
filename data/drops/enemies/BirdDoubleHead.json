@@ -1,21 +1,22 @@
 {
-  "rate": 0.05,
+  "rate": 0.01,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research (coast, T81): cirnopedia area ~ Coast + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research (coast, T81): cirnopedia area ~ Coast + swiki rare_drop_band (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:10:17",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 26,
       "level_max": 30,
       "name": "ラディエグル",
-      "source": "swiki swiki-enemy-9906e86d85bbba7f8495"
+      "source": "swiki swiki-enemy-9906e86d85bbba7f8495",
+      "rarity": 9
     },
     {
       "item": "1:4:54",
@@ -25,7 +26,8 @@
       "level_min": 51,
       "level_max": 55,
       "name": "イブリスブラッド",
-      "source": "swiki swiki-enemy-cb171e0220ff5df53d58"
+      "source": "swiki swiki-enemy-cb171e0220ff5df53d58",
+      "rarity": 10
     },
     {
       "item": "1:2:65",
@@ -35,7 +37,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "イミディエイトフェザー",
-      "source": "swiki swiki-enemy-fe7a7e847121039c1061"
+      "source": "swiki swiki-enemy-fe7a7e847121039c1061",
+      "rarity": 10
     },
     {
       "item": "1:13:128",
@@ -45,7 +48,8 @@
       "level_min": 66,
       "level_max": 70,
       "name": "ラブレスウォン",
-      "source": "swiki swiki-enemy-48238c53018fabafe0c5"
+      "source": "swiki swiki-enemy-48238c53018fabafe0c5",
+      "rarity": 11
     },
     {
       "item": "1:15:67",
@@ -55,7 +59,8 @@
       "level_min": 71,
       "level_max": 75,
       "name": "コリスウィンド",
-      "source": "swiki swiki-enemy-4f9ad211f7a38d65c971"
+      "source": "swiki swiki-enemy-4f9ad211f7a38d65c971",
+      "rarity": 11
     }
   ]
 }

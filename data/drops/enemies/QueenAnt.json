@@ -1,41 +1,44 @@
 {
-  "rate": 1.0,
+  "rate": 0.1,
   "drop_count": {
-    "min": 2,
-    "max": 3
+    "min": 1,
+    "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:14:27",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 1,
       "level_max": 10,
       "name": "シガルガ",
-      "source": "swiki swiki-enemy-b678f048df6f2ea0ed48"
+      "source": "swiki swiki-enemy-b678f048df6f2ea0ed48",
+      "rarity": 7
     },
     {
       "item": "1:16:30",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 1,
       "level_max": 10,
       "name": "サーハブリズ",
-      "source": "swiki swiki-enemy-b678f048df6f2ea0ed48"
+      "source": "swiki swiki-enemy-b678f048df6f2ea0ed48",
+      "rarity": 8
     },
     {
       "item": "1:9:38",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 21,
       "level_max": 25,
       "name": "フォトンランチャー",
-      "source": "swiki swiki-enemy-b535df58622f730ca87a"
+      "source": "swiki swiki-enemy-b535df58622f730ca87a",
+      "rarity": 8
     },
     {
       "item": "1:7:34",
@@ -46,6 +49,7 @@
       "level_max": 45,
       "name": "ブラオレットゼロ",
       "source": "swiki swiki-enemy-3f6a41cbe02c8b3dc7c8",
+      "rarity": 10,
       "level_min_research": 41,
       "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv29); the nearest band's lower bound 41 lowered to 29"
     },
@@ -57,7 +61,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "アタッシュオブス",
-      "source": "swiki swiki-enemy-10cfdf357c3e461995f3"
+      "source": "swiki swiki-enemy-10cfdf357c3e461995f3",
+      "rarity": 10
     },
     {
       "item": "1:13:71",
@@ -67,7 +72,9 @@
       "level_min": 71,
       "level_max": 75,
       "name": "トレイターケイジ",
-      "source": "swiki swiki-enemy-24e9b66efd2edd6047ed"
+      "source": "swiki swiki-enemy-24e9b66efd2edd6047ed",
+      "rarity": 11
     }
-  ]
+  ],
+  "boss_drops": 3
 }

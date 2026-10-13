@@ -1,51 +1,55 @@
 {
-  "rate": 0.05,
+  "rate": 0.01,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research (skyscape, T81): cirnopedia area ~ Skyscape + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research (skyscape, T81): cirnopedia area ~ Skyscape + swiki rare_drop_band (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:14:26",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 35,
       "name": "ラムダシガルガ",
-      "source": "swiki swiki-enemy-025bf1a7a289a48b0ff6"
+      "source": "swiki swiki-enemy-025bf1a7a289a48b0ff6",
+      "rarity": 7
     },
     {
       "item": "1:13:104",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 35,
       "name": "ラムダレガリア",
-      "source": "swiki swiki-enemy-025bf1a7a289a48b0ff6"
+      "source": "swiki swiki-enemy-025bf1a7a289a48b0ff6",
+      "rarity": 7
     },
     {
       "item": "1:7:20",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 35,
       "name": "ジャレイド",
-      "source": "swiki swiki-enemy-025bf1a7a289a48b0ff6"
+      "source": "swiki swiki-enemy-025bf1a7a289a48b0ff6",
+      "rarity": 9
     },
     {
       "item": "1:5:15",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 46,
       "level_max": 50,
       "name": "ラムダフェイルノート",
-      "source": "swiki swiki-enemy-b3787592b730776339e3"
+      "source": "swiki swiki-enemy-b3787592b730776339e3",
+      "rarity": 9
     },
     {
       "item": "1:2:93",
@@ -55,7 +59,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "ヤサカニノマガタマ",
-      "source": "swiki swiki-enemy-785634ebb83b5a9cbb2e"
+      "source": "swiki swiki-enemy-785634ebb83b5a9cbb2e",
+      "rarity": 10
     }
   ]
 }

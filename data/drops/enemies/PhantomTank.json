@@ -1,21 +1,22 @@
 {
-  "rate": 1.0,
+  "rate": 0.1,
   "drop_count": {
-    "min": 4,
-    "max": 4
+    "min": 1,
+    "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research (tokyo, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research (tokyo, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:11:23",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 20,
       "level_max": 40,
       "name": "ディオサルバドール",
       "source": "swiki swiki-enemy-759ea2e121e062f3268e",
+      "rarity": 9,
       "level_min_research": 36,
       "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv20); the nearest band's lower bound 36 lowered to 20"
     },
@@ -27,7 +28,8 @@
       "level_min": 51,
       "level_max": 55,
       "name": "エスカヘルメス",
-      "source": "swiki swiki-enemy-63c4ad67677ccecbf269"
+      "source": "swiki swiki-enemy-63c4ad67677ccecbf269",
+      "rarity": 10
     },
     {
       "item": "1:17:103",
@@ -37,7 +39,8 @@
       "level_min": 66,
       "level_max": 70,
       "name": "スプルコル",
-      "source": "swiki swiki-enemy-884c149f43fd0d68800e"
+      "source": "swiki swiki-enemy-884c149f43fd0d68800e",
+      "rarity": 12
     }
   ],
   "boss_drops": 4

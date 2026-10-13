@@ -1,51 +1,55 @@
 {
-  "rate": 0.05,
+  "rate": 0.01,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research (volcano, T80): cirnopedia area ~ Volcano + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research (volcano, T80): cirnopedia area ~ Volcano + swiki rare_drop_band (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:2:15",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 1,
       "level_max": 10,
       "name": "クシャネビュラ",
-      "source": "swiki swiki-enemy-ebb0c107bfd4eef2e1e0"
+      "source": "swiki swiki-enemy-ebb0c107bfd4eef2e1e0",
+      "rarity": 7
     },
     {
       "item": "1:1:19",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 35,
       "name": "アーディロウ",
-      "source": "swiki swiki-enemy-043ab212d081deb26539"
+      "source": "swiki swiki-enemy-043ab212d081deb26539",
+      "rarity": 9
     },
     {
       "item": "1:4:36",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 35,
       "name": "メッサーアゲート",
-      "source": "swiki swiki-enemy-043ab212d081deb26539"
+      "source": "swiki swiki-enemy-043ab212d081deb26539",
+      "rarity": 9
     },
     {
       "item": "1:9:20",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 46,
       "level_max": 50,
       "name": "ラムダアドラステア",
-      "source": "swiki swiki-enemy-82affd29f03b8918b423"
+      "source": "swiki swiki-enemy-82affd29f03b8918b423",
+      "rarity": 8
     },
     {
       "item": "1:15:18",
@@ -55,7 +59,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "ディオタービュラス",
-      "source": "swiki swiki-enemy-5ffdcc111b84a225b6c0"
+      "source": "swiki swiki-enemy-5ffdcc111b84a225b6c0",
+      "rarity": 10
     },
     {
       "item": "1:2:116",
@@ -65,7 +70,8 @@
       "level_min": 66,
       "level_max": 70,
       "name": "クラテルネイルス",
-      "source": "swiki swiki-enemy-ec3f5d7dc4664acdd7e1"
+      "source": "swiki swiki-enemy-ec3f5d7dc4664acdd7e1",
+      "rarity": 11
     }
   ]
 }

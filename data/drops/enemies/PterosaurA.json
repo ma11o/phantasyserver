@@ -1,61 +1,66 @@
 {
-  "rate": 0.05,
+  "rate": 0.01,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research: forest-item-drop-candidates.csv + cirnopedia (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:12:18",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 1,
       "level_max": 30,
       "name": "ローザクレイン",
-      "source": "https://pso2.pspedia.net/アギニス"
+      "source": "https://pso2.pspedia.net/アギニス",
+      "rarity": 7
     },
     {
       "item": "1:10:36",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 45,
       "name": "イシュライ",
-      "source": "https://pso2.pspedia.net/アギニス"
+      "source": "https://pso2.pspedia.net/アギニス",
+      "rarity": 9
     },
     {
       "item": "1:11:15",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 46,
       "level_max": null,
       "name": "ラムダガーランド",
-      "source": "https://pso2.pspedia.net/アギニス"
+      "source": "https://pso2.pspedia.net/アギニス",
+      "rarity": 9
     },
     {
       "item": "1:15:24",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 61,
       "level_max": null,
       "name": "ディオビッグロウ",
-      "source": "https://pso2.pspedia.net/アギニス"
+      "source": "https://pso2.pspedia.net/アギニス",
+      "rarity": 9
     },
     {
       "item": "1:4:26",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 66,
       "level_max": null,
       "name": "ディオレリギオー",
-      "source": "https://pso2.pspedia.net/アギニス"
+      "source": "https://pso2.pspedia.net/アギニス",
+      "rarity": 9
     },
     {
       "item": "3:5:223",

@@ -1,33 +1,35 @@
 {
-  "rate": 1.0,
+  "rate": 0.1,
   "drop_count": {
-    "min": 4,
-    "max": 4
+    "min": 1,
+    "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research (tundra, T81): cirnopedia area ~ Tundra + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research (tundra, T81): cirnopedia area ~ Tundra + swiki rare_drop_band (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:9:21",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 24,
       "level_max": 35,
       "name": "ウルスラグナ",
       "source": "swiki swiki-enemy-bd3562e422e9f372b135",
+      "rarity": 8,
       "level_min_research": 31,
       "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv24); the nearest band's lower bound 31 lowered to 24"
     },
     {
       "item": "1:5:18",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 41,
       "level_max": 45,
       "name": "ラムダスピルティア",
-      "source": "swiki swiki-enemy-a08ae6527fcfd2a079ef"
+      "source": "swiki swiki-enemy-a08ae6527fcfd2a079ef",
+      "rarity": 7
     },
     {
       "item": "1:12:30",
@@ -37,7 +39,8 @@
       "level_min": 51,
       "level_max": 55,
       "name": "ガディアンナ",
-      "source": "swiki swiki-enemy-ed76530bb278024aad76"
+      "source": "swiki swiki-enemy-ed76530bb278024aad76",
+      "rarity": 10
     },
     {
       "item": "1:1:54",
@@ -47,7 +50,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "トレイターリニア",
-      "source": "swiki swiki-enemy-f699013b50b033ed6596"
+      "source": "swiki swiki-enemy-f699013b50b033ed6596",
+      "rarity": 10
     },
     {
       "item": "1:17:29",
@@ -57,7 +61,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "シェーンフリサ",
-      "source": "swiki swiki-enemy-f699013b50b033ed6596"
+      "source": "swiki swiki-enemy-f699013b50b033ed6596",
+      "rarity": 10
     },
     {
       "item": "1:17:51",
@@ -67,7 +72,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "ケイトレイター",
-      "source": "swiki swiki-enemy-f699013b50b033ed6596"
+      "source": "swiki swiki-enemy-f699013b50b033ed6596",
+      "rarity": 10
     },
     {
       "item": "1:4:94",
@@ -77,7 +83,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "ホローギムレット",
-      "source": "swiki swiki-enemy-f699013b50b033ed6596"
+      "source": "swiki swiki-enemy-f699013b50b033ed6596",
+      "rarity": 12
     },
     {
       "item": "1:14:78",
@@ -87,7 +94,8 @@
       "level_min": 66,
       "level_max": 70,
       "name": "ヒュリオサンジン",
-      "source": "swiki swiki-enemy-2f7b740913ae5db81ce7"
+      "source": "swiki swiki-enemy-2f7b740913ae5db81ce7",
+      "rarity": 11
     },
     {
       "item": "1:14:60",
@@ -97,7 +105,8 @@
       "level_min": 71,
       "level_max": 75,
       "name": "ビューレイアール",
-      "source": "swiki swiki-enemy-a23e59ddd56fd7d13ab2"
+      "source": "swiki swiki-enemy-a23e59ddd56fd7d13ab2",
+      "rarity": 11
     }
   ],
   "boss_drops": 4

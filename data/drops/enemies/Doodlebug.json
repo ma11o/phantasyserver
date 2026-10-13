@@ -1,61 +1,66 @@
 {
-  "rate": 1.0,
+  "rate": 0.1,
   "drop_count": {
-    "min": 4,
-    "max": 4
+    "min": 1,
+    "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research (illusion, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research (illusion, T81): cirnopedia area ~ - + swiki rare_drop_band (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:5:32",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 11,
       "level_max": 20,
       "name": "ニョイボウ",
-      "source": "swiki swiki-enemy-beecba87f799a4179915"
+      "source": "swiki swiki-enemy-beecba87f799a4179915",
+      "rarity": 7
     },
     {
       "item": "1:15:44",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 26,
       "level_max": 30,
       "name": "アルテイリ",
-      "source": "swiki swiki-enemy-4559cb3fc22b998f4678"
+      "source": "swiki swiki-enemy-4559cb3fc22b998f4678",
+      "rarity": 8
     },
     {
       "item": "1:11:35",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 26,
       "level_max": 30,
       "name": "トワイライトルーン",
-      "source": "swiki swiki-enemy-4559cb3fc22b998f4678"
+      "source": "swiki swiki-enemy-4559cb3fc22b998f4678",
+      "rarity": 8
     },
     {
       "item": "1:6:38",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 35,
       "name": "グラヴェルコア",
-      "source": "swiki swiki-enemy-cbd77eeda5f3757c9f61"
+      "source": "swiki swiki-enemy-cbd77eeda5f3757c9f61",
+      "rarity": 9
     },
     {
       "item": "1:12:22",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 41,
       "level_max": 45,
       "name": "ラムダハードクォーツ",
-      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b"
+      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b",
+      "rarity": 8
     },
     {
       "item": "1:2:62",
@@ -65,7 +70,8 @@
       "level_min": 41,
       "level_max": 45,
       "name": "グワナーダランス",
-      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b"
+      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b",
+      "rarity": 10
     },
     {
       "item": "1:4:56",
@@ -75,7 +81,8 @@
       "level_min": 41,
       "level_max": 45,
       "name": "グワナーダガー",
-      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b"
+      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b",
+      "rarity": 10
     },
     {
       "item": "1:5:59",
@@ -85,17 +92,19 @@
       "level_min": 41,
       "level_max": 45,
       "name": "グワナーダブル",
-      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b"
+      "source": "swiki swiki-enemy-62dcbc90ac6103829d8b",
+      "rarity": 10
     },
     {
       "item": "1:7:17",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 46,
       "level_max": 50,
       "name": "ラムダトゥウィスラー",
-      "source": "swiki swiki-enemy-68468efdb27f013562c5"
+      "source": "swiki swiki-enemy-68468efdb27f013562c5",
+      "rarity": 8
     },
     {
       "item": "1:11:107",
@@ -106,6 +115,7 @@
       "level_max": 65,
       "name": "エスカヘルメス",
       "source": "swiki swiki-enemy-9a2e270ba96ef4625cfe",
+      "rarity": 10,
       "level_min_research": 61,
       "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv60); the nearest band's lower bound 61 lowered to 60"
     },
@@ -118,6 +128,7 @@
       "level_max": 65,
       "name": "ノクスロザン",
       "source": "swiki swiki-enemy-9a2e270ba96ef4625cfe",
+      "rarity": 12,
       "level_min_research": 61,
       "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv60); the nearest band's lower bound 61 lowered to 60"
     },
@@ -130,6 +141,7 @@
       "level_max": 65,
       "name": "ノクスクラード",
       "source": "swiki swiki-enemy-9a2e270ba96ef4625cfe",
+      "rarity": 12,
       "level_min_research": 61,
       "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv60); the nearest band's lower bound 61 lowered to 60"
     },
@@ -141,7 +153,8 @@
       "level_min": 66,
       "level_max": 70,
       "name": "グルダルミナ",
-      "source": "swiki swiki-enemy-f6701da96c69be6f2184"
+      "source": "swiki swiki-enemy-f6701da96c69be6f2184",
+      "rarity": 11
     },
     {
       "item": "1:1:67",
@@ -151,7 +164,8 @@
       "level_min": 71,
       "level_max": 75,
       "name": "トレイターグリフ",
-      "source": "swiki swiki-enemy-341057e4c45661e36fb6"
+      "source": "swiki swiki-enemy-341057e4c45661e36fb6",
+      "rarity": 11
     }
   ],
   "boss_drops": 4

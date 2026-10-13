@@ -1,31 +1,33 @@
 {
-  "rate": 0.05,
+  "rate": 0.01,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research (tundra, T81): cirnopedia area ~ Tundra + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research (tundra, T81): cirnopedia area ~ Tundra + swiki rare_drop_band (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:1:28",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 21,
       "level_max": 25,
       "name": "ザンバ",
-      "source": "swiki swiki-enemy-8758b1aedc16498b0fb3"
+      "source": "swiki swiki-enemy-8758b1aedc16498b0fb3",
+      "rarity": 7
     },
     {
       "item": "1:4:37",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 35,
       "name": "クルエルフローガ",
-      "source": "swiki swiki-enemy-bab1942cafc0a262a791"
+      "source": "swiki swiki-enemy-bab1942cafc0a262a791",
+      "rarity": 9
     },
     {
       "item": "1:6:35",
@@ -35,7 +37,8 @@
       "level_min": 41,
       "level_max": 45,
       "name": "スパイクスラッガー",
-      "source": "swiki swiki-enemy-67c5259882ebc897844c"
+      "source": "swiki swiki-enemy-67c5259882ebc897844c",
+      "rarity": 10
     },
     {
       "item": "1:13:39",
@@ -45,7 +48,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "イエーデクラブ",
-      "source": "swiki swiki-enemy-8e8522674ebc2afb476e"
+      "source": "swiki swiki-enemy-8e8522674ebc2afb476e",
+      "rarity": 10
     }
   ]
 }

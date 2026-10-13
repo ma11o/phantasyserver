@@ -1,21 +1,22 @@
 {
-  "rate": 1.0,
+  "rate": 0.1,
   "drop_count": {
-    "min": 4,
-    "max": 4
+    "min": 1,
+    "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research (desert, T80): cirnopedia area ~ Desert + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research (desert, T80): cirnopedia area ~ Desert + swiki rare_drop_band (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:5:24",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 19,
       "level_max": 35,
       "name": "フェザーエッジ",
       "source": "swiki swiki-enemy-5aea1754de9a914e74ad",
+      "rarity": 8,
       "level_min_research": 31,
       "level_source": "estimated (T85): the boss had no candidate at its lowest difficulty (enemy Lv19); the nearest band's lower bound 31 lowered to 19"
     },
@@ -27,7 +28,8 @@
       "level_min": 41,
       "level_max": 45,
       "name": "フォシルトリクス",
-      "source": "swiki swiki-enemy-7e5d88eb60fbf23ef8a7"
+      "source": "swiki swiki-enemy-7e5d88eb60fbf23ef8a7",
+      "rarity": 10
     },
     {
       "item": "1:9:49",
@@ -37,7 +39,8 @@
       "level_min": 41,
       "level_max": 45,
       "name": "プロジオン",
-      "source": "swiki swiki-enemy-7e5d88eb60fbf23ef8a7"
+      "source": "swiki swiki-enemy-7e5d88eb60fbf23ef8a7",
+      "rarity": 10
     },
     {
       "item": "1:12:55",
@@ -47,7 +50,8 @@
       "level_min": 41,
       "level_max": 45,
       "name": "レーウェンブック",
-      "source": "swiki swiki-enemy-7e5d88eb60fbf23ef8a7"
+      "source": "swiki swiki-enemy-7e5d88eb60fbf23ef8a7",
+      "rarity": 10
     },
     {
       "item": "1:3:19",
@@ -57,7 +61,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "ディオパティルメリア",
-      "source": "swiki swiki-enemy-6553a26afd710656a5e2"
+      "source": "swiki swiki-enemy-6553a26afd710656a5e2",
+      "rarity": 10
     },
     {
       "item": "1:16:22",
@@ -67,7 +72,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "ディオラウンジブル",
-      "source": "swiki swiki-enemy-6553a26afd710656a5e2"
+      "source": "swiki swiki-enemy-6553a26afd710656a5e2",
+      "rarity": 10
     },
     {
       "item": "1:1:227",
@@ -77,7 +83,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "ノクスクヴェル",
-      "source": "swiki swiki-enemy-6553a26afd710656a5e2"
+      "source": "swiki swiki-enemy-6553a26afd710656a5e2",
+      "rarity": 12
     },
     {
       "item": "1:13:211",
@@ -87,7 +94,8 @@
       "level_min": 61,
       "level_max": 65,
       "name": "ノクスキュクロス",
-      "source": "swiki swiki-enemy-6553a26afd710656a5e2"
+      "source": "swiki swiki-enemy-6553a26afd710656a5e2",
+      "rarity": 12
     },
     {
       "item": "1:14:74",
@@ -97,7 +105,8 @@
       "level_min": 66,
       "level_max": 70,
       "name": "ゼッシュウ",
-      "source": "swiki swiki-enemy-68e9d46624ed067595c0"
+      "source": "swiki swiki-enemy-68e9d46624ed067595c0",
+      "rarity": 11
     },
     {
       "item": "1:4:101",
@@ -107,7 +116,8 @@
       "level_min": 71,
       "level_max": 75,
       "name": "オプトレリート",
-      "source": "swiki swiki-enemy-45410e216c864e5b76a5"
+      "source": "swiki swiki-enemy-45410e216c864e5b76a5",
+      "rarity": 11
     }
   ],
   "boss_drops": 4

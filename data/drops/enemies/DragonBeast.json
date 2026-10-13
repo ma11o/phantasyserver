@@ -1,31 +1,33 @@
 {
-  "rate": 0.05,
+  "rate": 0.01,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "research (skyscape, T81): cirnopedia area ~ Skyscape + swiki rare_drop_band (candidates only; weights provisional); rate: estimate (T77: common enemy 5%, leader / large 10-20%, boss fixed count; no rate in the research)",
+  "source": "research (skyscape, T81): cirnopedia area ~ Skyscape + swiki rare_drop_band (candidates only; weights provisional); rate: tuned (T108, rare stage: common enemy 1%, leader / large 2-4%, boss 10% x 1; no rate in the research)",
   "entries": [
     {
       "item": "1:12:29",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 31,
       "level_max": 35,
       "name": "ヒトガタ",
-      "source": "swiki swiki-enemy-413cae9f70b56597ee76"
+      "source": "swiki swiki-enemy-413cae9f70b56597ee76",
+      "rarity": 7
     },
     {
       "item": "1:6:22",
-      "weight": 1,
+      "weight": 4,
       "min": 1,
       "max": 1,
       "level_min": 46,
       "level_max": 50,
       "name": "ラムダリドルモール",
-      "source": "swiki swiki-enemy-2a74cbb0fc3975f8079d"
+      "source": "swiki swiki-enemy-2a74cbb0fc3975f8079d",
+      "rarity": 7
     },
     {
       "item": "1:13:55",
@@ -35,17 +37,19 @@
       "level_min": 51,
       "level_max": 55,
       "name": "バリドランウォンド",
-      "source": "swiki swiki-enemy-39f38373f4d2af26b3c5"
+      "source": "swiki swiki-enemy-39f38373f4d2af26b3c5",
+      "rarity": 10
     },
     {
       "item": "1:9:23",
-      "weight": 1,
+      "weight": 2,
       "min": 1,
       "max": 1,
       "level_min": 61,
       "level_max": 65,
       "name": "ディオウルスラグナ",
-      "source": "swiki swiki-enemy-cf1f79740a13e7f2a5d8"
+      "source": "swiki swiki-enemy-cf1f79740a13e7f2a5d8",
+      "rarity": 9
     },
     {
       "item": "1:12:146",
@@ -55,7 +59,8 @@
       "level_min": 66,
       "level_max": 70,
       "name": "ザフリジェ",
-      "source": "swiki swiki-enemy-d06b82db036300553a57"
+      "source": "swiki swiki-enemy-d06b82db036300553a57",
+      "rarity": 11
     }
   ]
 }
