@@ -50,7 +50,7 @@ pub struct Type {
     pub name: String,
     /// effect in percent per level (1..=8), None = unknown
     pub levels: Vec<Option<i32>>,
-    /// exp / meseta / critical / element / zero_range: applied by the server; None: shown only
+    /// exp / meseta / critical / element / zero_range / rare_drop: applied by the server; None: shown only
     pub apply: Option<String>,
     /// weapon element boosted by an `element` type (1 fire, 2 ice, 3 thunder, ..)
     #[serde(default)]
@@ -191,6 +191,16 @@ impl ZonePse {
             .map(|(_, p)| p / 100.0)
             .sum::<f32>()
             + 1.0
+    }
+
+    /// Rare-drop boost in percent (sum of the zone's `rare_drop` effects), applied to the enemy's rare stages
+    pub fn rare_drop_boost(&self) -> f32 {
+        self.active
+            .iter()
+            .filter_map(Self::percent)
+            .filter(|(t, _)| t.apply.as_deref() == Some("rare_drop"))
+            .map(|(_, p)| p)
+            .sum()
     }
 
     /// Critical rate, element boosts and zero range of the zone's PSE.

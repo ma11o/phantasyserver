@@ -1,5 +1,5 @@
 {
-  "rate": 0.01,
+  "rate": 0.005,
   "drop_count": {
     "min": 1,
     "max": 1

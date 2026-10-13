@@ -1,11 +1,31 @@
 {
- "rate": 0.1,
+ "rate": 0.06,
  "drop_count": {
   "min": 1,
   "max": 1
  },
  "rare_rate": 0.0,
- "source": "client + estimated + tuned (T108): weapons = item_parameter.bin subid 0-14, star 1-6; star level bands / weights in tools/quest_overrides/drops/normal_bands.csv; level_min raised by req_stat (need_lv); rate and the weapon share (~40%) are tuned; no period data",
+ "weapon_classes": {
+  "1": 3329,
+  "2": 1281,
+  "3": 1281,
+  "4": 1288,
+  "5": 9480,
+  "6": 1288,
+  "7": 32767,
+  "8": 5394,
+  "9": 1282,
+  "10": 3344,
+  "11": 5380,
+  "12": 3364,
+  "13": 9504,
+  "14": 5440,
+  "15": 1344,
+  "16": 1408,
+  "17": 9600,
+  "18": 1792
+ },
+ "source": "client + estimated + tuned (T108, T109): weapons = item_parameter.bin subid 0-14, star 1-6; star level windows / weights in tools/quest_overrides/drops/normal_bands.csv (T110, psp2i design); level_min raised by req_stat (need_lv); weapon_classes = ClassFlags of each category; rate tuned; no period data",
  "entries": [
   {
    "item": "1:1:0",
@@ -14,7 +34,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ソード",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:2:0",
@@ -23,7 +44,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ワイヤードランス",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:3:0",
@@ -32,7 +54,8 @@
    "max": 1,
    "level_min": 1,
    "name": "パルチザン",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:4:0",
@@ -41,7 +64,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ツインダガー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:5:0",
@@ -50,7 +74,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ダブルセイバー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:6:0",
@@ -59,7 +84,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ナックル",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:7:0",
@@ -68,7 +94,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ガンスラッシュ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:8:0",
@@ -77,7 +104,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ライフル",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:9:0",
@@ -86,7 +114,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ランチャー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:10:0",
@@ -95,7 +124,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ツインマシンガン",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:11:0",
@@ -104,7 +134,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ロッド",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:12:0",
@@ -113,7 +144,8 @@
    "max": 1,
    "level_min": 1,
    "name": "タリス",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:13:0",
@@ -122,7 +154,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ウォンド",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:14:0",
@@ -131,7 +164,8 @@
    "max": 1,
    "level_min": 1,
    "name": "カタナ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:15:0",
@@ -140,7 +174,8 @@
    "max": 1,
    "level_min": 1,
    "name": "バレットボウ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:16:0",
@@ -149,7 +184,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ジェットブーツ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:17:0",
@@ -158,7 +194,8 @@
    "max": 1,
    "level_min": 1,
    "name": "デュアルブレード",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:18:0",
@@ -167,7 +204,8 @@
    "max": 1,
    "level_min": 1,
    "name": "タクト",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:18:2",
@@ -176,7 +214,8 @@
    "max": 1,
    "level_min": 1,
    "name": "",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:1:3",
@@ -185,7 +224,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ギガッシュ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:2:3",
@@ -194,7 +234,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ワイヤードゲイン",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:3:3",
@@ -203,7 +244,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ハルベルト",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:4:3",
@@ -212,7 +254,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ツインナイフ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:5:3",
@@ -221,7 +264,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ダブルバスター",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:6:3",
@@ -230,7 +274,8 @@
    "max": 1,
    "level_min": 1,
    "name": "クランチャー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:7:3",
@@ -239,7 +284,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ガンスレイヤー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:8:3",
@@ -248,7 +294,8 @@
    "max": 1,
    "level_min": 1,
    "name": "スナイパー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:9:3",
@@ -257,7 +304,8 @@
    "max": 1,
    "level_min": 1,
    "name": "グリッパー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:10:3",
@@ -266,7 +314,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ツインアサルト",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:11:3",
@@ -275,7 +324,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ポール",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:12:3",
@@ -284,7 +334,8 @@
    "max": 1,
    "level_min": 1,
    "name": "トリビュート",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:13:3",
@@ -293,7 +344,8 @@
    "max": 1,
    "level_min": 1,
    "name": "スタッフ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:1:6",
@@ -302,7 +354,8 @@
    "max": 1,
    "level_min": 3,
    "name": "ブレイカー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:2:6",
@@ -311,7 +364,8 @@
    "max": 1,
    "level_min": 3,
    "name": "ワイヤードオーバー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:3:6",
@@ -320,7 +374,8 @@
    "max": 1,
    "level_min": 3,
    "name": "グレイヴ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:4:6",
@@ -329,7 +384,8 @@
    "max": 1,
    "level_min": 3,
    "name": "ツインリッパー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:5:6",
@@ -338,7 +394,8 @@
    "max": 1,
    "level_min": 3,
    "name": "ダブルパラッシュ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:6:6",
@@ -347,7 +404,8 @@
    "max": 1,
    "level_min": 3,
    "name": "ブレスティン",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:7:6",
@@ -356,7 +414,8 @@
    "max": 1,
    "level_min": 1,
    "name": "ガンホーク",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:8:6",
@@ -365,7 +424,8 @@
    "max": 1,
    "level_min": 3,
    "name": "ブラスター",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:9:6",
@@ -374,7 +434,8 @@
    "max": 1,
    "level_min": 3,
    "name": "タグバルブ",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:10:6",
@@ -383,7 +444,8 @@
    "max": 1,
    "level_min": 3,
    "name": "ツインリピーター",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:11:6",
@@ -392,7 +454,8 @@
    "max": 1,
    "level_min": 3,
    "name": "パイラー",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:12:6",
@@ -401,7 +464,8 @@
    "max": 1,
    "level_min": 3,
    "name": "スプレイン",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:13:6",
@@ -410,7 +474,8 @@
    "max": 1,
    "level_min": 3,
    "name": "バトン",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:18:6",
@@ -419,7 +484,8 @@
    "max": 1,
    "level_min": 1,
    "name": "",
-   "rarity": 1
+   "rarity": 1,
+   "level_max": 31
   },
   {
    "item": "1:1:1",
@@ -428,7 +494,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバソード",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:2:1",
@@ -437,7 +504,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバランス",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:3:1",
@@ -446,7 +514,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバパルチザン",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:4:1",
@@ -455,7 +524,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバＴダガー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:5:1",
@@ -464,7 +534,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバＤセイバー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:6:1",
@@ -473,7 +544,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバナックル",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:7:1",
@@ -482,7 +554,8 @@
    "max": 1,
    "level_min": 3,
    "name": "アルバスラッシュ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:8:1",
@@ -491,7 +564,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバライフル",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:9:1",
@@ -500,7 +574,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバランチャー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:10:1",
@@ -509,7 +584,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバＴマシンガン",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:11:1",
@@ -518,7 +594,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバロッド",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:12:1",
@@ -527,7 +604,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバタリス",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:13:1",
@@ -536,7 +614,8 @@
    "max": 1,
    "level_min": 10,
    "name": "アルバウォンド",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:14:1",
@@ -545,7 +624,8 @@
    "max": 1,
    "level_min": 3,
    "name": "アルバカタナ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:15:1",
@@ -554,7 +634,8 @@
    "max": 1,
    "level_min": 3,
    "name": "アルバボウ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:16:1",
@@ -563,7 +644,8 @@
    "max": 1,
    "level_min": 5,
    "name": "アルバＪブーツ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:17:1",
@@ -572,7 +654,8 @@
    "max": 1,
    "level_min": 5,
    "name": "アルバＤブレード",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:1:4",
@@ -581,7 +664,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバギガッシュ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:2:4",
@@ -590,7 +674,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバゲイン",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:3:4",
@@ -599,7 +684,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバハルベルト",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:4:4",
@@ -608,7 +694,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバＴナイフ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:5:4",
@@ -617,7 +704,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバＤバスター",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:6:4",
@@ -626,7 +714,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバクランチャー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:7:4",
@@ -635,7 +724,8 @@
    "max": 1,
    "level_min": 7,
    "name": "アルバスレイヤー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:8:4",
@@ -644,7 +734,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバスナイパー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:9:4",
@@ -653,7 +744,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバグリッパー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:10:4",
@@ -662,7 +754,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバＴアサルト",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:11:4",
@@ -671,7 +764,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバポール",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:12:4",
@@ -680,7 +774,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバトリビュート",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:13:4",
@@ -689,7 +784,8 @@
    "max": 1,
    "level_min": 16,
    "name": "アルバスタッフ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:1:7",
@@ -698,7 +794,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバブレイカー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:2:7",
@@ -707,7 +804,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバオーバー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:3:7",
@@ -716,7 +814,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバグレイヴ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:4:7",
@@ -725,7 +824,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバＴリッパー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:5:7",
@@ -734,7 +834,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバＤパラッシュ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:6:7",
@@ -743,7 +844,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバブレスティン",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:7:7",
@@ -752,7 +854,8 @@
    "max": 1,
    "level_min": 12,
    "name": "アルバホーク",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:8:7",
@@ -761,7 +864,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバブラスター",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:9:7",
@@ -770,7 +874,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバタグバルブ",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:10:7",
@@ -779,7 +884,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバＴリピーター",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:11:7",
@@ -788,7 +894,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバパイラー",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:12:7",
@@ -797,7 +904,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルバスプレイン",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:13:7",
@@ -806,7 +914,8 @@
    "max": 1,
    "level_min": 23,
    "name": "アルババトン",
-   "rarity": 2
+   "rarity": 2,
+   "level_max": 41
   },
   {
    "item": "1:1:2",
@@ -815,7 +924,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタソード",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:2:2",
@@ -824,7 +934,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタランス",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:3:2",
@@ -833,7 +944,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタパルチザン",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:4:2",
@@ -842,7 +954,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタＴダガー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:5:2",
@@ -851,7 +964,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタＤセイバー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:6:2",
@@ -860,7 +974,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタナックル",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:7:2",
@@ -869,7 +984,8 @@
    "max": 1,
    "level_min": 16,
    "name": "ヴィタスラッシュ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:8:2",
@@ -878,7 +994,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタライフル",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:9:2",
@@ -887,7 +1004,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタランチャー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:10:2",
@@ -896,7 +1014,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタＴマシンガン",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:11:2",
@@ -905,7 +1024,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタロッド",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:12:2",
@@ -914,7 +1034,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタタリス",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:13:2",
@@ -923,7 +1044,8 @@
    "max": 1,
    "level_min": 30,
    "name": "ヴィタウォンド",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:14:2",
@@ -932,7 +1054,8 @@
    "max": 1,
    "level_min": 16,
    "name": "ヴィタカタナ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:15:2",
@@ -941,7 +1064,8 @@
    "max": 1,
    "level_min": 16,
    "name": "ヴィタボウ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:16:2",
@@ -950,7 +1074,8 @@
    "max": 1,
    "level_min": 20,
    "name": "ヴィタＪブーツ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:17:2",
@@ -959,7 +1084,8 @@
    "max": 1,
    "level_min": 20,
    "name": "ヴィタＤブレード",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:1:5",
@@ -968,7 +1094,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタギガッシュ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:2:5",
@@ -977,7 +1104,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタゲイン",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:3:5",
@@ -986,7 +1114,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタハルベルト",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:4:5",
@@ -995,7 +1124,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタＴナイフ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:5:5",
@@ -1004,7 +1134,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタＤバスター",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:6:5",
@@ -1013,7 +1144,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタクランチャー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:7:5",
@@ -1022,7 +1154,8 @@
    "max": 1,
    "level_min": 21,
    "name": "ヴィタスレイヤー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:8:5",
@@ -1031,7 +1164,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタスナイパー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:9:5",
@@ -1040,7 +1174,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタグリッパー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:10:5",
@@ -1049,7 +1184,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタＴアサルト",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:11:5",
@@ -1058,7 +1194,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタポール",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:12:5",
@@ -1067,7 +1204,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタトリビュート",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:13:5",
@@ -1076,7 +1214,8 @@
    "max": 1,
    "level_min": 36,
    "name": "ヴィタスタッフ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:1:8",
@@ -1085,7 +1224,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタブレイカー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:2:8",
@@ -1094,7 +1234,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタオーバー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:3:8",
@@ -1103,7 +1244,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタグレイヴ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:4:8",
@@ -1112,7 +1254,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタＴリッパー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:5:8",
@@ -1121,7 +1264,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタＤパラッシュ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:6:8",
@@ -1130,7 +1274,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタブレスティン",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:7:8",
@@ -1139,7 +1284,8 @@
    "max": 1,
    "level_min": 25,
    "name": "ヴィタホーク",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:8:8",
@@ -1148,7 +1294,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタブラスター",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:9:8",
@@ -1157,7 +1304,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタタグバルブ",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:10:8",
@@ -1166,7 +1314,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタＴリピーター",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:11:8",
@@ -1175,7 +1324,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタパイラー",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:12:8",
@@ -1184,7 +1334,8 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタスプレイン",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:13:8",
@@ -1193,14 +1344,15 @@
    "max": 1,
    "level_min": 43,
    "name": "ヴィタバトン",
-   "rarity": 3
+   "rarity": 3,
+   "level_max": 62
   },
   {
    "item": "1:1:9",
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "クレイモア",
    "rarity": 4
   },
@@ -1209,7 +1361,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ワイヤードトライ",
    "rarity": 4
   },
@@ -1218,7 +1370,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "バルディス",
    "rarity": 4
   },
@@ -1227,7 +1379,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ツインブレイド",
    "rarity": 4
   },
@@ -1236,7 +1388,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ダブルレイピア",
    "rarity": 4
   },
@@ -1245,7 +1397,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ブレイクル",
    "rarity": 4
   },
@@ -1254,7 +1406,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ガンシザー",
    "rarity": 4
   },
@@ -1263,7 +1415,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ビーム",
    "rarity": 4
   },
@@ -1272,7 +1424,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ラフレイム",
    "rarity": 4
   },
@@ -1281,7 +1433,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ツインガトリング",
    "rarity": 4
   },
@@ -1290,7 +1442,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ストライカー",
    "rarity": 4
   },
@@ -1299,7 +1451,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "オブサイド",
    "rarity": 4
   },
@@ -1308,7 +1460,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "セプター",
    "rarity": 4
   },
@@ -1317,7 +1469,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ヴァストール",
    "rarity": 4
   },
@@ -1326,7 +1478,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "クワドラプト",
    "rarity": 4
   },
@@ -1335,7 +1487,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ジェットスライダー",
    "rarity": 4
   },
@@ -1344,7 +1496,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "デュアルサーベル",
    "rarity": 4
   },
@@ -1353,7 +1505,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "キャリバー",
    "rarity": 4
   },
@@ -1362,7 +1514,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ワイヤードアーチ",
    "rarity": 4
   },
@@ -1371,7 +1523,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "グングニル",
    "rarity": 4
   },
@@ -1380,7 +1532,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ツインエッジ",
    "rarity": 4
   },
@@ -1389,7 +1541,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ダブルグラディウス",
    "rarity": 4
   },
@@ -1398,7 +1550,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "クラシェルブ",
    "rarity": 4
   },
@@ -1407,7 +1559,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ガンハチェット",
    "rarity": 4
   },
@@ -1416,7 +1568,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "レーザー",
    "rarity": 4
   },
@@ -1425,7 +1577,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ピサスティアン",
    "rarity": 4
   },
@@ -1434,7 +1586,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ツインバルカン",
    "rarity": 4
   },
@@ -1443,7 +1595,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "フォールオンス",
    "rarity": 4
   },
@@ -1452,7 +1604,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ディフューズ",
    "rarity": 4
   },
@@ -1461,7 +1613,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ケイン",
    "rarity": 4
   },
@@ -1470,7 +1622,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "エスレイン",
    "rarity": 4
   },
@@ -1479,7 +1631,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "アルクレイ",
    "rarity": 4
   },
@@ -1488,7 +1640,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "ジェットビースオート",
    "rarity": 4
   },
@@ -1497,7 +1649,7 @@
    "weight": 0.1176,
    "min": 1,
    "max": 1,
-   "level_min": 20,
+   "level_min": 32,
    "name": "デュアルスティレット",
    "rarity": 4
   },
@@ -1506,7 +1658,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバクレイモア",
    "rarity": 5
   },
@@ -1515,7 +1667,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバトライ",
    "rarity": 5
   },
@@ -1524,7 +1676,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルババルディス",
    "rarity": 5
   },
@@ -1533,7 +1685,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバＴブレイド",
    "rarity": 5
   },
@@ -1542,7 +1694,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバＤレイピア",
    "rarity": 5
   },
@@ -1551,7 +1703,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバブレイクル",
    "rarity": 5
   },
@@ -1560,7 +1712,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバシザー",
    "rarity": 5
   },
@@ -1569,7 +1721,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバビーム",
    "rarity": 5
   },
@@ -1578,7 +1730,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバラフレイム",
    "rarity": 5
   },
@@ -1587,7 +1739,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバＴガトリング",
    "rarity": 5
   },
@@ -1596,7 +1748,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバストライカー",
    "rarity": 5
   },
@@ -1605,7 +1757,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバオブサイド",
    "rarity": 5
   },
@@ -1614,7 +1766,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバセプター",
    "rarity": 5
   },
@@ -1623,7 +1775,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバヴァストール",
    "rarity": 5
   },
@@ -1632,7 +1784,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバクワドラプト",
    "rarity": 5
   },
@@ -1641,7 +1793,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバＪスライダー",
    "rarity": 5
   },
@@ -1650,7 +1802,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバＤサーベル",
    "rarity": 5
   },
@@ -1659,7 +1811,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバキャリバー",
    "rarity": 5
   },
@@ -1668,7 +1820,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバアーチ",
    "rarity": 5
   },
@@ -1677,7 +1829,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバグングニル",
    "rarity": 5
   },
@@ -1686,7 +1838,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバＴエッジ",
    "rarity": 5
   },
@@ -1695,7 +1847,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバＤグラディウス",
    "rarity": 5
   },
@@ -1704,7 +1856,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバクラシェルブ",
    "rarity": 5
   },
@@ -1713,7 +1865,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバハチェット",
    "rarity": 5
   },
@@ -1722,7 +1874,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバレーザー",
    "rarity": 5
   },
@@ -1731,7 +1883,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバピサスティアン",
    "rarity": 5
   },
@@ -1740,7 +1892,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバＴバルカン",
    "rarity": 5
   },
@@ -1749,7 +1901,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバフォールオンス",
    "rarity": 5
   },
@@ -1758,7 +1910,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバディフューズ",
    "rarity": 5
   },
@@ -1767,7 +1919,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 31,
+   "level_min": 42,
    "name": "アルバケイン",
    "rarity": 5
   },
@@ -1776,7 +1928,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバエスレイン",
    "rarity": 5
   },
@@ -1785,7 +1937,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバアルクレイ",
    "rarity": 5
   },
@@ -1794,7 +1946,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバＪビースオート",
    "rarity": 5
   },
@@ -1803,7 +1955,7 @@
    "weight": 0.0294,
    "min": 1,
    "max": 1,
-   "level_min": 30,
+   "level_min": 42,
    "name": "アルバＤスティレット",
    "rarity": 5
   },
@@ -1812,7 +1964,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタクレイモア",
    "rarity": 6
   },
@@ -1821,7 +1973,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタトライ",
    "rarity": 6
   },
@@ -1830,7 +1982,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタバルディス",
    "rarity": 6
   },
@@ -1839,7 +1991,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタＴブレイド",
    "rarity": 6
   },
@@ -1848,7 +2000,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタＤレイピア",
    "rarity": 6
   },
@@ -1857,7 +2009,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタブレイクル",
    "rarity": 6
   },
@@ -1866,7 +2018,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタシザー",
    "rarity": 6
   },
@@ -1875,7 +2027,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタビーム",
    "rarity": 6
   },
@@ -1884,7 +2036,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタラフレイム",
    "rarity": 6
   },
@@ -1893,7 +2045,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタＴガトリング",
    "rarity": 6
   },
@@ -1902,7 +2054,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタストライカー",
    "rarity": 6
   },
@@ -1911,7 +2063,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタオブサイド",
    "rarity": 6
   },
@@ -1920,7 +2072,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタセプター",
    "rarity": 6
   },
@@ -1929,7 +2081,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタヴァストール",
    "rarity": 6
   },
@@ -1938,7 +2090,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタクワドラプト",
    "rarity": 6
   },
@@ -1947,7 +2099,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタＪスライダー",
    "rarity": 6
   },
@@ -1956,7 +2108,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタＤサーベル",
    "rarity": 6
   },
@@ -1965,7 +2117,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタキャリバー",
    "rarity": 6
   },
@@ -1974,7 +2126,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタアーチ",
    "rarity": 6
   },
@@ -1983,7 +2135,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタグングニル",
    "rarity": 6
   },
@@ -1992,7 +2144,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタＴエッジ",
    "rarity": 6
   },
@@ -2001,7 +2153,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタＤグラディウス",
    "rarity": 6
   },
@@ -2010,7 +2162,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタクラシェルブ",
    "rarity": 6
   },
@@ -2019,7 +2171,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタハチェット",
    "rarity": 6
   },
@@ -2028,7 +2180,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタレーザー",
    "rarity": 6
   },
@@ -2037,7 +2189,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタピサスティアン",
    "rarity": 6
   },
@@ -2046,7 +2198,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタＴバルカン",
    "rarity": 6
   },
@@ -2055,7 +2207,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタフォールオンス",
    "rarity": 6
   },
@@ -2064,7 +2216,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタディフューズ",
    "rarity": 6
   },
@@ -2073,7 +2225,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 47,
+   "level_min": 63,
    "name": "ヴィタケイン",
    "rarity": 6
   },
@@ -2082,7 +2234,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタエスレイン",
    "rarity": 6
   },
@@ -2091,7 +2243,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタアルクレイ",
    "rarity": 6
   },
@@ -2100,7 +2252,7 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタＪビースオート",
    "rarity": 6
   },
@@ -2109,31 +2261,9 @@
    "weight": 0.0147,
    "min": 1,
    "max": 1,
-   "level_min": 40,
+   "level_min": 63,
    "name": "ヴィタＤスティレット",
    "rarity": 6
-  },
-  {
-   "item": "3:1:0",
-   "weight": 60,
-   "min": 1,
-   "max": 1,
-   "name": "モノメイト"
-  },
-  {
-   "item": "3:1:1",
-   "weight": 20,
-   "min": 1,
-   "max": 1,
-   "name": "ディメイト",
-   "level_min": 10
-  },
-  {
-   "item": "3:7:0",
-   "weight": 20,
-   "min": 1,
-   "max": 1,
-   "name": "テレパイプ"
   }
  ]
 }

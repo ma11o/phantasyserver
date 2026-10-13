@@ -1,11 +1,11 @@
 {
-  "rate": 0.1,
+  "rate": 0.07,
   "drop_count": {
     "min": 1,
     "max": 1
   },
   "rare_rate": 0.0,
-  "source": "仮",
+  "source": "estimated (T109): rates from the psp2i drop design (docs/findings/psp2i-drops.md, T110); recovery items moved here from the normal stage",
   "entries": [
     {
       "item": "3:1:0",
@@ -29,6 +29,7 @@
   "meseta": {
     "min": 20,
     "max": 60,
-    "rate": 0.5
+    "rate": 0.26,
+    "level_mul": 0.2
   }
 }

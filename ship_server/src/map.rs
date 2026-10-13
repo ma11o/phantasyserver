@@ -116,6 +116,8 @@ pub struct Map {
     max_id: u32,
     block_data: Option<Arc<BlockData>>,
     enemy_level: u32,
+    /// [pso2_vita_offline] enemies killed on this map (the quest's kill count; more boss drops, drops.rs)
+    quest_kills: u32,
     map_type: MapType,
     quest_obj: ObjectHeader,
     /// [pso2_vita_offline] story battle: (name_id, difficulty 0 casual / 1 hardcore, first-clear items `type:id:subid`)
@@ -212,6 +214,7 @@ impl Map {
             max_id: 0,
             block_data: None,
             enemy_level: 0,
+            quest_kills: 0,
             map_type: MapType::QuestMap,
             story: None,
             quest: None,
@@ -553,6 +556,7 @@ impl Map {
         if dmg.target.entity_type == ObjectType::Object && self.etrial_goods_hit(zone_pos, &dmg).await? {
             return Ok(());
         }
+        let killer = dmg.inflicter.id;
         let killed = self.zones[zone_pos].deal_damage(block_data.clone(), dmg).await?;
         // [pso2_vita_offline] drop tables (drops.rs): enemy -> common -> area -> meseta, spread on a small ring around
         // where the enemy was spawned
@@ -561,8 +565,22 @@ impl Map {
             // [pso2_vita_offline] PSE: more rolls during a burst, meseta PSE scales the meseta
             let pse = &self.zones[zone_pos].pse;
             let meseta_mul = pse.mul("meseta");
+            // [pso2_vita_offline] last hitter's main class (class-matching drops) and the quest's kills so far (draws)
+            let killer_class = match self.zones[zone_pos].players.iter().find(|u| u.player_id == killer) {
+                Some(p) => match p.user.upgrade() {
+                    Some(u) => u.lock().await.character.as_ref().map(|c| c.character.classes.main_class as u8),
+                    None => None,
+                },
+                None => None,
+            };
+            let ctx = crate::drops::Ctx {
+                class: killer_class,
+                kills: self.quest_kills,
+                boost: pse.rare_drop_boost(),
+                ..crate::drops::Ctx::new(name, &area, self.enemy_level)
+            };
             let items: Vec<_> = (0..pse.drop_rolls())
-                .flat_map(|_| crate::drops::roll(name, &area, self.enemy_level))
+                .flat_map(|_| crate::drops::roll(&ctx))
                 .map(|item| match meseta_amount(&item) {
                     Some(n) if meseta_mul != 1.0 => meseta((n as f32 * meseta_mul).round() as u32),
                     _ => item,
@@ -572,6 +590,9 @@ impl Map {
                 "[pso2-drop] {name} in {area}: {}",
                 items.iter().map(crate::drops::describe).collect::<Vec<_>>().join(" ")
             );
+            if matches!(self.map_type, MapType::QuestMap) {
+                self.quest_kills += 1;
+            }
             let n = items.len();
             for (i, item) in items.into_iter().enumerate() {
                 let mut pos = *enemy_pos;

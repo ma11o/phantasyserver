@@ -498,13 +498,17 @@ async fn run_command(line: &str) -> Result<String, Error> {
             ))
         }
         ("roll", [enemy, rest @ ..]) => {
-            // roll <enemy> [n] [area]: rolls the drop tables n times (default 1000, area default area2) and counts the results
+            // roll <enemy> [n] [area] [level] [class] [kills]: rolls the drop tables n times (default 1000, area default
+            // area2, class = `Class` number, default none) and counts the results
             let n: u32 = rest.first().and_then(|s| parse_num(s)).unwrap_or(1000);
             let area = rest.get(1).copied().unwrap_or("area2");
             let level: u32 = rest.get(2).and_then(|s| parse_num(s)).unwrap_or(1);
+            let class: Option<u8> = rest.get(3).and_then(|s| parse_num::<u32>(s)).map(|c| c as u8);
+            let kills: u32 = rest.get(4).and_then(|s| parse_num(s)).unwrap_or(0);
+            let ctx = crate::drops::Ctx { class, kills, ..crate::drops::Ctx::new(enemy, area, level) };
             let mut counts = std::collections::BTreeMap::<String, (u32, u64)>::new();
             for _ in 0..n {
-                for item in crate::drops::roll(enemy, area, level) {
+                for item in crate::drops::roll(&ctx) {
                     let (key, amount) = match crate::map::meseta_amount(&item) {
                         Some(a) => ("meseta".to_string(), a as u64),
                         None => {

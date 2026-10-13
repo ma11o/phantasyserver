@@ -1,5 +1,5 @@
 {
-  "rate": 0.03,
+  "rate": 0.015,
   "drop_count": {
     "min": 1,
     "max": 1
@@ -84,5 +84,6 @@
       "source": "swiki swiki-enemy-cca19b30878ce1ff7459",
       "rarity": 11
     }
-  ]
+  ],
+  "draws": 2
 }
